@@ -17,6 +17,11 @@ type Language = "en" | "zh";
 const scholarUrl =
   "https://scholar.google.com/citations?user=9f5NYs4AAAAJ&hl=zh-CN&oi=sra";
 
+const publicPath = (path: string) => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  return `${basePath}${path}`;
+};
+
 const copy = {
   en: {
     skip: "Skip to main content",
@@ -457,7 +462,7 @@ export default function Home() {
           <figure className="hero-visual">
             <img
               className="hero-composite"
-              src="/assets/hero-reference-composite.jpg"
+              src={publicPath("/assets/hero-reference-composite.jpg")}
               alt={content.visualAlt}
             />
           </figure>
@@ -465,7 +470,7 @@ export default function Home() {
           <div className="focus-strip" aria-labelledby="focus-title">
             <img
               className="focus-panorama"
-              src="/assets/electromagnetic-concept-panorama.png"
+              src={publicPath("/assets/electromagnetic-concept-panorama.png")}
               alt=""
               aria-hidden="true"
             />
