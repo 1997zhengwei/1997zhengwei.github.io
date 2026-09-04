@@ -46,7 +46,7 @@ const copy = {
     visualAlt:
       "Wei Zheng with antenna radiation patterns and electromagnetic measurement figures",
     stats: [
-      ["89", "Citations"],
+      ["110", "Citations"],
       ["5", "h-index"],
       ["3", "i10-index"],
       ["24", "Publications"],
@@ -213,7 +213,7 @@ const copy = {
     portraitAlt: "郑伟的职业头像",
     visualAlt: "郑伟与天线辐射方向图、电磁测试结果",
     stats: [
-      ["89", "总引用"],
+      ["110", "总引用"],
       ["5", "h指数"],
       ["3", "i10指数"],
       ["24", "论文"],
