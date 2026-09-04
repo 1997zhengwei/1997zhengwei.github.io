@@ -47,11 +47,11 @@ const copy = {
       "Wei Zheng with antenna radiation patterns and electromagnetic measurement figures",
     stats: [
       ["110", "Citations"],
-      ["5", "h-index"],
-      ["3", "i10-index"],
+      ["6", "h-index"],
+      ["4", "i10-index"],
       ["24", "Publications"],
     ],
-    dataNote: "Scholar data checked 2026-07-21",
+    dataNote: "Scholar data checked 2026-09-04",
     focusLabel: "Research focus",
     research: [
       {
@@ -94,8 +94,33 @@ const copy = {
     publicationsKicker: "Selected publications",
     publicationsTitle: "First- and corresponding-author work",
     publicationsIntro:
-      "A selection from 15 SCI journal papers and 9 conference papers. Citation counts and the complete record are available on Google Scholar.",
+      "A selected list of recent works. Full citation record is available on Google Scholar.",
     papers: [
+      {
+        year: "2026",
+        title:
+          "Single-Layer Large Frequency-Ratio Dual-Band Vivaldi-Leaky-Wave Embedded Antenna for Coverage Enhancement",
+        venue:
+          "IEEE Antennas and Wireless Propagation Letters",
+        note: "First author · Recent publication",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:5nxA0vEk-isC",
+      },
+      {
+        year: "2026",
+        title:
+          "A2-D Broadband Fixed-Beam Leaky-WaveAntenna with Customizable Tilted Beam Directions",
+        venue: "IEEE Antennas and Wireless Propagation Letters",
+        note: "First author · Recent publication",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:0EnyYjriUFMC",
+      },
+      {
+        year: "2026",
+        title:
+          "Research on Radio Wave Coverage of Beamforming Antennas in Train Carriage and Corridor Measurement",
+        venue: "International Journal of Antennas and Propagation",
+        note: "First author · Recent publication",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:hqOjcs7Dif8C",
+      },
       {
         year: "2023",
         title:
@@ -107,34 +132,26 @@ const copy = {
       {
         year: "2025",
         title:
-          "A Dual-Beam SIW Leaky-Wave Antenna With Butterfly-Shaped Slot and Suppressed Open Stopband",
-        venue: "IEEE Transactions on Antennas and Propagation",
-        note: "First author · Two spatial harmonics",
-        doi: "https://doi.org/10.1109/TAP.2025.3531140",
-      },
-      {
-        year: "2024",
-        title:
-          "A Compact Broadband Loop Complementary Source Antenna With Switchable Tilted Beams",
-        venue: "IEEE Transactions on Vehicular Technology · 74(2), 2323–2337",
-        note: "First author · Intelligent communication",
-        doi: "https://doi.org/10.1109/TVT.2024.3474058",
-      },
-      {
-        year: "2024",
-        title:
-          "A Broadband Quad-Beam Patched Leaky-Wave Antenna Based on Substrate-Integrated Coaxial Line",
-        venue: "IEEE Antennas and Wireless Propagation Letters · 23(12), 4748–4752",
-        note: "First author · Multibeam applications",
-        doi: "https://doi.org/10.1109/LAWP.2024.3469191",
+          "A Broadband Dual-Circularly Polarized Fixed-Beam Leaky-Wave Antenna for Point-to-Point and Satellite Communication Applications",
+        venue: "IEEE Antennas and Wireless Propagation Letters",
+        note: "First author · 2 citations",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:_FxGoFyzp5QC",
       },
       {
         year: "2025",
         title:
-          "A Broadband Metasurface-Loaded Leaky-Wave Antenna Based on SICL",
+          "A Broadband Metasurface-Loaded Leaky-Wave Antenna Based on SICL with Suppressed Open Stopband and Enhanced Efficiency for Millimeter-Wave Applications",
         venue: "IEEE Antennas and Wireless Propagation Letters · 24(10), 3549–3553",
-        note: "First author · Enhanced millimeter-wave efficiency",
-        doi: "https://doi.org/10.1109/LAWP.2025.3595895",
+        note: "First author · 4 citations",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:d1gkVwhDpl0C",
+      },
+      {
+        year: "2025",
+        title:
+          "A Dual-Beam SIW Leaky-Wave Antenna With Butterfly-Shaped Slot and Suppressed Open Stopband",
+        venue: "IEEE Transactions on Antennas and Propagation",
+        note: "First author · Two spatial harmonics",
+        doi: "https://doi.org/10.1109/TAP.2025.3531140",
       },
     ],
     allPublications: "View complete publication record",
@@ -214,11 +231,11 @@ const copy = {
     visualAlt: "郑伟与天线辐射方向图、电磁测试结果",
     stats: [
       ["110", "总引用"],
-      ["5", "h指数"],
-      ["3", "i10指数"],
+      ["6", "h指数"],
+      ["4", "i10指数"],
       ["24", "论文"],
     ],
-    dataNote: "学术数据核对于 2026-07-21",
+    dataNote: "学术数据更新于 2026-09-04",
     focusLabel: "研究重点",
     research: [
       {
@@ -261,8 +278,29 @@ const copy = {
     publicationsKicker: "代表性论文",
     publicationsTitle: "第一/通信作者成果",
     publicationsIntro:
-      "从已发表的15篇SCI期刊论文和9篇会议论文中选取部分代表作；完整记录与引用信息请见谷歌学术。",
+      "已更新为近期代表作，完整论文与引用信息见谷歌学术。",
     papers: [
+      {
+        year: "2026",
+        title: "用于覆盖增强的单层大频比双频段Vivaldi-漏波嵌入式天线",
+        venue: "IEEE Antennas and Wireless Propagation Letters",
+        note: "第一作者 · 最新发表",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:5nxA0vEk-isC",
+      },
+      {
+        year: "2026",
+        title: "A2-D 宽带固定波束漏波天线的可定制倾斜波束方向",
+        venue: "IEEE Antennas and Wireless Propagation Letters",
+        note: "第一作者 · 最新发表",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:0EnyYjriUFMC",
+      },
+      {
+        year: "2026",
+        title: "列车车厢与走廊测量中波束形成天线射频覆盖研究",
+        venue: "International Journal of Antennas and Propagation",
+        note: "第一作者 · 最新发表",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:hqOjcs7Dif8C",
+      },
       {
         year: "2023",
         title: "具备定频波束赋形扫描能力的漏波天线",
@@ -272,31 +310,24 @@ const copy = {
       },
       {
         year: "2025",
+        title: "用于点对点和卫星通信的宽带双圆极化固定波束漏波天线",
+        venue: "IEEE Antennas and Wireless Propagation Letters",
+        note: "第一作者 · 2次引用",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:_FxGoFyzp5QC",
+      },
+      {
+        year: "2025",
+        title: "基于SICL且抑制开槽带并提升毫米波效率的宽带超表面加载漏波天线",
+        venue: "IEEE Antennas and Wireless Propagation Letters · 24(10), 3549–3553",
+        note: "第一作者 · 4次引用",
+        doi: "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&oe=GB&user=9f5NYs4AAAAJ&sortby=pubdate&citation_for_view=9f5NYs4AAAAJ:d1gkVwhDpl0C",
+      },
+      {
+        year: "2025",
         title: "基于双空间谐波辐射的蝶形槽双波束SIW漏波天线",
         venue: "IEEE Transactions on Antennas and Propagation",
         note: "第一作者 · 开放阻带抑制",
         doi: "https://doi.org/10.1109/TAP.2025.3531140",
-      },
-      {
-        year: "2024",
-        title: "面向智能通信的可切换倾斜波束宽带环形互补源天线",
-        venue: "IEEE Transactions on Vehicular Technology · 74(2), 2323–2337",
-        note: "第一作者 · 智能通信",
-        doi: "https://doi.org/10.1109/TVT.2024.3474058",
-      },
-      {
-        year: "2024",
-        title: "基于基片集成同轴线的宽带四波束贴片漏波天线",
-        venue: "IEEE Antennas and Wireless Propagation Letters · 23(12), 4748–4752",
-        note: "第一作者 · 多波束应用",
-        doi: "https://doi.org/10.1109/LAWP.2024.3469191",
-      },
-      {
-        year: "2025",
-        title: "基于SICL、开放阻带受抑且效率增强的宽带超表面漏波天线",
-        venue: "IEEE Antennas and Wireless Propagation Letters · 24(10), 3549–3553",
-        note: "第一作者 · 毫米波效率提升",
-        doi: "https://doi.org/10.1109/LAWP.2025.3595895",
       },
     ],
     allPublications: "查看完整论文记录",
