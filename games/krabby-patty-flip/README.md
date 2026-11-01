@@ -2,6 +2,10 @@
 
 A small SpongeBob-themed kitchen game made as a code-first Loopit import experiment. Hold the big button (or Space) to charge a flip, then release when the landing arc reaches the bun. Serve three orders before missing three times. Perfect landings earn 150 points; other catches earn 100.
 
+[Play the verified Loopit V2 draft](https://cdn-cf.loopit.me/public/game/01a19801-816d-7c71-9da9-949e6aaa19b8/2116938131159674880/workspace/dist/index.html?loopit_preview=draft) · [Loopit editor](https://lab.loopit.me/pgc/workbench/01a19801-816d-7c71-9da9-949e6aaa19b8?kind=draft)
+
+The source lives in `games/krabby-patty-flip/` on branch `codex/krabby-patty-flip`. No changes were made to the academic website's main branch or deployment. See `EXPERIMENT_LOG.md` for the separate local and platform checks; Loopit V2 is a host adapter of this source, not a claim of byte-identical code.
+
 ## Run
 
 Open `index.html` directly, or run `python -m http.server 8766` in this directory. No install, build, CDN or API key is needed. Run `node test-rules.cjs` for gameplay checks.

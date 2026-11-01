@@ -1,26 +1,30 @@
 # Game Workshop
 
-Browser games are kept here, one self-contained folder per game. Personal homepage and academic code remain independent.
+All browser-game experiments live under `games/`, one directory per game. The personal website and academic code elsewhere in this repository remain independent.
 
-| Game | Status |
-| --- | --- |
-| [Krabby Patty Flip](./krabby-patty-flip/) | Playable local prototype; Loopit import under review |
+| Game | Folder | Status | Engine |
+| --- | --- | --- | --- |
+| Krabby Patty Flip | [krabby-patty-flip](./krabby-patty-flip/) | Local checks and Loopit V2 playthrough passed; unpublished draft | Vanilla Canvas + JavaScript |
 
-## Structure
+## Folder convention
 
-```
+```text
 games/
-  README.md
+  README.md                  # This catalog
   krabby-patty-flip/
-    README.md
-    LOOPIT_IMPORT.md
+    README.md                # How to run and what to play
+    LOOPIT_IMPORT.md         # Adapter contract
     index.html
     style.css
     rules.js
     game.js
     test-rules.cjs
-    assets/
-  next-game-slug/
+    assets/                  # Only assets used by this game
+  next-game-slug/             # Future independent games
 ```
 
-Use lowercase English slugs. Keep assets, rules, tests and run instructions inside each game. Add a catalog row for every new title. Use commit-pinned links for Loopit handoff; keep local and platform acceptance separate. These games do not depend on or modify the academic site's app, packages or deployment. Only required game PNGs belong here; the complete source material library stays local.
+Use short lowercase English folder names with hyphens. Keep each game's assets, rules, tests and setup instructions inside its own directory. Add a catalog row for every new game. Record commit-pinned source links when handing a version to Loopit, and distinguish local checks from platform acceptance. Do not couple these prototypes to the academic site's app, packages or deployment workflow.
+
+The full 100-image source library is maintained locally in the user's Loopit material folder; only the selected game's required PNGs are uploaded here.
+
+See [WORKFLOW.md](./WORKFLOW.md) for the code-first production and verification process.
