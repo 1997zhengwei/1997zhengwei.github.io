@@ -6,6 +6,8 @@ All browser-game experiments live under `games/`, one directory per game. The pe
 | --- | --- | --- | --- |
 | Krabby Patty Flip | [krabby-patty-flip](./krabby-patty-flip/) | Local checks and Loopit V2 playthrough passed; unpublished draft | Vanilla Canvas + JavaScript |
 
+| Krusty Lunch Rush | [krusty-lunch-rush](./krusty-lunch-rush/) | Local six-order win/loss/replay passed; character action draft; not yet imported to Loopit | Vanilla Canvas + JavaScript |
+
 ## Folder convention
 
 ```text
