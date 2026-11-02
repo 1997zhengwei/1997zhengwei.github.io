@@ -9,6 +9,7 @@ All browser-game experiments live under `games/`, one directory per game. The pe
 | Tiny Raft, Big Storm | [tiny-raft-big-storm](./tiny-raft-big-storm/) | Local gather/build/storm/win/loss/replay checked; review draft | Three.js 0.186.0, bundled |
 | Bikini Bottom Bubble Delivery | [bikini-bottom-bubble-delivery](./bikini-bottom-bubble-delivery/) | Local three-delivery win/collision/loss/replay checked; review draft | Three.js 0.186.0, bundled |
 | Tiny Raft: Endless Seas | [tiny-raft-endless](./tiny-raft-endless/) | Endless expansion and varied storms; local play/save/loss/restart checked; review draft | Three.js 0.186.0, bundled |
+| Tiny Raft: Far Horizons | [tiny-raft-voyages](./tiny-raft-voyages/) | Route choices, island landfalls and lighthouse chapters; local full expedition and continued voyage checked | Three.js 0.186.0, bundled |
 
 ## Folder convention
 
