@@ -29,3 +29,14 @@ Proof screenshot `proof-lighthouse.png` is retained in the local delivery. Physi
 Additional fresh-voyage interaction: the first coastal storm left the original 2x2 raft at 47% hull. Claimed a cache at 81% route completion; scrap increased by five and Salvaging 6s held the route at 57 nm. Started a walking leak repair during the stop. The earlier cache window was extended to 85% of the passage to make this optional decision easier to notice.
 
 The fresh 2x2 voyage subsequently reached Shell Bay at 70 nm with 100% hull, zero remaining leaks and its net intact. The harbor was also visually checked at 1280x720 (760px centered game); proof-shell-bay.png records the island, pier and raft.
+
+
+## Visual revision — continuous deck and six route environments
+
+User screenshot showed a rectangular central patch on a 41x41 raft. The near-board mesh window and far-plane texture used visibly different surfaces. Replaced both with one continuous textured, raycastable deck surface; removed per-cell detail rebuilds. The full footprint remains walkable. Scaled ocean coverage with camera extent/aspect to remove the square water boundary at large overview sizes.
+
+Added six deterministic route environments in `biomes.mjs`: Coral Keys, Amber Archipelago, Glacier Passage, Wreckwood Reach, Ember Strait and Moonlit Ruins. Scenery pools change the actual surrounding geometry, water palette, sky, haze and sunlight. Harbor keeps the completed route environment. Route cards preview the next environment. Existing resource/wave/journey rules and save format were not changed.
+
+Actual checks on the user's 43x43 / 1,849-tile saved raft: loaded with all levels and inventory intact; visually confirmed continuous deck and covered ocean in overview; Glacier Passage displayed icebergs and pale-blue water. Selected the Wreckwood Reach salvage route, observed grey-green water, mist and broken-mast wreck geometry, then completed the passage and reached Wreck Reef at 428 nautical miles. Reload kept the same port/raft and correct scenery. Clicked a clear deck point in follow view and received the walking feedback. No captured console errors/warnings during initial scene review; syntax checks passed for all changed modules.
+
+Screenshots: `proof-ice-deck.png`, `proof-wreck-route.png`. The six environment pools are constructed in the tested scene; individual playthroughs of all six were not performed. Real-phone performance and extreme-size endurance remain unverified. Rendering detail was reduced rather than expanding geometry with deck tile count.

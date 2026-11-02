@@ -18,3 +18,5 @@ Topic: **SurvivalSandbox**
 Recommendation: **Build your floating home, choose a passage, brave the weather and reach the next island. A new horizon waits beyond every lighthouse.**
 
 Repeat a full hosted playthrough and an actual-phone input/audio check before exhibition submission. Local validation does not establish hosted acceptance. This delivery does not publish an exhibition entry or modify the academic site.
+
+Preserve `biomes.mjs`, the six route scenery pools, continuous walkable deck surface and camera-scaled ocean. The route forecast cards name the environment that actually loads on departure; harbor retains the environment of the passage just completed.

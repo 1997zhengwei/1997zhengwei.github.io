@@ -20,7 +20,7 @@ Serve this folder over HTTP. No npm build, account, API key or external CDN is r
 3. **Stormgate:** stone sea arch and sailmakers, gives six extra rope.
 4. **Dawn Lighthouse:** expedition finish, full hull restoration and chapter completion.
 
-Each port grants the chosen route cargo, seals remaining leaks and offers safe time to expand. Non-repair specialty ports restore 15% hull. After the lighthouse, a new sea begins while deck, facilities, inventory, records and storm progression remain. The four destination archetypes repeat in later seas; this first draft does not generate an unlimited variety of island models. Storm sequence and difficulty continue progressing.
+Each port grants the chosen route cargo, seals remaining leaks and offers safe time to expand. Non-repair specialty ports restore 15% hull. After the lighthouse, a new sea begins while deck, facilities, inventory, records and storm progression remain. The four destination archetypes repeat, while six route environments rotate by passage and sea: Coral Keys, Amber Archipelago and Glacier Passage on coastal routes; Wreckwood Reach, Ember Strait and Moonlit Ruins on salvage routes. Each environment changes water, sky, haze, lighting and physical scenery. Storm sequence and difficulty continue progressing.
 
 The chart shows visited stops, current destination, leg completion and accumulated nautical miles (compressed game-time units). Water streaks and supply drift move with actual travel, while destination scenery approaches the raft. On arrival a short landfall reveal precedes the harbor result. Camera overview helps inspect larger rafts.
 
@@ -28,10 +28,14 @@ The chart shows visited stops, current destination, leg completion and accumulat
 
 Save key: `tiny-raft-voyages-v1`. On first load, a valid non-sunken `tiny-raft-endless-v1` save on the same browser origin is copied into the departure harbor. The original save is not overwritten. A new voyage resets only this version. Local storage is browser/origin-specific, with no offline progress or cloud sync.
 
-`rules.mjs` retains the tested expansion, resources and wave mechanics. `journey.mjs` controls departures, distance, encounters, ports and chapters; its scheduler supersedes the old automatic storm countdown. The scene uses procedural models, repeated deck textures and bounded instanced detail. No extra artwork download is needed. Very large worlds and physical-phone endurance have not been benchmarked.
+`rules.mjs` retains the tested expansion, resources and wave mechanics. `journey.mjs` controls departures, distance, encounters, ports and chapters; its scheduler supersedes the old automatic storm countdown. The scene uses procedural models, a single continuous repeated deck texture and bounded scenery pools. No extra artwork download is needed. Very large worlds and physical-phone endurance have not been benchmarked.
 
 Tests: `node test-rules.mjs` and `node test-journey.mjs`.
 
 Recommendation: **Build your floating home, choose a passage, brave the weather and reach the next island. A new horizon waits beyond every lighthouse.**
 
 Status: local review draft with GitHub source; not yet imported or published in Loopit.
+
+## Visual revision
+
+Large decks no longer contain a rectangular near-detail patch: all tiles share the same continuous surface and remain walkable. Overview is for inspecting the entire raft; toggle it off to follow the sailor at a closer scale. Ocean coverage grows with the camera view, avoiding the old square water boundary. Route choices preview the upcoming environment before departure. This revision preserves progression and save compatibility.
