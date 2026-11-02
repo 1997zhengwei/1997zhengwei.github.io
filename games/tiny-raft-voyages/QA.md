@@ -40,3 +40,12 @@ Added six deterministic route environments in `biomes.mjs`: Coral Keys, Amber Ar
 Actual checks on the user's 43x43 / 1,849-tile saved raft: loaded with all levels and inventory intact; visually confirmed continuous deck and covered ocean in overview; Glacier Passage displayed icebergs and pale-blue water. Selected the Wreckwood Reach salvage route, observed grey-green water, mist and broken-mast wreck geometry, then completed the passage and reached Wreck Reef at 428 nautical miles. Reload kept the same port/raft and correct scenery. Clicked a clear deck point in follow view and received the walking feedback. No captured console errors/warnings during initial scene review; syntax checks passed for all changed modules.
 
 Screenshots: `proof-ice-deck.png`, `proof-wreck-route.png`. The six environment pools are constructed in the tested scene; individual playthroughs of all six were not performed. Real-phone performance and extreme-size endurance remain unverified. Rendering detail was reduced rather than expanding geometry with deck tile count.
+
+
+## Crew visibility revision
+
+Follow camera now stays at a fixed close scale and tracks the sailor on any deck size. Whole raft view retains the fit-to-raft overview and adds a 48px-wide clickable YOU pin; both the pin and Follow crew control return to close view. Supply labels steer clear of the character in follow mode. Large-raft roll is scaled down by deck size to reduce calm-water intersections with the deck.
+
+Verified in the actual saved 48x48 / 2,304-tile raft at Dawn Lighthouse (8 ports, 596 nm): reload/continue preserves progress; Whole raft shows the pin; clicking YOU returns to close view; deck clicks move the character while the camera follows. Checked supply label clearance and captured follow/overview screenshots. No captured console errors/warnings. Syntax check passed. Real-phone checks and extremely large raft performance remain unverified.
+
+Evidence: proof-crew-follow.png, proof-crew-overview.png.

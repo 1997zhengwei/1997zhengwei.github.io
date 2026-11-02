@@ -38,4 +38,4 @@ Status: local review draft with GitHub source; not yet imported or published in 
 
 ## Visual revision
 
-Large decks no longer contain a rectangular near-detail patch: all tiles share the same continuous surface and remain walkable. Overview is for inspecting the entire raft; toggle it off to follow the sailor at a closer scale. Ocean coverage grows with the camera view, avoiding the old square water boundary. Route choices preview the upcoming environment before departure. This revision preserves progression and save compatibility.
+Large decks no longer contain a rectangular near-detail patch: all tiles share the same continuous surface and remain walkable. **Whole raft** fits the entire vessel and shows a fixed screen-size **YOU** pin. Tap YOU or **Follow crew** to return to the sailor. Follow mode keeps a constant close camera scale regardless of deck size, with supply labels kept clear of the character. Ocean coverage grows with the camera view, avoiding the old square water boundary. Route choices preview the upcoming environment before departure. This revision preserves progression and save compatibility.
