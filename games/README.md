@@ -5,8 +5,9 @@ All browser-game experiments live under `games/`, one directory per game. The pe
 | Game | Folder | Status | Engine |
 | --- | --- | --- | --- |
 | Krabby Patty Flip | [krabby-patty-flip](./krabby-patty-flip/) | Local checks and Loopit V2 playthrough passed; unpublished draft | Vanilla Canvas + JavaScript |
-
 | Krusty Lunch Rush | [krusty-lunch-rush](./krusty-lunch-rush/) | Local six-order win/loss/replay passed; character action draft; not yet imported to Loopit | Vanilla Canvas + JavaScript |
+| Tiny Raft, Big Storm | [tiny-raft-big-storm](./tiny-raft-big-storm/) | Local gather/build/storm/win/loss/replay checked; review draft | Three.js 0.186.0, bundled |
+| Bikini Bottom Bubble Delivery | [bikini-bottom-bubble-delivery](./bikini-bottom-bubble-delivery/) | Local three-delivery win/collision/loss/replay checked; review draft | Three.js 0.186.0, bundled |
 
 ## Folder convention
 
