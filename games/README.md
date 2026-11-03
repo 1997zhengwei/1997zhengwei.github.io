@@ -10,8 +10,8 @@ All browser-game experiments live under `games/`, one directory per game. The pe
 | Bikini Bottom Bubble Delivery | [bikini-bottom-bubble-delivery](./bikini-bottom-bubble-delivery/) | Local three-delivery win/collision/loss/replay checked; review draft | Three.js 0.186.0, bundled |
 | Tiny Raft: Endless Seas | [tiny-raft-endless](./tiny-raft-endless/) | Endless expansion and varied storms; local play/save/loss/restart checked; review draft | Three.js 0.186.0, bundled |
 | Tiny Raft: Far Horizons | [tiny-raft-voyages](./tiny-raft-voyages/) | Route choices, island landfalls and lighthouse chapters; local full expedition and continued voyage checked | Three.js 0.186.0, bundled |
-
 | Bubble Roll: Endless Tide | [bubble-roll-endless](./bubble-roll-endless/) | Loopit Lab V2 draft; first-street clear/next-street and death/restart played on V1, V2 preview/navigation/retry checked | Three.js 0.186.0, bundled |
+| Krusty Krab: Lunch Gone Wild | [krusty-lunch-gone-wild](./krusty-lunch-gone-wild/) | User-approved local 3D kitchen; Loopit import in progress | Three.js 0.186.0, bundled |
 
 ## Folder convention
 
