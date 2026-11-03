@@ -56,3 +56,9 @@ node test-rules.mjs
 ```
 
 See `QA.md` for the scope of automated checks and actual browser playtesting. Best score is stored locally; an unfinished run is not saved across reloads. See `LOOPIT_HANDOFF.md` for platform integration. Local QA does not imply Loopit acceptance.
+
+## Loopit Lab draft
+
+[Open the correct Lab editor](https://lab.loopit.me/pgc/workbench/01a19fca-93ad-7565-a97e-0d9d9192cca6?kind=draft) · [Play V2](https://cdn-cf.loopit.me/public/game/01a19fca-93ad-7565-a97e-0d9d9192cca6/2117486811075842048/workspace/dist/index.html?loopit_preview=draft)
+
+Unpublished draft. Imported from commit `20c7ac638a69e0d2a9e70de0431f81027de4ba99`. V1 passed an actual first-street clear/next-street and death/restart playthrough. V2 fixes embedded preview, prioritizes boss navigation, and adds opt-in haptics; changed paths were checked separately. See [platform QA](PLATFORM_QA.md). Platform host adaptations are not a claim of byte-identical source synchronization. Evidence screenshots remain in the local release QA folder.
