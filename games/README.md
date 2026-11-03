@@ -13,6 +13,8 @@ All browser-game experiments live under `games/`, one directory per game. The pe
 | Bubble Roll: Endless Tide | [bubble-roll-endless](./bubble-roll-endless/) | Loopit Lab V2 draft; first-street clear/next-street and death/restart played on V1, V2 preview/navigation/retry checked | Three.js 0.186.0, bundled |
 | Krusty Krab: Lunch Gone Wild | [krusty-lunch-gone-wild](./krusty-lunch-gone-wild/) | User-approved local 3D kitchen; Loopit import in progress | Three.js 0.186.0, bundled |
 
+| Sponge Shift Express | [sponge-shift-express](./sponge-shift-express/) | User-approved 3D delivery adventure; local nine-order completion verified, Loopit import in progress | Three.js 0.186.0, bundled |
+
 ## Folder convention
 
 ```text
