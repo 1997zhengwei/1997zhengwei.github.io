@@ -11,6 +11,8 @@ All browser-game experiments live under `games/`, one directory per game. The pe
 | Tiny Raft: Endless Seas | [tiny-raft-endless](./tiny-raft-endless/) | Endless expansion and varied storms; local play/save/loss/restart checked; review draft | Three.js 0.186.0, bundled |
 | Tiny Raft: Far Horizons | [tiny-raft-voyages](./tiny-raft-voyages/) | Route choices, island landfalls and lighthouse chapters; local full expedition and continued voyage checked | Three.js 0.186.0, bundled |
 
+| Bubble Roll: Endless Tide | [bubble-roll-endless](./bubble-roll-endless/) | Approved local 3D exploration, four bosses and endless streets; Loopit integration pending | Three.js 0.186.0, bundled |
+
 ## Folder convention
 
 ```text
