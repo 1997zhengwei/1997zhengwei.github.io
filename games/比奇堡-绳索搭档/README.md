@@ -40,3 +40,9 @@ node --test rules.test.mjs physics.test.mjs
 当前 24 项规则/物理测试通过。测试范围和真实浏览器证据见 `QA.md`，平台接入要求见 `LOOPIT_HANDOFF.md`。`?qa=1` 使用隔离的测试成绩。
 
 这是在垂直平面中运行的三维街机游戏，带起摆与小跳控制辅助，不是通用布娃娃模拟。无尽路线持续生成，仍受浏览器和设备资源限制。GitHub 备份、Loopit 生成和平台实玩分别记录。
+
+## Loopit 初版草稿
+
+[打开 V1 试玩](https://cdn-cf.loopit.me/public/game/01a1a713-4e04-7e3e-946f-3e8d11e447f5/2117995375997509632/workspace/dist/index.html?loopit_preview=draft) · [打开创作项目](https://lab.loopit.me/pgc/workbench/01a1a713-4e04-7e3e-946f-3e8d11e447f5?kind=draft)。
+
+当前未送审、未发布。核心实际操作和两种手机尺寸检查见 [平台验收记录](PLATFORM_QA.md)，与本地规则测试分别记录。

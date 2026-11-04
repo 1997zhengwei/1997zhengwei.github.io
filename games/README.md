@@ -14,7 +14,7 @@
 | 蟹堡王·疯狂午餐（Krusty Krab: Lunch Gone Wild） | [打开资料](./krusty-lunch-gone-wild/) | 用户认可的本地三维厨房；平台阶段详见目录记录 |
 | 海绵宝宝·变形快递（Sponge Shift Express） | [打开资料](./sponge-shift-express/) | 用户认可的三维送餐冒险；本地九单完成已验证 |
 | 比奇堡·捣蛋游乐场（Bikini Bottom: Tiny Trouble） | [打开资料](./bikini-bottom-playground/) | 本地 V3：大乐园、三种滑梯和无尽 DIY；33 项规则检查 |
-| **比奇堡·绳索搭档（Bikini Bottom Rope Relay）** | **[打开中文资料目录](./比奇堡-绳索搭档/)** | **用户已验收手动小跳与弹性绳索；24 项检查通过，Loopit 初版接入中** |
+| **比奇堡·绳索搭档（Bikini Bottom Rope Relay）** | **[打开中文资料目录](./比奇堡-绳索搭档/)** | **本地 24 项检查通过；[Loopit V1 草稿](https://lab.loopit.me/pgc/workbench/01a1a713-4e04-7e3e-946f-3e8d11e447f5?kind=draft) 已完成，核心操作与手机布局已实测；[试玩](https://cdn-cf.loopit.me/public/game/01a1a713-4e04-7e3e-946f-3e8d11e447f5/2117995375997509632/workspace/dist/index.html?loopit_preview=draft)** |
 
 ## 中文命名约定
 
