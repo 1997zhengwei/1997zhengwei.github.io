@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {springForce,integratePair,planLaunch,PHYSICS} from './physics.mjs';
+import {actorPose} from './landing.mjs';
+const body=(x,y=0,grounded=false)=>({x,y,vx:0,vy:0,grounded,mass:1});
+test('a slack rope never pushes bodies apart',()=>{const f=springForce(body(0),body(2),4.4);assert.equal(f.tension,0);assert.equal(f.extension,0);});
+test('stretch creates restoring force and outward speed adds damping',()=>{const a=body(0),b=body(5.1),still=springForce(a,b,4.4);b.vx=3;const moving=springForce(a,b,4.4);assert.ok(still.tension>20);assert.ok(moving.tension>still.tension);assert.equal(still.y,0);});
+test('spring pulls both free bodies together with equal opposite horizontal impulse',()=>{const a=body(0),b=body(5.1);integratePair(a,b,4.4,1/120);assert.ok(a.vx>0);assert.ok(b.vx<0);assert.ok(Math.abs(a.vx+b.vx)<1e-10);});
+test('a gripped grounded partner remains fixed while the free body recoils',()=>{const a=body(0,0,true),b=body(5.1);for(let i=0;i<20;i++)integratePair(a,b,4.4,1/120);assert.equal(a.x,0);assert.equal(a.y,0);assert.ok(b.x<4.9);assert.ok(b.vx<0);});
+test('extreme outward impulse stays within the bounded elastic extension',()=>{const a=body(0,0,true),b=body(4.4);b.vx=100;let max=0;for(let i=0;i<120;i++){integratePair(a,b,4.4,1/120);max=Math.max(max,Math.hypot(b.x-a.x,b.y-a.y));assert.ok(Number.isFinite(b.x)&&Number.isFinite(b.vy));}assert.ok(max<=4.4*PHYSICS.maxStretch+1e-6);});
+test('standard assisted launch still has genuine stretch and recoil, not constant radius',()=>{const p=planLaunch(body(-4.4),body(0,0,true),4.4,4.4);assert.ok(p.error<.01);assert.ok(p.path.maxStrain>.05);const distances=p.path.points.map(p=>Math.hypot(p.x,p.y));assert.ok(Math.max(...distances)-Math.min(...distances)>.4);assert.ok(p.path.time>1&&p.path.time<2.5);});
+test('landing recoil changes only pose and does not introduce automatic forward displacement',()=>{const a={hopping:false,impactAge:.15};const p=actorPose(a);assert.equal(p.stage,'rebound');assert.ok(p.height>0);assert.equal('x' in p,false);assert.deepEqual(a,{hopping:false,impactAge:.15});});

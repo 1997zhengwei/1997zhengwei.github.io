@@ -1,41 +1,27 @@
-# Game Workshop
+# 游戏作品中文目录
 
-All browser-game experiments live under `games/`, one directory per game. The personal website and academic code elsewhere in this repository remain independent.
+每款游戏的源码、素材、运行说明、测试和 Loopit 交接资料放在同一个游戏目录中。本目录为游戏专区，不改动个人网站或学术项目。
 
-| Game | Folder | Status | Engine |
-| --- | --- | --- | --- |
-| Krabby Patty Flip | [krabby-patty-flip](./krabby-patty-flip/) | Local checks and Loopit V2 playthrough passed; unpublished draft | Vanilla Canvas + JavaScript |
-| Krusty Lunch Rush | [krusty-lunch-rush](./krusty-lunch-rush/) | Local six-order win/loss/replay passed; character action draft; not yet imported to Loopit | Vanilla Canvas + JavaScript |
-| Tiny Raft, Big Storm | [tiny-raft-big-storm](./tiny-raft-big-storm/) | Local gather/build/storm/win/loss/replay checked; review draft | Three.js 0.186.0, bundled |
-| Bikini Bottom Bubble Delivery | [bikini-bottom-bubble-delivery](./bikini-bottom-bubble-delivery/) | Local three-delivery win/collision/loss/replay checked; review draft | Three.js 0.186.0, bundled |
-| Tiny Raft: Endless Seas | [tiny-raft-endless](./tiny-raft-endless/) | Endless expansion and varied storms; local play/save/loss/restart checked; review draft | Three.js 0.186.0, bundled |
-| Tiny Raft: Far Horizons | [tiny-raft-voyages](./tiny-raft-voyages/) | Route choices, island landfalls and lighthouse chapters; local full expedition and continued voyage checked | Three.js 0.186.0, bundled |
-| Bubble Roll: Endless Tide | [bubble-roll-endless](./bubble-roll-endless/) | Loopit Lab V2 draft; first-street clear/next-street and death/restart played on V1, V2 preview/navigation/retry checked | Three.js 0.186.0, bundled |
-| Krusty Krab: Lunch Gone Wild | [krusty-lunch-gone-wild](./krusty-lunch-gone-wild/) | User-approved local 3D kitchen; Loopit import in progress | Three.js 0.186.0, bundled |
+| 中文游戏名（英文原名） | 资料入口 | 当前记录 |
+| --- | --- | --- |
+| 蟹黄堡翻翻乐（Krabby Patty Flip） | [打开资料](./krabby-patty-flip/) | 本地检查与 Loopit V2 试玩通过；草稿 |
+| 蟹堡王午餐高峰（Krusty Lunch Rush） | [打开资料](./krusty-lunch-rush/) | 本地六单、失败和重开通过；角色动作稿 |
+| 小木筏·大风暴（Tiny Raft, Big Storm） | [打开资料](./tiny-raft-big-storm/) | 采集、建造、风暴、胜负和重开已本地检查 |
+| 比奇堡·泡泡快递（Bikini Bottom Bubble Delivery） | [打开资料](./bikini-bottom-bubble-delivery/) | 三次送达、碰撞、失败和重开已本地检查 |
+| 小木筏·无尽海域（Tiny Raft: Endless Seas） | [打开资料](./tiny-raft-endless/) | 无尽扩建、风暴、存档、失败和重开已本地检查 |
+| 小木筏·远方航线（Tiny Raft: Far Horizons） | [打开资料](./tiny-raft-voyages/) | 航线选择、抵达岛屿、灯塔章节与继续航行已本地检查 |
+| 比奇堡·泡泡滚球无尽潮汐（Bubble Roll: Endless Tide） | [打开资料](./bubble-roll-endless/) | Loopit Lab V2；通关下一街区、死亡重开与预览检查有记录 |
+| 蟹堡王·疯狂午餐（Krusty Krab: Lunch Gone Wild） | [打开资料](./krusty-lunch-gone-wild/) | 用户认可的本地三维厨房；平台阶段详见目录记录 |
+| 海绵宝宝·变形快递（Sponge Shift Express） | [打开资料](./sponge-shift-express/) | 用户认可的三维送餐冒险；本地九单完成已验证 |
+| 比奇堡·捣蛋游乐场（Bikini Bottom: Tiny Trouble） | [打开资料](./bikini-bottom-playground/) | 本地 V3：大乐园、三种滑梯和无尽 DIY；33 项规则检查 |
+| **比奇堡·绳索搭档（Bikini Bottom Rope Relay）** | **[打开中文资料目录](./比奇堡-绳索搭档/)** | **用户已验收手动小跳与弹性绳索；24 项检查通过，Loopit 初版接入中** |
 
-| Sponge Shift Express | [sponge-shift-express](./sponge-shift-express/) | User-approved 3D delivery adventure; local nine-order completion verified, Loopit import in progress | Three.js 0.186.0, bundled |
+## 中文命名约定
 
-| Bikini Bottom: Tiny Trouble | [bikini-bottom-playground](./bikini-bottom-playground/) | Approved local V3: larger park, 3 slides, Endless DIY; 33 rules checks; Loopit draft integration pending | Three.js 0.186.0, bundled |
+从 2026-11-04 起，新游戏优先使用容易辨认的中文目录，例如 `比奇堡-绳索搭档`。首页目录和游戏说明使用中文标题，英文原名只用于对应旧作品与平台项目。
 
-## Folder convention
+旧游戏已被 Loopit 或固定提交链接引用，先保留已有路径，并通过本页中文名称直接打开资料。之后如果迁移旧目录，需要同步依赖、交接文件和外部链接，再记录迁移映射；不直接改名造成旧链接失效。
 
-```text
-games/
-  README.md                  # This catalog
-  krabby-patty-flip/
-    README.md                # How to run and what to play
-    LOOPIT_IMPORT.md         # Adapter contract
-    index.html
-    style.css
-    rules.js
-    game.js
-    test-rules.cjs
-    assets/                  # Only assets used by this game
-  next-game-slug/             # Future independent games
-```
+每款游戏独立包含入口、源码、必要素材、README、验证记录和交接说明。版本由 Git 提交追踪，不按 final-v2/latest-new 堆叠复制成品；原视频、临时缓存、本地历史 ZIP、账号资料和凭据不上传。
 
-Use short lowercase English folder names with hyphens. Keep each game's assets, rules, tests and setup instructions inside its own directory. Add a catalog row for every new game. Record commit-pinned source links when handing a version to Loopit, and distinguish local checks from platform acceptance. Do not couple these prototypes to the academic site's app, packages or deployment workflow.
-
-The full 100-image source library is maintained locally in the user's Loopit material folder; only the selected game's required PNGs are uploaded here.
-
-See [WORKFLOW.md](./WORKFLOW.md) for the code-first production and verification process.
+查看 [制作与验收流程](./WORKFLOW.md)。本地通过、源码备份、Loopit 草稿与正式发布分别判断。
