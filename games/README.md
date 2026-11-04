@@ -15,6 +15,8 @@ All browser-game experiments live under `games/`, one directory per game. The pe
 
 | Sponge Shift Express | [sponge-shift-express](./sponge-shift-express/) | User-approved 3D delivery adventure; local nine-order completion verified, Loopit import in progress | Three.js 0.186.0, bundled |
 
+| Bikini Bottom: Tiny Trouble | [bikini-bottom-playground](./bikini-bottom-playground/) | Approved local V3: larger park, 3 slides, Endless DIY; 33 rules checks; Loopit draft integration pending | Three.js 0.186.0, bundled |
+
 ## Folder convention
 
 ```text
