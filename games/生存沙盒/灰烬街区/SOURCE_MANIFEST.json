@@ -554,6 +554,12 @@
       "git_blob": "e7ae0663328d0f1bb59eab264f2d7d1a9141a398"
     },
     {
+      "path": "games/生存沙盒/灰烬街区/PLATFORM_QA.md",
+      "bytes": 3561,
+      "sha256": "42acc5e0128fe56f56bbf4f5039c945a21048cfdcfd8bb53a8832699e7d3bf2a",
+      "git_blob": "416d7c767f9132c184c1be77a22fe6ca91c2b8d6"
+    },
+    {
       "path": "games/生存沙盒/灰烬街区/qa/defense-v05-390.png",
       "bytes": 30821,
       "sha256": "ffa8b6bae64d19cdd41054cb47d7cdbb21f66c7d34f7c83f182a229422a5f55e",
@@ -591,9 +597,9 @@
     },
     {
       "path": "games/生存沙盒/灰烬街区/README.md",
-      "bytes": 2671,
-      "sha256": "6d4a7c80b513f335412797d339a54693532cd8fc8afcdb2cefc60aca3b44fcfd",
-      "git_blob": "a751e1f05a1803dc071192a5acf1f52b815e6e27"
+      "bytes": 3107,
+      "sha256": "51b5faa5bfb8e18c20d2bcd0b4de03cbcaf416121eedf655635e8fbcbdcb8839",
+      "git_blob": "6576082fe55ffca3a7ab97dfcfd13f75f7d2d33e"
     },
     {
       "path": "games/生存沙盒/灰烬街区/scavenge-ui.mjs",

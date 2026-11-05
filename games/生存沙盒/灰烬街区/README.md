@@ -2,6 +2,8 @@
 
 手机竖屏优先的真实等距3D末日生存街区，已认可本地基准v0.7.0。2026-11-05授权上传GitHub并接入Loopit初版草稿，尚未发布展厅。中文资料路径：games/生存沙盒/灰烬街区/。
 
+[试玩Loopit V1](https://cdn-cf.loopit.me/public/game/01a1aa1d-201a-78c4-8085-bdc5acd7f103/2118209181587640320/workspace/dist/index.html?loopit_preview=draft) · [创作草稿](https://lab.loopit.me/pgc/workbench/01a1aa1d-201a-78c4-8085-bdc5acd7f103?kind=draft) · [平台验收](./PLATFORM_QA.md)。平台版本2118209181587640320；源码基准cc2d6c3c700ee1460af161de82ef5a204038dbfd，手机关键操作已实测，未送审。
+
 ## 玩法
 
 从17号安全屋出发，搜刮食物、饮水和建材，装入车辆后备箱运回真实储物箱；驾驶消耗燃油，碰撞损伤车况，支持加油和维修。感染者根据声音和视线追击、破板破门。用2木板2钉子封堵，或4木板4钉子重建被攻破的门。
