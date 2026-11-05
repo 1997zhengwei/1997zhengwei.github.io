@@ -1,0 +1,389 @@
+[
+  {
+    "file": "assets/furniture-kit/kitchenFridge.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "8af4f4bbb1b5525ad8226e97926a5af60fa8fb20a3cb74dbda5328a9d320dbab"
+  },
+  {
+    "file": "assets/furniture-kit/kitchenFridgeLarge.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "5851cc59c7e12f6f34a01a2ea93d5b9540be4078c1b703f517239fcede98fb32"
+  },
+  {
+    "file": "assets/furniture-kit/kitchenCabinet.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "7238c57778935ae25db5e57e9f7af3ba7068c71b005ff7cfbff3b6f3b1a13200"
+  },
+  {
+    "file": "assets/furniture-kit/kitchenStove.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "3239edb36295dfca9530a9b9a6ad0aff98ce62e7cf8d13ca2a5a1a6b2a904656"
+  },
+  {
+    "file": "assets/furniture-kit/kitchenSink.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "7b9610277d71f00dcf1bba49cf4d98d77ce5177e84bf76c7da2f8893e542f743"
+  },
+  {
+    "file": "assets/furniture-kit/bedSingle.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "ca00c63f9a12da3138d902b2f5f18e0360fb6e8a5ac42ccb4bc3f185724b65d1"
+  },
+  {
+    "file": "assets/furniture-kit/loungeSofa.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "1886b811c0d3ad0d8525a4fd43adf4112c497c8e0ed906f06877ca3517f4c7dd"
+  },
+  {
+    "file": "assets/furniture-kit/table.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "ff1a94498d023957f4bc3ff6f55a7a82977d336dbf01a573b3364f03afe5ff61"
+  },
+  {
+    "file": "assets/furniture-kit/chair.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "c8a11eec93e89e31250ba91afc1b8d56c3bec7ae86640fd1239f595ff4180883"
+  },
+  {
+    "file": "assets/furniture-kit/bookcaseOpen.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "750702218d68c062b15dfef6ab06a4014d1cfa8bd05f02e57c53b7e13bec157c"
+  },
+  {
+    "file": "assets/furniture-kit/cardboardBoxClosed.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "4af079dca52960912764574950f0549ff2ae1224b3db1528718629473a2d5d81"
+  },
+  {
+    "file": "assets/furniture-kit/desk.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "0164fe828f028b321730fb8c74502e353583f751be74da1682d42fff7d3c5a42"
+  },
+  {
+    "file": "assets/furniture-kit/computerScreen.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "5942cbad29a2d2b956619569926e81d50a4174403d592fece6556e57632dc643"
+  },
+  {
+    "file": "assets/furniture-kit/toilet.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "16165cfd03c56c2cb443b800570810a22ef770f65e7a468f6761d9dc14eaaeae"
+  },
+  {
+    "file": "assets/furniture-kit/bathtub.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "54c405c7035aab63dc41e709dc3c50fc5bcfbc4cddc91ffc54188075a6d25d01"
+  },
+  {
+    "file": "assets/furniture-kit/radio.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "1ba93d6ba6f049750853b4652b92f286f2898e527695a0705b75cc7615897fed"
+  },
+  {
+    "file": "assets/furniture-kit/trashcan.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "e0ccc1fe50cbd05386477fdff527171d1cf7c0de2ba7ff3233f8d9561feb2561"
+  },
+  {
+    "file": "assets/furniture-kit/lampRoundFloor.glb",
+    "source": "https://kenney.nl/assets/furniture-kit",
+    "license": "CC0-1.0",
+    "sha256": "50fe1b5b588edf15bfa9cc880f71a02a4fda6036350b24733d0ef4de5cc5e908"
+  },
+  {
+    "file": "assets/survival-kit/chest.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "84b03023e425cc1f96c6d0b0f352608be9e8e01b112790e6b00b8651bf84379b"
+  },
+  {
+    "file": "assets/survival-kit/barrel.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "3a0d12f6bdd1badd361f64ce0fbbf878a4ccfc2de8ff1ac4ed4c1aea2a9ee04a"
+  },
+  {
+    "file": "assets/survival-kit/box.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "346eebd23986793b992ca6e05e9f98d6f5db96a9bfa3aa7c8360ac8b7920def8"
+  },
+  {
+    "file": "assets/survival-kit/resource-planks.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "d3804257474a3baab7ac067be91de5c3d6d18d5803775dc876cb6d9442c30873"
+  },
+  {
+    "file": "assets/survival-kit/resource-wood.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "1d5f559da9432f89bd323731ef76b60372e0deb261a96d0da8d5af570c485d80"
+  },
+  {
+    "file": "assets/survival-kit/tool-axe.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "de5c6cc51cdb5bcfad8bd7128b7ff0e37a34e6f4f8deddec82bb8634c25cc20d"
+  },
+  {
+    "file": "assets/survival-kit/tool-hammer.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "9b27f03c26dabd49a7ea358615e63fe65e1c3d0157887d4ee1ecdfa1f0e688f3"
+  },
+  {
+    "file": "assets/survival-kit/tree-log.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "bd358e55e63a75bd54bea1e4b40ed362baa937ce8e503f2aa2370a5a1d9da11c"
+  },
+  {
+    "file": "assets/survival-kit/tree.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "7f8c2381a747882fc4fb534dcf803002f2cc925aa400f1328b24bd5576c3dca0"
+  },
+  {
+    "file": "assets/survival-kit/tree-autumn.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "1945b56b6a17e57ade4f14716fac40d53c3c322e8855c3825d40825845bbfd92"
+  },
+  {
+    "file": "assets/survival-kit/workbench.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "bf72d2d535fa29127e5078a6c4c2023a74fa5cd7d02d91ad550e897e088e1dc8"
+  },
+  {
+    "file": "assets/survival-kit/bedroll.glb",
+    "source": "https://kenney.nl/assets/survival-kit",
+    "license": "CC0-1.0",
+    "sha256": "2ad9baa2d800845195c7c92bd8423b0d99519530dee0afd3bd0ac4b2e255d728"
+  },
+  {
+    "file": "assets/city-kit-roads/dumpster.glb",
+    "source": "https://kenney.nl/assets/city-kit-roads",
+    "license": "CC0-1.0",
+    "sha256": "d87d4a812567d0e8b91c545387d758aa18f7652eb8fc0aed2513a83abb988dd6"
+  },
+  {
+    "file": "assets/city-kit-roads/construction-cone.glb",
+    "source": "https://kenney.nl/assets/city-kit-roads",
+    "license": "CC0-1.0",
+    "sha256": "50ceae45cd1d71f738a8f7c40f8b6b46f360063c2754bf717aae54013d6f2ee4"
+  },
+  {
+    "file": "assets/city-kit-roads/construction-barrier.glb",
+    "source": "https://kenney.nl/assets/city-kit-roads",
+    "license": "CC0-1.0",
+    "sha256": "906f73a6d62d8de58a4c5a19e76ff95b460c42b37e5fa37478b8612f06793f26"
+  },
+  {
+    "file": "assets/city-kit-roads/light-curved.glb",
+    "source": "https://kenney.nl/assets/city-kit-roads",
+    "license": "CC0-1.0",
+    "sha256": "154dcce9d58ec2cd165e26c91a89c97bdd2838cf06d255099b3570df84f82ec6"
+  },
+  {
+    "file": "assets/city-kit-roads/road-sign-stop.glb",
+    "source": "https://kenney.nl/assets/city-kit-roads",
+    "license": "CC0-1.0",
+    "sha256": "0991181f37171daf8d2501e436a688e46ea2bcebb5e27aa451640fcbaab107ef"
+  },
+  {
+    "file": "assets/city-kit-roads/electricity-pole.glb",
+    "source": "https://kenney.nl/assets/city-kit-roads",
+    "license": "CC0-1.0",
+    "sha256": "08c9b924e297eaa46bbd79ac09795c045848a4e38a72b2ce4f973517f840c2d3"
+  },
+  {
+    "file": "assets/city-kit-suburban/building-type-a.glb",
+    "source": "https://kenney.nl/assets/city-kit-suburban",
+    "license": "CC0-1.0",
+    "sha256": "49f32e20b9dcd24b1c8f6d6488807b8c8cb684cbb595bfb0bb36ad903e470faa"
+  },
+  {
+    "file": "assets/city-kit-suburban/building-type-c.glb",
+    "source": "https://kenney.nl/assets/city-kit-suburban",
+    "license": "CC0-1.0",
+    "sha256": "86a69f30f1a09461283e158514945ae5cc9d56357b0ddc83a9a3f0eecd113591"
+  },
+  {
+    "file": "assets/city-kit-suburban/building-type-f.glb",
+    "source": "https://kenney.nl/assets/city-kit-suburban",
+    "license": "CC0-1.0",
+    "sha256": "6f778f50d7f03c86f9a018e428cf8ffdd9e918df09954c0651d1c9559584a22b"
+  },
+  {
+    "file": "assets/city-kit-suburban/building-type-k.glb",
+    "source": "https://kenney.nl/assets/city-kit-suburban",
+    "license": "CC0-1.0",
+    "sha256": "c1b819a526bbcf9663bc40c98e22337cded7fff7c50c14679132d5d98d75f583"
+  },
+  {
+    "file": "assets/city-kit-suburban/tree-large.glb",
+    "source": "https://kenney.nl/assets/city-kit-suburban",
+    "license": "CC0-1.0",
+    "sha256": "16d1f95c149bc727a953a473cf20bf21de9bf1a88747c4f9d2eeb4ac7d43e291"
+  },
+  {
+    "file": "assets/city-kit-suburban/fence-low.glb",
+    "source": "https://kenney.nl/assets/city-kit-suburban",
+    "license": "CC0-1.0",
+    "sha256": "fe0272d73820bb4c8db3bed408a28cbd5c042da1373142bd13122a1ac9d1a168"
+  },
+  {
+    "file": "assets/car-kit/sedan.glb",
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0-1.0",
+    "sha256": "b532ea7d2c59f7f6b22b138cf1955218a2c1898f1cea932af4d3fd563c3959b7"
+  },
+  {
+    "file": "assets/car-kit/van.glb",
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0-1.0",
+    "sha256": "ed4ed56e8e5ed98db050af09ed2062b3b6bb7b93eab1e563cb6774b387b233a1"
+  },
+  {
+    "file": "assets/car-kit/police.glb",
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0-1.0",
+    "sha256": "a617b880594f56239b7ac4cf6fd4d74ebdae3ba6c5d842e77c76a5906eff352a"
+  },
+  {
+    "file": "assets/car-kit/ambulance.glb",
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0-1.0",
+    "sha256": "9e429e2b6202c0d78d0c38b2adbaae6b77716bb2a0f6fbb2811556e1fb31edba"
+  },
+  {
+    "file": "assets/car-kit/debris-tire.glb",
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0-1.0",
+    "sha256": "7c3f5968244e2c617c698820e943493b8480c7bef8535fbab04d4a501b3489e9"
+  },
+  {
+    "file": "assets/car-kit/debris-door.glb",
+    "source": "https://kenney.nl/assets/car-kit",
+    "license": "CC0-1.0",
+    "sha256": "c62ab01c07be9be5dfc0f940dbc933fa836019ea1bc8fd0baa2d0e52cd764ea2"
+  },
+  {
+    "file": "assets/food-kit/can.glb",
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0-1.0",
+    "sha256": "f3ee6aad23adb6251adbc988652dff430abc781506759a53a8cc7aca6a87db48"
+  },
+  {
+    "file": "assets/food-kit/bread.glb",
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0-1.0",
+    "sha256": "9bd9db117db654cf1157439d1257a8fc5915ea77a94fb876a5056522b9e49f46"
+  },
+  {
+    "file": "assets/food-kit/apple.glb",
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0-1.0",
+    "sha256": "2a80ab65d5bc2cb4f2bca1e8176cbb591849a288596d4b2e76e411338761a526"
+  },
+  {
+    "file": "assets/food-kit/bottle-oil.glb",
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0-1.0",
+    "sha256": "a87a7a6146be0996b17aca3ccd011cfe0d045593db03f89829f88b6228b49d57"
+  },
+  {
+    "file": "assets/food-kit/carton.glb",
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0-1.0",
+    "sha256": "b63a5081c6edbda7ba8172e6a776f222e781f886a011a887789b2fde42095d04"
+  },
+  {
+    "file": "assets/food-kit/cooking-knife.glb",
+    "source": "https://kenney.nl/assets/food-kit",
+    "license": "CC0-1.0",
+    "sha256": "4bec734243cb3e8fa636e17a4ef27828bdaecfc8ac23bd847b9b86f6945cb4d2"
+  },
+  {
+    "file": "assets/audio/footstep_concrete_000.ogg",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "assets/audio/footstep_concrete_001.ogg",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "assets/audio/footstep_grass_000.ogg",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "assets/audio/impactWood_heavy_000.ogg",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "assets/audio/impactWood_light_000.ogg",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "assets/audio/impactMetal_medium_000.ogg",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "assets/audio/impactGlass_medium_000.ogg",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "assets/characters/survivorFemaleA.glb",
+    "source": "https://kenney.nl/assets/animated-characters-survivors",
+    "license": "CC0-1.0",
+    "adaptation": "FBX to GLB with Blender 4.5.3, original PNG skin, rest-pose retargeted and baked Idle/Walk/Run NLA clips",
+    "sha256": "d7c59509c930d757640fc196b2691aff156ba7575f1bc0e0cc41260208ab54f3"
+  },
+  {
+    "file": "assets/characters/survivorMaleB.glb",
+    "source": "https://kenney.nl/assets/animated-characters-survivors",
+    "license": "CC0-1.0",
+    "adaptation": "FBX to GLB with Blender 4.5.3, original PNG skin, rest-pose retargeted and baked Idle/Walk/Run NLA clips",
+    "sha256": "cb26b7c7ab69ea9df45d1e18d43d962ed170e60a3ff6f95a72306d2f4604e8ac"
+  },
+  {
+    "file": "assets/characters/zombieA.glb",
+    "source": "https://kenney.nl/assets/animated-characters-survivors",
+    "license": "CC0-1.0",
+    "adaptation": "FBX to GLB with Blender 4.5.3, original PNG skin, rest-pose retargeted and baked Idle/Walk/Run NLA clips",
+    "sha256": "e6da962deb48728e6fddb73f04c3c3c09af293fb0abbef8f8c06b8e212b32973"
+  },
+  {
+    "file": "assets/characters/zombieC.glb",
+    "source": "https://kenney.nl/assets/animated-characters-survivors",
+    "license": "CC0-1.0",
+    "adaptation": "FBX to GLB with Blender 4.5.3, original PNG skin, rest-pose retargeted and baked Idle/Walk/Run NLA clips",
+    "sha256": "f0fed78d6326439ead7c242b16d0bf72c6df3c887e47949865ec5a9c151dd723"
+  }
+]
