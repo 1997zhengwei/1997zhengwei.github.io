@@ -4,6 +4,10 @@
 
 中文路径：`games/生存沙盒/涨潮之前/`。版本使用 Git 提交追踪，不另建一堆版本目录。游戏专区所在分支为 `codex/krabby-patty-flip`；个人学术主页的 main 分支独立保留。
 
+## Loopit 初稿
+
+[试玩 V1](https://cdn-cf.loopit.me/public/game/01a1a7c2-3d75-75f9-b378-4f04a3273a6b/2118175540358696960/workspace/dist/index.html?loopit_preview=draft) · [创作草稿](https://lab.loopit.me/pgc/workbench/01a1a7c2-3d75-75f9-b378-4f04a3273a6b?kind=draft) · [平台验收记录](./LOOPIT_QA.md)。2026-11-05，基于固定源码提交 `bda692a06b47ed54aa3807fb4ab6783d14bb262c` 接入，采集、建造、独立世界、批量铺地、撤销重做、跨天和刷新恢复已实测；尚未发布展厅。平台域名的存档与本机隔离，继续本机营地可导出世界 JSON 再导入。
+
 ## 玩什么
 
 - 第一天：采集、地板、小屋、营火、石斧、跨海栈桥、礁岛和加固，守住第一场风雨。

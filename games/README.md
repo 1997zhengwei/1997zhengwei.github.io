@@ -15,7 +15,7 @@
 | 海绵宝宝·变形快递（Sponge Shift Express） | [打开资料](./sponge-shift-express/) | 用户认可的三维送餐冒险；本地九单完成已验证 |
 | 比奇堡·捣蛋游乐场（Bikini Bottom: Tiny Trouble） | [打开资料](./bikini-bottom-playground/) | 本地 V3：大乐园、三种滑梯和无尽 DIY；33 项规则检查 |
 | **比奇堡·绳索搭档（Bikini Bottom Rope Relay）** | **[打开中文资料目录](./比奇堡-绳索搭档/)** | **本地 24 项检查通过；[Loopit V1 草稿](https://lab.loopit.me/pgc/workbench/01a1a713-4e04-7e3e-946f-3e8d11e447f5?kind=draft) 已完成，核心操作与手机布局已实测；[试玩](https://cdn-cf.loopit.me/public/game/01a1a713-4e04-7e3e-946f-3e8d11e447f5/2117995375997509632/workspace/dist/index.html?loopit_preview=draft)** |
-| **涨潮之前 · 我的世界（Tidehaven）** | **[打开中文资料目录](./生存沙盒/涨潮之前/)** | **v4.0.0 三维生存与自由建造；39 项本地规则检查；独立世界、持续跨天、批量建造与备份；已授权 Loopit 初稿接入** |
+| **涨潮之前 · 我的世界（Tidehaven）** | **[打开中文资料目录](./生存沙盒/涨潮之前/)** | **v4.0.0；39 项本地规则检查；[Loopit V1 试玩](https://cdn-cf.loopit.me/public/game/01a1a7c2-3d75-75f9-b378-4f04a3273a6b/2118175540358696960/workspace/dist/index.html?loopit_preview=draft)；采集、建造、独立世界、3×3/撤销、跨天和刷新恢复已实测，草稿未发布** |
 
 ## 中文命名约定
 
