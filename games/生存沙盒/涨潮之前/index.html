@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123c46"><title>涨潮之前 · Tidehaven</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23183e48'/%3E%3Cpath d='M9 44q8-10 16 0t16 0t16 0M13 53q8-8 16 0t16 0' fill='none' stroke='%2384d7ce' stroke-width='4'/%3E%3Cpath d='M17 30L32 15l15 15v13H17z' fill='%23f0bd73'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="world" aria-label="可探索、采集和建造的三维潮汐小岛"></canvas>
+  <div id="load">正在唤醒小岛<span></span></div>
+  <div id="hud" hidden>
+    <header>
+      <div class="wordmark"><span class="brand-symbol">≈</span><div><b>涨潮之前</b><small>T I D E H A V E N</small></div></div>
+      <div class="tools"><button id="world-menu" title="我的世界">世界</button><button id="sound" title="开启音效" aria-label="开启音效">♪<span class="mute-mark">×</span></button><button id="pause" title="暂停 / 帮助" aria-label="暂停 / 帮助">Ⅱ</button></div>
+    </header>
+    <section class="tide-card glass" aria-label="潮汐与天气">
+      <div class="tide-heading"><span id="weather">晴朗 · 退潮海滩</span><span id="countdown">涨潮前 03:00</span></div>
+      <div class="tide-track"><div id="tide-fill"></div><span class="tide-mark"></span></div>
+      <div class="tide-foot"><span>低潮</span><span id="day">第 1 天</span><span>风雨</span></div>
+    </section>
+    <section class="resources glass" aria-label="背包"><span id="res-wood" title="木料"></span><span id="res-stone" title="石头"></span><span id="res-fiber" title="纤维"></span><span id="res-metal" title="金属零件" hidden></span><span class="tool-badge" id="axe-status" title="石斧尚未制作"></span></section>
+    <section class="mission glass"><div class="mission-top"><span id="mission-index">01 / 07</span><span id="chapter-name">小岛手记</span><button id="fold-mission" aria-label="折叠目标">−</button></div><b id="mission-title">先收集 4 份木料</b><p id="mission-desc">点击漂流木，走近后就能采集。</p><div id="mission-dots"></div><button id="invite-storm" class="primary" hidden>准备好了，提前迎潮</button><button id="voyage-go" class="primary" hidden>前往栈桥</button><small id="voyage-bearing" hidden></small></section>
+    <div class="warmth glass"><span>温暖</span><div><i id="warmth-fill"></i></div><b id="warmth-value">100</b><small id="shelter-status">海风轻轻吹</small></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="world-labels" aria-hidden="true"></div>
+    <div id="context" class="glass"><b id="context-name"></b><span id="context-hint"></span></div>
+    <nav class="camera-controls glass" aria-label="镜头"><button id="camera-left" aria-label="镜头向左旋转">↶</button><button id="camera-home" aria-label="全岛 / 跟随视角">⌖</button><button id="camera-right" aria-label="镜头向右旋转">↷</button><button id="zoom-in" aria-label="拉近镜头">＋</button><button id="zoom-out" aria-label="拉远镜头">−</button></nav>
+    <div class="controls">
+      <div id="joystick" aria-label="拖动摇杆移动"><div class="stick-guide"></div><div id="stick"></div><small>移动 · WASD</small></div>
+      <div class="center-controls"><button id="build-menu" class="primary"><span>⌂</span> 制作 / 建造 <kbd>B</kbd></button><span id="move-hint">点击地面前往 · 点击资源采集</span></div>
+      <button id="action" aria-label="长按采集"><svg class="hold-ring" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36"/><circle id="action-progress" cx="40" cy="40" r="36"/></svg><span id="action-symbol">✦</span><b id="action-text">采集</b><kbd>E</kbd></button>
+      <button id="warmer" class="glass" hidden>取暖 <span>3</span><kbd>F</kbd></button>
+    </div>
+    <section id="build-panel" class="glass" hidden><div class="panel-heading"><div><small>把材料变成一个家</small><b>小岛工坊</b></div><button id="close-build" aria-label="关闭工坊">×</button></div><div id="craft-tabs" hidden><button id="craft-camp">营地建设</button><button id="craft-sea">出海工坊</button><button id="craft-advanced" hidden>营地进阶</button><button id="craft-decor" hidden>庭院布置</button></div><button id="creative" class="text-button" hidden>自由营造：关闭</button><button id="enter-builder" class="text-button" hidden>进入建造视角 · 自由移动镜头</button><div id="recipe-list"></div><p class="build-note">建造时潮汐暂停 · 拆除返还材料</p></section>
+    <section id="placement" class="glass" hidden><div><b id="placement-title"></b><span id="placement-info"></span></div><div id="brush-options" hidden><button id="brush-one" class="active">单格</button><button id="brush-nine">3 × 3 铺地</button></div><div class="placement-buttons"><button id="cancel-build" title="取消">×</button><button id="rotate-build" title="旋转 R">↻</button><button id="confirm-build" class="primary">建在这里</button></div><small>点击地面选址 · 绿色可建 · 拖动摇杆调整位置</small></section>
+    <nav id="editor-bar" class="glass" hidden aria-label="世界建造工具"><button id="pick-template">吸取建筑</button><button id="undo-build">撤销</button><button id="redo-build">重做</button><button id="editor-center">回角色</button><button id="editor-visit">在此漫游</button><button id="editor-done">完成</button><small id="editor-position"></small></nav><div class="local-save" id="save-status">本地营地 · 自动保存</div>
+  </div>
+  <section id="intro" class="overlay" hidden><article class="intro-card"><span class="eyebrow">一座小岛 / 一场风雨 / 一个家</span><h1>涨潮<span>之前</span><i>≈</i></h1><p class="intro-promise">从一根漂流木，<br>到自己亲手建造的世界。</p><div class="intro-loop"><span>采集</span><i>→</i><span>建造</span><i>→</i><span>探索</span><i>→</i><span>安家</span></div><button id="start" class="primary">上岛，搭个家 <span>↗</span></button><button id="intro-worlds" class="text-button">我的世界 / 创建新世界</button><button id="fresh" class="text-button" hidden>从一座新岛开始</button><small>点击地面移动、点击资源采集<br>也可以用 WASD / 摇杆移动，长按 E / 采集按钮</small></article><div class="intro-caption">LOW TIDE, NEW BEGINNINGS.</div></section>
+  <section id="pause-overlay" class="overlay" hidden><article class="dialog"><span class="eyebrow">海风也歇一会儿</span><h2>小岛已暂停</h2><div class="help-grid"><p><b>行走与采集</b>点击地面或资源；WASD / 摇杆移动，长按 E / 采集按钮。</p><p><b>建造与探索</b>B 打开工坊，选建筑后点击地面选址；R 旋转，Esc 取消。</p><p><b>第二天，划向沉船</b>点击小艇或长按 E 上船。点击水面 / 摇杆划船，靠岸后长按 E 下船。任务按钮可以指引航向。</p><p><b>把暖意带出门</b>在工作台制作便携暖包，点“取暖”或按 F 恢复温暖；营火旁花 1 木料补满。</p></div><button id="resume" class="primary">回到小岛</button><button id="recall-boat" class="text-button" hidden>把小艇召回码头</button><button id="restart" class="text-button">重新开始</button><small>第三天起可打开建造视角。世界菜单可另建、复制和备份世界；重新开始只重置当前世界，其他世界保留。</small></article></section>
+  <section id="forecast-overlay" class="overlay" hidden><article class="dialog forecast-card"><span class="eyebrow">观察天气，再布置营地 · 此刻已暂停</span><h2 id="forecast-today"></h2><p id="forecast-detail"></p><p id="forecast-next"></p><button id="forecast-close" class="primary">记住了，回去建设</button><button id="forecast-tonight" class="text-button">准备好了，提前迎接今晚</button><button id="forecast-rest" class="text-button">休息到明天</button><button id="explore-new" class="text-button">探索新岛 · 小艇指引</button></article></section>
+  <section id="world-overlay" class="overlay" hidden><article class="dialog world-dialog"><div class="panel-heading"><div><small>每一个世界，都按自己的想法生长</small><h2>我的世界</h2></div><button id="world-close" aria-label="回到当前世界">×</button></div><p id="world-message" role="status"></p><div id="world-list"></div>
+<details id="new-world-details"><summary>＋ 创建新世界</summary><form id="new-world-form"><label>世界名字<input id="new-world-name" maxlength="24" value="我的新世界" required></label><div class="world-fields"><label>玩法<select id="new-world-mode"><option value="creative">自由世界 · 无限材料，安心营造</option><option value="survival">生存世界 · 每天不同挑战</option></select></label><label>开始方式<select id="new-world-preset"><option value="blank">空白小岛 · 自己搭第一块地板</option><option value="camp">营地起步 · 带小屋与炉火</option></select></label></div><button id="create-world" class="primary" type="submit">创建并进入</button><small>新世界单独保存，原来的营地会保留。</small></form></details>
+<details id="world-settings-details"><summary>当前世界设置</summary><form id="world-settings-form"><label>世界名字<input id="world-name" maxlength="24" required></label><div class="world-fields"><label>玩法<select id="world-mode"><option value="survival">生存 · 保留天气挑战</option><option value="creative">自由 · 不失温，不磨损</option></select></label><label>日程速度<select id="world-pace"><option value="0.75">悠闲 · 0.75 倍</option><option value="1">自然 · 1 倍</option><option value="1.5">轻快 · 1.5 倍</option></select></label><label>新布置配色<select id="world-style"><option value="sea">海风青</option><option value="sunset">落日粉</option><option value="meadow">草地绿</option></select></label></div><label class="check-label"><input id="world-calm" type="checkbox">平静天气（自由世界）</label><label class="check-label"><input id="world-frozen" type="checkbox">停住当天的时间，生产仍继续</label><button id="save-world-settings" class="primary" type="submit">保存设置</button></form></details>
+<div class="world-actions"><button id="world-build" class="primary">建造视角</button><button id="world-next">迎接下一天</button><button id="world-home">回家漫游</button><button id="set-home">把这里设为家</button><button id="duplicate-world">复制当前世界</button><button id="export-world">导出备份</button><button id="import-world">导入为新世界</button><input id="import-file" type="file" accept=".json,application/json" hidden></div><small>存档留在本机浏览器。可以导出备份；导入不会覆盖已有世界。</small></article></section>
+  <section id="result" class="overlay" hidden><article class="dialog result-card"><span id="result-kicker" class="eyebrow"></span><div id="result-art">⌂</div><h2 id="result-title"></h2><p id="result-copy"></p><div id="result-stats"></div><button id="result-primary" class="primary"></button><button id="result-secondary" class="text-button"></button></article></section>
+  <script type="module" src="src/main.mjs"></script>
+</body></html>

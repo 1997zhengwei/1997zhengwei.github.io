@@ -1,0 +1,5 @@
+{
+  "name": "tidehaven", "version": "4.0.0", "private": true,
+  "type": "module",
+  "scripts": {"start": "python serve.py", "test": "node --test tests/*.test.mjs"}
+}

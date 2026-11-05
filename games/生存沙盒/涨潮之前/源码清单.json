@@ -1,0 +1,217 @@
+{
+  "version": "4.0.0",
+  "date": "2026-11-05",
+  "source_zip_sha256": "ab82be1c4316cac6c5c17b17d8a8c923bb5938189bae79df471a41ce36417da2",
+  "files": [
+    {
+      "path": "games/生存沙盒/涨潮之前/index.html",
+      "bytes": 11661,
+      "sha256": "42389e7b43b51068b3007c9e9071b604296e9adfb4072fe124d1b562e3e300ad",
+      "git_blob": "e3bfbf919f14731fd4b21e7b3b9414ed84e3e0bc"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/LOOPIT_HANDOFF.md",
+      "bytes": 3943,
+      "sha256": "512c119b88633555f3fd29c9413f48349de654fe2b0d34ad2b899864ba357fac",
+      "git_blob": "7794fcd2ebb99dd656dd5c940ecd34bc38d92fb0"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/package.json",
+      "bytes": 171,
+      "sha256": "fe2a7b0d7ede7bea2613c0c49ba4a242b3d8dd56c52cae5aaf791daadd12fa98",
+      "git_blob": "081d7a261c44278904f8a70c6a09f066d065202d"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/QA.md",
+      "bytes": 2233,
+      "sha256": "e09c134fc85f7a41866103a85a5258e3828ba61e796a1aaff7e0bbb3418708cd",
+      "git_blob": "21407f09089a4a74da5d83db74861c1a6636ec82"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/README.md",
+      "bytes": 3146,
+      "sha256": "c3b32a42a7c01d177aca4fd03455f60158dc4be2fe3a755cde4295c98c3300f5",
+      "git_blob": "57c13d50ce44fb6055388b2431131052f7103735"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/serve.py",
+      "bytes": 912,
+      "sha256": "52d4abcbf4bba5adb362e4f24acea3be4e169f06edfd6b724183cf0a3a7aac8b",
+      "git_blob": "a6432b6adeef2a58cd0da43cdb885882e38afce6"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/decor-world.mjs",
+      "bytes": 1890,
+      "sha256": "8e1f52ded484eba0a7e9df410cd0e39fc043d92dec8122e543a46a52320cc3dc",
+      "git_blob": "2ca75b34b9e440b00eaab110d3fe6ba18ad38cdd"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/frontier-state.mjs",
+      "bytes": 5415,
+      "sha256": "0e58aab4898563ef5274a56d3d28f315c319ae9c016a28ced6f04ae167ab1dec",
+      "git_blob": "4962f9c25964eb7e487497deca9e321a52e0fa2f"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/main.mjs",
+      "bytes": 65110,
+      "sha256": "97d59e4014ecf89ea1efe41f6e0872cb7a4466238dcb1fd8e19335bf9772dad8",
+      "git_blob": "df4acf31bb6ddbe0fe4086d0716b6416a8018259"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/rules.mjs",
+      "bytes": 36547,
+      "sha256": "c3521ba3a2a57def05d021cad6ccf736ee5608570b83bbd29125ace23b306d73",
+      "git_blob": "6833b80ee06036ea6c4b8de918f4ace5808ccc8b"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/sandbox.mjs",
+      "bytes": 7544,
+      "sha256": "87a696639d93dfca1778bd62a41d94f0974c81b91e95c235229f3d082395d175",
+      "git_blob": "67995b7459f55cfd2aa73e38dc394774a5595d05"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/spatial.mjs",
+      "bytes": 1447,
+      "sha256": "3b17e4b2ba72ba636e86f70aad0641f7d5d141ddeb8bcb2166bba403bae42a9b",
+      "git_blob": "93506d902525679ca0b4a487a4f15469fe9d7114"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/survival-world.mjs",
+      "bytes": 5164,
+      "sha256": "9e5f43e58e247d6f4794ced32175ee8185c6d492f2eac5d3883afb6c903a7376",
+      "git_blob": "83533eff3cd1c53207b39d8dcb5d7e8b1b35cc3e"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/survival.mjs",
+      "bytes": 10378,
+      "sha256": "0930d67573b94e6abe00629db3c602abd254d5d8f1462eba06b388cfbc4aa23a",
+      "git_blob": "1a0205ac9145cae918aac97e304f44fdd607036f"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/ui.mjs",
+      "bytes": 7156,
+      "sha256": "e0a15d584291a77683a17e54756e49a3548234a7dafe4a0decc58414a29ade6f",
+      "git_blob": "a084696b5de19b80b33ab0c0b32a134c35664ba9"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/voyage-state.mjs",
+      "bytes": 4102,
+      "sha256": "fa8523140a3efd69d98419eecb6eed718e4c386979f26f8aafbff3ab542b48f3",
+      "git_blob": "708c1a3bdd3e5103abd43c10406b31ad5aac7d0c"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/voyage-world.mjs",
+      "bytes": 8882,
+      "sha256": "3d826aaffadeadfbbfbee9e553643f538a838fb028066b71455dad7bdbe52c40",
+      "git_blob": "d2bc8700c8a62fea9dff8d95916b3faa3e5c7d54"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/voyage.mjs",
+      "bytes": 14055,
+      "sha256": "70a9e9f27ec87dabcf2508028410982e5f62680cbdf5d23febc71c6d296d04bd",
+      "git_blob": "cf74aecbaae3cbca8ca5dcc9c4ca0acfb18712f4"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/world-state.mjs",
+      "bytes": 997,
+      "sha256": "35297d0493a8c30394a200024a8ad4f52a449d37b3ae9b54c8ef43b594ccdbf0",
+      "git_blob": "1ec02c8c1d2251a49985701f7f4189b755c45220"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/src/world.mjs",
+      "bytes": 36868,
+      "sha256": "c78d4322b7f9cdb39648d87ce94d155408c119a9834af5fef20ca5d53c29ee35",
+      "git_blob": "74fdc2a1ec4e76ede395540ca1bebab1b1eff1d1"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/start-game.ps1",
+      "bytes": 1070,
+      "sha256": "edaf59020a380bce43fe0d617933ae3514c2cefba2ee61c671406c0359ffc5c1",
+      "git_blob": "60e5851dea5f36182ec7920910bc926702510f30"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/START_GAME.cmd",
+      "bytes": 110,
+      "sha256": "90ea1a34399d04f07581221634155b8c296dbb0032c0de2bb7fb3d1cde000e1e",
+      "git_blob": "e398175ca7df28f08de9217299e3d76b6b5eab7d"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/style.css",
+      "bytes": 22546,
+      "sha256": "e2cd4abdc869f8abe70c5144e5bef696fa2371703c7dcc29387eae5a4731f9dd",
+      "git_blob": "b3da3624c69ab7f857216a7dba12ca9c393f41a2"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/tests/fixtures/day1-complete.json",
+      "bytes": 5680,
+      "sha256": "ebc3c64dbbb36008dcc8ee7bf5242fb5789f1210db0d769ba286c24c53b4fff3",
+      "git_blob": "86b5bf3fb84cb89b9ed9414a967bc76fa2342b87"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/tests/fixtures/day2-complete.json",
+      "bytes": 6992,
+      "sha256": "4f001f6ef4d5c19a4d3c1f3c29421db503d08621b827efd3ddf37810f144d2f0",
+      "git_blob": "5a95ad5695294c3c100bc8ecbb80cdfb67c9c7bc"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/tests/rules.test.mjs",
+      "bytes": 4746,
+      "sha256": "07ebe4c9a8b2b9a1481f3063577ab0dd69eb9edbd58cec21ac5adf744b060c23",
+      "git_blob": "a20f7a8e34af55384bd364e670a04887a85a6d50"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/tests/sandbox.test.mjs",
+      "bytes": 5463,
+      "sha256": "bf273edb6fb0b67b4a0c95373bceed75a215c578a2dd72fe5227a6ca94eecf4e",
+      "git_blob": "a7e59d37e28a4f16cb56d91cad64275d8ac8919e"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/tests/survival.test.mjs",
+      "bytes": 7771,
+      "sha256": "89248ad87fe31a1fa3d7ad4871a70ba266216eb87cfa30b5695afa5e3706003f",
+      "git_blob": "bf0c6b9529c7ed6aa796626eaed28497b79d53e1"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/tests/voyage.test.mjs",
+      "bytes": 7477,
+      "sha256": "d506a847126493b164b46ecdf98f773811f284fa5f0713110756f38d619e40d2",
+      "git_blob": "68b7996d945dd146daa42efe83dfde28c27202ec"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "git_blob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "git_blob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/实拍/01-自由营造.png",
+      "bytes": 400925,
+      "sha256": "403e0e24be8dcf71d645ac8926dd2d9f4e2afe75528f4a6f815b05b0b10e052c",
+      "git_blob": "e9e7d9e1e82806b4f54f4cfac276fbeba73f5056"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/实拍/02-营地迎潮.png",
+      "bytes": 446850,
+      "sha256": "86369816e0ac82a8d97544bacb8e8669737d47cff339e66f7d9ba2adb8e5aae2",
+      "git_blob": "de18a2c20c430a00a38f1de64f0d0cbeed29b533"
+    },
+    {
+      "path": "games/生存沙盒/涨潮之前/实拍/03-手机建造.png",
+      "bytes": 131954,
+      "sha256": "ade9616f61a01a8fe1a7d23cdf431888eaa347c76d9fe6cfb43771b21daf8814",
+      "git_blob": "b410798f037c614f0bad9a262fa63afa56c1c9c5"
+    }
+  ]
+}
