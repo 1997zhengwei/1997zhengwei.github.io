@@ -1,0 +1,257 @@
+{
+  "source": "Preserved v0.4.0 authority, numeric fixture only",
+  "regions": [
+    {
+      "scout": {
+        "hp": 34,
+        "damage": 7,
+        "speed": 2.05
+      },
+      "runner": {
+        "hp": 34,
+        "damage": 7,
+        "speed": 3.2
+      },
+      "brute": {
+        "hp": 57.8,
+        "damage": 7,
+        "speed": 1.75
+      },
+      "spitter": {
+        "hp": 34,
+        "damage": 7,
+        "speed": 2.05
+      },
+      "shield": {
+        "hp": 45.900000000000006,
+        "damage": 7,
+        "speed": 2.05
+      },
+      "support": {
+        "hp": 28.9,
+        "damage": 7,
+        "speed": 2.05
+      },
+      "artillery": {
+        "hp": 34,
+        "damage": 7,
+        "speed": 2.05
+      },
+      "boss": {
+        "hp": 360,
+        "damage": 14,
+        "speed": 1.45
+      }
+    },
+    {
+      "scout": {
+        "hp": 58,
+        "damage": 10,
+        "speed": 2.1399999999999997
+      },
+      "runner": {
+        "hp": 58,
+        "damage": 10,
+        "speed": 3.2
+      },
+      "brute": {
+        "hp": 98.6,
+        "damage": 10,
+        "speed": 1.75
+      },
+      "spitter": {
+        "hp": 58,
+        "damage": 10,
+        "speed": 2.1399999999999997
+      },
+      "shield": {
+        "hp": 78.30000000000001,
+        "damage": 10,
+        "speed": 2.1399999999999997
+      },
+      "support": {
+        "hp": 49.3,
+        "damage": 10,
+        "speed": 2.1399999999999997
+      },
+      "artillery": {
+        "hp": 58,
+        "damage": 10,
+        "speed": 2.1399999999999997
+      },
+      "boss": {
+        "hp": 650,
+        "damage": 18,
+        "speed": 1.45
+      }
+    },
+    {
+      "scout": {
+        "hp": 88,
+        "damage": 13,
+        "speed": 2.23
+      },
+      "runner": {
+        "hp": 88,
+        "damage": 13,
+        "speed": 3.2
+      },
+      "brute": {
+        "hp": 149.6,
+        "damage": 13,
+        "speed": 1.75
+      },
+      "spitter": {
+        "hp": 88,
+        "damage": 13,
+        "speed": 2.23
+      },
+      "shield": {
+        "hp": 118.80000000000001,
+        "damage": 13,
+        "speed": 2.23
+      },
+      "support": {
+        "hp": 74.8,
+        "damage": 13,
+        "speed": 2.23
+      },
+      "artillery": {
+        "hp": 88,
+        "damage": 13,
+        "speed": 2.23
+      },
+      "boss": {
+        "hp": 1100,
+        "damage": 22,
+        "speed": 1.45
+      }
+    },
+    {
+      "scout": {
+        "hp": 125,
+        "damage": 17,
+        "speed": 2.32
+      },
+      "runner": {
+        "hp": 125,
+        "damage": 17,
+        "speed": 3.2
+      },
+      "brute": {
+        "hp": 212.5,
+        "damage": 17,
+        "speed": 1.75
+      },
+      "spitter": {
+        "hp": 125,
+        "damage": 17,
+        "speed": 2.32
+      },
+      "shield": {
+        "hp": 168.75,
+        "damage": 17,
+        "speed": 2.32
+      },
+      "support": {
+        "hp": 106.25,
+        "damage": 17,
+        "speed": 2.32
+      },
+      "artillery": {
+        "hp": 125,
+        "damage": 17,
+        "speed": 2.32
+      },
+      "boss": {
+        "hp": 1750,
+        "damage": 26,
+        "speed": 1.45
+      }
+    },
+    {
+      "scout": {
+        "hp": 170,
+        "damage": 21,
+        "speed": 2.4099999999999997
+      },
+      "runner": {
+        "hp": 170,
+        "damage": 21,
+        "speed": 3.2
+      },
+      "brute": {
+        "hp": 289,
+        "damage": 21,
+        "speed": 1.75
+      },
+      "spitter": {
+        "hp": 170,
+        "damage": 21,
+        "speed": 2.4099999999999997
+      },
+      "shield": {
+        "hp": 229.50000000000003,
+        "damage": 21,
+        "speed": 2.4099999999999997
+      },
+      "support": {
+        "hp": 144.5,
+        "damage": 21,
+        "speed": 2.4099999999999997
+      },
+      "artillery": {
+        "hp": 170,
+        "damage": 21,
+        "speed": 2.4099999999999997
+      },
+      "boss": {
+        "hp": 2600,
+        "damage": 30,
+        "speed": 1.45
+      }
+    },
+    {
+      "scout": {
+        "hp": 220,
+        "damage": 26,
+        "speed": 2.5
+      },
+      "runner": {
+        "hp": 220,
+        "damage": 26,
+        "speed": 3.2
+      },
+      "brute": {
+        "hp": 374,
+        "damage": 26,
+        "speed": 1.75
+      },
+      "spitter": {
+        "hp": 220,
+        "damage": 26,
+        "speed": 2.5
+      },
+      "shield": {
+        "hp": 297,
+        "damage": 26,
+        "speed": 2.5
+      },
+      "support": {
+        "hp": 187,
+        "damage": 26,
+        "speed": 2.5
+      },
+      "artillery": {
+        "hp": 220,
+        "damage": 26,
+        "speed": 2.5
+      },
+      "boss": {
+        "hp": 3800,
+        "damage": 34,
+        "speed": 1.45
+      }
+    }
+  ]
+}
