@@ -17,6 +17,7 @@
 | **比奇堡·绳索搭档（Bikini Bottom Rope Relay）** | **[打开中文资料目录](./比奇堡-绳索搭档/)** | **本地 24 项检查通过；[Loopit V1 草稿](https://lab.loopit.me/pgc/workbench/01a1a713-4e04-7e3e-946f-3e8d11e447f5?kind=draft) 已完成，核心操作与手机布局已实测；[试玩](https://cdn-cf.loopit.me/public/game/01a1a713-4e04-7e3e-946f-3e8d11e447f5/2117995375997509632/workspace/dist/index.html?loopit_preview=draft)** |
 | **涨潮之前 · 我的世界（Tidehaven）** | **[打开中文资料目录](./生存沙盒/涨潮之前/)** | **v4.0.0；39 项本地规则检查；[Loopit V1 试玩](https://cdn-cf.loopit.me/public/game/01a1a7c2-3d75-75f9-b378-4f04a3273a6b/2118175540358696960/workspace/dist/index.html?loopit_preview=draft)；采集、建造、独立世界、3×3/撤销、跨天和刷新恢复已实测，草稿未发布** |
 | **灰烬街区（ASHFALL）** | **[打开中文资料目录](./生存沙盒/灰烬街区/)** | **本地v0.7；74项检查；[Loopit V1试玩](https://cdn-cf.loopit.me/public/game/01a1aa1d-201a-78c4-8085-bdc5acd7f103/2118209181587640320/workspace/dist/index.html?loopit_preview=draft)，手机搜刮/加固/攻击/货运驾驶和刷新恢复已实测；草稿未送审** |
+| **冲鸭！障碍派对（PARTY DASH）** | **[打开中文源码目录](./冲鸭-障碍派对/)** | **v0.6.1；五张3D赛道、技巧型AI、独立装饰工坊；28项规则检查与本地触控/奖金结算已实测；GitHub源码交付，尚未接入Loopit** |
 
 ## 中文命名约定
 
