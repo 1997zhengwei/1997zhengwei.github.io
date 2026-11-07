@@ -1,0 +1,84 @@
+{
+  "fixture": true,
+  "results": [
+    {
+      "zone": 8,
+      "level": 45,
+      "success": true,
+      "seconds": 97.9,
+      "hp": 240,
+      "down": false,
+      "stages": [
+        null,
+        "ready",
+        "windup",
+        "attack",
+        "recovery"
+      ],
+      "attackShapes": [
+        "circle"
+      ],
+      "ringBreaks": 0,
+      "remainingOwnedHazards": 0
+    },
+    {
+      "zone": 9,
+      "level": 51,
+      "success": true,
+      "seconds": 23,
+      "hp": 564,
+      "down": false,
+      "stages": [
+        "ready",
+        "windup",
+        "attack",
+        "recovery"
+      ],
+      "attackShapes": [
+        "lane"
+      ],
+      "ringBreaks": 0,
+      "remainingOwnedHazards": 0
+    },
+    {
+      "zone": 10,
+      "level": 57,
+      "success": true,
+      "seconds": 31.55,
+      "hp": 543,
+      "down": false,
+      "stages": [
+        "ready",
+        "windup",
+        "attack",
+        "recovery"
+      ],
+      "attackShapes": [
+        "lane",
+        "circle"
+      ],
+      "ringBreaks": 0,
+      "remainingOwnedHazards": 0
+    },
+    {
+      "zone": 11,
+      "level": 60,
+      "success": true,
+      "seconds": 57.3,
+      "hp": 612,
+      "down": false,
+      "stages": [
+        "ready",
+        "windup",
+        "attack",
+        "recovery"
+      ],
+      "attackShapes": [
+        "lane",
+        "circle"
+      ],
+      "ringBreaks": 2,
+      "remainingOwnedHazards": 0
+    }
+  ]
+}

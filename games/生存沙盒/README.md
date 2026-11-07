@@ -6,3 +6,5 @@
 | 灰烬街区（ASHFALL） | [打开源码与说明](./灰烬街区/) | v0.7，74项本地检查；Loopit V1已完成关键手机操作试玩，[进入试玩](https://cdn-cf.loopit.me/public/game/01a1aa1d-201a-78c4-8085-bdc5acd7f103/2118209181587640320/workspace/dist/index.html?loopit_preview=draft)；未送审 |
 
 本分类使用中文路径，方便按玩法查找。版本由 Git 提交管理。
+
+- [点亮小星球 · Pocket Planet: Horizons](./点亮小星球/)：v0.9.0，八人探索大厅、三章1–60级、供氧/建塔与星兽成长；159项本地回归，平台联机接入中。

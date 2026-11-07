@@ -1,0 +1,86 @@
+{
+  "simulatedSeconds": 1676.1499999990233,
+  "walked": 7920,
+  "damage": 557,
+  "deaths": 0,
+  "regions": [
+    {
+      "region": 1,
+      "name": "Mint Quarry",
+      "cleared": true,
+      "minutes": 1.3,
+      "level": 7,
+      "hp": 142,
+      "metal": 47,
+      "crystal": 35,
+      "oxygen": 124,
+      "deaths": 0,
+      "weaponRank": 2
+    },
+    {
+      "region": 2,
+      "name": "Amber Dunes",
+      "cleared": true,
+      "minutes": 1.4,
+      "level": 11,
+      "hp": 176,
+      "metal": 61,
+      "crystal": 60,
+      "oxygen": 148,
+      "deaths": 0,
+      "weaponRank": 3
+    },
+    {
+      "region": 3,
+      "name": "Amethyst Grove",
+      "cleared": true,
+      "minutes": 3.9,
+      "level": 17,
+      "hp": 178,
+      "metal": 211,
+      "crystal": 166,
+      "oxygen": 159,
+      "deaths": 0,
+      "weaponRank": 3
+    },
+    {
+      "region": 4,
+      "name": "Frost Canyon",
+      "cleared": true,
+      "minutes": 4.7,
+      "level": 22,
+      "hp": 229,
+      "metal": 363,
+      "crystal": 267,
+      "oxygen": 180,
+      "deaths": 0,
+      "weaponRank": 3
+    },
+    {
+      "region": 5,
+      "name": "Derelict Reach",
+      "cleared": true,
+      "minutes": 4.5,
+      "level": 27,
+      "hp": 222,
+      "metal": 502,
+      "crystal": 372,
+      "oxygen": 220,
+      "deaths": 0,
+      "weaponRank": 3
+    },
+    {
+      "region": 6,
+      "name": "Starcore Rift",
+      "cleared": true,
+      "minutes": 12.1,
+      "level": 30,
+      "hp": 137,
+      "metal": 996,
+      "crystal": 667,
+      "oxygen": 133,
+      "deaths": 0,
+      "weaponRank": 3
+    }
+  ]
+}

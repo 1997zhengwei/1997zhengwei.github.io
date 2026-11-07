@@ -1,0 +1,93 @@
+{
+  "fixture": true,
+  "stationary": [
+    {
+      "mode": "pulse only",
+      "bossDefeated": false,
+      "playerDown": true,
+      "seconds": 40.55,
+      "hp": 0,
+      "bossHp": 11596
+    },
+    {
+      "mode": "pet only",
+      "bossDefeated": false,
+      "playerDown": true,
+      "seconds": 40.55,
+      "hp": 0,
+      "bossHp": 18052
+    },
+    {
+      "mode": "pulse and pet",
+      "bossDefeated": false,
+      "playerDown": true,
+      "seconds": 40.55,
+      "hp": 0,
+      "bossHp": 4366
+    }
+  ],
+  "cooperative": [
+    {
+      "players": 1,
+      "success": true,
+      "rewarded": 1,
+      "down": 0,
+      "seconds": 70.7,
+      "minimumHp": 612,
+      "debug": null,
+      "maximumBossHp": 24000
+    },
+    {
+      "players": 2,
+      "success": true,
+      "rewarded": 2,
+      "down": 0,
+      "seconds": 100.05,
+      "minimumHp": 660,
+      "debug": null,
+      "maximumBossHp": 34800
+    },
+    {
+      "players": 4,
+      "success": true,
+      "rewarded": 4,
+      "down": 0,
+      "seconds": 31.95,
+      "minimumHp": 528,
+      "debug": null,
+      "maximumBossHp": 56400
+    },
+    {
+      "players": 8,
+      "success": true,
+      "rewarded": 8,
+      "down": 0,
+      "seconds": 28.9,
+      "minimumHp": 528,
+      "debug": null,
+      "maximumBossHp": 99600
+    }
+  ],
+  "campPacks": [
+    {
+      "players": 1,
+      "requested": 4,
+      "zone": 11
+    },
+    {
+      "players": 2,
+      "requested": 4,
+      "zone": 11
+    },
+    {
+      "players": 4,
+      "requested": 6,
+      "zone": 11
+    },
+    {
+      "players": 8,
+      "requested": 8,
+      "zone": 11
+    }
+  ]
+}
