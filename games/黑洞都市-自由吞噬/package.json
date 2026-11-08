@@ -1,0 +1,11 @@
+{
+  "name": "black-hole-rush",
+  "version": "0.7.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "python serve.py --open",
+    "test": "node --test tests/*.test.mjs",
+    "arena": "python serve.py --page arena.html --open"
+  }
+}
