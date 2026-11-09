@@ -1,6 +1,6 @@
 # TNT Mine Rush · 本地源码交接基线
 
-当前基线：v0.6.1，用户已授权上传 GitHub。目标为 `1997zhengwei/1997zhengwei.github.io` 默认 `main` 分支的 `game/TNT连锁矿场/`。本次未执行 Loopit 接入或展厅发布。
+当前基线：v0.6.1，用户已授权上传 GitHub。目标为 `1997zhengwei/1997zhengwei.github.io` 默认 `main` 分支的 `game/TNT连锁矿场/`。已接入 Loopit V2 草稿并实际试玩，未发布/送审。当前产物、Power、验收与平台差异见 [SYNC_STATUS.md](SYNC_STATUS.md)。
 
 ## 运行
 
