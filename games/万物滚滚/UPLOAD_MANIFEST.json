@@ -18,25 +18,25 @@
     "sha256": "93529fbf5851cfde33978a189cf74e298e4ebf692cdf3e4ba43ee4db01476dfc"
   },
   {
-    "path": "evidence/result.png",
+    "path": "evidence/result.jpg",
     "bytes": 36784,
     "git_blob": "91db14de6450dd3bec2f136b8e5db4e20dd5d8bf",
     "sha256": "e8b83cce919397df25f6d84c937da9eeb8bda5bc2a3daa5e4f10afcb777def4d"
   },
   {
-    "path": "evidence/transition-early.png",
+    "path": "evidence/transition-early.jpg",
     "bytes": 62980,
     "git_blob": "b36d36ac294ba3442bd76198d8533f557ce1104c",
     "sha256": "a5f78e345f4b478fa370e14f2b4ba445525a76727f3b5fe220c2912aedcd6f60"
   },
   {
-    "path": "evidence/transition-town-after.png",
+    "path": "evidence/transition-town-after.jpg",
     "bytes": 62166,
     "git_blob": "b5fc15b9c031f2a4df2785a9aa53abe6afbc87b9",
     "sha256": "40525bfccdcfb573abd7edcfae065796a6b44ad21d76abbdb9fbcc008c519d2f"
   },
   {
-    "path": "evidence/transition-town.png",
+    "path": "evidence/transition-town.jpg",
     "bytes": 59548,
     "git_blob": "43ac830c48e640aa72ea4269a702dab3773dfa37",
     "sha256": "c7d0aa48e42d66617bb528b033c492bfcdb8dd68e5fc8f58ef494d33492817f6"
@@ -49,9 +49,9 @@
   },
   {
     "path": "LOOPIT_HANDOFF.md",
-    "bytes": 4462,
-    "git_blob": "948d424fa8040504053d980ce0f5bdba1b90bf6f",
-    "sha256": "b207544135efac92bfe0662648afb521e611bebed0d619a3d9dab56c99466277"
+    "bytes": 4497,
+    "git_blob": "262eb0d42467e18eafb6a060de198b25ccc04eb6",
+    "sha256": "85b83f9a31f18a66fcd1c21a56300a4775c00a198c651eaa42b5d6512e34c3d8"
   },
   {
     "path": "package.json",
@@ -216,7 +216,7 @@
     "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
   },
   {
-    "path": "启动试玩.cmd",
+    "path": "��������.cmd",
     "bytes": 53,
     "git_blob": "58d506d260bcc2bb19abb83717f47c14c3099ff2",
     "sha256": "42055f20ddc55d1d91b67cbeff1ab288607a0f2c03548b21fc0a58823caea247"
