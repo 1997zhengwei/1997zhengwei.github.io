@@ -1,0 +1,1 @@
+{"name":"ashfall-local-survival","private":true,"type":"module","version":"0.7.0","scripts":{"test":"node --test tests/*.test.mjs","start":"python serve.py"}}

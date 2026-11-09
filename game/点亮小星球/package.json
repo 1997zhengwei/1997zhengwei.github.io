@@ -1,0 +1,13 @@
+{
+  "name": "pocket-planet-horizons",
+  "version": "0.9.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node starpath-server.mjs",
+    "test": "node --test growth.test.mjs spawn-safety.test.mjs mech-economy.test.mjs enemy-art.test.mjs aurora-rules.test.mjs aurora-save.test.mjs combat-evolution.test.mjs combat-vfx.test.mjs pilot-evolution.test.mjs combat-integration.test.mjs starfall.test.mjs companion.test.mjs arc-cadence.test.mjs boss-art.test.mjs boss-refined.test.mjs boss-combat.test.mjs boss-live-art.test.mjs horizons.test.mjs horizons-save.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

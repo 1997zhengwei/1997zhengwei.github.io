@@ -1,0 +1,222 @@
+{
+  "version": "0.6.1",
+  "excludesSelf": true,
+  "files": [
+    {
+      "path": "games/冲鸭-障碍派对/.gitignore",
+      "bytes": 43,
+      "sha256": "347795f8e8f06238b87ace3dfa551d5e21d5ced346e9d0298aab2682f97eb187",
+      "git_blob": "a73c65f846ebfbcc6dddc58b70802b1f22473f24"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/assets/maps/aurora-glacier.png",
+      "bytes": 268138,
+      "sha256": "e6d52a8f8dc479631e9eef0387c64e43d441bb32a25687c6d560b030bbdc0494",
+      "git_blob": "0081d30adfeeb5a5dce4c8a911875713d204edc0"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/assets/maps/cloud-serpentine.png",
+      "bytes": 166131,
+      "sha256": "2b571865c14e277c817b098f8f1a8dff06692b547f2a40ce601c5e8bc216080f",
+      "git_blob": "22692c67839eb0efafe28174084336935ca04d5a"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/assets/maps/ember-ruins.png",
+      "bytes": 295188,
+      "sha256": "a822cfaa9e4655a4cd0c07140567571aa2e10d0b9705ea7c1bd6ae8f79a8bb66",
+      "git_blob": "a0eabe4c96c9fcb6e6461bfb8e9863adbddab7e7"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/assets/maps/grand-tour-v2.png",
+      "bytes": 203124,
+      "sha256": "967848801e08eaffafa9ddb28015cf19aa0be43bc0b303cc42248e7a172fe371",
+      "git_blob": "142b8a024ae4457b86e57272180f102f8fab849c"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/assets/maps/neon-foundry.png",
+      "bytes": 227348,
+      "sha256": "9b46eeb5b7405e5a362bede36049535fa48bb36b9ae36f8eb3e2ce05a4312af3",
+      "git_blob": "b6fe9be7e9602660e7eaa814d4fc1c93aaa6c42e"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/index.html",
+      "bytes": 500,
+      "sha256": "3b748f202648bbd0b9b34997654db07795085e9ad25b86284b5656ec7ddb9751",
+      "git_blob": "56e615874634e6731d3dd39ab502a7f80b226eb3"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/LOOPIT_HANDOFF.md",
+      "bytes": 2112,
+      "sha256": "fd4fc6b06248312fa321926818748b7dc5aeb1b903adffda2daffe1412e9a67e",
+      "git_blob": "61978b0af5408ba756101a10a228f9b3c45cba19"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/package.json",
+      "bytes": 159,
+      "sha256": "87b9d44c3b6bc27f52fee2f57b90b0df91481d4dfc4f1b5948d070f10ae68736",
+      "git_blob": "0b9ec4208c4204ec1555b1af3b8f8e8ca0ac5044"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/qa/亚军结算.png",
+      "bytes": 95287,
+      "sha256": "9a90f9f212380225d4bece836cd8236beb48d8f7e6f474edb98fe5fc02b757de",
+      "git_blob": "1411b1d7c8edde0905da6a826523b010ae05825b"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/qa/品质标签修复.png",
+      "bytes": 155656,
+      "sha256": "ccd550a5a75f7a2d9cc1e6d6d916f6d4aecb429064eea244e754825c1eafec2c",
+      "git_blob": "35c52a77c37c58a52e94c38933ca7f60bbf95115"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/qa/彩色装饰.png",
+      "bytes": 433235,
+      "sha256": "fb3f7f82df6e0ee12d1dee1277cecb1431988757e9073eb327b569661e085a11",
+      "git_blob": "e0bd6162bcd134c9b68da6533d3ecea47ea523f1"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/qa/惜败结算.png",
+      "bytes": 98901,
+      "sha256": "6fef5fb4ac900823e7e04f0f2e5956b329e865508cbf4ebe55b6c911284de6b1",
+      "git_blob": "4407f5e992b925bf4f992aec56a6fb7bc05b552c"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/QA.md",
+      "bytes": 2008,
+      "sha256": "42417f17cf61724f8bdc3858322eb5856b550e0512025ef796afcfae3a4d97cb",
+      "git_blob": "a56e46a65f306067eedc6e879c74ade44d7f8041"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/README.md",
+      "bytes": 5360,
+      "sha256": "3403825db7dddc1827a4e004b10958b5b2abbdef4aeda34da4643912ea5eff39",
+      "git_blob": "dcd97649737ed21888aa7f10d01e070e72e97007"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/serve.py",
+      "bytes": 1584,
+      "sha256": "c2918af77eabe778e4660b98d9e6fb5a85f036819216928eb1f9d51b886f56de",
+      "git_blob": "dcb674f3c495d1f48ecb52a5a975d85684f52e61"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/app.mjs",
+      "bytes": 26863,
+      "sha256": "acfd6d0aa3ab02d0d56dbf5ffc588ebf232898dfb1cd714a1958850950a0c0f3",
+      "git_blob": "1f70f9a00c402f32a1c21fe356a0b30cce8ec24e"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/course.mjs",
+      "bytes": 10441,
+      "sha256": "66a26e79b2993cfc4145122820a46c6afa9fc0dcb81e9f19d03dd5b68f046b65",
+      "git_blob": "65961d75c1a2bc1bef965980d9eac85790b0f333"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/couture.mjs",
+      "bytes": 16401,
+      "sha256": "cbb30eadd3534220023a993d1fdb748bf5f1ce502eb7b9445e20f62d94ed52d5",
+      "git_blob": "5ca55f21d6a5d4efc5b1f7c9c7b8a40a754a3f02"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/curved-road.mjs",
+      "bytes": 1485,
+      "sha256": "601360bc1a12cd74026b297388975ee2d151712e8a5e19f9f6c9c1ecdc93acd8",
+      "git_blob": "88d2f1f7cb897848640dbc513bb4067ddf4b3775"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/environments.mjs",
+      "bytes": 4695,
+      "sha256": "22575cfebf18d58036b77ee821f38f7f9ea2c2c9918d5d30b53628a0922b0e54",
+      "git_blob": "b86d677e5833e08bd959ea5f9c86b8a52a8d2757"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/ornaments.mjs",
+      "bytes": 9141,
+      "sha256": "7412b32fe943e08bce288d40f7d286b794353a290385ca3d535e08dc4cfc0e44",
+      "git_blob": "c21d75b78f4889af1adc21850b37f792d2c91018"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/progression.mjs",
+      "bytes": 5002,
+      "sha256": "852568aa4b42b0bf48f28f24ddd40ac6fd77ff397d1b666ef30565b28f4239ba",
+      "git_blob": "8f2fa26719e99115836b5ab995ab5f439bc240e8"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/rivals.mjs",
+      "bytes": 1675,
+      "sha256": "137f95095ecc7820ce2dcd48b310ab7da087627a4e183ff197819144e55d3e9d",
+      "git_blob": "240e35b67554f42eaf7f1b5ef7c7027ae1b90451"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/scene.mjs",
+      "bytes": 31849,
+      "sha256": "c9ebfdca91cdca98c12d971e062fa1c796a6afc8e4949f646bbe97f402fda265",
+      "git_blob": "19ae6b0a68fc4cd2a5c57293380926acea5e32ff"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/style.css",
+      "bytes": 27357,
+      "sha256": "d056c641e9a0af5fa1b69a2af61b14173d31f6e7ccf34d052de43e664d7f4f5f",
+      "git_blob": "fdf94c0f72558b1c19584a70b08a2b1a12af6d25"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/src/tracks.mjs",
+      "bytes": 12559,
+      "sha256": "daa96458901d2dd287874858b494d37c39e0f5ff0ba0479503e4df8371b35b33",
+      "git_blob": "7fa4ae2a1d3e3a5a0fff227ce694be20383c5569"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/tests/course.test.mjs",
+      "bytes": 2046,
+      "sha256": "04c8aa8ce4d0445db3f650bf42dfa4681f9254fb24cf134cdf863c259ff2ced9",
+      "git_blob": "4ce44a607eb194ca6694f38cb3111d22318b841e"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/tests/maps.test.mjs",
+      "bytes": 3718,
+      "sha256": "f95a1fe1736987b59f677b39f2cc1dea2358ca3447602dac100e6033b38373e1",
+      "git_blob": "24c8ab993ff0382e1d7cd96b69aedc59f18487b7"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/tests/podium.test.mjs",
+      "bytes": 1545,
+      "sha256": "8fb0b77377ce98948e587075e2553151479102185ed106c0d68dd5012e5786c0",
+      "git_blob": "d7520564389fee500757d87724559f2047b8e0a3"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/tests/rivals.test.mjs",
+      "bytes": 2906,
+      "sha256": "ad778c26e347ad9bb05bcab4117e37ff63e05911926b327016e9f6056c272e02",
+      "git_blob": "e9280c8a44f45cacca8e8f5a7cb4c9ccd99d8e5c"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/tests/upgrade.test.mjs",
+      "bytes": 4005,
+      "sha256": "5f45a6b5fd67433fa46c3cc1d283c33edf140fae0119a9b83e3a4001a8c54cdd",
+      "git_blob": "fe8ce947844d2d7172d46e502cedf31d46a539ae"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "git_blob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "git_blob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "games/冲鸭-障碍派对/启动试玩.cmd",
+      "bytes": 85,
+      "sha256": "e8302209259401f84bcf035713c76e230a863ee851522b2631a36f631c05688a",
+      "git_blob": "f7a6873684e3ee17b41df59358d28aeb7741c8ed"
+    }
+  ]
+}

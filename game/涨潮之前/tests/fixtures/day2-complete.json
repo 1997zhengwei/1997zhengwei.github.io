@@ -1,0 +1,386 @@
+{
+  "version": 2,
+  "elapsed": 167.3489999999943,
+  "time": 191.99999999999002,
+  "day": 2,
+  "player": {
+    "x": 9.091091288807124,
+    "z": -5.422264775946267,
+    "angle": 1.579177205469429
+  },
+  "inventory": {
+    "wood": 0,
+    "stone": 0,
+    "fiber": 0,
+    "metal": 1
+  },
+  "axe": true,
+  "warmth": 98.79680000000013,
+  "buildings": [
+    {
+      "id": 1,
+      "type": "platform",
+      "x": -2.2,
+      "z": 2.2,
+      "rotation": 0,
+      "braced": false,
+      "lit": false,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    },
+    {
+      "id": 2,
+      "type": "cabin",
+      "x": -2.2,
+      "z": 2.2,
+      "rotation": 1,
+      "braced": true,
+      "lit": false,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    },
+    {
+      "id": 3,
+      "type": "fire",
+      "x": -2.2,
+      "z": 2.2,
+      "rotation": 0,
+      "braced": false,
+      "lit": true,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    },
+    {
+      "id": 4,
+      "type": "bridge",
+      "x": 6.6000000000000005,
+      "z": -2.2,
+      "rotation": 0,
+      "braced": false,
+      "lit": false,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    },
+    {
+      "id": 5,
+      "type": "bridge",
+      "x": 8.8,
+      "z": -2.2,
+      "rotation": 0,
+      "braced": false,
+      "lit": false,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    },
+    {
+      "id": 6,
+      "type": "bridge",
+      "x": 11,
+      "z": -2.2,
+      "rotation": 0,
+      "braced": false,
+      "lit": false,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    },
+    {
+      "id": 7,
+      "type": "net",
+      "x": -4.4,
+      "z": 4.4,
+      "rotation": 0,
+      "braced": false,
+      "lit": false,
+      "wet": 0,
+      "stored": 8,
+      "collected": 11.47700000000006
+    },
+    {
+      "id": 8,
+      "type": "dock",
+      "x": 8.8,
+      "z": -2.2,
+      "rotation": 2,
+      "braced": false,
+      "lit": false,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    },
+    {
+      "id": 9,
+      "type": "workbench",
+      "x": 0,
+      "z": 2.2,
+      "rotation": 0,
+      "braced": false,
+      "lit": false,
+      "wet": 0,
+      "stored": 0,
+      "collected": 0
+    }
+  ],
+  "nodes": [
+    {
+      "id": "wood-0",
+      "type": "wood",
+      "x": -1,
+      "z": 4.7,
+      "readyAt": 19.744
+    },
+    {
+      "id": "wood-1",
+      "type": "wood",
+      "x": 1.8,
+      "z": 4.4,
+      "readyAt": 21.952
+    },
+    {
+      "id": "wood-2",
+      "type": "wood",
+      "x": 4,
+      "z": 3.5,
+      "readyAt": 30.11200000000001
+    },
+    {
+      "id": "wood-3",
+      "type": "wood",
+      "x": 5.6,
+      "z": 1.8,
+      "readyAt": 35.8719999999998
+    },
+    {
+      "id": "wood-4",
+      "type": "wood",
+      "x": 2.8,
+      "z": -5,
+      "readyAt": 51.58399999999808
+    },
+    {
+      "id": "wood-5",
+      "type": "wood",
+      "x": -5.5,
+      "z": 2.2,
+      "readyAt": 0
+    },
+    {
+      "id": "wood-6",
+      "type": "wood",
+      "x": -5.5,
+      "z": -3.9,
+      "readyAt": 0
+    },
+    {
+      "id": "wood-7",
+      "type": "wood",
+      "x": -2.9,
+      "z": -5.9,
+      "readyAt": 0
+    },
+    {
+      "id": "wood-8",
+      "type": "wood",
+      "x": -3.8,
+      "z": 5.2,
+      "readyAt": 0
+    },
+    {
+      "id": "wood-9",
+      "type": "wood",
+      "x": 0.3,
+      "z": 6,
+      "readyAt": 24.528000000000006
+    },
+    {
+      "id": "stone-0",
+      "type": "stone",
+      "x": -1.6,
+      "z": 0.1,
+      "readyAt": 46.791999999999376
+    },
+    {
+      "id": "stone-1",
+      "type": "stone",
+      "x": 3.1,
+      "z": 0.3,
+      "readyAt": 40.26400000000001
+    },
+    {
+      "id": "stone-2",
+      "type": "stone",
+      "x": -4.9,
+      "z": -2,
+      "readyAt": 0
+    },
+    {
+      "id": "stone-3",
+      "type": "stone",
+      "x": 0.3,
+      "z": -3.2,
+      "readyAt": 0
+    },
+    {
+      "id": "stone-4",
+      "type": "stone",
+      "x": -4,
+      "z": 3.1,
+      "readyAt": 0
+    },
+    {
+      "id": "fiber-0",
+      "type": "fiber",
+      "x": 2.5,
+      "z": 2.6,
+      "readyAt": 34.47200000000001
+    },
+    {
+      "id": "fiber-1",
+      "type": "fiber",
+      "x": -3.8,
+      "z": 4.3,
+      "readyAt": 0
+    },
+    {
+      "id": "fiber-2",
+      "type": "fiber",
+      "x": 4.4,
+      "z": -2.9,
+      "readyAt": 54.96799999999847
+    },
+    {
+      "id": "fiber-3",
+      "type": "fiber",
+      "x": -2.5,
+      "z": -4.7,
+      "readyAt": 0
+    },
+    {
+      "id": "fiber-4",
+      "type": "fiber",
+      "x": -5.8,
+      "z": -0.2,
+      "readyAt": 0
+    },
+    {
+      "id": "tree-0",
+      "type": "tree",
+      "x": -6,
+      "z": 1,
+      "readyAt": 0
+    },
+    {
+      "id": "tree-1",
+      "type": "tree",
+      "x": 1.9,
+      "z": -4.3,
+      "readyAt": 81.35199999999777
+    },
+    {
+      "id": "tree-2",
+      "type": "tree",
+      "x": 5.2,
+      "z": -0.4,
+      "readyAt": 156.34000000001046
+    },
+    {
+      "id": "tree-3",
+      "type": "tree",
+      "x": -1.6,
+      "z": 5.7,
+      "readyAt": 0
+    },
+    {
+      "id": "tree-4",
+      "type": "tree",
+      "x": -4.7,
+      "z": -4.5,
+      "readyAt": 0
+    },
+    {
+      "id": "ore-0",
+      "type": "ore",
+      "x": 13.1,
+      "z": -3.5,
+      "readyAt": 72.8639999999964
+    },
+    {
+      "id": "ore-1",
+      "type": "ore",
+      "x": 15.3,
+      "z": -1.6,
+      "readyAt": 0
+    },
+    {
+      "id": "crate-0",
+      "type": "crate",
+      "x": 13,
+      "z": -0.7,
+      "readyAt": 0
+    }
+  ],
+  "nextId": 10,
+  "milestones": {
+    "wood": true,
+    "deck": true,
+    "roof": true,
+    "fire": true,
+    "axe": true,
+    "reef": true,
+    "brace": true
+  },
+  "visitedReef": true,
+  "stormHeld": 12.000000000000009,
+  "won": true,
+  "free": true,
+  "rescued": 0,
+  "stats": {
+    "gathered": 78,
+    "built": 10
+  },
+  "voyage": {
+    "started": true,
+    "clock": 66.56499999999559,
+    "goals": {
+      "dock": true,
+      "boat": true,
+      "board": true,
+      "salvage": true,
+      "return": true,
+      "workbench": true,
+      "warmer": true
+    },
+    "boat": {
+      "x": 9.091091288807124,
+      "z": -5.422264775946267,
+      "angle": 1.579177205469429,
+      "vx": 0,
+      "vz": 0,
+      "aboard": true,
+      "dockId": 8
+    },
+    "metalFound": 5,
+    "trips": 1,
+    "distance": 47.416265767801136,
+    "salvaged": [
+      "drift",
+      "hold"
+    ],
+    "readyAt": {
+      "drift": 183.46200000001576,
+      "stern": 0,
+      "hold": 192.4220000000108
+    },
+    "lamp": true,
+    "warmer": true,
+    "charges": 2,
+    "warmCooldown": 4.495999999999999,
+    "completed": true,
+    "resultSeen": true
+  }
+}

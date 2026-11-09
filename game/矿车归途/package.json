@@ -1,0 +1,12 @@
+{
+  "name": "minecart-rescue",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Simultaneous numbered-carriage railway puzzles with collisions, switches, gates and tunnels",
+  "scripts": {
+    "start": "node serve.mjs",
+    "test": "node --test tests/rules.test.mjs"
+  },
+  "engines": {"node": ">=20"}
+}

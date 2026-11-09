@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#19334e"><title>Pocket Planet · Horizons</title>
+  <link rel="stylesheet" href="starpath.css">
+</head>
+<body><main id="game">
+  <canvas id="world" aria-label="3D frontier, Aurora Outpost and mission routes"></canvas>
+  <header class="top"><div class="brand"><span class="mark">✦</span><div><small>POCKET PLANET</small><strong id="location">Starpath Base</strong></div></div><button id="camp" aria-label="Open base and explorers">Base <b id="online">1/8</b></button></header>
+  <button id="route" aria-label="Explorer positions and expedition records"><span class="routeLabels"><b>BASE</b><span>200m</span><span>400m</span><b>620m</b></span><span class="routeTrack"><i style="flex:80;background:#91d4be"></i><i style="flex:90;background:#e6c58d"></i><i style="flex:100;background:#b5a3de"></i><i style="flex:110;background:#a3daec"></i><i style="flex:120;background:#9bb6c9"></i><i style="flex:120;background:#d7a4cc"></i><span id="routeMarkers"></span></span><small id="routeCaption">YOU · BASE</small></button>
+  <div class="resources"><span role="group" aria-label="Metal"><i class="metalIcon"></i><em>Metal</em> <b id="metal">2</b></span><span role="group" aria-label="Crystal"><i class="crystalIcon"></i><em>Crystal</em> <b id="crystal">0</b></span><small id="bankHint">Secured at base</small></div>
+  <div class="vitals"><div class="vital"><span>HP</span><i><b id="hpBar"></b></i><strong id="hp">100</strong></div><div class="vital oxygen"><span>O₂</span><i><b id="o2Bar"></b></i><strong id="oxygen">100%</strong></div></div>
+  <button id="objective" aria-expanded="true" aria-label="Current expedition tip"><small id="objectiveTag">1/5</small><strong id="objectiveTitle">Gather your first supplies</strong><p id="objectiveText">Walk forward ↑. Gather metal and crystal.</p></button>
+  <div id="spawnNotice" class="hidden" role="status"></div><div id="risk" class="hidden"></div><div id="eventHud" class="hidden"></div><div id="network" role="status">Entering your saved base…</div><div id="toast" role="status"></div><div id="down" class="hidden"></div>
+  <button id="map" class="mapButton" aria-pressed="false">◎ Overview</button><div id="targetGuide" class="hidden"></div><div id="hint"></div>
+  <div id="stick" aria-label="Movement joystick"><i id="knob"></i></div>
+  <div class="actions"><button id="act"><span>✧</span><b>Gather</b></button><button id="build"><span>⌗</span><b>Build</b></button></div>
+  <div class="experience"><span id="weaponLabel">Pulse Blaster · R1</span><span id="level">LV 1</span><i><b id="xpBar"></b></i><small id="xp">0 / 27</small></div><div id="damage"></div>
+  <div id="panel" class="overlay hidden"><section class="sheet"><div class="sheetTop"><span id="panelTag">STARPATH BASE</span><button id="close" aria-label="Close panel">×</button></div><div id="content"></div></section></div>
+</main><script type="module" src="starpath-main.mjs"></script></body></html>

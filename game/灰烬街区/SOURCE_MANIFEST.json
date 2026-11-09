@@ -1,0 +1,761 @@
+{
+  "version": "0.7.0",
+  "files": [
+    {
+      "path": "games/生存沙盒/灰烬街区/app.mjs",
+      "bytes": 23951,
+      "sha256": "3607c9f65f1487aeeb0a39679d9a91a0628b864effb0b97a8d9d50518f232199",
+      "git_blob": "acf3df334df17b32894a2c13f27af49cc8019fa5"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/audio/footstep_concrete_000.ogg",
+      "bytes": 5808,
+      "sha256": "d7267e183067757c92c169de2a379abea592cfca6b39bb2e8feea15221ad79fe",
+      "git_blob": "163cc56468f1734fe694351e7ff984699afa8b86"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/audio/footstep_concrete_001.ogg",
+      "bytes": 6308,
+      "sha256": "507a75eb19b897087855a3be3cf11a12d7fa37d143ad535eeebe0b8031c7325d",
+      "git_blob": "4c62bac1fbdd2a18594139a34939eab2e1c82ba7"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/audio/footstep_grass_000.ogg",
+      "bytes": 8290,
+      "sha256": "9d49497777405d78d7cf7f2888e28277f3a23192300cfd1d79d54876b20f479f",
+      "git_blob": "5b5ec879a5ca457d18ad01a81af805409e35207f"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/audio/impactGlass_medium_000.ogg",
+      "bytes": 8400,
+      "sha256": "9252d50bfb85edb17d6073c4a7806e10cdb9de56d3dbfc93a4b9727146d2df6d",
+      "git_blob": "e056cdb741e0cc7ae2760dd06ea9556feebe9c19"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/audio/impactMetal_medium_000.ogg",
+      "bytes": 7117,
+      "sha256": "a96f879fec0864a8938e0c745b6996a6c5679c16a234ce31a01cc995e8401003",
+      "git_blob": "2b1bbe397a4159d1474a6438cb5b3e9ad0378f2b"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/audio/impactWood_heavy_000.ogg",
+      "bytes": 6233,
+      "sha256": "15ff82332f342c30e469215539e1cc57e11b221aa2cf7e11e811d313a9927f3d",
+      "git_blob": "30fb995aab49d70e51b0c3a226fa45301ad4f760"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/audio/impactWood_light_000.ogg",
+      "bytes": 6343,
+      "sha256": "eb45e35b4bed784d3f120de4afec4b0d6ac09d9e143cce8cfcb7d739e1b1f3c3",
+      "git_blob": "4bf6be62febf1de5f13b8bf33151118d8bb56c34"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/car-kit/ambulance.glb",
+      "bytes": 233612,
+      "sha256": "9e429e2b6202c0d78d0c38b2adbaae6b77716bb2a0f6fbb2811556e1fb31edba",
+      "git_blob": "1d011a7daf7c66808d35e61b216ec48527b1fbeb"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/car-kit/debris-door.glb",
+      "bytes": 7052,
+      "sha256": "c62ab01c07be9be5dfc0f940dbc933fa836019ea1bc8fd0baa2d0e52cd764ea2",
+      "git_blob": "d8885347be817db266ee973d9e91af3981dce477"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/car-kit/debris-tire.glb",
+      "bytes": 26548,
+      "sha256": "7c3f5968244e2c617c698820e943493b8480c7bef8535fbab04d4a501b3489e9",
+      "git_blob": "e6b9ce16f22d5a5c5b59191567e63781596d133f"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/car-kit/police.glb",
+      "bytes": 195336,
+      "sha256": "a617b880594f56239b7ac4cf6fd4d74ebdae3ba6c5d842e77c76a5906eff352a",
+      "git_blob": "412968087c5af5e75f603382ef423b09fd7a56d5"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/car-kit/sedan.glb",
+      "bytes": 172216,
+      "sha256": "b532ea7d2c59f7f6b22b138cf1955218a2c1898f1cea932af4d3fd563c3959b7",
+      "git_blob": "6bc9f1e3f9f30e51307c3454ff00cbbbb0d79d49"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/car-kit/Textures/colormap.png",
+      "bytes": 12371,
+      "sha256": "f3622a03a20c6696065cae9cbe391351be873508af190c2ebd1d420c055787a5",
+      "git_blob": "5c4b1857dafd7abd1ca9836285f1bd589f75ccb0"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/car-kit/van.glb",
+      "bytes": 175664,
+      "sha256": "ed4ed56e8e5ed98db050af09ed2062b3b6bb7b93eab1e563cb6774b387b233a1",
+      "git_blob": "e6f663586b8c6f946a8c1b0378c181db6b8193bc"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/characters/idle-pose-audit.json",
+      "bytes": 3855,
+      "sha256": "3c078d000005996890732723177cdc0231e70724b43a84afe6e8cc044c119e5b",
+      "git_blob": "a6b26604cb5dc4f9f7477e0a8e47e046232748fd"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/characters/run-pose-audit.json",
+      "bytes": 1967,
+      "sha256": "dc4e11341d81c4064c2b2b16900904f83fbe9a1ff878818f9d9791badef114d8",
+      "git_blob": "6e7e1bea3494183c01e29b17b5694ad364a0bd9a"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/characters/survivorFemaleA.glb",
+      "bytes": 299744,
+      "sha256": "d7c59509c930d757640fc196b2691aff156ba7575f1bc0e0cc41260208ab54f3",
+      "git_blob": "6236bdc7bbd1c49a20450486380bc5c1386ada9c"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/characters/survivorMaleB.glb",
+      "bytes": 297216,
+      "sha256": "cb26b7c7ab69ea9df45d1e18d43d962ed170e60a3ff6f95a72306d2f4604e8ac",
+      "git_blob": "fe112187a2aeb924be5976b033054bdebc4594d6"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/characters/walk-pose-audit.json",
+      "bytes": 1951,
+      "sha256": "38f00b9442deb0618ae9728dea5d7938b8d854bdea4ef4443c5cbe67db237277",
+      "git_blob": "0c0870e509597653ee5d217c11cfc25601c33d2c"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/characters/zombieA.glb",
+      "bytes": 316980,
+      "sha256": "e6da962deb48728e6fddb73f04c3c3c09af293fb0abbef8f8c06b8e212b32973",
+      "git_blob": "806eb410c86cf1288ad2fe3c63862085a4b0d12d"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/characters/zombieC.glb",
+      "bytes": 298936,
+      "sha256": "f0fed78d6326439ead7c242b16d0bf72c6df3c887e47949865ec5a9c151dd723",
+      "git_blob": "769203c22f614129f460cee1487127b9f0c104d8"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-roads/construction-barrier.glb",
+      "bytes": 7052,
+      "sha256": "906f73a6d62d8de58a4c5a19e76ff95b460c42b37e5fa37478b8612f06793f26",
+      "git_blob": "576d7091c641849bf6838e1c0afec3cb3d372617"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-roads/construction-cone.glb",
+      "bytes": 7056,
+      "sha256": "50ceae45cd1d71f738a8f7c40f8b6b46f360063c2754bf717aae54013d6f2ee4",
+      "git_blob": "d32d3416ff1448381c47114cc3e46765630c3484"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-roads/dumpster.glb",
+      "bytes": 24400,
+      "sha256": "d87d4a812567d0e8b91c545387d758aa18f7652eb8fc0aed2513a83abb988dd6",
+      "git_blob": "6b684a025a23ed870e001306f42b30ea9fa8d94e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-roads/electricity-pole.glb",
+      "bytes": 43652,
+      "sha256": "08c9b924e297eaa46bbd79ac09795c045848a4e38a72b2ce4f973517f840c2d3",
+      "git_blob": "ddf6284107779412a1fec68e0c71fc3cc6bb8938"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-roads/light-curved.glb",
+      "bytes": 9492,
+      "sha256": "154dcce9d58ec2cd165e26c91a89c97bdd2838cf06d255099b3570df84f82ec6",
+      "git_blob": "7ee9e9e3ea39a5340548b1731fe0a749cf03e5d2"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-roads/road-sign-stop.glb",
+      "bytes": 10720,
+      "sha256": "0991181f37171daf8d2501e436a688e46ea2bcebb5e27aa451640fcbaab107ef",
+      "git_blob": "d138f78ebec6d90643d34f7c0cc3664b84451432"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-roads/Textures/colormap.png",
+      "bytes": 11428,
+      "sha256": "a48e2962661ae44368ffddf3054f80ed8491d082b757dcc3011184cd9a98b185",
+      "git_blob": "fdcb48cc929e109688bdcbf292c3f9546c0d9b24"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-suburban/building-type-a.glb",
+      "bytes": 98604,
+      "sha256": "49f32e20b9dcd24b1c8f6d6488807b8c8cb684cbb595bfb0bb36ad903e470faa",
+      "git_blob": "870bf63ab3ddedbaa44e238b2025b98d5426d46e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-suburban/building-type-c.glb",
+      "bytes": 99592,
+      "sha256": "86a69f30f1a09461283e158514945ae5cc9d56357b0ddc83a9a3f0eecd113591",
+      "git_blob": "91bbbacbccfd63ca56cb40573a96bec93528865f"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-suburban/building-type-f.glb",
+      "bytes": 138536,
+      "sha256": "6f778f50d7f03c86f9a018e428cf8ffdd9e918df09954c0651d1c9559584a22b",
+      "git_blob": "db68497199c8469b3190cfb41b1a61c4f0c79f9c"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-suburban/building-type-k.glb",
+      "bytes": 89152,
+      "sha256": "c1b819a526bbcf9663bc40c98e22337cded7fff7c50c14679132d5d98d75f583",
+      "git_blob": "063716ee2814f6da09c26cd9546e253f34abd1ee"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-suburban/fence-low.glb",
+      "bytes": 18552,
+      "sha256": "fe0272d73820bb4c8db3bed408a28cbd5c042da1373142bd13122a1ac9d1a168",
+      "git_blob": "a0d426511473fd2b2b4afb03a2b1a4b0824a8a59"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-suburban/Textures/colormap.png",
+      "bytes": 11784,
+      "sha256": "9b5de86078c25ef02351a80d35ff3c978693a1044565b73eedd9ae9b5b80665d",
+      "git_blob": "9838fb4ccae35aa66eb2392e7f25c88f7ca28b38"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/city-kit-suburban/tree-large.glb",
+      "bytes": 5812,
+      "sha256": "16d1f95c149bc727a953a473cf20bf21de9bf1a88747c4f9d2eeb4ac7d43e291",
+      "git_blob": "c82ee8706ba02f069228ae6381b471e6f5a3528d"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/food-kit/apple.glb",
+      "bytes": 14376,
+      "sha256": "2a80ab65d5bc2cb4f2bca1e8176cbb591849a288596d4b2e76e411338761a526",
+      "git_blob": "a6046a0d202bca268900e4ba0a05eb1161746e21"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/food-kit/bottle-oil.glb",
+      "bytes": 10500,
+      "sha256": "a87a7a6146be0996b17aca3ccd011cfe0d045593db03f89829f88b6228b49d57",
+      "git_blob": "117e6719cc877f38e14097b7444c6760412c2df2"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/food-kit/bread.glb",
+      "bytes": 9468,
+      "sha256": "9bd9db117db654cf1157439d1257a8fc5915ea77a94fb876a5056522b9e49f46",
+      "git_blob": "f8c7617b2a670354225b935380124f738d3c1f2b"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/food-kit/can.glb",
+      "bytes": 13708,
+      "sha256": "f3ee6aad23adb6251adbc988652dff430abc781506759a53a8cc7aca6a87db48",
+      "git_blob": "f235fa49a8a91dcc0356918839123ddca8c8b191"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/food-kit/carton.glb",
+      "bytes": 9352,
+      "sha256": "b63a5081c6edbda7ba8172e6a776f222e781f886a011a887789b2fde42095d04",
+      "git_blob": "fe095efdf461dcee80ff2222f8c51032e0a48b62"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/food-kit/cooking-knife.glb",
+      "bytes": 5380,
+      "sha256": "4bec734243cb3e8fa636e17a4ef27828bdaecfc8ac23bd847b9b86f6945cb4d2",
+      "git_blob": "6f43e751c4e6a231d45d7fed7fccf6028276966e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/food-kit/Textures/colormap.png",
+      "bytes": 10715,
+      "sha256": "75baf74d9483a0fc56ac21ceba346fbe16fc24a2a1bf0524c53e6bbe802e1153",
+      "git_blob": "1dfac9e6c4639266b629ad4c43e3048c2117d520"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/bathtub.glb",
+      "bytes": 35500,
+      "sha256": "54c405c7035aab63dc41e709dc3c50fc5bcfbc4cddc91ffc54188075a6d25d01",
+      "git_blob": "ece65b92558f10698d754018fc4b41531d198456"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/bedSingle.glb",
+      "bytes": 18636,
+      "sha256": "ca00c63f9a12da3138d902b2f5f18e0360fb6e8a5ac42ccb4bc3f185724b65d1",
+      "git_blob": "eb79d7ae7cb9a69dc8e27c5c37db72e6759ce0a0"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/bookcaseOpen.glb",
+      "bytes": 18020,
+      "sha256": "750702218d68c062b15dfef6ab06a4014d1cfa8bd05f02e57c53b7e13bec157c",
+      "git_blob": "9a0cce7691e94277f3409719e9e68c910c25aa2c"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/cardboardBoxClosed.glb",
+      "bytes": 5400,
+      "sha256": "4af079dca52960912764574950f0549ff2ae1224b3db1528718629473a2d5d81",
+      "git_blob": "923e2359c0bc07cf22285f351fc98dce563f66da"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/chair.glb",
+      "bytes": 10756,
+      "sha256": "c8a11eec93e89e31250ba91afc1b8d56c3bec7ae86640fd1239f595ff4180883",
+      "git_blob": "2d57af4fef2a32910e3af9283d1e45f177068d63"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/computerScreen.glb",
+      "bytes": 6404,
+      "sha256": "5942cbad29a2d2b956619569926e81d50a4174403d592fece6556e57632dc643",
+      "git_blob": "c509093d35ee40bb6791dde9ad8e9de4bc3348dd"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/desk.glb",
+      "bytes": 15048,
+      "sha256": "0164fe828f028b321730fb8c74502e353583f751be74da1682d42fff7d3c5a42",
+      "git_blob": "8ca187070cd666239ab1d93dda2e98105f7de776"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/kitchenCabinet.glb",
+      "bytes": 10444,
+      "sha256": "7238c57778935ae25db5e57e9f7af3ba7068c71b005ff7cfbff3b6f3b1a13200",
+      "git_blob": "6292e587214afb9543734486db449c47a5e52730"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/kitchenFridge.glb",
+      "bytes": 20116,
+      "sha256": "8af4f4bbb1b5525ad8226e97926a5af60fa8fb20a3cb74dbda5328a9d320dbab",
+      "git_blob": "936da186152577e3336f81e150fcc5eb2c2a7117"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/kitchenFridgeLarge.glb",
+      "bytes": 30632,
+      "sha256": "5851cc59c7e12f6f34a01a2ea93d5b9540be4078c1b703f517239fcede98fb32",
+      "git_blob": "4d28fb70cbe14d1ad35a3911ccccbe47b5bec0e2"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/kitchenSink.glb",
+      "bytes": 23480,
+      "sha256": "7b9610277d71f00dcf1bba49cf4d98d77ce5177e84bf76c7da2f8893e542f743",
+      "git_blob": "58daf66a6e2ffdc16e24b886cbcd53f3a0973e5d"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/kitchenStove.glb",
+      "bytes": 54324,
+      "sha256": "3239edb36295dfca9530a9b9a6ad0aff98ce62e7cf8d13ca2a5a1a6b2a904656",
+      "git_blob": "264166d92140a5b967f97ec3f5c23a7afcf742e1"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/lampRoundFloor.glb",
+      "bytes": 6600,
+      "sha256": "50fe1b5b588edf15bfa9cc880f71a02a4fda6036350b24733d0ef4de5cc5e908",
+      "git_blob": "69f7c9df4fb9e2fb327c59f3b20e8669faf7df0d"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/loungeSofa.glb",
+      "bytes": 9644,
+      "sha256": "1886b811c0d3ad0d8525a4fd43adf4112c497c8e0ed906f06877ca3517f4c7dd",
+      "git_blob": "7761b15cc9d53b9cd5e28d5a5dc5eaea72a648a7"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/radio.glb",
+      "bytes": 25020,
+      "sha256": "1ba93d6ba6f049750853b4652b92f286f2898e527695a0705b75cc7615897fed",
+      "git_blob": "6a810e8a7fcbd0386a46bbf82a05213ff223ff29"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/table.glb",
+      "bytes": 8196,
+      "sha256": "ff1a94498d023957f4bc3ff6f55a7a82977d336dbf01a573b3364f03afe5ff61",
+      "git_blob": "8add1baf8a97bd813524a441c947a9e1457f4b13"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/toilet.glb",
+      "bytes": 18112,
+      "sha256": "16165cfd03c56c2cb443b800570810a22ef770f65e7a468f6761d9dc14eaaeae",
+      "git_blob": "81589c8b63063ff52533a95d92b09e14cd77ecea"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/furniture-kit/trashcan.glb",
+      "bytes": 6452,
+      "sha256": "e0ccc1fe50cbd05386477fdff527171d1cf7c0de2ba7ff3233f8d9561feb2561",
+      "git_blob": "7c7d381cd693c9ffcc37a520750f5eb6de56f462"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/animated-characters-survivors.txt",
+      "bytes": 696,
+      "sha256": "8eab20a1fa97308ae50443f6b8a0fabc4dd1fc37062988cd635fc74c8f1be21c",
+      "git_blob": "534c8ee35cc8e80aa46433db8186a6b7929a75cc"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/car-kit.txt",
+      "bytes": 696,
+      "sha256": "c33b7f6453d134deae7b1b8493717d9ccfa754c25ab97f6de89b88f8fda19b00",
+      "git_blob": "60bca66ec72bbcb23fc0894d36d0f4a174cccd3e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/city-kit-roads.txt",
+      "bytes": 703,
+      "sha256": "d23f51360ca2cd81711bc5b09ddfb28ac94da96d7ca2dbdef12c50f33f35c353",
+      "git_blob": "e45ae7adc4e9419f8675ac4bffa1c9d6c5d9a2fc"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/city-kit-suburban.txt",
+      "bytes": 706,
+      "sha256": "d778fa769a89a7d9f167bc337fdf8fc2144e47d9abb0c35eb6ad897c0ee24d0a",
+      "git_blob": "cdc763a0b1ad4e3fafbc509482d7630ba030a5ee"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/food-kit.txt",
+      "bytes": 711,
+      "sha256": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f",
+      "git_blob": "73489658470ce839a05719f03268685ba374537f"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/furniture-kit.txt",
+      "bytes": 614,
+      "sha256": "bc0de1a0742cb490f9ed4bae0bd284286ebb27e23149b9917c7d8c0d590b8b29",
+      "git_blob": "f374e2fbe47f68afd9c53ed26fcdcc65dc5f4775"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/impact-sounds.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db",
+      "git_blob": "4890fe524751b66f08c31ceeeb8074b50445c461"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/licenses/survival-kit.txt",
+      "bytes": 715,
+      "sha256": "62c8356876481204fa4d40dc59183dfed777adf987d7f2a1390fffe8a699f3ff",
+      "git_blob": "035d79fd5bbd79c1bc64df5b35da08ddc4c4bde0"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/manifest.json",
+      "bytes": 14789,
+      "sha256": "f0422d13f20f006b82665d45c5ae4e6b23c2ef40fbe38cd38358c42cc67123fd",
+      "git_blob": "0b5cf420561272172fc3d80e874203a08947e5b5"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/barrel.glb",
+      "bytes": 34256,
+      "sha256": "3a0d12f6bdd1badd361f64ce0fbbf878a4ccfc2de8ff1ac4ed4c1aea2a9ee04a",
+      "git_blob": "3d8ab426079eb42943984943450cc5bf86c5ff9e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/bedroll.glb",
+      "bytes": 14036,
+      "sha256": "2ad9baa2d800845195c7c92bd8423b0d99519530dee0afd3bd0ac4b2e255d728",
+      "git_blob": "725f3ced591aac318d28f5b79f8587483e4724d3"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/box.glb",
+      "bytes": 14056,
+      "sha256": "346eebd23986793b992ca6e05e9f98d6f5db96a9bfa3aa7c8360ac8b7920def8",
+      "git_blob": "2a53ffb6eebf866610f6896f7c38917f87effaf8"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/chest.glb",
+      "bytes": 35172,
+      "sha256": "84b03023e425cc1f96c6d0b0f352608be9e8e01b112790e6b00b8651bf84379b",
+      "git_blob": "b2ea6da074bcf316201c3cafd08ce46eee98a9c5"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/resource-planks.glb",
+      "bytes": 8884,
+      "sha256": "d3804257474a3baab7ac067be91de5c3d6d18d5803775dc876cb6d9442c30873",
+      "git_blob": "d62fe35e0d9253a97f4fb848b0ba7b52b199d1b2"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/resource-wood.glb",
+      "bytes": 7272,
+      "sha256": "1d5f559da9432f89bd323731ef76b60372e0deb261a96d0da8d5af570c485d80",
+      "git_blob": "8ccf9b02fc6395eba4530625118f739b48730462"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/Textures/colormap.png",
+      "bytes": 7440,
+      "sha256": "6ca023be9f12e8c2358fcf94320c8a894b4c05a3dd0bad1f5c268312053caca1",
+      "git_blob": "6e6a5fc7d858aa6d372378742387bbba38b1c415"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/tool-axe.glb",
+      "bytes": 8612,
+      "sha256": "de5c6cc51cdb5bcfad8bd7128b7ff0e37a34e6f4f8deddec82bb8634c25cc20d",
+      "git_blob": "11fe453456faa24fbe888313cbb9521f4596a630"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/tool-hammer.glb",
+      "bytes": 6520,
+      "sha256": "9b27f03c26dabd49a7ea358615e63fe65e1c3d0157887d4ee1ecdfa1f0e688f3",
+      "git_blob": "b213ea8b5b5661655826c12e90c652305e7efe57"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/tree-autumn.glb",
+      "bytes": 19732,
+      "sha256": "1945b56b6a17e57ade4f14716fac40d53c3c322e8855c3825d40825845bbfd92",
+      "git_blob": "079e3d44e91e552506e9866a57a3a5a2d5c15e8b"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/tree-log.glb",
+      "bytes": 9180,
+      "sha256": "bd358e55e63a75bd54bea1e4b40ed362baa937ce8e503f2aa2370a5a1d9da11c",
+      "git_blob": "8e55fb3f5c8772ae5452e3ebfb344129a743ce3e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/tree.glb",
+      "bytes": 22184,
+      "sha256": "7f8c2381a747882fc4fb534dcf803002f2cc925aa400f1328b24bd5576c3dca0",
+      "git_blob": "001b4f9317a7dd13828873feb7112ed0502a18df"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/assets/survival-kit/workbench.glb",
+      "bytes": 26104,
+      "sha256": "bf72d2d535fa29127e5078a6c4c2023a74fa5cd7d02d91ad550e897e088e1dc8",
+      "git_blob": "5880286dc96366f2dd43563ee24aa7ee16aa5b03"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/BRIEF.md",
+      "bytes": 651,
+      "sha256": "035d3f2121f633561edd3ab5ff0b8fbc06b428154106e7488f229040ad52b4c5",
+      "git_blob": "fe079c777d5995427b7adcfc4368c1679c7973bd"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/character-check.html",
+      "bytes": 3022,
+      "sha256": "ac078077f6d998f08f2fdba7df2713559db8bada2d0ae0a9c7d1a95e4ec29ecc",
+      "git_blob": "c5af8dc1d19e75dfa5fb75c67a5ca1111244c46e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/convert_characters.py",
+      "bytes": 4314,
+      "sha256": "5cc646c3e62d44c2cf797e60702238ec25d5ce8e6f940e1ff40e3fff25cf8250",
+      "git_blob": "52c2e6cd03a387de11116022f47f5da758124451"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/defense-ui.mjs",
+      "bytes": 1828,
+      "sha256": "7dbc333a93969fc57b41d765bd7a126056bd7937aa42b0a0444191b4db597722",
+      "git_blob": "08aee9973c6f9043c0b7d53cb8cde63c560a6121"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/environment.mjs",
+      "bytes": 7053,
+      "sha256": "3e3477bfd24e9edf57805acd5b7424498b5b7559346c67042e60a37d5dcb2ae7",
+      "git_blob": "ee3625977f9dabb0b1bc8c392711adf2b5e01136"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/held-tool.mjs",
+      "bytes": 1531,
+      "sha256": "74feeb739977d02bea42ca93679717e0f40103a459bb1be8e0c55728141ab2fc",
+      "git_blob": "29ba3124a968e88c0deb1eb4aaf961d1c1743b40"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/index.html",
+      "bytes": 14274,
+      "sha256": "c50489c1318adcd6521398b8d89b3723ddd65cc15b86c3648e2c64471110297b",
+      "git_blob": "2c3d86970cc5059097a6e75ce9522ab5a8a1a8a3"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/LOOPIT_HANDOFF.md",
+      "bytes": 2964,
+      "sha256": "d0685463786859d61a30b5dcc01d9961482fef3562c4af69dc75f267ed8caad8",
+      "git_blob": "45245d267eee8b8d4ad51f0797afc7280dbdcb4d"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/package.json",
+      "bytes": 160,
+      "sha256": "d951f77f52eb7e4d19736547a2380c4a03bd63c139b5a5130a3c1c4276f0cf95",
+      "git_blob": "e7ae0663328d0f1bb59eab264f2d7d1a9141a398"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/PLATFORM_QA.md",
+      "bytes": 3561,
+      "sha256": "42acc5e0128fe56f56bbf4f5039c945a21048cfdcfd8bb53a8832699e7d3bf2a",
+      "git_blob": "416d7c767f9132c184c1be77a22fe6ca91c2b8d6"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/qa/defense-v05-390.png",
+      "bytes": 30821,
+      "sha256": "ffa8b6bae64d19cdd41054cb47d7cdbb21f66c7d34f7c83f182a229422a5f55e",
+      "git_blob": "ed0fac1ebef668875b388761be05bd69b2ef1d86"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/qa/tool-grip-close-v05.png",
+      "bytes": 17102,
+      "sha256": "58c73d6717beb2b8ea0ca32eeeb92a63d757d82015f2017021acd88e9284ba41",
+      "git_blob": "c5fe8c14ea4a0ae89bb0fa09d3a3ae0ffb950810"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/qa/town-v04-portrait.png",
+      "bytes": 37061,
+      "sha256": "2152d9e7f0df918040882924a5b7a46decd2af7723ff56a1c967c605789a3a98",
+      "git_blob": "abba9cea5eb9acf0b8b8e30f7095b9246d2ff25d"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/qa/vitals-v07-390.png",
+      "bytes": 41609,
+      "sha256": "5f7590246b2a68a5e097b1d2e586f740dd853c071ebdc5ddffd86213d8ee581b",
+      "git_blob": "c38d73feec9d62e6bfb44425fffc68414347ac29"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/qa/wood-map-v05-390.png",
+      "bytes": 27525,
+      "sha256": "f11bc3a9f045c41a31c08178e6e81e9a6d69abb825b5198dc63f84f8d47ec295",
+      "git_blob": "4a66d2c22729c617003aab69c3959f8b32086050"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/QA.md",
+      "bytes": 21678,
+      "sha256": "32e5747d18764e4849e0555964f51a59501d2a673c0e94582b4b9551b0d52303",
+      "git_blob": "c2618d70b1a133165fa342e3cfdd7d4a426131d2"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/README.md",
+      "bytes": 3107,
+      "sha256": "51b5faa5bfb8e18c20d2bcd0b4de03cbcaf416121eedf655635e8fbcbdcb8839",
+      "git_blob": "6576082fe55ffca3a7ab97dfcfd13f75f7d2d33e"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/scavenge-ui.mjs",
+      "bytes": 3323,
+      "sha256": "61b557c19b98e9a43ca90f73f985da230fbe9a4bfbca711d4fbb2191ce0d3131",
+      "git_blob": "2bb8525eb980ced795dbe4f6e812fa67899d3bbc"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/serve.py",
+      "bytes": 640,
+      "sha256": "bab234278da18cbeee7dce89c1756a35fba996307bee8b3fdb97fece73c888b2",
+      "git_blob": "dd15dc6b33930eca9c37ad4384889f9343a0eb67"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/sim.mjs",
+      "bytes": 23396,
+      "sha256": "073c17e4e9ac3a838d55e3f0f790b4139a7609909570428b7c9064a32a9520e7",
+      "git_blob": "f91c2d1a80b4a1104ac333dee9476511da710ff7"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/style.css",
+      "bytes": 33213,
+      "sha256": "b6b9346315f4cbefd52882436279aaee7b253bc9ead7ceff8ecb76595251cff6",
+      "git_blob": "55ac8bc76a8a45fc74118d04d2eb76350d654590"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/assets.test.mjs",
+      "bytes": 2107,
+      "sha256": "9e9892ae73f6123bc86b89899bd853c8dcadfac4da79689328ae2cea10a237ed",
+      "git_blob": "5f0df681c0427088709464c26fc3a29cbef0c7aa"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/defense.test.mjs",
+      "bytes": 3521,
+      "sha256": "47924727070e951208f197305630bee20685b47c9541e65075eb26cf5f5577e4",
+      "git_blob": "12af274961ee404d91d487e772a11ce14d756146"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/held-tool.test.mjs",
+      "bytes": 1762,
+      "sha256": "0625b8167bab8924c824b96317b8a271e0408346360cf3be4dde5b4d4da5d882",
+      "git_blob": "d62534a3c98257d09149186e67098965b9c115b4"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/logistics.test.mjs",
+      "bytes": 6443,
+      "sha256": "103cbca108cd1bc6a1e22dd7ff522fcf7b61d3e736f174e938f30bf758932b0f",
+      "git_blob": "0d4c4c73b98d6abc0e041352a15918533b56178c"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/rig-fixture.mjs",
+      "bytes": 2026,
+      "sha256": "0eb6913d0e30d69ddbf3b81e9306fc228048b2fa3da52809e8f515a018c88be9",
+      "git_blob": "a2865e1b12cfbb86ad8834f6ba092d3bdc76cff7"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/scavenge.test.mjs",
+      "bytes": 3513,
+      "sha256": "0a62193d2cd9e703899a8b510dbf6744faac79767e2bed90dcac636dd457a0ec",
+      "git_blob": "d8c7226316e6f80fc157a71bc50a750dc93b59aa"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/sim.test.mjs",
+      "bytes": 5092,
+      "sha256": "f58cbe47ac9a995e7f6f794d4f3c58b09345d2662f3e1213742fb7a98c78d9ef",
+      "git_blob": "6558ec435a20f428a1a4674b4a5a2f1c001c0632"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/touch-combat.test.mjs",
+      "bytes": 4658,
+      "sha256": "03a92b51b2a8a2dc94ff4e8c57a6489b121623bcb67030d9ce043c14b476d214",
+      "git_blob": "2f0d37de4a665a6722aef5dc195a26eea8c08b6f"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/tests/vehicles.test.mjs",
+      "bytes": 4253,
+      "sha256": "d2fac32de36998b22b9d3e3ec39507cc329a1a2e372c27791ae3ac5bb22cd019",
+      "git_blob": "5bc89d8e4eb2a59143c326308a98df4912a50f40"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/touch-input.mjs",
+      "bytes": 1648,
+      "sha256": "0e352c94e933f2a9d0a522d1d7414a44acb63476298ad26386cfa0a73741ff66",
+      "git_blob": "34b25d413c147b548411f2152477bcff76222cca"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vehicle-ui.mjs",
+      "bytes": 4540,
+      "sha256": "14f77957aadc9bec5a05090b83fdf5cedd45020b7a93f08c6f8fa38b3ff17abb",
+      "git_blob": "a9d5ce0d26a0e09b34b9f1b8fe82fe668ea92f02"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vehicles.mjs",
+      "bytes": 3440,
+      "sha256": "1ec7da40cab19c278aba14f4a1337bddef304f8cac52630689f59db85a28ef46",
+      "git_blob": "e986132c1c2400bf4055bd1137dd3c6f66ddcf37"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vendor/build/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "git_blob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vendor/build/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "git_blob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vendor/loaders/GLTFLoader.js",
+      "bytes": 117570,
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "git_blob": "cd95b20593264ba8b503f8152484c456be64b1af"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "git_blob": "a167e11b0558954a00960dc3cad00ead6476fbe7"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/vendor/utils/SkeletonUtils.js",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "git_blob": "836c2e2bf2be3c5c5fd6b65ed260f84b3d589258"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/view.mjs",
+      "bytes": 22022,
+      "sha256": "1ac0280b2807bf09a4b3254261bbd69a29ad87af88818a511635efb5a747666e",
+      "git_blob": "f8cb97e926295e704791fc941fe57084c6a73eb7"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/visual-review.html",
+      "bytes": 2169,
+      "sha256": "66565260e078dab536bf3392dac11b71f236c99b97a4909977bf721b1e21801b",
+      "git_blob": "6cd729d90f4eab9832949de20796062f9e4b35a9"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/world.mjs",
+      "bytes": 5991,
+      "sha256": "217bbcf9c72cdc02a2d2ac06d039e6b8553c35a314152261c9e47c0bc36a5141",
+      "git_blob": "733745512530022190c371eba3771f539fb7779b"
+    },
+    {
+      "path": "games/生存沙盒/灰烬街区/开始试玩.cmd",
+      "bytes": 46,
+      "sha256": "7bcbd1960bc76a871966cb74e331ce2a36db920db6301a1f7e2a6312bd0177a9",
+      "git_blob": "f8d10449ac8bdcbb306799efe69f4b494323425d"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "水上飞跃大赛 · SPLASH RIVALS",
+  "version": "0.8.0",
+  "entry": "index.html",
+  "tests": 42,
+  "playerNitroSeconds": 6,
+  "botNitroSeconds": 3,
+  "nitroMultiplier": 1.35,
+  "stage": "GitHub source handoff",
+  "loopitImported": false
+}

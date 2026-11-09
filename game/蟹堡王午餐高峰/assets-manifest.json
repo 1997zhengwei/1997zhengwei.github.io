@@ -1,0 +1,217 @@
+{
+  "total": 11,
+  "modified": false,
+  "assets": [
+    {
+      "file": "assets/burger.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        33,
+        69,
+        1208,
+        1254
+      ],
+      "bytes": 1091596,
+      "sha256": "1665ef80f334a1a1af5b93c1e99bee15b2526f831c0516a95ac1f518841f4699",
+      "source": "existing generated prop pack",
+      "footAnchor": null
+    },
+    {
+      "file": "assets/chef-cheer.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        38,
+        98,
+        988,
+        982
+      ],
+      "bytes": 788361,
+      "sha256": "7583ad72316152f18032aa8f4605086e48cfd69f4b988af0f7f7c657c5e7b952",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    },
+    {
+      "file": "assets/chef-flip.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        117,
+        93,
+        908,
+        982
+      ],
+      "bytes": 802890,
+      "sha256": "de34fceb67e3b4bd53eadf402129711e1be5d80dd0a9076c3a9aaf2cbdfffb9c",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    },
+    {
+      "file": "assets/chef-miss.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        153,
+        98,
+        871,
+        982
+      ],
+      "bytes": 735287,
+      "sha256": "bf04723fc2cdd6dab0775475c40d40dee785ebf729598e7cc2e9cb9ab323a10f",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    },
+    {
+      "file": "assets/chef-ready.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        185,
+        94,
+        840,
+        982
+      ],
+      "bytes": 779477,
+      "sha256": "60ec62e0e964131e276b1ca0993ca4556555bf732d0c76294fc38f2c54aa9094",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    },
+    {
+      "file": "assets/kitchen.png",
+      "size": [
+        1600,
+        1200
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1600,
+        1200
+      ],
+      "bytes": 1919735,
+      "sha256": "e7dee560b98ed1f9435afbcd3429b3e043c96020cdcdfc58f71967217a0338e4",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": null
+    },
+    {
+      "file": "assets/patrick-served.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        122,
+        51,
+        903,
+        982
+      ],
+      "bytes": 620561,
+      "sha256": "460682888d5ce879246a4e14efa219228a280921cc0b584d287576211937a086",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    },
+    {
+      "file": "assets/patrick-wait.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        108,
+        51,
+        918,
+        982
+      ],
+      "bytes": 611833,
+      "sha256": "75701228aba869cd29d809bffb9e55177ca7d86f09e150abfac0122db8021993",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    },
+    {
+      "file": "assets/patty.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        0,
+        128,
+        1170,
+        1214
+      ],
+      "bytes": 666474,
+      "sha256": "20a60fa56ec34413a053eeada3694b5d331bc1534bacda883bece628dcc7d256",
+      "source": "existing generated prop pack",
+      "footAnchor": null
+    },
+    {
+      "file": "assets/squidward-served.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        310,
+        34,
+        715,
+        982
+      ],
+      "bytes": 332893,
+      "sha256": "39e4e813ba195179a7b2785347b5e11e9aa1d61b9cca487ad7cd88609b915a26",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    },
+    {
+      "file": "assets/squidward-wait.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        340,
+        34,
+        685,
+        982
+      ],
+      "bytes": 292785,
+      "sha256": "1c12d0e7eb6422ed53617afd863d7969306e030f9fc4321a10d615c176b86623",
+      "source": "user-supplied WorkBuddy action pack 2026-11-02",
+      "footAnchor": [
+        512,
+        980
+      ]
+    }
+  ]
+}

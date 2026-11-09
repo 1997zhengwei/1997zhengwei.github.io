@@ -1,0 +1,119 @@
+{
+  "name": "矿车归途",
+  "englishTitle": "Minecart Rescue",
+  "version": "2.1.0",
+  "entry": "index.html",
+  "standalone": "play.html",
+  "runtime": "static ES modules; vendored Three.js 0.187.0; no install required",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 9,
+      "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 40,
+      "sha256": "e59e0b2e5b7b054d318feb8a23b85e604ac6f9f89c5309e80ea83e08fa5ce264"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 3363,
+      "sha256": "63d6876ee7695599150f1c646dd2fd7f8aaca47bd49a7a0873a64d367fd8b900"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 5383,
+      "sha256": "56ed6d00a66d924dd257a589015c53c9296ccf67bd4664e762b4bb2868218f88"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5381,
+      "sha256": "bf08ad01bf96067367c33526a0d70b740c966225712ba92d8c2729f61999e669"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 322,
+      "sha256": "89975ba597a361b4a26b143c61610d3ff64a9680b1c9da7a595b0d4697cc86cc"
+    },
+    {
+      "path": "docs/自动合流.jpg",
+      "bytes": 38149,
+      "sha256": "3cda347bdf4382901edf3649cd85e721035d4bca72f5beb92376be351249ef9e"
+    },
+    {
+      "path": "docs/道岔选择.jpg",
+      "bytes": 39976,
+      "sha256": "3d337486ead36f522a4dfdbc5ff20c5b425f5dffafcb9a565253d350535602bd"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2971,
+      "sha256": "f0c1660d7cc569951278cdb34056ccae3fe5bebd04859648cf54f10af9ba8e5c"
+    },
+    {
+      "path": "package.json",
+      "bytes": 334,
+      "sha256": "d37e8df1e6c092975f28dc4f65e81bb5d942ac4e3bd6a0d1d054abf024299aad"
+    },
+    {
+      "path": "play.html",
+      "bytes": 664199,
+      "sha256": "efe89e6639e338cd4d7ed091c13201a63c5713f4910b870a6c5542db9577abb4"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 1181,
+      "sha256": "8a2b848b0511d2984f8e5f9d2e8063d5bf005eb112964f50331728f5b4177af1"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 2533,
+      "sha256": "bcff11721ee9cc8fb38eff1ab54399325e5f8a709d54f28dea79db14c090ee5a"
+    },
+    {
+      "path": "src/main.mjs",
+      "bytes": 18521,
+      "sha256": "7b0f44939dbc1058be234fca3f694f82f8fc962f315a4d6a7eda1ebfea12dc25"
+    },
+    {
+      "path": "src/puzzles.mjs",
+      "bytes": 6449,
+      "sha256": "887a8ee6124359eb018f2d210572f947ec3fcc2be4c9cca83015b38faefba408"
+    },
+    {
+      "path": "src/rail-engine.mjs",
+      "bytes": 5985,
+      "sha256": "5560cc2f123572a082fb5ad8ce818a99468641cbb4d2f8013d318669f832e6a2"
+    },
+    {
+      "path": "src/rail-world.mjs",
+      "bytes": 21733,
+      "sha256": "e311be2ef448dce9ceaeb1344cbc8882f1857286f3b51094ad58b0d98f8f59c1"
+    },
+    {
+      "path": "style.css",
+      "bytes": 12888,
+      "sha256": "7430728e3e1e6679e758eb793f5ac21aeaa33a2053e8e1dad24485cffdf13b8d"
+    },
+    {
+      "path": "tests/rules.test.mjs",
+      "bytes": 4648,
+      "sha256": "fe6000cd5a3b198bdb509c86649075d35c6bc7f859c8b4ed4f567456e4e83113"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/three.module.min.js",
+      "bytes": 748863,
+      "sha256": "b025879456a18f92a0c22782af9aa88d1627f15a7f1ec71a5ffbaf20b584fbac"
+    }
+  ],
+  "excludes": [
+    "SOURCE_MANIFEST.json",
+    "SYNC_STATUS.md"
+  ]
+}

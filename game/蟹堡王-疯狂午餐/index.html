@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#123f46"><title>Krusty Krab: Lunch Gone Wild</title><link rel="stylesheet" href="style.css"></head>
+<body><main id="game">
+ <div id="world" aria-label="3D Krusty Krab kitchen"></div>
+ <header><div class="brand"><span class="brand-mark">K</span><div><small>THE KRUSTY KRAB</small><strong>Lunch Gone Wild</strong></div></div><div class="top-buttons"><button id="sound" aria-label="Turn sound on">♪</button><button id="pause" aria-label="Pause game">Ⅱ</button></div></header>
+ <section class="hud"><div><small id="shiftName">LUNCH SHIFT / 01</small><strong id="progress">First order, no hurry.</strong><div class="progress-track"><i id="progressFill"></i></div></div><div class="cash"><strong id="tips">$0</strong><span id="hearts" aria-label="5 reputation hearts">♥ ♥ ♥ ♥ ♥</span></div></section>
+ <div id="tickets" aria-label="Customer orders"></div>
+ <div id="eventBanner" hidden></div>
+ <div id="toast" role="status"></div>
+ <div id="carry"><span id="carryItems">Empty tray</span><span id="combo"></span></div>
+ <div id="guide"><b id="step">1</b><span id="hint">Orange GRILL → tap COOK.</span></div>
+ <section id="controls"><div id="stick" role="application" aria-label="Drag to move"><span id="knob"></span><small>MOVE</small></div><div class="action-cluster"><button id="dash"><b>➜</b><span>Dash</span></button><button id="toss" disabled><b>↗</b><span>Toss</span></button><button id="action"><b>♨</b><span>Cook</span></button></div></section>
+ <div id="keys">WASD / arrows · E interact · hold SPACE toss · SHIFT dash · click floor to walk</div>
+ <div id="aim" hidden><strong id="aimLabel">Release to toss!</strong><div class="aim-track"><i id="aimFill"></i></div><small>Slide left / right to choose a tray</small></div>
+ <div id="overlay"><article id="modal"></article></div>
+ </main><script type="module" src="app.mjs"></script></body></html>

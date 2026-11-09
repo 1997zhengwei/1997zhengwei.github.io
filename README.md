@@ -96,3 +96,8 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+
+
+## 游戏作品
+
+所有游戏源码与资料统一存放在根目录 [game/ 中文游戏总目录](./game/)，包含已完成作品和矿车归途；后续新游戏也从这里查找。

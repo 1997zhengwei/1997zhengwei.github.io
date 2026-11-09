@@ -1,0 +1,17 @@
+{
+  "title": "黑洞都市 · 自由吞噬",
+  "version": "0.7.0",
+  "entry": "index.html",
+  "alternateEntry": "arena.html",
+  "legacyEntry": "parkour.html",
+  "tests": 32,
+  "players": 6,
+  "seconds": 120,
+  "podium": [
+    200,
+    140,
+    100
+  ],
+  "stage": "GitHub source handoff",
+  "loopitImported": false
+}
