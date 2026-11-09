@@ -27,7 +27,7 @@
 
 ## 本次新增：矿车归途
 
-v2.1.0，十关编号矿车路线拼图。普通交汇处自动合流，特殊道岔用 SHORT / LONG 选择路线。本地 23 项规则检查通过；Loopit 初稿接入中，完成后更新 [同步记录](./矿车归途/SYNC_STATUS.md)。
+v2.1.0，十关编号矿车路线拼图。普通交汇处自动合流，特殊道岔用 SHORT / LONG 选择路线。本地 23 项规则检查通过；**Loopit V1 初稿已生成并实测，未发布、未送审**。 [直接试玩](https://cdn-cf.loopit.me/public/game/01a1c112-5e84-77d9-aeab-9bbb8c587b60/2119824706109460480/workspace/dist/index.html?loopit_preview=draft) · [创作项目](https://lab.loopit.me/pgc/workbench/01a1c112-5e84-77d9-aeab-9bbb8c587b60?kind=draft) · [实际验证记录](./矿车归途/SYNC_STATUS.md)。
 
 ## 目录与历史链接
 
