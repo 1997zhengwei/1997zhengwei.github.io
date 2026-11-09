@@ -24,8 +24,13 @@
 | 黑洞都市-自由吞噬 | Black Hole City | [打开目录](./黑洞都市-自由吞噬/) |
 | 水上飞跃大赛 | Splash Rivals | [打开目录](./水上飞跃大赛/) |
 | 矿车归途 | Minecart Rescue | [打开目录](./矿车归途/) |
+| TNT连锁矿场 | TNT Mine Rush | [打开目录](./TNT连锁矿场/) |
 
-## 本次新增：矿车归途
+## 本次新增：TNT连锁矿场
+
+v0.6.1，明亮卡通连锁采矿。三张教学图加 24 层随机矿洞；52 点起步，8 米和 16 米各补 6 点并显示明确通知。提供按需路线提示和免费修镐续玩。本地 25 项规则测试与手机尺寸补给通知实测通过，**GitHub 源码交付，尚未接入 Loopit**。 [打开目录](./TNT连锁矿场/) · [运行说明](./TNT连锁矿场/README.md) · [验收记录](./TNT连锁矿场/QA.md)。
+
+## 已收录：矿车归途
 
 v2.1.0，十关编号矿车路线拼图。普通交汇处自动合流，特殊道岔用 SHORT / LONG 选择路线。本地 23 项规则检查通过；**Loopit V1 初稿已生成并实测，未发布、未送审**。 [直接试玩](https://cdn-cf.loopit.me/public/game/01a1c112-5e84-77d9-aeab-9bbb8c587b60/2119824706109460480/workspace/dist/index.html?loopit_preview=draft) · [创作项目](https://lab.loopit.me/pgc/workbench/01a1c112-5e84-77d9-aeab-9bbb8c587b60?kind=draft) · [实际验证记录](./矿车归途/SYNC_STATUS.md)。
 

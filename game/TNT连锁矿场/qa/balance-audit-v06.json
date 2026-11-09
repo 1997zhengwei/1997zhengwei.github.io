@@ -1,0 +1,17 @@
+{
+  "kind": "deterministic nearby-ore-first policy simulation, not human success rates",
+  "sample": 1000,
+  "modes": {
+    "42": {
+      "wins": 79
+    },
+    "80": {
+      "wins": 833
+    },
+    "staged": {
+      "wins": 488,
+      "supplyEvents": 1961
+    }
+  },
+  "safeRoutes": 1000
+}

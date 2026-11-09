@@ -1,0 +1,218 @@
+[
+  {
+    "i": 0,
+    "energy": 51,
+    "label": "PICKAXE · +6 AT 8 M",
+    "max": 52,
+    "score": 0,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 1,
+    "energy": 50,
+    "label": "PICKAXE · +6 AT 8 M",
+    "max": 52,
+    "score": 0,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 2,
+    "energy": 49,
+    "label": "PICKAXE · +6 AT 8 M",
+    "max": 52,
+    "score": 0,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 3,
+    "energy": 48,
+    "label": "PICKAXE · +6 AT 8 M",
+    "max": 52,
+    "score": 0,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 4,
+    "energy": 47,
+    "label": "PICKAXE · +6 AT 8 M",
+    "max": 52,
+    "score": 0,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 5,
+    "energy": 46,
+    "label": "PICKAXE · +6 AT 8 M",
+    "max": 52,
+    "score": 35,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 6,
+    "energy": 45,
+    "label": "PICKAXE · +6 AT 8 M",
+    "max": 52,
+    "score": 35,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 7,
+    "energy": 50,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 70,
+    "tip": "8 m resupply: +6 hits!"
+  },
+  {
+    "i": 8,
+    "energy": 49,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 70,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 9,
+    "energy": 48,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 70,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 10,
+    "energy": 47,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 70,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 11,
+    "energy": 46,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 70,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 12,
+    "energy": 45,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 70,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 13,
+    "energy": 44,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 70,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 14,
+    "energy": 43,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 78,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 15,
+    "energy": 42,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 78,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 16,
+    "energy": 41,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 113,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 17,
+    "energy": 40,
+    "label": "PICKAXE · +6 AT 16 M",
+    "max": 58,
+    "score": 113,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 18,
+    "energy": 45,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 148,
+    "tip": "16 m resupply: +6 hits!"
+  },
+  {
+    "i": 19,
+    "energy": 44,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 148,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 20,
+    "energy": 43,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 148,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 21,
+    "energy": 42,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 156,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 22,
+    "energy": 41,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 156,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 23,
+    "energy": 40,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 156,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 24,
+    "energy": 39,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 164,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 25,
+    "energy": 38,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 172,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  },
+  {
+    "i": 26,
+    "energy": 37,
+    "label": "PICKAXE · SUPPLIES ✓",
+    "max": 64,
+    "score": 742,
+    "tip": "Tap outlined blocks to dig · Drag to look around"
+  }
+]

@@ -1,0 +1,253 @@
+{
+  "seed": "D2241C95",
+  "steps": [
+    {
+      "r": 0,
+      "c": 1,
+      "energy": 51,
+      "max": 52,
+      "score": 0,
+      "depth": 1,
+      "supplies": []
+    },
+    {
+      "r": 1,
+      "c": 1,
+      "energy": 50,
+      "max": 52,
+      "score": 0,
+      "depth": 2,
+      "supplies": []
+    },
+    {
+      "r": 2,
+      "c": 1,
+      "energy": 49,
+      "max": 52,
+      "score": 0,
+      "depth": 2,
+      "supplies": []
+    },
+    {
+      "r": 2,
+      "c": 1,
+      "energy": 48,
+      "max": 52,
+      "score": 0,
+      "depth": 3,
+      "supplies": []
+    },
+    {
+      "r": 5,
+      "c": 3,
+      "energy": 47,
+      "max": 52,
+      "score": 0,
+      "depth": 3,
+      "supplies": []
+    },
+    {
+      "r": 5,
+      "c": 3,
+      "energy": 46,
+      "max": 52,
+      "score": 35,
+      "depth": 6,
+      "supplies": []
+    },
+    {
+      "r": 8,
+      "c": 3,
+      "energy": 45,
+      "max": 52,
+      "score": 35,
+      "depth": 6,
+      "supplies": []
+    },
+    {
+      "r": 8,
+      "c": 3,
+      "energy": 50,
+      "max": 58,
+      "score": 70,
+      "depth": 9,
+      "supplies": [
+        8
+      ]
+    },
+    {
+      "r": 9,
+      "c": 3,
+      "energy": 49,
+      "max": 58,
+      "score": 70,
+      "depth": 9,
+      "supplies": []
+    },
+    {
+      "r": 9,
+      "c": 3,
+      "energy": 48,
+      "max": 58,
+      "score": 70,
+      "depth": 10,
+      "supplies": []
+    },
+    {
+      "r": 11,
+      "c": 3,
+      "energy": 47,
+      "max": 58,
+      "score": 70,
+      "depth": 10,
+      "supplies": []
+    },
+    {
+      "r": 11,
+      "c": 3,
+      "energy": 46,
+      "max": 58,
+      "score": 70,
+      "depth": 12,
+      "supplies": []
+    },
+    {
+      "r": 12,
+      "c": 3,
+      "energy": 45,
+      "max": 58,
+      "score": 70,
+      "depth": 12,
+      "supplies": []
+    },
+    {
+      "r": 12,
+      "c": 3,
+      "energy": 44,
+      "max": 58,
+      "score": 70,
+      "depth": 13,
+      "supplies": []
+    },
+    {
+      "r": 13,
+      "c": 3,
+      "energy": 43,
+      "max": 58,
+      "score": 78,
+      "depth": 14,
+      "supplies": []
+    },
+    {
+      "r": 14,
+      "c": 3,
+      "energy": 42,
+      "max": 58,
+      "score": 78,
+      "depth": 14,
+      "supplies": []
+    },
+    {
+      "r": 14,
+      "c": 3,
+      "energy": 41,
+      "max": 58,
+      "score": 113,
+      "depth": 15,
+      "supplies": []
+    },
+    {
+      "r": 16,
+      "c": 4,
+      "energy": 40,
+      "max": 58,
+      "score": 113,
+      "depth": 15,
+      "supplies": []
+    },
+    {
+      "r": 16,
+      "c": 4,
+      "energy": 45,
+      "max": 64,
+      "score": 148,
+      "depth": 17,
+      "supplies": [
+        16
+      ]
+    },
+    {
+      "r": 17,
+      "c": 4,
+      "energy": 44,
+      "max": 64,
+      "score": 148,
+      "depth": 17,
+      "supplies": []
+    },
+    {
+      "r": 17,
+      "c": 4,
+      "energy": 43,
+      "max": 64,
+      "score": 148,
+      "depth": 18,
+      "supplies": []
+    },
+    {
+      "r": 19,
+      "c": 4,
+      "energy": 42,
+      "max": 64,
+      "score": 156,
+      "depth": 20,
+      "supplies": []
+    },
+    {
+      "r": 20,
+      "c": 4,
+      "energy": 41,
+      "max": 64,
+      "score": 156,
+      "depth": 20,
+      "supplies": []
+    },
+    {
+      "r": 20,
+      "c": 4,
+      "energy": 40,
+      "max": 64,
+      "score": 156,
+      "depth": 21,
+      "supplies": []
+    },
+    {
+      "r": 21,
+      "c": 4,
+      "energy": 39,
+      "max": 64,
+      "score": 164,
+      "depth": 22,
+      "supplies": []
+    },
+    {
+      "r": 22,
+      "c": 4,
+      "energy": 38,
+      "max": 64,
+      "score": 172,
+      "depth": 23,
+      "supplies": []
+    },
+    {
+      "r": 22,
+      "c": 3,
+      "energy": 37,
+      "max": 64,
+      "score": 742,
+      "depth": 24,
+      "supplies": []
+    }
+  ],
+  "status": "won"
+}
