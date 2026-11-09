@@ -49,9 +49,9 @@
   },
   {
     "path": "LOOPIT_HANDOFF.md",
-    "bytes": 4497,
-    "git_blob": "262eb0d42467e18eafb6a060de198b25ccc04eb6",
-    "sha256": "85b83f9a31f18a66fcd1c21a56300a4775c00a198c651eaa42b5d6512e34c3d8"
+    "bytes": 4462,
+    "git_blob": "98c0262eaf174e716500bfd26140ff7efee85a24",
+    "sha256": "bbe0539cb93bda34159e4c9ec9982200bbe41cffcf78f6f67df4184283630bfb"
   },
   {
     "path": "package.json",
@@ -216,7 +216,7 @@
     "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
   },
   {
-    "path": "��������.cmd",
+    "path": "启动试玩.cmd",
     "bytes": 53,
     "git_blob": "58d506d260bcc2bb19abb83717f47c14c3099ff2",
     "sha256": "42055f20ddc55d1d91b67cbeff1ab288607a0f2c03548b21fc0a58823caea247"
