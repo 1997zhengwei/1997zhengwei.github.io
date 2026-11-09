@@ -1,0 +1,224 @@
+[
+  {
+    "path": "assets/audio/pocket-parade.mp3",
+    "bytes": 549728,
+    "git_blob": "5ec08cd7e19af352bdb38954e6ff4fd8583cc5c9",
+    "sha256": "aea15c5c99d18fa1c84fc9aa833fe1453a3c39bbca4b21b11f6ec543ef06d1ef"
+  },
+  {
+    "path": "assets/audio/README.md",
+    "bytes": 584,
+    "git_blob": "d03e685bc54d7ac4adc4b384a1d22e49e541ff3b",
+    "sha256": "58bc03f88919675787c0cee2712beb362ce306d326f0f7964332cfc5fb5c4303"
+  },
+  {
+    "path": "BRIEF.md",
+    "bytes": 1818,
+    "git_blob": "fb1e7c8276704e4383e43487ff8c6b7cbc2251ff",
+    "sha256": "93529fbf5851cfde33978a189cf74e298e4ebf692cdf3e4ba43ee4db01476dfc"
+  },
+  {
+    "path": "evidence/result.png",
+    "bytes": 36784,
+    "git_blob": "91db14de6450dd3bec2f136b8e5db4e20dd5d8bf",
+    "sha256": "e8b83cce919397df25f6d84c937da9eeb8bda5bc2a3daa5e4f10afcb777def4d"
+  },
+  {
+    "path": "evidence/transition-early.png",
+    "bytes": 62980,
+    "git_blob": "b36d36ac294ba3442bd76198d8533f557ce1104c",
+    "sha256": "a5f78e345f4b478fa370e14f2b4ba445525a76727f3b5fe220c2912aedcd6f60"
+  },
+  {
+    "path": "evidence/transition-town-after.png",
+    "bytes": 62166,
+    "git_blob": "b5fc15b9c031f2a4df2785a9aa53abe6afbc87b9",
+    "sha256": "40525bfccdcfb573abd7edcfae065796a6b44ad21d76abbdb9fbcc008c519d2f"
+  },
+  {
+    "path": "evidence/transition-town.png",
+    "bytes": 59548,
+    "git_blob": "43ac830c48e640aa72ea4269a702dab3773dfa37",
+    "sha256": "c7d0aa48e42d66617bb528b033c492bfcdb8dd68e5fc8f58ef494d33492817f6"
+  },
+  {
+    "path": "index.html",
+    "bytes": 770,
+    "git_blob": "ffe7a637d23683fb30808f17e22c821a75531428",
+    "sha256": "2b290527b746d225e141bc43b74d929ae0c5b38bca5a16569b93d2a3ca17ad07"
+  },
+  {
+    "path": "LOOPIT_HANDOFF.md",
+    "bytes": 4462,
+    "git_blob": "948d424fa8040504053d980ce0f5bdba1b90bf6f",
+    "sha256": "b207544135efac92bfe0662648afb521e611bebed0d619a3d9dab56c99466277"
+  },
+  {
+    "path": "package.json",
+    "bytes": 156,
+    "git_blob": "3b61122a3589369ef269bdc652a7aa74a56b5298",
+    "sha256": "10007244791880c8f832d7d076e9f558ecf74663efdbc58aad1a95838cc8c08d"
+  },
+  {
+    "path": "QA.md",
+    "bytes": 21230,
+    "git_blob": "a806280d9c7d067e4d80d64b0d9bf55ced0319c6",
+    "sha256": "9e65e2a531188a0bf2237f8f98ef004faaf4fefbfc8d03a93da4f328ede1dbcf"
+  },
+  {
+    "path": "README.md",
+    "bytes": 5610,
+    "git_blob": "2857980f59a14b08813d1ce48e266099fa4fb723",
+    "sha256": "820415e736958aa430fb2eabc1c9a195400f96fdb247fc21da9bb7b5576dfdc7"
+  },
+  {
+    "path": "scripts/balance-sweep.mjs",
+    "bytes": 1877,
+    "git_blob": "0b3d95c7876259c6b4fdb763f56104f90127ed37",
+    "sha256": "9e14669f552b125796e777fcd6ed7514b8b0fdaa535e001cb99b3f760fec9d24"
+  },
+  {
+    "path": "scripts/check-package.mjs",
+    "bytes": 1303,
+    "git_blob": "fa7a3dcefbf761f37cf2a310db2a09a712ab87ac",
+    "sha256": "b654dca30e6d56cc5046150f23c369b6f87547039358250a83479c813de6b4e0"
+  },
+  {
+    "path": "scripts/compose_music.py",
+    "bytes": 4379,
+    "git_blob": "f3de805e26d5199b17fcce66a380064c22f5186d",
+    "sha256": "0ed811f8b66dc44c46e3c326da2931999f64c7791d922d67af90e0ddf0a53912"
+  },
+  {
+    "path": "serve.py",
+    "bytes": 1714,
+    "git_blob": "59b37a0cc2f2df4496bf2548ff9b2e655f0aa62b",
+    "sha256": "990c0f75f868679ec17c1fdda636bcf27a1837dcb34e824dcd2aca60b0f1a7fa"
+  },
+  {
+    "path": "SOURCE_BUNDLE.json",
+    "bytes": 172500,
+    "git_blob": "976e18cddc7ec4fadee54cee90c0ec59e9040e02",
+    "sha256": "88ea0ab178991c59e166c0c84d22f4e3188e235b51bbcec42a255d937c9ebcde"
+  },
+  {
+    "path": "src/app.mjs",
+    "bytes": 31924,
+    "git_blob": "ee4779d07ae4addcb4e25fd13e5ad79b987783f3",
+    "sha256": "5a4af3f1067f7a2770cb726ce12d2aed656ef6925e2c7509982be0d72bb937fb"
+  },
+  {
+    "path": "src/art.css",
+    "bytes": 11800,
+    "git_blob": "b1d2f7d2bb8c03c4da8d7712699fec412ff5abfc",
+    "sha256": "f3a09f382830257a8ee9f293e6b9ab63d66d939b2b2bc82df435e548e97dc54a"
+  },
+  {
+    "path": "src/art.mjs",
+    "bytes": 1411,
+    "git_blob": "8ddaf526ec437463f6983843693b302d42233af4",
+    "sha256": "416040d1317b2913dcfd22e6a5a4f458ff53691e43d7154a40f4f5a936d09e0a"
+  },
+  {
+    "path": "src/camera-visibility.mjs",
+    "bytes": 1672,
+    "git_blob": "ff00a0001095f6b434490d7af4ecb863c655f4cf",
+    "sha256": "cff178b38922a94479c30a39e6af3dba7b60bebc47391bb164d68767732441bb"
+  },
+  {
+    "path": "src/course.mjs",
+    "bytes": 5321,
+    "git_blob": "33c6ab30220e91f36affb1ed5e3330df789acee5",
+    "sha256": "27b0e0e2ad6791865d89b48eeede660ea5f75272a6e0c825413835e373488084"
+  },
+  {
+    "path": "src/data.mjs",
+    "bytes": 7238,
+    "git_blob": "58298756b835824b7da8499686e2e2600a0582df",
+    "sha256": "78918816718cff4a96c9199b17966743cfc96f9f835596c4444b10a256341da1"
+  },
+  {
+    "path": "src/environment.mjs",
+    "bytes": 17850,
+    "git_blob": "9d898ce356399b31d072dc42d9cc30f9b3dd8a5c",
+    "sha256": "30b773053c1e7202c3dd2a48c742f4f507af4299e3b122a3249003315613c511"
+  },
+  {
+    "path": "src/geometry.mjs",
+    "bytes": 4164,
+    "git_blob": "a6781f3c7d8b6c70b440d5b25d36bb43114dbf46",
+    "sha256": "dc4a6df0f7a253297b08373f6961d260a019ff6e6aadc8c247fd4804668304f2"
+  },
+  {
+    "path": "src/models.mjs",
+    "bytes": 13326,
+    "git_blob": "37e3394f876ed610c810169e24686627e67281df",
+    "sha256": "94df5a9ec138ca42d084d97917a482c4ff4649e54d513575de477ea6de7ad870"
+  },
+  {
+    "path": "src/presentation.mjs",
+    "bytes": 859,
+    "git_blob": "ebacb29118229bb4129e1d4a0cb3058f12b3da81",
+    "sha256": "959798a87c6b3d72280473f8787a5d27a82956fa3ceebc7ee12f35877f4ea847"
+  },
+  {
+    "path": "src/progression.mjs",
+    "bytes": 2587,
+    "git_blob": "f5f884594fca06bb6f97e83c94d57f4816b387ac",
+    "sha256": "36c333225327a417d8f9c012495d1a09e32737ef29869075c74c734058a48961"
+  },
+  {
+    "path": "src/rules.mjs",
+    "bytes": 9680,
+    "git_blob": "88d83499a0abd047ddf8ce96a95150ace9ce709f",
+    "sha256": "ffb8e5ffc0de864a01d5766da32943defc4219fe3797fe15cb4e29aa20a184d4"
+  },
+  {
+    "path": "src/scene.mjs",
+    "bytes": 36157,
+    "git_blob": "af06540c1bf8732c955cbe59d010eabc6addafa0",
+    "sha256": "cf853ab00a8889759619ae99de3df85fad6f40b3267801e3caee9534f96dcd2d"
+  },
+  {
+    "path": "src/scenery.mjs",
+    "bytes": 1601,
+    "git_blob": "7a067c0f70748725a1731d0a941c23e709ecbc39",
+    "sha256": "8abf7daab5b788332d8b79a470609d860cb66775b08a55a5a6ae46e18f874978"
+  },
+  {
+    "path": "src/style.css",
+    "bytes": 24297,
+    "git_blob": "fc91c84e4c3d9492373ea80e372991112acde125",
+    "sha256": "703b6dbd63169c6ea05d5783bed8decfdff69c58ee9ff47db95b4b99541cc497"
+  },
+  {
+    "path": "tests/game.test.mjs",
+    "bytes": 21872,
+    "git_blob": "22db96394867b148a48fdfdd6ee87f40521fddf0",
+    "sha256": "68ca03f81f7e24c3938289a8c9935137b3c72b4889d3ad26dee9230f989a2a38"
+  },
+  {
+    "path": "vendor/LICENSE",
+    "bytes": 1081,
+    "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7",
+    "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+  },
+  {
+    "path": "vendor/three.core.js",
+    "bytes": 1458113,
+    "git_blob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2",
+    "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+  },
+  {
+    "path": "vendor/three.module.js",
+    "bytes": 662772,
+    "git_blob": "c52087acfabae80efabb8cc05e3a1d96e35a1426",
+    "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+  },
+  {
+    "path": "启动试玩.cmd",
+    "bytes": 53,
+    "git_blob": "58d506d260bcc2bb19abb83717f47c14c3099ff2",
+    "sha256": "42055f20ddc55d1d91b67cbeff1ab288607a0f2c03548b21fc0a58823caea247"
+  }
+]

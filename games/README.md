@@ -4,6 +4,7 @@
 
 | 中文游戏名（英文原名） | 资料入口 | 当前记录 |
 | --- | --- | --- |
+| **万物滚滚（ROLL IT ALL）** | **[打开中文源码目录](./万物滚滚/)** | **v0.8.3；三条加长3D路线、真实黏附成长、积分服装/尾迹/能力工坊；40项检查和完整试玩通过，GitHub源码交付，Loopit首稿接入中** |
 | 蟹黄堡翻翻乐（Krabby Patty Flip） | [打开资料](./krabby-patty-flip/) | 本地检查与 Loopit V2 试玩通过；草稿 |
 | 蟹堡王午餐高峰（Krusty Lunch Rush） | [打开资料](./krusty-lunch-rush/) | 本地六单、失败和重开通过；角色动作稿 |
 | 小木筏·大风暴（Tiny Raft, Big Storm） | [打开资料](./tiny-raft-big-storm/) | 采集、建造、风暴、胜负和重开已本地检查 |
