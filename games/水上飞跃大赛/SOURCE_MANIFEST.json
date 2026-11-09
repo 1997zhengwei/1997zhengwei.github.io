@@ -1,0 +1,142 @@
+{
+  "version": "0.8.0",
+  "entry": "index.html",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 612,
+      "sha256": "cbf977bfc42e264c08bc3fe39f5930073b4818af5939a4f87476d590d73abdda"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 2134,
+      "sha256": "c4e4e77d668c89230a6d5d0aff5ac9c8dc72d8c84c772bfbfd681ec61ce918b2"
+    },
+    {
+      "path": "package.json",
+      "bytes": 155,
+      "sha256": "9fb28f8b0d74cb079691baad7371c20c3fa2c7bd29d0a4845dfdde385902dc17"
+    },
+    {
+      "path": "qa/nitro-six-seconds-v8.png",
+      "bytes": 65200,
+      "sha256": "16cdde6709956859337bc34b01012e357e806ccfdd66acdfaa2d2dcb01a0292d"
+    },
+    {
+      "path": "qa/preview-reef-v7.png",
+      "bytes": 27026,
+      "sha256": "074a9294c842206baed1eda225fdcb64f1a7cc1dcd77aadd5b5fd23599fb6d50"
+    },
+    {
+      "path": "qa/preview-sunset-v7.png",
+      "bytes": 25768,
+      "sha256": "dcd59481dce5763df2979a1a609c83ae9c7d199e249a5ca315a4755226b50482"
+    },
+    {
+      "path": "qa/race-reef-portal-v7.png",
+      "bytes": 34103,
+      "sha256": "9c1af995194c07bebaa94511e51797883ac018ea2a299485e41a06673e99e37a"
+    },
+    {
+      "path": "qa/result-sunset-v8.png",
+      "bytes": 57045,
+      "sha256": "f78476f338dea93f99de3cbcec236c91d51197f17cfa81d184599204c63b9aa9"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 2427,
+      "sha256": "917dd05c236667e4768a20b44ec659b2fb3327a6cec775cfe6c43095416fc86a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6155,
+      "sha256": "79b643ce126823bd7b6e54f4a627444051169b3800c10d8dfbd7adf50a93325d"
+    },
+    {
+      "path": "release.json",
+      "bytes": 267,
+      "sha256": "a152edf77aa9574092e511c32cca6d576d03bcb896e364c8510c8dab059a8bd9"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1714,
+      "sha256": "43c5841a80eb8609469be3da7182b536738b590ddc620cfb5602a5bfae60f002"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 23277,
+      "sha256": "c7604840839c6b0f01c13e62cbba2c86ddd5db11285101482696f95efc4454c9"
+    },
+    {
+      "path": "src/geometry.mjs",
+      "bytes": 1726,
+      "sha256": "0793bbdf9d9434e85acf2487dad63988b16a296c7b0be06f385829921f2fcbc5"
+    },
+    {
+      "path": "src/glide.mjs",
+      "bytes": 3892,
+      "sha256": "ba1559bae73b10c5361646b22b488dcb0aeb74d0416231cc7f8ea87d4875eaca"
+    },
+    {
+      "path": "src/rider.mjs",
+      "bytes": 7536,
+      "sha256": "d9d65052f6497c6cd5b76eeb807c465fddf61b44dfbd0b2a98ed4a5a50867dd8"
+    },
+    {
+      "path": "src/rules.mjs",
+      "bytes": 12027,
+      "sha256": "3b42a75fa2c9ff3b7ff6b88ce24f356ae6501fc9f64b5c9d9ba7350591a38699"
+    },
+    {
+      "path": "src/scene.mjs",
+      "bytes": 21141,
+      "sha256": "957af3171895cd6fac61a5d09507636a73a379bb9ffe65d8ad5686a1c59fa8d1"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 27086,
+      "sha256": "bb21474d04bb600421f839aa9f100584cf7e486969e3ca684fccfb3587782ed6"
+    },
+    {
+      "path": "src/tour.mjs",
+      "bytes": 2026,
+      "sha256": "28b94acdc018e9f036977b3e7fd62a86ab4f7f511a36843a18a9eb9d28f12d98"
+    },
+    {
+      "path": "src/track.mjs",
+      "bytes": 8515,
+      "sha256": "a1fa62367e85c655474bb66d9cd922c071e3bfded98eecab6c793c13ed3f6eb6"
+    },
+    {
+      "path": "src/water-art.mjs",
+      "bytes": 12014,
+      "sha256": "358015eee8148b22980f685cb7f768fc39f2766d41dfba4ac68a846207251571"
+    },
+    {
+      "path": "tests/game.test.mjs",
+      "bytes": 18687,
+      "sha256": "29c41ac35d32b81ecf5390830fbc26b85c7b79cc9beacb8b5d93bcb3e9fa35b8"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "启动试玩.cmd",
+      "bytes": 57,
+      "sha256": "bb3e33a6f36fdfd81ce42027544d7774da91b64b93ef43346ba9167bc1ada4aa"
+    }
+  ],
+  "note": "Manifest excludes itself; historical backups, local saves and diagnostics excluded."
+}
