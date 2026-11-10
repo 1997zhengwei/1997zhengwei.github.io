@@ -1,0 +1,249 @@
+{
+  "version": "0.3.0",
+  "date": "2026-11-10",
+  "repository": "1997zhengwei/1997zhengwei.github.io",
+  "branch": "main",
+  "directory": "game/村庄保卫战",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "gitBlob": "7a60b85e148f80966a550e5ab6a762a907c69ca6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5637,
+      "sha256": "33b3d5a42312e9d685990100d6fd16f5fc7e02df96a9eb49fba83e86ee54fef2",
+      "gitBlob": "79bcc67a40e5c87c13c56dad189690fc70cc9ddf"
+    },
+    {
+      "path": "app.js",
+      "bytes": 34306,
+      "sha256": "ec2a3db4cb99b34691f10fe2fb3903dc6de982d5b58be914d35ef0b3ab66541a",
+      "gitBlob": "7af418d2e790d585019d96c340736895943e6f04"
+    },
+    {
+      "path": "scene.js",
+      "bytes": 16712,
+      "sha256": "2a5ed37ee73fb7405d9d3dc521bd8b28b5500a8da79e1a7712bd2bca02b64540",
+      "gitBlob": "53463296b176b405195a52a0fca835b5a4693a16"
+    },
+    {
+      "path": "models.js",
+      "bytes": 18294,
+      "sha256": "e5169f0e5d12320b76c33c1a1d93d40e9b0f1d663a17e8d81f400f36643c3cff",
+      "gitBlob": "f32c672cb59f81e2bfb908cba907fb82e924baa1"
+    },
+    {
+      "path": "audio.js",
+      "bytes": 1654,
+      "sha256": "3d6b5784af2fdf31213c85d16662582b254e30505f6c5dc20089ddabf414aa9f",
+      "gitBlob": "25c1e8016a6c1aa05716eb4af58082d99a3b3fcd"
+    },
+    {
+      "path": "style.css",
+      "bytes": 26490,
+      "sha256": "86a8e8df5c1c1c88db704f8939ef780fc384c28417598fa7e34a33cae6e5d602",
+      "gitBlob": "5cbb486f91ec40da0afaf0881012dca9df8b862e"
+    },
+    {
+      "path": "core.mjs",
+      "bytes": 23743,
+      "sha256": "96c4d3fd36a555c9493c7ad89aea45d9fa12a69977d32dc14baa326716447178",
+      "gitBlob": "6728cca1bfe2c7a7a7d4b4070296b6ed8dad3643"
+    },
+    {
+      "path": "campaign.mjs",
+      "bytes": 6784,
+      "sha256": "1262aff15c8614fa4b364d8b61d9f3c682096f1b50f103ece0e3669e95858af7",
+      "gitBlob": "ba571c150e1ee861ef9eb0e166f84e649b329910"
+    },
+    {
+      "path": "combat.mjs",
+      "bytes": 4125,
+      "sha256": "6411bd04acca49454877f6002b8cffb888c68bafc1bbff266ac24a36633129eb",
+      "gitBlob": "d417e754c8cfbf8b6923bc9aad04058c9a2b520f"
+    },
+    {
+      "path": "golems.mjs",
+      "bytes": 1244,
+      "sha256": "d243aee0a259e97e0ac28d6d099ee638a9a148954a78ee8ee67b1f4fe7431e69",
+      "gitBlob": "ae7b16fc57883c0f5a0f8b22d377003e909024e5"
+    },
+    {
+      "path": "markers.mjs",
+      "bytes": 972,
+      "sha256": "dc848391824d137dd9696b83cad28e088ccb41bb07aafa3a38673211491691fa",
+      "gitBlob": "2d79f8fb3ef4019c9ed496a9b35b26a1a1ed65d0"
+    },
+    {
+      "path": "package.json",
+      "bytes": 163,
+      "sha256": "20a6c27d1018bd38ecd24399a6e3171c0d8e7f427f2b7806c5462533cc8fe546",
+      "gitBlob": "598a6104de242f3d47a2bd84b58f46c6e92ddc4a"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1741,
+      "sha256": "e41bf868760589c5d07ecaaf97b97a1b1dcd56f3eebfab86caa8e23dfbe78e35",
+      "gitBlob": "e200793d984e841d0ba5086534aa16914e1c25c9"
+    },
+    {
+      "path": "开始试玩.cmd",
+      "bytes": 47,
+      "sha256": "e34a475100c621bad5a3a8f1aa0063485e7d2c851d7e7a411208f203e207d1d0",
+      "gitBlob": "d4be894e61685c75db63a04a2686f6b7404db8d6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6245,
+      "sha256": "6529a7558ed81e017b790255bd686e7debe9d97ffe02e80e69bad9991da238c3",
+      "gitBlob": "7435fe3852b9f269bb56bc9c21caef83028bc586"
+    },
+    {
+      "path": "BRIEF.md",
+      "bytes": 2943,
+      "sha256": "15ba6cb1fd8ee876266d146fbf022dad7187ed4b67b8eb0b40c433f97723cf03",
+      "gitBlob": "cfd117926811bc7b467bf08bf5bf6889d60348b7"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1886,
+      "sha256": "719c95ba69a7f1c58bd8ee06662abd72e2e5be94e48f44f17326eb5fc1dcbc12",
+      "gitBlob": "bf475a1f5231ecc39afd3ab9c2e3f395a00e7e9f"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 4880,
+      "sha256": "edc7127d1d3c278cae09f0008bc591501d6f843f5c8208987b9b2b5d046cbdda",
+      "gitBlob": "6ec1ca134f5af914ea8796f2ad72f81869727877"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 4990,
+      "sha256": "d452b477fd46a8bf3dd97223d861f470fb4deeeb98976821f8e671e5e1b9a3ce",
+      "gitBlob": "8a6cb56d6e8721e46408c0ad6f62428640a16ec7"
+    },
+    {
+      "path": "SYNC_STATUS.md",
+      "bytes": 508,
+      "sha256": "290ecb3ae57d3f216280942007e8c949bd7871a1d2003dd7f4bd7303261473e1",
+      "gitBlob": "e5a556de4fbd90b3ecf4abfa00a5654c4f8f19be"
+    },
+    {
+      "path": "qa/pilot.mjs",
+      "bytes": 2760,
+      "sha256": "461a41e1c31b0f67573a5072258cba40182ee7924e42184ea90684f2f9072426",
+      "gitBlob": "08043d9b912dac750f8c47cbce509794d5d8b36a"
+    },
+    {
+      "path": "qa/balance-v0.3.0.json",
+      "bytes": 32013,
+      "sha256": "3079db64725a32ed79aba827f2574bde1481db1ec1da397f023b58095a446236",
+      "gitBlob": "29a5cd25ef9861c450d5494d31bb399d2711ded0"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "gitBlob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "gitBlob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "gitBlob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "tests/balance.mjs",
+      "bytes": 731,
+      "sha256": "a7e8db250c9cfc12ab7f70cf651aba820ea6ddb5bc5e81a21a761d47458f5dcd",
+      "gitBlob": "700d89f67f3ab226471fb1c20c99bacb92a38151"
+    },
+    {
+      "path": "tests/campaign.test.mjs",
+      "bytes": 729,
+      "sha256": "dc3ba66d4d24da9780798a95c12ed099215ba62292a4efab1cbc4466c0931be8",
+      "gitBlob": "4ef94b867de91fedeecc26f1aeefdd3ed42a601d"
+    },
+    {
+      "path": "tests/defense.test.mjs",
+      "bytes": 3175,
+      "sha256": "4b6e1bb0bd2cac12de7c1a2afac273b91169e3f09360a8e44699acd810e4c1e6",
+      "gitBlob": "e15a7419ce822f0a087af597a30f8753e1d2f370"
+    },
+    {
+      "path": "tests/golems.test.mjs",
+      "bytes": 5088,
+      "sha256": "5df90f0ccde8e9fb6051846f97cd78dbba10626762e1c5b1b4cc70ae5cb2ccd9",
+      "gitBlob": "70098187a3c714cf6594c6085e215e3e5ba889c9"
+    },
+    {
+      "path": "tests/markers.test.mjs",
+      "bytes": 682,
+      "sha256": "2a8a1b4d8729151b10bb2e2d00085e0ec2857d371c7f0f77f249d7c778de67e3",
+      "gitBlob": "f7ef34ccda42ad372d3d5eeddde7717982eb382d"
+    },
+    {
+      "path": "tests/rules.test.mjs",
+      "bytes": 8896,
+      "sha256": "e07e658d87ec4e885088a5e15cb01531bd32ac1664f054d3890d6163a51329dc",
+      "gitBlob": "a4f35184ebcf8980f7431bb4be47203a25641de6"
+    },
+    {
+      "path": "qa/v0.3.0/golem-bars-battle-400x580.jpg",
+      "bytes": 63190,
+      "sha256": "2badcd4fa42087e76de150ceda656633c6a27cec8f40773ebe7cef93823f3f91",
+      "gitBlob": "b498d4d37469d00b4af12bd9cf51acd406cfa562"
+    },
+    {
+      "path": "qa/v0.3.0/golem-down-400x580.jpg",
+      "bytes": 63624,
+      "sha256": "9dd9a732fe5c848b6bf993e657202532f0ca1b7153d0e936fc98ed6e73ec634c",
+      "gitBlob": "f7fe62c539823cfdff75d761c0da624ac14e9c62"
+    },
+    {
+      "path": "qa/v0.3.0/recruit-fallen-400x580.jpg",
+      "bytes": 28048,
+      "sha256": "e9c5ccf3e00431af379783dd6046bed98b4efeb1bc217a59a6fa07a7a0a9d9f1",
+      "gitBlob": "d26349d421a775a11ac2939c88429f36b4977b58"
+    },
+    {
+      "path": "qa/v0.3.0/rules-migration.jpg",
+      "bytes": 32267,
+      "sha256": "8057e72aa2cfcc0edf3128878f7dc688e9fa0f237a7d7303f7bd0c74aa2baaba",
+      "gitBlob": "03d937ce94ae6f0dacb15cf8c209fca0f5f65bb2"
+    },
+    {
+      "path": "qa/v0.3.0/squad-local-ready.jpg",
+      "bytes": 29399,
+      "sha256": "58775b6493b102d79cdd45b1b1901aa8dc323816e0b75190aee2f5df75ff00bd",
+      "gitBlob": "d363f1004a86c372fdfc6b87841107e604b137b6"
+    },
+    {
+      "path": "qa/v0.3.0/squad-ready-400x580.jpg",
+      "bytes": 26670,
+      "sha256": "4989a33aead1a8740672675f00b0a696cbe4c531d5f5bda5a7907e400d54cbef",
+      "gitBlob": "9667946de408610acfae4a0fa723562425e1ee49"
+    },
+    {
+      "path": "qa/v0.3.0/squad-wounded-400x580.jpg",
+      "bytes": 29023,
+      "sha256": "9916e74c63da08375481ff74394ac86bdfb71558065c03c46a84b1f3115cdc7a",
+      "gitBlob": "a578836080b5ba97c9ecd8c44d6fae5343c03a5c"
+    },
+    {
+      "path": "qa/v0.3.0/victory-20-400x580.jpg",
+      "bytes": 24658,
+      "sha256": "26453f0e0aef448ba7d226b4c1f397354dbe82aede0cc8bdf6b8710f3fbf771e",
+      "gitBlob": "0fda3fa89ff7f0c976d252fd39dc294559588f9c"
+    }
+  ]
+}

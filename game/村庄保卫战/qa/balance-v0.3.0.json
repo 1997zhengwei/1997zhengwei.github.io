@@ -1,0 +1,1616 @@
+{
+  "version": "0.3.0",
+  "date": "2026-11-10",
+  "method": "Legal builds, repair, paid troop service, movement and Volley. Offline rule simulation, not human playthrough.",
+  "runs": [
+    {
+      "seed": 1,
+      "dt": 0.05,
+      "phase": "won",
+      "bell": 40,
+      "score": 17009,
+      "kills": 775,
+      "seconds": 718,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 16,
+          "peak": 9
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 24,
+          "peak": 11
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 24,
+          "peak": 15
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 17,
+          "kills": 21,
+          "seconds": 32,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 19,
+          "kills": 25,
+          "seconds": 31,
+          "peak": 19
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 21,
+          "kills": 26,
+          "seconds": 30,
+          "peak": 18
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 24,
+          "kills": 29,
+          "seconds": 30,
+          "peak": 18
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 26,
+          "kills": 33,
+          "seconds": 32,
+          "peak": 18
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 36,
+          "seconds": 34,
+          "peak": 25
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 39,
+          "seconds": 31,
+          "peak": 16
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 41,
+          "seconds": 33,
+          "peak": 19
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 25,
+          "kills": 44,
+          "seconds": 39,
+          "peak": 26
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 48,
+          "seconds": 38,
+          "peak": 20
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 44,
+          "coins": 38,
+          "kills": 51,
+          "seconds": 52,
+          "peak": 24
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 187,
+          "coins": 33,
+          "kills": 57,
+          "seconds": 42,
+          "peak": 27
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 195,
+          "coins": 34,
+          "kills": 61,
+          "seconds": 39,
+          "peak": 23
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 203,
+          "coins": 35,
+          "kills": 66,
+          "seconds": 59,
+          "peak": 29
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 211,
+          "coins": 36,
+          "kills": 70,
+          "seconds": 53,
+          "peak": 27
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 40,
+          "coins": 1,
+          "kills": 79,
+          "seconds": 62,
+          "peak": 27
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "dt": 0.1,
+      "phase": "won",
+      "bell": 183,
+      "score": 17295,
+      "kills": 775,
+      "seconds": 693,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 19,
+          "peak": 10
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 25,
+          "peak": 11
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 27,
+          "peak": 15
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 17,
+          "kills": 21,
+          "seconds": 31,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 20,
+          "kills": 25,
+          "seconds": 31,
+          "peak": 19
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 22,
+          "kills": 26,
+          "seconds": 25,
+          "peak": 15
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 23,
+          "kills": 29,
+          "seconds": 26,
+          "peak": 17
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 26,
+          "kills": 33,
+          "seconds": 28,
+          "peak": 18
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 36,
+          "seconds": 33,
+          "peak": 25
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 30,
+          "kills": 39,
+          "seconds": 31,
+          "peak": 16
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 41,
+          "seconds": 34,
+          "peak": 19
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 44,
+          "seconds": 39,
+          "peak": 26
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 48,
+          "seconds": 38,
+          "peak": 21
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 36,
+          "kills": 51,
+          "seconds": 48,
+          "peak": 22
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 25,
+          "kills": 57,
+          "seconds": 38,
+          "peak": 26
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 61,
+          "seconds": 40,
+          "peak": 27
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 35,
+          "kills": 66,
+          "seconds": 56,
+          "peak": 25
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 35,
+          "kills": 70,
+          "seconds": 51,
+          "peak": 26
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 183,
+          "coins": 1,
+          "kills": 79,
+          "seconds": 56,
+          "peak": 24
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "dt": 0.05,
+      "phase": "won",
+      "bell": 183,
+      "score": 17295,
+      "kills": 775,
+      "seconds": 727,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 15,
+          "peak": 9
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 24,
+          "peak": 11
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 23,
+          "peak": 14
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 17,
+          "kills": 21,
+          "seconds": 32,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 19,
+          "kills": 25,
+          "seconds": 30,
+          "peak": 20
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 21,
+          "kills": 26,
+          "seconds": 33,
+          "peak": 17
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 23,
+          "kills": 29,
+          "seconds": 31,
+          "peak": 20
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 26,
+          "kills": 33,
+          "seconds": 35,
+          "peak": 19
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 36,
+          "seconds": 33,
+          "peak": 26
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 39,
+          "seconds": 30,
+          "peak": 16
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 41,
+          "seconds": 40,
+          "peak": 23
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 44,
+          "seconds": 40,
+          "peak": 26
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 48,
+          "seconds": 37,
+          "peak": 21
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 36,
+          "kills": 51,
+          "seconds": 51,
+          "peak": 22
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 57,
+          "seconds": 41,
+          "peak": 26
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 61,
+          "seconds": 40,
+          "peak": 25
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 35,
+          "kills": 66,
+          "seconds": 56,
+          "peak": 28
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 36,
+          "kills": 70,
+          "seconds": 56,
+          "peak": 30
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 183,
+          "coins": 1,
+          "kills": 79,
+          "seconds": 63,
+          "peak": 27
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "dt": 0.1,
+      "phase": "won",
+      "bell": 240,
+      "score": 17409,
+      "kills": 775,
+      "seconds": 694,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 16,
+          "peak": 10
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 24,
+          "peak": 11
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 23,
+          "peak": 14
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 17,
+          "kills": 21,
+          "seconds": 32,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 20,
+          "kills": 25,
+          "seconds": 29,
+          "peak": 17
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 21,
+          "kills": 26,
+          "seconds": 27,
+          "peak": 18
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 23,
+          "kills": 29,
+          "seconds": 28,
+          "peak": 19
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 26,
+          "kills": 33,
+          "seconds": 31,
+          "peak": 21
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 36,
+          "seconds": 32,
+          "peak": 25
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 30,
+          "kills": 39,
+          "seconds": 30,
+          "peak": 16
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 41,
+          "seconds": 34,
+          "peak": 23
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 44,
+          "seconds": 41,
+          "peak": 29
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 48,
+          "seconds": 39,
+          "peak": 20
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 38,
+          "kills": 51,
+          "seconds": 49,
+          "peak": 25
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 25,
+          "kills": 57,
+          "seconds": 37,
+          "peak": 26
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 35,
+          "kills": 61,
+          "seconds": 39,
+          "peak": 32
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 66,
+          "seconds": 53,
+          "peak": 26
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 35,
+          "kills": 70,
+          "seconds": 53,
+          "peak": 29
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 240,
+          "coins": 1,
+          "kills": 79,
+          "seconds": 60,
+          "peak": 29
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "dt": 0.05,
+      "phase": "won",
+      "bell": 183,
+      "score": 17295,
+      "kills": 775,
+      "seconds": 675,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 15,
+          "peak": 10
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 18,
+          "peak": 12
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 24,
+          "peak": 15
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 17,
+          "kills": 21,
+          "seconds": 31,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 19,
+          "kills": 25,
+          "seconds": 30,
+          "peak": 17
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 21,
+          "kills": 26,
+          "seconds": 29,
+          "peak": 18
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 24,
+          "kills": 29,
+          "seconds": 32,
+          "peak": 19
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 26,
+          "kills": 33,
+          "seconds": 28,
+          "peak": 19
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 36,
+          "seconds": 32,
+          "peak": 23
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 30,
+          "kills": 39,
+          "seconds": 30,
+          "peak": 15
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 41,
+          "seconds": 33,
+          "peak": 18
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 44,
+          "seconds": 40,
+          "peak": 27
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 48,
+          "seconds": 35,
+          "peak": 17
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 38,
+          "kills": 51,
+          "seconds": 47,
+          "peak": 22
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 57,
+          "seconds": 38,
+          "peak": 25
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 61,
+          "seconds": 38,
+          "peak": 18
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 66,
+          "seconds": 54,
+          "peak": 25
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 36,
+          "kills": 70,
+          "seconds": 49,
+          "peak": 26
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 183,
+          "coins": 2,
+          "kills": 79,
+          "seconds": 55,
+          "peak": 23
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "dt": 0.1,
+      "phase": "won",
+      "bell": 240,
+      "score": 17409,
+      "kills": 775,
+      "seconds": 698,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 16,
+          "peak": 10
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 28,
+          "peak": 11
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 23,
+          "peak": 15
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 17,
+          "kills": 21,
+          "seconds": 31,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 19,
+          "kills": 25,
+          "seconds": 33,
+          "peak": 19
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 21,
+          "kills": 26,
+          "seconds": 28,
+          "peak": 15
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 23,
+          "kills": 29,
+          "seconds": 27,
+          "peak": 19
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 26,
+          "kills": 33,
+          "seconds": 30,
+          "peak": 23
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 36,
+          "seconds": 33,
+          "peak": 25
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 39,
+          "seconds": 30,
+          "peak": 16
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 41,
+          "seconds": 34,
+          "peak": 19
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 44,
+          "seconds": 39,
+          "peak": 27
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 48,
+          "seconds": 38,
+          "peak": 18
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 38,
+          "kills": 51,
+          "seconds": 49,
+          "peak": 23
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 25,
+          "kills": 57,
+          "seconds": 38,
+          "peak": 25
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 35,
+          "kills": 61,
+          "seconds": 39,
+          "peak": 23
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 66,
+          "seconds": 54,
+          "peak": 23
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 70,
+          "seconds": 53,
+          "peak": 28
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 240,
+          "coins": 1,
+          "kills": 79,
+          "seconds": 58,
+          "peak": 23
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "dt": 0.05,
+      "phase": "won",
+      "bell": 183,
+      "score": 17295,
+      "kills": 775,
+      "seconds": 699,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 15,
+          "peak": 10
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 24,
+          "peak": 11
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 22,
+          "peak": 15
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 17,
+          "kills": 21,
+          "seconds": 32,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 20,
+          "kills": 25,
+          "seconds": 34,
+          "peak": 18
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 22,
+          "kills": 26,
+          "seconds": 30,
+          "peak": 15
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 23,
+          "kills": 29,
+          "seconds": 26,
+          "peak": 17
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 26,
+          "kills": 33,
+          "seconds": 30,
+          "peak": 18
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 36,
+          "seconds": 33,
+          "peak": 26
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 30,
+          "kills": 39,
+          "seconds": 31,
+          "peak": 16
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 41,
+          "seconds": 35,
+          "peak": 22
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 44,
+          "seconds": 39,
+          "peak": 26
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 48,
+          "seconds": 38,
+          "peak": 18
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 38,
+          "kills": 51,
+          "seconds": 48,
+          "peak": 24
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 57,
+          "seconds": 38,
+          "peak": 27
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 33,
+          "kills": 61,
+          "seconds": 39,
+          "peak": 25
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 66,
+          "seconds": 55,
+          "peak": 24
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 36,
+          "kills": 70,
+          "seconds": 54,
+          "peak": 30
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 183,
+          "coins": 2,
+          "kills": 79,
+          "seconds": 59,
+          "peak": 26
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "dt": 0.1,
+      "phase": "won",
+      "bell": 240,
+      "score": 17409,
+      "kills": 775,
+      "seconds": 695,
+      "log": [
+        {
+          "n": 1,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 9,
+          "kills": 8,
+          "seconds": 17,
+          "peak": 7
+        },
+        {
+          "n": 2,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 11,
+          "seconds": 19,
+          "peak": 10
+        },
+        {
+          "n": 3,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 13,
+          "kills": 13,
+          "seconds": 25,
+          "peak": 11
+        },
+        {
+          "n": 4,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 12,
+          "kills": 17,
+          "seconds": 25,
+          "peak": 14
+        },
+        {
+          "n": 5,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 18,
+          "kills": 21,
+          "seconds": 33,
+          "peak": 18
+        },
+        {
+          "n": 6,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 20,
+          "kills": 25,
+          "seconds": 31,
+          "peak": 17
+        },
+        {
+          "n": 7,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 22,
+          "kills": 26,
+          "seconds": 26,
+          "peak": 15
+        },
+        {
+          "n": 8,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 23,
+          "kills": 29,
+          "seconds": 27,
+          "peak": 21
+        },
+        {
+          "n": 9,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 27,
+          "kills": 33,
+          "seconds": 28,
+          "peak": 19
+        },
+        {
+          "n": 10,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 36,
+          "seconds": 32,
+          "peak": 25
+        },
+        {
+          "n": 11,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 30,
+          "kills": 39,
+          "seconds": 30,
+          "peak": 15
+        },
+        {
+          "n": 12,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 41,
+          "seconds": 34,
+          "peak": 22
+        },
+        {
+          "n": 13,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 31,
+          "kills": 44,
+          "seconds": 40,
+          "peak": 27
+        },
+        {
+          "n": 14,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 48,
+          "seconds": 37,
+          "peak": 17
+        },
+        {
+          "n": 15,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 36,
+          "kills": 51,
+          "seconds": 48,
+          "peak": 23
+        },
+        {
+          "n": 16,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 32,
+          "kills": 57,
+          "seconds": 38,
+          "peak": 27
+        },
+        {
+          "n": 17,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 61,
+          "seconds": 39,
+          "peak": 25
+        },
+        {
+          "n": 18,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 66,
+          "seconds": 53,
+          "peak": 25
+        },
+        {
+          "n": 19,
+          "phase": "dawn",
+          "bell": 240,
+          "coins": 34,
+          "kills": 70,
+          "seconds": 54,
+          "peak": 25
+        },
+        {
+          "n": 20,
+          "phase": "won",
+          "bell": 240,
+          "coins": 1,
+          "kills": 79,
+          "seconds": 59,
+          "peak": 27
+        }
+      ]
+    }
+  ],
+  "idle": {
+    "seed": 1,
+    "dt": 0.05,
+    "phase": "lost",
+    "night": 8,
+    "kills": 148,
+    "log": [
+      {
+        "n": 1,
+        "phase": "dawn",
+        "bell": 240,
+        "coins": 9,
+        "kills": 8,
+        "seconds": 25,
+        "peak": 8
+      },
+      {
+        "n": 2,
+        "phase": "dawn",
+        "bell": 240,
+        "coins": 12,
+        "kills": 11,
+        "seconds": 22,
+        "peak": 11
+      },
+      {
+        "n": 3,
+        "phase": "dawn",
+        "bell": 240,
+        "coins": 12,
+        "kills": 13,
+        "seconds": 24,
+        "peak": 13
+      },
+      {
+        "n": 4,
+        "phase": "dawn",
+        "bell": 240,
+        "coins": 13,
+        "kills": 17,
+        "seconds": 27,
+        "peak": 16
+      },
+      {
+        "n": 5,
+        "phase": "dawn",
+        "bell": 230,
+        "coins": 17,
+        "kills": 21,
+        "seconds": 46,
+        "peak": 20
+      },
+      {
+        "n": 6,
+        "phase": "dawn",
+        "bell": 238,
+        "coins": 17,
+        "kills": 25,
+        "seconds": 35,
+        "peak": 20
+      },
+      {
+        "n": 7,
+        "phase": "dawn",
+        "bell": 146,
+        "coins": 19,
+        "kills": 26,
+        "seconds": 43,
+        "peak": 18
+      },
+      {
+        "n": 8,
+        "phase": "lost",
+        "bell": 0,
+        "coins": 0,
+        "kills": 27,
+        "seconds": 61,
+        "peak": 21
+      }
+    ]
+  }
+}
