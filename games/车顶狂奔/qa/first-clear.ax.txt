@@ -1,0 +1,11 @@
+Browser tab: 24, Title: "车顶狂奔 · CONVOY LEAP", URL: "http://127.0.0.1:8798/?qa=1".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 40-46
++			57 text 100%
++			58 text 0:27.68
++		59 text 前方断路 · 助跑起跳，落上白色终点平台
++			60 text 按住右侧按钮
++			61 text 14
++			62 text 连跳 ×14
++		63 text won | 27.7s | x -11.2 s 759.4 y 3.82 | roof null | u 5.9 | v 29.7 | first | 39fps · 53 calls · 46k tris | Escape ↑ 1ms
+The focused UI element is 2 image Description: 车顶狂奔三维游戏场景, ID: world

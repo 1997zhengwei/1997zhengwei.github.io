@@ -1,0 +1,231 @@
+{
+  "game": "车顶狂奔",
+  "version": "0.4.2",
+  "entry": "index.html",
+  "runtimeFiles": [
+    {
+      "path": "assets/ATTRIBUTION.md",
+      "bytes": 1979,
+      "sha256": "55474c2f5d1996c275391db9be08bcf251e2fe97984e5d13c18640b6674b7ef4",
+      "git_blob": "9ffa459757adab1b2d5901e206743bf6c3449a6f"
+    },
+    {
+      "path": "assets/character-asset-licenses.json",
+      "bytes": 7730,
+      "sha256": "b18bbc7f45fe7c28bcf3b119f44f7b8425d3b4c871f99c694b181b5603f4758e",
+      "git_blob": "298c63ecb119536207e122c77b37737e2427e08c"
+    },
+    {
+      "path": "assets/CHARACTER-LICENSE.md",
+      "bytes": 18771,
+      "sha256": "18af8d071bcb1cab2260263991ad49c314dc616facf7f33b0ab19bee78d4ec13",
+      "git_blob": "4dad3599865b2faf00a22ff152e05395df76a7da"
+    },
+    {
+      "path": "assets/courier-rig.json",
+      "bytes": 23265,
+      "sha256": "cc33acbf2fa74603e6971462fcd3d4f51c156325a0be2ebc4e6e0646bfb3e634",
+      "git_blob": "7142636aca0ee02b4926e4fbc919292e78750d3d"
+    },
+    {
+      "path": "assets/motion-clips.json",
+      "bytes": 954018,
+      "sha256": "a3704357ced32a470c60f1bae90b491af3dd438a870b6e2aa3ace62d551f6bd4",
+      "git_blob": "e8963853c840dc7252b1ed9f051fc69b0ae19574"
+    },
+    {
+      "path": "assets/MOTION-LICENSE.txt",
+      "bytes": 332,
+      "sha256": "6d01f55c6e4c49a2c9963e147e561945ae2c83958c8ca667d90a6bffdbfac061",
+      "git_blob": "82f86ca5040ab545e31a904133747336cbdd0576"
+    },
+    {
+      "path": "index.html",
+      "bytes": 968,
+      "sha256": "6fba5e19b63f4ee7882daf855fabe52afb8a9efe33d659081672341dea309593",
+      "git_blob": "1fc2e6c569d448b8b9304a17178f4f722964f300"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 8024,
+      "sha256": "48874caf0bb0177fbbdcfa67b86b32b9aee1b14f5b59c3e763f7e2b3e09abe6a",
+      "git_blob": "505c3dd55dedf06cd2bd4bebe4fe85a7fd8d7b89"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 3611,
+      "sha256": "c5e6afb6a3528f6b21cd3590220b5f741db063e3f52e1dd62eb29ccf2d35a5ff",
+      "git_blob": "a8d450a57ed7dda001c3f8bcbd6b3c4f06e2de8e"
+    },
+    {
+      "path": "src/controls.mjs",
+      "bytes": 301,
+      "sha256": "f3afd9b979faab900a521470c5f494710fe82675327190f3668e54b4198c4d2c",
+      "git_blob": "5536bbf58e6eb8ad30e038e3561b09536ff9d5e1"
+    },
+    {
+      "path": "src/courier.mjs",
+      "bytes": 12589,
+      "sha256": "93660d31aa3d8136b8bd6e7f94fdb01851d09b66a7ea25ad8df1322e3fa3de57",
+      "git_blob": "1ac5b26899bc73b0e8cb4c987094215118c6d8bf"
+    },
+    {
+      "path": "src/courses.mjs",
+      "bytes": 2377,
+      "sha256": "4efe4f992ee6b0e112d0f22c4f5f03d2a3cb42ae7a79a5a1095f3bd8e5ccca38",
+      "git_blob": "bee51c3f9818b56b7bd862e7cb63e96e77228d75"
+    },
+    {
+      "path": "src/finish.mjs",
+      "bytes": 3998,
+      "sha256": "b03cec53f46a2839952a04a7a74dfa9a8173ca8f31aa7fb88d4bee7ee6f0bf44",
+      "git_blob": "3439ac7d20ebc7ab86c5c645b652e9f2b21ce842"
+    },
+    {
+      "path": "src/input.mjs",
+      "bytes": 5059,
+      "sha256": "f19cbcf467542cc0344ae335265ed7fd96aaee38fc736e72d976bff7ca2d9009",
+      "git_blob": "8427cc9e84cde92ac7e5375802835fa37b6e0283"
+    },
+    {
+      "path": "src/jump-pose.mjs",
+      "bytes": 3717,
+      "sha256": "61d7999f323650e46480d38e502abc6483ff2ed15a7802d84c6b66f2fcf01078",
+      "git_blob": "da2048abb6e4ebf415b4672261a4590f25a20fa7"
+    },
+    {
+      "path": "src/landscape.mjs",
+      "bytes": 7460,
+      "sha256": "bfd43672c81891227124619edf7f224e26332def9266180d81e08b143032b857",
+      "git_blob": "53a4935a12d2fa5132231693fc94da90d13f539d"
+    },
+    {
+      "path": "src/materials.mjs",
+      "bytes": 3166,
+      "sha256": "d035f0142d0381e0dd606faf3d8033980f312e12b11196901befaff72235c10e",
+      "git_blob": "1114aa4fdc95f39ea9075e4c1e1d7c648306d927"
+    },
+    {
+      "path": "src/math.mjs",
+      "bytes": 1044,
+      "sha256": "e254fbf780877c3e8a6ef7cf5d6050202ab9b1f507319b0264ec003b227f913a",
+      "git_blob": "6b96e9b5a1d511b0fe9406bb4072a18aaf7d8513"
+    },
+    {
+      "path": "src/presentation.mjs",
+      "bytes": 2820,
+      "sha256": "4a3fa600e3e99468240e6f16049a64fc73e11a92dc32a1805e8474b8ff71763a",
+      "git_blob": "cd70fa47ea0a1492f1c4236b163663d778f23566"
+    },
+    {
+      "path": "src/progress.mjs",
+      "bytes": 715,
+      "sha256": "d0281fbf93de7c932aea66c2093c6df33459c9abe4b7b82affa95e9459247942",
+      "git_blob": "7314051e05cee98e5d0dafac18fe8cefeeb16869"
+    },
+    {
+      "path": "src/scene.mjs",
+      "bytes": 22756,
+      "sha256": "eadbd494a820690802274c45c4c1528ab263fd89b7cde955b412c6fdaef8439d",
+      "git_blob": "713a6545e0759e3ed8bf912bdc8789d6db105a18"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 10617,
+      "sha256": "54db0092afa49b9f612ba015b0ada1a21a418cf0acc436a2a7e61697e43726a3",
+      "git_blob": "86fa01a06ebeff2d3805be32a3463765a1966fd4"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 29269,
+      "sha256": "c89c49e9363081ef78435f521c211a85cfbf37870c241a0075773e2361cd54b0",
+      "git_blob": "5d100c31823896364b3b9e8cf71a659843beb5ae"
+    },
+    {
+      "path": "src/truck-model.mjs",
+      "bytes": 8450,
+      "sha256": "62f0f601789c84a3f58b2275cff406d0879aff1320bba87185950b262001d1d7",
+      "git_blob": "200ff393a1a3e22f3743546d93b100506c00bc12"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 14618,
+      "sha256": "e7938917a11b1be1448cacc097f67030f89892ea524be1fee92deeaa7d18d5ef",
+      "git_blob": "2328e8d430a9384d4dea0641317f24cabc498d96"
+    },
+    {
+      "path": "vendor/geometries/RoundedBoxGeometry.js",
+      "bytes": 6483,
+      "sha256": "b3e2d87473cd48f59720739a6ceedbd9f0dccf89224c84403730b2e808d5e4f2",
+      "git_blob": "9ce603cfac7b59cb0388ab571f3d832cbacfba6b"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "vendor/loaders/GLTFLoader.js",
+      "bytes": 117583,
+      "sha256": "0e151c77fcd76d7b3eac0c0bab16385757e69d5149e7076784df28be5556da93",
+      "git_blob": "b2bf96186f362531ce2aeb012535c88e3b917be1"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "git_blob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "git_blob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37725,
+      "sha256": "ce6b8c82f29e4ad7e8e330ce2bccd921de6c36a5c05c8f50f9a8b039596b8551",
+      "git_blob": "6bae3d83270ee4381110f8ec0d1a6caf02ecaa23"
+    },
+    {
+      "path": "vendor/utils/SkeletonUtils.js",
+      "bytes": 11548,
+      "sha256": "6ed06893a413aea61b6031867cb145a2e6f79b92a4f70f5cb24b403c262e9308",
+      "git_blob": "3a81b3d824a68d2c84f94695a7e550b5b2685fb7"
+    }
+  ],
+  "integrationFiles": [
+    {
+      "path": "build.mjs",
+      "bytes": 809,
+      "sha256": "4321cee7eea7041090c59d49cb9282faa831991907fba07d309a6e567bc9d4d9",
+      "git_blob": "3efff7d262b0c3c38dd2d3f867af81efe82024d2"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 5181,
+      "sha256": "66493b72792b14e709a4edb13d1db16213e11e7d8183e17b2582c73badd02361",
+      "git_blob": "573039dd11eed42a9c7bdea299617a3f87b1465c"
+    },
+    {
+      "path": "package.json",
+      "bytes": 231,
+      "sha256": "87aefdc66f3eec19344bb0fc01fb9f5902a0c42e490392bdbf93fb2362af200b",
+      "git_blob": "d05a9c8a63f99d32b7b247f784d8d0f3cdc2a7c3"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 5129,
+      "sha256": "ab6274c0ef6538e2a336bad068db5dd308b95a45d37067b550b209ff80d35bd6",
+      "git_blob": "2181d967addfb9d578c5d61e5beed5a0940ca481"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8247,
+      "sha256": "f36ff0af1fd20399ccf3692038ef8c24aae1bdcf011691493722418c48b3a442",
+      "git_blob": "818292e61c60e91a9e23976545254499a4339dc8"
+    }
+  ]
+}
