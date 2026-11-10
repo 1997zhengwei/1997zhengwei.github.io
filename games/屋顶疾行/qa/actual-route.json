@@ -1,0 +1,211 @@
+{
+  "logs": [
+    {
+      "checkpoint": "检查点 0 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "8m",
+      "speed": "35",
+      "time": "00:00.3",
+      "title": "低栏 · 起跳翻越",
+      "toast": "",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 0 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "16m",
+      "speed": "35",
+      "time": "00:01.5",
+      "title": "第一处断口",
+      "toast": "+90 · 流畅翻越",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 0 / 8",
+      "cue": "断口 1.9m · 起跳跃过去",
+      "distance": "16m",
+      "speed": "35",
+      "time": "00:03.2",
+      "title": "邻里屋脊",
+      "toast": "+90 · 流畅翻越",
+      "type": "action-message gap"
+    },
+    {
+      "checkpoint": "检查点 1 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "25m",
+      "speed": "35",
+      "time": "00:04.7",
+      "title": "施工踏板",
+      "toast": "检查点 1/8 · 邻里屋脊",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 1 / 8",
+      "cue": "高台 2.2m · 起跳抓边",
+      "distance": "10m",
+      "speed": "35",
+      "time": "00:08.0",
+      "title": "抓边登上砖墙工场",
+      "toast": "+117 · 流畅翻越",
+      "type": "action-message climb"
+    },
+    {
+      "checkpoint": "检查点 2 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "9m",
+      "speed": "35",
+      "time": "00:10.3",
+      "title": "右转 · 施工钢桥",
+      "toast": "检查点 2/8 · 砖墙工场",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 2 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "8m",
+      "speed": "35",
+      "time": "00:11.5",
+      "title": "穿过钢桥",
+      "toast": "检查点 2/8 · 砖墙工场",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 2 / 8",
+      "cue": "翻越接续中",
+      "distance": "18m",
+      "speed": "8",
+      "time": "00:12.8",
+      "title": "空中转角",
+      "toast": "+144 · 流畅翻越",
+      "type": "action-message vault"
+    },
+    {
+      "checkpoint": "检查点 3 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "19m",
+      "speed": "35",
+      "time": "00:15.0",
+      "title": "登上消防阶梯",
+      "toast": "+123 · 稳稳落地",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 3 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "14m",
+      "speed": "35",
+      "time": "00:16.8",
+      "title": "蓝调机房",
+      "toast": "+123 · 稳稳落地",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 4 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "10m",
+      "speed": "35",
+      "time": "00:18.0",
+      "title": "滑过横梁或从侧面绕行",
+      "toast": "检查点 4/8 · 蓝调机房",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 4 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "19m",
+      "speed": "29",
+      "time": "00:19.1",
+      "title": "平衡钢梁",
+      "toast": "检查点 4/8 · 蓝调机房",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 4 / 8",
+      "cue": "低栏 0.1m · 起跳翻越",
+      "distance": "12m",
+      "speed": "1",
+      "time": "00:21.5",
+      "title": "钢架平台",
+      "toast": "检查点 4/8 · 蓝调机房",
+      "type": "action-message vault"
+    },
+    {
+      "checkpoint": "检查点 5 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "12m",
+      "speed": "35",
+      "time": "00:23.7",
+      "title": "左转 · 上层阶梯",
+      "toast": "检查点 5/8 · 钢架平台",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 5 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "7m",
+      "speed": "35",
+      "time": "00:25.2",
+      "title": "沿消防阶梯上行",
+      "toast": "检查点 5/8 · 钢架平台",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 5 / 8",
+      "cue": "空中可微调方向 · F转体",
+      "distance": "5m",
+      "speed": "35",
+      "time": "00:26.1",
+      "title": "登上屋顶花园",
+      "toast": "检查点 5/8 · 钢架平台",
+      "type": "action-message air"
+    },
+    {
+      "checkpoint": "检查点 5 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "13m",
+      "speed": "35",
+      "time": "00:26.6",
+      "title": "屋顶花园",
+      "toast": "+70 · 稳稳落地",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 6 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "18m",
+      "speed": "35",
+      "time": "00:27.8",
+      "title": "跃向终点屋顶",
+      "toast": "检查点 6/8 · 屋顶花园",
+      "type": "action-message run"
+    },
+    {
+      "checkpoint": "检查点 6 / 8",
+      "cue": "断口 0.9m · 起跳跃过去",
+      "distance": "21m",
+      "speed": "35",
+      "time": "00:29.9",
+      "title": "最后一座屋顶",
+      "toast": "检查点 6/8 · 屋顶花园",
+      "type": "action-message gap"
+    },
+    {
+      "checkpoint": "检查点 7 / 8",
+      "cue": "跟随黄色路标 · 拖动右侧转动视角",
+      "distance": "14m",
+      "speed": "35",
+      "time": "00:32.2",
+      "title": "抵达天际线",
+      "toast": "检查点 7/8 · 终点屋顶",
+      "type": "action-message run"
+    }
+  ],
+  "lastTitle": "抵达天际线",
+  "jumpAt": 1794250715502,
+  "slideAt": 1794250695468,
+  "last": {
+    "result": "00:34.0",
+    "toast": "抵达天际线"
+  }
+}

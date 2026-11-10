@@ -1,0 +1,163 @@
+{
+  "source": "https://quaternius.itch.io/downtown-city-megakit",
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "downloadVersion": "Standard / 2026-05-20",
+  "files": [
+    {
+      "file": "Brick_Window_Trim.bin",
+      "bytes": 65232,
+      "sha256": "518f90310c4358621e3898ad58a7ddec6898e7b08281409f46865cfe32a2c257"
+    },
+    {
+      "file": "Brick_Window_Trim.gltf",
+      "bytes": 11678,
+      "sha256": "6f9b512a5bef61cadc822876bf95f3a8502b4c5da13f83bcdef6007de838cebe"
+    },
+    {
+      "file": "Building_Large_2.bin",
+      "bytes": 3345228,
+      "sha256": "e25636464da7b96a346f89314e498099ce33d3b0e9b1f8d9cba3eee94b63fac3"
+    },
+    {
+      "file": "Building_Large_2.gltf",
+      "bytes": 22880,
+      "sha256": "903209b63ad4e151190dce32ccab47a2c0dc256c09d999835984a0459ef2bd91"
+    },
+    {
+      "file": "Building_Medium_2_001.bin",
+      "bytes": 2443288,
+      "sha256": "8a8bd4462ff5f784e0ea7fbe753b009713f4017192c9d82b467f445eae88a35d"
+    },
+    {
+      "file": "Building_Medium_2_001.gltf",
+      "bytes": 25244,
+      "sha256": "423f4b3e709ef5633eac4a94a8a1ce25750aa42fe34e3b983d7aac39846f9a1c"
+    },
+    {
+      "file": "Building_Small_1.bin",
+      "bytes": 1556100,
+      "sha256": "a5fb691fe7ab0d93d5d47eef51af576f2d65bd78103c92c9e714215b26d679a2"
+    },
+    {
+      "file": "Building_Small_1.gltf",
+      "bytes": 27435,
+      "sha256": "3c864724fffd016ca440191bca169d6ba486e14617bb3cafa09ddbac7532f3d7"
+    },
+    {
+      "file": "Cornice_Brick_Center.bin",
+      "bytes": 660,
+      "sha256": "2759ad2718aa0116d1e6a15d06bd9fafc49141c0252e3072b1de12271fb4fb2e"
+    },
+    {
+      "file": "Cornice_Brick_Center.gltf",
+      "bytes": 2719,
+      "sha256": "2ab7e490a616f3e33a871efe47751dba468394187619de80b991967e3d330530"
+    },
+    {
+      "file": "T_Concrete_Asphalt_BaseColor.png",
+      "bytes": 988093,
+      "sha256": "a37ca932c4287a67d9cf7f78997b5cc4b026ca7319a4c8454132d076307ca5cf"
+    },
+    {
+      "file": "T_Concrete_BaseColor.png",
+      "bytes": 1341594,
+      "sha256": "697276f680b34d6321e6b06da208a0fc3516db372d4a7de543fc2c33e895f482"
+    },
+    {
+      "file": "T_Concrete_Normal.png",
+      "bytes": 4416770,
+      "sha256": "e4de917d2506bff4b17d44380a136336cf16e5ea828edfdb8981f4f27e30a86a"
+    },
+    {
+      "file": "T_Concrete_ORM.png",
+      "bytes": 896797,
+      "sha256": "be17636c061a7c6c4f4bf23c3887a3f894da0e88394e233926e816c735a49244"
+    },
+    {
+      "file": "T_MarbleFloor_BaseColor.png",
+      "bytes": 1095714,
+      "sha256": "a01f57e2976d3af21a59f1ae18e12be84d2acae7ba3e93d184d2874224f737c0"
+    },
+    {
+      "file": "T_MarbleFloor_Normal.png",
+      "bytes": 1382828,
+      "sha256": "52ba88ccfd35f072a51d11c31cdfb6e6ea8cde641ab4521115994d2c3216b451"
+    },
+    {
+      "file": "T_MarbleFloor_ORM.png",
+      "bytes": 567860,
+      "sha256": "95008e79cdba191b525afce2a95452fe28934efd5546d35919c24ea6cbcc0c22"
+    },
+    {
+      "file": "T_MetalConcrete_BaseColor.png",
+      "bytes": 1488628,
+      "sha256": "adae656323f15cd2c3f1a6453685cb1ca104b700dc114076137cb3a4c253d3d0"
+    },
+    {
+      "file": "T_MetalConcrete_Normal.png",
+      "bytes": 4815924,
+      "sha256": "93f95a96c32b27820c590301f00f5ba1d23d4054046d92bf6d58adbf23007419"
+    },
+    {
+      "file": "T_MetalConcrete_ORM.png",
+      "bytes": 1857257,
+      "sha256": "c4d35f684d20c47f199bea2fbe098d60a000fa7d1489df0f00a4c3c1ace4fcb7"
+    },
+    {
+      "file": "T_RedBrick_BaseColor.png",
+      "bytes": 1732063,
+      "sha256": "ea85bfc02c4c807265a85f7ab50656f7eaa19f6567301d362d78c1d06da161ab"
+    },
+    {
+      "file": "T_RedBrick_Normal.png",
+      "bytes": 7273659,
+      "sha256": "147f14d7f665d2598d0d796bd02a227f6b8b0fbc790c3e0737b1b90128101c93"
+    },
+    {
+      "file": "T_RedBrick_ORM.png",
+      "bytes": 2346959,
+      "sha256": "dfba8a1da5ca7dcff1b707a051e82717e93013c2ad36c93b7a41b0f331414b70"
+    },
+    {
+      "file": "T_Trim_BaseColor.png",
+      "bytes": 4421593,
+      "sha256": "c3334902f8315783477eec63e2d462f8cefedf9c55b41ef452d8374b5603f08e"
+    },
+    {
+      "file": "T_Trim_Normal.png",
+      "bytes": 4104873,
+      "sha256": "95fa43093067956fa6e206408f3e2f2302c18c7453b75a02f6e29fe57e2cd041"
+    },
+    {
+      "file": "T_Trim_ORM.png",
+      "bytes": 2538116,
+      "sha256": "52449f201ad3cf606a2eb2972702b10051c369cdc67b6fadd109502b4735d7fb"
+    },
+    {
+      "file": "T_dark_interior.png",
+      "bytes": 325090,
+      "sha256": "59e5c77292953d93c3cd239c2f06d4e80e393761195da66d886d3887ad59f1dc"
+    },
+    {
+      "file": "T_lit_interior_1.png",
+      "bytes": 395226,
+      "sha256": "d20aa9f249a506eb145d76e264e59667cec4bef66c07e4baace6583a28cc3be4"
+    },
+    {
+      "file": "T_lit_interior_2.png",
+      "bytes": 316427,
+      "sha256": "83c3f1b2ad84b65aab88d5744e6997730a04140e41d230e2cecfe9bfb2ae0559"
+    },
+    {
+      "file": "Trim_Window.bin",
+      "bytes": 48372,
+      "sha256": "9bbf05ce0ae134ba9b07da45250a5320b33250160507c3b716058b2bf18c0520"
+    },
+    {
+      "file": "Trim_Window.gltf",
+      "bytes": 10727,
+      "sha256": "253942c661a09da5bad08ced802ecabe17624fbe1907a2fac1a84a60bc968aae"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "file": "assets/runner.glb",
+  "bytes": 4899676,
+  "sha256": "4939c65b2ee1e4dc72fe20565531c9bc21b0ebc87bfd993a26b21eedd25b9925",
+  "meshes": [
+    {
+      "mesh": "base",
+      "triangles": 15532
+    },
+    {
+      "mesh": "Eyebrows",
+      "triangles": 192
+    },
+    {
+      "mesh": "Eyelashes",
+      "triangles": 368
+    },
+    {
+      "mesh": "Eyes",
+      "triangles": 2040
+    },
+    {
+      "mesh": "Teeth",
+      "triangles": 7120
+    },
+    {
+      "mesh": "Tongue",
+      "triangles": 448
+    },
+    {
+      "mesh": "Cloth_hoodie",
+      "triangles": 3176
+    },
+    {
+      "mesh": "Cloth_jeans",
+      "triangles": 1712
+    },
+    {
+      "mesh": "Cloth_shoes",
+      "triangles": 3320
+    },
+    {
+      "mesh": "Hair_short02",
+      "triangles": 3344
+    }
+  ],
+  "triangles": 37252,
+  "morphTargetsAtRuntime": 0,
+  "bones": 53,
+  "animations": [
+    "fall",
+    "idle",
+    "idle_breathe",
+    "idle_fidget",
+    "idle_look",
+    "jump",
+    "land",
+    "run",
+    "strafe_left",
+    "strafe_right",
+    "walk",
+    "walk_back"
+  ]
+}

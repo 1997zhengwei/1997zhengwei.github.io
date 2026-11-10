@@ -1,0 +1,1 @@
+{"name":"rooftop-flow","version":"0.5.0","type":"module","private":true,"scripts":{"start":"python serve.py --open","test":"node --test tests/*.test.mjs"}}

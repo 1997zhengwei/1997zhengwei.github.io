@@ -1,0 +1,154 @@
+{
+  "fall": {
+    "checkpoint": "检查点 1 / 8",
+    "cue": "跟随黄色路标 · 拖动右侧转动视角",
+    "penalty": "已计入 2秒重试时间",
+    "time": "00:15.2"
+  },
+  "route": {
+    "logs": [
+      {
+        "checkpoint": "检查点 1 / 8",
+        "cue": "低栏 2.2m · 起跳翻越",
+        "distance": "19m",
+        "time": "00:16.1",
+        "title": "施工踏板",
+        "type": "action-message vault"
+      },
+      {
+        "checkpoint": "检查点 1 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "12m",
+        "time": "00:19.1",
+        "title": "抓边登上砖墙工场",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 2 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "12m",
+        "time": "00:21.3",
+        "title": "右转 · 施工钢桥",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 2 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "12m",
+        "time": "00:22.4",
+        "title": "穿过钢桥",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 2 / 8",
+        "cue": "低栏 0.1m · 起跳翻越",
+        "distance": "18m",
+        "time": "00:23.8",
+        "title": "空中转角",
+        "type": "action-message vault"
+      },
+      {
+        "checkpoint": "检查点 3 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "20m",
+        "time": "00:26.6",
+        "title": "登上消防阶梯",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 3 / 8",
+        "cue": "空中可微调方向 · F转体",
+        "distance": "11m",
+        "time": "00:28.9",
+        "title": "蓝调机房",
+        "type": "action-message air"
+      },
+      {
+        "checkpoint": "检查点 4 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "10m",
+        "time": "00:30.1",
+        "title": "滑过横梁或从侧面绕行",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 4 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "20m",
+        "time": "00:31.5",
+        "title": "平衡钢梁",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 4 / 8",
+        "cue": "低栏 0.1m · 起跳翻越",
+        "distance": "12m",
+        "time": "00:33.8",
+        "title": "钢架平台",
+        "type": "action-message vault"
+      },
+      {
+        "checkpoint": "检查点 5 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "12m",
+        "time": "00:35.8",
+        "title": "左转 · 上层阶梯",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 5 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "6m",
+        "time": "00:37.8",
+        "title": "沿消防阶梯上行",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 5 / 8",
+        "cue": "空中可微调方向 · F转体",
+        "distance": "3m",
+        "time": "00:38.8",
+        "title": "登上屋顶花园",
+        "type": "action-message air"
+      },
+      {
+        "checkpoint": "检查点 5 / 8",
+        "cue": "空中可微调方向 · F转体",
+        "distance": "11m",
+        "time": "00:39.2",
+        "title": "屋顶花园",
+        "type": "action-message air"
+      },
+      {
+        "checkpoint": "检查点 6 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "18m",
+        "time": "00:40.3",
+        "title": "跃向终点屋顶",
+        "type": "action-message run"
+      },
+      {
+        "checkpoint": "检查点 6 / 8",
+        "cue": "空中可微调方向 · F转体",
+        "distance": "20m",
+        "time": "00:42.4",
+        "title": "最后一座屋顶",
+        "type": "action-message air"
+      },
+      {
+        "checkpoint": "检查点 7 / 8",
+        "cue": "跟随黄色路标 · 拖动右侧转动视角",
+        "distance": "15m",
+        "time": "00:44.4",
+        "title": "抵达天际线",
+        "type": "action-message run"
+      }
+    ],
+    "last": {
+      "result": "00:46.9"
+    },
+    "lastTitle": "抵达天际线",
+    "jumpAt": 1794251352160,
+    "slideAt": 1794251331660
+  }
+}
