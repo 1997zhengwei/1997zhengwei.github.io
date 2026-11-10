@@ -1,0 +1,9 @@
+__pycache__/
+*.log
+qa/*.json
+
+baseline-v01/
+
+reference/
+
+qa/*.zip

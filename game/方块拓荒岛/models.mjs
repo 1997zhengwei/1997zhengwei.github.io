@@ -1,0 +1,31 @@
+import * as T from 'three';
+import {craftedTree,craftedRock,craftedWheat,craftedResource} from './crafted-resources.mjs';
+import {TILE,SITES,NODES,SERVICES,tilesFor,xy} from './world.mjs';
+const materials=new Map();
+const boxGeo=new T.BoxGeometry(1,1,1),cylGeo=new T.CylinderGeometry(1,1,1,8);
+export function mat(c){if(!materials.has(c))materials.set(c,new T.MeshStandardMaterial({color:c,roughness:1,metalness:0}));return materials.get(c);}
+export function box(g,x,y,z,w,h,d,c,shadow=true){const m=new T.Mesh(boxGeo,mat(c));m.position.set(x,y,z);m.scale.set(w,h,d);m.castShadow=shadow;m.receiveShadow=true;g.add(m);return m;}
+function cylinder(g,x,y,z,r,h,c){const m=new T.Mesh(cylGeo,mat(c));m.position.set(x,y,z);m.scale.set(r,h,r);m.castShadow=true;m.receiveShadow=true;g.add(m);return m;}
+function shadowTexture(){const c=document.createElement('canvas');c.width=c.height=64;const ctx=c.getContext('2d');const gr=ctx.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,'rgba(15,54,62,.26)');gr.addColorStop(1,'rgba(15,54,62,0)');ctx.fillStyle=gr;ctx.fillRect(0,0,64,64);return new T.CanvasTexture(c);}
+const shadows=shadowTexture();
+export function contact(g,r){const m=new T.Mesh(new T.PlaneGeometry(r,r),new T.MeshBasicMaterial({map:shadows,transparent:true,depthWrite:false}));m.rotation.x=-Math.PI/2;m.position.y=.025;g.add(m);return m;}
+export function axe(g,tier=1){const tool=new T.Group();box(tool,0,-.27,0,.09,.75,.09,'#8b5e34');box(tool,.16,.03,0,.41,.23,.12,['#ac7e47','#ac7e47','#b3c6c7','#e1eee9','#75e8df'][tier]);box(tool,.32,-.04,0,.13,.35,.12,tier>=4?'#c8fff7':tier===3?'#f5fff5':tier===2?'#d0ddda':'#c4995c');g.add(tool);return tool;}
+export function character(){const root=new T.Group(),body=new T.Group();root.add(body);contact(root,1.8);
+ box(body,0,.94,0,.57,.63,.34,'#20b8bc');box(body,0,1.17,.185,.16,.13,.025,'#63cfcd');box(body,0,1.51,0,.62,.59,.57,'#d3a37e');box(body,0,1.79,0,.65,.13,.60,'#493b32');box(body,0,1.58,-.285,.65,.39,.055,'#493b32');box(body,-.29,1.66,.1,.07,.2,.39,'#493b32');
+ for(const x of [-.16,.16]){box(body,x,1.56,.292,.14,.085,.021,'#fff9e9',false);box(body,x+.025,1.55,.308,.065,.079,.019,'#3d879e',false);box(body,x,1.64,.301,.15,.032,.02,'#6c4a35',false);}box(body,0,1.43,.315,.11,.12,.08,'#a36c48',false);box(body,0,1.34,.305,.26,.065,.035,'#5a4036',false);
+ const arms=[];for(const x of [-.42,.42]){const a=new T.Group();a.position.set(x,1.2,0);body.add(a);box(a,0,-.11,0,.24,.29,.30,'#2497ad');box(a,0,-.37,0,.23,.31,.28,'#dbb28e');arms.push(a);}
+ const legs=[];for(const x of [-.16,.16]){const a=new T.Group();a.position.set(x,.64,0);body.add(a);box(a,0,-.21,0,.27,.42,.31,'#4b5eb1');box(a,0,-.47,.035,.28,.14,.39,'#334678');legs.push(a);}
+ const bag=new T.Group();bag.position.set(0,.72,-.35);body.add(bag);box(bag,0,.15,-.06,.51,.47,.24,'#855d3c');box(bag,0,.34,-.195,.4,.04,.025,'#d9b479');box(bag,0,.08,-.195,.39,.04,.025,'#d9b479');const stack=new T.Group();stack.position.set(0,.48,-.05);bag.add(stack);const tool=axe(arms[1]);tool.position.set(0,-.55,.13);tool.rotation.z=-.3;
+ return {root,body,arms,legs,bag,stack,tool,walk:0,swing:0,tier:1};}
+export function tree(g,seed){contact(g,2.25);return craftedTree(g,seed);}
+export function rock(g,type,seed){contact(g,1.65);return craftedRock(g,type,seed);}
+export function wheat(g){contact(g,1.45);return craftedWheat(g);}
+export function cow(g){const cow=new T.Group();g.add(cow);contact(g,2);box(cow,0,.65,0,.72,.65,1.05,'#fff8de');box(cow,-.37,.75,-.2,.025,.38,.39,'#5d5144');box(cow,.37,.64,.05,.025,.3,.55,'#6b5d4b');box(cow,0,1.03,.48,.6,.56,.52,'#f7efd5');box(cow,0,.85,.78,.52,.2,.12,'#d8aa99');for(const x of[-.22,.22]){box(cow,x,1.05,.75,.09,.1,.025,'#3b443b');box(cow,x,1.37,.46,.08,.17,.1,'#a68e69');for(const z of [-.37,.37])box(cow,x,.23,z,.17,.48,.19,'#79674c');}box(cow,0,.39,.15,.28,.13,.38,'#e7b7a0');return cow;}
+export function villager(g){contact(g,2);box(g,0,.67,0,.6,.88,.46,'#96755b');box(g,0,.21,0,.49,.27,.42,'#695848');box(g,0,1.4,0,.64,.65,.59,'#c39570');box(g,0,1.75,0,.72,.15,.7,'#bd9a5d');box(g,0,1.84,0,.5,.16,.5,'#d6b672');box(g,0,1.3,.36,.16,.3,.24,'#b1835f');for(const x of[-.16,.16])box(g,x,1.48,.307,.1,.075,.02,'#3d6f5f');box(g,0,1.57,.31,.51,.055,.03,'#674c37');box(g,0,.88,.3,.72,.2,.22,'#ab886a');box(g,.09,.58,.245,.21,.2,.035,'#48d8a6');}
+export function workbench(g){contact(g,2.1);box(g,0,.49,0,1.15,.95,.98,'#af793f');box(g,0,1.02,0,1.28,.17,1.12,'#e2b76a');for(let i=-1;i<=1;i++)box(g,i*.3,1.115,0,.04,.02,.98,'#97673f');for(let i=-1;i<=1;i++)box(g,0,1.12,i*.26,1.08,.02,.04,'#97673f');for(const x of[-.43,.43])box(g,x,.48,.5,.08,.72,.025,'#6f4e30');box(g,0,.57,.51,.18,.32,.035,'#6e4d32');}
+export function furnace(g){contact(g,2.3);box(g,0,.59,0,1.3,1.17,1.15,'#7e929a');box(g,0,1.2,0,1.42,.15,1.26,'#a6b7b6');box(g,0,.92,.59,.86,.24,.025,'#415969');box(g,0,.4,.59,.73,.45,.025,'#3f4e5b');box(g,0,.34,.61,.54,.24,.02,'#ffb453');box(g,0,.31,.63,.29,.15,.02,'#ffe07b');box(g,.3,1.57,-.23,.44,.7,.5,'#657c86');return g;}
+export function portal(g){contact(g,4);for(const x of[-.98,.98])for(let y=0;y<4;y++)box(g,x,.38+y*.65,0,.65,.63,.65,y%2?'#5f517f':'#4c4666');for(let x=-1;x<=1;x++)box(g,x*.65,2.98,0,.63,.6,.66,'#665383');box(g,0,.1,.5,2.8,.2,1.6,'#8d87a5');box(g,0,.22,.9,2,.22,.5,'#b0a4b8');const geo=new T.PlaneGeometry(1.4,2.4);const material=new T.ShaderMaterial({transparent:true,side:T.DoubleSide,uniforms:{time:{value:0},power:{value:0}},vertexShader:'varying vec2 uvv;void main(){uvv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'uniform float time;uniform float power;varying vec2 uvv;void main(){float w=sin(uvv.y*32.+sin(uvv.x*14.+time)*2.-time*2.);vec3 c=mix(vec3(.27,.2,.43),vec3(.65,.42,.96),power);gl_FragColor=vec4(c+w*.055,.3+power*.6);}'});const p=new T.Mesh(geo,material);p.position.set(0,1.59,.02);g.add(p);return {material};}
+export function chest(g){contact(g,2);box(g,0,.43,0,1.12,.8,.76,'#bd833a');box(g,0,.89,0,1.16,.22,.79,'#dbac56');for(const x of[-.44,.44])box(g,x,.51,.4,.1,.92,.035,'#69523b');box(g,0,.57,.43,.15,.22,.08,'#fff0a8');}
+
+// The same detailed meshes supply pickups, backpack samples and HUD thumbnails.
+export function resourceModel(type){const m=craftedResource(type);m.castShadow=true;return m;}

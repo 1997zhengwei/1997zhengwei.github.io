@@ -1,0 +1,365 @@
+{
+  "version": "0.7.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 75,
+      "sha256": "4de05884da0916bf240569c64e914ffe0616becd0fed89a0954b6d8b2588e888",
+      "git_blob": "ae9d8f9d7829cfd8195b060f2245ecd6d98d6454"
+    },
+    {
+      "path": "app.mjs",
+      "size": 22498,
+      "sha256": "d3dc22b5121a825073fcb24c06e96e0d34c337e2a1fb93fa587f58d4d20b505a",
+      "git_blob": "cca29a9932c2259e8bdc6a2c6a515b0979dc91b6"
+    },
+    {
+      "path": "assets/ui/house.svg",
+      "size": 383,
+      "sha256": "28216c479005731ef5e382e7d8627eda2b129b019eb1f3d9de9f5915576d448e",
+      "git_blob": "10e4097e290fdb2f1f919b264bf4e3095348de7c"
+    },
+    {
+      "path": "assets/ui/LUCIDE_LICENSE",
+      "size": 3208,
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "git_blob": "718bb3f0e44153809972abed31839375804bf652"
+    },
+    {
+      "path": "assets/ui/map.svg",
+      "size": 516,
+      "sha256": "41300a8ef2c2a4cf36ec3f8a730bcb4754543889eb23b98e7435de7a0757752d",
+      "git_blob": "8a8525602d77ba562b8cf57adbd3fb0403133fdb"
+    },
+    {
+      "path": "assets/ui/navigation-2.svg",
+      "size": 258,
+      "sha256": "4d5a208057803d75e818c9b32ec5d5ef471d23dc5e18d9488f6fd85ef769def0",
+      "git_blob": "febc406cdf758be3327ecd6f5419a67c9da8bc70"
+    },
+    {
+      "path": "assets/ui/Nunito.ttf",
+      "size": 276932,
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+      "git_blob": "2ec1f4b0676c83ef33049db87b311171699e9192"
+    },
+    {
+      "path": "assets/ui/NUNITO_OFL.txt",
+      "size": 4385,
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65",
+      "git_blob": "c8210f08ca3cece05b4f7baa428afe8e1abe3293"
+    },
+    {
+      "path": "assets/ui/pause.svg",
+      "size": 313,
+      "sha256": "f122ec4ea7f5693a0b1baafa9c708b53980dc87b4aacb297c6e6f71c1a4c115c",
+      "git_blob": "ea5762fdbcccbf1f73bb2b46178bb1bafd1e373f"
+    },
+    {
+      "path": "assets/ui/settings-2.svg",
+      "size": 324,
+      "sha256": "06d06c191bd7eb28afaf9d40acb5c49ef69448fdeda91801d9823d7c440a4e10",
+      "git_blob": "0a9d29d77781e7d2f7f6db6a8fe4371ae6ff4f84"
+    },
+    {
+      "path": "assets/ui/volume-2.svg",
+      "size": 476,
+      "sha256": "fb404f9c128a0579de67b399177631e5edb3502fdc247ceb30e8b15754b46071",
+      "git_blob": "519e6cbd4d2693a38f7db0e396354cc07b9f4e26"
+    },
+    {
+      "path": "assets/ui/volume-x.svg",
+      "size": 443,
+      "sha256": "f382e421b7aae01172989f2b749ee87e44c0c82c16970b13a9ad5a323b613be0",
+      "git_blob": "3e2600946f38313e8cfb617e35bbc3c95159d172"
+    },
+    {
+      "path": "autoplay.mjs",
+      "size": 2747,
+      "sha256": "2ed1b96666a42e4ee3641c4bbf30e798f6df5638cf9e87511c8f6f2cf1066e23",
+      "git_blob": "44e49260cdb372e6dd08b10ccc05cc6f967cb933"
+    },
+    {
+      "path": "awakened-world.mjs",
+      "size": 13330,
+      "sha256": "e496ffd868c39ff681da348b19b2808149c7991564476acca3e9cac02fd56202",
+      "git_blob": "440db72552208e73c8334f106c5250332dd65b76"
+    },
+    {
+      "path": "BRIEF.md",
+      "size": 3286,
+      "sha256": "21be727cca0756df24731b16b1bf36e800e6b2cadfab90206d9e9c71e355addf",
+      "git_blob": "0d5b1e43ca536dc581a7bce25ef121bc85a14cc4"
+    },
+    {
+      "path": "core.mjs",
+      "size": 11443,
+      "sha256": "877942b35a89b0edeb20c66a040104b7e39e506d13fb3c571dc4c8237f1d57cd",
+      "git_blob": "0a2a7584ba697fddaadfbeb2c076a921f8fbc0bc"
+    },
+    {
+      "path": "crafted-resources.mjs",
+      "size": 11590,
+      "sha256": "6a02064a7ea8d004364ddd2f6e7ef6d1fa01edb8f0f6427083fd145aa5d55865",
+      "git_blob": "0b65d175fde36f692f37b707f3d21e02bd8fd856"
+    },
+    {
+      "path": "design-qa.md",
+      "size": 6110,
+      "sha256": "db41f74855a93936d219d0a27380cbd8ee8dd2a4a4d89b631624af50e54e10e1",
+      "git_blob": "a6ce42efb84cd7e290dda73d37c93b91a5e01314"
+    },
+    {
+      "path": "frontier-art.mjs",
+      "size": 13936,
+      "sha256": "5403e19a17f419a2d30b34451ca87120af2909f0843fb36c35da727d68953333",
+      "git_blob": "1b4335523a11eeb5644f349cbcbafad561db35c4"
+    },
+    {
+      "path": "frontier-pilot.mjs",
+      "size": 2779,
+      "sha256": "7f191b1b57aa0b94f174a15851e775550d831854cfbc67ba7e3731576ec82971",
+      "git_blob": "955685f0cb162c13fb72d47ee2bf9c9d52458a0a"
+    },
+    {
+      "path": "frontier-ui.mjs",
+      "size": 16143,
+      "sha256": "dc36e8e16b869a56f8c4ff5bb0c89bd5f0388f8b2f1f0f742a72ba8c2484e897",
+      "git_blob": "c72bfab2728440e64239a6d68d50b449b5cfae47"
+    },
+    {
+      "path": "globe.mjs",
+      "size": 16032,
+      "sha256": "71f4c5ff2f2c171cc7f97e9baaecdb51c63d73746460386fd027a52a77355d71",
+      "git_blob": "8106456248c4bf5ac7242e79b013383767fa79ad"
+    },
+    {
+      "path": "guardian.mjs",
+      "size": 5630,
+      "sha256": "c62e04c89c22984c6fae73500b0c13eb60e96ad92e290cd3128fca7221f34b79",
+      "git_blob": "ca66ef6060aea5f6c589ca34c7352e5b51e7e5b9"
+    },
+    {
+      "path": "index.html",
+      "size": 2995,
+      "sha256": "3e8ef0877d9067e0c05802b54f73ec6f455d1af57e5d516eb33b61ceab8731ad",
+      "git_blob": "ca11cf9fd0575f73ad8e912ef2bbb9af2c0e0f2f"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "size": 5222,
+      "sha256": "fd0da2345ff40f4aec1f874d40fc78af64905398a800f46054714b2dbae58380",
+      "git_blob": "88d66f464d7358167be92947372aba4e93a8c805"
+    },
+    {
+      "path": "models.mjs",
+      "size": 6282,
+      "sha256": "12c02967483381d1467b865208366d9291ed447acc2cf5736b6acdd2a0496c88",
+      "git_blob": "6028d0e8dad81525d7c360f272c84728415b6e02"
+    },
+    {
+      "path": "package.json",
+      "size": 162,
+      "sha256": "0041ec3ca1f28b6ebd4a39a26ff958bf408deadc353598ad9c1feedd0bf7dca5",
+      "git_blob": "be641857abac12c6c3c3ffc2bea597af3e69001f"
+    },
+    {
+      "path": "planet-scenery.mjs",
+      "size": 9626,
+      "sha256": "25fb47ad83a2b8d92ed855e76dd5ed9adfc3418749dc29b31e0f14e2d36b3c85",
+      "git_blob": "02d16839c0cb3d60fb3b31c742690ce3f6cd4d78"
+    },
+    {
+      "path": "planet.mjs",
+      "size": 19697,
+      "sha256": "4de7980c88d58bbb031e51aab6176d657a5327d48f8e6c813664fb42b42c93d3",
+      "git_blob": "098b40cb0dc1a36487e4d2a82cdf27a18dc8222d"
+    },
+    {
+      "path": "qa/v07-awakening-reward.jpg",
+      "size": 67582,
+      "sha256": "944d0d63cb5437c4f5774bed3160566f0cad5477081648020a74db520474d392",
+      "git_blob": "9b4b33e6985b702895fb9af162166fe8d1c6022b"
+    },
+    {
+      "path": "qa/v07-reward-phone.jpg",
+      "size": 37506,
+      "sha256": "c45b3a01afd6eb62eec4463f49f862585e8a09edd40b8037e1d986d4175db606",
+      "git_blob": "a002716c1e499ae0d0d8e89574bb84f8efe018f0"
+    },
+    {
+      "path": "qa/v07-world-panorama.jpg",
+      "size": 69990,
+      "sha256": "2d01bb6f3da59254c33b89f9fa63a84062d1294619c36e6f326e0058a436474c",
+      "git_blob": "17420b2b75b736b2cc134aa97d61005d22e50861"
+    },
+    {
+      "path": "qa/v07-world-phone.jpg",
+      "size": 36025,
+      "sha256": "70cca5448b6e539b24b3de243fa94268aafd6bdce3c495797e591169bc446460",
+      "git_blob": "db4ebc070dfa335a0b7851fffd9e3d6d9ad3727e"
+    },
+    {
+      "path": "QA-v01.md",
+      "size": 4296,
+      "sha256": "ee70e2392bad97096b36f14c384fa64438b3c5bb355f287b4743a9535adecf1f",
+      "git_blob": "bdd048b1e2dc0d79ccb819b3193f4b6bf6f368ce"
+    },
+    {
+      "path": "QA-v02.md",
+      "size": 3796,
+      "sha256": "1012d4b47f8c016af27a9f6ad5b03a36fd0efaa68454e67a4d6ba9cf2b829060",
+      "git_blob": "33f7f205fd0a4b906f722e1ab731dc36ca9acfb7"
+    },
+    {
+      "path": "QA-v03.md",
+      "size": 4278,
+      "sha256": "d02d470a18927922c0d4d4663bb0148f4af244e686199f0f7db77a7337c2a784",
+      "git_blob": "6168af38bed264160fa9d2511b6a88b0df40dc2f"
+    },
+    {
+      "path": "QA-v04.md",
+      "size": 4295,
+      "sha256": "609e6f57e60405c730b845f41aa81b9d10d196b9adf203b7c4e22e7b0bb6b95b",
+      "git_blob": "6f61ff5cb3ebf5cfc1581bc81006d0807265d659"
+    },
+    {
+      "path": "QA-v05.md",
+      "size": 3409,
+      "sha256": "f4b70aecbe0f9938b59237eb385ca3e0642e639b13d0150ac5a855dae5530f81",
+      "git_blob": "6936bd76852c0da4fbee2f555c1df2ff8ae4aabd"
+    },
+    {
+      "path": "QA-v06.md",
+      "size": 2540,
+      "sha256": "b7575a1793017969f0ebe54254f09f1ff74efd02698ca689931172a903c2f276",
+      "git_blob": "ffa78156aa64f86c12925f416f339e1758d094a2"
+    },
+    {
+      "path": "QA-v07.md",
+      "size": 3461,
+      "sha256": "17545fc17155064a5f924e0594325f19e80ac3900b0af4214ef6f9518b871349",
+      "git_blob": "f4123331bbaeba8e476355cb4d86f5d902f6bf73"
+    },
+    {
+      "path": "QA.md",
+      "size": 3461,
+      "sha256": "17545fc17155064a5f924e0594325f19e80ac3900b0af4214ef6f9518b871349",
+      "git_blob": "f4123331bbaeba8e476355cb4d86f5d902f6bf73"
+    },
+    {
+      "path": "README.md",
+      "size": 6661,
+      "sha256": "cb7bfedcb704bfe838f33708e060ff1e9028f0175fc7c21b65bc9e7fa65de510",
+      "git_blob": "41ac0ab6135d64e79e0b13b90ef9712ca4e9abe7"
+    },
+    {
+      "path": "REVISION_V02.md",
+      "size": 4032,
+      "sha256": "b1803746baf4399869e427936132157bac67decaaabf731350f32325f9766ecb",
+      "git_blob": "90ccf0692ee1eca7ee18883a392a855fdeb5deed"
+    },
+    {
+      "path": "REVISION_V03.md",
+      "size": 2183,
+      "sha256": "686ba5db6ac4528d640ab1757b392ea8b78ed1835957121685ffb641fd15e199",
+      "git_blob": "8fef14ed76696b306d98714aa82383658dfd3940"
+    },
+    {
+      "path": "REVISION_V04.md",
+      "size": 1953,
+      "sha256": "616da7c770b98448412cd67fe8a4ef7705f7878efa0068d688fcf53ab4346605",
+      "git_blob": "f9d4ba1f7156af31f050fda52b2916750103ef21"
+    },
+    {
+      "path": "REVISION_V05.md",
+      "size": 2018,
+      "sha256": "65a3d3f25c1e50e43c79995729b3ffd05679ea49191ca72df4966faef032a6bc",
+      "git_blob": "ae977ae6d788216713b1e5ef69f6c8cf0745beac"
+    },
+    {
+      "path": "REVISION_V06.md",
+      "size": 1655,
+      "sha256": "724721201abf7a4b50b516740d5eca97ff355a0faa4432de89280f988baa1fc7",
+      "git_blob": "0d4539fc3e4ed15ed1c0f73634aca48c1b33e548"
+    },
+    {
+      "path": "REVISION_V07.md",
+      "size": 2587,
+      "sha256": "bf0b344e3aed4f1e201db1ff785372fd41d589dc3f734ed1d423c33bce0392c4",
+      "git_blob": "1cbf6a0b728f5faefb018bc0be1e920f469c5da6"
+    },
+    {
+      "path": "serve.py",
+      "size": 1740,
+      "sha256": "ef968a643143528ed1b4e61b93670bbedd1873c20fe652da37cb7f4b9cbb1037",
+      "git_blob": "afb4f731fc0ddbb452ed98ddc022d96c6b906de9"
+    },
+    {
+      "path": "sound.mjs",
+      "size": 1858,
+      "sha256": "928667670e1c140050b673d2db421512ae446b50cc4532d7e78751cf3201cdc5",
+      "git_blob": "890e30f76e6c20723d90d8f159a9973f5cbda0a9"
+    },
+    {
+      "path": "style.css",
+      "size": 18031,
+      "sha256": "29d7892f7d3a6e516222a3463e221adcfd3b4368f8f985e189d262ffcef8e382",
+      "git_blob": "3e55479a17ffba7c40e6c40e46748ab972333fa4"
+    },
+    {
+      "path": "SYNC_STATUS.md",
+      "size": 340,
+      "sha256": "328cb0ee802fad48fa9c7175e668b534707772068876082ee1a91917e908610a",
+      "git_blob": "b5c335510cb9880b4b10f3b6164d188f27d862aa"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "size": 7806,
+      "sha256": "f954ea4ca9ecfb5225ad6b38d9d926d2ee3392781dd32462fafbd4046fe39ab0",
+      "git_blob": "b95d7cbc5ef6cb469b23ed9777e1c9afbeac8d1d"
+    },
+    {
+      "path": "tests/globe.test.mjs",
+      "size": 13842,
+      "sha256": "a61e7896837196c638c18739d4b85d049c30b2733cfb31d017d210dd9cf925c4",
+      "git_blob": "f43cab569954f52fa2873566e3b19ccbd74318e8"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "size": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "git_blob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "size": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "git_blob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "size": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "git_blob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "world-wonders.mjs",
+      "size": 821,
+      "sha256": "ae1edfdb94eef44aa922bc7e7af166dfcb82835a72749fa7124a77cf0ce634be",
+      "git_blob": "a94117b2f18035f29e400f177da0fb7eb478a5c8"
+    },
+    {
+      "path": "world.mjs",
+      "size": 6147,
+      "sha256": "add350310dac1dd35ce6d73358cbb4b873fd8f98c988b5279c15426ca775d469",
+      "git_blob": "9670aa6e8f18fd722ad1ca9351143bd5371d3058"
+    },
+    {
+      "path": "启动试玩.cmd",
+      "size": 69,
+      "sha256": "53669cc4a192a112a074d7121d9e0f480b67e6027718fef6b7bb5882a241bd83",
+      "git_blob": "9e4955cba3eac5ef2f12ec7d466ab458f0686c80"
+    }
+  ]
+}

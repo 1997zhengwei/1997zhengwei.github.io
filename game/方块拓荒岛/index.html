@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><meta name="theme-color" content="#56cddc"><title>Skyblock Frontier · 方块拓荒岛</title><link rel="preload" href="assets/ui/Nunito.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="style.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
+<body><main id="game" aria-label="Skyblock Frontier game">
+<canvas id="scene" aria-label="3D little planet. Drag to move or tap the ground to walk."></canvas>
+<div id="hud"><header><div class="profile"><div id="avatar"></div><span><span id="world-number">WORLD 1</span><br><strong id="region">GREENHAVEN</strong></span></div><div class="top-buttons"><button id="map" aria-label="Island overview" title="Island overview"><img src="assets/ui/map.svg" alt=""></button><button id="settings" aria-label="Pause and help" title="Pause and help"><img src="assets/ui/pause.svg" alt=""></button></div></header>
+<div id="resources" aria-label="Backpack resources"></div>
+<button id="quest" aria-label="Walk to current objective"><img src="assets/ui/navigation-2.svg" alt=""><span>GOAL</span><span class="sr-only"><small id="chapter"></small><strong id="quest-title">Gather wood</strong><span id="quest-text"></span></span></button>
+<div id="world-labels"></div><div id="pickups" aria-hidden="true"></div>
+<div id="toast" role="status"></div><div id="tool-tier"><span id="tool-icon"></span><span id="tool-label">Wood tools</span></div>
+<div id="context"><small id="context-kind">EXPLORER</small><strong id="context-title">Build a whole planet.</strong><div id="context-detail">Drag to move. Stop near a tree to chop.</div><div id="context-progress"><i></i></div></div>
+<div id="joystick" aria-hidden="true"><div id="stick"></div></div><div id="touch-hint">DRAG TO MOVE <span>·</span> AUTO HARVEST</div>
+<button id="home" title="Walk home" aria-label="Walk back to workbench"><img src="assets/ui/house.svg" alt=""></button><span id="save-label">Autosaved</span>
+</div>
+<div id="dialog" hidden><div class="dialog-card"><span class="eyebrow">SKYBLOCK FRONTIER</span><h1 id="dialog-title">Take a breath.</h1><p id="dialog-copy">Drag anywhere to move. Stay near trees and rocks to gather. Stand in a glowing pad to deliver your materials and grow the island.</p><div id="dialog-stats"></div><button id="resume" class="primary">Keep exploring <span>→</span></button><button id="frontier-travel" hidden>Expand the whole planet →</button><button id="sound">Sound: on</button><button id="restart">Start a new world</button><button id="cancel-reset" hidden>Keep this world</button><small class="save-note">Progress is saved on this browser.</small></div></div>
+<div id="loading"><span class="load-orbit"></span><strong>Growing your planet…</strong></div>
+</main><script type="module" src="app.mjs"></script></body></html>
