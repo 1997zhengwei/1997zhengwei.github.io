@@ -1,6 +1,6 @@
 # 本地验收 · v0.3.0
 
-日期：2026-11-10。Windows / ChatGPT in-app Chromium，真实 Three.js / WebGL。正式存档与 QA 存档分离。本轮仅本地修改，未上传 GitHub 或 Loopit。
+日期：2026-11-10。Windows / ChatGPT in-app Chromium，真实 Three.js / WebGL。正式存档与 QA 存档分离。本文件记录本地修复阶段；后续已获授权上传 GitHub 并接入 Loopit V1，平台实际验收见 `SYNC_STATUS.md`。
 
 ## 本轮回归
 
@@ -48,4 +48,4 @@
 - `squad-wounded-400x580.jpg`、`golem-down-400x580.jpg`
 - `golem-bars-battle-400x580.jpg`、`victory-20-400x580.jpg`
 
-`qa/baseline-v0.2.0.zip` 保留本轮修改前源码，旧版测试报告和截图仍保留在旧文件 / 目录内。当前版本结果不复用旧版通关记录。浏览器帧率会受前后台和预览节流影响，未把它当成真实手机性能统计；尚未在手机硬件或 Loopit 宿主验收。
+`qa/baseline-v0.2.0.zip` 保留本轮修改前源码，旧版测试报告和截图仍保留在旧文件 / 目录内。当前版本结果不复用旧版通关记录。浏览器帧率会受前后台和预览节流影响，未把它当成真实手机性能统计；未在手机硬件验收，后续 Loopit 宿主实测另见 `SYNC_STATUS.md`。旧版 ZIP 仅本地保留，不随 GitHub 源码包上传。

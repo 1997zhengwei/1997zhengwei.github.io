@@ -1,6 +1,6 @@
 # Village Last Stand · 村庄保卫战
 
-Minecraft 风格的真实 3D 村庄防守小游戏。20 夜防线修正版 v0.3.0，2026-11-10。
+Minecraft 风格的真实 3D 村庄防守小游戏。20 夜防线修正版 v0.3.0，2026-11-10。已上传 GitHub 中文目录，并接入通过实际试玩的 Loopit V1 草稿；[直接试玩](https://cdn-cf.loopit.me/public/game/01a1c46e-f202-763f-ab2c-3a2276eb2f38/2120061259503116288/workspace/dist/index.html?loopit_preview=draft)，详细记录见 `SYNC_STATUS.md`。
 
 ## 本地试玩
 
