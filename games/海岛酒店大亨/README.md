@@ -3,6 +3,10 @@
 本地真实3D经营首版。参考 My Perfect Hotel 的斜俯视开放式酒店和亲自服务→雇人→扩建循环。明亮海岛场景、独立程序人物与家具，中文界面。
 
 
+## Loopit 首稿
+
+[打开 V1 创作草稿](https://lab.loopit.me/pgc/workbench/01a1ca63-2b21-79d2-855e-7b527896066a?kind=draft) · [直接试玩](https://cdn-cf.loopit.me/public/game/01a1ca63-2b21-79d2-855e-7b527896066a/2120486784327507968/workspace/dist/index.html?loopit_preview=draft)。基础经营、升级、刷新恢复与320×580触控已实际检查，草稿未发布。具体版本、来源及边界见 [LOOPIT_STATUS.md](./LOOPIT_STATUS.md)。
+
 ## v0.5 长期经营成长
 
 保留已验收的 v0.4 绿色内墙、红色外墙、暖色拼木、蓝色床品、亮蓝界面与原主楼场景。在原六间房经营之后延伸：

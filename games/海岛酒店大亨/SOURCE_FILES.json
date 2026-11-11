@@ -24,19 +24,24 @@
       "sha256": "e2d732f2d1db7c5a415fe00819962e37ad2b85e48729ab26901e1d43f7369a9b"
     },
     {
+      "path": "LOOPIT_STATUS.md",
+      "bytes": 3338,
+      "sha256": "f7ff84d1b43e86fd0dfd9095b727c7e4ff810211574bb0035063803f79f9b07a"
+    },
+    {
       "path": "PLATFORM_BUNDLE.md",
       "bytes": 986,
       "sha256": "699bc2a545d3045cf1b983966d48b9033d59a7e6382da86734c67166fd2d64a2"
     },
     {
       "path": "QA.md",
-      "bytes": 15524,
-      "sha256": "d80e240a7f735fe44d014d41e23d3d0e7e4641659be288ae51bede9f37dfd0cc"
+      "bytes": 15792,
+      "sha256": "7b4f63263ee189d7d1c1fdaa65208196edd38f98c5cf4ee932ffcd153ce4c93b"
     },
     {
       "path": "README.md",
-      "bytes": 7416,
-      "sha256": "44219597dfd7c568c684dcf288bb18150f89412bb6b7e209b51fe29b1211af4f"
+      "bytes": 7872,
+      "sha256": "5b04d6b13480e778ca3479cbc4f75ee5ea20f44960a624f67912507aea518efe"
     },
     {
       "path": "build.mjs",
@@ -57,6 +62,11 @@
       "path": "qa/character-studio.html",
       "bytes": 2559,
       "sha256": "2ba7e98f6d86103a74d0c49a0ee0f633efd591f6e3aec14e6497de62abbcddf7"
+    },
+    {
+      "path": "qa/loopit-v1-preview.jpg",
+      "bytes": 7270,
+      "sha256": "da202700a9d4f337a0227c8660df186dd058c8feff60994ef87b0f2f85f46e65"
     },
     {
       "path": "qa/v04-resort-final.jpg",
