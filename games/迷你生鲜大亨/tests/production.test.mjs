@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {Simulation,createState,countBag} from '../src/simulation.mjs';
+import {productsFor} from '../src/config.mjs';
+function kitchen(){const s=createState(313);s.started=true;s.money=10000;s.expansions.north=true;s.goods.juice.unlocked=true;const sim=new Simulation(s);sim.buy('staff:juicer');return {sim,s,a:s.employees.find(a=>a.role==='juicer')};}
+test('a hired juice worker autonomously takes tomatoes, feeds the machine, collects juice and fills shelves',()=>{const {sim,s}=kitchen();s.spawnTimer=999;for(let i=0;i<1800&&s.goods.juice.stock<1;i++)sim.update(.1);assert(s.stats.harvested>0);assert(s.stats.processed>0);assert(s.goods.juice.stock>0);});
+test('a full input buffer with finished output and a full ingredient bag cannot deadlock production',()=>{const {sim,s,a}=kitchen(),g=s.goods.juice;g.input=12;g.output=24;a.bag={tomato:6};const raw=s.goods.tomato.source,juice=g.output;for(let i=0;i<1800&&g.stock===0;i++)sim.worker(a,.1);assert(g.stock>0);assert.equal(s.goods.tomato.source+a.bag.tomato+g.input,raw+6+12);assert.equal(g.output+(a.bag.juice||0)+g.stock,juice);});
+test('when the farm is empty the juice worker can take spare tomatoes from the shelf without recording a sale',()=>{const {sim,s,a}=kitchen();s.goods.tomato.source=0;s.goods.tomato.stock=30;for(let i=0;i<1000&&s.goods.juice.input===0;i++)sim.worker(a,.1);assert(s.goods.juice.input>0);assert(s.goods.tomato.stock<30&&s.goods.tomato.stock>=4);assert.equal(s.stats.units,0);assert.equal(s.stats.revenue,0);assert.equal(s.goods.tomato.stock+(a.bag.tomato||0)+s.goods.juice.input,30);});

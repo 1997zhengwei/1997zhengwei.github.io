@@ -1,0 +1,12 @@
+export function createInput(canvas,actions){
+ const keys=new Set(),screen={x:0,y:0},thumb=document.querySelector('#stick-thumb'),stick=document.querySelector('#stick');let pointer=null,drag=null;
+ const clear=()=>{keys.clear();screen.x=screen.y=0;pointer=null;drag=null;thumb.style.transform='translate(-50%,-50%)';};
+ window.addEventListener('blur',clear);
+ window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(e.target.tagName))return;keys.add(e.key.toLowerCase());if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key))e.preventDefault();if(e.repeat)return;if(e.key==='Escape')actions.pause();if(e.key.toLowerCase()==='e')actions.manage();if(e.key.toLowerCase()==='q')actions.overview();});
+ window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));
+ const stickMove=e=>{if(e.pointerId!==pointer)return;const r=stick.getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2,l=Math.hypot(dx,dy),radius=r.width*.3;screen.x=dx/Math.max(radius,l);screen.y=dy/Math.max(radius,l);thumb.style.transform=`translate(calc(-50% + ${screen.x*radius}px),calc(-50% + ${screen.y*radius}px))`;};
+ stick.addEventListener('pointerdown',e=>{pointer=e.pointerId;stick.setPointerCapture(pointer);stickMove(e);});stick.addEventListener('pointermove',stickMove);for(const type of ['pointerup','pointercancel','lostpointercapture'])stick.addEventListener(type,e=>{if(e.pointerId===pointer){screen.x=screen.y=0;pointer=null;thumb.style.transform='translate(-50%,-50%)';}});
+ canvas.addEventListener('pointerdown',e=>{drag={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};canvas.setPointerCapture(e.pointerId);actions.unlockAudio();});canvas.addEventListener('pointermove',e=>{if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>12){drag.moved=true;const l=Math.max(55,Math.hypot(dx,dy));screen.x=dx/l;screen.y=dy/l;}});
+ canvas.addEventListener('pointerup',e=>{if(!drag||drag.id!==e.pointerId)return;if(!drag.moved)actions.floor(e.clientX,e.clientY);screen.x=screen.y=0;drag=null;});canvas.addEventListener('pointercancel',clear);
+ return {clear,direction(scene){let x=screen.x+(keys.has('d')||keys.has('arrowright')?1:0)-(keys.has('a')||keys.has('arrowleft')?1:0),y=screen.y+(keys.has('s')||keys.has('arrowdown')?1:0)-(keys.has('w')||keys.has('arrowup')?1:0);const length=Math.max(1,Math.hypot(x,y));return scene.inputDirection(x/length,y/length);}};
+}

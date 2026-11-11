@@ -1,0 +1,5 @@
+import {storeTheme} from './stores.mjs';
+import {PRODUCTS,productsFor,WHEAT} from './config.mjs';
+export function reservePose(id,i=0){const n=Object.keys(PRODUCTS).indexOf(id);return {x:21+(n%3)*2.5,y:1.05+Math.floor(Math.min(i,11)/4)*.3,z:-11+Math.floor(n/3)*3+(i%4-1.5)*.22,scale:.5};}
+export function shelfPose(id,i,s){const p=(s?productsFor(s):PRODUCTS)[id];return {x:p.shelf[0]+(i%3-1)*.78,y:1.12+Math.floor(i/12)*.68,z:p.shelf[1]-1.04+Math.floor(i%12/3)*.69,scale:id==='bread'?.71:.85,ry:(i%3-.5)*.1};}
+export function sourcePose(id,i,s){const p=id==='wheat'?WHEAT:(s?productsFor(s):PRODUCTS)[id];return p.ingredient?{x:p.source[0]+1.7,y:1.04+Math.floor(i/6)*.48,z:p.source[1]+(i%3-1)*.55,scale:.78}:id==='tomato'||id==='eggplant'?{x:p.source[0]-2.6+(i%4)*1.7,y:(id==='tomato'&&storeTheme(s?.storeId)!=='corner'?1.45:1.03)+Math.floor(i/16)*.58,z:p.source[1]-1.8+Math.floor(i%16/4)*1.15,scale:.94,ry:i*.7}:{x:p.source[0]+2+(i%2)*.55,y:.76+Math.floor(i/8)*.52,z:p.source[1]-1.5+Math.floor(i%8/2)*.9,scale:.78};}
