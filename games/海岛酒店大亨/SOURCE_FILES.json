@@ -19,6 +19,16 @@
       "sha256": "9312e151dd120cde17b6943cf4631e45b704ab579bd6c2ebda130d84c94c7c16"
     },
     {
+      "path": "LOOPIT_SINGLE.html",
+      "bytes": 177151,
+      "sha256": "e2d732f2d1db7c5a415fe00819962e37ad2b85e48729ab26901e1d43f7369a9b"
+    },
+    {
+      "path": "PLATFORM_BUNDLE.md",
+      "bytes": 986,
+      "sha256": "699bc2a545d3045cf1b983966d48b9033d59a7e6382da86734c67166fd2d64a2"
+    },
+    {
       "path": "QA.md",
       "bytes": 15524,
       "sha256": "d80e240a7f735fe44d014d41e23d3d0e7e4641659be288ae51bede9f37dfd0cc"
