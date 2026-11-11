@@ -25,8 +25,8 @@
     },
     {
       "path": "LOOPIT_STATUS.md",
-      "bytes": 3338,
-      "sha256": "f7ff84d1b43e86fd0dfd9095b727c7e4ff810211574bb0035063803f79f9b07a"
+      "bytes": 3344,
+      "sha256": "f9d7e4e7f848477ce37e6d023592dcc6361954fc15bdc587fcdb07e10203f08c"
     },
     {
       "path": "PLATFORM_BUNDLE.md",
@@ -65,8 +65,8 @@
     },
     {
       "path": "qa/loopit-v1-preview.jpg",
-      "bytes": 7270,
-      "sha256": "da202700a9d4f337a0227c8660df186dd058c8feff60994ef87b0f2f85f46e65"
+      "bytes": 131330,
+      "sha256": "bcda3f7dca2559867ae81e628b837338c2be43eb0898b8ed37877086f63af894"
     },
     {
       "path": "qa/v04-resort-final.jpg",

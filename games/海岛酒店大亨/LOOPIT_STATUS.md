@@ -26,4 +26,4 @@ Chrome 创作者宿主 iframe 约472.6×757.6：从60资金开始，真实办理
 
 运行日志可见宿主身份初始化、WebSocket/Colyseus包装与重复Three.js实例警告；Chrome另有视频嗅探扩展的跨域错误。当前实测基础经营与本地保存正常；没有据此声称平台身份/云存档、联机或真机硬件性能已通过。此单人游戏沿用本机localStorage，不依赖这些平台联网能力。
 
-![Loopit V1 已完成与实际经营预览](./qa/loopit-v1-preview.jpg)
+![Loopit V1 无测试参数的正常开业首屏](./qa/loopit-v1-preview.jpg)
