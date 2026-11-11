@@ -1,0 +1,29 @@
+/* v0.4: bright arcade colours coordinated with the classic hotel palette. */
+:root{--teal:#138fdf;--dark:#123f79;--cream:#fff5c8;color:#fff8dc}
+.brand{background:linear-gradient(#23b5f1,#148ad6);border:2px solid #ffdf73;box-shadow:0 3px 0 #1262a8,0 6px 12px #21476220}
+.brand h1{color:#fff9e0;text-shadow:0 2px 0 #1767a1}.brand small{color:#ddf6ff}.brand .stars{color:#ffe133;text-shadow:0 1px 0 #a56b16}
+.brand-mark{background:linear-gradient(#ffe47a,#ffbd37);border-color:#fff5bf;box-shadow:0 2px 0 #b88523}
+.wallet{background:linear-gradient(#7ee640,#49bf24);border-color:#fff29a;box-shadow:0 4px 0 #2f8b24}
+.wallet strong{color:#fffbe0;text-shadow:0 2px 0 #3b8825}.wallet small{color:#f1ffd7}.wallet>span{color:#fff4ad}.wallet i{background:#ffcd32;color:#a96313;border-color:#fff08a}
+.goal-card{background:linear-gradient(#25afea,#168cda);border-color:#c8f4ff;box-shadow:0 3px 0 #1364b0}.goal-card>strong{color:#fff8df;text-shadow:0 1px #226a98}.goal-eyebrow{color:#d8f6ff}.goal-eyebrow b{color:#ffe134}.goal-line{background:#1267b3}.goal-line i{background:linear-gradient(#a1ed46,#66cd23)}
+.circle{background:linear-gradient(#39bcf5,#1690df);color:#fffbe1;border-color:#fff0a8;box-shadow:0 3px 0 #1767aa}
+.carry{background:#268ed5;border-color:#d8f5ff;box-shadow:0 3px 0 #1760a3}.carry span,.carry b{color:#fff7d0}.carry small{color:#d5efff}
+.quick-actions button{background:linear-gradient(#40bcf2,#168cdb);color:#fff8dc;border-color:#fff0a5;box-shadow:0 3px 0 #145d9d}.quick-actions svg{color:#fff5c7}.quick-actions b{background:#fa5f3e;border-color:#fff3b6}
+.manage-button,.manage-button:hover{background:linear-gradient(#ffcc3e,#f69b21);border-color:#fff4b2;color:#fff9e6;text-shadow:0 1px #af6721;box-shadow:0 4px 0 #bd6f24,0 7px 15px #624b4a20}.manage-button svg{color:#fff7d4}
+.work-hint{background:#178ddd;border-color:#c4f3ff;color:#fffbe3}.work-line{background:#1267b4}.work-line i{background:#8be039}
+.room-label{background:#219beb;color:#fff8df;border-color:#fff0ac;box-shadow:0 2px 0 #155c9a}.room-label i{color:#d9f8ff}.room-label.occupied{background:#258ee0;color:#fffbe7}.room-label.occupied i{color:#d7efff}.room-label.dirty{background:#f7a02a;border-color:#fff0a1;color:#fffbea}.room-label.dirty i{color:#fffbe3}.room-label.locked{background:#46bc6be6;color:#fff9d4;border-color:#e5ffb1}.room-label small{color:#eaffd9}.room-cash{background:#ffe14a;color:#9a5c15}.facility-label.ready{background:#279ee4;color:white}.facility-label.empty-stock{background:#f56f37;color:#fff8db}
+.sheet,.dialog{background:linear-gradient(160deg,#27b9ed,#168cde 78%);border:3px solid #ffda4e;color:#fff7de;box-shadow:0 8px 0 #1a65ac60,0 20px 70px #163c6f60}
+.sheet-header h2,.dialog h2{color:#fff8e1;text-shadow:0 2px #1672af}.sheet-header small,.modal-eyebrow{color:#d5f6ff}.sheet-wallet{background:#177bc7;color:#cdeeff}.sheet-wallet b{color:#ffe66d}.sheet-wallet span{color:#c9efff}
+.close{background:linear-gradient(#ff7951,#ed4638);color:#fff;border-color:#ffe3a6;box-shadow:0 2px 0 #b13632}
+.sheet-tabs button{background:#207ecd;color:#daf7ff;box-shadow:0 2px 0 #145ca7}.sheet-tabs .selected{background:linear-gradient(#a1e840,#67c922);color:#fffbe8;box-shadow:0 3px 0 #398a21;text-shadow:0 1px #4a8c1e}.sheet-note{color:#e1f7ff}
+.upgrade-card{background:linear-gradient(135deg,#55c5f2,#259be5);border-color:#b6eeff;box-shadow:0 3px 0 #1470b55e}.room-thumb{background:linear-gradient(#9de4ff,#6fcaf5);border-color:#d4f7ff}.card-body h3{color:#fffbea;text-shadow:0 1px #2076a8}.card-body small{color:#d9f4ff}.card-body p{color:#ecfaff}
+.card-icon{background:linear-gradient(#ffe58c,#ffc24d);border-color:#fff2b8}.card-icon.facility{background:linear-gradient(#85e8e6,#36c4ce);color:#fffde5}.card-icon.owner{background:linear-gradient(#ffe16a,#ffbe39);color:#ad761b}
+.price-button{background:linear-gradient(#9aea41,#5fc822);color:#fffbe8;border-color:#e2ff89;box-shadow:0 3px 0 #378c21;text-shadow:0 1px #5b991e}.price-button:disabled{background:#67a9cb;border-color:#9fcee2;color:#d8eaf1;box-shadow:0 2px 0 #3a87b4;text-shadow:none;opacity:1}
+.text-button{background:#177dc7;color:#e7f8ff;border-color:#78c7f3}.owned,.maxed{color:#f2ffaf}.sheet-footer{background:#197dc6;color:#d8f5ff}.dialog p{color:#ebf9ff}
+.primary{background:linear-gradient(#9ee943,#62ca22);color:#fffde3;border-color:#e6ff8f;box-shadow:0 3px 0 #358b23;text-shadow:0 1px #5e941d}.secondary{background:#207ecc;color:#e2f5ff;border-color:#70c8f1}.subtle{color:#caedff}
+.business-stats div{background:#1b87cd;border-color:#81d4f4}.business-stats b{color:#ffea75}.business-stats small{color:#d7f2ff}.help-steps b{color:#ffe279}.goal-row{border-color:#6bc8f1}.goal-row strong{color:#fff7d9}.goal-row small{color:#d9f6ff}.goal-row>span{color:#ffe14f}.goal-row.done>b{color:#c7ff8a}
+.intro-card{background:linear-gradient(145deg,#2ebcec,#168fdf);border-color:#ffe163;box-shadow:0 5px 0 #186caf,0 15px 35px #174d7e40}.intro-kicker{color:#ffe25f}.intro-card h2{color:#fff8db;text-shadow:0 2px #1a73ad}.intro-card p,.intro-card>small{color:#e5f9ff}.intro-start{background:linear-gradient(#a4eb4a,#64ca24);color:#fffce2;border-color:#f0ffa1;box-shadow:0 3px 0 #408c28}
+#toast{background:#238fdc;color:#fffbe4;border-color:#bcecff;box-shadow:0 3px 0 #1a67ab}#toast.goal{background:#fff09d;color:#9a5a16;border-color:#ffd326}#toast b{color:#a96511}
+.stick{background:#ffffff21;border-color:#fff5d9bc}.stick i{background:linear-gradient(#fffde4,#f5df92);border-color:#fff7d1;box-shadow:0 3px 0 #af923f80}
+
+.circle:hover,.circle:focus-visible{background:linear-gradient(#53c7fa,#1a8cdb);color:#fffbe1}

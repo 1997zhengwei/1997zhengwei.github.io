@@ -1,0 +1,247 @@
+{
+  "game": "海岛酒店大亨",
+  "version": "0.5.0",
+  "hash_scope": "Git canonical blob bytes; manifest excludes itself",
+  "files": [
+    {
+      "path": "ART_DIRECTION_v04.md",
+      "bytes": 1515,
+      "sha256": "1f423b365a22f50c4a1c07ee8e9d02f10cd5772a5fd7c87c2acc979ce975d7ee"
+    },
+    {
+      "path": "BRIEF.md",
+      "bytes": 1591,
+      "sha256": "1e6a1ac3cef3c89e8c126df5796628c5e02aafd7ae86031e0ed3f659a788d23c"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 5685,
+      "sha256": "9312e151dd120cde17b6943cf4631e45b704ab579bd6c2ebda130d84c94c7c16"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 15524,
+      "sha256": "d80e240a7f735fe44d014d41e23d3d0e7e4641659be288ae51bede9f37dfd0cc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7416,
+      "sha256": "44219597dfd7c568c684dcf288bb18150f89412bb6b7e209b51fe29b1211af4f"
+    },
+    {
+      "path": "build.mjs",
+      "bytes": 221,
+      "sha256": "33a138633c160f3966bf34f110efe91f6dad8206821666de9bafbc50546e8a75"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1093,
+      "sha256": "6f5382dbeb6a854cb99a264493637b2ae81c548843238918bea3e55569ede888"
+    },
+    {
+      "path": "package.json",
+      "bytes": 216,
+      "sha256": "d4505ff9453135dc57f1bb9e9f79b87c71e5fecedc4fc373256f67b2e0000546"
+    },
+    {
+      "path": "qa/character-studio.html",
+      "bytes": 2559,
+      "sha256": "2ba7e98f6d86103a74d0c49a0ee0f633efd591f6e3aec14e6497de62abbcddf7"
+    },
+    {
+      "path": "qa/v04-resort-final.jpg",
+      "bytes": 80170,
+      "sha256": "a3e7701dc0cb6e3beede60c5bce9eafc1e40329b2e5e9221a79014eba16a8e68"
+    },
+    {
+      "path": "qa/v05-career-earned.jpg",
+      "bytes": 49110,
+      "sha256": "258e82046566ec2eea76b65d500f4773b7b090bbc567143cefbebceb5e90334f"
+    },
+    {
+      "path": "qa/v05-first-day-cleaned.jpg",
+      "bytes": 44790,
+      "sha256": "431e5d121c03b0fcd645a7f68462f10712d84d8445b0c25d1cc3077a42fc5e02"
+    },
+    {
+      "path": "qa/v05-villa-gameplay.jpg",
+      "bytes": 77791,
+      "sha256": "b7dc988cab8e549644329b6081626374365a851132acfdb95f411b1b96271525"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1669,
+      "sha256": "fd1b89d36ddb9043757340f87d929846ee32202c1b1ae4dbe720c1af33c2e40e"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 4893,
+      "sha256": "e2641529b80e66e1e1f1b3eca20e10381618680dff88e0d2d25dbdc3561683a0"
+    },
+    {
+      "path": "src/art.mjs",
+      "bytes": 11956,
+      "sha256": "af51b1d95bb41ba93b409c95e01c3141fd5a4b703b43d0d96de61612a9854c7b"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 1006,
+      "sha256": "63f0abf4126b45f8eeeb4da93b4e34508ad70c42c9e018d9d8b2052e18923c75"
+    },
+    {
+      "path": "src/characters.mjs",
+      "bytes": 19251,
+      "sha256": "97a012abf2adcfdffd0edc5f739cdab5b398a4acdf5325fa0194d796d0126d2d"
+    },
+    {
+      "path": "src/config.mjs",
+      "bytes": 4014,
+      "sha256": "883d44a657a00f800e8a2003dc93f073f2aa7c67edb1934dfa8a7d6c77737e5d"
+    },
+    {
+      "path": "src/effects.mjs",
+      "bytes": 4989,
+      "sha256": "2f8f03b3ef8785574143b82795e5772b028ad93648951dee03e7cfb22bf736cf"
+    },
+    {
+      "path": "src/game-ui.css",
+      "bytes": 14569,
+      "sha256": "1848f17e22fb6cbe44c3e6dd7ac7dae22f9856f93a7aa0514fae5007194606b8"
+    },
+    {
+      "path": "src/growth-ui.css",
+      "bytes": 3344,
+      "sha256": "eecbd6e75c8c0e50778ed511087fb6b29da21ec557c428335dc4f934200aa69c"
+    },
+    {
+      "path": "src/growth-ui.mjs",
+      "bytes": 8685,
+      "sha256": "0780e234951d715d6d2575f263fefd27d7fbc3838fb25470efb9f0d36d2b8836"
+    },
+    {
+      "path": "src/guest-looks.mjs",
+      "bytes": 5844,
+      "sha256": "1476b244b885c77f1bb8f50ce5704e26048abf93b77d0d52af812d80e86d3da4"
+    },
+    {
+      "path": "src/input.mjs",
+      "bytes": 2464,
+      "sha256": "907134cc804f86b6bc1a5d76b0e834211b5b6143de1e4a3527ed19eb117ae098"
+    },
+    {
+      "path": "src/lobby-shell.mjs",
+      "bytes": 2085,
+      "sha256": "f4807008ffe98a1e4fd12a598e6b3d7cee972941cff4fa82524a564ccbfa342d"
+    },
+    {
+      "path": "src/navigation.mjs",
+      "bytes": 3831,
+      "sha256": "e70d96ab30c2b6a8f72814d005d323f67f8fa74f0a763709788cb85711286958"
+    },
+    {
+      "path": "src/palette.mjs",
+      "bytes": 732,
+      "sha256": "e6fd1172c3d6a7694781b443a86323ad9f8ee0461131f85a3b7046b46e98c1dd"
+    },
+    {
+      "path": "src/presentation.mjs",
+      "bytes": 1313,
+      "sha256": "25ebc078afeced73d13800d4c0f1d75e67b91753569f5104ea9dd45cf969c3a5"
+    },
+    {
+      "path": "src/progression.mjs",
+      "bytes": 6287,
+      "sha256": "debd75e43530cbf6184d74caae39e381c4b8495a87c3449d9e8e569ffd93698c"
+    },
+    {
+      "path": "src/reference-ui.css",
+      "bytes": 5570,
+      "sha256": "7e99c607c4c51591d130339841038cf3e6ad3a65557d60d6ee80588e91b11d52"
+    },
+    {
+      "path": "src/room-details.mjs",
+      "bytes": 5052,
+      "sha256": "050762950c58cb58f342b8d054c7d16cd113c93dddff005d6d174b28484f1721"
+    },
+    {
+      "path": "src/scene.mjs",
+      "bytes": 22712,
+      "sha256": "9e0e3724ae677cf1eae10801d4f2ab0a883e1e0a59e82d7b0a4230f11183ecd7"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 18542,
+      "sha256": "37ddd0f6360c7715ec5144df1ba153ead6dd033dcc6b23a023289710cc97670f"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 16980,
+      "sha256": "b25990faae527554e1042632459afba9d8a0d0c48e5f3786e553d309dde637b2"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 21231,
+      "sha256": "031e85648bf71e05b315462b87bb2eef258614e9181a3407d0aa2dd1ab7b3e6c"
+    },
+    {
+      "path": "src/villa-art.mjs",
+      "bytes": 3307,
+      "sha256": "40c3db524eb4e7497c6ef39ea2433b4f10e99f13608f60fb19051a1aab3e051f"
+    },
+    {
+      "path": "src/water.mjs",
+      "bytes": 2083,
+      "sha256": "31b0cc9c51c0b209c896a70e4bfc0ea4f33932408a4379ca8cfdc0c7258dc781"
+    },
+    {
+      "path": "tests/guest-looks.test.mjs",
+      "bytes": 2288,
+      "sha256": "b177844a8ec706d3f1882700c496bb58d48277e7b8af33907151641ead3bbe65"
+    },
+    {
+      "path": "tests/hotel.test.mjs",
+      "bytes": 7243,
+      "sha256": "407e6e388d74a9b69737f9d476df1c9dc106cf09ad4a5af8a403aeb488c8bb0f"
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "bytes": 1362,
+      "sha256": "4d1bea78541556e231b89a9041047fdf17c5ee625e8aa9c33c62d36e4c648c3a"
+    },
+    {
+      "path": "tests/progression.test.mjs",
+      "bytes": 9167,
+      "sha256": "61fcaf6be31343bd016f3b9d552219a648fe7bda0626d862b384dd34a703b45e"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/geometries/RoundedBoxGeometry.js",
+      "bytes": 6483,
+      "sha256": "b3e2d87473cd48f59720739a6ceedbd9f0dccf89224c84403730b2e808d5e4f2"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37725,
+      "sha256": "ce6b8c82f29e4ad7e8e330ce2bccd921de6c36a5c05c8f50f9a8b039596b8551"
+    },
+    {
+      "path": "启动试玩.cmd",
+      "bytes": 53,
+      "sha256": "42055f20ddc55d1d91b67cbeff1ab288607a0f2c03548b21fc0a58823caea247"
+    }
+  ]
+}
