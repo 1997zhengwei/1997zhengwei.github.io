@@ -1,0 +1,4 @@
+dist/
+qa/server*.log
+*.pyc
+__pycache__/
