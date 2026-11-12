@@ -1,0 +1,6 @@
+export class Audio{
+constructor(){this.mute=false;this.ctx=null;}
+unlock(){if(!this.ctx){this.ctx=new (window.AudioContext||window.webkitAudioContext)();this.gain=this.ctx.createGain();this.gain.gain.value=0;const b=this.ctx.createBuffer(1,this.ctx.sampleRate*2,this.ctx.sampleRate),a=b.getChannelData(0);for(let i=0;i<a.length;i++)a[i]=(Math.random()*2-1)*.18;const n=this.ctx.createBufferSource();n.buffer=b;n.loop=true;const filter=this.ctx.createBiquadFilter();filter.type='lowpass';filter.frequency.value=2400;n.connect(filter).connect(this.gain).connect(this.ctx.destination);n.start();}if(this.ctx.state==='suspended')this.ctx.resume().catch(()=>{});}
+spray(on){if(this.ctx)this.gain.gain.setTargetAtTime(on&&!this.mute?.18:0,this.ctx.currentTime,.08);}
+play(kind){if(!this.ctx||this.mute)return;const notes=kind==='vip'?[523,659,784,1046,1318]:kind==='finish'?[620,820,1040]:kind==='purchase'?[440,660,880]:kind==='phase'?[680,900]:[480];notes.forEach((hz,i)=>{const o=this.ctx.createOscillator(),g=this.ctx.createGain(),t=this.ctx.currentTime+i*(kind==='vip'?.11:.08);o.type='sine';o.frequency.value=hz;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.055,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+.18);o.connect(g).connect(this.ctx.destination);o.start(t);o.stop(t+.2);});}
+}

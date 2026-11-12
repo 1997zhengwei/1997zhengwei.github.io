@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#123f48"><title>泡沫海岸 · 洗车大亨</title><link rel="preload" href="./assets/ui/Nunito.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="./src/style.css"><link rel="stylesheet" href="./src/arcade.css"></head>
+<body>
+<canvas id="game" aria-label="三维洗车场，拖动车身清洗或点击车道"></canvas>
+<div id="hud">
+ <header><div class="brand"><span class="brand-icon" data-icon="car"></span><div><small>FOAM COAST</small><b>泡沫海岸</b><span id="stars">★☆☆☆☆</span></div></div><button id="wallet" aria-label="查看经营收入"><span class="coin" data-icon="coins"></span><strong id="money">90</strong><small>可用金币</small></button></header>
+ <button id="goal" class="goal"><span id="goal-kicker">从第一辆车开始</span><span id="goal-count" class="goal-count">0/3</span><b id="goal-title">完成 3 次洗车</b><div class="goal-track"><i id="goal-fill"></i></div><small id="goal-sub">0 / 3 · 奖励 120 金币</small><span class="goal-chevron" data-icon="chevron-right"></span></button>
+ <aside class="tools"><button id="overview" aria-label="全店视角" title="全店视角 Q" data-icon="layout-grid"></button><button id="sound" aria-label="切换音效" data-icon="volume"></button><button id="pause" aria-label="暂停" data-icon="player-pause"></button><button id="help" aria-label="玩法说明" data-icon="help"></button></aside>
+ <div id="labels" aria-hidden="true"></div><div id="floaters" aria-live="polite"></div>
+ <button id="vip-banner" class="vip-banner" aria-label="查看豪车委托" hidden><span class="vip-banner-icon" data-icon="sparkles"></span><span><small>VIP ARRIVAL / 豪车闪亮登场</small><b id="vip-banner-name"></b><em id="vip-banner-care"></em></span><span class="vip-banner-go" data-icon="chevron-right"></span></button>
+ <section id="service" class="service">
+  <div class="service-info"><div class="service-top"><div><button id="bay-switch" class="bay-switch" aria-label="切换洗车道"><span id="bay-label">01 / 海岸手洗工位</span><span data-icon="arrows-exchange"></span></button><h2 id="car-name">第一辆小轿车</h2></div><div class="bill"><small>预计收入</small><b id="bill">60</b></div></div>
+  <div class="stages" id="stages"><span>① 泡沫</span><span>② 冲洗</span><span>③ 上蜡</span></div>
+  <div id="vip-care" class="vip-care" hidden><div><b id="vip-care-title"></b><span id="vip-care-bonus"></span></div><small id="vip-care-step"></small></div>
+  <div class="wash-track"><i id="wash-fill"></i></div>
+  <div class="service-bottom"><p id="work-hint">拖动车身，或按住精洗</p><span id="work-percent">0%</span></div></div>
+  <div class="action-row"><button id="work" class="work"><span id="work-icon" class="work-icon" data-icon="spray"></span><span><b id="work-title">喷洒泡沫</b><small id="work-sub">按住精洗</small></span></button><button id="build-action" class="build-action"><span data-icon="building-store"></span><b>扩建</b><small>车道与设备</small></button></div>
+ </section>
+ <nav class="bottom-nav"><button id="equipment" aria-label="设备升级"><span data-icon="settings"></span><b>设备</b><i id="upgrade-dot"></i></button><button id="staff" aria-label="雇用员工"><span data-icon="users"></span><b>员工</b></button><button id="style" aria-label="装扮工坊"><span data-icon="shirt"></span><b>装扮</b></button></nav><button id="map" class="map-button" aria-label="商业地图"><span data-icon="map"></span><b>地图</b></button>
+</div>
+<div id="intro" class="intro"><div class="intro-chip">一家小店，一整个洗车帝国。</div><h1>让每辆车<br>重新<span>闪闪发亮。</span></h1><p>冲掉泥污，铺满泡沫。<br>从亲手洗净第一辆车，到拥有自己的自动洗车场。</p><button id="start" class="primary">开门营业 <span data-icon="chevron-right"></span></button><small>拖动车身清洗 / 按住按钮精洗 · 自动保存进度</small></div>
+<div id="modal" hidden><div class="scrim"></div><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"><div class="sheet-head"><div><small>FOAM COAST / MANAGEMENT</small><h2 id="sheet-title">经营工坊</h2></div><button id="close" aria-label="关闭面板">×</button></div><div id="sheet-tabs"></div><div id="sheet-content"></div><footer id="sheet-footer"></footer></section></div>
+<div id="paused" hidden><div><small>TAKE A LITTLE BREAK</small><h2>休息一下</h2><p>车辆和设备都在等你回来。</p><button id="resume" class="primary">继续营业 →</button></div></div>
+<div id="toast" role="status"></div><div id="fatal" hidden>画面暂时没有成功启动。请刷新重试，经营进度会保留。</div>
+<script type="module" src="./src/app.mjs"></script></body></html>
