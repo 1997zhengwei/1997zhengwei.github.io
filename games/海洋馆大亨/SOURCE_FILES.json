@@ -1,0 +1,283 @@
+{
+  "game": "海洋馆大亨 · 蔚蓝海岸",
+  "version": "0.4.0",
+  "directory": "games/海洋馆大亨/",
+  "entry": "index.html",
+  "platformEntry": "LOOPIT_SINGLE.html",
+  "tests": {
+    "passed": 53,
+    "failed": 0
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 31,
+      "sha256": "711076672ba783a84bc6cd35ff394a2e0171425d66fcf33544d2d65c50a732c7",
+      "gitBlob": "959b53485d90020cb75e046fe5d3f7d0bdf4e0ec"
+    },
+    {
+      "path": "assets/ui/Nunito.ttf",
+      "bytes": 276932,
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+      "gitBlob": "2ec1f4b0676c83ef33049db87b311171699e9192"
+    },
+    {
+      "path": "assets/ui/NUNITO_OFL.txt",
+      "bytes": 4385,
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65",
+      "gitBlob": "c8210f08ca3cece05b4f7baa428afe8e1abe3293"
+    },
+    {
+      "path": "BRIEF.md",
+      "bytes": 4556,
+      "sha256": "1bd5186ed5084cae41275f6082ccf3375234b6371d3b42c1acd95d894b0415f9",
+      "gitBlob": "831bdaee36b1a929fd4b04b6dcccc69e53a928d4"
+    },
+    {
+      "path": "build.mjs",
+      "bytes": 467,
+      "sha256": "ba08318f163e5f45b0f8fc711aa52f938ae8c58e3f7e9769a583064c0fc52caa",
+      "gitBlob": "cbec9c0f571def73f59d5d7660eed166f106d924"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5201,
+      "sha256": "8e35823422a898ce05133dbe41532028e176ff269dcfe32ccdbca9eff1564e51",
+      "gitBlob": "443894635ee84c2c90e72190f48899064021599b"
+    },
+    {
+      "path": "launch.py",
+      "bytes": 1351,
+      "sha256": "2c1ab5484c34d0d21c613966987cda414ac6e0ad2e988fabdf38fb35a6793a4e",
+      "gitBlob": "8c83ebcbafda7108f9d897428cf6a22143b48144"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 4540,
+      "sha256": "14e3a426ab4ce3806b0687132f05ba886510608764f05db6b9e86d2defa3813f",
+      "gitBlob": "4ed7cd7dc99dadbd74039c38ce384b277bd7773a"
+    },
+    {
+      "path": "LOOPIT_SINGLE.html",
+      "bytes": 185729,
+      "sha256": "b9923e08c20689420741cf5dfccce946d1bfdbd948d7d817f258d0003e9ff21a",
+      "gitBlob": "2982327ea7b845ca73821edf2e8c88b1a2377b8d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 201,
+      "sha256": "30b73734e6524c887efe1baa0b982f25ef8f30eb54f76b1d6116c1dd3d6cb0e4",
+      "gitBlob": "a2fb4c92ce7f7c35b18fb1cfd4d6fabeecfc248a"
+    },
+    {
+      "path": "PLATFORM_BUNDLE.md",
+      "bytes": 533,
+      "sha256": "b6268acbad666db12b5254b3c5ebbfbad6996aa44cc717eef52cb01d1a7c661b",
+      "gitBlob": "7e67d195bcdd90bb6fdbf2ea416ff31652c25b18"
+    },
+    {
+      "path": "qa/expand-panel-320-v040.jpg",
+      "bytes": 26436,
+      "sha256": "8e666ae4230f492853fe4f5a3890515cdfc33ff36adb9e5d6dad021de6aa0d4a",
+      "gitBlob": "5a41c7e58402767795fc0e976150eee2f0b43b11"
+    },
+    {
+      "path": "qa/overview-v040.jpg",
+      "bytes": 116869,
+      "sha256": "19c431739b0d5c47e1cecd64f72c8eb9209fae5643bd9c588c9e9785e6b94652",
+      "gitBlob": "d6c2d9329e3c1557fc718ac04595e0b239b817b9"
+    },
+    {
+      "path": "qa/tank-after-v040.jpg",
+      "bytes": 107257,
+      "sha256": "3305c78f465326a7875ce6be47b44af585bd15a5d7f3386b84f3b5350edb9e5a",
+      "gitBlob": "1c9919e9e5ee48488609d082342e8b139af29163"
+    },
+    {
+      "path": "qa/tank-before-v040.jpg",
+      "bytes": 106374,
+      "sha256": "2bbf13964796edc30c73fbaf9e4859f2a51fed06314c491e221aa75d9fbb4a43",
+      "gitBlob": "2e6a7f06e55f72f62846e5fda8d07fcb7e532547"
+    },
+    {
+      "path": "qa/unique-tanks-320-v040.jpg",
+      "bytes": 27401,
+      "sha256": "da92b90c816ff15695c0115405055ad51079198bfa74b19b95e610d174409db1",
+      "gitBlob": "b2c4832a0855a6d6c971d6789eba235d432b0768"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 4854,
+      "sha256": "98531a47ce870caa0dcc295259f78df24893a28893e369a936ce67f363892c33",
+      "gitBlob": "a613dc962391e58ecfc50e3ae0fd40ea3cdd4ea5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6704,
+      "sha256": "bb6aeb70db2a61d8ba5308a841b7d249a54246be023b8a234e712190f4d107a4",
+      "gitBlob": "aa50564ccaa251258ca69b27dc4ac8c30818ca52"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1119,
+      "sha256": "082a9bfff43feafa2b2b97e3cb9c67204d4b89e692738282f66abf7af242fd34",
+      "gitBlob": "67443d9fd0499e58f30d7f46694d2732688a2c46"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 20665,
+      "sha256": "e01d17ddd41603f5490031097f447758a5b84d52e6f6568e26803edd1ce6797e",
+      "gitBlob": "0f90b9afd11cbf9f1bbce808b80ded644754a53a"
+    },
+    {
+      "path": "src/art.mjs",
+      "bytes": 26377,
+      "sha256": "1865da3e751220dabbee058b71e4266d7c68bc285b78142a1d7982400f2dadca",
+      "gitBlob": "d3305e809007e93ee06a18eae62ea1f2b28b22ed"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 1942,
+      "sha256": "af1e7200424cb31aa368230eb1663337d937714f382754a5d90c695735b536b5",
+      "gitBlob": "25f0f771876e0289a49a4e6fd9a777ac660f9899"
+    },
+    {
+      "path": "src/data.mjs",
+      "bytes": 2854,
+      "sha256": "aa6c55085d9afd92bee30f8bbe52dd906adf17e707a9db26e763a17b2da4724c",
+      "gitBlob": "1628353b3a6be4cfa98f863f137b4afd730ed183"
+    },
+    {
+      "path": "src/effects.mjs",
+      "bytes": 1547,
+      "sha256": "9a53f40a3c337e6af386144f316d67c5614c5d0a7effef263ba41715bbea8b03",
+      "gitBlob": "9063dab807236983e424fbb522570e2cdc60eb91"
+    },
+    {
+      "path": "src/fish-art.mjs",
+      "bytes": 5401,
+      "sha256": "7f1f139857e81b69d308099c4f21f75d1bb782da1acaebc85f71b7663f332cb3",
+      "gitBlob": "b1b3a4875342ba2a822ff20daa1673ef714cedff"
+    },
+    {
+      "path": "src/gallery-art.mjs",
+      "bytes": 655,
+      "sha256": "294fe422534ea2bdf33d279c2d8fa7d869da9876e9926b1fd7d193201171cc07",
+      "gitBlob": "be3288c2387138feb3943e939c2aa3fa61e0c00d"
+    },
+    {
+      "path": "src/growth.mjs",
+      "bytes": 4259,
+      "sha256": "edfe935acbfa544091eae3cacce2582ec2260d7a1a3ba04bdff8809b90ad655a",
+      "gitBlob": "a634cc591ead87ea80902f13342d70b1e731f8a8"
+    },
+    {
+      "path": "src/input.mjs",
+      "bytes": 2731,
+      "sha256": "81857ea9e2ee19a2030b1bc5213fc95cecb2b628229f4e4aa2934083b9e06389",
+      "gitBlob": "39b3908cfd4b9ac6b88da261e8ff2822a213a599"
+    },
+    {
+      "path": "src/navigation.mjs",
+      "bytes": 3276,
+      "sha256": "50e7dcc8e1c92a20833686c114c9d1152b6b8c35b0ade2fc4d18a4176a5e3ae1",
+      "gitBlob": "0eebd7de8aaa288bf7ab9338bc2b286758865ca0"
+    },
+    {
+      "path": "src/pavilion.mjs",
+      "bytes": 2954,
+      "sha256": "89e7618b3dd9582b121750509e8d4678a60be4e9dc870bb2d3756b2e5e2f0d05",
+      "gitBlob": "bafc9ae3478e76d478ab76d4df16cfad2fb9d3da"
+    },
+    {
+      "path": "src/shore.mjs",
+      "bytes": 2208,
+      "sha256": "9e2b8dd482508bc850ea999422ff3ace29ece53c64e86b2adf0a57ad140b0849",
+      "gitBlob": "77dfa8b719ea1856eab5f271441615f1d00b5949"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 20054,
+      "sha256": "a1605d67bbe92bff586713e0b89df1ddcecec263eaf7fe65a300e67a4e125d87",
+      "gitBlob": "2a7ee1451f89e472d04a0a7043a72c76996a86b3"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 20787,
+      "sha256": "d7ef38d2530204db5106b4552db4717fa19ac1aa9e5b44fdd4e7812b4a4a4b11",
+      "gitBlob": "9fb44521e9f94ba160e236d674951c53d91e297e"
+    },
+    {
+      "path": "src/tropical.mjs",
+      "bytes": 5007,
+      "sha256": "fcddc737758701db09a317783e90d94c635b5c31ead32d8c94c3ff04f797e97e",
+      "gitBlob": "06a03fa4516d2949a0ed4625b28a602242f1d63c"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 19370,
+      "sha256": "43f76e6b14889d9b6a54db51b49fe9af6161887765f7d2c88fc0aea50c61b6fb",
+      "gitBlob": "1148cbefa5e23987b44d6dc4fab61aeddd4f2d42"
+    },
+    {
+      "path": "src/wealth-art.mjs",
+      "bytes": 6031,
+      "sha256": "de057e211d3b1d7c175ff7afe4231913b9a7bc12489568d82d72e83764beb9b2",
+      "gitBlob": "d6216e4d35264eef02f86c20b54d24a114a49155"
+    },
+    {
+      "path": "tests/growth.test.mjs",
+      "bytes": 11341,
+      "sha256": "df6c7655cd31490e81a715901c2ca9d04933c690e2fdf9f091b1f655ad88bfaf",
+      "gitBlob": "99a89eaa4b8e7b5ec9eedb4248a746e2f5872e94"
+    },
+    {
+      "path": "tests/shore-art.test.mjs",
+      "bytes": 4331,
+      "sha256": "4582dc53ac119ca6e067ec5792bae94ed1b161ed9862b0a612dd7fb7d1643fcf",
+      "gitBlob": "a8312a3942e47b1ce8ba4d4f11b080d9d2baa48d"
+    },
+    {
+      "path": "tests/simulation.test.mjs",
+      "bytes": 7291,
+      "sha256": "d9e6eef66468c28b1886076ca55b82320da46a1aefb78910bf7b9a220bcad13b",
+      "gitBlob": "1c61691bca68ec4cce6865b54e5c2350583a4328"
+    },
+    {
+      "path": "vendor/geometries/RoundedBoxGeometry.js",
+      "bytes": 6483,
+      "sha256": "b3e2d87473cd48f59720739a6ceedbd9f0dccf89224c84403730b2e808d5e4f2",
+      "gitBlob": "9ce603cfac7b59cb0388ab571f3d832cbacfba6b"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "gitBlob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "gitBlob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "gitBlob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37725,
+      "sha256": "ce6b8c82f29e4ad7e8e330ce2bccd921de6c36a5c05c8f50f9a8b039596b8551",
+      "gitBlob": "6bae3d83270ee4381110f8ec0d1a6caf02ecaa23"
+    },
+    {
+      "path": "启动试玩.cmd",
+      "bytes": 44,
+      "sha256": "54fba4d16cb76d1b68f9f15f4d35107fac5fcd7e4da23b34a3952ef1815575cd",
+      "gitBlob": "3e9bf2b3ca28a5d6742db2bbd4dbb6ea5b9093d7"
+    }
+  ]
+}
