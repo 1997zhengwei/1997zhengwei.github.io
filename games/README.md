@@ -38,7 +38,7 @@
 
 | **游乐园大亨 · 欢乐岛（JOY ISLAND）** | **[打开中文源码目录](./游乐园大亨/)** | **v0.3.2；八设施真实3D经营、亲自乘坐、图标操作与完整存档；12项本地规则检查通过；[Loopit V1草稿](https://lab.loopit.me/pgc/workbench/01a1d013-3320-7c85-854d-a0d4bb5f83e5?kind=draft)及[试玩](https://cdn-cf.loopit.me/public/game/01a1d013-3320-7c85-854d-a0d4bb5f83e5/2120880465555505152/workspace/dist/index.html?loopit_preview=draft)已生成，经营收入/海盗船建造/旋转杯与过山车重玩/刷新及手机布局已实测；草稿未发布，[适配记录](./游乐园大亨/PLATFORM_QA.md)** |
 
-| **海洋馆大亨 · 蔚蓝海岸（AZURE AQUARIUM）** | **[打开中文源码目录](./海洋馆大亨/)** | **v0.4.0；潜水捕鱼、六种鱼各一座可扩容水缸、稀有鱼图鉴、透明海底通道与财富陈列；53项本地测试通过，GitHub完整源码交付；Loopit初稿接入中，未发布** |
+| **海洋馆大亨 · 蔚蓝海岸（AZURE AQUARIUM）** | **[打开中文源码目录](./海洋馆大亨/)** | **v0.4.0；潜水捕鱼、六种鱼各一座可扩容水缸、稀有鱼图鉴、透明海底通道与财富陈列；53项本地测试通过，GitHub完整源码交付；[Loopit V1初稿](https://lab.loopit.me/pgc/workbench/01a1d1a2-a456-73d2-b8b5-1483d762cf6b?kind=draft)与[试玩](https://cdn-cf.loopit.me/public/game/01a1d1a2-a456-73d2-b8b5-1483d762cf6b/2120990263559077888/workspace/dist/index.html?loopit_preview=draft)已生成，潜水/补货售卖/原缸扩容/刷新和手机布局已实测；未发布，[平台记录](./海洋馆大亨/PLATFORM_QA.md)** |
 
 ## 中文命名约定
 
