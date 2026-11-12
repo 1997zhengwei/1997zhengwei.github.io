@@ -36,7 +36,7 @@
 
 | **洗车大亨 · 泡沫海岸（FOAM COAST）** | **[打开中文源码目录](./洗车大亨/)** | **v0.3.0；三车道出口让行、三类豪车专属护理与连锁经营；34项本地测试通过；[Loopit V1草稿](https://lab.loopit.me/pgc/workbench/01a1ceb4-dcda-709e-9f05-fad44881981e?kind=draft)及[试玩](https://cdn-cf.loopit.me/public/game/01a1ceb4-dcda-709e-9f05-fad44881981e/2120784165581369344/workspace/dist/index.html?loopit_preview=draft)已生成，首单清洗/到账/扩建面板/刷新和手机布局已实测；未发布，预览时间推进偏慢待复核** |
 
-| **游乐园大亨 · 欢乐岛（JOY ISLAND）** | **[打开中文源码目录](./游乐园大亨/)** | **v0.3.2；八设施真实3D经营、亲自乘坐、图标操作与完整存档；12项本地规则检查通过；GitHub源码交付，Loopit初稿接入中** |
+| **游乐园大亨 · 欢乐岛（JOY ISLAND）** | **[打开中文源码目录](./游乐园大亨/)** | **v0.3.2；八设施真实3D经营、亲自乘坐、图标操作与完整存档；12项本地规则检查通过；[Loopit V1草稿](https://lab.loopit.me/pgc/workbench/01a1d013-3320-7c85-854d-a0d4bb5f83e5?kind=draft)及[试玩](https://cdn-cf.loopit.me/public/game/01a1d013-3320-7c85-854d-a0d4bb5f83e5/2120880465555505152/workspace/dist/index.html?loopit_preview=draft)已生成，经营收入/海盗船建造/旋转杯与过山车重玩/刷新及手机布局已实测；草稿未发布，[适配记录](./游乐园大亨/PLATFORM_QA.md)** |
 
 ## 中文命名约定
 
