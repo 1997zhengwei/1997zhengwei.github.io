@@ -1,0 +1,331 @@
+{
+  "game": "电影院大亨 · 星映影城",
+  "version": "0.4.0",
+  "directory": "games/电影院大亨/",
+  "entry": "index.html",
+  "platformEntry": "LOOPIT_SINGLE.html",
+  "tests": {
+    "passed": 26,
+    "failed": 0
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 31,
+      "sha256": "711076672ba783a84bc6cd35ff394a2e0171425d66fcf33544d2d65c50a732c7",
+      "gitBlob": "959b53485d90020cb75e046fe5d3f7d0bdf4e0ec"
+    },
+    {
+      "path": "assets/films/coral-kingdom.png",
+      "bytes": 3163954,
+      "sha256": "b67df06e8f582c935edf200a2d9069431eac1035d178e747c173968776306e6a",
+      "gitBlob": "46c52b50fe9090961a78c49ab07f026cd8a12b35"
+    },
+    {
+      "path": "assets/films/island-wings.png",
+      "bytes": 3161231,
+      "sha256": "13552b8766d912a9b82cb396e4d815c52245cc37a6edc6a998e071209aaea1d2",
+      "gitBlob": "3b3a64b5c49e06cb3cc8c5813c3c94c7d0cbbe76"
+    },
+    {
+      "path": "assets/films/moonlight-express.png",
+      "bytes": 2597781,
+      "sha256": "f235f50e70bf77d5d324e117e08d1392aca568b0164bd3a6ca34e74b328f26a7",
+      "gitBlob": "7a8b7d0b8b4af39d8e08068a31d74ff231e488ac"
+    },
+    {
+      "path": "assets/films/rainy-detective.png",
+      "bytes": 3068155,
+      "sha256": "bbeaf9407619080397a629c1911a6402ae46f9481275835be6aac2ad839740e0",
+      "gitBlob": "160a3033fb12b83b6987e65fe579bc4ae2757d42"
+    },
+    {
+      "path": "assets/films/snowbound-letters.png",
+      "bytes": 3315930,
+      "sha256": "730baed26a1a78c999722b6b66b405816f14ffef1339d9956c363dab4e4e7626",
+      "gitBlob": "03f8ff1fd0c146e37823cafaade763a923d50fbf"
+    },
+    {
+      "path": "assets/films/sunrise-racers.png",
+      "bytes": 2691400,
+      "sha256": "2f3d1d155fe57c9dea4fd13f37946bf92b33116b9518c6d26882b6e5a28a7532",
+      "gitBlob": "ae323618a3a51d5f5a7550b24276d0f25eca73c5"
+    },
+    {
+      "path": "assets/ui/Nunito.ttf",
+      "bytes": 276932,
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+      "gitBlob": "2ec1f4b0676c83ef33049db87b311171699e9192"
+    },
+    {
+      "path": "assets/ui/NUNITO_OFL.txt",
+      "bytes": 4385,
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65",
+      "gitBlob": "c8210f08ca3cece05b4f7baa428afe8e1abe3293"
+    },
+    {
+      "path": "ASSETS.md",
+      "bytes": 6056,
+      "sha256": "cd3e4b0914c742756a5ae2f016d96d39571859235301ec98acc33cfad319937f",
+      "gitBlob": "fb992f70b4cc80708f3e17b6a89622df51ef5def"
+    },
+    {
+      "path": "ASSETS_V040.md",
+      "bytes": 5441,
+      "sha256": "a6b8bce30e133a413059686653a76ab7a2e0f49ccdc63d8fb736a62910fdccf9",
+      "gitBlob": "912ccc33cccc22e680dd2a58ec345db7a812f3ab"
+    },
+    {
+      "path": "build.mjs",
+      "bytes": 467,
+      "sha256": "ba08318f163e5f45b0f8fc711aa52f938ae8c58e3f7e9769a583064c0fc52caa",
+      "gitBlob": "cbec9c0f571def73f59d5d7660eed166f106d924"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4652,
+      "sha256": "810de4a2ca7d0cbd364a90628a14a81dda1727064501c8e836b735f00cc045dd",
+      "gitBlob": "2b8b40200047df77421f5865f529365f40c825d8"
+    },
+    {
+      "path": "launch.py",
+      "bytes": 1623,
+      "sha256": "4fcf15712a1058bca61b9717f8cdf35785d61ee45de5e173da77ede833086e28",
+      "gitBlob": "16f851eb60f5bbedc069f7c9520d4e0a22f9c046"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 4929,
+      "sha256": "f55e53bae74d443e18d8383562f5ce426cb8886f36ef924972da8a7a03896d6d",
+      "gitBlob": "891d6d3983da0e95786120f050eb7c2964f72298"
+    },
+    {
+      "path": "LOOPIT_SINGLE.html",
+      "bytes": 204279,
+      "sha256": "c679258701c7b2e956b53c608e14f9a768411fc9aa308ec9468f66955efb806f",
+      "gitBlob": "09cc46428838d82f6fc5236458f719979fd89012"
+    },
+    {
+      "path": "package.json",
+      "bytes": 160,
+      "sha256": "7fcc27f5cf0868080f4ccdcd0d446e7033caf9e268dbc86f84c07040ee8c251b",
+      "gitBlob": "5e204943ed381d510fff0b42e369b913482e6ae1"
+    },
+    {
+      "path": "PLATFORM_BUNDLE.md",
+      "bytes": 765,
+      "sha256": "5e6bb1d12b6d0301395520b875233e8aef658b47d6364ef002fbfe96a1a2724b",
+      "gitBlob": "dca585ced4b905eab0f3b58498c4835f06c2db15"
+    },
+    {
+      "path": "qa/v040/expansion-completed-16-seats.jpg",
+      "bytes": 128913,
+      "sha256": "f9fda580c751a05a40f6cb905aeb0bf36b4aaf0bfe3795edcf36633aa9f42120",
+      "gitBlob": "67ccfd5b21dd443411711394a4481e1d8f18cbe5"
+    },
+    {
+      "path": "qa/v040/new-film-on-screen.jpg",
+      "bytes": 30802,
+      "sha256": "92bff3e042675406620dce8432d0abc4e9fb00fa21d6aafaa0144819492fd39e",
+      "gitBlob": "5792bb548f404a1d547b61674abfc42daa1904d7"
+    },
+    {
+      "path": "qa/v040/phone-320-reservation-controls.jpg",
+      "bytes": 45205,
+      "sha256": "fe5cac762252437f1a8099d2c1105593a37ce1e00d7a597295244acc69744934",
+      "gitBlob": "a7b3a8dcd126436ddb7437ebfd5c76d53f3a6985"
+    },
+    {
+      "path": "qa/v040/phone-library-unique-films.jpg",
+      "bytes": 75149,
+      "sha256": "16c649f285833d7f695c5c45b89eb90979bf07e9d1e15efbf1b401503c368d86",
+      "gitBlob": "6af037000014aef6ecdbae1e364ffe04c1faf3d9"
+    },
+    {
+      "path": "qa/v040/reservation-waiting.jpg",
+      "bytes": 128628,
+      "sha256": "b08547ca55eade6d2961b3bc0149865882f33922f469ce5c040907665d3fe666",
+      "gitBlob": "aef6d3a3a5ba41ca27d234153523a5510d7e8475"
+    },
+    {
+      "path": "qa/visual-baseline.jpg",
+      "bytes": 175919,
+      "sha256": "5e834e8475fb89fcdfcac49bad5f03a772c47d925645a36ecb5d6148720c57a3",
+      "gitBlob": "912d2e53d784c7d79241ba306a0b9412859d7896"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 4280,
+      "sha256": "2aa4901e9e1d708b1be2cef26a9219b1bfd5418ff29871be5fde64e7bf6dd919",
+      "gitBlob": "2e6a28fea5ad74994b4eec69e49f4b1d374fc22a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3356,
+      "sha256": "7451a072471d6bf4a72c97cbd207899127ec762e2f4be1b6b34a0d8c3296cd8b",
+      "gitBlob": "a8d188a0c2da023a24e1eba8e1c1231c54b6590d"
+    },
+    {
+      "path": "REFERENCE_STUDY.md",
+      "bytes": 3511,
+      "sha256": "98be51082878aaec3d2d488176c83450713aa3806a7f016f918f53d7e3e7fa72",
+      "gitBlob": "af324121fba996cb78db2d5893d28803a23010b1"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1075,
+      "sha256": "c03b8c31c7723f67e4c39712c0a5cb50c2f09010a7de04d7d7709fdb685b2a90",
+      "gitBlob": "efefd9d834ef34a501259c7d8c60dae9639d5cf6"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 15572,
+      "sha256": "8ebefe5ae60e954a5e2e9ef67aebe8c4bdd1ff061ebc2b59e55bc09646e9c3a0",
+      "gitBlob": "6fbcbc49d2b27b4c3e0b8ba102686859024cff88"
+    },
+    {
+      "path": "src/arcade.mjs",
+      "bytes": 2890,
+      "sha256": "76d49215cd871da6506f4cbead3815b21ba6b53aa869251a3f50072a2a9ebef1",
+      "gitBlob": "874c7a5d268cd4db5675c925c9d49e09fe43a895"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 2223,
+      "sha256": "ff9032b00c88799b9eee8d15a618adb76f12a73c5876ffbd816f9a68377ef732",
+      "gitBlob": "a87fd9c4c19c8b60c02b377afcddc61fe6c84722"
+    },
+    {
+      "path": "src/characters.mjs",
+      "bytes": 8258,
+      "sha256": "8389003468f427c885f8fa24c71dc73b183da7811d7d99a81bca87907237f37c",
+      "gitBlob": "857c35f40b83fcc5202eb468fff67c92b89c1202"
+    },
+    {
+      "path": "src/city.mjs",
+      "bytes": 2323,
+      "sha256": "e788e386163e5f30ec1e4c49bf5e6e57b8aa304c7e039d2b943460cd5194f204",
+      "gitBlob": "bd7ce621e8d5fd583d967f0f6a62fc80f83a767f"
+    },
+    {
+      "path": "src/data.mjs",
+      "bytes": 5161,
+      "sha256": "5c6973323555ee6ee914426282545445f191036b76eb52010e8cef636edc87a7",
+      "gitBlob": "c7dae1421fe86f263099a208f70ec0695d6ac3d7"
+    },
+    {
+      "path": "src/effects.mjs",
+      "bytes": 2859,
+      "sha256": "6c85fe6ce06ba29ed75b8fb341cb0f6a5b205a520a1df4e0e4d013d9637fe15b",
+      "gitBlob": "a643e932e34672bc0e4f8f1de232c75c45410789"
+    },
+    {
+      "path": "src/films.mjs",
+      "bytes": 6900,
+      "sha256": "d0226f5664858244ec8a27f31d415b44b828e53d9985a197aa06efc5e4befcd1",
+      "gitBlob": "da27e8c2307da57f20df5cf978bba353879a5beb"
+    },
+    {
+      "path": "src/geometry.mjs",
+      "bytes": 6156,
+      "sha256": "7ad7a3d319537395d1927cb5da78c3201046ef73f9c9f3327c45d41a8d244766",
+      "gitBlob": "1eca45148ab2d565ea0aa2b6ed0778b6ebc0498e"
+    },
+    {
+      "path": "src/icons.mjs",
+      "bytes": 1791,
+      "sha256": "aee9739674afa38e877ca732d91769a9e065da64c9109eec13f9bdc5033fc0c2",
+      "gitBlob": "1f2235394acfb73773fa23490304aafa2a9a7346"
+    },
+    {
+      "path": "src/input.mjs",
+      "bytes": 2887,
+      "sha256": "71dc0f8995f8c9398cdfbde6b8058fbb880eddffd9d9179f33af171f9c34215d",
+      "gitBlob": "521f536acea408f80258458efa958a8688eace84"
+    },
+    {
+      "path": "src/money-flow.mjs",
+      "bytes": 1835,
+      "sha256": "b04fefd44febf41a6c2eb36097f5860a97a4c6ca1fd27a8685767d450fae2393",
+      "gitBlob": "0561dbbd72e1c79d298f9d88136303f5e390c64d"
+    },
+    {
+      "path": "src/navigation.mjs",
+      "bytes": 5027,
+      "sha256": "ea7bc9aefee94dca2d25809526883fc43cd149292d1dd1243a2008d4085e3485",
+      "gitBlob": "47460df896326e23896c590c03a145712381f7af"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 24370,
+      "sha256": "42a396d07041f26288fce788e7bf935bd5205189d92f4f2d5936d172699e341f",
+      "gitBlob": "8df44683ecb89c0918c8956e32460b100e79ffc9"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 19509,
+      "sha256": "425de9f51fd7c8e6b0c93b34b8130c07449f837fa43720d3f0f5b86df95e5d22",
+      "gitBlob": "17401bad3c6f1f4ed3d2d1ddbd0202546962c2b2"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 23530,
+      "sha256": "e1a63fbea4b2d3cdaec49168aeb7ad9cfdd910db46585d4e7bfde03387a634c0",
+      "gitBlob": "f21c194405c510080025cd390574b2a8ac406ffd"
+    },
+    {
+      "path": "src/world.mjs",
+      "bytes": 26894,
+      "sha256": "54e4e7b02992201dcf60ab0aef54eef81a2bb168b0fd6d0baac1b5e2c9b1fb34",
+      "gitBlob": "867f851f7a5e4f9ec9a1427e2525f7a8520a0df7"
+    },
+    {
+      "path": "tests/expansion.test.mjs",
+      "bytes": 5935,
+      "sha256": "2994f39daa94bd4c702be1af992048600aeb52d2ad0f94a124e3a47779ad577c",
+      "gitBlob": "7a8cce82ba065c7ef8c4e82586b0dfaa571ac3aa"
+    },
+    {
+      "path": "tests/simulation.test.mjs",
+      "bytes": 11992,
+      "sha256": "09b1a6620f6b6e6f038bbcac3231e3a0aff562119f56c3e5bb855839fd3aac6b",
+      "gitBlob": "8888917bc8da6c2deb47aa1bd59399a995e412d0"
+    },
+    {
+      "path": "vendor/geometries/RoundedBoxGeometry.js",
+      "bytes": 6483,
+      "sha256": "b3e2d87473cd48f59720739a6ceedbd9f0dccf89224c84403730b2e808d5e4f2",
+      "gitBlob": "9ce603cfac7b59cb0388ab571f3d832cbacfba6b"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "gitBlob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "gitBlob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "gitBlob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37725,
+      "sha256": "ce6b8c82f29e4ad7e8e330ce2bccd921de6c36a5c05c8f50f9a8b039596b8551",
+      "gitBlob": "6bae3d83270ee4381110f8ec0d1a6caf02ecaa23"
+    },
+    {
+      "path": "打开游戏.cmd",
+      "bytes": 41,
+      "sha256": "ef24e25d321cd492062406682d7a84a9b2a87ea617f1e738badcf0e0910e4df1",
+      "gitBlob": "f1a637053a244214a432a2e34a91784b5e252c3d"
+    }
+  ]
+}
