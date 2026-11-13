@@ -40,7 +40,7 @@
 
 | **海洋馆大亨 · 蔚蓝海岸（AZURE AQUARIUM）** | **[打开中文源码目录](./海洋馆大亨/)** | **v0.4.0；潜水捕鱼、六种鱼各一座可扩容水缸、稀有鱼图鉴、透明海底通道与财富陈列；53项本地测试通过，GitHub完整源码交付；[Loopit V1初稿](https://lab.loopit.me/pgc/workbench/01a1d1a2-a456-73d2-b8b5-1483d762cf6b?kind=draft)与[试玩](https://cdn-cf.loopit.me/public/game/01a1d1a2-a456-73d2-b8b5-1483d762cf6b/2120990263559077888/workspace/dist/index.html?loopit_preview=draft)已生成，潜水/补货售卖/原缸扩容/刷新和手机布局已实测；未发布，[平台记录](./海洋馆大亨/PLATFORM_QA.md)** |
 
-| **电影院大亨 · 星映影城（STARLIGHT CINEMA）** | **[打开中文源码目录](./电影院大亨/)** | **v0.4.0；六厅真实3D经营、六部独立原创电影、24种顾客、高堆搬货与真实雇员、可取消并刷新续行的一键预约扩容；26项本地检查通过，GitHub完整源码交付；Loopit初稿接入中，未发布** |
+| **电影院大亨 · 星映影城（STARLIGHT CINEMA）** | **[打开中文源码目录](./电影院大亨/)** | **v0.4.0；六厅真实3D经营、六部独立原创电影、24种顾客、高堆搬货与真实雇员、一键预约扩容；26项本地检查通过；[Loopit V1初稿](https://lab.loopit.me/pgc/workbench/01a1d38c-0f18-7def-b519-eb0e73c44fbf?kind=draft)与[试玩](https://cdn-cf.loopit.me/public/game/01a1d38c-0f18-7def-b519-eb0e73c44fbf/2121124793313943552/workspace/dist/index.html?loopit_preview=draft)已生成，售票/搬货/雇员/预约与退款/刷新续行及手机布局已实测；草稿未发布，[平台记录](./电影院大亨/PLATFORM_QA.md)** |
 
 ## 中文命名约定
 
