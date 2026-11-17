@@ -1,0 +1,250 @@
+@font-face{font-family:Nunito;src:url('../assets/ui/Nunito.ttf') format('truetype');font-display:swap}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{font-family:Nunito,'Microsoft YaHei',sans-serif;background:radial-gradient(ellipse at 50% 35%,#fff9ec,#e3ecf6 70%);color:#557ebc;display:flex;align-items:center;justify-content:center}button{font:inherit;cursor:pointer;touch-action:manipulation;color:inherit;border:0}button:focus-visible{outline:3px solid #7598d6;outline-offset:3px}button:disabled{cursor:default;opacity:.45}[hidden]{display:none!important}#game{position:relative;width:min(100%,480px);height:min(100dvh,920px);max-height:100%;overflow:hidden;background:#fafaf7;border:10px solid #ffcc3f;isolation:isolate;--head:120px;--foot:150px;box-shadow:0 16px 64px #4763881e;transition:border-color .35s}#game.home{border-color:#8aaddd;--head:165px;--foot:160px}#stage{position:absolute;inset:var(--head) 0 var(--foot);overflow:hidden;background:linear-gradient(#fafbf8 0 43%,#e9eae5 43% 100%);touch-action:none}#scene{display:block;width:100%;height:100%;touch-action:none}#edge-tools{position:absolute;z-index:12;top:0;left:0;right:0;display:flex;justify-content:space-between;pointer-events:none;padding:4px 4px}.edge{pointer-events:auto;width:36px;height:34px;background:transparent;color:white;font-size:34px;line-height:1;display:grid;place-items:center;transition:transform .12s}.edge:active{transform:scale(.9)}.edge svg{width:26px;height:26px;fill:white;stroke:#ffcd45;stroke-width:1.5}.home .edge svg{stroke:#8aaddd}.edge:disabled{opacity:.4}#home-header{position:absolute;top:31px;left:10px;right:10px;text-align:center;pointer-events:none}.eyebrow{display:block;font-size:9px;font-weight:900;letter-spacing:2px;color:#91a8c8}h1,h2,p{margin:0}h1{font-family:'Segoe Script','Brush Script MT',cursive;font-size:43px;letter-spacing:-2.5px;color:#6b8ecb;line-height:1.5;font-weight:500}h1 i{font-size:30px;font-style:normal;color:#e6b361}.cn-title{font-size:15px;letter-spacing:6px;font-weight:800;margin:0 0 9px}.home-caption{font-size:12px;color:#96a3b0;letter-spacing:1px}#play-header{position:absolute;top:32px;left:65px;right:65px;text-align:center;z-index:4;pointer-events:none}#order-label{font-size:18px;font-weight:900;letter-spacing:.5px}.rating-stars{height:20px;font-size:17px;color:#f5c843;letter-spacing:4px;line-height:20px}.rating-stars span{color:#cce7c7}.progress-track{height:8px;background:#b9e8bc;border-radius:9px;overflow:hidden;margin:1px auto 7px;max-width:240px}.progress-track i{display:block;height:100%;width:0;background:#7f9bde;border-radius:9px;transition:width .2s}#phase-title{font-size:21px;letter-spacing:.7px;font-weight:900}#phase-hint{color:#94a1b4;font-size:10px;font-weight:700;margin-top:3px}#target{position:absolute;z-index:5;top:139px;right:10px;padding:0 5px 4px;background:#fffefaeb;border:1px solid #ecebe1;border-radius:8px;width:84px;box-shadow:0 3px 10px #4f5c6d0c}#target>span{font-size:10px;font-weight:900;display:block;color:#9aa2ad;line-height:22px}#target img{display:block;width:72px;height:72px;object-fit:contain}.big{height:48px;border-radius:5px;font-size:18px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:14px;transition:transform .12s,filter .12s;position:relative}.big:active{transform:translateY(2px);filter:brightness(.98)}.big span{font-size:25px}.mint{color:#fff;background:#9de3ae;box-shadow:0 3px 0 #83ca97}.mint:hover{filter:brightness(1.025)}#home-footer{position:absolute;left:13px;right:13px;bottom:17px;text-align:center}#home-order{font-size:12px;font-weight:800;color:#a59c8c;margin-bottom:12px}#start{width:100%;height:52px}.home-links{display:flex;justify-content:center;align-items:center;gap:10px;margin:17px 0 9px;font-size:12px;color:#9aabc2}.home-links button{font-size:12px;background:none;font-weight:800;padding:4px 2px}.home-links b{display:inline-block;border-radius:12px;min-width:16px;background:#e5edf6;font-size:10px;margin-left:2px}.wallet{display:flex;gap:6px;justify-content:center;align-items:center;color:#b88e40;font-weight:900;font-size:13px}.wallet small{font-size:10px;color:#a4a9ac;font-weight:600}.wallet i,.result-reward i{display:inline-block;width:14px;height:14px;border-radius:50%;background:#f5cd5b;border:2px solid #e9b846;box-shadow:inset 1px 1px 0 #ffe59a}#work-footer{position:absolute;bottom:10px;left:12px;right:12px;z-index:6}.work-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;height:31px}#surface-tabs{display:flex;gap:3px;background:#eeeae1;padding:3px;border-radius:7px}#surface-tabs button{border-radius:5px;background:transparent;font-size:10px;padding:4px 8px;color:#a09b93;min-height:26px;font-weight:900}#surface-tabs button.selected{background:white;color:#7a93bd;box-shadow:0 1px 3px #00000009}#coverage{font-size:11px;color:#9aa3ad;font-weight:800}#palette{display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:11px;height:45px}#palette button{height:42px;min-width:42px;max-width:61px;flex:1;border-radius:7px;border:3px solid transparent;position:relative;box-shadow:inset 0 -3px 0 #00000005;outline:1px solid #e7e8e1;outline-offset:1px}#palette button.selected{border-color:white;outline:2px solid #7694c6}#palette button.selected:after{content:'✓';position:absolute;inset:0;display:grid;place-items:center;color:#4b6281;font-size:26px;font-weight:900;text-shadow:0 1px 3px #ffffff80}#palette button small{position:absolute;left:50%;bottom:51px;transform:translateX(-50%);font-size:10px;white-space:nowrap;background:#ffffffed;padding:4px 8px;border-radius:5px;color:#8d98a7;pointer-events:none;opacity:0;transition:opacity .15s}#palette button.selected small{opacity:1}#action-row{display:flex;gap:8px;align-items:center}#next-step{flex:1;font-size:15px;height:43px;white-space:nowrap}#next-step:disabled{background:#d9dedb;box-shadow:0 3px 0 #cbd0cd;color:#fff;opacity:1}.small-action{border:1px solid #e3e4df;background:#fffefa;height:43px;border-radius:5px;padding:0 11px;font-size:11px;color:#9aa3af;font-weight:800}#toppings{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin:7px 0 10px}#toppings button{width:calc((100% - 25px)/6);height:53px;border:1px solid #e9e7de;background:#fffdf5;border-radius:7px;font-size:9px;font-weight:900;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#a2978d}#toppings button.selected{outline:2px solid #91b49c;background:#f0f8ed}#toppings img{width:27px;height:27px;object-fit:contain}#floating-hint{position:absolute;left:10%;right:10%;bottom:calc(var(--foot) + 6px);text-align:center;z-index:8;font-size:11px;color:#a59b89;font-weight:800;pointer-events:none;transition:opacity .25s}#gesture{position:absolute;bottom:5%;left:7%;display:flex;flex-direction:column;align-items:center;gap:8px;color:#aaa99a;font-size:11px;font-weight:700;pointer-events:none;transition:opacity .3s}#gesture .finger{font-family:'Segoe UI Emoji',sans-serif;font-size:40px;filter:drop-shadow(0 2px 0 #00000018);animation:guide 2.8s infinite}@keyframes guide{0%,100%{transform:translateY(-15px)}50%{transform:translateY(15px)}}#sparkles{position:absolute;inset:0;pointer-events:none}.confetti{position:absolute;top:-10px;width:7px;height:12px;border-radius:1px;animation:confettiFall var(--duration,2.5s) var(--delay,0s) ease-in forwards}@keyframes confettiFall{to{transform:translate(var(--dx,30px),650px) rotate(500deg);opacity:0}}.overlay{position:absolute;inset:0;background:#5f6c7930;backdrop-filter:blur(3px);z-index:30;display:flex;align-items:center;justify-content:center;padding:15px}.result-card{width:100%;border:6px solid #9acfa8;border-radius:9px;background:#fffef7;padding:17px 15px 12px;text-align:center;box-shadow:0 12px 50px #455e7226;max-height:100%;overflow-y:auto;scrollbar-width:thin}.result-card h2{font-size:25px;margin:6px 0 0;color:#7c9dd6}.match{font-size:22px;color:#7a98d0;line-height:1.2}.match b{font-size:64px;font-weight:900;letter-spacing:-3px}.match span{font-size:25px;font-weight:900}.result-stars{color:#f2c953;letter-spacing:6px;font-size:27px;margin:0 0 6px}#result-copy{font-size:11px;line-height:1.6;color:#9b9e9d;max-width:260px;margin:0 auto 13px}.result-metrics{display:flex;gap:6px;margin-bottom:12px}.result-metrics span{flex:1;background:#f0f4ed;padding:8px 0;border-radius:6px;color:#9da99d;font-size:10px;font-weight:800}.result-metrics b{display:block;font-size:18px;color:#7c9c89;margin-top:3px}.result-reward{display:flex;justify-content:center;gap:5px;align-items:center;color:#bc9647;font-size:17px;font-weight:900;margin:0 0 13px;flex-wrap:wrap}.result-reward span{color:#a7a9a1;font-size:10px;font-weight:700;margin-left:5px}.result-links{display:flex;justify-content:center;gap:24px;margin-top:10px}.result-links button{background:none;font-size:11px;color:#9aaac1;padding:5px;font-weight:800}.modal-card{position:relative;width:100%;background:#fffef7;border-radius:10px;padding:25px 16px 20px;max-height:90%;overflow-y:auto;scrollbar-width:thin;box-shadow:0 8px 44px #37506d26}#close-modal{position:absolute;right:8px;top:6px;width:32px;height:32px;display:grid;place-items:center;background:#eef2ec;border-radius:50%;font-size:24px;color:#93a2aa;z-index:3}#modal-content h2{font-size:22px;margin-bottom:5px}#modal-content>p{font-size:11px;color:#9b9f9d;margin-bottom:15px;line-height:1.7}.order-grid,.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:15px}.order-card,.gallery-card{border-radius:8px;border:1px solid #e6e8df;background:#f8faf3;padding:8px;color:#8198b6;text-align:center;font-size:11px;min-width:0}.order-card img{display:block;width:100%;aspect-ratio:1;object-fit:contain}.order-card strong{display:block;font-size:11px}.order-card small{display:block;color:#bac2bb;margin:5px 0}.order-card .stars{color:#efc84d;letter-spacing:3px}.order-card:disabled{opacity:.45}.gallery-card img{width:100%;height:145px;object-fit:cover;border-radius:6px;background:#edf0e9}.gallery-card strong{display:block;font-size:11px}.gallery-card small{font-size:10px;color:#a2aaa9}.target-large{display:block;width:210px;height:210px;margin:auto;object-fit:contain}.palette-note{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:15px 0}.palette-note span{font-size:10px;display:flex;align-items:center;gap:4px;color:#9a9f9e}.palette-note i{width:12px;height:12px;border-radius:3px}.settings-actions{display:grid;gap:9px;margin-top:20px}.settings-actions button{height:45px;border:1px solid #e5e8dd;background:#f4f7ee;border-radius:7px;font-weight:800;font-size:13px}.modal-note{font-size:10px;color:#a3aaa8;line-height:1.8;margin-top:15px}.loading-dot{width:30px;height:30px;border:3px solid #e5ebdb;border-top-color:#eac36d;border-radius:50%;animation:spin 1s linear infinite}#loading{position:absolute;inset:0;background:#fffdf5;z-index:100;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;color:#9aabc3}#loading b{font-size:14px}#loading small{font-size:10px;color:#b4b8af}@keyframes spin{to{transform:rotate(1turn)}}#game.topping{--foot:153px}#game.reveal{--foot:18px;--head:80px}#game.reveal #target{display:none}
+@media(max-height:680px){#game{border-width:7px;--head:105px;--foot:139px}#game.home{--head:142px;--foot:135px}#home-header{top:26px}h1{font-size:36px;line-height:1.45}.cn-title{font-size:12px;margin-bottom:6px}.home-caption{font-size:10px}.eyebrow{font-size:8px;letter-spacing:1.6px}#home-footer{bottom:11px}#home-order{font-size:10px;margin-bottom:8px}#start{height:43px;font-size:16px}.home-links{margin:10px 0 6px;font-size:10px}.home-links button{font-size:10px}.wallet{font-size:11px}.wallet small{font-size:9px}#play-header{top:24px;left:52px;right:52px}#order-label{font-size:16px}.rating-stars{font-size:14px;height:16px;line-height:16px}#phase-title{font-size:18px}#phase-hint{font-size:9px}#target{top:118px;right:7px;width:66px;padding:0 3px 3px}#target>span{font-size:9px;line-height:18px}#target img{width:58px;height:58px}#work-footer{bottom:7px;left:9px;right:9px}#palette{gap:6px;height:38px;margin-bottom:8px}#palette button{height:36px;min-width:32px;max-width:54px}#palette button.selected:after{font-size:22px}#palette button small{bottom:44px;font-size:9px}.work-toolbar{height:29px;margin-bottom:5px}#surface-tabs button{font-size:9px;padding:3px 7px}#coverage{font-size:10px}#next-step{height:38px;font-size:13px}.small-action{height:38px;font-size:9px;padding:0 7px}.result-card{padding:12px 11px 9px;border-width:5px}.result-card h2{font-size:21px;margin-top:3px}.match b{font-size:49px}.result-stars{font-size:22px;margin:0 0 4px}#result-copy{font-size:10px;margin-bottom:8px}.result-metrics{margin-bottom:9px}.result-metrics span{padding:6px 0}.result-metrics b{font-size:16px}.result-reward{margin-bottom:9px;font-size:15px}.result-reward span{font-size:9px}.result-card .big{height:42px;font-size:16px}.result-links{margin-top:7px}.result-links button{font-size:10px}#game.topping{--foot:143px}}
+.result-compare{display:flex;gap:8px;justify-content:center;margin:4px 0 9px}.result-compare>div{min-width:0;flex:1;background:#f0f2ec;border:1px solid #e8e8da;border-radius:6px;overflow:hidden;max-width:160px}.result-compare img{display:block;width:100%;height:105px;object-fit:contain}.result-compare span{display:block;font-size:9px;color:#9da5a4;padding:3px;background:#fffdf5}.result-card .eyebrow{letter-spacing:1.5px}.result-card .match b{font-size:46px}.result-card .result-stars{font-size:20px;margin:0}.result-card #result-copy{margin-bottom:8px}.result-card .result-metrics{margin-bottom:9px}.result-card .result-reward{margin-bottom:10px}
+@media(max-height:680px){.result-compare{margin:3px 0 7px}.result-compare img{height:83px}.result-card h2{font-size:19px}.result-card .match b{font-size:38px}.result-card .result-stars{font-size:17px}.result-card .result-metrics{margin-bottom:7px}.result-card .result-metrics span{padding:5px 0}.result-card .result-reward{margin-bottom:8px}.result-card #result-copy{font-size:9px;margin-bottom:7px;line-height:1.5}.result-card .result-metrics b{font-size:14px}.result-card .eyebrow{font-size:7px}.result-card .result-reward span{font-size:8px}}
+@media(min-width:520px){#game{border-radius:17px}}@media(prefers-reduced-motion:reduce){.finger{animation:none!important}.confetti{animation-duration:.1s!important}*{scroll-behavior:auto!important}}
+
+/* Keep the soft reference palette while retaining readable touch controls. */
+.mint{color:#326c4c}.result-card .big{width:100%}#phase-hint,#coverage,.home-caption,.home-links,.home-links button{color:#788ba4}#result-copy,.result-compare span,.result-links button{color:#778795}.small-action{color:#788ba4}#toppings button{color:#84786a}#game.home #gesture{display:none}
+
+/* v0.2 — the reference's bold blue/yellow frame and generous tool palette. */
+body{color:#6081cb;background:radial-gradient(ellipse at 50% 25%,#f5f8ff,#e3eaf5)}
+#game{border-color:#ffce31;background:#fff;--head:160px;--foot:173px}
+#game.home{--head:186px;--foot:162px;border-color:#82a6dc}
+#stage{background:linear-gradient(#fff 0 35%,#f0f0ef 35% 100%)}
+#edge-tools{top:-3px;left:-3px;right:-3px;height:39px;padding:2px 6px;background:#ffce31}
+.home #edge-tools{background:#82a6dc}
+.edge{width:38px;height:33px;font-size:34px;color:#fff;opacity:1}
+.edge svg{stroke:#fff;fill:none;stroke-width:2.3;width:28px;height:28px}
+.home .edge svg{stroke:#fff}
+.edge:disabled{opacity:.35}
+#home-header{top:50px}
+h1{font-size:48px;color:#6081cb}
+.eyebrow{color:#87a0c7}
+.cn-title{color:#6081cb;font-size:17px;letter-spacing:8px;margin-top:-3px}
+#play-header{top:48px;left:43px;right:43px}
+#order-label{font-size:24px;font-weight:900;color:#6182ce;line-height:1.2}
+.rating-stars{font-size:21px;height:25px;line-height:25px;color:#ffd529;letter-spacing:6px}
+.rating-stars span{color:#9ce4b1}
+.progress-track{height:9px;max-width:254px;margin:2px auto 12px;background:#a6edb8}
+.progress-track i{background:#6487d6}
+#phase-title{font-size:25px;letter-spacing:.1px;color:#6081cb}
+#phase-hint{font-size:11px;margin-top:4px;color:#7f95b5}
+#target{top:188px;right:12px;width:88px;background:#f3f3f1;border:0;border-radius:4px;box-shadow:none;padding:0 4px 4px}
+#target>span{color:#8899b0;font-size:10px;line-height:20px}
+#target img{width:80px;height:80px}
+#work-footer{bottom:13px;left:14px;right:14px}
+.work-toolbar{margin-bottom:11px}
+#palette{height:54px;gap:11px;margin-bottom:14px}
+#palette button{height:52px;max-width:75px;min-width:40px;border-radius:11px;border-width:3px;outline-color:#ece9e3;box-shadow:inset 0 -4px 0 #0000000b}
+#palette button.selected{outline-color:#6384cb}
+#palette button.selected:after{font-size:32px;color:#29456e;text-shadow:none}
+#palette button small{bottom:64px;color:#677da4;font-size:10px;background:#fff}
+#coverage{color:#7187a6;font-size:11px}
+.mint{background:#a1e4ae;color:#356a50;box-shadow:0 4px 0 #7dc393}
+#next-step{height:47px;font-size:16px;border-radius:7px}
+.small-action{height:47px;border-radius:7px;background:#fff;color:#7286a5}
+#surface-tabs{background:#e7ecf3}
+#surface-tabs button{color:#7d91b1}
+#surface-tabs button.selected{color:#527ab7}
+#game.smoothing{--foot:109px}
+#game.topping{--head:150px;--foot:163px}
+#toppings{gap:5px;margin-bottom:13px}
+#toppings button{height:59px;background:#fff;border-color:#e3e8ef;border-radius:9px;color:#7586a2;font-size:10px}
+#toppings img{width:32px;height:32px}
+#toppings button.selected{outline-color:#82b99c;background:#f0faef}
+#floating-hint{color:#7189a9;font-size:11px}
+.result-card{border:8px solid #91c8aa;background:#fff;padding:20px 14px 14px;box-shadow:0 10px 32px #314f7333}
+.result-card h2{color:#6081cb;font-size:24px}
+.result-card .match b{font-size:52px;color:#6081cb}
+.result-compare{gap:10px;margin:6px 0 13px}
+.result-compare>div{border:1px solid #efcf65;background:#f2f2ef;border-radius:4px}
+.result-compare img{height:124px}
+.result-compare span{font-size:10px;color:#7183a1;background:#fff;padding:5px}
+.result-card #result-copy{font-size:11px;color:#7d8ba0;margin-bottom:12px}
+.result-metrics span{background:#f0f5f2;color:#849c90}
+.result-card .big{font-size:18px;height:49px}
+.overlay{background:#5d739329;backdrop-filter:blur(2px)}
+@media(max-height:680px){
+  #game{--head:132px;--foot:153px}
+  #game.home{--head:156px;--foot:137px}
+  #home-header{top:43px}h1{font-size:37px}.cn-title{font-size:13px}
+  #edge-tools{height:34px}.edge{height:29px;font-size:29px}.edge svg{width:25px;height:25px}
+  #play-header{top:37px;left:38px;right:38px}
+  #order-label{font-size:19px}.rating-stars{height:21px;line-height:21px;font-size:17px}
+  .progress-track{height:7px;margin-bottom:9px}#phase-title{font-size:21px}#phase-hint{font-size:9px}
+  #target{top:153px;width:68px;right:7px}#target img{width:60px;height:60px}#target>span{font-size:9px;line-height:17px}
+  #work-footer{bottom:9px;left:10px;right:10px}.work-toolbar{margin-bottom:7px}
+  #palette{height:44px;gap:8px;margin-bottom:10px}#palette button{height:43px;max-width:63px;border-radius:8px}
+  #palette button small{bottom:52px;font-size:9px}#palette button.selected:after{font-size:26px}
+  #next-step,.small-action{height:40px;font-size:13px}
+  #game.smoothing{--foot:95px}#game.topping{--head:125px;--foot:148px}
+  #toppings button{height:51px;font-size:9px}#toppings img{width:28px;height:28px}
+  .result-card{padding:12px 10px 10px;border-width:6px}.result-card h2{font-size:20px}
+  .result-card .match b{font-size:39px}.result-compare img{height:87px}.result-compare{margin-bottom:7px}
+  .result-compare span{font-size:9px;padding:3px}.result-card #result-copy{font-size:9px;margin-bottom:7px}
+  .result-card .big{height:40px;font-size:15px}.result-card .result-reward{margin-bottom:9px}
+}
+
+.rating-stars span{display:inline-block;transition:color .25s,transform .25s}.rating-stars span.earned{color:#ffd328;transform:scale(1.09)}
+
+#gesture .finger{display:block;width:34px;height:43px;filter:drop-shadow(0 2px 1px #29496d24)}#gesture .finger svg{width:100%;height:100%}#gesture{color:#7d91af;font-size:11px}#phase-hint{letter-spacing:.2px}
+
+#game.icing.free{--foot:222px}.free #palette{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));height:99px;gap:7px}.free #palette button{width:100%;height:46px;min-width:0;max-width:none}.free #palette button small{display:none}@media(max-height:680px){#game.icing.free{--foot:196px}.free #palette{height:80px;gap:7px}.free #palette button{height:36px}}
+/* v0.3：颜色名并入右侧状态文字，避免四色订单时浮动标签压住覆盖率 */
+#palette button small{display:none}
+
+/* ===== v0.3 UI：糖果质感按钮（Claude 2026-11-18）=====
+   统一：圆润胶囊、上亮下暗的渐变、底部"厚度"阴影、按下回弹；图标用 SVG。 */
+#game{--bar:#ffce31;--ink:#5577c9;--ink-deep:#3d5ea8;--go1:#7fe39a;--go2:#43c06c;--go-lip:#2f9a55}
+#game.home{--bar:#82a6dc;--foot:182px}
+
+/* 顶栏：半透明圆形图标按钮 */
+#edge-tools{padding:3px 8px;align-items:center}
+.edge{width:34px;height:34px;border-radius:50%;background:#ffffff38;box-shadow:inset 0 1px 0 #ffffff70,0 2px 4px #0000000f;transition:transform .15s,background .15s}
+.edge:active{transform:scale(.88)}
+.edge svg{width:20px;height:20px;fill:none;stroke:none}
+#settings svg{width:22px;height:22px}
+.edge:disabled{opacity:.45;box-shadow:none}
+
+/* 主按钮：糖果绿胶囊 */
+.big{border-radius:999px;letter-spacing:1px;gap:12px;overflow:hidden;isolation:isolate}
+.mint,.big.mint{color:#fff;background:linear-gradient(180deg,var(--go1),var(--go2));box-shadow:inset 0 2px 0 #ffffff7a,inset 0 -3px 0 #0000001a,0 5px 0 var(--go-lip),0 9px 16px #2f9a5540;text-shadow:0 1px 0 #1f7a4166}
+.big.mint:before{content:'';position:absolute;z-index:-1;left:8%;right:8%;top:4px;height:42%;border-radius:999px;background:linear-gradient(#ffffff70,#ffffff00)}
+.big.mint:active{transform:translateY(4px);box-shadow:inset 0 2px 0 #ffffff7a,inset 0 -2px 0 #0000001a,0 1px 0 var(--go-lip),0 3px 8px #2f9a5530}
+.big .ic{flex:none;width:28px;height:28px;border-radius:50%;background:#ffffff38 center/15px no-repeat;box-shadow:inset 0 1px 0 #ffffff60;font-size:0}
+.big .ic.go{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8h9M8.5 3.5 13 8l-4.5 4.5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.big .ic.ok{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 8.5 3.2 3.2L13 4.8' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+#next-step:disabled{background:linear-gradient(180deg,#e6eaee,#d3d9df);box-shadow:inset 0 2px 0 #ffffff90,0 4px 0 #bcc4cc;color:#fff;text-shadow:none}
+#next-step:disabled:before{opacity:.4}
+#start{height:56px;font-size:20px}
+
+/* 次按钮：白色胶囊 */
+.small-action{border-radius:999px;border:0;background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px #dfe6f3,0 4px 0 #dfe6f3;font-size:12px;padding:0 15px;transition:transform .12s,box-shadow .12s}
+.small-action:active{transform:translateY(3px);box-shadow:inset 0 0 0 2px #dfe6f3,0 1px 0 #dfe6f3}
+
+/* 侧面/顶部：胶囊分段开关 */
+#surface-tabs{background:#edf1f8;border-radius:999px;padding:3px;box-shadow:inset 0 1px 3px #3d5ea81a;gap:2px}
+#surface-tabs button{border-radius:999px;display:flex;align-items:center;gap:4px;padding:4px 12px 4px 9px;font-size:11px;color:#8a9bb8;transition:background .2s,color .2s,box-shadow .2s}
+#surface-tabs button svg{width:15px;height:15px}
+#surface-tabs button.selected{background:#fff;color:var(--ink);box-shadow:0 2px 6px #3d5ea826,0 1px 0 #3d5ea814}
+#coverage{font-size:11px;font-weight:900;color:#6e83a8;background:#f3f6fb;padding:5px 10px;border-radius:999px}
+
+/* 奶油色块：带高光的糖果圆角块，选中时抬起并加白圈 */
+#palette{gap:12px}
+#palette button{background:radial-gradient(120% 90% at 30% 22%,color-mix(in srgb,var(--c) 45%,white) 0,var(--c) 42%,color-mix(in srgb,var(--c) 78%,black) 100%);border:0;outline:0;border-radius:16px;box-shadow:inset 0 -4px 0 #00000022,inset 0 2px 0 #ffffff55,0 4px 0 color-mix(in srgb,var(--c) 70%,black),0 7px 12px #2b3b5a26;transition:transform .18s cubic-bezier(.3,1.6,.5,1),box-shadow .18s}
+#palette button:before{content:'';position:absolute;left:14%;top:12%;width:34%;height:22%;border-radius:50%;background:#ffffff8c;filter:blur(1.5px);transform:rotate(-18deg)}
+#palette button:active{transform:translateY(3px)}
+#palette button.selected{outline:0;transform:translateY(-5px);box-shadow:inset 0 -4px 0 #00000022,inset 0 2px 0 #ffffff55,0 4px 0 color-mix(in srgb,var(--c) 70%,black),0 0 0 4px #fff,0 0 0 6.5px var(--ink),0 12px 16px #2b3b5a33}
+#palette button.selected:after{content:'';inset:auto;right:-7px;top:-7px;width:22px;height:22px;border-radius:50%;background:var(--ink) center/12px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 8.5 3.2 3.2L13 4.8' fill='none' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");box-shadow:0 0 0 2.5px #fff,0 2px 4px #0003;font-size:0}
+
+/* 点缀卡片 */
+#toppings{gap:6px;flex-wrap:nowrap}
+#toppings button{width:auto;flex:1 1 0;min-width:0}
+#toppings button{border:0;border-radius:14px;background:linear-gradient(#fff,#f6f8fc);box-shadow:inset 0 0 0 1.5px #e3e9f3,0 3px 0 #e3e9f3;color:#7083a3;transition:transform .15s,box-shadow .15s}
+#toppings button:active{transform:translateY(2px)}
+#toppings button.selected{outline:0;background:linear-gradient(#fffdf3,#fff3d6);box-shadow:inset 0 0 0 2.5px #f2b93b,0 3px 0 #e3a92d,0 6px 10px #e3a92d33;color:#b07a12;transform:translateY(-3px)}
+#toppings img{filter:drop-shadow(0 2px 2px #0002)}
+
+/* 顶部 HUD：进度条、星星、目标卡 */
+.progress-track{height:11px;border-radius:999px;background:#e6f6ea;box-shadow:inset 0 1px 2px #2f9a5526;padding:2px}
+.progress-track i{border-radius:999px;background:linear-gradient(90deg,#7ea2ee,#5577c9);box-shadow:inset 0 1px 0 #ffffff70}
+.rating-stars{display:flex;justify-content:center;gap:8px;letter-spacing:0}.rating-stars span{display:block;width:22px;height:22px;font-size:0;background:#e1e9f4;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.2c.5 0 .9.3 1.1.7l2.4 4.9 5.4.8c1 .1 1.4 1.3.7 2l-3.9 3.8.9 5.4c.2 1-.9 1.7-1.7 1.2L12 18.5 7.1 21c-.9.5-1.9-.3-1.7-1.2l.9-5.4-3.9-3.8c-.7-.7-.3-1.9.7-2l5.4-.8 2.4-4.9c.2-.4.6-.7 1.1-.7Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.2c.5 0 .9.3 1.1.7l2.4 4.9 5.4.8c1 .1 1.4 1.3.7 2l-3.9 3.8.9 5.4c.2 1-.9 1.7-1.7 1.2L12 18.5 7.1 21c-.9.5-1.9-.3-1.7-1.2l.9-5.4-3.9-3.8c-.7-.7-.3-1.9.7-2l5.4-.8 2.4-4.9c.2-.4.6-.7 1.1-.7Z'/%3E%3C/svg%3E") center/contain no-repeat;transition:background .3s,transform .3s cubic-bezier(.3,1.7,.5,1)}.rating-stars span.earned{background:linear-gradient(160deg,#ffe36b 20%,#ffbe1f 60%,#f29b0c);transform:scale(1.12)}
+#target{border-radius:14px;background:#fff;box-shadow:0 4px 14px #3d5ea81f,inset 0 0 0 1.5px #edf1f7;padding:0 5px 5px}
+#target>span{display:inline-block;margin:5px 0 2px;line-height:1;padding:3px 8px;border-radius:999px;background:var(--ink);color:#fff;font-size:9px;letter-spacing:1px}
+
+/* 首页：图标胶囊链接 + 金币胶囊 */
+.home-links{gap:8px;margin:16px 0 10px}
+.home-links>span{display:none}
+.home-links button{display:flex;align-items:center;gap:5px;padding:8px 12px;border-radius:999px;background:#f3f6fc;box-shadow:inset 0 0 0 1.5px #e1e8f4,0 3px 0 #e1e8f4;color:var(--ink);font-size:12px;transition:transform .12s}
+.home-links button:active{transform:translateY(2px)}
+.home-links svg{width:15px;height:15px;flex:none}
+.home-links b{background:var(--ink);color:#fff;padding:1px 6px;min-width:18px;font-size:10px}
+.wallet{display:inline-flex;padding:5px 12px 5px 8px;border-radius:999px;background:#fff8e4;box-shadow:inset 0 0 0 1.5px #f5e2ad}
+#home-order{display:inline-block;padding:4px 12px;border-radius:999px;background:#fdf6ea;color:#b08d55}
+
+/* 结算卡与弹窗 */
+.result-card{border:0;border-radius:24px;box-shadow:0 0 0 6px #ffffffcc,0 18px 44px #2b416a40;padding-top:22px}
+.result-card .match b{background:linear-gradient(#7ea2ee,#4767b8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.result-metrics span{border-radius:12px;background:#f4f7fb;color:#8394b0}
+.result-metrics b{color:var(--ink)}
+.result-compare>div{border:0;border-radius:12px;box-shadow:inset 0 0 0 1.5px #f2d982}
+.result-links button{color:#7d90b2}
+.modal-card{border-radius:22px}
+#close-modal{background:#f0f3f9;color:#7d90b2}
+.settings-actions button{border:0;border-radius:999px;background:#f3f6fc;box-shadow:inset 0 0 0 1.5px #e1e8f4,0 3px 0 #e1e8f4;color:var(--ink)}
+.order-card,.gallery-card{border:0;border-radius:14px;background:#f7f9fc;box-shadow:inset 0 0 0 1.5px #e7ecf5,0 3px 0 #e7ecf5}
+
+@media(max-height:680px){
+  #game.home{--foot:150px}
+  .rating-stars{gap:6px}.rating-stars span{width:18px;height:18px}
+  .edge{width:30px;height:30px}.edge svg{width:18px;height:18px}
+  #start{height:46px;font-size:17px}
+  .big .ic{width:24px;height:24px;background-size:13px}
+  #palette{gap:9px}#palette button{border-radius:12px}
+  #palette button.selected{transform:translateY(-3px)}
+  #palette button.selected:after{width:18px;height:18px;right:-6px;top:-6px;background-size:10px}
+  .home-links{margin:10px 0 6px;gap:6px}.home-links button{padding:6px 9px;font-size:10px}.home-links svg{width:13px;height:13px}
+  #surface-tabs button{padding:3px 9px 3px 7px;font-size:10px}#surface-tabs button svg{width:13px;height:13px}
+  #coverage{font-size:10px;padding:4px 8px}
+}
+
+.result-card .result-stars{display:flex;justify-content:center;gap:10px;margin:2px 0 8px}.result-card .result-stars span{display:block;width:30px;height:30px;font-size:0;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.2c.5 0 .9.3 1.1.7l2.4 4.9 5.4.8c1 .1 1.4 1.3.7 2l-3.9 3.8.9 5.4c.2 1-.9 1.7-1.7 1.2L12 18.5 7.1 21c-.9.5-1.9-.3-1.7-1.2l.9-5.4-3.9-3.8c-.7-.7-.3-1.9.7-2l5.4-.8 2.4-4.9c.2-.4.6-.7 1.1-.7Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.2c.5 0 .9.3 1.1.7l2.4 4.9 5.4.8c1 .1 1.4 1.3.7 2l-3.9 3.8.9 5.4c.2 1-.9 1.7-1.7 1.2L12 18.5 7.1 21c-.9.5-1.9-.3-1.7-1.2l.9-5.4-3.9-3.8c-.7-.7-.3-1.9.7-2l5.4-.8 2.4-4.9c.2-.4.6-.7 1.1-.7Z'/%3E%3C/svg%3E") center/contain no-repeat}
+@media(max-height:680px){.result-card .result-stars span{width:22px;height:22px}}
+
+/* ===== v0.3 动效：少女心、可爱、亮晶晶（Claude 2026-11-18）===== */
+#fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:35}
+.overlay{z-index:30}
+
+/* 夸奖字：粉色渐变 + 白描边，弹出后上浮消失 */
+.cheer{position:absolute;left:50%;top:calc(var(--head) + 26px);z-index:21;pointer-events:none;white-space:nowrap;font-size:26px;font-weight:900;letter-spacing:1.5px;color:#ff5f9e;text-shadow:0 2px 0 #fff,0 -2px 0 #fff,2px 0 0 #fff,-2px 0 0 #fff,2px 2px 0 #fff,-2px 2px 0 #fff,2px -2px 0 #fff,-2px -2px 0 #fff,0 4px 0 #ffc2dc,0 6px 14px #ff5f9e55;animation:cheer 1.6s cubic-bezier(.2,1.4,.4,1) forwards}
+@keyframes cheer{0%{transform:translate(-50%,10px) scale(.3) rotate(var(--tilt));opacity:0}18%{transform:translate(-50%,0) scale(1.15) rotate(var(--tilt));opacity:1}30%{transform:translate(-50%,0) scale(.96) rotate(var(--tilt))}42%{transform:translate(-50%,0) scale(1.03) rotate(var(--tilt))}75%{transform:translate(-50%,-10px) scale(1) rotate(var(--tilt));opacity:1}100%{transform:translate(-50%,-34px) scale(.9) rotate(var(--tilt));opacity:0}}
+
+/* 阶段标题弹跳 */
+#phase-title.bounce{animation:titleBounce .7s cubic-bezier(.3,1.6,.5,1)}
+@keyframes titleBounce{0%{transform:scale(.5) translateY(6px);opacity:0}55%{transform:scale(1.12);opacity:1}75%{transform:scale(.95)}100%{transform:scale(1)}}
+
+/* 星星盖章 */
+.rating-stars span.stamp{animation:starStamp .55s cubic-bezier(.3,1.8,.5,1)}
+@keyframes starStamp{0%{transform:scale(2.2) rotate(-30deg);opacity:.2}60%{transform:scale(.9) rotate(6deg);opacity:1}100%{transform:scale(1.12) rotate(0)}}
+
+/* 色块：选中时果冻弹 */
+#palette button.selected{animation:jelly .6s cubic-bezier(.3,1.6,.5,1)}
+@keyframes jelly{0%{transform:translateY(0) scale(1,1)}25%{transform:translateY(-7px) scale(.86,1.14)}50%{transform:translateY(-4px) scale(1.12,.9)}75%{transform:translateY(-6px) scale(.97,1.04)}100%{transform:translateY(-5px) scale(1)}}
+@media(max-height:680px){@keyframes jelly{0%{transform:translateY(0)}25%{transform:translateY(-5px) scale(.86,1.14)}50%{transform:translateY(-2px) scale(1.12,.9)}100%{transform:translateY(-3px) scale(1)}}}
+
+/* 点缀卡选中弹一下 */
+#toppings button.selected{animation:jelly2 .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes jelly2{0%{transform:translateY(0) scale(1)}40%{transform:translateY(-6px) scale(1.08)}100%{transform:translateY(-3px) scale(1)}}
+
+/* 主按钮：呼吸 + 扫光 */
+.big.mint:not(:disabled){animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.big.mint:not(:disabled):active{animation:none}
+.big.mint:after{content:'';position:absolute;z-index:-1;top:0;bottom:0;width:38%;left:-45%;background:linear-gradient(105deg,#fff0 0,#ffffff80 45%,#fff0 90%);transform:skewX(-18deg);animation:shine 3.2s ease-in-out infinite}
+.big.mint:disabled:after{display:none}
+@keyframes shine{0%,55%{left:-45%}85%,100%{left:120%}}
+
+/* 目标卡轻轻浮动，顶栏图标按下回弹 */
+#target:not([hidden]){animation:floaty 3.4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-4px) rotate(1deg)}}
+
+/* 结算：卡片弹出、标题彩虹流光、星星逐个盖章 */
+#result:not([hidden]) .result-card{animation:cardPop .6s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes cardPop{0%{transform:scale(.55) translateY(40px);opacity:0}65%{transform:scale(1.04);opacity:1}100%{transform:scale(1)}}
+.result-card h2{background:linear-gradient(90deg,#ff7aa8,#c6a6ff,#6f9bf0,#ff9ccc,#ff7aa8);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rainbow 3s linear infinite}
+@keyframes rainbow{to{background-position:220% 0}}
+#result:not([hidden]) .result-stars span{animation:starStamp .55s cubic-bezier(.3,1.8,.5,1) both;animation-delay:calc(.52s + var(--i,0) * .23s)}
+.result-card .match{display:inline-block}
+#result:not([hidden]) .result-card .match{animation:scorePop .5s .25s cubic-bezier(.3,1.7,.5,1) both}
+@keyframes scorePop{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
+.result-compare>div:first-child{position:relative}
+.result-compare>div:first-child:after{content:'';position:absolute;right:6px;top:6px;width:18px;height:18px;background:#ff7aa8;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.6 1.2 5.3 3.1 1.7-1.9 3.1-3.1 5.3-3.1 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.6 1.2 5.3 3.1 1.7-1.9 3.1-3.1 5.3-3.1 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21Z'/%3E%3C/svg%3E") center/contain no-repeat;animation:heartBeat 1.2s ease-in-out infinite}
+@keyframes heartBeat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.15)}}
+
+/* 首页：标题轻轻摇摆 */
+#game.home h1{animation:sway 4s ease-in-out infinite;transform-origin:50% 70%}
+@keyframes sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+.home-links button:hover,.settings-actions button:hover{filter:brightness(1.03)}
+
+@media(prefers-reduced-motion:reduce){.big.mint,.big.mint:after,#target,#game.home h1,.result-card h2,.cheer{animation-duration:.01s!important;animation-iteration-count:1!important}}
