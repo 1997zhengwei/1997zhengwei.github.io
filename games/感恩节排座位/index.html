@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#7a2e2a">
+<title>开饭啦！感恩节排座位</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<main id="game">
+  <canvas id="scene" aria-label="三维感恩节餐桌"></canvas>
+  <svg id="rel-lines"></svg>
+  <div id="labels"></div>
+  <div id="splats"></div>
+  <div id="banner" hidden></div>
+  <div id="combo" hidden></div>
+  <div id="tut-hand" hidden><span class="pic"></span><span class="fing">👆</span></div>
+
+  <header id="hud">
+    <button id="btn-home" class="icon-btn" aria-label="选关">☰</button>
+    <div id="level-box">
+      <small id="level-mode">和睦晚宴</small>
+      <strong id="level-title">第 1 关 · 小小家宴</strong>
+    </div>
+    <button id="btn-sound" class="icon-btn" aria-label="声音">🔊</button>
+  </header>
+  <div id="goal"></div>
+  <div id="intro-tip"></div>
+
+  <section id="info" hidden></section>
+
+  <section id="dock">
+    <div id="tray" aria-label="还没入座的亲戚"></div>
+    <div id="dock-actions">
+      <button id="btn-clear" class="soft">全部起立</button>
+      <button id="btn-hint" class="soft">提示</button>
+      <button id="btn-dinner" class="primary" disabled>开饭！</button>
+    </div>
+  </section>
+
+  <section id="playbar" hidden>
+    <span id="play-status">晚宴进行中…</span>
+    <button id="btn-speed" class="soft">快进 ×2</button>
+    <button id="btn-skip" class="soft">跳到结果</button>
+  </section>
+
+  <div id="drag-ghost" hidden></div>
+  <div id="toast"></div>
+
+  <div id="overlay">
+    <section id="home" class="panel">
+      <div class="title-art">🦃</div>
+      <small class="eyebrow">THANKSGIVING SEATING CHAOS</small>
+      <h1>开饭啦！<br>感恩节排座位</h1>
+      <p class="lead">一大家子人，谁挨着谁坐，决定了今晚是温馨团圆，还是一场食物大战。</p>
+      <div id="level-grid"></div>
+      <div class="how">
+        <b>怎么玩</b>
+        <span>👆 把亲戚拖上餐桌，立刻看到 TA 的表情</span>
+        <span>❤️ 想挨着　⚡ 会吵架　💣 开饭会扔东西</span>
+        <span>🍽️ 按「开饭！」看温馨团圆还是食物大战</span>
+      </div>
+    </section>
+    <section id="result" class="panel" hidden>
+      <div id="result-stars"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-reason"></p>
+      <div id="result-quotes"></div>
+      <div class="result-actions">
+        <button id="btn-retry" class="soft">调整座位</button>
+        <button id="btn-next" class="primary">下一关 →</button>
+      </div>
+      <button id="btn-levels" class="link">返回选关</button>
+    </section>
+  </div>
+  <div id="loading"><span>🦃</span><b>正在摆餐桌…</b></div>
+</main>
+<script type="module" src="./src/app.mjs"></script>
+</body>
+</html>

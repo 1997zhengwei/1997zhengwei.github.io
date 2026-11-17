@@ -1,0 +1,78 @@
+// 每关的天空 / 雾 / 光照 / 地形配色。night=true 时出现星空，并给火鸡一盏跟随追光
+export const THEMES = {
+  farm: {
+    sky: [[0, '#1f5fb8'], [0.3, '#3f8ad8'], [0.42, '#7ab8e8'], [0.48, '#c6dff0'], [0.5, '#ffe2bc'], [0.53, '#ffcf98'], [1, '#e8b884']],
+    sun: { color: 0xffe2a0, size: 60, pos: [40, 40, -330] }, clouds: { color: 0xfff6ea, opacity: 0.85 },
+    fog: [0xf8d4a8, 70, 300], hemi: [0xcfe2ff, 0x5a4422, 0.7], key: [0xffcf96, 3.8], fill: [0xbcd4ff, 0.9], env: 0.75,
+    post: { exposure: 1.0, tint: [1.03, 1.0, 0.95], bloom: 0.55 },
+    meadow: ['#5a8a2e', '#7aa23e'], fields: ['#6f9a38', '#86a843', '#cfa54a', '#a97c3c', '#5f8a34', '#d6b45a', '#9a6a34', '#7aa040'],
+    trees: ['#c8501a', '#e07a22', '#a8321a', '#eab02c', '#d8641e', '#b8862a'],
+  },
+  pumpkin: {
+    sky: [[0, '#1f56b0'], [0.28, '#4f8ad6'], [0.4, '#9ec0e6'], [0.46, '#f2c99a'], [0.5, '#ffb26a'], [0.54, '#f59a52'], [1, '#c87a44']],
+    sun: { color: 0xffc070, size: 85, pos: [-70, 26, -320] }, clouds: { color: 0xffd6b0, opacity: 0.9 },
+    fog: [0xf6c8a0, 80, 300], hemi: [0xffd9b0, 0x5a3a1e, 0.62], key: [0xffb46a, 4.2], fill: [0xa8c0f0, 0.75], env: 0.7,
+    post: { exposure: 1.02, tint: [1.07, 0.98, 0.88], bloom: 0.6 },
+    meadow: ['#6a7a2a', '#8a8a34'], fields: ['#b0782c', '#c8903a', '#8a6a2a', '#d6a24a', '#7a8a34', '#b86a2a', '#9a5a26', '#a8943a'],
+    trees: ['#d8641e', '#c8461a', '#eab02c', '#a8321a', '#e8862a', '#b8862a'],
+  },
+  bog: {
+    sky: [[0, '#3f62b8'], [0.3, '#7f96d6'], [0.42, '#c8bce0'], [0.48, '#f6d8d8'], [0.5, '#ffe6d6'], [0.54, '#f0c8c4'], [1, '#c8a0a8']],
+    sun: { color: 0xffe0d0, size: 70, pos: [60, 30, -320] }, clouds: { color: 0xfff0f0, opacity: 0.8 },
+    fog: [0xecd8dc, 75, 290], hemi: [0xe8e0ff, 0x4a3a3a, 0.8], key: [0xffe0c8, 3.2], fill: [0xc8c8ff, 0.9], env: 0.85,
+    post: { exposure: 1.02, tint: [1.02, 0.99, 1.0], bloom: 0.55 },
+    meadow: ['#5a7a3a', '#6e8a44'], fields: ['#6a7a3a'], trees: ['#a8321a', '#c8461a', '#d8641e', '#7a2a1a', '#e8862a'],
+  },
+  town: {
+    sky: [[0, '#2a2f6a'], [0.25, '#5a4a8a'], [0.38, '#c06a8a'], [0.46, '#f49a6a'], [0.5, '#ffc070'], [0.54, '#f08a50'], [1, '#a05a50']],
+    sun: { color: 0xffa860, size: 90, pos: [0, 14, -330] }, clouds: { color: 0xffb0a0, opacity: 0.9 },
+    fog: [0xe89a7a, 60, 240], hemi: [0xffc0b0, 0x40283a, 0.6], key: [0xff9a5a, 3.6], fill: [0x9aa8ff, 0.8], env: 0.7,
+    post: { exposure: 1.04, tint: [1.08, 0.96, 0.92], bloom: 0.7 },
+    meadow: ['#5a6a34', '#6a7a3a'], fields: ['#7a6a3a', '#8a7a44', '#6a5a34'], trees: ['#e8742c', '#d9481e', '#f2b630', '#c8501a'],
+  },
+  fair: {
+    sky: [[0, '#070b24'], [0.3, '#141c4a'], [0.42, '#2c2a66'], [0.47, '#5a3a78'], [0.5, '#b8607a'], [0.53, '#4a3060'], [1, '#1a1430']],
+    sun: { color: 0xfff4d8, size: 26, pos: [-80, 70, -320] }, clouds: { color: 0x4a4a7a, opacity: 0.6 },
+    fog: [0x2a2448, 40, 220], hemi: [0x6a7ad0, 0x2a1a20, 0.55], key: [0xa8b8ff, 1.4], fill: [0xffb070, 0.6], env: 0.45,
+    post: { exposure: 1.12, tint: [1.0, 0.97, 1.04], bloom: 0.8 }, night: true, followSpot: 55,
+    meadow: ['#2e4a22', '#3a5428'], fields: ['#3a4a24', '#4a4a2a', '#2e3e22'], trees: ['#8a3a1a', '#a8501e', '#6a2a14', '#b8862a'],
+  },
+  gala: {
+    sky: [[0, '#04061a'], [0.3, '#0c1440'], [0.42, '#1c2266'], [0.48, '#3a2a70'], [0.5, '#7a3a6a'], [0.53, '#2a1a40'], [1, '#100a20']],
+    sun: { color: 0xfff6e0, size: 30, pos: [70, 80, -320] }, clouds: { color: 0x2a2a5a, opacity: 0.5 },
+    fog: [0x1c1838, 50, 240], hemi: [0x7a8ae0, 0x2a1a20, 0.6], key: [0xc0c8ff, 1.5], fill: [0xffc080, 0.7], env: 0.5,
+    post: { exposure: 1.15, tint: [1.02, 0.98, 1.02], bloom: 1.05 }, night: true, followSpot: 60,
+    meadow: ['#26401e', '#2e4a22'], fields: ['#2e3e22'], trees: ['#6a2a14', '#8a3a1a', '#4a2a14'],
+  },
+  // ---------- 第二章 ----------
+  float: {
+    sky: [[0, '#1a5cc8'], [0.3, '#3a86e0'], [0.44, '#8cc4f0'], [0.5, '#d8ecf8'], [0.53, '#f0e6d0'], [1, '#d0c0a0']],
+    sun: { color: 0xfff2c8, size: 55, pos: [40, 110, -300] }, clouds: { color: 0xffffff, opacity: 0.9 },
+    fog: [0xdce6ee, 80, 320], hemi: [0xdfeaff, 0x6a5a40, 0.85], key: [0xfff0d8, 3.7], fill: [0xc8dcff, 0.9], env: 0.85,
+    post: { exposure: 1.0, tint: [1.0, 1.0, 0.98], bloom: 0.5 },
+    meadow: ['#5a7a34', '#6a8a3a'], fields: ['#7a6a3a', '#8a7a44', '#6a5a34'], trees: ['#e8742c', '#d9481e', '#f2b630', '#c8501a'],
+  },
+  table: {
+    sky: [[0, '#1a0e08'], [1, '#2a1810']], indoor: true,
+    sun: { color: 0xffc890, size: 1, pos: [0, -50, 0] }, clouds: { color: 0x000000, opacity: 0 },
+    fog: [0x2a1a10, 45, 170], hemi: [0xffd8a8, 0x3a2010, 0.5], key: [0xffc890, 2.2], fill: [0xffb070, 0.45], env: 0.55,
+    post: { exposure: 0.94, tint: [1.06, 0.98, 0.9], bloom: 0.7 }, followSpot: 22,
+    meadow: ['#000000', '#000000'], fields: ['#000000'], trees: ['#000000'],
+  },
+  rescue: {
+    sky: [[0, '#2a5aa8'], [0.3, '#6a9ad8'], [0.42, '#b8d0ec'], [0.47, '#f4d8d0'], [0.5, '#ffd0a0'], [0.53, '#f0b890'], [1, '#c8a8a0']],
+    sun: { color: 0xffd8a0, size: 80, pos: [-50, 18, -320] }, clouds: { color: 0xffe8e0, opacity: 0.85 },
+    fog: [0xe8dcd8, 70, 300], hemi: [0xd8e4ff, 0x5a4a3a, 0.75], key: [0xffd0a0, 3.6], fill: [0xb8ccff, 0.9], env: 0.75,
+    post: { exposure: 1.02, tint: [1.03, 1.0, 0.97], bloom: 0.55 },
+    meadow: ['#8a9a6a', '#a4ae84'], fields: ['#b8a878', '#9a8a5a', '#c8bc96', '#8a9a6a', '#a89060', '#7a8a5a'],
+    trees: ['#a8501e', '#c87a2a', '#8a3a1a', '#b8a040', '#d8641e'],
+  },
+  escape: {
+    sky: [[0, '#03081c'], [0.3, '#0a1638'], [0.42, '#18285a'], [0.48, '#2a3a70'], [0.5, '#4a5088'], [0.53, '#1a2048'], [1, '#0c1024']],
+    sun: { color: 0xe8f0ff, size: 70, pos: [60, 70, -320] }, clouds: { color: 0x3a4a7a, opacity: 0.45 },
+    fog: [0x1a2240, 45, 230], hemi: [0x8aa0e0, 0x2a2a3a, 0.75], key: [0xb0c4ff, 1.7], fill: [0xffb070, 0.55], env: 0.5,
+    post: { exposure: 1.15, tint: [0.97, 1.0, 1.06], bloom: 0.85 }, night: true, followSpot: 55, snow: true,
+    meadow: ['#e8eef8', '#d0d8ea'], fields: ['#e4eaf6', '#dae2f0', '#cfd8ea', '#eef2fa'], trees: ['#eef2fa', '#dfe6f2', '#c8d2e4'],
+    pine: 0.8, pineCols: ['#2a4a3a', '#e4ecf6', '#35553f', '#d8e2f0'],
+  },
+};
