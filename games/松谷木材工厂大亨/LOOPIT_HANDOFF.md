@@ -1,7 +1,7 @@
 # Pine Ridge Mill · Loopit handoff
 
 ## Approved source
-This directory is the original, playable Chinese v0.3.0. Use its exact files. Start at `index.html` and copy all of `src/`, `assets/ui/` and `vendor/`, keeping the relative paths and import map. All 3D art is built in code. Three.js and the Nunito font are vendored with licenses. The runtime needs WebGL, JavaScript modules, pointer events and browser local storage. `node build.mjs` produces static files in `dist/` with no npm dependencies or CDN assets. Use `node server.mjs 8944` for desktop QA. `npm test` covers seven rules and save cases.
+This directory is the original, playable Chinese v0.3.1. The patch hides all station controls while the Park is open, including from camera close-ups. Use its exact files. Start at `index.html` and copy all of `src/`, `assets/ui/` and `vendor/`, keeping the relative paths and import map. All 3D art is built in code. Three.js and the Nunito font are vendored with licenses. The runtime needs WebGL, JavaScript modules, pointer events and browser local storage. `node build.mjs` produces static files in `dist/` with no npm dependencies or CDN assets. Use `node server.mjs 8944` for desktop QA. `npm test` covers seven rules and save cases.
 
 ## Preserve
 - True 3D mill. Log trucks, overhead crane, rolling conveyors, visible log rings and cutting, real stock stacks and forklift loading. Crew stay on marked stands, separate from the truck and forklift routes.

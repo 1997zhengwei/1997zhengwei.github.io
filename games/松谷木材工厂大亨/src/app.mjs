@@ -367,6 +367,7 @@ function openPark(){
   parkOpen=true;selectedPlot=company.active;
   view.deactivate();park.activate(selectedPlot);
   $('game').dataset.mode='park';$('park-ui').hidden=false;
+  $('markers').hidden=true;
   setText($('factory-name'),'松谷工业园');setText($('atlas-label'),'返回');
   $('floaters').replaceChildren();$('tip').hidden=true;
   refresh();park.render(0);projectParkTags();
@@ -375,6 +376,7 @@ function openPark(){
 function closePark(){
   parkOpen=false;drag=null;park.deactivate();view.activate();
   $('game').dataset.mode='factory';$('park-ui').hidden=true;
+  $('markers').hidden=false;
   setText($('atlas-label'),'园区');describeSite();refresh();
 }
 
