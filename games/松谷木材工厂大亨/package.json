@@ -1,0 +1,1 @@
+{"name":"pine-ridge-mill","version":"0.3.0","private":true,"type":"module","scripts":{"start":"node server.mjs 8944","build":"node build.mjs","test":"node --test"}}
