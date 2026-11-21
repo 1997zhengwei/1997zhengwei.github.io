@@ -1,0 +1,22 @@
+#stage { background: radial-gradient(ellipse at 50% 30%, #fff6e8 0%, #ffe1ec 55%, #ffc7da 100%); }
+#view { display: block; width: 100%; height: 100%; touch-action: none; cursor: move; }
+.hud { position: absolute; top: 12px; left: 64px; display: flex; gap: 6px; align-items: center; pointer-events: none; }
+.coins, .lv { display: flex; align-items: center; gap: 4px; padding: 6px 11px; border-radius: 14px; background: #fffdf7; border: 2.5px solid var(--ink); box-shadow: 0 3px 0 var(--ink); font-weight: 900; font-size: 14px; }
+.coins i { width: 16px; height: 16px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff6c4, #ffc22e 55%, #c7840f); box-shadow: inset 0 0 0 1.5px #8a5a12; }
+.coins b { font-size: 17px; }
+.lv { font-size: 12px; }
+#grab { position: absolute; right: 16px; bottom: 16px; width: 96px; height: 96px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #ff9dbd, #ef4f7d); border: 3px solid var(--ink); box-shadow: 0 6px 0 var(--ink); color: #fff; font-size: 28px; font-weight: 900; text-shadow: 0 2px 0 #8a2346; }
+#grab:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--ink); }
+#grab:disabled { filter: grayscale(.6); opacity: .7; }
+#clue { bottom: 124px; }
+footer header { margin-bottom: 4px; }
+footer .sub b { color: #ef4f7d; }
+#cards { display: flex; gap: 8px; justify-content: center; }
+.card { flex: 0 0 auto; width: 58px; }
+.card.rare canvas { border-color: #ffcf3d; background: radial-gradient(circle, #fff7c9, #ffe58a); }
+.card.rare span { color: #b87a00; }
+.pop { position: absolute; left: 50%; top: 38%; transform: translate(-50%, -50%); font-size: 30px; font-weight: 900; white-space: nowrap; pointer-events: none; text-shadow: 0 3px 0 #2b2431, 0 0 14px rgba(0,0,0,.25); animation: popup 1.2s cubic-bezier(.2, 1.4, .4, 1) forwards; }
+@keyframes popup { from { opacity: 0; transform: translate(-50%, -50%) scale(.3); } 20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); } 35% { transform: translate(-50%, -50%) scale(1); } 80% { opacity: 1; } to { opacity: 0; transform: translate(-50%, -110%); } }
+.stars { font-size: 30px; color: #ffb43d; letter-spacing: 4px; text-shadow: 0 2px 0 #2b2431; margin: 2px 0 6px; }
+.result #again { background: #fffdf7; }
+.marquee { position: absolute; left: 50%; top: 62px; transform: translateX(-50%); padding: 4px 16px; border-radius: 16px; background: #fff6dc; border: 2.5px solid var(--ink); box-shadow: 0 3px 0 var(--ink); color: #ef4f7d; font-weight: 900; font-size: 15px; white-space: nowrap; pointer-events: none; }

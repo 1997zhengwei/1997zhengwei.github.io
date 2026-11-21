@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fffdf7">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./claw.css">
+<link rel="stylesheet" href="./nest.css">
+<title>套娃抓抓机</title>
+</head>
+<body>
+<main>
+  <section id="stage" aria-label="套娃抓娃娃机">
+    <canvas id="view" aria-label="单指拖动移动爪子，双指或右键拖动旋转视角"></canvas>
+    <div class="hud"><span class="coins"><i></i><b id="tries">5</b> 次</span><span class="lv depth"><b id="depth">第 1 层</b></span></div>
+    <div class="marquee"><span id="theme">玩具球池</span></div>
+    <div class="right">
+      <button id="open-shop" class="tool" aria-label="兑换额外抓取次数" title="兑换额外抓取次数">＋</button>
+      <button id="angle" class="tool" aria-label="换个角度看" title="正面/左/背/右">👁</button>
+      <button id="sound" class="tool" aria-label="音乐和音效" title="音乐和音效">♪</button>
+    </div>
+    <div class="spin">
+      <button id="rot-left" class="tool" aria-label="向左转" title="按住向左转">⟲</button>
+      <button id="rot-right" class="tool" aria-label="向右转" title="按住向右转">⟳</button>
+    </div>
+    <button id="gate" type="button" aria-label="本关抓取提示"></button>
+    <span id="finale-guide" hidden aria-hidden="true"></span>
+    <div id="cool-guide" hidden aria-hidden="true"><span id="cool-guide-text"></span><i><b id="cool-guide-fill"></b></i></div>
+    <p id="dive-title" role="status" hidden></p>
+    <p id="clue" role="status" hidden></p>
+    <button id="grab" type="button">抓！</button>
+  </section>
+  <footer>
+    <header><h1>套娃抓抓机</h1><span class="sub">积分 <b id="points">0</b> · 最深 <b id="best">1</b> 层</span><button id="open-levels" hidden>选关</button></header>
+    <span id="title-badge" hidden>👑 套娃探索宗师</span>
+  </footer>
+  <section class="result" hidden id="result">
+    <div class="medal">🪆</div>
+    <h2 id="result-title"></h2>
+    <p id="result-note"></p>
+    <button id="again">再钻一次</button>
+    <button id="result-levels" hidden>自由选关</button>
+    <button id="result-shop" class="ghost">兑换额外一爪</button>
+  </section>
+  <section class="shop" hidden id="shop" role="dialog" aria-modal="true" aria-labelledby="shop-title">
+    <div class="sheet">
+      <header><h2 id="shop-title">额外一爪</h2><span class="pts">积分 <b id="shop-points">0</b></span><button id="shop-close" class="tool" aria-label="关闭">✕</button></header>
+      <div class="good">
+        <span class="sw" aria-hidden="true">＋</span>
+        <div><div class="nm">本关加 1 次</div><div class="sub">每次挑战限兑一次</div></div>
+        <button id="buy-attempt" type="button" class="buy">25 积分</button>
+      </div>
+    </div>
+  </section>
+  <section class="shop" hidden id="level-menu" role="dialog" aria-modal="true" aria-labelledby="level-title">
+    <div class="sheet">
+      <header><h2 id="level-title">自由选关</h2><button id="level-close" class="tool" aria-label="关闭">✕</button></header>
+      <div id="level-list"></div>
+    </div>
+  </section>
+</main>
+<script type="module" src="./nest.js"></script>
+</body>
+</html>
