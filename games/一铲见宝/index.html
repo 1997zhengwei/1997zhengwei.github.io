@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ccfaf6"><link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css"><title>一铲见宝</title>
+</head><body>
+<svg class="defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="art-reach" viewBox="0 0 64 52"><g stroke-linejoin="round" stroke-linecap="round"><path d="M8 42 23 17 39 26 55 8" stroke="#233d50" stroke-width="10" fill="none"/><path d="M8 42 23 17 39 26 55 8" stroke="#39b7ff" stroke-width="6" fill="none"/><g fill="#fff9db" stroke="#254958" stroke-width="3"><circle cx="8" cy="42" r="5"/><circle cx="23" cy="17" r="6"/><circle cx="39" cy="26" r="5"/><circle cx="55" cy="8" r="5"/></g></g></symbol>
+<symbol id="art-tank" viewBox="0 0 64 52"><g stroke="#334955" stroke-width="3" stroke-linejoin="round"><path fill="#ff6264" d="M17 15 25 7h13l10 10v27q0 4-4 4H19q-4 0-4-4V19z"/><path fill="#a5e9e8" d="m29 11 7 0 5 5h-12z"/><path fill="#ffbd52" d="m15 13 5-6 6 5-6 6z"/><path fill="#ffd35a" d="M32 23c-3 5-7 8-7 12a7 7 0 0 0 14 0c0-4-4-8-7-12z"/></g></symbol>
+<symbol id="art-power" viewBox="0 0 64 52"><path d="m17 10 9 1 5-5 7 6 8 1 1 9 7 6-5 8-1 8-10 1-7 4-7-6-8-1-1-8-5-7 5-7z" fill="#738ea7" stroke="#27455a" stroke-width="3"/><circle cx="32" cy="27" r="13" fill="#d7e8e6" stroke="#36586b" stroke-width="2.5"/><path d="m34 11-12 18h9l-3 12 14-21h-10z" fill="#ffbc42" stroke="#85602d" stroke-width="2"/></symbol>
+<symbol id="art-size" viewBox="0 0 64 52"><path d="m31 4 7 5 8-2 1 8 8 4-4 7 3 7-8 3-2 8-9-1-6 5-6-6-9 1 1-8-7-5 5-7-1-8 9-2 3-7z" fill="#fa6283" stroke="#304957" stroke-width="3"/><circle cx="31" cy="26" r="12" fill="#f192a5" stroke="#944758" stroke-width="2"/><circle cx="31" cy="26" r="6" fill="#c0e7f3" stroke="#35495c" stroke-width="3"/></symbol>
+<symbol id="art-cash" viewBox="0 0 32 26"><g stroke="#266c46" stroke-width="1.7" stroke-linejoin="round"><path fill="#58b854" d="m2 9 17-8 11 10-18 11z"/><path fill="#98e56c" d="m2 12 17-8 11 10-18 11z"/><path d="m9 8 9 10 5-3-9-10z" fill="#ffdc79"/></g></symbol>
+<symbol id="art-map" viewBox="0 0 24 24"><path d="m2 5 6-2 8 3 6-2v15l-6 2-8-3-6 2z" fill="#c1f08c" stroke="#214e55" stroke-width="2" stroke-linejoin="round"/><path d="M8 3v15m8-12v15" stroke="#318f91" stroke-width="2"/></symbol>
+<symbol id="art-paint" viewBox="0 0 24 24"><path d="m4 4 9-2 5 6-9 6-5-4z" fill="#b78be8" stroke="#324658" stroke-width="2"/><path d="m14 12 4-2 2 2-3 4-5 6-3-3z" fill="#ffbe54" stroke="#324658" stroke-width="2"/></symbol>
+<symbol id="art-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ffcf3e" stroke="#8a5a12" stroke-width="2"/><circle cx="12" cy="12" r="6.6" fill="none" stroke="#e7a51d" stroke-width="1.6"/><rect x="9.4" y="9.4" width="5.2" height="5.2" rx=".8" fill="#8a5a12"/><path d="M6 8.5a7 7 0 0 1 4-3.2" stroke="#fff6c9" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="art-can" viewBox="0 0 24 24"><g stroke="#3a2a2e" stroke-width="1.8" stroke-linejoin="round"><path d="M6 6h8l4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="#f2473c"/><path d="M7 3h5v3H7z" fill="#3a2a2e"/><path d="M15 3.5l3 3" fill="none"/></g><path d="M11 10c-2 3-3 4-3 5.5a3 3 0 0 0 6 0c0-1.5-1-2.5-3-5.5z" fill="#ffd447" stroke="#8a5a12" stroke-width="1.2"/></symbol>
+<symbol id="art-tnt" viewBox="0 0 24 24"><g stroke="#3b2b2b" stroke-width="1.6"><rect x="3.5" y="7" width="5" height="15" rx="2" fill="#e83e34"/><rect x="9.5" y="6" width="5" height="16" rx="2" fill="#f2564a"/><rect x="15.5" y="7" width="5" height="15" rx="2" fill="#e83e34"/><path d="M3 11h18M3 17h18" stroke-width="2.2"/><path d="M12 6c0-2 1-3 3-3.5" fill="none"/></g><circle cx="15.6" cy="2.6" r="1.9" fill="#ffe46b"/></symbol>
+<symbol id="art-hand" viewBox="0 0 40 46"><path d="M14 5a3.2 3.2 0 0 1 6.4 0v12l1.2-.6a3.2 3.2 0 0 1 4.4 1.6l.3.7.9-.3a3.2 3.2 0 0 1 4.2 2.2l.2.8.7-.1a3.2 3.2 0 0 1 3.7 3.2v7.5C36 39 31 44 24.5 44h-3.2c-3.6 0-6.4-1.8-8.4-4.8L6.4 29.6a3.3 3.3 0 0 1 5.2-4l2.4 2.6z" fill="#fffef4" stroke="#204650" stroke-width="2.6" stroke-linejoin="round"/></symbol>
+</defs></svg>
+<main class="game" id="game">
+<header class="bar">
+  <div class="account"><button class="tool settings" id="settings" aria-label="打开设置">⚙</button><span class="wallet" aria-label="工钱"><svg><use href="#art-cash"/></svg><b id="cash">24</b></span></div>
+  <div class="mission"><div class="progress" id="progress" role="progressbar" aria-label="本关进度" aria-valuemin="0" aria-valuemax="100"><i id="progress-fill"></i></div>
+    <h1>第 <b id="stage-number">01</b> 关 <span id="site"></span></h1><small id="objective"></small></div>
+  <button class="tool map-button" id="map" aria-label="选择关卡"><svg><use href="#art-map"/></svg></button>
+</header>
+<section id="arena" class="arena" aria-label="采石场">
+  <canvas id="view" tabindex="0" aria-label="按住拖动切割，松手省油。键盘使用方向键和空格。露出宝石后轻点即可收取。"></canvas>
+  <nav id="plinths" aria-label="选择空展台寻宝" hidden></nav>
+  <div id="gauge" class="gauge" role="meter" aria-label="剩余燃油" aria-valuemin="0" aria-valuemax="100"><svg><use href="#art-tank"/></svg><div class="tube"><i id="fuel-fill"></i></div><b id="fuel-pct"></b></div>
+  <div class="combo" id="combo" hidden><span id="combo-title">连片坍塌</span><strong id="combo-count"></strong></div>
+  <button class="target" id="target" type="button" hidden><span id="target-note"></span></button>
+  <div class="ready" id="ready">
+    <div class="brief" id="brief"><strong><small id="brief-tag"></small>寻找 <b id="brief-gem"></b></strong>
+      <div class="brief-loot" id="brief-loot" aria-label="墙里藏着的宝物"></div><ol class="goals" id="brief-goals"></ol></div>
+    <div class="ready-row"><button id="play" class="play" type="button"><i aria-hidden="true">▶</i> 开工</button><button class="skin-button" id="skins"><svg><use href="#art-paint"/></svg>涂装</button></div>
+  </div>
+  <div class="coach" id="coach" hidden aria-hidden="true"><svg><use href="#art-hand"/></svg></div>
+  <div class="hint" id="hint" aria-live="polite"></div><div class="whiteout" id="flash"></div>
+  <p id="error" hidden>3D 画面无法加载，请使用支持 WebGL 的浏览器。</p>
+</section>
+<footer class="controls"><div class="upgrades" id="upgrades" role="group" aria-label="机械升级"></div></footer>
+<dialog id="drawer"><div class="sheet-heading"><h2 id="sheet-title"></h2><button class="close" id="close" aria-label="关闭">×</button></div>
+  <nav id="stages" aria-label="选择关卡" hidden></nav><div id="finishes" hidden></div>
+  <div id="options" hidden><button id="sound" type="button" aria-label="音效">♪</button><button id="restart" type="button">重新开工</button><p class="rules">蓝色十字栓把墙固定在背架上。锯开蓝栓或截断相连的砖，就能让悬空部分掉落。</p><p class="rules">金色方孔钱砖 +$3，红色油桶砖补 22% 燃油，TNT 砖被锯开或被带落后会引爆一圈砖。</p><p class="rules">每 20 块砖进料斗换 $1。收宝时余油达 22% 得两星，余油达 40% 且一次连塌至少 70 块，得三星。</p></div>
+</dialog>
+<section id="result" class="scrim" hidden><div class="result" role="dialog" aria-modal="true" aria-labelledby="prize-name">
+  <div class="stars" id="rating"><i></i><i></i><i></i></div><p class="badge" id="badge" hidden>新纪录</p>
+  <h2 id="prize-name"></h2><ul class="tally" id="tally"></ul>
+  <p class="earn">本趟收入 <b><svg><use href="#art-cash"/></svg>$<span id="earn">0</span></b></p><p id="record-line"></p>
+  <button id="next" class="primary" type="button"></button><button id="again" class="again" type="button">再铲一次</button>
+</div></section>
+<section id="finale" class="scrim finale" aria-labelledby="finale-title" hidden><div class="result">
+  <h2 id="finale-title">星辰宝库</h2><p id="finale-line"></p><ul class="tally" id="finale-tally"></ul>
+  <button id="finale-again" class="primary" type="button">从第一关再刷三星</button><button id="finale-close" class="again" type="button">回到选关</button>
+</div></section>
+<div class="pops" id="pops" aria-hidden="true"></div>
+</main><script type="module" src="./game.js"></script></body></html>

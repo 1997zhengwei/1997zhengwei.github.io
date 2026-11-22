@@ -1,0 +1,118 @@
+export const levels = [
+  {
+    scenery:'desert', name:'赤砂拱门', gem:'赤焰石', tag:'日轮之门', gemPixel:[24,18],
+    sky:'#a7e7ef', low:'#ebfaf0', accent:'#cf5a2c', crystal:'#ff4959', light:'#ffbf66',
+    ground:['#acdc49','#7eae36','#fae3ac','#e5c48b'], palette:['#ad542d','#ffb156'],
+    intro:'按住拖动圆锯，蓝栓托着左边的拱肩',
+  },
+  {
+    scenery:'jade', name:'翡翠双塔', gem:'潮汐翡翠', tag:'守潮双龙', gemPixel:[24,29],
+    sky:'#a5e7e1', low:'#ecf9dd', accent:'#168278', crystal:'#24e0a3', light:'#89ffe4',
+    ground:['#80cf71','#55a366','#f1ddb1','#d5bd92'], palette:['#348b76','#99dfae'],
+    intro:'沿连桥切一圈，取出桥心的翡翠',
+  },
+  {
+    scenery:'castle', name:'紫晶阶堡', gem:'星芒紫晶', tag:'星芒王城', gemPixel:[24,27],
+    sky:'#b4d7fc', low:'#fae8f2', accent:'#8456b8', crystal:'#ac65ff', light:'#f1b4ff',
+    ground:['#adcc74','#7ba16b','#f3d9b7','#d9b795'], palette:['#78519f','#d5b5e4'],
+    intro:'留意塔身侧面的金扣，星盘周围的砖更硬',
+  },
+  {
+    scenery:'sea', name:'蓝帆沉船', gem:'航海蓝钻', tag:'沉没商船', gemPixel:[32,23],
+    sky:'#a6e2f4', low:'#fff1d7', accent:'#226caa', crystal:'#359efa', light:'#c4efff',
+    ground:['#98cf8e','#619d82','#edddaf','#ceb68c'], palette:['#196ca8','#87dcea'],
+    intro:'小帆压着金扣，大帆藏着蓝钻',
+  },
+  {
+    scenery:'desert', name:'琥珀沙漏', gem:'流金沙晶', tag:'流沙古钟', gemPixel:[21,17],
+    sky:'#b3e1df', low:'#fff0cc', accent:'#b56c24', crystal:'#ffad31', light:'#fff1a9',
+    ground:['#cad37a','#97a15e','#f5deab','#d6b47c'], palette:['#c37a32','#ffdc81'],
+    intro:'上下各有一枚金扣，细颈撑着上半只沙漏',
+  },
+  {
+    scenery:'sea', name:'珊瑚宝蚌', gem:'玫瑰欧泊', tag:'珊瑚海床', gemPixel:[28,31],
+    sky:'#a9e4ec', low:'#e6faf3', accent:'#bd537e', crystal:'#ff9dc8', light:'#ffe4ee',
+    ground:['#9dd9aa','#73ab97','#f5dfc3','#dcbaa4'], palette:['#c9557b','#ffbcae'],
+    intro:'蓝栓固定左侧贝壳，珊瑚枝托住下沿',
+  },
+  {
+    scenery:'farm', name:'落日风车', gem:'夕照榴石', tag:'麦浪磨坊', gemPixel:[33,12],
+    sky:'#a9dcdf', low:'#ffe5bd', accent:'#b55130', crystal:'#ff6637', light:'#ffdd97',
+    ground:['#bbd46e','#7e9b53','#f4dfb2','#d4b781'], palette:['#bc5735','#f3c06d'],
+    intro:'右上风叶藏着宝石，塔身和另一片风叶各有金扣',
+  },
+  {
+    scenery:'night', name:'弦月星台', gem:'月光石', tag:'观星古台', gemPixel:[31,24],
+    sky:'#9eaee3', low:'#ecdff3', accent:'#6459a4', crystal:'#bbc6ff', light:'#eff6ff',
+    ground:['#9db5a9','#738998','#e8d7c0','#cbb9a8'], palette:['#767dbc','#f3dc90'],
+    intro:'三枚金扣分布在月牙、底座和吊链上',
+  },
+  {
+    scenery:'mountain', name:'青铜古鼎', gem:'青铜龙睛', tag:'镇国重器', gemPixel:[24,29.4], cut:2,
+    colors:['#173f30','#22684a','#33a06a','#6fd49a','#bff0cf','#f2ffe9'],
+    sky:'#b5ddd2', low:'#eef7e4', accent:'#2f7a5c', crystal:'#3fd08a', light:'#c8ffd9',
+    ground:['#9fcf86','#6f9e62','#efdcb2','#d2b88e'], palette:['#3f7a63','#d9a945'],
+    intro:'灰蓝色的是钢砖，锯不动也推不进，从鼎腹下手',
+  },
+  {
+    scenery:'snow', name:'冰雪城堡', gem:'冰魄蓝晶', tag:'北境冰宫', gemPixel:[24,43], cut:3,
+    colors:['#244f7a','#3a7db0','#62b8e2','#a3e2f6','#d8f5ff','#ffffff'],
+    sky:'#bcd9ef', low:'#f3fbff', accent:'#3d6fb0', crystal:'#7fd8ff', light:'#e6fbff',
+    ground:['#e4f1f6','#b7cfd9','#f2f6f7','#d9e4e8'], palette:['#6fa6d0','#e8f8ff'],
+    intro:'钢闸门锁着蓝晶，引爆门两侧的 TNT',
+  },
+  {
+    scenery:'volcano', name:'火山神殿', gem:'熔岩火钻', tag:'炎心祭坛', gemPixel:[24,22.4], cut:6,
+    colors:['#4a120e','#8a2210','#d2421a','#ff7a2a','#ffb35a','#fff0b0'],
+    sky:'#f0c6a6', low:'#fff0dc', accent:'#b8432a', crystal:'#ff5a1e', light:'#ffd28a',
+    ground:['#b0a06a','#806f4c','#e6c9a0','#c9a57c'], palette:['#5a3b3b','#ff8a3a'],
+    intro:'钢环锁住太阳盘：炸开缺口，或者掏空外圈让它整个掉下来',
+  },
+  {
+    scenery:'city', name:'机械钟楼', gem:'时光紫金', tag:'午夜钟声', gemPixel:[24,20], cut:4,
+    colors:['#3f2763','#6b4598','#a97fd4','#dcb25a','#ffe08a','#fff6d8'],
+    sky:'#c6cdee', low:'#f4eefa', accent:'#6b4598', crystal:'#c28cff', light:'#ffe9a8',
+    ground:['#a9c98a','#7d9b6a','#e9d8bc','#ccb89a'], palette:['#8a5a46','#e8c674'],
+    intro:'钢指针穿过表盘中心，表盘上藏着三颗 TNT',
+  },
+  {
+    scenery:'sea', name:'海底龙宫', gem:'龙宫双珠', tag:'珊瑚深宫',
+    gems:[
+      {pixel:[24,14.6],name:'龙宫明珠',cut:5,colors:['#8d8fa8','#b9bcd0','#dfe2ee','#f4f1f6','#ffffff','#fffdf5'],crystal:'#dfe8ff',light:'#ffffff'},
+      {pixel:[24,36.6],name:'海神蓝玉',cut:0,colors:['#0b4a52','#11727a','#1aa3a3','#4fd6cc','#a5f2e6','#e9fffb'],crystal:'#29d3c8',light:'#bff8f2'},
+    ],
+    sky:'#9cd9ea', low:'#e6fbf6', accent:'#1f6f8a', crystal:'#29d3c8', light:'#d9fffb',
+    ground:['#98cf8e','#619d82','#edddaf','#ceb68c'], palette:['#c84a46','#9be3e8'],
+    intro:'两颗宝石：楼阁里一颗，大殿里一颗。钢柱护着殿门',
+  },
+  {
+    scenery:'bamboo', name:'熊猫竹林', gem:'竹林双玉', tag:'竹海深处',
+    gems:[
+      {pixel:[24,40.5],name:'竹影翠玉',cut:1,colors:['#0f4a2a','#1a7a44','#2fb066','#7ee09a','#c9f7d2','#f4fff4'],crystal:'#3fd08a',light:'#d9ffe4'},
+      {pixel:[8,9.2],name:'墨玉',cut:7,colors:['#1d1f2b','#2d3142','#4a4f66','#7b8199','#b9bfd6','#eef1ff'],crystal:'#8a90c8',light:'#e6e9ff'},
+    ],
+    sky:'#c3e6c8', low:'#f4fbe9', accent:'#3f8a46', crystal:'#3fd08a', light:'#e9ffe4',
+    ground:['#a6d47c','#73a35a','#efdcb2','#d2b88e'], palette:['#4f9a4a','#f6f3ea'],
+    intro:'熊猫肚里一颗，左边竹叶里一颗。石台是钢的',
+  },
+  {
+    scenery:'desert', name:'沙海金字塔', gem:'密室双宝', tag:'风沙密室',
+    gems:[
+      {pixel:[24,22.5],name:'沙海金钻',cut:4,colors:['#7a4a14','#a8681a','#e09a2a','#ffc94a','#ffe68a','#fff8d0'],crystal:'#ffb02a',light:'#fff1a9'},
+      {pixel:[15.3,42.3],name:'青金星石',cut:2,colors:['#14245e','#1f3a8f','#2f5fc4','#5b8fe6','#d8b54a','#fff1b8'],crystal:'#4a7aff',light:'#dfe8ff'},
+    ],
+    sky:'#b9dfe6', low:'#fff1d4', accent:'#a8681a', crystal:'#ffb02a', light:'#fff1a9',
+    ground:['#cad37a','#97a15e','#f5deab','#d6b47c'], palette:['#c98f4e','#ffe08a'],
+    intro:'上层密室被钢板封住，下面那颗 TNT 正好够得着',
+  },
+  {
+    scenery:'vault', name:'星辰宝库', gem:'宝库双星', tag:'终章',
+    gems:[
+      {pixel:[24,31],name:'星辰之心',cut:3,colors:['#1b1f5e','#2c3a9a','#4f6fe0','#8fb0ff','#d6e2ff','#ffffff'],crystal:'#7f9cff',light:'#e6ecff'},
+      {pixel:[24,7.8],name:'王冠红钻',cut:0,colors:['#5e0c24','#8f1238','#d42452','#ff5a7a','#ff9fb2','#ffe2e8'],crystal:'#ff4a6a',light:'#ffd6de'},
+    ],
+    sky:'#a9a6dc', low:'#efe2f6', accent:'#4a3f73', crystal:'#7f9cff', light:'#fff2c4',
+    ground:['#9db5a9','#738998','#e8d7c0','#cbb9a8'], palette:['#5d5190','#ffd76a'],
+    intro:'终章：钢圈锁着星辰之心，王冠要长臂才够得着',
+  },
+];
