@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>黑五福袋</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800&family=ZCOOL+KuaiLe&display=swap">
+  <link rel="stylesheet" href="./style.css?v=5">
+</head>
+<body>
+<main class="game">
+  <header class="mast">
+    <h1>黑五福袋</h1>
+    <div class="mast-controls">
+      <button id="levels" type="button" aria-label="选关"></button>
+      <button id="mute" type="button" aria-label="静音" aria-pressed="false">♪</button>
+    </div>
+  </header>
+  <div class="receipt">
+    <div class="ticket"><span>一袋固定价</span><b>¥99</b></div>
+    <div class="total">
+      <div class="money"><span>已装原价</span> <strong id="value">¥0</strong></div>
+      <div class="bar" role="progressbar" aria-label="装袋原价进度" aria-valuemin="0" aria-valuenow="0"><i id="progress"></i><em id="pass-marker"></em></div>
+      <small id="objective"></small>
+    </div>
+  </div>
+  <section id="stage" class="stage" tabindex="0" aria-label="纸袋装货区。左右方向键选列，回车放入，R 键旋转。">
+    <div class="bag-info"><strong id="bag-name"></strong><span id="capacity"></span></div>
+    <div id="feedback" class="feedback" role="status"></div>
+  </section>
+  <section class="counter" aria-label="待装商品">
+    <div class="instructions"><b id="guide"></b><small id="selection"></small></div>
+    <div id="stock" class="stock"></div>
+    <footer class="actions">
+      <button id="undo" class="secondary icon" type="button" aria-label="撤回" title="撤回"><span aria-hidden="true">↶</span></button>
+      <button id="rotate" class="secondary" type="button"><span aria-hidden="true">⟳</span> 旋转</button>
+      <button id="submit" type="button" disabled>结账 <span aria-hidden="true">↗</span></button>
+    </footer>
+  </section>
+  <dialog id="overlay">
+    <form method="dialog">
+      <button id="close" class="close" value="close" aria-label="关闭">×</button>
+    </form>
+    <div id="overlay-body"></div>
+  </dialog>
+</main>
+<script type="module" src="./game.mjs?v=5.1"></script>
+</body>
+</html>
