@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>100块穿上T台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="./style.css?layout=2">
+</head>
+<body>
+<main id="game" class="game" data-screen="title">
+  <section id="stage" class="stage" aria-label="试衣间">
+    <div class="hud-top">
+      <div id="clock" class="clock" aria-label="剩余时间">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle class="clock-track" cx="22" cy="22" r="19"></circle><circle id="clock-ring" class="clock-ring" cx="22" cy="22" r="19"></circle></svg>
+        <b id="time">45</b>
+      </div>
+      <div class="order" id="order">
+        <small id="night-name">第1夜 · 闺蜜下午茶</small>
+        <div class="wants"><span class="want" id="want-vibe">甜美</span><span class="want tone" id="want-tone"><i></i><span>粉色</span></span></div>
+      </div>
+      <button id="mute" class="mute" type="button" aria-label="声音开关" aria-pressed="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="cross" d="M16 9l6 6M22 9l-6 6"/></svg>
+      </button>
+      <div class="wallet" id="wallet">
+        <div class="wallet-row"><span>到手</span><b id="pay">¥0</b><span class="of">/ 预算 ¥<span id="budget">100</span></span></div>
+        <div class="coupon"><span class="ticket" id="coupon">满90减30</span><span id="coupon-hint">满 90 立减 30</span></div>
+        <div class="meter"><i id="meter-fill"></i></div>
+      </div>
+    </div>
+    <div id="fitting" class="fitting">
+      <div id="feed" class="feed" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="shelf" class="shelf" aria-label="货架">
+    <div id="bag" class="bag" role="group" aria-label="购物袋"></div>
+    <div class="rows" id="rows"></div>
+    <button id="checkout" class="checkout" type="button" disabled>先挑一件衣服</button>
+  </section>
+
+  <div id="fx" class="fx" aria-hidden="true"></div>
+  <div id="guide" class="guide" hidden><i></i><span id="guide-text">点这件</span></div>
+
+  <section id="title" class="overlay title-screen">
+    <div class="title-card">
+      <p class="eyebrow">BLACK FRIDAY · 黑五夜</p>
+      <h1><span>100块</span>穿上T台</h1>
+      <ul class="howto">
+        <li><b>点商品</b>直接进购物袋，对上今晚的风格和颜色</li>
+        <li><b>闪购5折</b>几秒就没，对手还在抢货</li>
+        <li><b>凑满减</b>到手价不能超预算，越省分越高</li>
+      </ul>
+      <button id="start" class="big-btn" type="button">开抢！</button>
+      <div class="nights" id="nights" aria-label="选择夜晚"></div>
+    </div>
+  </section>
+
+  <section id="intro" class="overlay intro" hidden>
+    <div class="intro-card">
+      <p id="intro-night">第1夜</p>
+      <h2 id="intro-place">闺蜜下午茶</h2>
+      <div class="wants big"><span class="want" id="intro-vibe">甜美</span><span class="want tone" id="intro-tone"><i></i><span>粉色</span></span></div>
+      <p class="intro-rule"><span id="intro-time">45秒</span> · 预算 <span id="intro-budget">¥100</span> · <span id="intro-coupon">满90减30</span></p>
+      <p class="intro-goal" id="intro-goal">穿上任意一套三星搭配 = 3 星</p>
+      <div class="go" id="go">开抢!</div>
+    </div>
+  </section>
+
+  <section id="receipt" class="overlay receipt-layer" hidden>
+    <div class="receipt" id="receipt-paper">
+      <p class="shop-name">OPAL MALL · 黑五夜</p>
+      <ol id="receipt-lines"></ol>
+      <div class="receipt-total"><span>实付</span><b id="receipt-pay">¥0</b></div>
+      <div class="saved-stamp" id="saved-stamp">省 ¥0</div>
+      <button id="to-runway" class="big-btn" type="button" hidden>上T台 →</button>
+    </div>
+  </section>
+
+  <section id="pose" class="overlay pose-layer" hidden>
+    <p class="pose-tip" id="pose-tip">点屏幕跳过</p>
+    <p class="pose-word" id="pose-word"></p>
+    <div class="flashbulb" id="flashbulb"></div>
+  </section>
+
+  <section id="result" class="overlay result-layer" hidden>
+    <div class="result-card">
+      <p class="eyebrow" id="result-night">第1夜 · 闺蜜下午茶</p>
+      <div class="stars" id="stars"><i></i><i></i><i></i></div>
+      <h2 id="result-title">今晚你最靓！</h2>
+      <p id="result-line" class="result-line"></p>
+      <ol class="rank" id="rank"></ol>
+      <div class="breakdown" id="breakdown"></div>
+      <p class="result-total">总分 <b id="result-total">0</b> <span id="result-best"></span></p>
+      <div class="outfit-book"><p class="ob-title">本夜三星搭配 <b id="ob-count">0/3</b></p><div class="ob-list" id="outfits"></div></div>
+      <div class="result-actions">
+        <button id="retry" type="button" class="ghost-btn">再来一次</button>
+        <button id="next" type="button" class="big-btn">下一夜 →</button>
+      </div>
+      <button id="menu" type="button" class="link-btn">选夜晚</button>
+    </div>
+  </section>
+</main>
+<script type="module" src="./game.js?layout=2"></script>
+</body>
+</html>
