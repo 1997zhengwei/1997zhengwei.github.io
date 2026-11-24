@@ -1,0 +1,22 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>顾客近景检查</title>
+<style>body{margin:0;background:#e0f4ff}canvas{display:block;width:100vw;height:100vh}</style></head><body>
+<script type="module">
+import * as T from './vendor/three.module.js';
+import {customer,product} from './stage.mjs';
+const r=new T.WebGLRenderer({antialias:true});r.setPixelRatio(devicePixelRatio);r.setSize(innerWidth,innerHeight);
+r.outputColorSpace=T.SRGBColorSpace;r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.15;r.shadowMap.enabled=true;
+document.body.append(r.domElement);
+const s=new T.Scene();s.background=new T.Color(0xe0f4ff);
+s.add(new T.HemisphereLight(0xe9fbff,0x8ba3ae,1.55));
+const k=new T.DirectionalLight(0xfff2d2,2.74);k.position.set(-4.7,8.9,4.3);s.add(k);
+const rim=new T.DirectionalLight(0x9fe8ff,1.22);rim.position.set(6,4,-6);s.add(rim);
+const q=new URLSearchParams(location.search);const mood=Number(q.get('mood')||3);
+const people=[];
+const row=Number(q.get('row')||0);const goodsMode=q.has('goods');
+if(goodsMode){['duck','turkey','milk','camera'].forEach((id,i)=>{const m=product(id);m.position.set((i-1.5)*1.25,.9,0);m.rotation.y=-.36;m.scale.setScalar(1.1);s.add(m);});}
+else for(let i=row*4;i<row*4+4;i++){const g=customer(i);g.position.set((i%4-1.5)*1.25,0,0);g.userData.setMood(i%4===3?1:i%4===2?2:mood);s.add(g);people.push(g);}
+const cam=new T.OrthographicCamera(-2.7,2.7,2.95,.95,.1,50);cam.position.set(1.2,4.5,12);cam.lookAt(0,1.75,0);
+const asp=innerWidth/innerHeight,hh=2.7/asp;cam.top=hh;cam.bottom=-hh;cam.updateProjectionMatrix();
+const spin=q.has('spin');
+(function loop(t){people.forEach((g,i)=>g.rotation.y=spin?t/1000:0.15);if(goodsMode&&spin)s.children.forEach(c=>{if(c.isGroup)c.rotation.y=t/1000;});r.render(s,cam);requestAnimationFrame(loop);})(0);
+</script></body></html>
