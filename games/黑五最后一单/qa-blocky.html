@@ -1,0 +1,20 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>方块顾客近景</title>
+<style>body{margin:0;background:#eafaff}canvas{display:block;width:100vw;height:100vh}</style></head><body>
+<script type="module">
+import * as T from './vendor/three.module.js';
+import {blockyCustomer} from './blocky.mjs';
+const r=new T.WebGLRenderer({antialias:true});r.setPixelRatio(devicePixelRatio);r.setSize(innerWidth,innerHeight);
+r.outputColorSpace=T.SRGBColorSpace;r.toneMapping=T.NeutralToneMapping;r.toneMappingExposure=1.05;
+document.body.append(r.domElement);
+const s=new T.Scene();s.background=new T.Color(0xeafaff);
+s.add(new T.HemisphereLight(0xf2fcff,0xd2dcee,1.75));
+const k=new T.DirectionalLight(0xfff2d2,2.4);k.position.set(-4,9,6);s.add(k);
+
+const q=new URLSearchParams(location.search),moods=[3,3,2,1];
+const people=[];
+const row=Number(q.get('row')||0);for(let i=0;i<8;i++){const g=blockyCustomer(i+row*8);g.position.set((i-3.5)*1.4,0,0);g.userData.setMood(q.has('moods')?moods[i%4]:3);s.add(g);people.push(g);}
+const cam=new T.OrthographicCamera(-5,5,3,-.4,.1,50);cam.position.set(1.2,4,12);cam.lookAt(0,1.4,0);
+const asp=innerWidth/innerHeight,hw=5.9,hh=hw/asp;cam.left=-hw;cam.right=hw;cam.top=hh;cam.bottom=-hh;cam.updateProjectionMatrix();
+const spin=q.has('spin');
+(function loop(t){people.forEach(g=>g.rotation.y=spin?t/1000:-.18);r.render(s,cam);requestAnimationFrame(loop);})(0);
+</script></body></html>

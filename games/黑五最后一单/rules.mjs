@@ -19,7 +19,7 @@ export const goods = {
 };
 const IDS = Object.keys(goods);
 export const NAMES = ['蓝莓','阿桥','橘子','米粒','小满','豆豆','阿杰','可乐','糖糖','老周','七七','大熊','阿紫','小鹿','果冻','阿福','麦麦','团子','芒果','阿星'];
-export const DESIGN_COUNT = 8;
+export const DESIGN_COUNT = 16;
 export const BILLS = [50, 20, 10, 5, 1];
 export const STRIKES = 3;
 export const MILESTONES = [500, 1000, 2000, 3000, 5000, 8000, 12000, 20000, 30000, 50000];

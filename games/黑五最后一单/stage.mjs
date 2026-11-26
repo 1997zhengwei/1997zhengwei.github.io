@@ -1,5 +1,7 @@
 import * as T from './vendor/three.module.js';
 import {goods,moodOf} from './rules.mjs';
+import {paperCustomer} from './paper.mjs';
+import {blockyCustomer} from './blocky.mjs';
 
 const materials = new Map();
 function surface(color, metalness = 0, roughness = .67) {
@@ -446,7 +448,7 @@ function buildMarket(scene) {
   }
   const signGroup=new T.Group();signGroup.position.set(-.12,3.26,-5.51);g.add(signGroup);
   shell(signGroup,2.38,.54,.113,.043,surface(0x1681ad,.12,.43));
-  label(signGroup,{text:'FRESH MART',w:2.16,h:.37,z:.062,bg:'#137ba7',ink:'#fbfff0',font:96});
+  label(signGroup,{text:'FRESH MART',w:2.16,h:.37,z:.062,bg:LOOK.fresh?'#ff4d6d':'#137ba7',ink:'#fbfff0',font:96});
   for(const x of [-1,1])box(signGroup,.032,1,.033,0x728d9f,x,.76,-.04);
 }
 
@@ -456,7 +458,7 @@ function buildCounter(scene) {
   shell(counter,7.43,.25,3.48,.078,surface(0xfff9e8,.13,.37),0,1.15,1.74);
   shell(counter,7.24,.087,.091,.03,surface(0x86dcd1,.18,.37),0,.928,3.428);
   box(counter,7.10,.07,.05,0x184c74,0,.2,3.408);
-  label(counter,{text:'CHECKOUT',w:2.17,h:.32,x:-1.13,y:.635,z:3.411,bg:'#1479b2',ink:'#fff7da',font:102});
+  label(counter,{text:'CHECKOUT',w:2.17,h:.32,x:-1.13,y:.635,z:3.411,bg:LOOK.fresh?'#123f9e':'#1479b2',ink:'#fff7da',font:102});
   for(let i=0;i<7;i++)box(counter,.083,.24,.039,0x4da5ce,.35+i*.163,.632,3.413);
   shell(counter,3.13,.135,1.94,.046,surface(0x526979,.41,.36),-1.55,1.296,1.44);
   shell(counter,2.99,.094,1.83,.028,surface(0x23394d,.17,.65),-1.55,1.335,1.44);
@@ -515,6 +517,24 @@ function buildCounter(scene) {
   return {belt,beam,halo,display,displayTexture,paper,drawer};
 }
 
+// 清新配色：把超市和收银台的旧颜色一一换成更透亮的糖果色
+const LOOK={fresh:false};
+const FRESH=new Map([
+  // 地面：深浅两种绿的棋盘格；收银垫：亮黄
+  [0xbbd7dd,0x22a95a],[0xeef7f3,0x5ed97c],[0x6ca8a5,0xffd23f],[0x80bab1,0xffe066],[0x75aea6,0xf2b800],
+  // 墙：饱和蓝 + 黄色腰线，窗是浅天蓝
+  [0xc4e8ee,0x3d8bff],[0x2099bc,0xffd23f],[0x9ad7ee,0x9fe6ff],
+  // 货架：深蓝背板、白立柱、黄色价签条，货品用高饱和色
+  [0x5b8fba,0x1f5fd1],[0xe0eff0,0xffffff],[0x37a2cc,0xffd23f],
+  [0xe99150,0xff8a1f],[0x3bafaa,0x14c4a0],[0xe55f69,0xff4d6d],[0x589ae0,0x3d8bff],[0xffcc50,0xffd23f],[0x64b978,0x46d160],
+  [0x1681ad,0xff4d6d],[0x728d9f,0x1e2a5c],
+  // 收银台：深一点的宝蓝 + 黄边
+  [0x177fba,0x1f6fe0],[0x86dcd1,0xffd23f],[0x184c74,0x123f9e],[0x4da5ce,0xffd23f],
+  [0x526979,0x34406a],[0x23394d,0x1e2440],[0x43566a,0x3a456e],
+  [0x042d51,0x13204a],[0x1a9eb5,0x14c4a0],[0x18384b,0x1e2a5c],[0x477f95,0x3d8bff],[0x234757,0x13204a],[0x80ccbb,0x7ff0d0],[0xb1c7ca,0xe8eefc],
+  [0x1c4358,0x1e2a5c],[0x40586a,0x3a456e],[0x162e49,0x13204a],[0x156491,0x1f6fe0],[0x7da9b0,0xffffff]
+]);
+const CAM_YAW=Math.atan2(2.58,14.37);
 const PRESENT=-.36;
 const CUR={x:-1.45,y:1.40,z:1.49}, NEXT_X=-2.62, ENTER_X=-3.9;
 const HEIGHTS={carton:1.3,bottle:1.4,pump:1.5,pouch:1.25,tin:.72,toy:.92,box:1.1,duck:1.3,turkey:1.0};
@@ -540,18 +560,22 @@ function bubbleMaterial(mood) {
   return new T.SpriteMaterial({map,depthTest:false,transparent:true});
 }
 
-export function createStage(root) {
+export function createStage(root,opts={}) {
+  const paper=opts.paper??'blocky';            // 纸片人纸样；'3d' = 旧的立体顾客
+  LOOK.fresh=opts.fresh??true;
   const renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'low-power'});
   renderer.setPixelRatio(Math.min(1.8,window.devicePixelRatio||1));
   renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFShadowMap;
   renderer.outputColorSpace=T.SRGBColorSpace;
-  renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;
+  if(LOOK.fresh){renderer.toneMapping=T.NeutralToneMapping;renderer.toneMappingExposure=.98;}
+  else {renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;}
   root.append(renderer.domElement);
-  const scene=new T.Scene();scene.background=new T.Color(0xe0f4ff);scene.fog=new T.Fog(0xe0f4ff,16,34);
+  const sky=LOOK.fresh?0x5cb8ff:0xe0f4ff;
+  const scene=new T.Scene();scene.background=new T.Color(sky);scene.fog=new T.Fog(sky,LOOK.fresh?30:16,LOOK.fresh?70:34);
   scene.environment=studioMap();scene.environmentIntensity=.54;
   const camera=new T.OrthographicCamera(-4,4,4,-4,.1,48);
   camera.position.set(2.18,8.6,13.77);camera.lookAt(-.4,1.6,-.6);
-  scene.add(new T.HemisphereLight(0xe9fbff,0x8ba3ae,1.55));
+  scene.add(new T.HemisphereLight(0xf2fcff,LOOK.fresh?0x9fb4d8:0x8ba3ae,LOOK.fresh?1.3:1.55));
   const key=new T.DirectionalLight(0xfff2d2,2.74);key.position.set(-4.7,8.9,4.3);
   key.castShadow=true;Object.assign(key.shadow.camera,{left:-9,right:9,top:9,bottom:-8,near:.4,far:26});
   key.shadow.mapSize.set(1024,1024);key.shadow.bias=-.00035;key.shadow.normalBias=.017;
@@ -559,6 +583,12 @@ export function createStage(root) {
   const rim=new T.DirectionalLight(0x9fe8ff,1.22);rim.position.set(6,4,-6);scene.add(rim);
   buildMarket(scene);
   const devices=buildCounter(scene);
+  if(LOOK.fresh)scene.traverse(o=>{
+    const m=o.material;if(!m?.color||m.userData.fresh)return;
+    const hex=m.color.getHex();if(FRESH.has(hex))m.color.setHex(FRESH.get(hex));
+    m.userData.fresh=true;
+  });
+  const BUBBLE_Y=paper==='3d'?2.78:paper==='blocky'?2.9:2.98;
   const bubbles={3:bubbleMaterial(3),2:bubbleMaterial(2),1:bubbleMaterial(1),0:bubbleMaterial(0)};
 
   // 商品对象池：同一种商品可能同时出现在台前和传送带上
@@ -596,8 +626,8 @@ export function createStage(root) {
       const known=new Set(people.map(p=>p.c));
       for(const c of run.queue){
         if(known.has(c)||c.state==='done'||c.state==='left')continue;
-        const g=customer(c.design);scene.add(g);
-        const bubble=new T.Sprite(bubbles[3]);bubble.scale.setScalar(.46);bubble.position.set(.42,2.78,0);bubble.renderOrder=5;g.add(bubble);
+        const g=paper==='3d'?customer(c.design):paper==='blocky'?blockyCustomer(c.design):paperCustomer(c.design,paper);scene.add(g);
+        const bubble=new T.Sprite(bubbles[3]);bubble.scale.setScalar(.46);bubble.position.set(.42,BUBBLE_Y,0);bubble.renderOrder=5;g.add(bubble);
         if(fresh)g.position.set(0,0,0);else{g.position.set(ENTRANCE.x,0,ENTRANCE.z);g.rotation.y=Math.PI*.8;}
         g.scale.setScalar(.98);
         people.push({g,c,bubble,mood:3,gone:false,snap:fresh});
@@ -689,11 +719,20 @@ export function createStage(root) {
         const arms=g.userData.arms;if(arms){const wave=fever&&!leaving?Math.sin(time*12+i)*.5+2.4:(p.cheer>0?2.6:0);arms.forEach((a,j)=>{const base=(j?1:-1)*.22;a.rotation.z+=(((j?1:-1)*wave+base)-a.rotation.z)*(1-Math.exp(-dt*12));});}
         const face=(walking&&(leaving||dist>.6)?Math.atan2(dx,dz):t.ry)+(p.cheer>0?(1-p.cheer/.75)*Math.PI*2:0);
         g.rotation.y+=(face-g.rotation.y)*(1-Math.exp(-dt*8));
+        const card=g.userData.card;
+        if(card){
+          // 纸片人永远朝着镜头；走路时纸往前进方向侧一点，开心时整张纸翻个面
+          const lean=walking?Math.max(-1,Math.min(1,Math.sin(Math.atan2(dx,dz)-CAM_YAW)))*.5:0;
+          const spin=p.cheer>0?(1-p.cheer/.75)*Math.PI*2:0;
+          p.lean=(p.lean??0)+(lean-(p.lean??0))*(1-Math.exp(-dt*10));
+          card.rotation.y=CAM_YAW-g.rotation.y+p.lean+spin;
+          card.rotation.z=walking?Math.sin(time*11+i)*.06:0;
+        }
         const s=g.scale.x+(t.s-g.scale.x)*(1-Math.exp(-dt*6));g.scale.setScalar(s);
         g.userData.setMood(p.mood===0?1:p.mood);
         const fume=p.mood<=1&&!walking?Math.sin(time*24+i)*.035:0;
         g.rotation.z=(p.c.state==='front'&&jolt>0?Math.sin(jolt*30)*.07:0)+fume;
-        p.bubble.position.y=2.78+Math.sin(time*4+i)*.04;
+        p.bubble.position.y=BUBBLE_Y+Math.sin(time*4+i)*.04;
         p.bubble.scale.setScalar(p.mood<=1?.5+Math.abs(Math.sin(time*8))*.06:.46);
         if(leaving&&dist<.3){g.visible=false;p.gone=true;}
       }

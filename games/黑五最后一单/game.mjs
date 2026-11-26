@@ -15,7 +15,7 @@ const JINGLE=[0,4,7,4,9,7,4,2,0,4,7,12,11,7,9,12];
 const MOOD_TEXT={3:'开心',2:'一般',1:'不爽',0:'走了'};
 const save=readSave();
 let stage;
-try { stage=createStage($('scene')); } catch { $('scene').classList.add('fallback'); }
+try { stage=createStage($('scene'),{paper:new URLSearchParams(location.search).get('paper')||'blocky'}); } catch { $('scene').classList.add('fallback'); }
 
 let run,playing=false,drag=null,shown='',total=0,endDelay=-1,guideScans=0,printTimer=null,shownGmv=0,lastLevel=0,musicMode='game';
 
