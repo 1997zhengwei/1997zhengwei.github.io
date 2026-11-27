@@ -30,3 +30,9 @@
 详细校验清单见 MIGRATION_MANIFEST.json。该清单记录复制瞬间的文件；后续平台同步记录更新由 Git 提交追踪。
 
 迁移后再次按旧提交的 Git blob 核对，消除了 Windows 检出时的换行转换；既有游戏在新路径下保留原提交的文件字节。矿车归途固定基线仍为 98ea4ceefc426515bbf073e625895341078618d6，其已验收运行文件未改动。
+
+## 2026-11-28 补齐游戏总目录
+
+从 [旧分支固定提交](https://github.com/1997zhengwei/1997zhengwei.github.io/tree/6e8d993f0a7dcc48b85df371342fe68ee3707b1f/games/) 补入 `main` 下 `game/` 尚缺的 26 款作品。每个目录沿用源 Git 子树，原来的 `games/<中文游戏名>/` 变为长期入口下的 `game/<中文游戏名>/`。两边共有的 17 款作品子树一致。
+
+[整理前的主分支索引](https://github.com/1997zhengwei/1997zhengwei.github.io/blob/d566ddc3a29d8149ae28edf18848fce251feee44/game/README.md) 保存此前汇总的介绍与试玩记录。2026-11-28 起，以 [游戏作品总目录](./README.md) 为入口。总目录日期取原路径的最早 GitHub 记录，按北京时间换算，其中《蟹黄堡翻翻乐》追溯至最初的 `experiments/` 提交。

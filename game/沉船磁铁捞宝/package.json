@@ -1,0 +1,9 @@
+{
+  "name": "wreck-magnet",
+  "version": "0.10.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}

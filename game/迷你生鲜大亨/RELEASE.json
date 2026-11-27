@@ -1,0 +1,440 @@
+{
+  "game": "迷你生鲜大亨",
+  "version": "0.4.0",
+  "date": "2026-11-12",
+  "repository": "1997zhengwei/1997zhengwei.github.io",
+  "branch": "codex/krabby-patty-flip",
+  "directory": "games/迷你生鲜大亨/",
+  "testsPassed": 56,
+  "entry": "index.html",
+  "build": "npm run build",
+  "offlineAssets": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "c6c87af703eae36a37b9e8b1bd40f1588d7d60fa96a658845ac8887e41a8995e",
+      "gitBlob": "9ba81d53b64329d23e76c3504da8e8e71d27a196"
+    },
+    {
+      "path": "ART_DIRECTION.md",
+      "bytes": 2786,
+      "sha256": "856f3c7d86db0427ceaa6c23e68a4e93dde559922f286545acf557200a87eb96",
+      "gitBlob": "d9a8c8a6fc180b2173e8365fd76fcc844c32461e"
+    },
+    {
+      "path": "BRIEF.md",
+      "bytes": 2031,
+      "sha256": "44805668f9833960953dbe6a2e702f9429a94dd9e589286e15601b29affd1fdf",
+      "gitBlob": "ba1ac39bd758f0f09686979e6c2807e2b9cd4624"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7921,
+      "sha256": "6616656955406ef06fcbec233eb5609c3750a8e66cdeae0178fbe710a6e61f6a",
+      "gitBlob": "9dfa0c5b194e048f3400fae7090e9b8dd208f4f2"
+    },
+    {
+      "path": "build.mjs",
+      "bytes": 523,
+      "sha256": "8bdd343cee4f518d0ad86fab5290c21518c7952ee9d342adde409c63178d10a5",
+      "gitBlob": "ba73a09b7a45cb061d74bcfb2a68b90fbe0b66cb"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4295,
+      "sha256": "83af05e7740c218270ce2d9c06a08945325558742b61af242ca82b4a43ae4e1d",
+      "gitBlob": "1b8f3207a19c333a63415df836c0ece72a0a7aac"
+    },
+    {
+      "path": "package.json",
+      "bytes": 178,
+      "sha256": "1536a70ffc5b1a9640678a67c02e8e1d7a6d125a8351ab20f0dd0024ae94dafd",
+      "gitBlob": "ed98798c66ec25869ddc83b694c5ee3ba9eae777"
+    },
+    {
+      "path": "qa/QA.md",
+      "bytes": 2548,
+      "sha256": "a27dbf70ac07db9e28d62c391f3be3a364489b6fba9e0bbac0c9467bb17f745c",
+      "gitBlob": "ee4154f12da05018d9229589eba26162a0435a56"
+    },
+    {
+      "path": "qa/V020-ART.md",
+      "bytes": 2645,
+      "sha256": "85970945a15afd51ad42d7d3d9a7e35c10bda5c6fd60a39c04f2725717da69e3",
+      "gitBlob": "491ea18ea1fd67608e44b9372cdca4d5c4c9f0d6"
+    },
+    {
+      "path": "qa/V030-GROWTH.md",
+      "bytes": 3221,
+      "sha256": "86f9f28a4c0f24612c8e8b503723d2516926a0e3e89667a02300a2d19d9b2137",
+      "gitBlob": "4eb0803328664b04a0062654a40ac4802caea722"
+    },
+    {
+      "path": "qa/V040-EMPIRE.md",
+      "bytes": 4750,
+      "sha256": "db4b419815baf3f298bcb08491f3a7a110b5168c8ea8c97e1320459465d9945e",
+      "gitBlob": "9c20ea504ddc153fa93033cb7c41baca645dd460"
+    },
+    {
+      "path": "qa/expanded-overview.jpg",
+      "bytes": 52271,
+      "sha256": "22346d8d21c2ad241b7900d166c3991df3c50c04851223184b9f673b8f82af32",
+      "gitBlob": "213391f2a88ce32c35b507d644e25356c0f437e7"
+    },
+    {
+      "path": "qa/expanded-showroom.jpg",
+      "bytes": 57165,
+      "sha256": "174a80eb90a1efee3550641b21c57da758e3ddeae936b287191586b3300739ad",
+      "gitBlob": "58bd914ffdb4c84bbf67c45a3e6de25b35f08c62"
+    },
+    {
+      "path": "qa/normal-phone-400x580.jpg",
+      "bytes": 31391,
+      "sha256": "0800eac98055ea97d08c6972611f7caf19b5d5a108959b827ad85fe9fb860e1a",
+      "gitBlob": "fd19057665649477a71fc9f1f228f87cfc94eceb"
+    },
+    {
+      "path": "qa/ready-first-screen.jpg",
+      "bytes": 44552,
+      "sha256": "4e95738023067f85b6dfa822dac2a7a71b377bd57ca42b7d903d094b846acf97",
+      "gitBlob": "f16f2d725f41bfd5b49dab3a50eb34993105fcf4"
+    },
+    {
+      "path": "qa/v020-normal-carry6-400x580.jpg",
+      "bytes": 34340,
+      "sha256": "6dce5d68a5c97a85604e1e1e9187869643c6fb30ab56fb5ee4529b47cf99f39c",
+      "gitBlob": "e59986ef0c38866652b8691aef959cb148760f14"
+    },
+    {
+      "path": "qa/v020-real-carry14.jpg",
+      "bytes": 55246,
+      "sha256": "049d1e9b6765456cdfc7dc4d87f139692f96f73136f4bd63658cde9255756a12",
+      "gitBlob": "b3dfab7762e33e99abe1388ad884b8d8bb84b1b7"
+    },
+    {
+      "path": "qa/v030-customers.jpg",
+      "bytes": 130329,
+      "sha256": "fbed25142b1cf673ee615706c16c4f7ee8e76ba08d26666785f1844f2c3e0f98",
+      "gitBlob": "e9a7383dae9abf0d0c8ba08cc3de606f87bee284"
+    },
+    {
+      "path": "qa/v030-existing-save-growth.jpg",
+      "bytes": 26903,
+      "sha256": "ddcd7183301a87251442cee53296e8b958faa85fa9df1135b1e05a1029a56327",
+      "gitBlob": "c1ff9e674c5acb8acc037fc98649b81fcbf4a54e"
+    },
+    {
+      "path": "qa/v030-gold-uniform-phone.jpg",
+      "bytes": 23491,
+      "sha256": "63f7fb74ffc86cbaaaed0620caa0864405b683fb10a82178bec1816c4e8e630c",
+      "gitBlob": "aa8cfb70f7d81540edd68c0e39dcc078e4d6c46c"
+    },
+    {
+      "path": "qa/v030-night-overview.jpg",
+      "bytes": 98442,
+      "sha256": "7d244810f05f945bc64fa2d4923e45c6fffc19389372d781a1a2453b6b1c5e33",
+      "gitBlob": "a813dab2feaa98c6c40d6997089d1809a44c631b"
+    },
+    {
+      "path": "qa/v030-styled-shop-phone.jpg",
+      "bytes": 44225,
+      "sha256": "6d9aa34f3c9fcc175f55e8ad027977376f9edf9621759b43007d5ffd1ad64212",
+      "gitBlob": "3cc473053359417f16dfb3dee931d19fe4e46482"
+    },
+    {
+      "path": "qa/v040-empire-map.jpg",
+      "bytes": 59111,
+      "sha256": "31347e7df3136fd40abd658962e289d34d3d1563055ccae29d41f2204a886fba",
+      "gitBlob": "3df1a81e787a0d1811617256ef830e1acc984344"
+    },
+    {
+      "path": "qa/v040-flowers-in-reserve.jpg",
+      "bytes": 63581,
+      "sha256": "5007ab72cf503b4a27444cd3adb0721cda5f24b4ea182de4a96999b422b58a56",
+      "gitBlob": "9b7d33e89642cf588c441568520338c6785370ea"
+    },
+    {
+      "path": "qa/v040-map-phone-320.jpg",
+      "bytes": 23318,
+      "sha256": "c87e09d6965780982fe1c69561c5bcd0590e80306eee10a6321445d9ffef020d",
+      "gitBlob": "7384d5a3362e483af3942b49f621b98e79f6c121"
+    },
+    {
+      "path": "qa/v040-real-commercial-map.jpg",
+      "bytes": 39819,
+      "sha256": "0fd8d28d91861adde1b389e6bf8ad1b749395670e9a9003ae3e8568d4911ba41",
+      "gitBlob": "38db0462665f66bc31486afdf94c6d1e1f841a9a"
+    },
+    {
+      "path": "qa/v040-real-owner.jpg",
+      "bytes": 62905,
+      "sha256": "f04dff242d9a9bd7e9c821f649519d3c75b1767af1775db41645d136a6f3aebf",
+      "gitBlob": "eef70f643472fb30570622c55ef388da880a8861"
+    },
+    {
+      "path": "qa/v040-rush-owner.jpg",
+      "bytes": 136716,
+      "sha256": "992c8e214008d05b3a9f09c2da9e66f9d40ef359a2048ac639da8140d5e46748",
+      "gitBlob": "fb6741036a9f7108cf12abc41e9e7b4e661f3e6e"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1663,
+      "sha256": "2b778df2a7ced5659ca7016d642a097629d74268e157c691ed1ba7fcdc57eddd",
+      "gitBlob": "20335c60b127b67f03a22af0664bd67be3b73415"
+    },
+    {
+      "path": "src/actors.mjs",
+      "bytes": 7159,
+      "sha256": "81a7c4bb616fa8f7b6df3329213182a6b435a1c2fc9c87a77cfbe0933c385043",
+      "gitBlob": "28fb783c737db8ee48b98fb7ecdcd70bde66e33f"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 6764,
+      "sha256": "369aedafaa0b31c1ac26bc837a47b4d2bf23ffa5f21a428afec17650442b3fea",
+      "gitBlob": "f926538528f91236545f5e032c8d077f37b3a861"
+    },
+    {
+      "path": "src/art.mjs",
+      "bytes": 6403,
+      "sha256": "b70adadc32ed5793afa29a28fcd0f0107117eceaa6e0eab4a1e1c38446788dfe",
+      "gitBlob": "464ad0a314d9824f9df46fc88ba386934e010929"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 939,
+      "sha256": "568bc05458a46c2d60b24f808a610fb1969f877aee55e40592d19268dc765d15",
+      "gitBlob": "ad1c9d7adc10bd3b3f7ea63167623a7d96de1afc"
+    },
+    {
+      "path": "src/business-map.mjs",
+      "bytes": 4864,
+      "sha256": "f084737f956a41bb883a40f5d2c303363e77e8e6d6f5defbb9327a42dd68baf7",
+      "gitBlob": "b07d39d2ba978fc7391000703b294dd015ca62e5"
+    },
+    {
+      "path": "src/business.mjs",
+      "bytes": 2379,
+      "sha256": "9bfd03390ded20f1001a3aa877b8cc8029a63b5a2e3b28f193cfc39db2c45cae",
+      "gitBlob": "d542713e69d4037144597ae3ce41924e2c263aa9"
+    },
+    {
+      "path": "src/cargo.mjs",
+      "bytes": 3247,
+      "sha256": "47e53c8947055a893584d73c1ab833dc72f7edfdc4affae387cd3884d815fd53",
+      "gitBlob": "cf3f385f6cd883318c7d347c53b658db98813d29"
+    },
+    {
+      "path": "src/config.mjs",
+      "bytes": 5671,
+      "sha256": "8f7332b6d3c4ecf4fe1e42c4c4b36f84de92c4857b6e37778dfb625f0968f991",
+      "gitBlob": "0dad23e693c1f31265fda5cfe457f253a0514ff7"
+    },
+    {
+      "path": "src/cosmetics.mjs",
+      "bytes": 3508,
+      "sha256": "616c3173eaf688ee0882a0e080728f168bc6087aa297126b9450cf43402b5c22",
+      "gitBlob": "35966a0990c3b58ce3295da070f227d703d6645f"
+    },
+    {
+      "path": "src/customer-profiles.mjs",
+      "bytes": 2525,
+      "sha256": "9a7b57c379e5976939718cf32eff9d81af81ffa64d1e78624894a259029af7ec",
+      "gitBlob": "c6a272b94781d6fbc4638ce8660fe5c6ee47a93d"
+    },
+    {
+      "path": "src/diagnostics.mjs",
+      "bytes": 673,
+      "sha256": "711a4f88c7610419121c9ac915d0519583dd29f696b72f2aba9bbf9469e6b441",
+      "gitBlob": "7eb361d05fcff16a55c0aac92c75355cd56ded94"
+    },
+    {
+      "path": "src/dressing-preview.mjs",
+      "bytes": 3231,
+      "sha256": "4bb6012b57bcd308dbcff4249ac0ec76061a34678ff367e2b8bae3df33f195a2",
+      "gitBlob": "4b04a6f797e595505faced7df6612701e15a5963"
+    },
+    {
+      "path": "src/effects.mjs",
+      "bytes": 2888,
+      "sha256": "cbb4b1a446c14a576d7f5a690c0634ac02adc39a691ad7dc43a06681ce79f7e4",
+      "gitBlob": "e96d618da2a0fcf85bbad4726a4efaeaaad38a70"
+    },
+    {
+      "path": "src/goods-layout.mjs",
+      "bytes": 1019,
+      "sha256": "c3016528a78e3829ec00510b6678ebe1f98744ff79008eeed0453e6107a5ef8d",
+      "gitBlob": "2a189318b5bfd47bf1b33a7233d7afa57b4d8534"
+    },
+    {
+      "path": "src/input.mjs",
+      "bytes": 2464,
+      "sha256": "907134cc804f86b6bc1a5d76b0e834211b5b6143de1e4a3527ed19eb117ae098",
+      "gitBlob": "b07aaeff34389fc305dbbe87f908d912797da72c"
+    },
+    {
+      "path": "src/market-models.mjs",
+      "bytes": 4388,
+      "sha256": "d4260bf9a747eec247b954a9d9f84c7cb489d2b234e051d771d400f0a3388afd",
+      "gitBlob": "681b2ae7e6192532c0e59929f53f38eefa848637"
+    },
+    {
+      "path": "src/navigation.mjs",
+      "bytes": 4006,
+      "sha256": "7103260003ef7d9a6231b50cb328090825e3a52412c5e92bd25b7c3344379645",
+      "gitBlob": "c91f6673c1e10a051149749666ab4674c63969ec"
+    },
+    {
+      "path": "src/people-style.mjs",
+      "bytes": 4799,
+      "sha256": "7f21d90f9cf4a32a91d6a247eec46583cc35c7ba29f28cfebbdbaf5b6cf3bf0c",
+      "gitBlob": "86cda534d8a7103c4253577ec30687e53ea9f7d6"
+    },
+    {
+      "path": "src/presentation.mjs",
+      "bytes": 1999,
+      "sha256": "cdf2d40ddabbdde76345524a68aa696c698116e84faa809a377db597174f14f4",
+      "gitBlob": "d8b377f2c136d50d8252e9283fac1372b998f3ea"
+    },
+    {
+      "path": "src/products.mjs",
+      "bytes": 4798,
+      "sha256": "e51043fc7367fbe44d74060fad6a14553fd59f236a67d02adf183e732a6b746f",
+      "gitBlob": "d07fb4ed668940e2946eb471b2c3f5a54abd75ee"
+    },
+    {
+      "path": "src/progression.mjs",
+      "bytes": 1857,
+      "sha256": "a4deb159deff1c5069f588461a3319b8fde86b535cd5ce8cd31bb165fa89bb19",
+      "gitBlob": "30289940203c9a9cce47978adfb5b2116a56d468"
+    },
+    {
+      "path": "src/showroom.mjs",
+      "bytes": 3331,
+      "sha256": "d9686c21a0c9e4bb951112ab6430d29f4cfbf15ddc13c021ab90ca933cbf9c17",
+      "gitBlob": "38e0325b16195b916b0bb8715129e9fa009931b6"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 28100,
+      "sha256": "e9aa9e3042d648ad781dbade1829b60ec85ae0ea4e7d854add2e20b7f7ed0577",
+      "gitBlob": "9cf81880eb8da2c884bead3beb2384a3f21df766"
+    },
+    {
+      "path": "src/store-art.mjs",
+      "bytes": 6326,
+      "sha256": "1b26896299da453b6b6029ce96578462d6af121c756b0e792ddf494ac845f1e6",
+      "gitBlob": "4362199416c4b46fb2601177878d3c64515ef6b7"
+    },
+    {
+      "path": "src/stores.mjs",
+      "bytes": 4855,
+      "sha256": "57591bc75ccb88346d884e94191afbe62e8544fc6caf0cdc4fe071d463a73d16",
+      "gitBlob": "75e645d2e31f200c0152d5185c40ad16014a296f"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 26524,
+      "sha256": "fdb1485ec360634a3e9b47d00a4276e226d351fc46d25b584c0151996e0d3f69",
+      "gitBlob": "0b48fc7ae4ac613d19b8fc66f24feff63bd7cfea"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 24203,
+      "sha256": "f0a50d7076189ab6e8732ee2f67883e4e8e8d8212debb8cbd1ca126376978858",
+      "gitBlob": "e0c8ce4e96d69eb621eca6c126b54ab810697f73"
+    },
+    {
+      "path": "src/world.mjs",
+      "bytes": 14418,
+      "sha256": "729e840bf2863cf16cb01cf0ca8d79ef0b4ab617dc634f97be5eccea31478042",
+      "gitBlob": "bf31add67c441c0fc0dae9d197e3ee1109b42e2e"
+    },
+    {
+      "path": "tests/business.test.mjs",
+      "bytes": 5746,
+      "sha256": "68c6c803570706c38a5ad342b464f381b6211c4838f9398aee82e6405a33b8e5",
+      "gitBlob": "566af171201c3ed14b2b4ef5c737ee1678e39a84"
+    },
+    {
+      "path": "tests/cargo.test.mjs",
+      "bytes": 3767,
+      "sha256": "4903b745fa6f585e9e014aa0061acd25bc03743a877ec8e558912fb456d2c0c4",
+      "gitBlob": "da85fba67779a36e7f3abea2fde2387dbf361f1f"
+    },
+    {
+      "path": "tests/growth.test.mjs",
+      "bytes": 7764,
+      "sha256": "cdaf46800f8d9993984cbb9a5db24ff6c10470301748c02c3492ca63c53770da",
+      "gitBlob": "0a129e80064a8122578f38f99640d4bd7492007b"
+    },
+    {
+      "path": "tests/network.test.mjs",
+      "bytes": 5970,
+      "sha256": "93576b769db97aafe748b230de821dff9bd8afe4a40379facca211f55298e4e4",
+      "gitBlob": "3ada747627681963d224d8d2bc2cf8036b7fdf64"
+    },
+    {
+      "path": "tests/people-art.test.mjs",
+      "bytes": 1777,
+      "sha256": "a2405226f8d3b2f85757ff2bf5b97cab9ee76d12dad0413c088fc4ef3b48e1b3",
+      "gitBlob": "9c66631d43811a8899ffcd589d9bdbcf88694751"
+    },
+    {
+      "path": "tests/presentation.test.mjs",
+      "bytes": 993,
+      "sha256": "f03daf0f088a483c714ff414aff1df239814637e906823ae48b9c5c711cdd30a",
+      "gitBlob": "e80c7b7ad2ecd1fb06546fd11dbff2fcaabc68e7"
+    },
+    {
+      "path": "tests/production.test.mjs",
+      "bytes": 1644,
+      "sha256": "80e9a1fcba8b1afc79c35ad1b59facc24db834e22859691672c383a5a2475d03",
+      "gitBlob": "21b00e56d32070745b206a06847a368622f6ce7c"
+    },
+    {
+      "path": "tests/storage.test.mjs",
+      "bytes": 3370,
+      "sha256": "010528a1c1e6705eb87a9f0196f701b3dbd1277b5992ff47a359579db8a0c4b7",
+      "gitBlob": "e23311ce530313ff3f12641070af2ea9a4bb539e"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "gitBlob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "vendor/geometries/RoundedBoxGeometry.js",
+      "bytes": 6483,
+      "sha256": "b3e2d87473cd48f59720739a6ceedbd9f0dccf89224c84403730b2e808d5e4f2",
+      "gitBlob": "9ce603cfac7b59cb0388ab571f3d832cbacfba6b"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "gitBlob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "gitBlob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37725,
+      "sha256": "ce6b8c82f29e4ad7e8e330ce2bccd921de6c36a5c05c8f50f9a8b039596b8551",
+      "gitBlob": "6bae3d83270ee4381110f8ec0d1a6caf02ecaa23"
+    },
+    {
+      "path": "启动试玩.cmd",
+      "bytes": 69,
+      "sha256": "53669cc4a192a112a074d7121d9e0f480b67e6027718fef6b7bb5882a241bd83",
+      "gitBlob": "9e4955cba3eac5ef2f12ec7d466ab458f0686c80"
+    }
+  ]
+}

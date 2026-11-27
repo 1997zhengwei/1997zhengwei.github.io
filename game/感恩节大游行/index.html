@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#c0213b">
+<title>感恩节大游行 · 气球领队</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<main id="game">
+  <canvas id="scene" aria-label="三维感恩节游行街道"></canvas>
+  <div id="labels"></div>
+  <div id="flash"></div>
+  <div id="power-vignette"></div>
+
+  <header id="hud" hidden>
+    <button id="btn-pause" class="icon-btn" aria-label="暂停">⏸</button>
+    <div id="progress"><div id="progress-fill"></div><span id="progress-balloon">🎈</span><small id="dist">0 m</small></div>
+    <button id="btn-sound" class="icon-btn" aria-label="声音">🔊</button>
+  </header>
+  <div id="stats" hidden>
+    <div class="stat" id="stat-air"><span>🎈</span><div class="bar"><i id="air-fill"></i></div><b id="air-num">100%</b></div>
+    <div class="stat" id="stat-crew"><span>👥</span><b id="crew-num">6</b></div>
+    <div class="stat" id="stat-star"><span>⭐</span><b id="star-num">0</b></div>
+  </div>
+  <div id="hint" hidden></div>
+  <div id="cue" hidden></div>
+  <div id="wind-warn" hidden></div>
+
+  <section id="controls" hidden>
+    <div id="skills">
+      <button class="skill" data-skill="rally" aria-label="号召观众"><span class="ic">📣</span><b class="cnt">1</b><i class="tm"></i><small>号召</small></button>
+      <button class="skill" data-skill="magnet" aria-label="星星磁铁"><span class="ic">🧲</span><b class="cnt">1</b><i class="tm"></i><small>磁铁</small></button>
+      <button class="skill" data-skill="shield" aria-label="无敌护盾"><span class="ic">🛡️</span><b class="cnt">1</b><i class="tm"></i><small>无敌</small><svg class="energy" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18"/></svg></button>
+    </div>
+    <div id="track">
+      <span class="arr l">◀</span><span class="arr r">▶</span>
+      <div id="knob">👥</div>
+      <div id="swipe-hand">👆</div>
+    </div>
+    <button id="btn-pull" aria-label="按住拉低气球">
+      <span class="ring"></span><span class="ring r2"></span>
+      <span class="ic">🎈<em>⬇</em></span><b id="pull-label">按住拉低</b>
+    </button>
+  </section>
+
+  <div id="overlay">
+    <section id="home" class="panel">
+      <div class="topline"><span id="rank-badge"></span><span class="coins"><i class="coin"></i><b id="coin-home">0</b></span></div>
+      <img id="home-preview" alt="">
+      <small class="eyebrow">THANKSGIVING BALLOON PARADE</small>
+      <h1>感恩节大游行</h1>
+      <p class="lead"><b>拖动</b>带队躲障碍 · <b>按住</b>拉低钻横幅 · 用<b>超能力</b>冲过去！</p>
+      <h3>选择气球</h3>
+      <div id="balloon-grid"></div>
+      <h3>选择路线</h3>
+      <div id="route-grid"></div>
+      <div class="home-actions">
+        <button id="btn-shop" class="soft">🛍️ 装扮商店</button>
+        <button id="btn-start" class="primary">出发！🥁</button>
+      </div>
+      <div class="how">
+        <span>📱 一只手左右拖动，另一只手按住「拉低」；右侧 🛡️🧲📣 是超能力</span>
+        <span>⌨️ ← → 移动 · 空格拉低 · 1 无敌 · 2 磁铁 · 3 号召</span>
+      </div>
+    </section>
+    <section id="shop" class="panel" hidden>
+      <div class="topline"><b class="shop-title">🛍️ 装扮商店</b><span class="coins"><i class="coin"></i><b id="coin-shop">0</b></span></div>
+      <div id="stage">
+        <canvas id="stage-canvas"></canvas>
+        <button class="stage-nav l" id="stage-prev" aria-label="上一个气球">◀</button>
+        <button class="stage-nav r" id="stage-next" aria-label="下一个气球">▶</button>
+        <div id="stage-name"></div>
+      </div>
+      <div id="shop-tabs"></div>
+      <div id="shop-grid"></div>
+      <div id="shop-bar"><div class="sel-info"><span id="sel-rarity"></span><b id="sel-name"></b></div><button id="btn-buy" class="primary" hidden></button></div>
+      <button id="btn-shop-back" class="soft">← 穿好了，回去</button>
+    </section>
+    <section id="pause" class="panel" hidden>
+      <h2>暂停中</h2>
+      <button id="btn-resume" class="primary">继续游行</button>
+      <button id="btn-quit" class="soft">返回首页</button>
+    </section>
+    <section id="result" class="panel" hidden>
+      <div id="result-stars"></div>
+      <h2 id="result-title"></h2>
+      <p id="result-reason"></p>
+      <div id="score-box"><small>本局得分</small><b id="score-num">0</b><span id="record" hidden>🎉 新纪录！</span></div>
+      <div id="coin-gain"><i class="coin"></i>+<b id="coin-num">0</b></div>
+      <div id="result-rank"></div>
+      <div id="result-stats"></div>
+      <div class="result-actions">
+        <button id="btn-again" class="soft">再来一次</button>
+        <button id="btn-next" class="primary">下一条路线 →</button>
+      </div>
+      <button id="btn-home" class="link">返回首页 / 去商店换装</button>
+    </section>
+  </div>
+  <div id="loading"><span>🎈</span><b>气球充气中…</b></div>
+</main>
+<script type="module" src="./src/app.mjs"></script>
+</body>
+</html>

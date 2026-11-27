@@ -1,0 +1,2323 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#123f48"><title>泡沫海岸 · 洗车大亨</title><link rel="preload" href="./assets/ui/Nunito.ttf" as="font" type="font/ttf" crossorigin><style>
+:root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#214953;font-synthesis:none;--cream:#fff9e9;--teal:#208f90;--gold:#f1c758;--shadow:0 4px 0 #204b5720,0 7px 24px #284d4d12}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#a2d8d2;overscroll-behavior:none}button{font:inherit;color:inherit;cursor:pointer;border:0;touch-action:manipulation}button:focus-visible{outline:3px solid #ffaa31;outline-offset:3px}button:disabled{cursor:default}button:active:not(:disabled){transform:translateY(2px)}[hidden]{display:none!important}#game{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}#hud{position:fixed;inset:0;pointer-events:none;user-select:none}header{position:absolute;top:max(12px,env(safe-area-inset-top));left:14px;right:14px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.brand{display:flex;gap:8px;align-items:center;background:var(--cream);padding:10px 13px 10px 9px;border:1px solid #fffdf4;border-radius:17px;box-shadow:var(--shadow)}.brand-icon{height:35px;width:35px;background:#42b1ae;border-radius:11px;color:#fff5c8;font-size:32px;line-height:30px;text-align:center;box-shadow:inset 0 -3px 0 #247e8525}.brand b{font-size:20px;letter-spacing:1px;display:block;line-height:23px}.brand small{font-size:8px;letter-spacing:1.15px;display:block;opacity:.75;white-space:nowrap}.brand small span{color:#c59b32;letter-spacing:0;margin-left:3px}#wallet{pointer-events:auto;position:relative;border-radius:16px;padding:8px 14px 9px 34px;background:var(--cream);box-shadow:var(--shadow);min-width:106px;max-width:42%;text-align:center;border:1px solid #fffdf4}#wallet strong{font-size:25px;font-weight:850;line-height:26px;display:block;white-space:nowrap}#wallet small{font-size:9px;display:block;color:#83978e}.coin{position:absolute;left:13px;top:19px;color:#e6b13d;text-shadow:0 2px #bd8739;font-size:19px}.goal{pointer-events:auto;position:absolute;top:87px;left:14px;width:min(246px,calc(100% - 78px));padding:10px 29px 9px 13px;text-align:left;border-radius:15px;background:#fff9e9ed;border:1px solid #fffdf2;box-shadow:var(--shadow)}.goal>span:first-child{font-size:9px;letter-spacing:.7px;color:#9a8655;display:block}.goal b{font-size:14px;display:block;margin:2px 0 6px}.goal-track{height:4px;background:#dbe7d8;border-radius:4px;overflow:hidden}.goal-track i{display:block;height:100%;background:#3ca98e;border-radius:4px;width:0;transition:width .4s}.goal small{display:block;color:#8a9e8f;font-size:10px;margin-top:5px}.goal-chevron{position:absolute;right:12px;top:27px;color:#78a398;font-size:25px}.goal.claim{background:#fff0ac}.goal.claim small{color:#a08032}.tools{position:absolute;right:13px;top:88px;display:grid;gap:7px}.tools button{pointer-events:auto;width:37px;height:37px;border-radius:12px;background:#fff8e8f0;box-shadow:0 3px 0 #47696024;color:#387b7e;font-size:22px;font-weight:600}.tools button.selected{background:#2e9996;color:white}.tools button:last-child{font-size:18px}.service{pointer-events:auto;position:absolute;bottom:83px;left:14px;right:14px;max-width:440px;margin:auto;border-radius:20px;background:#fff9eaf2;border:1px solid #fffdf2;padding:13px 15px 12px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}.service-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.service-top small{font-size:9px;letter-spacing:1px;color:#78958c}.service h2{font-size:17px;line-height:21px;margin:3px 0 0;font-weight:800}.bill{text-align:right;flex-shrink:0}.bill small{display:block;letter-spacing:0;font-size:9px}.bill b{display:block;font-size:22px;color:#a97f23;line-height:25px}.bill b span{font-size:11px;padding-left:3px;color:#dfb646}.stages{display:flex;gap:5px;margin:10px 0 7px}.stages span{flex:1;text-align:center;padding:4px 0;border-radius:6px;background:#e7ecdc;font-size:10px;color:#93a69a}.stages span.active{background:#c5e8de;color:#367f76;font-weight:800}.stages span.done{background:#e5edd9;color:#63a088}.wash-track{height:5px;border-radius:5px;background:#dfe8d9;overflow:hidden}.wash-track i{display:block;height:100%;width:0;background:#36b5b1;border-radius:5px;transition:width .16s}.service-bottom{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:10px;color:#7b958b;margin:7px 0 9px}.service-bottom p{margin:0}.service-bottom span{font-variant-numeric:tabular-nums;font-weight:800;color:#408a82}.work{width:100%;height:53px;display:flex;align-items:center;gap:11px;text-align:left;border-radius:13px;background:#258e8e;color:#fff9e8;border:1px solid #4db0a4;box-shadow:0 3px 0 #176672;touch-action:none;user-select:none}.work-icon{font-size:26px;margin-left:14px;color:#f9db7e}.work b{display:block;font-size:15px;letter-spacing:.4px}.work small{display:block;font-size:9px;color:#c9e5d5;margin-top:2px}.work-arrow{margin-left:auto;margin-right:15px;font-size:25px;color:#b6dbcc}.work.working{background:#207478;box-shadow:0 1px 0 #176672;transform:translateY(2px)}.work:disabled{background:#91ada5;box-shadow:0 2px 0 #74928a}.bottom-nav{pointer-events:auto;position:absolute;left:14px;right:14px;bottom:max(15px,env(safe-area-inset-bottom));display:flex;gap:8px;max-width:440px;margin:auto}.bottom-nav button{position:relative;flex:1;border-radius:14px;background:var(--cream);height:55px;box-shadow:var(--shadow);font-size:11px;font-weight:750;border:1px solid #fffef3;display:flex;align-items:center;justify-content:center;gap:6px}.bottom-nav button span{font-size:24px;color:#448a86;line-height:24px}.bottom-nav button i{position:absolute;right:10px;top:10px;width:6px;height:6px;border-radius:50%;background:#e5b340;display:none}.intro{position:fixed;left:16px;right:16px;bottom:28px;max-width:410px;margin:auto;padding:24px;background:linear-gradient(135deg,#fff8e9f7,#f6f6e6ef);border:1px solid #fffce9;border-radius:25px;box-shadow:0 15px 70px #214e5438;backdrop-filter:blur(8px)}.intro-chip{display:inline-block;font-size:10px;color:#8a925e;background:#e5eddb;border-radius:6px;padding:5px 8px;letter-spacing:.6px}.intro h1{font-size:36px;line-height:1.18;letter-spacing:-1px;margin:14px 0 10px}.intro h1 span{color:#259b96}.intro p{font-size:12px;line-height:1.8;margin:0 0 18px;color:#83978c}.primary{width:100%;padding:15px 17px;border-radius:13px;background:#268e8d;color:#fff8df;font-weight:800;font-size:16px;text-align:left;box-shadow:0 4px 0 #176976}.primary span{float:right;font-size:21px}.intro>small{font-size:9px;display:block;text-align:center;margin-top:14px;color:#9aaa96}.intro-mode .service,.intro-mode .bottom-nav,.intro-mode .goal{display:none}.intro-mode .tools{opacity:.5;pointer-events:none}#modal{position:fixed;inset:0;z-index:10;display:flex;align-items:center;justify-content:center}.scrim{position:absolute;inset:0;background:#163c4b45;backdrop-filter:blur(5px)}.sheet{width:min(520px,calc(100% - 24px));max-height:calc(100% - 30px);height:700px;position:relative;display:flex;flex-direction:column;background:#fff9e9;border:1px solid #fffdf0;border-radius:23px;box-shadow:0 20px 90px #173d4e30;overflow:hidden}.sheet-head{display:flex;align-items:center;justify-content:space-between;padding:22px 23px 15px;gap:8px}.sheet-head small{font-size:9px;letter-spacing:1.6px;color:#9aa78b}.sheet h2{font-size:23px;margin:6px 0 0;letter-spacing:-.6px}.sheet-head button{width:34px;height:34px;border-radius:50%;background:#e7eddc;color:#77998c;font-size:24px;flex-shrink:0}#sheet-tabs{display:flex;gap:5px;padding:0 18px 13px;flex-shrink:0}#sheet-tabs button{flex:1;white-space:nowrap;background:#e7eddd;border-radius:8px;padding:9px 5px;font-size:11px;color:#8b9e8b}#sheet-tabs button.active{background:#349d8e;color:#fffce6;font-weight:700}#sheet-content{padding:0 18px 18px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b2c8b0 transparent;flex:1;min-height:0}#sheet-footer{font-size:10px;color:#8f9e86;text-align:center;padding:11px 12px;background:#f4f3df;border-top:1px solid #e5ead5;flex-shrink:0}.hint{font-size:11px;line-height:1.8;color:#8a9d8b;background:#edf0df;border-radius:11px;padding:12px;margin:0 0 12px}.card{border:1px solid #e0e8d2;border-radius:15px;padding:14px;margin-bottom:10px;background:#fffdf1}.card-top{display:flex;gap:12px;align-items:center}.card-icon{background:#e1ede1;border-radius:11px;width:45px;height:45px;display:flex;align-items:center;justify-content:center;font-size:25px;color:#4b9791;flex-shrink:0}.card h3{font-size:15px;line-height:21px;margin:0}.card small{font-size:10px;color:#9aaa90}.card p{font-size:11px;line-height:1.7;color:#819785;margin:8px 0 12px}.buy{width:100%;background:#f7dda1;border:1px solid #edce89;border-radius:9px;padding:10px 12px;display:flex;justify-content:space-between;font-weight:700;color:#99712c;font-size:12px;gap:8px}.buy.unaffordable{opacity:.66}.buy:disabled{background:#e9eddf;border-color:#e9eddf;color:#a3af97}.lane-tabs{display:flex;gap:6px;margin-bottom:11px}.lane-tabs button{flex:1;background:#e8eedb;color:#8ea18d;padding:10px 3px;border-radius:9px;font-size:11px}.lane-tabs button.active{background:#2c9790;color:#fffce7}.mini-status{display:flex;justify-content:space-between;gap:6px;background:#e8efdf;padding:10px 12px;font-size:11px;border-radius:10px;margin:0 0 11px;color:#6d9381}.mini-status strong{color:#36887e}.outfits{display:grid;grid-template-columns:1fr 1fr;gap:8px}.outfit{background:#edf0df;border:2px solid transparent;border-radius:12px;padding:13px 7px 10px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px}.outfit.active{border-color:#f0c755;background:#fcf1ce}.outfit>span{font-size:38px;text-shadow:0 3px #21434d12}.outfit small{font-size:9px;color:#8a9d87}.style-preview{height:225px;border-radius:16px;background:radial-gradient(ellipse at 50% 45%,#f5f6e9,#e6ecd8);margin-bottom:12px;overflow:hidden;position:relative}.style-preview canvas{width:100%;height:100%;display:block;touch-action:none}.style-preview>small{position:absolute;left:13px;top:12px;font-size:9px;color:#8e9d84}.selected-outfit{margin-bottom:12px}.selected-outfit h3{font-size:17px;margin:3px 0}.selected-outfit p{font-size:11px;margin:6px 0 10px;color:#8a9c83}.network-stat{display:flex;gap:7px;margin-bottom:13px}.network-stat div{flex:1;background:#e9efdf;border-radius:10px;text-align:center;padding:12px 0}.network-stat b{font-size:23px;display:block;color:#388981}.network-stat small{font-size:9px;color:#8c9d83}.map-card{background:#eef0db;border-radius:17px;padding:15px 13px;margin-bottom:12px;position:relative;overflow:hidden}.map-card:before{content:"";position:absolute;left:40px;top:0;bottom:0;width:3px;background:#cadbbf}.branch{width:100%;border-radius:13px;background:#fffcf0;border:1px solid #e0e7d0;display:flex;align-items:center;gap:12px;text-align:left;padding:14px 12px;margin-bottom:10px;position:relative}.branch:last-child{margin-bottom:0}.branch-icon{width:48px;height:45px;border-radius:9px;background:#b4d8c4;color:#2b8e83;display:flex;align-items:center;justify-content:center;font-size:29px;flex-shrink:0}.branch small{font-size:10px;display:block;color:#9aab8e;margin-top:4px}.branch b{font-size:13px}.branch em{margin-left:auto;color:#b49a4b;font-style:normal;font-size:12px}.help-copy{font-size:13px;line-height:1.9;color:#78917e}.help-copy b{color:#315e5f}.help-copy p{margin-top:0}.income{font-size:12px;line-height:1.9;color:#77927b}.income strong{font-size:32px;color:#ba9237;display:block}#paused{position:fixed;inset:0;z-index:15;background:#19424c65;backdrop-filter:blur(8px);display:grid;place-items:center}#paused>div{background:var(--cream);padding:28px;border-radius:23px;width:min(340px,calc(100% - 35px))}#paused small{font-size:9px;letter-spacing:1.5px;color:#8da187}#paused h2{font-size:26px}#paused p{font-size:12px;color:#8ca086;margin-bottom:22px}#toast{position:fixed;z-index:25;left:50%;top:40%;transform:translate(-50%,-50%) scale(.9);background:#173f4bef;color:#fff6cf;border:1px solid #3e6a6f;padding:13px 20px;border-radius:13px;font-size:12px;text-align:center;box-shadow:0 7px 30px #17434b25;max-width:85%;pointer-events:none;opacity:0;transition:opacity .2s,transform .2s}#toast.show{opacity:1;transform:translate(-50%,-50%) scale(1)}#labels{position:absolute;inset:0}.bay-pin{position:absolute;transform:translate(-50%,-50%);background:#fff7e5ed;padding:5px 9px;border-radius:8px;color:#418982;font-size:10px;border:1px solid #fffdf0;box-shadow:0 2px 0 #284f5720;pointer-events:auto;white-space:nowrap}.bay-pin.active{background:#fff1b2;color:#947323}.bay-pin.locked{color:#739783;background:#eff4dfe8;font-size:10px}.cash-float{position:absolute;white-space:nowrap;color:#9c7329;font-size:22px;font-weight:900;text-shadow:0 2px #fff6cc,1px 0 #fff6cc,-1px 0 #fff6cc;animation:float 2.1s ease-out forwards}.cash-float small{font-size:10px;display:block;color:#3b8f7d}#fatal{position:fixed;inset:0;z-index:40;background:#fff5de;color:#395b65;padding:50px 25px;font-size:16px;display:grid;place-items:center}#metrics{position:absolute;left:14px;top:176px;font-size:9px;color:#1b6268;background:#f9f6dcbd;padding:5px 8px;border-radius:5px;pointer-events:none}@keyframes float{0%{opacity:0;transform:translateY(10px) scale(.8)}15%{opacity:1;transform:translateY(-5px) scale(1)}80%{opacity:1}100%{opacity:0;transform:translateY(-80px)}}
+.bay-switch{background:transparent;padding:0;font-size:9px;letter-spacing:.6px;color:#77968a;max-width:245px;text-align:left}.overview-mode .service{display:none}.overview-mode .goal-track,.overview-mode .goal small{display:none}.overview-mode .goal b{margin-bottom:0}
+@media(min-width:800px) and (min-aspect-ratio:1/1){.service,.bottom-nav{left:auto;right:22px;width:320px}.service{bottom:93px}.bottom-nav{bottom:24px}.intro{left:25px;right:auto;bottom:28px}.goal{top:93px;width:255px}.tools{right:22px}.brand{padding:12px 17px 12px 11px}.brand b{font-size:22px}#wallet{min-width:120px}.sheet{max-height:calc(100% - 42px)}}
+@media(max-width:360px){header{left:10px;right:10px}.brand{padding:9px 9px 9px 7px;gap:6px}.brand b{font-size:17px}.brand small{font-size:7px;letter-spacing:.4px}.brand-icon{width:30px;height:32px}.brand small span{margin-left:1px}#wallet{min-width:94px;padding-right:9px;padding-left:28px}#wallet strong{font-size:23px}.coin{left:10px;font-size:16px}.goal{left:10px;top:80px;padding-top:8px;padding-bottom:7px;width:222px}.goal b{font-size:12px}.tools{right:10px;top:81px;gap:6px}.tools button{width:33px;height:33px;border-radius:10px;font-size:20px}.service{left:10px;right:10px;padding:11px 12px;bottom:76px;border-radius:17px}.service h2{font-size:15px}.service-top small{font-size:8px}.stages{margin-top:8px}.work{height:48px}.work b{font-size:13px}.work-icon{margin-left:11px}.bottom-nav{left:10px;right:10px;bottom:12px;gap:6px}.bottom-nav button{height:51px;font-size:10px;gap:4px}.bottom-nav button span{font-size:21px}.intro{left:12px;right:12px;padding:20px}.intro h1{font-size:32px}.intro>small{font-size:8px}.sheet-head{padding:18px 17px 14px}.sheet h2{font-size:21px}#sheet-tabs{padding-left:12px;padding-right:12px}#sheet-tabs button{font-size:10px}#sheet-content{padding-left:12px;padding-right:12px}.card{padding:12px}.style-preview{height:190px}}
+@media(max-width:799px) and (max-height:650px){.service{padding:10px 12px;bottom:76px}.service h2{font-size:15px;line-height:18px}.service-top small{font-size:8px}.stages{margin:7px 0 5px}.stages span{padding:3px 0;font-size:9px}.service-bottom{font-size:9px;margin:5px 0 6px}.work{height:47px}.work b{font-size:14px}.bottom-nav{bottom:12px}.bottom-nav button{height:51px}}
+@media(max-height:540px){.goal{top:76px}.goal b{margin-bottom:4px}.goal small{display:none}.tools{top:78px;gap:5px}.tools button{height:30px;width:32px}.service{padding:10px 12px;bottom:67px}.service-top small{font-size:8px}.service h2{font-size:14px}.bill b{font-size:18px}.stages{margin:7px 0 5px}.service-bottom{margin:5px 0 6px}.work{height:43px}.bottom-nav{bottom:10px}.bottom-nav button{height:46px}.intro h1{font-size:29px}.intro p{margin-bottom:12px}.intro{padding:18px;bottom:15px}}
+
+@font-face{font-family:Nunito;src:url('./assets/ui/Nunito.ttf') format('truetype');font-weight:200 1000;font-display:swap}
+.vip-banner{position:fixed;z-index:6;top:205px;left:88px;right:13px;max-width:420px;display:flex;align-items:center;gap:9px;padding:9px 11px;background:linear-gradient(110deg,#fff6cf,#fffdef 60%,#dff6ec);border:2px solid #8d7042;border-radius:14px;box-shadow:0 4px 0 #294b5cb5;color:#40586a;text-align:left;pointer-events:auto;overflow:hidden;animation:vip-arrival .45s cubic-bezier(.2,.8,.2,1)}
+.vip-banner::after{content:'';position:absolute;inset:-70% -30%;background:linear-gradient(110deg,transparent 40%,#ffffff99 50%,transparent 60%);pointer-events:none;animation:vip-shimmer 2.4s ease-out both}
+.vip-banner-icon{background:#ffdc7c;border-radius:50%;padding:6px;border:1px solid #b18a45;flex-shrink:0}.vip-banner-icon .ui-icon{width:23px;height:23px}.vip-banner small{display:block;font-size:8px;letter-spacing:.5px;font-weight:1000;color:#927341}.vip-banner b{display:block;font-size:15px;line-height:20px}.vip-banner em{display:block;font-size:9px;line-height:14px;font-style:normal;font-weight:800;color:#6e7c7c}.vip-banner-go{margin-left:auto}.vip-banner-go .ui-icon{width:18px;height:18px}
+.service-info.vip-service{border-color:#a1824e;background:#f9fcefef;box-shadow:0 4px 0 #3d5264b3,inset 0 0 0 1px #fff0b7}.vip-care{padding:5px 7px;margin:5px 0;background:#fff0c5;border:1px solid #d9bd80;border-radius:7px}.vip-care>div{display:flex;align-items:center;justify-content:space-between;gap:4px}.vip-care b{font-size:10px;line-height:14px;color:#6c5630}.vip-care span{font-size:9px;line-height:14px;font-weight:1000;color:#8c6c25;white-space:nowrap}.vip-care small{display:block;font-size:9px;line-height:13px;color:#767959}.four-stages span.active{background:#d1bcf4;color:#4f4779}.vip-cash{color:#ba8d33;font-size:27px}.vip-cash small{color:#7559a5}
+.coin-pop{animation:coin-pop .65s ease-out}@keyframes coin-pop{0%,100%{transform:scale(1)}35%{transform:translateY(-3px) scale(1.07)}}@keyframes vip-arrival{from{opacity:0;translate:0 -12px;scale:.96}to{opacity:1;translate:0 0;scale:1}}@keyframes vip-shimmer{from{transform:translateX(-55%)}to{transform:translateX(75%)}}
+@media(min-width:800px) and (min-aspect-ratio:1/1){.vip-banner{top:22px;left:calc(50% - 170px);right:auto;width:340px}}
+@media(max-height:650px) and (max-width:799px){.vip-banner{top:190px}.vip-care{padding:4px 6px;margin:4px 0}.vip-care small{font-size:8px;line-height:11px}}
+@media(max-width:360px){.vip-banner{left:78px;right:10px;top:195px;gap:6px;padding:7px}.vip-banner-icon{padding:4px}.vip-banner-icon .ui-icon{width:20px;height:20px}.vip-banner b{font-size:12px;line-height:17px}.vip-banner small{font-size:6px}.vip-banner em{font-size:8px;line-height:12px}.vip-care b,.vip-care span{font-size:8px}.vip-care small{font-size:7px}.vip-care{padding:4px 5px}.four-stages span{font-size:6px}.vip-banner-go{display:none}}
+@media(prefers-reduced-motion:reduce){.vip-banner,.vip-banner::after,.coin-pop{animation:none}}
+:root{--ink:#25485c;--cream:#f0fbef;--teal:#72cfc4;--gold:#ffd56b;--base:#234653;--panel:#effbefed;--shadow:0 5px 0 #234653cc;color:var(--ink);font-family:Nunito,"Microsoft YaHei",sans-serif}
+html,body{font-family:Nunito,"Microsoft YaHei",sans-serif;background:#97bac4;color:var(--ink)}
+button{font-family:inherit;font-weight:800;transition:transform .08s,box-shadow .08s}
+button:focus-visible{outline:3px solid #f7ffe6;outline-offset:4px}
+.ui-icon{width:26px;height:26px;display:block;object-fit:contain;flex-shrink:0;pointer-events:none;filter:drop-shadow(0 1px 0 #f4fff2);user-select:none}
+header{top:max(12px,env(safe-area-inset-top));left:13px;right:13px;align-items:flex-start}
+.brand{background:none;border:0;border-radius:0;box-shadow:none;padding:0;gap:8px;align-items:flex-start;color:#f8fff4;text-shadow:0 2px 0 #28475c,0 3px 2px #294e6950}
+.brand-icon{width:42px;height:42px;border:2px solid var(--ink);border-radius:50%;background:#86dfcd;box-shadow:0 3px 0 #244959a6;display:grid;place-items:center;line-height:normal}
+.brand-icon .ui-icon{width:30px;height:30px}
+.brand b{font-size:24px;line-height:27px;letter-spacing:0;font-weight:1000}
+.brand small{font-size:9px;line-height:12px;letter-spacing:1.5px;opacity:1;font-weight:900}
+#stars{display:block;color:#fff4be;font-weight:1000;font-size:11px;letter-spacing:2px;line-height:16px}
+#wallet{border:2px solid var(--ink);background:#f2fbed;border-radius:14px;box-shadow:0 4px 0 #24465395;padding:6px 12px 6px 38px;min-width:112px;text-align:center;color:var(--ink)}
+#wallet strong{font-size:27px;line-height:29px;font-weight:1000;letter-spacing:-.5px}
+#wallet small{font-size:10px;font-weight:800;color:#527b86;line-height:13px}
+.coin{left:9px;top:14px;display:block;font-size:0;text-shadow:none}
+.coin .ui-icon{width:25px;height:25px}
+.tools{top:79px;right:13px;display:flex;gap:6px}
+.tools button{height:29px;width:31px;border:1.8px solid var(--ink);border-radius:8px;background:#edf9efd9;box-shadow:0 3px 0 #25485c85;display:grid;place-items:center;padding:4px}
+.tools .ui-icon{width:20px;height:20px}
+.tools button.selected{background:#80d4dd;box-shadow:0 2px 0 #25485c85,inset 0 0 0 1px #efffef}
+.goal{top:125px;left:88px;right:13px;width:auto;max-width:420px;min-height:66px;padding:11px 26px 9px 48px;background:#efffedcf;border:1.5px solid #f5fff2;border-radius:12px;box-shadow:0 2px 0 #4c788c35;backdrop-filter:blur(2px)}
+.goal>span:first-child{position:absolute;top:-23px;left:1px;white-space:nowrap;color:#fafff3;font-weight:1000;letter-spacing:0;font-size:13px;line-height:17px;text-shadow:0 2px 0 #426679}
+.goal .goal-count{position:absolute;left:8px;top:17px;min-width:31px;height:30px;background:#ffe297;border-radius:8px;color:#705729;font-size:10px;line-height:30px;font-weight:1000;text-align:center;padding:0 3px}
+.goal b{font-size:14px;line-height:19px;margin:0 0 6px;font-weight:1000;letter-spacing:0}
+.goal-track{height:5px;border:1px solid #72998e;border-radius:7px;background:#b6d4c4}
+.goal-track i{background:#72d999;box-shadow:inset 0 1px 0 #c7ffc1}
+.goal small{font-size:9px;line-height:12px;font-weight:800;color:#557b85;margin-top:4px}
+.goal-chevron{top:23px;right:7px;font-size:0}
+.goal-chevron .ui-icon{width:17px;height:17px}
+.goal.claim{background:#e5ffdccc;border-color:#f5fff0}.goal.claim small{color:#497976}
+.bottom-nav{top:211px;left:13px;right:auto;bottom:auto;display:grid;width:65px;gap:10px;margin:0;max-width:none}
+.bottom-nav button{height:66px;width:65px;flex:none;flex-direction:column;gap:2px;padding:7px 3px 5px;border:2px solid var(--ink);border-radius:15px;box-shadow:0 5px 0 #21404fe6,inset 0 0 0 2px #effdf7ad;font-size:12px;line-height:15px;color:#f7fff7;text-shadow:0 2px 0 #325267}
+.bottom-nav button b{font-size:12px;font-weight:1000;line-height:15px}
+.bottom-nav button>span{line-height:normal;display:block;font-size:0}
+.bottom-nav .ui-icon{height:27px;width:27px}
+#equipment{background:#62bff0}#staff{background:#a385e4}#style{background:#ffd36d;color:#6e501e;text-shadow:0 1px 0 #fff7cf}
+.bottom-nav button i{height:9px;width:9px;border:1px solid #315570;background:#91ed8b;right:6px;top:5px}
+.bottom-nav button:active:not(:disabled){transform:translateY(4px);box-shadow:0 1px 0 #21404fe6,inset 0 0 0 2px #effdf7ad}
+.map-button{position:absolute;pointer-events:auto;left:13px;bottom:132px;width:74px;height:50px;background:#efffdf;border:2px solid var(--ink);border-radius:12px;box-shadow:0 4px 0 #234653b5;display:flex;justify-content:center;align-items:center;gap:5px;font-size:12px;padding:5px 4px}
+.map-button b{white-space:nowrap;font-weight:1000}
+.map-button .ui-icon{width:26px;height:26px}
+.service{left:88px;right:13px;bottom:max(25px,env(safe-area-inset-bottom));max-width:420px;display:block;margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;backdrop-filter:none;pointer-events:none}
+.service-info{border:2px solid #254d5bbf;border-radius:16px;background:#f1fbf0e8;box-shadow:0 4px 0 #25485980;padding:9px 11px 7px;pointer-events:auto;backdrop-filter:blur(3px)}
+.service-top{gap:5px}.service-top small{font-size:8px;line-height:10px;letter-spacing:0;font-weight:800;color:#4d7887}
+.service h2{font-size:15px;line-height:19px;margin:0;font-weight:1000;color:#274e61}
+.bay-switch{font-family:inherit;display:flex;align-items:center;gap:4px;color:#487886;font-size:9px;line-height:13px;letter-spacing:0;padding:0;max-width:250px;background:none;font-weight:900}
+.bay-switch>span:last-child .ui-icon{width:14px;height:14px}
+.bill b{font-size:19px;line-height:22px;color:#2c5368;font-weight:1000;display:flex;gap:2px;align-items:center;justify-content:flex-end}
+.bill .ui-icon{height:16px;width:16px}.bill span{color:inherit}
+.stages{gap:4px;margin:6px 0 5px}.stages span{background:#ccdcd6;border-radius:5px;padding:2px 0;font-size:8px;line-height:12px;font-weight:900;color:#648587}
+.stages span.active{background:#8ed7e3;color:#214e68;box-shadow:inset 0 0 0 1px #6caaa9}.stages span.done{background:#b4e9af;color:#3f796a}
+.wash-track{height:6px;border:1px solid #527788;background:#b8cecb;border-radius:5px}.wash-track i{border-radius:3px;box-shadow:inset 0 1px 0 #f6fff38c}
+.service-bottom{font-size:9px;color:#507583;font-weight:800;gap:4px;margin:5px 0 0;line-height:12px}.service-bottom span{color:#315c70;font-size:10px}
+.action-row{display:flex;justify-content:flex-end;gap:11px;margin-top:12px;margin-left:auto;width:190px;max-width:100%;pointer-events:auto}
+.work,.build-action{height:89px;min-width:0;flex:1;border:2.5px solid #25475d;border-radius:20px;padding:7px 3px 5px;box-shadow:0 6px 0 #1e3f4ee6,inset 0 0 0 2px #fff3bc;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;text-align:center;touch-action:none;user-select:none;font-weight:1000}
+.work{background:#ffd064;color:#765324}.work-icon{margin:0;font-size:0;line-height:0;color:inherit}.work .work-icon .ui-icon{width:31px;height:31px}
+.work b{font-size:15px;line-height:18px;font-weight:1000;letter-spacing:0;white-space:nowrap}
+.work small{font-size:9px;color:#987237;font-weight:900;margin:1px 0 0;line-height:11px}
+.build-action{background:#6bdd70;color:#f7fff4;box-shadow:0 6px 0 #1e3f4ee6,inset 0 0 0 2px #ceffb5;text-shadow:0 2px 0 #3d8a54;touch-action:manipulation}
+.build-action>.ui-icon,.build-action>span .ui-icon{width:31px;height:31px}
+.build-action b{font-size:16px;line-height:18px;font-weight:1000}.build-action small{color:#ebffe0;font-size:9px;line-height:11px;font-weight:900;text-shadow:0 1px 0 #4e9d60}
+.work.working,.work:active:not(:disabled),.build-action:active{transform:translateY(4px);box-shadow:0 2px 0 #1e3f4ee6,inset 0 0 0 2px #fff3bc;background:#ffc34f}
+.build-action:active{background:#5cce67;box-shadow:0 2px 0 #1e3f4ee6,inset 0 0 0 2px #ceffb5}
+.work:disabled{background:#b6c8c5;color:#54737a;box-shadow:0 5px 0 #31525d,inset 0 0 0 2px #dfebe2}.work:disabled small{color:#72908e}
+.intro{background:#eaf9efed;border:2px solid var(--ink);box-shadow:0 7px 0 #244654bd;backdrop-filter:blur(3px);border-radius:22px;max-width:410px;padding:23px;bottom:26px;left:15px;right:15px}
+.intro-chip{background:#b6e6bf;color:#356174;border:1px solid #93b9ad;border-radius:7px;font-size:11px;font-weight:900}
+.intro h1{font-weight:1000;color:#2a536a;letter-spacing:-.5px;font-size:34px;line-height:1.2}.intro h1 span{color:#328eae}.intro p{color:#567e89;font-size:12px;font-weight:700;line-height:1.8}.intro>small{color:#577b84;font-size:9px;font-weight:800}
+.primary{background:#ffd56c;color:#725222;border:2px solid var(--ink);box-shadow:0 5px 0 #244654,inset 0 0 0 2px #fff1b4;border-radius:15px;font-weight:1000;text-shadow:0 1px 0 #fff6d4;font-size:17px}
+.intro-mode .map-button{display:none}.intro-mode .tools{display:none}
+.scrim{background:#203f5b4d;backdrop-filter:blur(4px)}
+.sheet{background:#eef9ef;border:2px solid var(--ink);border-radius:20px;box-shadow:0 7px 0 #1f3c4cb3;max-height:calc(100% - 30px)}
+.sheet-head{padding:19px 19px 14px;align-items:center;background:#cfe9e5;border-bottom:1px solid #a9c8c2}
+.sheet-head small{color:#59818d;font-size:9px;font-weight:900;letter-spacing:1px}.sheet h2{font-size:22px;color:#294e63;font-weight:1000;margin-top:4px}
+.sheet-head button{width:33px;height:33px;display:grid;place-items:center;padding:5px;border:2px solid var(--ink);box-shadow:0 3px 0 #2a4b5da1;border-radius:10px;background:#f4fff0}
+.sheet-head button .ui-icon{height:20px;width:20px}
+#sheet-tabs{padding:12px 15px;gap:6px}
+#sheet-tabs button{border:1.5px solid #456a7b;background:#e1f1e6;border-radius:9px;padding:8px 4px;color:#4a7180;box-shadow:0 2px 0 #3d5c6d5c;font-size:10px;font-weight:900}
+#sheet-tabs button.active{background:#72c5ef;border-color:var(--ink);color:#fff;text-shadow:0 1px 0 #365c79;box-shadow:0 3px 0 #284b62}
+#sheet-content{padding:0 15px 17px;scrollbar-color:#8bb4bc transparent}
+#sheet-footer{background:#cfe2e0;border-top:1px solid #99b6bd;color:#4f7181;font-size:11px;font-weight:800}
+.hint{background:#dbeee0;border:1px solid #b7cec1;color:#547b82;border-radius:10px;font-size:11px;font-weight:700;line-height:1.75}
+.card{background:#f5fcf0;border:1.5px solid #a1bdc1;border-radius:13px;padding:13px;box-shadow:0 2px 0 #6b959c3d;margin-bottom:11px}
+.card-icon{background:#d0e5e9;border:1.5px solid #6b95a1;border-radius:10px;width:42px;height:42px;color:var(--ink);font-size:0}.card-icon .ui-icon{width:27px;height:27px}
+.card h3{font-size:15px;font-weight:1000;color:#2b536a}.card small{font-size:10px;font-weight:800;color:#73929a}.card p{color:#527783;font-size:11px;font-weight:700}
+.buy{border:2px solid var(--ink);background:#ffd778;color:#735523;border-radius:10px;padding:10px 11px;font-weight:1000;font-size:12px;box-shadow:0 3px 0 #284b5c9c,inset 0 0 0 1px #fff0bd;min-height:40px;align-items:center}
+.buy strong{display:flex;align-items:center;gap:3px;white-space:nowrap}.buy .ui-icon{height:16px;width:16px}.buy:disabled{background:#d5e1da;border-color:#9fb8bb;color:#8da3a2;box-shadow:0 2px 0 #8da7ab55}.buy.unaffordable{opacity:.72}
+.lane-tabs button{border:1.5px solid #527887;background:#dcebe0;border-radius:9px;color:#527986;font-weight:900;font-size:11px;box-shadow:0 2px 0 #3152655c}.lane-tabs button.active{background:#7bc5ee;color:#fff;text-shadow:0 1px 0 #395e7a;border-color:var(--ink)}
+.mini-status{background:#d9eae5;color:#557984;font-weight:800;border:1px solid #adc8c8}.mini-status strong{color:#2e6981}
+.outfit{background:#deece4;border:1.5px solid #a6bfc4;border-radius:12px;font-size:11px;font-weight:900}.outfit.active{background:#ffdfa0;border:2px solid var(--ink);box-shadow:0 3px 0 #38556777}.outfit small{color:#5d8090;font-weight:800}.outfit>span{font-size:0;text-shadow:none}.outfit .ui-icon{height:39px;width:39px}
+.style-preview{background:#d4e8e2;border:1.5px solid #a2bdc2;border-radius:13px}.style-preview>small{color:#5b818c;font-weight:800}.selected-outfit h3{color:#2e546a;font-weight:1000}.selected-outfit p{color:#5a7e86;font-weight:700}
+.network-stat div{background:#d5e9e0;border:1px solid #a8c6c4;border-radius:10px}.network-stat b{color:#315f76;font-weight:1000}.network-stat small{color:#5f818b;font-weight:800}
+.map-card{background:#d7e8e2;border:1px solid #a6c4c7;border-radius:14px}.map-card:before{background:#8ab9c5}
+.branch{background:#f2fcef;border:1.5px solid #749ba7;border-radius:12px;box-shadow:0 3px 0 #38627670}.branch-icon{border:1.5px solid #497186;font-size:0;background:#a4d1c4}.branch-icon .ui-icon{width:31px;height:31px}.branch b{color:#31576d;font-weight:1000}.branch small{color:#68858c;font-weight:800}.branch em{color:#4c8094;font-size:11px;font-weight:900}
+.help-copy,.income{color:#557b85;font-weight:700}.help-copy b{color:#2e5d75}.income strong{color:#2c5b75;font-weight:1000}
+#paused{background:#23465d6b}#paused>div{background:#edf9ef;border:2px solid var(--ink);border-radius:22px;box-shadow:0 7px 0 #1f3c4c95}#paused small,#paused p{color:#62818a;font-weight:800}#paused h2{color:#2b536b;font-weight:1000}
+#toast{background:#f3fff0ef;color:#2c536a;border:2px solid var(--ink);border-radius:24px;box-shadow:0 4px 0 #315568a8;backdrop-filter:blur(3px);font-size:13px;font-weight:800;min-width:210px;padding:12px 18px;top:42%}
+.bay-pin{background:#f1fdefed;color:#315e72;border:1.5px solid #3f6d7f;box-shadow:0 3px 0 #294e6095;border-radius:8px;font-weight:900;font-size:10px;padding:5px 8px}.bay-pin.active{background:#ffe09a;color:#735923}.bay-pin.locked{color:#52818a;background:#e0f3e3}
+.cash-float{color:#fff3a0;text-shadow:0 2px 0 #345570,1px 0 #345570,-1px 0 #345570;font-family:Nunito,sans-serif;font-weight:1000}.cash-float small{color:#f3fff1;text-shadow:0 1px 0 #345570}
+#metrics{top:211px;left:90px;color:#396579;background:#efffedc9}
+.overview-mode .service{display:none}.overview-mode .goal-track,.overview-mode .goal small{display:none}.overview-mode .goal{min-height:53px}.overview-mode .goal b{margin:4px 0}
+@media(min-width:800px) and (min-aspect-ratio:1/1){header{left:20px;right:21px;top:18px}.brand b{font-size:28px;line-height:29px}.brand small{font-size:10px}.brand-icon{width:46px;height:46px}.tools{top:91px;right:21px}.goal{left:101px;top:138px;width:330px;right:auto}.bottom-nav{left:20px;top:217px;width:69px;gap:12px}.bottom-nav button{width:69px;height:69px}.map-button{left:20px;bottom:150px;width:84px;height:53px}.service{left:auto;right:24px;width:333px;bottom:25px;max-width:none}.action-row{width:250px;margin-left:auto}.work,.build-action{height:94px}.service h2{font-size:16px}.intro{left:25px;right:auto;bottom:28px;width:380px}.sheet{max-height:calc(100% - 42px)}}
+@media(max-height:650px) and (max-width:799px){.brand b{font-size:22px;line-height:24px}.brand small{font-size:8px}.brand-icon{height:38px;width:38px}.brand-icon .ui-icon{height:27px;width:27px}.tools{top:75px}.goal{top:117px;min-height:61px;padding-top:8px;padding-bottom:7px}.goal b{font-size:13px;line-height:17px}.goal .goal-count{top:15px}.goal>span:first-child{font-size:12px;top:-22px}.bottom-nav{top:196px;gap:9px}.bottom-nav button{height:61px}.map-button{bottom:121px;height:48px}.service{bottom:22px}.service-info{padding:7px 10px 6px}.service h2{font-size:14px;line-height:18px}.service-bottom{font-size:8px}.stages{margin:5px 0 4px}.stages span{font-size:8px;padding:1px 0}.action-row{margin-top:10px;gap:10px}.work,.build-action{height:83px;border-radius:19px}.work b{font-size:14px}.work small,.build-action small{font-size:8px}.work .work-icon .ui-icon,.build-action>span .ui-icon{height:29px;width:29px}.sheet-head{padding:16px}.sheet h2{font-size:20px}}
+@media(max-width:360px){header{left:10px;right:10px}.brand{gap:6px}.brand b{font-size:20px;line-height:22px}.brand small{font-size:7px;letter-spacing:1px}#stars{font-size:10px;letter-spacing:1px}.brand-icon{height:36px;width:36px}#wallet{min-width:94px;padding-left:30px;padding-right:8px;border-radius:12px}#wallet strong{font-size:23px;line-height:25px}#wallet small{font-size:8px}.coin{left:6px;top:12px}.coin .ui-icon{width:21px;height:21px}.tools{right:10px;gap:5px;top:72px}.tools button{width:28px;height:27px;padding:4px}.tools .ui-icon{height:18px;width:18px}.goal{left:78px;right:10px;top:124px;padding-left:44px;padding-right:20px}.goal b{font-size:12px}.goal>span:first-child{font-size:11px}.goal .goal-count{left:6px;min-width:30px;font-size:9px}.bottom-nav{left:10px;top:188px;width:58px;gap:9px}.bottom-nav button{width:58px;height:58px;border-radius:13px}.bottom-nav button b{font-size:11px}.bottom-nav .ui-icon{height:25px;width:25px}.map-button{left:10px;width:65px;font-size:11px}.map-button .ui-icon{height:23px;width:23px}.service{left:78px;right:10px;bottom:22px}.service-info{padding-left:8px;padding-right:8px;border-radius:13px}.service h2{font-size:13px;line-height:17px}.bay-switch{font-size:8px;line-height:12px;max-width:170px}.bay-switch>span:last-child .ui-icon{width:12px;height:12px}.bill b{font-size:17px;line-height:19px}.bill small{font-size:7px}.stages span{font-size:7px}.service-bottom{font-size:7px;line-height:11px}.service-bottom span{font-size:9px}.action-row{gap:9px}.work,.build-action{height:82px}.work b{font-size:12px}.build-action b{font-size:14px}.work small,.build-action small{font-size:8px}.intro{left:12px;right:12px;padding:20px}.intro h1{font-size:29px}.intro p{font-size:11px}#sheet-tabs{padding-left:10px;padding-right:10px;gap:4px}#sheet-tabs button{font-size:9px}.sheet-head{padding:15px}.sheet h2{font-size:19px}#sheet-content{padding-left:11px;padding-right:11px}.card{padding:11px}}
+@media(max-height:520px){.bottom-nav{top:173px;gap:7px}.bottom-nav button{height:51px;width:56px;border-radius:12px}.bottom-nav .ui-icon{height:22px;width:22px}.bottom-nav button b{font-size:10px}.map-button{bottom:25px;height:45px;width:69px}.goal{top:105px;min-height:52px}.goal small{display:none}.goal>span:first-child{top:-20px}.tools{top:68px}.service{bottom:20px}.work,.build-action{height:72px}.service-info{padding:6px 8px}.service h2{font-size:13px}.intro h1{font-size:27px}.intro{padding:17px;bottom:18px}}
+
+</style></head>
+<body>
+<canvas id="game" aria-label="三维洗车场，拖动车身清洗或点击车道"></canvas>
+<div id="hud">
+ <header><div class="brand"><span class="brand-icon" data-icon="car"></span><div><small>FOAM COAST</small><b>泡沫海岸</b><span id="stars">★☆☆☆☆</span></div></div><button id="wallet" aria-label="查看经营收入"><span class="coin" data-icon="coins"></span><strong id="money">90</strong><small>可用金币</small></button></header>
+ <button id="goal" class="goal"><span id="goal-kicker">从第一辆车开始</span><span id="goal-count" class="goal-count">0/3</span><b id="goal-title">完成 3 次洗车</b><div class="goal-track"><i id="goal-fill"></i></div><small id="goal-sub">0 / 3 · 奖励 120 金币</small><span class="goal-chevron" data-icon="chevron-right"></span></button>
+ <aside class="tools"><button id="overview" aria-label="全店视角" title="全店视角 Q" data-icon="layout-grid"></button><button id="sound" aria-label="切换音效" data-icon="volume"></button><button id="pause" aria-label="暂停" data-icon="player-pause"></button><button id="help" aria-label="玩法说明" data-icon="help"></button></aside>
+ <div id="labels" aria-hidden="true"></div><div id="floaters" aria-live="polite"></div>
+ <button id="vip-banner" class="vip-banner" aria-label="查看豪车委托" hidden><span class="vip-banner-icon" data-icon="sparkles"></span><span><small>VIP ARRIVAL / 豪车闪亮登场</small><b id="vip-banner-name"></b><em id="vip-banner-care"></em></span><span class="vip-banner-go" data-icon="chevron-right"></span></button>
+ <section id="service" class="service">
+  <div class="service-info"><div class="service-top"><div><button id="bay-switch" class="bay-switch" aria-label="切换洗车道"><span id="bay-label">01 / 海岸手洗工位</span><span data-icon="arrows-exchange"></span></button><h2 id="car-name">第一辆小轿车</h2></div><div class="bill"><small>预计收入</small><b id="bill">60</b></div></div>
+  <div class="stages" id="stages"><span>① 泡沫</span><span>② 冲洗</span><span>③ 上蜡</span></div>
+  <div id="vip-care" class="vip-care" hidden><div><b id="vip-care-title"></b><span id="vip-care-bonus"></span></div><small id="vip-care-step"></small></div>
+  <div class="wash-track"><i id="wash-fill"></i></div>
+  <div class="service-bottom"><p id="work-hint">拖动车身，或按住精洗</p><span id="work-percent">0%</span></div></div>
+  <div class="action-row"><button id="work" class="work"><span id="work-icon" class="work-icon" data-icon="spray"></span><span><b id="work-title">喷洒泡沫</b><small id="work-sub">按住精洗</small></span></button><button id="build-action" class="build-action"><span data-icon="building-store"></span><b>扩建</b><small>车道与设备</small></button></div>
+ </section>
+ <nav class="bottom-nav"><button id="equipment" aria-label="设备升级"><span data-icon="settings"></span><b>设备</b><i id="upgrade-dot"></i></button><button id="staff" aria-label="雇用员工"><span data-icon="users"></span><b>员工</b></button><button id="style" aria-label="装扮工坊"><span data-icon="shirt"></span><b>装扮</b></button></nav><button id="map" class="map-button" aria-label="商业地图"><span data-icon="map"></span><b>地图</b></button>
+</div>
+<div id="intro" class="intro"><div class="intro-chip">一家小店，一整个洗车帝国。</div><h1>让每辆车<br>重新<span>闪闪发亮。</span></h1><p>冲掉泥污，铺满泡沫。<br>从亲手洗净第一辆车，到拥有自己的自动洗车场。</p><button id="start" class="primary">开门营业 <span data-icon="chevron-right"></span></button><small>拖动车身清洗 / 按住按钮精洗 · 自动保存进度</small></div>
+<div id="modal" hidden><div class="scrim"></div><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"><div class="sheet-head"><div><small>FOAM COAST / MANAGEMENT</small><h2 id="sheet-title">经营工坊</h2></div><button id="close" aria-label="关闭面板">×</button></div><div id="sheet-tabs"></div><div id="sheet-content"></div><footer id="sheet-footer"></footer></section></div>
+<div id="paused" hidden><div><small>TAKE A LITTLE BREAK</small><h2>休息一下</h2><p>车辆和设备都在等你回来。</p><button id="resume" class="primary">继续营业 →</button></div></div>
+<div id="toast" role="status"></div><div id="fatal" hidden>画面暂时没有成功启动。请刷新重试，经营进度会保留。</div>
+<script type="module">
+// src/app.mjs
+import * as T7 from "./vendor/three.module.js";
+
+// src/config.mjs
+var PHASES = [{ name: "\u6CE1\u6CAB", verb: "\u55B7\u6D12\u6CE1\u6CAB", color: "#ecb5dd", duration: 4.2 }, { name: "\u51B2\u6D17", verb: "\u9AD8\u538B\u51B2\u6D17", color: "#41d7eb", duration: 5.6 }, { name: "\u4E0A\u8721", verb: "\u7EC6\u81F4\u4E0A\u8721", color: "#ffd367", duration: 4.8 }];
+var TYPES = [{ id: "compact", name: "\u57CE\u5E02\u5C0F\u8F7F\u8F66", w: 1.86, l: 3.95, h: 1.55, pay: 64 }, { id: "sedan", name: "\u65C5\u884C\u8F7F\u8F66", w: 1.96, l: 4.6, h: 1.52, pay: 78 }, { id: "suv", name: "\u8D8A\u91CE\u65C5\u884C\u5BB6", w: 2.12, l: 4.7, h: 1.94, pay: 98 }, { id: "sport", name: "\u6D41\u7EBF\u8DD1\u8F66", w: 2.08, l: 4.7, h: 1.22, pay: 120 }, { id: "van", name: "\u590D\u53E4\u9762\u5305\u8F66", w: 2.1, l: 4.9, h: 2.2, pay: 110 }, { id: "starlight", name: "\u661F\u8000 GT \u8D85\u8DD1", w: 2.08, l: 4.7, h: 1.26, pay: 220, care: "rims" }, { id: "obsidian", name: "\u66DC\u77F3\u884C\u653F\u5EA7\u9A7E", w: 2.1, l: 4.85, h: 1.5, pay: 245, care: "crystal" }, { id: "cloud", name: "\u4E91\u5883\u8C6A\u534E SUV", w: 2.15, l: 4.85, h: 1.96, pay: 270, care: "cabin" }];
+var CARE_DEFS = { rims: { name: "\u8F6E\u6BC2", title: "\u955C\u9762\u8F6E\u6BC2\u7CBE\u6D17", verb: "\u8F6E\u6BC2\u7CBE\u6D17", desc: "\u56DB\u53EA\u8F6E\u6BC2\u9010\u4E00\u53BB\u6E0D\u629B\u5149", duration: 5.2, color: "#77e8ff", bonus: 0.55 }, crystal: { name: "\u9540\u6676", title: "\u53CC\u5C42\u9540\u6676\u5C01\u91C9", verb: "\u53CC\u5C42\u9540\u6676", desc: "\u5B8C\u6210\u4E24\u904D\u9540\u6676\uFF0C\u9501\u4F4F\u955C\u9762\u5149\u6CFD", duration: 6, color: "#c5a8ff", bonus: 0.65 }, cabin: { name: "\u5185\u9970", title: "\u5185\u9970\u84B8\u6C7D\u62A4\u7406", verb: "\u84B8\u6C7D\u62A4\u7406", desc: "\u524D\u8231\u3001\u540E\u8231\u4F9D\u6B21\u84B8\u6C7D\u6DF1\u5EA6\u62A4\u7406", duration: 5.6, color: "#8ceac8", bonus: 0.6 } };
+var careFor = (c) => c ? CARE_DEFS[TYPES[c.type]?.care] || null : null;
+var phaseFor = (c) => c?.phase === 3 ? careFor(c) || PHASES[2] : PHASES[c?.phase ?? 0];
+function careStep(c) {
+  if (!careFor(c)) return "";
+  if (c.phase < 3) return "\u5B8C\u6210\u4E09\u6BB5\u6E05\u6D17\u540E\uFF0C\u8FDB\u884C\u4E13\u5C5E\u62A4\u7406";
+  const p = Math.min(0.999, c.progress);
+  return TYPES[c.type].care === "rims" ? `\u6B63\u5728\u7CBE\u6D17\u7B2C ${Math.floor(p * 4) + 1} / 4 \u53EA\u8F6E\u6BC2` : TYPES[c.type].care === "crystal" ? `\u7B2C ${Math.floor(p * 2) + 1} / 2 \u904D\u9540\u6676\u5C01\u91C9` : p < 0.5 ? "\u524D\u8231\u84B8\u6C7D\u62A4\u7406" : "\u540E\u8231\u84B8\u6C7D\u62A4\u7406";
+}
+var COLORS = ["#1aafb6", "#efb92d", "#e97155", "#478ac8", "#8c72ba", "#e7e9df", "#76ac79", "#283e50"];
+var BAY_X = [-7.2, 0, 7.2];
+var BRANCHES = [{ name: "\u6D77\u5CB8\u6D17\u8F66\u573A", short: "\u6D77\u5CB8\u5E97", theme: "coast", price: 0, need: 0 }, { name: "\u68D5\u6988\u516C\u8DEF\u7AD9", short: "\u516C\u8DEF\u5E97", theme: "desert", price: 4200, need: 35 }, { name: "\u9713\u8679\u6C7D\u8F66\u4F1A\u6240", short: "\u591C\u5149\u5E97", theme: "night", price: 9800, need: 85 }];
+var UPGRADE_DEFS = { pressure: { name: "\u9AD8\u538B\u6C34\u6CF5", desc: "\u4EB2\u624B\u4F5C\u4E1A\u901F\u5EA6 +28%\uFF0C\u55B7\u5934\u8986\u76D6\u8303\u56F4\u589E\u52A0", icon: "\u2197", base: 160, growth: 1.72 }, price: { name: "\u62A4\u7406\u5957\u9910", desc: "\u6BCF\u6B21\u6D17\u8F66\u57FA\u7840\u552E\u4EF7 +20%\uFF0C\u8F66\u6F06\u62A4\u7406\u66F4\u503C\u94B1", icon: "\u2726", base: 220, growth: 1.8 }, marketing: { name: "\u6CBF\u8857\u62DB\u724C", desc: "\u66F4\u591A\u6765\u5BA2\uFF0C\u66F4\u5BB9\u6613\u9047\u5230\u9AD8\u4EF7\u8F66\u578B", icon: "\u2691", base: 280, growth: 1.85 } };
+var STYLE_DEFS = [{ id: "classic", name: "\u6D77\u76D0\u5DE5\u4F5C\u670D", cost: 0, color: "#197e90", desc: "\u5E72\u51C0\u5229\u843D\u7684\u7B2C\u4E00\u5957\u5DE5\u88C5", need: 0 }, { id: "sunset", name: "\u843D\u65E5\u8D5B\u8F66\u670D", cost: 900, color: "#ef8846", desc: "\u6696\u6A58\u62FC\u8272 \xB7 \u62A4\u76EE\u955C \xB7 \u8D5B\u8F66\u6761\u7EB9", need: 8 }, { id: "mint", name: "\u8584\u8377\u6280\u5E08", cost: 1800, color: "#69c8a7", desc: "\u8584\u8377\u767D\u5957\u88C5 \xB7 \u94F6\u8272\u5DE5\u5177\u8170\u5E26", need: 18 }, { id: "royal", name: "\u91D1\u724C\u4E3B\u7406\u4EBA", cost: 3800, color: "#514785", desc: "\u6DF1\u7D2B\u91D1\u8FB9 \xB7 \u4E13\u5C5E\u91D1\u8272\u55B7\u67AA", need: 40 }];
+function branchDef(id) {
+  const b = BRANCHES[id % 3];
+  return { ...b, name: id < 3 ? b.name : `${b.short} \xB7 \u7B2C${Math.floor(id / 3) + 1}\u5546\u5708`, price: id < 3 ? b.price : Math.round(9800 * Math.pow(1.48, id - 2)), need: id < 3 ? b.need : 85 + (id - 2) * 45 };
+}
+function starCount(washed) {
+  return 1 + [5, 16, 35, 70].filter((n) => washed >= n).length;
+}
+function upgradeCost(key2, level) {
+  const d = UPGRADE_DEFS[key2];
+  return Math.round(d.base * Math.pow(d.growth, level) / 10) * 10;
+}
+function laneCost(index) {
+  return [0, 520, 1480][index];
+}
+function workerCost(index) {
+  return [250, 480, 780][index];
+}
+function machineCost(level) {
+  return Math.round(700 * Math.pow(1.85, level - 1) / 10) * 10;
+}
+function contract(n) {
+  const count = n === 0 ? 3 : n === 1 ? 8 : 8 + 6 * (n - 1);
+  return { count, reward: n === 0 ? 120 : Math.min(650, 170 + n * 50), title: n === 0 ? "\u6D17\u51C0\u6700\u521D\u7684 3 \u8F86\u8F66" : n === 1 ? "\u6210\u4E3A\u8857\u533A\u7684\u4EBA\u6C14\u6D17\u8F66\u5E97" : `\u7B2C ${n + 1} \u4EFD\u53E3\u7891\u8BA2\u5355` };
+}
+
+// src/simulation.mjs
+var CELL_COUNT = 84;
+var EXIT_Z = -9.2;
+var EXIT_CLEAR_X = Math.max(...BAY_X) + Math.max(...TYPES.map((t) => t.l)) / 2 + 1.2;
+var EXIT_GAP = 6.2;
+var clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+function newStation(id = 0) {
+  return { id, washed: 0, revenue: 0, contract: 0, manager: false, pending: 0, vipVisits: 0, vipServed: 0, nextVipAt: 5, upgrades: { pressure: 0, price: 0, marketing: 0 }, bays: [0, 1, 2].map((i) => ({ unlocked: i === 0, level: 1, worker: false, car: null, queue: [] })), cars: [], exitQueue: [], spawnTimer: 2, serial: 0 };
+}
+function createState() {
+  const s2 = { version: 1, started: false, money: 90, earned: 0, washed: 0, time: 0, active: 0, selected: 0, stations: [newStation()], styles: ["classic"], style: "classic", settings: { mute: false } };
+  const st = s2.stations[0];
+  st.bays[0].car = makeCar(st, 0, "work");
+  st.cars.push(st.bays[0].car);
+  st.cars.push(makeCar(st, 0, "queue"), makeCar(st, 0, "queue"));
+  st.bays[0].queue = st.cars.filter((c) => c.state === "queue").map((c) => c.id);
+  st.cars.filter((c) => c.state === "queue").forEach((c, i) => {
+    c.z = 7 + i * 5.8;
+    c.x = BAY_X[0];
+  });
+  return s2;
+}
+function current(s2) {
+  return s2.stations[s2.active];
+}
+function makeCar(st, lane, state = "arrive") {
+  const n = ++st.serial, luxury = state === "arrive" && st.washed >= (st.nextVipAt ?? 5) && st.cars.filter((c) => careFor(c) && !c.paid).length < 2;
+  const type = luxury ? 5 + (st.vipVisits || 0) % 3 : n === 1 && st.id === 0 ? 0 : Math.floor(random(st) * Math.min(5, 2 + st.upgrades.marketing + Math.floor(st.washed / 5) + Math.min(2, st.id))), t = TYPES[type];
+  if (luxury) {
+    st.vipVisits = (st.vipVisits || 0) + 1;
+    st.nextVipAt = st.washed + Math.max(4, 7 - Math.floor(st.upgrades.marketing / 2));
+  }
+  return { id: `${st.id}-${n}`, type, color: luxury ? ["#1675bd", "#30364f", "#f4ecdc"][type - 5] : COLORS[(n * 3 + st.id * 2) % COLORS.length], lane, state, x: state === "work" ? BAY_X[lane] : -23, z: state === "work" ? 0 : 28, yaw: state === "work" ? Math.PI : Math.PI / 2, phase: 0, cells: Array(CELL_COUNT).fill(0), progress: 0, wait: 0, manual: 0, paid: false, glow: 0, speed: 0, routeStep: 0, value: t.pay, seed: n * 1.731 };
+}
+function random(st) {
+  const n = Math.sin(st.serial * 71.7 + st.washed * 13.3 + st.id * 29.1) * 43758.5453;
+  return n - Math.floor(n);
+}
+function priceFor(s2, c) {
+  const st = current(s2), location2 = 1 + st.id % 3 * 0.25 + Math.floor(st.id / 3) * 0.35;
+  return Math.round(c.value * location2 * (1 + st.upgrades.price * 0.2) * (1 + starCount(st.washed) * 0.025));
+}
+function careBonus(s2, c) {
+  return Math.round(priceFor(s2, c) * (careFor(c)?.bonus || 0));
+}
+function coverage(c) {
+  return c.cells.reduce((a, b) => a + Math.min(1, b), 0) / CELL_COUNT;
+}
+var clearedExit = (c) => c.routeStep > 0 && c.x >= EXIT_CLEAR_X;
+function normalizeExitQueue(st) {
+  const exits = st.cars.filter((c) => c.state === "exit");
+  const queue = Array.isArray(st.exitQueue) ? st.exitQueue : [], missing = exits.filter((c) => !queue.includes(c.id)).sort((a, b) => Number(b.z < -4) - Number(a.z < -4) || (a.z < -4 && b.z < -4 ? b.x - a.x : 0));
+  st.exitQueue = [.../* @__PURE__ */ new Set([...queue, ...missing.map((c) => c.id)])].filter((id) => exits.some((c) => c.id === id && !clearedExit(c)));
+  for (const c of exits) if (clearedExit(c)) c.exitReleased = true;
+  else if (typeof c.exitReleased !== "boolean") c.exitReleased = false;
+}
+function releaseExit(st) {
+  normalizeExitQueue(st);
+  const crossing = st.cars.some((c) => c.state === "exit" && c.exitReleased && !clearedExit(c));
+  if (!crossing) {
+    const next = st.cars.find((c) => c.id === st.exitQueue[0]);
+    if (next) next.exitReleased = true;
+  }
+}
+function restoreState(raw2) {
+  const fresh = createState();
+  if (!raw2 || raw2.version !== 1 || !Array.isArray(raw2.stations) || !raw2.stations.length) return fresh;
+  try {
+    const s2 = structuredClone(raw2);
+    s2.money = Math.max(0, Number(s2.money) || 0);
+    s2.active = clamp(Math.floor(s2.active || 0), 0, s2.stations.length - 1);
+    s2.selected = clamp(Math.floor(s2.selected || 0), 0, 2);
+    s2.styles = Array.isArray(s2.styles) ? s2.styles.filter((id) => STYLE_DEFS.some((d) => d.id === id)) : ["classic"];
+    if (!s2.styles.includes("classic")) s2.styles.unshift("classic");
+    if (!s2.styles.includes(s2.style)) s2.style = "classic";
+    s2.settings = { mute: !!s2.settings?.mute };
+    for (const st of s2.stations) {
+      if (!Array.isArray(st.bays) || st.bays.length !== 3 || !Array.isArray(st.cars)) return fresh;
+      st.cars = st.cars.filter((c) => c && TYPES[c.type] && Array.isArray(c.cells) && c.cells.length === CELL_COUNT && Number.isFinite(c.x) && Number.isFinite(c.z));
+      st.upgrades = { pressure: 0, price: 0, marketing: 0, ...st.upgrades };
+      for (const k of Object.keys(UPGRADE_DEFS)) st.upgrades[k] = clamp(Math.floor(st.upgrades[k] || 0), 0, 100);
+      for (const b of st.bays) {
+        b.queue = b.queue.filter((id) => st.cars.some((c) => c.id === id));
+        b.car = st.cars.find((c) => c.id === b.car?.id) || null;
+      }
+      st.pending = Math.max(0, st.pending || 0);
+      normalizeExitQueue(st);
+    }
+    if (!current(s2).bays[s2.selected].unlocked) s2.selected = 0;
+    return s2;
+  } catch {
+    return fresh;
+  }
+}
+function serialize(s2) {
+  return JSON.stringify(s2);
+}
+var Simulation = class {
+  constructor(s2, emit = () => {
+  }) {
+    this.s = s2;
+    this.emit = emit;
+    this.paused = false;
+    this.holding = false;
+    this.brush = null;
+  }
+  hint(text2) {
+    this.emit({ type: "hint", text: text2 });
+    return false;
+  }
+  pay(cost, apply) {
+    if (this.s.money < cost) return this.hint(`\u8FD8\u5DEE ${Math.ceil(cost - this.s.money)} \u91D1\u5E01`);
+    this.s.money -= cost;
+    apply();
+    this.emit({ type: "purchase", cost });
+    return true;
+  }
+  select(i) {
+    if (!current(this.s).bays[i]?.unlocked) return this.hint("\u5728\u8BBE\u5907\u5DE5\u574A\u4E2D\u5EFA\u8BBE\u8FD9\u6761\u8F66\u9053");
+    this.s.selected = i;
+    this.brush = null;
+    return true;
+  }
+  buy(key2, index) {
+    const s2 = this.s, st = current(s2), b = st.bays[index ?? s2.selected];
+    if (UPGRADE_DEFS[key2]) return this.pay(upgradeCost(key2, st.upgrades[key2]), () => st.upgrades[key2]++);
+    if (key2 === "lane") {
+      if (!b || b.unlocked) return false;
+      if (index === 2 && !st.bays[1].unlocked) return this.hint("\u5148\u5EFA\u8BBE\u7B2C\u4E8C\u6761\u8F66\u9053");
+      return this.pay(laneCost(index), () => {
+        b.unlocked = true;
+        s2.selected = index;
+        st.spawnTimer = 0.1;
+      });
+    }
+    if (key2 === "worker") {
+      if (!b?.unlocked) return this.hint("\u5148\u5EFA\u8BBE\u8FD9\u6761\u8F66\u9053");
+      if (b.worker) return false;
+      return this.pay(workerCost(index), () => b.worker = true);
+    }
+    if (key2 === "machine") {
+      if (!b?.unlocked) return false;
+      if (b.level >= 5) return false;
+      if (b.level === 1 && st.washed < 5) return this.hint("\u672C\u5E97\u5B8C\u6210 5 \u8F86\u8F66\u540E\u53EF\u8D2D\u4E70\u81EA\u52A8\u6EDA\u5237");
+      return this.pay(machineCost(b.level), () => b.level++);
+    }
+    if (key2 === "manager") {
+      if (st.manager) return false;
+      if (starCount(st.washed) < 3) return this.hint("\u672C\u5E97\u8FBE\u5230\u4E09\u661F\u540E\u53EF\u8058\u5E97\u957F");
+      return this.pay(2400, () => st.manager = true);
+    }
+    return false;
+  }
+  style(id) {
+    const d = STYLE_DEFS.find((d2) => d2.id === id);
+    if (!d) return false;
+    if (this.s.styles.includes(id)) {
+      this.s.style = id;
+      this.emit({ type: "style" });
+      return true;
+    }
+    if (this.s.washed < d.need) return this.hint(`\u7D2F\u8BA1\u6D17\u51C0 ${d.need} \u8F86\u8F66\u540E\u5F00\u653E`);
+    return this.pay(d.cost, () => {
+      this.s.styles.push(id);
+      this.s.style = id;
+    });
+  }
+  claim() {
+    const st = current(this.s), c = contract(st.contract);
+    if (st.washed < c.count) return false;
+    this.s.money += c.reward;
+    st.contract++;
+    this.emit({ type: "reward", amount: c.reward });
+    return true;
+  }
+  switchBranch(id) {
+    const s2 = this.s, def = branchDef(id);
+    if (s2.stations[id]) {
+      s2.active = id;
+      s2.selected = 0;
+      this.emit({ type: "branch" });
+      return true;
+    }
+    if (id !== s2.stations.length) return this.hint("\u8BF7\u5148\u5F00\u8BBE\u524D\u4E00\u5BB6\u95E8\u5E97");
+    if (s2.washed < def.need) return this.hint(`\u7D2F\u8BA1\u6D17\u51C0 ${def.need} \u8F86\u8F66\u540E\u53EF\u9009\u5740`);
+    return this.pay(def.price, () => {
+      s2.stations.push(newStation(id));
+      s2.active = id;
+      s2.selected = 0;
+      this.emit({ type: "branch" });
+    });
+  }
+  collect() {
+    let total = 0;
+    for (const st of this.s.stations) {
+      total += Math.floor(st.pending);
+      st.pending -= Math.floor(st.pending);
+    }
+    if (!total) return this.hint("\u5DF2\u8058\u5E97\u957F\u7684\u5206\u5E97\u4F1A\u5728\u4F60\u8425\u4E1A\u65F6\u79EF\u7D2F\u6258\u7BA1\u6536\u76CA");
+    this.s.money += total;
+    this.emit({ type: "reward", amount: total, label: "\u8FDE\u9501\u6536\u76CA" });
+    return total;
+  }
+  update(dt) {
+    const s2 = this.s;
+    if (this.paused || !s2.started) return;
+    dt = clamp(dt, 0, 0.1);
+    s2.time += dt;
+    const st = current(s2);
+    for (const other of s2.stations) if (other !== st && other.manager) {
+      const workers = other.bays.filter((b) => b.unlocked && (b.worker || b.level >= 2)).length;
+      other.pending = Math.min(1200 + other.washed * 5, other.pending + dt * workers * (0.8 + other.upgrades.price * 0.22));
+    }
+    const unlocked = st.bays.map((b, i) => b.unlocked ? i : -1).filter((i) => i >= 0);
+    st.spawnTimer -= dt;
+    if (st.spawnTimer <= 0 && st.cars.length < unlocked.length * 5 + 2 && !st.cars.some((c) => c.state === "arrive" && c.routeStep === 0 && c.x < -17.5)) {
+      const load = (i) => st.bays[i].queue.length + (st.bays[i].car ? 1 : 0);
+      const lane = unlocked.reduce((best, i) => load(i) < load(best) ? i : best, unlocked[0]);
+      if (st.bays[lane].queue.length < 4) {
+        const c = makeCar(st, lane);
+        st.cars.push(c);
+        st.bays[lane].queue.push(c.id);
+      }
+      st.spawnTimer = Math.max(2.7, 6.4 - st.upgrades.marketing * 0.55) / Math.sqrt(unlocked.length);
+    }
+    for (let i = 0; i < 3; i++) {
+      const b = st.bays[i];
+      if (!b.unlocked) continue;
+      if (!b.car && b.queue.length) {
+        const id = b.queue[0], c = st.cars.find((c2) => c2.id === id);
+        if (c && c.state === "queue" && Math.abs(c.z - 6.5) < 0.15 && Math.abs(c.x - BAY_X[i]) < 0.1 && !st.cars.some((o) => o.lane === i && o.state === "exit" && o.z > -7)) {
+          b.car = c;
+          c.state = "enter";
+          b.queue.shift();
+        }
+      }
+      if (b.car?.state === "work") {
+        const c = b.car;
+        const auto = ((b.worker ? 0.85 : 0) + (b.level >= 2 ? 0.62 + (b.level - 2) * 0.36 : 0)) * (c.phase === 3 ? 0.7 : 1);
+        const manual = s2.selected === i && (this.holding || this.brush) ? 1.65 * (1 + st.upgrades.pressure * 0.28) : 0;
+        let rate = (auto + manual) / phaseFor(c).duration;
+        if (rate) {
+          const amount = dt * rate;
+          const center = this.brush?.index;
+          for (let j = 0; j < CELL_COUNT; j++) {
+            let gain = amount;
+            if (manual && this.brush) {
+              const band = Math.abs(j - center);
+              gain = amount * (band < Math.min(24, 8 + st.upgrades.pressure * 2) ? 5.4 : 0.33);
+            }
+            c.cells[j] = Math.min(1, c.cells[j] + gain);
+          }
+          c.progress = coverage(c);
+          c.manual += manual ? dt : 0;
+          if (c.progress >= 0.96) {
+            if (c.phase < (careFor(c) ? 3 : 2)) {
+              c.phase++;
+              c.cells.fill(0);
+              c.progress = 0;
+              this.emit({ type: "phase", lane: i, phase: c.phase, vip: !!careFor(c) });
+            } else this.finish(c, b);
+          }
+        }
+      }
+    }
+    releaseExit(st);
+    for (const c of st.cars) {
+      c.glow = Math.max(0, c.glow - dt);
+      c.vipIntro = Math.max(0, (c.vipIntro || 0) - dt);
+      c.wait += dt;
+      let target = null;
+      if (c.state === "arrive") {
+        const q = st.bays[c.lane].queue, n = q.indexOf(c.id), front = n > 0 ? st.cars.find((o) => o.id === q[n - 1]) : null, tail = Math.max(6.5 + Math.max(0, n) * 5.8, front && Math.abs(front.x - BAY_X[c.lane]) < 0.3 ? front.z + 5.8 : 0);
+        const p = [[BAY_X[c.lane], 28], [BAY_X[c.lane], tail]][c.routeStep];
+        target = c.routeStep === 1 && front && Math.abs(front.x - BAY_X[c.lane]) > 0.3 ? null : p;
+        if (target && Math.hypot(c.x - p[0], c.z - p[1]) < 0.1) {
+          c.routeStep++;
+          if (c.routeStep >= 2) c.state = "queue";
+        }
+      }
+      if (c.state === "queue") {
+        const n = st.bays[c.lane].queue.indexOf(c.id);
+        target = [BAY_X[c.lane], 6.5 + Math.max(0, n) * 5.8];
+      }
+      if (c.state === "enter") {
+        target = [BAY_X[c.lane], 0];
+        if (Math.abs(c.z) < 0.08) {
+          c.z = 0;
+          c.state = "work";
+          c.wait = 0;
+          this.emit({ type: "arrived", lane: c.lane });
+          if (careFor(c)) {
+            c.vipIntro = 3.2;
+            this.emit({ type: "vip", id: c.id, lane: c.lane, name: TYPES[c.type].name, care: careFor(c).title, bonus: careBonus(s2, c) });
+          }
+        }
+      }
+      if (c.state === "exit" && c.exitReleased) {
+        target = c.routeStep === 0 ? [BAY_X[c.lane], EXIT_Z] : c.routeStep === 1 ? [19, EXIT_Z] : [24, EXIT_Z];
+        if (Math.hypot(c.x - target[0], c.z - target[1]) < 0.1) c.routeStep++;
+        if (c.routeStep >= 3) c.state = "gone";
+        if (c.routeStep > 0) {
+          const front = st.cars.filter((o) => o !== c && o.state === "exit" && o.routeStep > 0 && o.x > c.x && Math.abs(o.z - c.z) < 3).sort((a, b) => a.x - b.x)[0];
+          if (front) target = [Math.max(c.x, Math.min(target[0], front.x - EXIT_GAP)), target[1]];
+        }
+      }
+      const ox = c.x, oz = c.z;
+      if (target) {
+        const dx = target[0] - c.x, dz = target[1] - c.z, d = Math.hypot(dx, dz), v = Math.min(d, dt * (c.state === "exit" ? 4.5 : c.state === "arrive" ? 6 : 3.2));
+        if (d > 1e-3) {
+          c.x += dx / d * v;
+          c.z += dz / d * v;
+          const a = Math.atan2(dx, dz);
+          c.yaw += Math.atan2(Math.sin(a - c.yaw), Math.cos(a - c.yaw)) * Math.min(1, dt * 9);
+        }
+      }
+      c.speed = Math.hypot(c.x - ox, c.z - oz) / Math.max(dt, 1e-3);
+    }
+    st.cars = st.cars.filter((c) => c.state !== "gone");
+  }
+  finish(c, b) {
+    if (c.paid || careFor(c) && (c.phase !== 3 || coverage(c) < 0.96)) return;
+    c.paid = true;
+    c.progress = 1;
+    c.cells.fill(1);
+    c.state = "exit";
+    c.routeStep = 0;
+    c.exitReleased = false;
+    c.glow = careFor(c) ? 5 : 2.8;
+    const s2 = this.s, st = current(s2), base = priceFor(s2, c), bonus = careBonus(s2, c), tip = c.manual > 1 ? Math.round(base * 0.18) : 0, amount = base + bonus + tip, oldStars = starCount(st.washed);
+    st.exitQueue ??= [];
+    st.exitQueue.push(c.id);
+    s2.money += amount;
+    s2.earned += amount;
+    s2.washed++;
+    st.washed++;
+    st.revenue += amount;
+    if (careFor(c)) st.vipServed = (st.vipServed || 0) + 1;
+    b.car = null;
+    this.emit({ type: "finish", id: c.id, lane: c.lane, amount, tip, bonus, vip: !!careFor(c) });
+    if (starCount(st.washed) > oldStars) this.emit({ type: "star", stars: starCount(st.washed) });
+  }
+};
+
+// src/art.mjs
+import * as T from "./vendor/three.module.js";
+import { RoundedBoxGeometry } from "./vendor/geometries/RoundedBoxGeometry.js";
+import { mergeGeometries } from "./vendor/utils/BufferGeometryUtils.js";
+var mats = /* @__PURE__ */ new Map();
+var geos = /* @__PURE__ */ new Map();
+var material = (color, roughness = 0.6, metalness = 0) => {
+  const key2 = [color, roughness, metalness].join("/");
+  if (!mats.has(key2)) mats.set(key2, new T.MeshStandardMaterial({ color, roughness, metalness }));
+  return mats.get(key2);
+};
+var M = { cream: material("#e1ede9"), white: material("#f1f7f2"), teal: material("#73c7c1", 0.4, 0.1), navy: material("#234e68"), blue: material("#438fb8"), gold: material("#ffd26b", 0.35, 0.3), rubber: material("#25383c", 0.9), steel: material("#b8d2d6", 0.25, 0.7), orange: material("#f69f4c"), glass: material("#193c50", 0.15, 0.42) };
+function geo(key2, build) {
+  if (!geos.has(key2)) geos.set(key2, build());
+  return geos.get(key2);
+}
+function mesh(g, geometry, m, x = 0, y = 0, z = 0) {
+  const o = new T.Mesh(geometry, m);
+  o.position.set(x, y, z);
+  o.castShadow = o.receiveShadow = true;
+  g.add(o);
+  return o;
+}
+function box(g, x, y, z, w, h, d, m = M.cream, r = 0.06) {
+  return mesh(g, geo(`b${w},${h},${d},${r}`, () => r ? new RoundedBoxGeometry(w, h, d, 1, Math.min(r, w / 3, h / 3, d / 3)) : new T.BoxGeometry(w, h, d)), m, x, y, z);
+}
+function sphere(g, x, y, z, r, m, scale = [1, 1, 1]) {
+  const o = mesh(g, geo(`s${r}`, () => new T.SphereGeometry(r, 16, 12)), m, x, y, z);
+  o.scale.set(...scale);
+  return o;
+}
+function cylinder(g, x, y, z, r, h, m, top = r) {
+  return mesh(g, geo(`c${r},${h},${top}`, () => new T.CylinderGeometry(top, r, h, 24)), m, x, y, z);
+}
+function torus(g, x, y, z, r, tube, m, rx = Math.PI / 2) {
+  const o = mesh(g, geo(`t${r},${tube}`, () => new T.TorusGeometry(r, tube, 8, 32)), m, x, y, z);
+  o.rotation.x = rx;
+  return o;
+}
+function line(g, points, r, m) {
+  const curve = new T.CatmullRomCurve3(points.map((p) => new T.Vector3(...p)));
+  return mesh(g, new T.TubeGeometry(curve, Math.max(12, points.length * 4), r, 6, false), m);
+}
+function label(g, text2, x, y, z, size = 1, color = "#214b5b", bg = null) {
+  const c = document.createElement("canvas");
+  c.width = Math.max(128, Math.min(768, text2.length * 75));
+  c.height = 128;
+  const ctx = c.getContext("2d");
+  if (bg) {
+    ctx.fillStyle = bg;
+    ctx.beginPath();
+    ctx.roundRect(0, 0, c.width, 128, 20);
+    ctx.fill();
+  }
+  ctx.font = '1000 68px Nunito,"Microsoft YaHei",sans-serif';
+  ctx.fillStyle = color;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  if (color.startsWith("#f")) {
+    ctx.strokeStyle = "#294e65";
+    ctx.lineWidth = 5;
+    ctx.lineJoin = "round";
+    ctx.strokeText(text2, c.width / 2, 67, c.width - 20);
+  }
+  ctx.fillText(text2, c.width / 2, 65, c.width - 20);
+  const tex = new T.CanvasTexture(c);
+  tex.colorSpace = T.SRGBColorSpace;
+  const o = new T.Sprite(new T.SpriteMaterial({ map: tex, transparent: true, depthWrite: false }));
+  o.position.set(x, y, z);
+  o.scale.set(size * c.width / 128, size, 1);
+  g.add(o);
+  return o;
+}
+function batch(g) {
+  g.updateMatrixWorld(true);
+  const inv = g.matrixWorld.clone().invert(), map = /* @__PURE__ */ new Map();
+  g.traverse((o) => {
+    if (!o.isMesh || o.isInstancedMesh || o.userData.keep || Array.isArray(o.material) || o.material.transparent) return;
+    let bucket = map.get(o.material);
+    if (!bucket) map.set(o.material, bucket = { geometries: [], objects: [] });
+    const geom = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone();
+    if (!geom.attributes.uv) geom.setAttribute("uv", new T.BufferAttribute(new Float32Array(geom.attributes.position.count * 2), 2));
+    geom.applyMatrix4(inv.clone().multiply(o.matrixWorld));
+    bucket.geometries.push(geom);
+    bucket.objects.push(o);
+  });
+  for (const [m, bucket] of map) {
+    const geom = mergeGeometries(bucket.geometries, false);
+    bucket.geometries.forEach((o) => o.dispose());
+    if (geom) {
+      bucket.objects.forEach((o) => o.removeFromParent());
+      mesh(g, geom, m).userData.merged = true;
+    } else console.warn("Kept unmerged geometry for", m.type);
+  }
+  return g;
+}
+function polygon(g, points, m) {
+  const geom = new T.BufferGeometry();
+  const pos = [];
+  for (let i = 1; i < points.length - 1; i++) pos.push(...points[0], ...points[i], ...points[i + 1]);
+  geom.setAttribute("position", new T.Float32BufferAttribute(pos, 3));
+  geom.computeVertexNormals();
+  const o = mesh(g, geom, m);
+  o.material.side = T.DoubleSide;
+  return o;
+}
+function loft(g, rings, m) {
+  const positions = [], indices = [];
+  for (const ring of rings) for (const p of ring) positions.push(...p);
+  const n = rings[0].length;
+  for (let j = 0; j < rings.length - 1; j++) for (let k = 0; k < n; k++) {
+    const a = j * n + k, b = j * n + (k + 1) % n, c = (j + 1) * n + k, d = (j + 1) * n + (k + 1) % n;
+    indices.push(a, c, b, b, c, d);
+  }
+  for (const end of [0, rings.length - 1]) for (let i = 1; i < n - 1; i++) {
+    const o = end * n;
+    indices.push(o, o + i + (end ? 1 : 0), o + i + (end ? 0 : 1));
+  }
+  const geom = new T.BufferGeometry();
+  geom.setAttribute("position", new T.Float32BufferAttribute(positions, 3));
+  geom.setIndex(indices);
+  geom.computeVertexNormals();
+  return mesh(g, geom, m);
+}
+function palm(g, x, z, size = 1) {
+  const p = new T.Group();
+  p.position.set(x, 0, z);
+  p.scale.setScalar(size);
+  g.add(p);
+  cylinder(p, 0, 2.2, 0, 0.22, 4.4, material("#b58b61"), 0.14).rotation.z = -0.11;
+  for (let i = 0; i < 7; i++) {
+    const a = i * Math.PI * 2 / 7, leaf = new T.Group();
+    leaf.rotation.y = a;
+    leaf.position.set(-0.2, 4.3, 0);
+    p.add(leaf);
+    const points = [[0, 0, 0], [0.65, 0.3, 0], [2.15, -0.36, 0], [1.1, -0.16, 0.43]];
+    polygon(leaf, points, material(i % 2 ? "#539879" : "#63b388"));
+  }
+  cylinder(p, 0, 0.14, 0, 1.1, 0.25, material("#f2dbad"));
+  batch(p);
+}
+function plant(g, x, y, z) {
+  cylinder(g, x, y + 0.3, z, 0.38, 0.6, material("#d4b992"), 0.5);
+  for (let i = 0; i < 5; i++) {
+    const a = i * 2.4;
+    sphere(g, x + Math.sin(a) * 0.22, y + 0.72 + i * 0.08, z + Math.cos(a) * 0.2, 0.34, material(i % 2 ? "#429c77" : "#6bad73"), [0.55, 1.4, 0.6]);
+  }
+}
+function mechanic(g, color = "#197e90", owner = false, styleId = "classic") {
+  const root = new T.Group();
+  g.add(root);
+  const body = new T.Group();
+  root.add(body);
+  const fabric = material(color), skin = material("#dfb692"), dark = material("#244a55");
+  box(body, 0, 1.04, 0, 0.56, 0.68, 0.36, fabric, 0.13);
+  box(body, 0, 1.17, 0.195, 0.39, 0.21, 0.02, M.cream, 0.01);
+  box(body, 0, 0.77, 0, 0.48, 0.16, 0.35, dark, 0.05);
+  for (const x of [-0.165, 0.165]) {
+    box(body, x, 0.44, 0, 0.22, 0.55, 0.24, fabric, 0.07);
+    box(body, x, 0.12, 0.065, 0.26, 0.16, 0.4, dark, 0.05);
+  }
+  sphere(body, 0, 1.65, 0, 0.28, skin, [0.86, 1, 0.88]);
+  box(body, 0, 1.84, -0.015, 0.6, 0.16, 0.49, fabric, 0.08);
+  box(body, 0, 1.83, 0.22, 0.51, 0.06, 0.23, fabric, 0.03);
+  for (const x of [-0.09, 0.09]) sphere(body, x, 1.67, 0.226, 0.025, dark);
+  box(body, 0, 1.54, 0.245, 0.09, 0.025, 0.015, material("#b77f65"), 8e-3);
+  const arms = [];
+  for (const x of [-0.37, 0.37]) {
+    const arm = new T.Group();
+    arm.position.set(x, 1.27, 0);
+    body.add(arm);
+    box(arm, 0, -0.16, 0.08, 0.19, 0.42, 0.22, fabric, 0.07);
+    sphere(arm, 0, -0.38, 0.11, 0.115, M.cream);
+    arms.push(arm);
+  }
+  box(body, 0.33, 0.75, 0, 0.13, 0.25, 0.2, M.gold, 0.02);
+  if (owner && styleId === "sunset") {
+    for (const x of [-0.17, 0.17]) {
+      box(body, x, 1.02, 0.194, 0.045, 0.56, 0.025, M.cream, 0.01);
+      box(body, x, 0.43, 0.13, 0.035, 0.48, 0.02, M.cream, 0.01);
+    }
+    box(body, 0, 1.68, 0.249, 0.42, 0.13, 0.06, dark, 0.035);
+    box(body, 0, 1.68, 0.285, 0.32, 0.075, 0.02, M.glass, 0.02);
+    box(body, 0, 1.84, 0.32, 0.51, 0.04, 0.09, M.cream, 0.015);
+  }
+  if (owner && styleId === "mint") {
+    box(body, 0, 1.05, 0.2, 0.49, 0.62, 0.045, M.white, 0.04);
+    box(body, 0, 1.05, 0.235, 0.14, 0.58, 0.025, fabric, 0.01);
+    for (const x of [-0.23, 0.23]) box(body, x, 1.1, 0.22, 0.035, 0.58, 0.025, M.steel, 0.01);
+    box(body, 0, 0.78, 0.19, 0.5, 0.1, 0.05, M.steel, 0.015);
+    box(body, 0, 1.84, 0.29, 0.52, 0.05, 0.13, M.white, 0.02);
+    for (const x of [-0.27, 0.27]) sphere(body, x, 1.68, 0, 0.11, M.steel, [0.5, 1, 1]);
+  }
+  if (owner && styleId === "royal") {
+    for (const x of [-0.23, 0.23]) {
+      box(body, x, 1.03, 0.205, 0.035, 0.61, 0.035, M.gold, 0.01);
+      box(body, x, 1.4, 0, 0.25, 0.09, 0.35, M.gold, 0.025);
+    }
+    for (let i = 0; i < 3; i++) sphere(body, 0, 1.19 - i * 0.12, 0.222, 0.027, M.gold);
+    box(body, 0, 0.78, 0.2, 0.53, 0.09, 0.05, M.gold, 0.015);
+    box(body, 0, 1.85, 0.29, 0.52, 0.055, 0.13, M.gold, 0.02);
+    for (const x of [-0.1, 0, 0.1]) box(body, x, 1.94, 0.11, 0.045, 0.12, 0.04, M.gold, 0.01);
+  }
+  const gun = new T.Group();
+  gun.position.set(0.38, 0.95, 0.24);
+  body.add(gun);
+  box(gun, 0, 0, 0.1, 0.14, 0.13, styleId === "royal" ? 0.7 : 0.55, owner && styleId === "royal" ? M.gold : M.navy, 0.03);
+  box(gun, 0, -0.1, -0.05, 0.1, 0.24, 0.1, M.navy, 0.02);
+  const ring = torus(root, 0, 0.035, 0, 0.66, 0.035, owner ? M.gold : M.teal);
+  ring.visible = owner;
+  if (owner) label(root, "\u6211", 0, 2.3, 0, 0.31, "#f7fff1", null);
+  batch(body);
+  return { root, body, arms, gun, update(time, working) {
+    body.position.y = working ? Math.sin(time * 8) * 0.018 : Math.sin(time * 2) * 0.014;
+    gun.rotation.x = working ? Math.sin(time * 4) * 0.14 : 0;
+  } };
+}
+function environment(renderer2) {
+  const c = document.createElement("canvas");
+  c.width = 1024;
+  c.height = 512;
+  const ctx = c.getContext("2d");
+  const gr = ctx.createLinearGradient(0, 0, 0, 512);
+  gr.addColorStop(0, "#dcf9ff");
+  gr.addColorStop(0.46, "#e8f2f4");
+  gr.addColorStop(0.53, "#a8c6cb");
+  gr.addColorStop(1, "#65858a");
+  ctx.fillStyle = gr;
+  ctx.fillRect(0, 0, 1024, 512);
+  for (let i = 0; i < 6; i++) {
+    ctx.fillStyle = i % 2 ? "#ffffff" : "#b6e0eb";
+    ctx.fillRect(i * 173 + 25, 70, 45, 160);
+  }
+  const tex = new T.CanvasTexture(c);
+  tex.mapping = T.EquirectangularReflectionMapping;
+  tex.colorSpace = T.SRGBColorSpace;
+  const pmrem = new T.PMREMGenerator(renderer2);
+  const target = pmrem.fromEquirectangular(tex);
+  tex.dispose();
+  pmrem.dispose();
+  return target.texture;
+}
+
+// src/world.mjs
+import * as T2 from "./vendor/three.module.js";
+var World = class {
+  constructor(scene2, s2) {
+    this.scene = scene2;
+    this.s = s2;
+    this.group = new T2.Group();
+    scene2.add(this.group);
+    this.build();
+  }
+  signature() {
+    const st = current(this.s);
+    return [st.id, ...st.bays.map((b) => `${b.unlocked}-${b.level}-${b.worker}`), this.s.style, st.upgrades.marketing, st.manager].join("/");
+  }
+  build() {
+    if (this.staticRoot) {
+      this.group.traverse((o) => {
+        if (o.userData.merged) o.geometry.dispose();
+        if (o.isSprite) o.material.map?.dispose();
+      });
+      this.group.clear();
+    }
+    const st = current(this.s), theme = branchDef(st.id).theme, night = theme === "night", desert = theme === "desert";
+    this.signatureValue = this.signature();
+    this.rollers = [];
+    this.labels = [];
+    this.workers = [];
+    this.staticRoot = new T2.Group();
+    this.group.add(this.staticRoot);
+    const g = this.staticRoot;
+    const paving = material(night ? "#8392a8" : desert ? "#c9d0c7" : "#c0c9c8"), curb = material("#e4f0e8");
+    box(g, 0, -0.65, 3, 43, 1, 51, material("#7c9eaf"), 0.5);
+    box(g, 0, -0.09, 2.5, 42, 0.25, 49, paving, 0.2);
+    box(g, -37, -0.8, 0, 32, 0.3, 160, material(desert ? "#a5b3a0" : "#7eb9c4", 0.35), 0);
+    box(g, -23, -0.36, 0, 5, 0.4, 160, material("#c7d8d4"), 0);
+    for (let i = 0; i < 13; i++) {
+      const z = -30 + i * 7;
+      box(g, -25.4, 0.03, z, 1, 0.025, 2.5, material("#e9f7eb"), 0.05);
+    }
+    box(g, 0, -0.08, 30, 180, 0.12, 10, material("#355b78"), 0);
+    for (let x = -80; x < 80; x += 5) box(g, x, 4e-3, 30, 2.6, 0.02, 0.12, curb, 0.01);
+    box(g, 0, 0.02, 24.5, 42, 0.2, 0.6, curb, 0.08);
+    box(g, 0, 0.02, -22, 43, 0.2, 0.5, curb, 0.07);
+    for (const x of [-21, 21]) box(g, x, 0.01, 1, 0.3, 0.35, 46, curb, 0.06);
+    for (let x = -20; x < 20; x += 2.4) for (let z = -21; z < 24; z += 2.4) {
+      box(g, x, 0.044, z, 2.35, 0.014, 0.014, material(night ? "#738698" : "#bacdce"), 0);
+      box(g, x, 0.045, z, 0.014, 0.014, 2.35, material(night ? "#738698" : "#bacdce"), 0);
+    }
+    for (const x of [-18, 18]) for (let z = -18; z < 23; z += 9) {
+      cylinder(g, x, 0.35, z, 0.12, 0.65, M.cream);
+      cylinder(g, x, 0.65, z, 0.12, 0.16, M.gold);
+    }
+    for (const x of [-16, 15]) {
+      box(g, x, 0.1, 18, 5.3, 0.13, 4, material("#89a5af"), 0.04);
+      for (const a of [-2.55, 2.55]) box(g, x + a, 0.19, 18, 0.12, 0.04, 4, M.white, 0.01);
+      box(g, x, 0.19, 16, 5.2, 0.04, 0.1, M.white, 0.01);
+    }
+    for (let i = 0; i < 3; i++) this.bay(i, st.bays[i], night);
+    box(g, 13.8, 1.6, -15, 10, 3.2, 6.6, material(night ? "#465f78" : "#dbe7e6"), 0.18);
+    box(g, 13.8, 3.35, -15, 10.6, 0.35, 7.1, M.teal, 0.12);
+    box(g, 13.8, 0.35, -11.55, 11, 0.36, 1.2, M.cream, 0.08);
+    for (const x of [10.5, 14]) {
+      box(g, x, 1.75, -11.65, 2.7, 1.55, 0.05, M.navy, 0.06);
+      box(g, x, 1.75, -11.59, 2.42, 1.31, 0.025, material("#83c7cf", 0.18, 0.2), 0.02);
+      box(g, x, 1.75, -11.55, 0.06, 1.38, 0.04, M.cream, 0.01);
+    }
+    box(g, 17.65, 1.35, -11.63, 1.2, 2.5, 0.09, M.navy, 0.04);
+    box(g, 17.65, 1.52, -11.55, 0.95, 1.8, 0.04, M.glass, 0.03);
+    box(g, 17.96, 1.35, -11.48, 0.045, 0.3, 0.045, M.gold, 0.01);
+    box(g, 13.8, 3.02, -10.9, 10.9, 0.16, 1.8, M.cream, 0.04);
+    for (let i = 0; i < 11; i++) box(g, 8.8 + i, 3.13, -10.9, 0.48, 0.04, 1.8, M.teal, 0.01);
+    label(g, "FOAM COAST", 13.8, 4.06, -15, 1, "#f9f7dc", night ? "#524b85" : "#267f87");
+    plant(g, 10, 0.05, -10.8);
+    plant(g, 16, 0.05, -10.8);
+    box(g, 12, 3.8, -15, 2.3, 0.65, 2, material("#acc7c6"), 0.08);
+    for (let z = -15.7; z < -14.3; z += 0.25) box(g, 12, 4.15, z, 1.9, 0.02, 0.09, M.steel, 0.01);
+    box(g, -15.8, 0.6, -11, 3, 0.25, 1.2, M.cream, 0.06);
+    for (const x of [-16.8, -14.8]) box(g, x, 0.3, -11, 0.1, 0.6, 0.6, M.navy, 0.02);
+    box(g, -15.8, 1.13, -11.4, 3, 0.8, 0.12, M.teal, 0.07);
+    plant(g, -18, 0.05, -11);
+    for (const x of [-18.2, 17.8]) {
+      cylinder(g, x, 2.5, 15, 0.09, 5, M.navy);
+      box(g, x, 5.02, 15, 0.8, 0.15, 1.3, M.cream, 0.08);
+      if (night) {
+        const lamp = new T2.PointLight("#ffe8b1", 10, 12, 2);
+        lamp.position.set(x, 4.5, 15);
+        this.group.add(lamp);
+      }
+    }
+    for (const [x, z, k] of [[-19, -17, 1.3], [-19, 10, 1], [-17, 22, 1.12], [18, -20, 1.2], [19, 6, 1.1]]) palm(g, x, z, k);
+    for (let i = 0; i < 7; i++) {
+      box(g, -19, 0.25, -5 + i * 1.6, 0.9, 0.5, 1.1, material("#b9c5a0"), 0.12);
+      sphere(g, -19, 0.8, -5 + i * 1.6, 0.7, material("#79a77b"), [1, 0.55, 1]);
+    }
+    const entry = label(g, "\u6D17\u8F66\u5165\u53E3 \u2192", -10, 0.5, 25, 0.55, "#f2f1d8", "#417b80");
+    label(g, "WELCOME / " + branchDef(st.id).short, -5.7, 4.8, -18, 1, "#edf4e6", "#238788");
+    for (const x of [-10.7, -0.7]) cylinder(g, x, 2.1, -18, 0.1, 4.3, M.navy);
+    const ownerColor = STYLE_DEFS.find((d) => d.id === this.s.style).color;
+    this.owner = mechanic(this.group, ownerColor, true, this.s.style);
+    this.owner.root.position.set(BAY_X[this.s.selected] - 2.7, 0.12, 2.7);
+    this.owner.root.rotation.y = 0.9;
+    for (let i = 0; i < 3; i++) if (st.bays[i].worker) {
+      const worker = mechanic(this.group, "#dc9152");
+      worker.root.position.set(BAY_X[i] + 2.6, 0.12, -0.6);
+      worker.root.rotation.y = -1.5;
+      this.workers.push({ i, ...worker });
+    }
+    this.manager = null;
+    if (st.manager) {
+      this.manager = mechanic(this.group, "#566482");
+      this.manager.root.position.set(13, 0.12, -10.8);
+      label(this.manager.root, "\u5E97\u957F", 0, 2.25, 0, 0.27, "#fff4ce", "#64727c");
+    }
+    batch(g);
+    for (const o of g.children) if (o.isMesh) o.userData.merged = true;
+  }
+  bay(i, b, night) {
+    const g = this.staticRoot, x = BAY_X[i], mat = material(b.unlocked ? "#9eb7c4" : "#afcbc5");
+    box(g, x, 0.12, 0, 6.25, 0.24, 11.5, mat, 0.12);
+    for (const dx of [-2.95, 2.95]) box(g, x + dx, 0.28, 0, 0.16, 0.14, 11.3, M.cream, 0.025);
+    for (let z = -5.4; z <= 5.4; z += 0.7) {
+      box(g, x - 2.45, 0.26, z, 0.33, 0.04, 0.23, M.gold, 0.015);
+      box(g, x + 2.45, 0.26, z, 0.33, 0.04, 0.23, M.gold, 0.015);
+    }
+    if (!b.unlocked) {
+      for (let z = -4; z < 4; z += 1.1) {
+        box(g, x, 0.27, z, 3.6, 0.025, 0.05, M.cream, 5e-3);
+      }
+      box(g, x, 0.28, 0, 0.05, 0.02, 8, M.cream, 0.01);
+      for (const dx of [-1.3, 1.3]) {
+        cylinder(g, x + dx, 0.53, 3.8, 0.21, 0.55, M.orange, 0.06);
+        cylinder(g, x + dx, 0.56, 3.8, 0.14, 0.1, M.white, 0.12);
+      }
+      this.labels.push({ i, x, y: 0.7, z: 0.5, locked: true });
+      return;
+    }
+    box(g, x, 0.255, 0, 3.86, 0.04, 10.8, material("#245e81"), 0);
+    for (let z = -5; z < 5; z += 0.8) {
+      box(g, x, 0.281, z, 3.7, 0.018, 0.026, material("#39758f"), 0);
+    }
+    for (const z of [-4.5, 3.5]) for (const sign of [-1, 1]) {
+      const arrow = box(g, x + sign * 0.2, 0.286, z, 0.1, 0.018, 0.66, M.cream, 0);
+      arrow.rotation.y = sign * 0.65;
+    }
+    for (const dx of [-2.1, 2.1]) {
+      box(g, x + dx, 0.3, 0, 0.22, 0.17, 10.6, M.steel, 0.03);
+      box(g, x + dx, 0.4, 0, 0.08, 0.04, 10.5, M.navy, 0.01);
+    }
+    for (const dx of [-2.7, 2.7]) {
+      box(g, x + dx, 2.1, -3.7, 0.55, 4.2, 0.7, M.cream, 0.13);
+      box(g, x + dx, 1.4, -3.3, 0.33, 2.5, 0.08, M.teal, 0.06);
+      box(g, x + dx, 0.5, -3.7, 0.85, 0.55, 1.05, M.teal, 0.09);
+    }
+    box(g, x, 4.2, -3.7, 5.95, 0.65, 0.8, M.cream, 0.18);
+    box(g, x, 4.23, -3.24, 4.8, 0.38, 0.07, M.teal, 0.04);
+    label(g, `0${i + 1} / ${b.level >= 2 ? "AUTO WASH" : "HAND WASH"}`, x, 4.25, -3.13, 0.35, "#f7ffed");
+    for (const dx of [-2.4, 2.4]) for (let j = 0; j < 3; j++) {
+      const nozzle = cylinder(g, x + dx, 3.7, -3.7 + j * 0.19, 0.065, 0.15, M.steel);
+      nozzle.rotation.z = dx > 0 ? 0.5 : -0.5;
+    }
+    box(g, x - 3, 1.1, 1.3, 0.62, 1.6, 0.8, M.teal, 0.1);
+    box(g, x - 3, 1.48, 1.74, 0.38, 0.45, 0.03, M.navy, 0.03);
+    box(g, x - 3, 1.48, 1.77, 0.24, 0.18, 0.025, material("#9ae5bd"), 0.01);
+    for (let a = 0; a < 4; a++) torus(g, x - 3, 0.86, 1.82, 0.22 + a * 0.015, 0.035, M.navy, 0);
+    cylinder(g, x + 2.8, 0.63, 3.6, 0.36, 1.1, M.cream);
+    cylinder(g, x + 2.8, 1.22, 3.6, 0.38, 0.13, M.gold);
+    label(g, "SOAP", x + 2.8, 0.9, 4, 0.17, "#318983");
+    for (let k = 0; k < 7; k++) box(g, x + 0.38 * k - 1.14, 0.28, 5.4, 0.2, 0.04, 0.68, M.cream, 0.01);
+    line(g, [[x - 2.9, 0.4, 1.8], [x - 3.4, 0.14, 3.1], [x - 3, 0.15, 4.1], [x - 2.4, 0.15, 3.4], [x - 2.2, 0.6, 2.2]], 0.033, M.navy);
+    if (b.level >= 2) {
+      for (const dx of [-1.75, 1.75]) {
+        const roll = new T2.Group();
+        roll.position.set(x + dx, 1.5, -0.9);
+        this.group.add(roll);
+        cylinder(roll, 0, 0, 0, 0.53, 2.4, M.teal);
+        for (let a = 0; a < 20; a++) {
+          const theta = a / 20 * Math.PI * 2;
+          for (let j = 0; j < 8; j++) {
+            const brush = box(roll, Math.sin(theta) * 0.58, -1.1 + j * 0.3, Math.cos(theta) * 0.58, 0.14, 0.26, 0.35, j % 3 === 0 ? M.gold : material("#38a4b4"), 0);
+            brush.rotation.y = theta;
+          }
+        }
+        cylinder(roll, 0, 1.3, 0, 0.33, 0.3, M.gold);
+        batch(roll);
+        this.rollers.push({ i, roll });
+      }
+      box(g, x, 3.3, -0.9, 5, 0.25, 0.5, M.teal, 0.07);
+    }
+    if (b.level >= 3) {
+      for (const dx of [-2.4, 2.4]) box(g, x + dx, 1.7, -6, 0.3, 3.4, 0.45, M.teal, 0.08);
+      box(g, x, 3.4, -6, 5.2, 0.5, 0.7, M.cream, 0.1);
+      for (const dx of [-1.2, 1.2]) {
+        const fan = cylinder(g, x + dx, 3.15, -5.7, 0.37, 0.15, M.navy);
+        fan.rotation.x = Math.PI / 2;
+        for (let n = 0; n < 4; n++) {
+          const vane = box(g, x + dx, 3.15, -5.59, 0.6, 0.08, 0.025, M.steel, 0.03);
+          vane.rotation.z = n * Math.PI / 4;
+        }
+      }
+    }
+    if (b.level >= 4) {
+      box(g, x, 3.1, 2.6, 5, 0.25, 0.4, M.gold, 0.06);
+      for (const dx of [-1, 0, 1]) cylinder(g, x + dx, 2.96, 2.6, 0.065, 0.19, M.steel);
+    }
+    this.labels.push({ i, x, y: 0.4, z: 6.1, locked: false });
+  }
+  update(s2, time, dt) {
+    if (this.signatureValue !== this.signature()) this.build();
+    const st = current(s2);
+    for (const { i, roll } of this.rollers) {
+      if (st.bays[i].car?.state === "work") roll.rotation.y += dt * 5;
+    }
+    const target = new T2.Vector3(BAY_X[s2.selected] - 2.75, 0.12, 2.6);
+    this.owner.root.position.lerp(target, 1 - Math.exp(-dt * 5));
+    this.owner.update(time, !!st.bays[s2.selected].car);
+    for (const w of this.workers) w.update(time, !!st.bays[w.i].car);
+    if (this.manager) {
+      this.manager.root.position.x = 13 + Math.sin(time * 0.22) * 1.1;
+      this.manager.update(time, false);
+    }
+  }
+};
+
+// src/car.mjs
+import * as T4 from "./vendor/three.module.js";
+
+// src/luxury.mjs
+import * as T3 from "./vendor/three.module.js";
+var chrome = material("#e3e6cf", 0.17, 0.82);
+var carbon = material("#263645", 0.38, 0.35);
+var led = new T3.MeshStandardMaterial({ color: "#d7fbff", emissive: "#81cfff", emissiveIntensity: 1.3, roughness: 0.2 });
+function addLuxuryBody(g, c) {
+  const t = TYPES[c.type];
+  if (!t.care) return;
+  const { w, l, h } = t;
+  for (const sign of [-1, 1]) {
+    box(g, sign * w * 0.49, 0.76, 0, 0.035, 0.04, l * 0.6, chrome, 8e-3);
+    box(g, sign * w * 0.24, 0.87, l * 0.523, w * 0.22, 0.05, 0.025, led, 8e-3);
+  }
+  if (t.care === "rims") {
+    for (const sign of [-1, 1]) {
+      box(g, sign * w * 0.24, 1.035, l * 0.34, w * 0.2, 0.035, 0.45, carbon, 0.025);
+      box(g, sign * w * 0.29, 0.47, l * 0.51, w * 0.2, 0.16, 0.045, carbon, 0.025);
+      box(g, sign * 0.3, h + 0.024, -0.08, 0.09, 0.025, l * 0.43, chrome, 0.01);
+      box(g, sign * w * 0.35, 1.03, -l * 0.4, 0.06, 0.26, 0.08, carbon, 0.01);
+    }
+    box(g, 0, 1.19, -l * 0.42, w * 0.91, 0.075, 0.26, carbon, 0.025);
+    box(g, 0, 0.38, -l * 0.49, w * 0.77, 0.09, 0.32, carbon, 0.02);
+  } else if (t.care === "crystal") {
+    box(g, 0, 0.75, l * 0.526, w * 0.64, 0.34, 0.04, chrome, 0.035);
+    for (let i = -5; i <= 5; i++) box(g, i * 0.105, 0.75, l * 0.553, 0.025, 0.28, 0.024, carbon, 2e-3);
+    box(g, 0, h + 0.025, -0.03, w * 0.53, 0.025, l * 0.26, M.glass, 0.025);
+    for (const sign of [-1, 1]) box(g, sign * w * 0.45, 1.05, 0, 0.024, 0.025, l * 0.3, chrome, 4e-3);
+    box(g, 0, 1.065, l * 0.35, 0.07, 0.07, 0.12, M.gold, 0.015);
+  } else {
+    box(g, 0, 0.66, l * 0.523, w * 0.81, 0.2, 0.05, chrome, 0.025);
+    for (const z of [-l * 0.3, l * 0.3]) for (const sign of [-1, 1]) box(g, sign * w * 0.5, 0.65, z, 0.08, 0.26, 0.8, carbon, 0.03);
+    box(g, 0, h + 0.025, -0.12, w * 0.55, 0.025, l * 0.32, M.glass, 0.02);
+    for (const sign of [-1, 1]) box(g, sign * w * 0.53, 0.37, 0, 0.25, 0.08, l * 0.58, chrome, 0.025);
+    box(g, 0, 0.84, -l * 0.52, w * 0.75, 0.06, 0.03, led, 0.01);
+  }
+}
+var LuxuryVisual = class {
+  constructor(root, c) {
+    this.root = root;
+    this.t = TYPES[c.type];
+    this.care = careFor(c);
+    const { w, l, h } = this.t;
+    this.badge = label(root, "VIP", 0, h + 0.65, 0, 0.34, "#fff4c4", "#8b6734");
+    this.haloMaterial = new T3.MeshBasicMaterial({ color: "#ffdb83", transparent: true, opacity: 0.3, depthWrite: false });
+    this.halo = torus(root, 0, 0.2, 0, 1.8, 0.035, this.haloMaterial);
+    this.halo.scale.set(1, 1.4, 1);
+    this.echo = torus(root, 0, 0.21, 0, 2.1, 0.026, this.haloMaterial);
+    this.echo.scale.set(1, 1.4, 1);
+    this.pillarMaterial = new T3.MeshBasicMaterial({ color: "#ffe7ab", transparent: true, opacity: 0.08, side: T3.DoubleSide, depthWrite: false });
+    this.pillars = new T3.Group();
+    root.add(this.pillars);
+    for (const sign of [-1, 1]) {
+      const p = new T3.Mesh(new T3.CylinderGeometry(0.06, 0.35, 3.6, 12, 1, true), this.pillarMaterial);
+      p.position.set(sign * 1.6, 1.8, 0);
+      this.pillars.add(p);
+    }
+    this.careMaterial = new T3.MeshBasicMaterial({ color: this.care.color, transparent: true, opacity: 0.8, depthWrite: false });
+    this.rims = [];
+    if (this.t.care === "rims") for (const sign of [-1, 1]) for (const z of [-l * 0.31, l * 0.31]) {
+      const rim = torus(root, sign * w * 0.535, 0.43, z, 0.29, 0.025, this.careMaterial, 0);
+      rim.rotation.y = Math.PI / 2;
+      this.rims.push(rim);
+    }
+    this.scan = new T3.Mesh(new T3.BoxGeometry(w * 0.9, 0.025, 0.23), this.careMaterial);
+    root.add(this.scan);
+    this.steamMaterial = new T3.MeshBasicMaterial({ color: "#e1fff3", transparent: true, opacity: 0.24, depthWrite: false });
+    this.steam = new T3.InstancedMesh(new T3.SphereGeometry(1, 8, 5), this.steamMaterial, 8);
+    this.steam.instanceMatrix.setUsage(T3.DynamicDrawUsage);
+    root.add(this.steam);
+    this.dummy = new T3.Object3D();
+    for (const o of [this.halo, this.echo, this.pillars, this.scan, this.steam, ...this.rims]) o.traverse((child) => {
+      child.userData.noShadow = true;
+      child.castShadow = false;
+    });
+  }
+  update(c, time, servicing = false) {
+    const special = c.state === "work" && c.phase === 3, entry = c.vipIntro || 0;
+    this.badge.visible = !c.paid;
+    this.badge.position.y = this.t.h + 0.65 + Math.sin(time * 2 + c.seed) * 0.05;
+    this.halo.visible = this.echo.visible = !c.paid || c.glow > 0;
+    this.haloMaterial.opacity = entry > 0 ? 0.6 : 0.18;
+    const pulse = 1 + (entry > 0 ? Math.sin(time * 5) * 0.06 : 0.015 * Math.sin(time * 2));
+    this.halo.scale.set(pulse, pulse * 1.4, 1);
+    const wave = 1 + time * 0.55 % 1 * 0.25;
+    this.echo.scale.set(wave, wave * 1.4, 1);
+    this.pillars.visible = entry > 0;
+    this.pillarMaterial.opacity = 0.06 + 0.06 * Math.sin(Math.min(1, entry / 3.2) * Math.PI);
+    for (let i = 0; i < this.rims.length; i++) {
+      const done = c.paid || special && c.progress >= (i + 1) / 4, active = special && i === Math.min(3, Math.floor(c.progress * 4));
+      this.rims[i].visible = done || active;
+      this.rims[i].scale.setScalar(active ? 1.08 + Math.sin(time * 13) * 0.09 : 1);
+    }
+    this.scan.visible = special && this.t.care === "crystal";
+    if (this.scan.visible) {
+      const row = Math.min(9, Math.floor(c.progress * 2 % 1 * 10)), p = this.root.userData.surfaceCells[row * 6 + 3];
+      this.scan.position.set(0, p.y + 0.07, p.z);
+    }
+    this.steam.visible = special && servicing && this.t.care === "cabin";
+    if (this.steam.visible) {
+      for (let i = 0; i < 8; i++) {
+        const age = (time * 0.6 + i * 0.127) % 1, sign = i % 2 ? 1 : -1;
+        this.dummy.position.set(sign * (this.t.w * 0.35 + age * 0.25), 1.1 + age * 1.5, (c.progress < 0.5 ? 0.6 : -0.65) + Math.sin(i * 2.4) * 0.25);
+        this.dummy.scale.setScalar(Math.sin(age * Math.PI) * (0.16 + age * 0.28));
+        this.dummy.updateMatrix();
+        this.steam.setMatrixAt(i, this.dummy.matrix);
+      }
+      this.steam.instanceMatrix.needsUpdate = true;
+    }
+  }
+  dispose() {
+    this.badge.material.map.dispose();
+    this.badge.material.dispose();
+    this.haloMaterial.dispose();
+    this.pillarMaterial.dispose();
+    this.careMaterial.dispose();
+    this.steamMaterial.dispose();
+    this.steam.dispose();
+  }
+};
+
+// src/car.mjs
+var dummy = new T4.Object3D();
+var originalPaint = new T4.Color();
+var smooth = (a, b, v) => T4.MathUtils.smoothstep(v, a, b);
+function sparkleGeometry() {
+  const positions = [0, 0, 0], indices = [];
+  for (let i = 0; i < 8; i++) {
+    const a = i * Math.PI / 4, r = i % 2 ? 0.22 : 1;
+    positions.push(Math.cos(a) * r, 0, Math.sin(a) * r);
+  }
+  for (let i = 0; i < 8; i++) indices.push(0, i + 1, (i + 1) % 8 + 1);
+  const geometry = new T4.BufferGeometry();
+  geometry.setAttribute("position", new T4.Float32BufferAttribute(positions, 3));
+  geometry.setIndex(indices);
+  return geometry;
+}
+function surfaceCells(type) {
+  const t = TYPES[type], cells = [], l = t.l, w = t.w;
+  const tall = type === 2 || type === 4 || type === 7, back = -l * (tall ? 0.33 : 0.23), front = l * 0.23, roofBack = back + 0.25, roofFront = front - 0.4;
+  for (let row = 0; row < 10; row++) for (let col = 0; col < 6; col++) {
+    const z = (row / 9 - 0.5) * l * 0.88, cabin = z > back && z < front;
+    let y = 1.035;
+    if (cabin) y = z < roofBack ? 1.025 + (t.h - 1.01) * (z - back) / 0.25 : z > roofFront ? 1.025 + (t.h - 1.01) * (front - z) / 0.4 : t.h + 0.015;
+    const x = (col / 5 - 0.5) * w * (cabin ? 0.61 : 0.8);
+    cells.push({ x, y, z, side: 0 });
+  }
+  for (const sign of [-1, 1]) for (let i = 0; i < 12; i++) cells.push({ x: sign * (w * 0.495 + 0.015), y: i % 2 ? 0.66 : 0.96, z: (i / 11 - 0.5) * l * 0.82, side: sign });
+  return cells;
+}
+var CarVisual = class {
+  constructor(scene2, c) {
+    this.root = new T4.Group();
+    scene2.add(this.root);
+    this.data = c;
+    this.cells = surfaceCells(c.type);
+    this.t = TYPES[c.type];
+    const { w, l, h } = this.t, g = new T4.Group();
+    this.root.add(g);
+    this.g = g;
+    this.paint = new T4.MeshPhysicalMaterial({ color: c.color, metalness: 0.36, roughness: 0.23, clearcoat: 1, clearcoatRoughness: 0.12, envMapIntensity: 1.1 });
+    const paint = this.paint, trim = M.rubber;
+    const rings = [[-0.5, 0.72], [-0.43, 0.97], [-0.25, 1], [0.26, 1], [0.44, 0.93], [0.5, 0.71]].map(([z, k]) => [[-w * 0.38 * k, 0.43, z * l], [-w * 0.5 * k, 0.57, z * l], [-w * 0.48 * k, 0.91, z * l], [-w * 0.34 * k, 1.02, z * l], [w * 0.34 * k, 1.02, z * l], [w * 0.48 * k, 0.91, z * l], [w * 0.5 * k, 0.57, z * l], [w * 0.38 * k, 0.43, z * l]]);
+    loft(g, rings, paint);
+    const tall = c.type === 2 || c.type === 4 || c.type === 7, back = -l * (tall ? 0.33 : 0.23), front = l * 0.23, roofBack = back + 0.25, roofFront = front - 0.4, bottom = 1.01, top = h;
+    loft(g, [[[-w * 0.43, bottom, back], [-w * 0.33, top, roofBack], [w * 0.33, top, roofBack], [w * 0.43, bottom, back]], [[-w * 0.43, bottom, front], [-w * 0.33, top, roofFront], [w * 0.33, top, roofFront], [w * 0.43, bottom, front]]], paint);
+    const glass = this.glass = new T4.MeshPhysicalMaterial({ color: "#28495d", metalness: 0.3, roughness: 0.12, clearcoat: 1, envMapIntensity: 1.7 });
+    polygon(g, [[-w * 0.387, bottom + 0.07, front + 0.012], [w * 0.387, bottom + 0.07, front + 0.012], [w * 0.3, top - 0.07, roofFront + 0.015], [-w * 0.3, top - 0.07, roofFront + 0.015]], glass);
+    polygon(g, [[-w * 0.39, bottom + 0.08, back - 0.012], [-w * 0.3, top - 0.07, roofBack - 0.015], [w * 0.3, top - 0.07, roofBack - 0.015], [w * 0.39, bottom + 0.08, back - 0.012]], glass);
+    for (const sign of [-1, 1]) {
+      const x = sign * w;
+      const mid = (roofBack + roofFront) / 2;
+      for (const [a, b] of [[roofBack + 0.08, mid - 0.05], [mid + 0.05, roofFront - 0.04]]) polygon(g, [[x * 0.431, bottom + 0.13, a - 0.15], [x * 0.334, top - 0.08, a], [x * 0.334, top - 0.08, b], [x * 0.431, bottom + 0.13, b + 0.22]], glass);
+      box(g, sign * w * 0.49, 0.94, -0.25, 0.035, 0.055, 0.27, M.steel, 0.02);
+      box(g, sign * w * 0.55, 1.05, front - 0.18, 0.23, 0.16, 0.3, paint, 0.06);
+      box(g, sign * w * 0.55, 1.055, front - 0.33, 0.16, 0.1, 0.015, M.glass, 0.02);
+      box(g, sign * w * 0.485, 0.61, 0, 0.045, 0.12, l * 0.54, trim, 0.02);
+      for (const z of [-l * 0.31, l * 0.31]) {
+        const arch = torus(g, sign * w * 0.49, 0.43, z, 0.4, 0.05, trim, 0);
+        arch.rotation.y = Math.PI / 2;
+      }
+    }
+    box(g, 0, 0.58, l * 0.505, w * 0.57, 0.19, 0.06, trim, 0.04);
+    box(g, 0, 0.44, l * 0.505, w * 0.69, 0.07, 0.1, M.steel, 0.025);
+    box(g, 0, 0.49, -l * 0.505, w * 0.66, 0.1, 0.07, trim, 0.03);
+    box(g, 0, 0.63, l * 0.519, 0.42, 0.13, 0.012, M.cream, 0.015);
+    for (const sign of [-1, 1]) {
+      box(g, sign * w * 0.25, 0.85, l * 0.507, w * 0.2, 0.13, 0.07, material("#effff2", 0.2), 0.035);
+      box(g, sign * w * 0.25, 0.83, -l * 0.507, w * 0.16, 0.14, 0.06, material("#e85448", 0.3), 0.025);
+      box(g, sign * w * 0.25, 0.84, l * 0.529, w * 0.15, 0.035, 0.015, material("#fff9cd"), 8e-3);
+    }
+    if (c.type === 3) {
+      box(g, 0, 1.01, -l * 0.41, w * 0.83, 0.075, 0.22, trim, 0.03);
+      for (const x of [-0.58, 0.58]) box(g, x, 0.91, -l * 0.4, 0.06, 0.23, 0.08, trim, 0.01);
+      for (const x of [-0.18, 0.18]) box(g, x, 1.026, l * 0.33, 0.1, 0.015, l * 0.2, M.cream, 5e-3);
+    }
+    if (tall) {
+      for (const x of [-w * 0.35, w * 0.35]) {
+        box(g, x, h + 0.055, -0.25, 0.06, 0.06, l * 0.43, M.steel, 0.02);
+        box(g, x, h + 0.02, 0.5, 0.06, 0.15, 0.06, M.steel, 0.01);
+      }
+    }
+    addLuxuryBody(g, c);
+    this.hitMeshes = [];
+    g.traverse((o) => {
+      if (o.isMesh && o.material === paint) this.hitMeshes.push(o);
+    });
+    batch(g);
+    this.hitMeshes = g.children.filter((o) => o.isMesh);
+    this.root.userData.surfaceCells = this.cells;
+    if (this.t.care) this.luxury = new LuxuryVisual(this.root, c);
+    this.wheels = [];
+    for (const sign of [-1, 1]) for (const z of [-l * 0.31, l * 0.31]) {
+      const wg = new T4.Group();
+      wg.position.set(sign * w * 0.47, 0.43, z);
+      this.root.add(wg);
+      cylinder(wg, 0, 0, 0, 0.37, 0.25, trim).rotation.z = Math.PI / 2;
+      const hub = cylinder(wg, sign * 0.145, 0, 0, 0.265, 0.018, M.steel);
+      hub.rotation.z = Math.PI / 2;
+      cylinder(wg, sign * 0.162, 0, 0, 0.105, 0.023, M.navy).rotation.z = Math.PI / 2;
+      for (let i = 0; i < 7; i++) {
+        const a = i * Math.PI * 2 / 7;
+        const spoke = box(wg, sign * 0.164, Math.sin(a) * 0.16, Math.cos(a) * 0.16, 0.025, 0.045, 0.19, M.steel, 0);
+        spoke.rotation.x = -a;
+      }
+      batch(wg);
+      this.wheels.push(wg);
+    }
+    this.wheelAngle = 0;
+    this.wheelPoses = this.wheels.map((w2) => w2.position.clone());
+    this.wheelInstances = [];
+    const prototype = this.wheels[2];
+    for (const part of prototype.children) {
+      const inst = new T4.InstancedMesh(part.geometry, part.material, 4);
+      inst.instanceMatrix.setUsage(T4.DynamicDrawUsage);
+      inst.castShadow = inst.receiveShadow = true;
+      this.root.add(inst);
+      this.wheelInstances.push(inst);
+    }
+    const kept = new Set(this.wheelInstances.map((m) => m.geometry));
+    for (const wg of this.wheels) {
+      wg.removeFromParent();
+      for (const part of wg.children) if (!kept.has(part.geometry)) part.geometry.dispose();
+    }
+    this.wheels = [];
+    const dirtMat = new T4.MeshStandardMaterial({ color: "#866448", roughness: 1 });
+    this.dirt = new T4.InstancedMesh(new T4.SphereGeometry(1, 8, 4), dirtMat, 84);
+    this.foam = new T4.InstancedMesh(new T4.SphereGeometry(1, 8, 5), new T4.MeshStandardMaterial({ color: "#f4ecf4", roughness: 0.83 }), 84);
+    this.foam2 = new T4.InstancedMesh(new T4.SphereGeometry(1, 8, 4), new T4.MeshStandardMaterial({ color: "#d5f5f1", roughness: 0.65 }), 84);
+    this.root.add(this.dirt, this.foam, this.foam2);
+    this.dirt.instanceMatrix.setUsage(T4.DynamicDrawUsage);
+    this.foam.instanceMatrix.setUsage(T4.DynamicDrawUsage);
+    this.foam2.instanceMatrix.setUsage(T4.DynamicDrawUsage);
+    this.foam.castShadow = true;
+    this.foam2.castShadow = true;
+    this.wax = new T4.InstancedMesh(new T4.SphereGeometry(1, 8, 4), new T4.MeshStandardMaterial({ color: "#ffe4a1", roughness: 0.32, metalness: 0.08, transparent: true, opacity: 0.82, depthWrite: false }), 84);
+    this.wax.instanceMatrix.setUsage(T4.DynamicDrawUsage);
+    this.wax.castShadow = false;
+    this.root.add(this.wax);
+    this.glints = new T4.InstancedMesh(sparkleGeometry(), new T4.MeshBasicMaterial({ color: "#fff6c8", transparent: true, opacity: 0.92, depthWrite: false, side: T4.DoubleSide, toneMapped: false }), 8);
+    this.glints.instanceMatrix.setUsage(T4.DynamicDrawUsage);
+    this.root.add(this.glints);
+    this.polisher = new T4.Group();
+    this.polisher.position.set(0, h + 0.11, 0);
+    this.root.add(this.polisher);
+    const padMaterial = this.padMaterial = new T4.MeshStandardMaterial({ color: "#fff4cb", roughness: 0.7 }), rimMaterial = this.rimMaterial = new T4.MeshStandardMaterial({ color: "#ffc85f", metalness: 0.35, roughness: 0.24 });
+    cylinder(this.polisher, 0, 0, 0, 0.32, 0.09, padMaterial);
+    cylinder(this.polisher, 0, 0.07, 0, 0.28, 0.09, rimMaterial);
+    box(this.polisher, 0, 0.16, 0, 0.35, 0.13, 0.15, M.navy, 0.04);
+    box(this.polisher, 0.17, 0.14, 0, 0.06, 0.08, 0.35, M.teal, 0.02);
+    const shadow = this.contactShadow = new T4.Mesh(new T4.PlaneGeometry(w * 1.12, l * 1.03), new T4.MeshBasicMaterial({ map: shadowMap(), transparent: true, opacity: 0.32, depthWrite: false }));
+    shadow.rotation.x = -Math.PI / 2;
+    shadow.position.y = 0.025;
+    this.root.add(shadow);
+    this.last = "";
+    this.update(c, 0, 0.016);
+  }
+  update(c, time, dt, servicing = false) {
+    this.root.position.set(c.x, 0.12, c.z);
+    this.root.rotation.y = c.yaw;
+    this.g.position.y = c.state === "work" ? Math.sin(time * 11 + c.seed) * 8e-3 : 0;
+    this.wheelAngle += c.speed * dt * 2.7;
+    for (let i = 0; i < 4; i++) {
+      dummy.position.copy(this.wheelPoses[i]);
+      dummy.rotation.set(this.wheelAngle, i < 2 ? Math.PI : 0, 0);
+      dummy.scale.set(1, 1, 1);
+      dummy.updateMatrix();
+      for (const inst of this.wheelInstances) inst.setMatrixAt(i, dummy.matrix);
+    }
+    for (const inst of this.wheelInstances) inst.instanceMatrix.needsUpdate = true;
+    const cast = c.state === "work" || c.state === "enter" || c.state === "exit" && c.z > -7;
+    if (this.casting !== cast) {
+      this.casting = cast;
+      this.root.traverse((o) => {
+        if (o.isMesh) o.castShadow = cast && !o.userData.noShadow && o !== this.contactShadow && o !== this.dirt && o !== this.wax && o !== this.glints;
+      });
+    }
+    const initialClean = this.luxury ? 0.58 : 0.35, clean = c.paid ? 1 : c.phase === 0 ? initialClean : c.phase === 1 ? initialClean + c.progress * (1 - initialClean) : 1, polish = c.paid || c.phase === 3 ? 1 : c.phase === 2 ? smooth(0.18, 0.96, c.progress) : 0;
+    this.paint.color.set("#8c7257").lerp(originalPaint.set(c.color), clean);
+    this.paint.roughness = 0.67 - clean * 0.25 - polish * 0.31;
+    this.paint.clearcoat = 0.14 + polish * 0.86;
+    this.paint.clearcoatRoughness = 0.3 - polish * 0.25;
+    this.paint.envMapIntensity = 0.65 + polish * 0.9;
+    this.luxury?.update(c, time, servicing);
+    this.wax.visible = c.phase === 2 && !c.paid;
+    this.polisher.visible = this.wax.visible && servicing;
+    if (this.polisher.visible) {
+      const row = Math.round((Math.sin(time * 3 + c.seed) + 1) * 4.5), col = Math.round((Math.sin(time * 5) + 1) * 2.5), p = this.cells[row * 6 + col];
+      this.polisher.position.lerp(new T4.Vector3(p.x, p.y + 0.11, p.z), 1 - Math.exp(-dt * 18));
+      this.polisher.rotation.y = time * 22;
+    }
+    for (let i = 0; i < 84; i++) {
+      const p = this.cells[i], v = c.cells[i], smear = this.wax.visible ? smooth(0.015, 0.2, v) * (1 - smooth(0.42, 0.94, v)) : 0;
+      dummy.position.set(p.x, p.y + 0.032, p.z);
+      dummy.rotation.set(0, Math.sin(i) * 0.4, 0);
+      dummy.scale.set(0.26, 0.016, 0.31);
+      if (p.side) {
+        dummy.position.y -= 0.01;
+        dummy.scale.set(0.022, 0.19, 0.3);
+      }
+      dummy.scale.multiplyScalar(smear);
+      dummy.updateMatrix();
+      this.wax.setMatrixAt(i, dummy.matrix);
+    }
+    this.wax.instanceMatrix.needsUpdate = true;
+    this.glints.visible = polish > 0.08 && (c.state === "work" || c.glow > 0);
+    if (this.glints.visible) {
+      for (let i = 0; i < 8; i++) {
+        const p = this.cells[(i * 7 + 3) % 60], pulse = Math.pow(Math.max(0, Math.sin(time * 4.5 + i * 2.3)), 4) * polish;
+        dummy.position.set(p.x, p.y + 0.065, p.z);
+        dummy.rotation.set(0, time * 0.4 + i, 0);
+        dummy.scale.setScalar((i % 2 ? 0.2 : 0.29) * pulse);
+        dummy.updateMatrix();
+        this.glints.setMatrixAt(i, dummy.matrix);
+      }
+      this.glints.instanceMatrix.needsUpdate = true;
+    }
+    for (let i = 0; i < 84; i++) {
+      const p = this.cells[i], v = c.cells[i], seed = Math.sin(i * 7.13 + c.seed) * 0.5 + 0.5;
+      const dirt = c.paid ? 0 : c.phase === 0 ? 1 : c.phase === 1 ? 1 - v : 0;
+      const foam = c.paid ? 0 : c.phase === 0 ? v : c.phase === 1 ? 1 - v : 0;
+      dummy.position.set(p.x, p.y, p.z);
+      dummy.rotation.set(0, seed * 3, 0);
+      dummy.scale.set(0.11 + seed * 0.12, 0.012, 0.13 + seed * 0.12);
+      if (p.side) dummy.scale.set(0.018, 0.11 + seed * 0.07, 0.15);
+      dummy.scale.multiplyScalar(dirt);
+      dummy.updateMatrix();
+      this.dirt.setMatrixAt(i, dummy.matrix);
+      dummy.position.y += p.side ? 0 : 0.055;
+      dummy.scale.set(0.23 + seed * 0.1, 0.13, 0.24 + seed * 0.1);
+      if (p.side) dummy.scale.set(0.13, 0.21, 0.25);
+      dummy.scale.multiplyScalar(foam);
+      dummy.updateMatrix();
+      this.foam.setMatrixAt(i, dummy.matrix);
+      dummy.position.x += 0.08;
+      dummy.position.y += 0.07;
+      dummy.scale.multiplyScalar(0.58);
+      dummy.updateMatrix();
+      this.foam2.setMatrixAt(i, dummy.matrix);
+    }
+    this.dirt.instanceMatrix.needsUpdate = this.foam.instanceMatrix.needsUpdate = this.foam2.instanceMatrix.needsUpdate = true;
+  }
+  dispose() {
+    this.root.removeFromParent();
+    this.luxury?.dispose();
+    const geometries = /* @__PURE__ */ new Set();
+    this.root.traverse((o) => {
+      if (o.isMesh) geometries.add(o.geometry);
+    });
+    for (const g of geometries) g.dispose();
+    this.dirt.material.dispose();
+    this.foam.material.dispose();
+    this.foam2.material.dispose();
+    this.wax.material.dispose();
+    this.glints.material.dispose();
+    this.padMaterial.dispose();
+    this.rimMaterial.dispose();
+    this.paint.dispose();
+    this.glass.dispose();
+    this.contactShadow.material.dispose();
+    this.dirt.dispose();
+    this.foam.dispose();
+    this.foam2.dispose();
+    this.wax.dispose();
+    this.glints.dispose();
+    for (const inst of this.wheelInstances) inst.dispose();
+  }
+};
+var contactTex;
+function shadowMap() {
+  if (contactTex) return contactTex;
+  const c = document.createElement("canvas");
+  c.width = c.height = 64;
+  const ctx = c.getContext("2d"), g = ctx.createRadialGradient(32, 32, 2, 32, 32, 32);
+  g.addColorStop(0, "rgba(16,46,49,1)");
+  g.addColorStop(0.6, "rgba(16,46,49,.6)");
+  g.addColorStop(1, "rgba(16,46,49,0)");
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, 64, 64);
+  return contactTex = new T4.CanvasTexture(c);
+}
+
+// src/effects.mjs
+import * as T5 from "./vendor/three.module.js";
+var up = new T5.Vector3(0, 1, 0);
+var dummy2 = new T5.Object3D();
+var Effects = class {
+  constructor(scene2) {
+    this.items = [];
+    this.max = 640;
+    this.positions = new Float32Array(this.max * 3);
+    this.colors = new Float32Array(this.max * 3);
+    this.geom = new T5.BufferGeometry();
+    this.geom.setAttribute("position", new T5.BufferAttribute(this.positions, 3).setUsage(T5.DynamicDrawUsage));
+    this.geom.setAttribute("color", new T5.BufferAttribute(this.colors, 3).setUsage(T5.DynamicDrawUsage));
+    const c = document.createElement("canvas");
+    c.width = c.height = 32;
+    const ctx = c.getContext("2d"), gr = ctx.createRadialGradient(16, 16, 0, 16, 16, 16);
+    gr.addColorStop(0, "rgba(255,255,255,1)");
+    gr.addColorStop(0.6, "rgba(255,255,255,.8)");
+    gr.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = gr;
+    ctx.fillRect(0, 0, 32, 32);
+    this.points = new T5.Points(this.geom, new T5.PointsMaterial({ size: 0.16, vertexColors: true, map: new T5.CanvasTexture(c), transparent: true, depthWrite: false, sizeAttenuation: true }));
+    this.points.frustumCulled = false;
+    scene2.add(this.points);
+    this.sprayTimer = 0;
+    this.beam = new T5.Mesh(new T5.CylinderGeometry(0.045, 0.12, 1, 10, 1, true), new T5.MeshBasicMaterial({ color: "#c6f8ff", transparent: true, opacity: 0.48, depthWrite: false, side: T5.DoubleSide }));
+    scene2.add(this.beam);
+    this.beam.visible = false;
+    const ringGeometry = new T5.TorusGeometry(1, 0.035, 6, 56);
+    this.ripples = Array.from({ length: 10 }, () => {
+      const mesh2 = new T5.Mesh(ringGeometry, new T5.MeshBasicMaterial({ color: "#ffdc87", transparent: true, opacity: 0, depthWrite: false }));
+      mesh2.rotation.x = -Math.PI / 2;
+      mesh2.visible = false;
+      scene2.add(mesh2);
+      return { mesh: mesh2, life: 0, duration: 1 };
+    });
+    this.papers = [];
+    this.confetti = new T5.InstancedMesh(new T5.PlaneGeometry(0.12, 0.2), new T5.MeshBasicMaterial({ side: T5.DoubleSide, transparent: true, opacity: 0.9, depthWrite: false }), 90);
+    this.confetti.instanceMatrix.setUsage(T5.DynamicDrawUsage);
+    this.confetti.frustumCulled = false;
+    this.confetti.count = 0;
+    scene2.add(this.confetti);
+  }
+  emit(pos, color, count = 3, power = 1) {
+    for (let i = 0; i < count; i++) {
+      if (this.items.length >= this.max) this.items.shift();
+      this.items.push({ x: pos.x, y: pos.y, z: pos.z, vx: (Math.random() - 0.5) * power * 2, vy: (Math.random() * 2 + 0.5) * power, vz: (Math.random() - 0.5) * power * 2, life: 0.4 + Math.random() * 0.5, color: new T5.Color(color) });
+    }
+  }
+  burst(pos, kind = "finish", color = "#ffdb84") {
+    const premium = kind === "vip" || kind === "arrival", count = premium ? 70 : kind === "phase" ? 18 : 35;
+    this.emit(pos, color, count, premium ? 1.7 : 1.05);
+    this.emit(pos, "#e8ffff", Math.floor(count / 3), 1.4);
+    for (let i = 0; i < (premium ? 2 : 1); i++) {
+      const ripple = this.ripples.find((r) => r.life <= 0) || this.ripples[0];
+      ripple.life = ripple.duration = premium ? 1.6 + i * 0.25 : 1;
+      ripple.mesh.position.set(pos.x, 0.32 + i * 8e-3, pos.z);
+      ripple.mesh.material.color.set(i ? "#a9eeef" : color);
+      ripple.mesh.visible = true;
+    }
+    if (premium) for (let i = 0; i < (kind === "vip" ? 55 : 22); i++) {
+      if (this.papers.length >= 90) this.papers.shift();
+      this.papers.push({ x: pos.x, y: pos.y + 0.7, z: pos.z, vx: (Math.random() - 0.5) * 4, vy: 2.5 + Math.random() * 3, vz: (Math.random() - 0.5) * 4, life: 1.6 + Math.random(), angle: Math.random() * 6, spin: (Math.random() - 0.5) * 12, color: new T5.Color(["#ffd36b", "#9beedc", "#e1ceff", "#fff4ce"][i % 4]) });
+    }
+  }
+  spray(from, to, phase, dt, color) {
+    this.beam.visible = true;
+    const dir = new T5.Vector3().subVectors(to, from), len = dir.length();
+    this.beam.position.copy(from).add(to).multiplyScalar(0.5);
+    this.beam.quaternion.setFromUnitVectors(up, dir.normalize());
+    const size = phase === 0 ? 1.7 : phase === 3 ? 1.3 : 1;
+    this.beam.scale.set(size, len, size);
+    this.beam.material.color.set(color || (phase === 0 ? "#f3def1" : phase === 1 ? "#9be5f3" : "#ffe49a"));
+    this.sprayTimer += dt;
+    while (this.sprayTimer > 0.025) {
+      this.sprayTimer -= 0.025;
+      this.emit(to, color || (phase === 0 ? "#f8ebfa" : phase === 1 ? "#d1faff" : "#ffe090"), phase === 1 ? 7 : 4, 0.8);
+    }
+  }
+  update(dt) {
+    let n = 0;
+    this.items = this.items.filter((p) => {
+      p.life -= dt;
+      if (p.life <= 0) return false;
+      p.vy -= dt * 7;
+      p.x += p.vx * dt;
+      p.y += p.vy * dt;
+      p.z += p.vz * dt;
+      if (p.y < 0.3) {
+        p.y = 0.3;
+        p.vy = Math.abs(p.vy) * 0.2;
+      }
+      this.positions.set([p.x, p.y, p.z], n * 3);
+      this.colors.set([p.color.r, p.color.g, p.color.b], n * 3);
+      n++;
+      return true;
+    });
+    this.geom.setDrawRange(0, n);
+    this.geom.attributes.position.needsUpdate = this.geom.attributes.color.needsUpdate = true;
+    for (const r of this.ripples) {
+      r.life = Math.max(0, r.life - dt);
+      r.mesh.visible = r.life > 0;
+      if (r.life) {
+        const p = 1 - r.life / r.duration;
+        r.mesh.scale.setScalar(0.7 + p * 3.3);
+        r.mesh.material.opacity = (1 - p) * 0.55;
+      }
+    }
+    n = 0;
+    this.papers = this.papers.filter((p) => {
+      p.life -= dt;
+      if (p.life <= 0) return false;
+      p.vy -= dt * 4;
+      p.x += p.vx * dt;
+      p.y += p.vy * dt;
+      p.z += p.vz * dt;
+      p.angle += dt * p.spin;
+      dummy2.position.set(p.x, p.y, p.z);
+      dummy2.rotation.set(p.angle, p.angle * 0.7, p.angle * 0.4);
+      dummy2.scale.setScalar(Math.min(1, p.life * 2));
+      dummy2.updateMatrix();
+      this.confetti.setMatrixAt(n, dummy2.matrix);
+      this.confetti.setColorAt(n, p.color);
+      n++;
+      return true;
+    });
+    this.confetti.count = n;
+    this.confetti.instanceMatrix.needsUpdate = true;
+    if (this.confetti.instanceColor) this.confetti.instanceColor.needsUpdate = true;
+  }
+};
+
+// src/audio.mjs
+var Audio = class {
+  constructor() {
+    this.mute = false;
+    this.ctx = null;
+  }
+  unlock() {
+    if (!this.ctx) {
+      this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+      this.gain = this.ctx.createGain();
+      this.gain.gain.value = 0;
+      const b = this.ctx.createBuffer(1, this.ctx.sampleRate * 2, this.ctx.sampleRate), a = b.getChannelData(0);
+      for (let i = 0; i < a.length; i++) a[i] = (Math.random() * 2 - 1) * 0.18;
+      const n = this.ctx.createBufferSource();
+      n.buffer = b;
+      n.loop = true;
+      const filter = this.ctx.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.value = 2400;
+      n.connect(filter).connect(this.gain).connect(this.ctx.destination);
+      n.start();
+    }
+    if (this.ctx.state === "suspended") this.ctx.resume().catch(() => {
+    });
+  }
+  spray(on) {
+    if (this.ctx) this.gain.gain.setTargetAtTime(on && !this.mute ? 0.18 : 0, this.ctx.currentTime, 0.08);
+  }
+  play(kind) {
+    if (!this.ctx || this.mute) return;
+    const notes = kind === "vip" ? [523, 659, 784, 1046, 1318] : kind === "finish" ? [620, 820, 1040] : kind === "purchase" ? [440, 660, 880] : kind === "phase" ? [680, 900] : [480];
+    notes.forEach((hz, i) => {
+      const o = this.ctx.createOscillator(), g = this.ctx.createGain(), t = this.ctx.currentTime + i * (kind === "vip" ? 0.11 : 0.08);
+      o.type = "sine";
+      o.frequency.value = hz;
+      g.gain.setValueAtTime(1e-4, t);
+      g.gain.exponentialRampToValueAtTime(0.055, t + 0.012);
+      g.gain.exponentialRampToValueAtTime(1e-4, t + 0.18);
+      o.connect(g).connect(this.ctx.destination);
+      o.start(t);
+      o.stop(t + 0.2);
+    });
+  }
+};
+
+// src/preview.mjs
+import * as T6 from "./vendor/three.module.js";
+var StylePreview = class {
+  constructor(env) {
+    this.env = env;
+    this.renderer = null;
+    this.spin = 0;
+  }
+  show(canvas2, id) {
+    this.clear();
+    if (!canvas2) return;
+    this.canvas = canvas2;
+    const scene2 = this.scene = new T6.Scene();
+    scene2.environment = this.env;
+    scene2.add(new T6.HemisphereLight("#fff9ee", "#6d9f99", 1.6));
+    const sun2 = new T6.DirectionalLight("#ffffff", 2.2);
+    sun2.position.set(-3, 5, 5);
+    scene2.add(sun2);
+    const renderer2 = this.renderer = new T6.WebGLRenderer({ canvas: canvas2, antialias: true, alpha: true });
+    renderer2.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+    renderer2.outputColorSpace = T6.SRGBColorSpace;
+    renderer2.toneMapping = T6.NeutralToneMapping;
+    renderer2.toneMappingExposure = 0.95;
+    const rect = canvas2.getBoundingClientRect();
+    renderer2.setSize(rect.width, rect.height, false);
+    const aspect = rect.width / rect.height;
+    this.camera = new T6.OrthographicCamera(-1.5 * aspect, 1.5 * aspect, 1.5, -1.5, 0.1, 30);
+    this.camera.position.set(3, 2.6, 5);
+    this.camera.lookAt(0, 1, 0);
+    const style = STYLE_DEFS.find((d) => d.id === id);
+    this.person = mechanic(scene2, style?.color, true, id);
+    this.person.root.rotation.y = this.spin;
+    let px = null;
+    canvas2.onpointerdown = (e) => {
+      px = e.clientX;
+      canvas2.setPointerCapture(e.pointerId);
+    };
+    canvas2.onpointermove = (e) => {
+      if (px !== null) {
+        this.spin += (e.clientX - px) * 0.016;
+        this.person.root.rotation.y = this.spin;
+        px = e.clientX;
+      }
+    };
+    canvas2.onpointerup = canvas2.onpointercancel = () => px = null;
+  }
+  frame(time) {
+    if (this.renderer) {
+      this.person.update(time, false);
+      this.renderer.render(this.scene, this.camera);
+    }
+  }
+  clear() {
+    if (this.renderer) {
+      this.scene.traverse((o) => {
+        if (o.isMesh && o.geometry.type === "BufferGeometry") o.geometry.dispose();
+        if (o.isSprite) {
+          o.material.map?.dispose();
+          o.material.dispose();
+        }
+      });
+      this.renderer.dispose();
+      this.renderer = null;
+    }
+    this.canvas = null;
+  }
+};
+
+// src/icons.mjs
+var iconHTML = (name, cls = "ui-icon") => `<img class="${cls}" src="./assets/ui/${name}.svg" alt="" draggable="false">`;
+function setIcon(el, name) {
+  if (!el || el.dataset.currentIcon === name) return;
+  el.innerHTML = iconHTML(name);
+  el.dataset.currentIcon = name;
+}
+function hydrateIcons(root = document) {
+  root.querySelectorAll("[data-icon]").forEach((el) => setIcon(el, el.dataset.icon));
+}
+
+// src/ui.mjs
+var $ = (id) => document.getElementById(id);
+var fmt = (n) => Math.floor(n).toLocaleString("zh-CN");
+function text(id, value) {
+  const n = $(id);
+  if (n && n.textContent !== String(value)) n.textContent = value;
+}
+function card(icon, title, sub, desc, button) {
+  const icons = { "\u2197": "spray", "\u2726": "sparkles", "\u2691": "building-store", "\u25A4": "wash-machine", "\u25A5": "layout-grid", "\u2659": "users", "\u2654": "building-store" };
+  return `<article class="card"><div class="card-top"><div class="card-icon">${iconHTML(icons[icon] || "settings")}</div><div><h3>${title}</h3><small>${sub}</small></div></div><p>${desc}</p>${button || ""}</article>`;
+}
+var UI = class {
+  constructor(sim2, actions2) {
+    this.sim = sim2;
+    this.s = sim2.s;
+    this.a = actions2;
+    this.open = false;
+    this.tab = "equipment";
+    this.lane = 0;
+    this.previewStyle = this.s.style;
+    this.toastTimer = 0;
+    this.pins = [];
+    hydrateIcons();
+    setIcon($("close"), "x");
+    $("build-action").onclick = () => {
+      this.show("equipment");
+      const next = current(this.s).bays.findIndex((b) => !b.unlocked);
+      this.lane = next >= 0 ? next : this.s.selected;
+      this.render();
+    };
+    $("vip-banner").onclick = () => {
+      const c = current(this.s).cars.find((c2) => c2.id === this.vipId);
+      if (c && !c.paid) {
+        this.stop();
+        this.sim.select(c.lane);
+        this.a.focus();
+        this.update();
+      }
+      $("vip-banner").hidden = true;
+      this.vipTimer = 0;
+    };
+    for (const [id, tab] of [["equipment", "equipment"], ["staff", "staff"], ["style", "style"], ["map", "map"]]) $(id).onclick = () => this.show(tab);
+    $("close").onclick = () => this.close();
+    document.querySelector(".scrim").onclick = () => this.close();
+    $("start").onclick = () => {
+      this.s.started = true;
+      this.a.unlock();
+      this.a.save();
+      this.update();
+    };
+    $("overview").onclick = () => this.a.overview();
+    $("bay-switch").onclick = () => {
+      const lanes = current(this.s).bays.map((b, i) => b.unlocked ? i : -1).filter((i) => i >= 0);
+      if (lanes.length < 2) {
+        this.toast("\u6269\u5EFA\u65B0\u8F66\u9053\u540E\uFF0C\u53EF\u5728\u8FD9\u91CC\u5FEB\u901F\u5207\u6362");
+        return;
+      }
+      this.stop();
+      this.sim.select(lanes[(lanes.indexOf(this.s.selected) + 1) % lanes.length]);
+      this.a.focus();
+      this.update();
+    };
+    $("sound").onclick = () => {
+      this.s.settings.mute = !this.s.settings.mute;
+      this.a.sound();
+      this.update();
+    };
+    $("pause").onclick = () => this.a.pause();
+    $("resume").onclick = () => this.a.pause(false);
+    $("help").onclick = () => this.show("help");
+    $("wallet").onclick = () => this.show("income");
+    $("goal").onclick = () => {
+      if (this.sim.claim()) {
+        this.render();
+        this.a.save();
+      } else this.toast("\u5148\u6D17\u51C0\u8F66\u8F86\uFF0C\u8FBE\u6210\u8BA2\u5355\u540E\u70B9\u8FD9\u91CC\u9886\u53D6\u91D1\u5E01");
+    };
+    $("work").addEventListener("pointerdown", (e) => {
+      if (e.button !== 0) return;
+      e.preventDefault();
+      this.a.unlock();
+      $("work").setPointerCapture(e.pointerId);
+      this.sim.holding = true;
+      $("work").classList.add("working");
+    });
+    for (const evt of ["pointerup", "pointercancel", "lostpointercapture"]) $("work").addEventListener(evt, () => this.stop());
+    $("sheet-tabs").onclick = (e) => {
+      const b = e.target.closest("[data-tab]");
+      if (b) {
+        this.tab = b.dataset.tab;
+        this.render();
+      }
+    };
+    $("sheet-content").onclick = (e) => {
+      const b = e.target.closest("button[data-action]");
+      if (!b || b.disabled) return;
+      const d = b.dataset;
+      let changed = false;
+      if (d.action === "lane") {
+        this.lane = Number(d.index);
+        if (current(this.s).bays[this.lane].unlocked) this.sim.select(this.lane);
+        this.render();
+        return;
+      }
+      if (d.action === "buy") changed = this.sim.buy(d.key, Number(d.index || 0));
+      if (d.action === "style-select") {
+        this.previewStyle = d.id;
+        this.renderedTab = null;
+        this.render();
+        return;
+      }
+      if (d.action === "style-buy") changed = this.sim.style(d.id);
+      if (d.action === "branch") changed = this.sim.switchBranch(Number(d.index));
+      if (d.action === "collect") changed = !!this.sim.collect();
+      if (changed) {
+        this.a.save();
+        this.render();
+      }
+    };
+    this.update();
+  }
+  stop() {
+    this.sim.holding = false;
+    $("work").classList.remove("working");
+  }
+  toast(message) {
+    $("toast").textContent = message;
+    $("toast").classList.add("show");
+    this.toastTimer = 3.2;
+  }
+  announceVIP(e) {
+    this.vipId = e.id;
+    this.vipTimer = 8;
+    text("vip-banner-name", e.name);
+    text("vip-banner-care", `${e.care} \xB7 \u5B8C\u6210\u989D\u5916 +${fmt(e.bonus)} \u91D1\u5E01`);
+    $("vip-banner").hidden = false;
+  }
+  show(tab) {
+    this.stop();
+    this.sim.brush = null;
+    this.tab = tab;
+    this.open = true;
+    this.renderedTab = null;
+    this.lane = this.s.selected;
+    this.previewStyle = this.s.style;
+    $("modal").hidden = false;
+    this.a.modal(true);
+    this.render();
+  }
+  close() {
+    this.open = false;
+    $("modal").hidden = true;
+    this.a.modal(false);
+    this.a.preview(null);
+    this.a.save();
+  }
+  button(cost, label2, action, key2, index, disabled = false) {
+    return `<button class="buy ${this.s.money < cost ? "unaffordable" : ""}" data-action="${action}" data-key="${key2}" data-index="${index}" ${disabled ? "disabled" : ""}><span>${label2}</span><strong>${disabled ? "\u6761\u4EF6\u672A\u6EE1\u8DB3" : fmt(cost) + " \u25CF"}</strong></button>`;
+  }
+  render() {
+    if (!this.open) return;
+    const st = current(this.s), s2 = this.s;
+    const titles = { equipment: "\u8BBE\u5907\u4E0E\u8F66\u9053", staff: "\u4E00\u8D77\u628A\u5C0F\u5E97\u505A\u5927", style: "\u4E3B\u7406\u4EBA\u7684\u88C5\u626E", map: "\u6211\u7684\u6D17\u8F66\u7248\u56FE", help: "\u628A\u6BCF\u8F86\u8F66\u6D17\u5F97\u95EA\u4EAE", income: "\u5C0F\u5E97\u7684\u6BCF\u4E00\u4EFD\u6536\u5165" };
+    text("sheet-title", titles[this.tab]);
+    $("sheet-tabs").innerHTML = ["equipment", "staff", "style", "map"].map((t, i) => `<button data-tab="${t}" class="${t === this.tab ? "active" : ""}">${["\u8BBE\u5907\u5DE5\u574A", "\u96C7\u7528\u5458\u5DE5", "\u88C5\u626E\u5DE5\u574A", "\u5546\u4E1A\u5730\u56FE"][i]}</button>`).join("");
+    let html = "";
+    if (this.tab === "equipment") {
+      html = '<p class="hint">\u5347\u7EA7\u4F1A\u771F\u5B9E\u6539\u53D8\u6D17\u8F66\u573A\u3002\u4EB2\u624B\u4F5C\u4E1A\u6709\u989D\u5916\u5C0F\u8D39\uFF1B\u4E70\u4E86\u81EA\u52A8\u6EDA\u5237\u6216\u96C7\u7528\u5458\u5DE5\uFF0C\u8F66\u9053\u5C31\u80FD\u81EA\u5DF1\u6301\u7EED\u8425\u4E1A\u3002</p><div class="lane-tabs">' + st.bays.map((b2, i) => `<button data-action="lane" data-index="${i}" class="${this.lane === i ? "active" : ""}">0${i + 1} ${b2.unlocked ? "\u6D17\u8F66\u9053" : "\u5F85\u5EFA\u8BBE"}</button>`).join("") + "</div>";
+      const b = st.bays[this.lane];
+      if (!b.unlocked) html += card("\u25A5", `\u5EFA\u8BBE\u7B2C ${this.lane + 1} \u6761\u8F66\u9053`, "\u589E\u52A0\u4E00\u6761\u5B9E\u9645\u5DE5\u4F5C\u7684\u6D17\u8F66\u7EBF", "\u65B0\u8F66\u9053\u72EC\u7ACB\u6392\u961F\u3001\u72EC\u7ACB\u6E05\u6D17\u3002\u4F60\u53EF\u4EE5\u5728\u8F66\u9053\u4E4B\u95F4\u5207\u6362\uFF0C\u4E3A\u6700\u5FD9\u7684\u5730\u65B9\u5E2E\u628A\u624B\u3002", this.button(laneCost(this.lane), "\u5EFA\u8BBE\u8F66\u9053", "buy", "lane", this.lane, this.lane === 2 && !st.bays[1].unlocked));
+      else html += card("\u25A4", `0${this.lane + 1} \u8F66\u9053 \xB7 ${["", "\u624B\u6D17\u5DE5\u4F4D", "\u81EA\u52A8\u6EDA\u5237", "\u98CE\u5E72\u62A4\u7406", "\u7CBE\u6D17\u55B7\u6DCB", "\u65D7\u8230\u6D17\u8F66\u7EBF"][b.level]}`, `\u8BBE\u5907 Lv.${b.level} / 5`, b.level === 1 ? "\u6DFB\u7F6E\u4F1A\u65CB\u8F6C\u7684\u5B9E\u4F53\u6EDA\u5237\uFF0C\u8F66\u8F86\u53EF\u81EA\u52A8\u5B8C\u6210\u6E05\u6D17\uFF1B\u624B\u52A8\u53C2\u4E0E\u8FD8\u80FD\u8FDB\u4E00\u6B65\u52A0\u5FEB\u3002" : b.level === 2 ? "\u589E\u52A0\u98CE\u5E72\u95E8\u548C\u98CE\u6247\uFF0C\u7F29\u77ED\u81EA\u52A8\u62A4\u7406\u65F6\u95F4\u3002" : "\u7EE7\u7EED\u63D0\u5347\u6D17\u8F66\u901F\u5EA6\uFF0C\u5347\u7EA7\u5230\u65D7\u8230\u6D41\u6C34\u7EBF\u3002", b.level < 5 ? this.button(machineCost(b.level), "\u5347\u7EA7\u8BBE\u5907", "buy", "machine", this.lane, b.level === 1 && st.washed < 5) : '<button class="buy" disabled>\u672C\u8F66\u9053\u5DF2\u8FBE\u5230\u65D7\u8230\u914D\u7F6E</button>');
+      for (const [key2, d] of Object.entries(UPGRADE_DEFS)) html += card(d.icon, d.name, `\u672C\u5E97 Lv.${st.upgrades[key2]}`, d.desc, this.button(upgradeCost(key2, st.upgrades[key2]), "\u5347\u7EA7", "buy", key2, 0));
+    }
+    if (this.tab === "staff") {
+      html = `<div class="mini-status"><span>\u672C\u5E97\u6D17\u51C0 <strong>${st.washed}</strong> \u8F86</span><span>\u8425\u4E1A ${"\u2605".repeat(starCount(st.washed))}</span></div><p class="hint">\u6BCF\u4F4D\u5458\u5DE5\u5728\u81EA\u5DF1\u7684\u8F66\u9053\u5DE5\u4F5C\uFF1B\u7A7A\u8F66\u9053\u4F1A\u7B49\u5F85\u4E0B\u4E00\u4F4D\u987E\u5BA2\u3002\u79BB\u5E97\u6258\u7BA1\u9700\u8981\u53E6\u5916\u8058\u8BF7\u5E97\u957F\u3002</p>`;
+      for (let i = 0; i < 3; i++) {
+        const b = st.bays[i];
+        html += card("\u2659", `0${i + 1} \u8F66\u9053\u62A4\u7406\u5E08`, b.worker ? "\u5DF2\u5230\u5C97 \xB7 \u6301\u7EED\u81EA\u52A8\u670D\u52A1" : "\u4E00\u4EBA\u8D1F\u8D23\u6CE1\u6CAB\u3001\u51B2\u6D17\u4E0E\u4E0A\u8721", b.worker ? "\u4F60\u53EF\u4EE5\u53BB\u5176\u4ED6\u8F66\u9053\u5E2E\u5FD9\uFF0C\u5458\u5DE5\u4F1A\u628A\u8F66\u6D17\u5B8C\u540E\u653E\u884C\u3002" : "\u96C7\u4EBA\u540E\u4E0D\u7528\u4E00\u76F4\u6309\u4F4F\u6309\u94AE\u3002\u4F60\u4EB2\u624B\u5E2E\u5FD9\u65F6\uFF0C\u4F5C\u4E1A\u901F\u5EA6\u4F1A\u53E0\u52A0\u3002", b.worker ? '<button class="buy" disabled>\u6B63\u5728\u4E3A\u5C0F\u5E97\u5DE5\u4F5C</button>' : this.button(workerCost(i), "\u8058\u8BF7\u62A4\u7406\u5E08", "buy", "worker", i, !b.unlocked));
+      }
+      html += card("\u2654", "\u9A7B\u5E97\u5E97\u957F", "\u672C\u5E97\u4E09\u661F\u5F00\u653E", "\u4F60\u53BB\u5176\u4ED6\u5206\u5E97\u65F6\uFF0C\u5E97\u957F\u5728\u7EBF\u6258\u7BA1\u3002\u6BCF\u6761\u6709\u5458\u5DE5\u6216\u8BBE\u5907\u7684\u8F66\u9053\u4EA7\u751F 0.8 \u91D1\u5E01/\u79D2\u8D77\u7684\u6258\u7BA1\u6536\u76CA\uFF0C\u5957\u9910\u5347\u7EA7\u52A0\u6210\uFF1B\u6709\u79EF\u7D2F\u4E0A\u9650\uFF0C\u6682\u505C\u548C\u79BB\u7EBF\u4E0D\u8BA1\u65F6\u3002", st.manager ? '<button class="buy" disabled>\u5E97\u957F\u5DF2\u5230\u5C97</button>' : this.button(2400, "\u8058\u8BF7\u5E97\u957F", "buy", "manager", 0, starCount(st.washed) < 3));
+    }
+    if (this.tab === "style") {
+      const d = STYLE_DEFS.find((v) => v.id === this.previewStyle), owned = s2.styles.includes(d.id);
+      html = `<div class="style-preview"><small>3D \u8BD5\u7A7F\u9884\u89C8 \xB7 \u53EF\u62D6\u52A8\u65CB\u8F6C</small><canvas id="outfit-canvas" aria-label="\u4E09\u7EF4\u5DE5\u4F5C\u670D\u8BD5\u7A7F\u9884\u89C8"></canvas></div><div class="selected-outfit"><small>${owned ? "\u5DF2\u62E5\u6709" : fmt(d.cost) + " \u91D1\u5E01"}</small><h3>${d.name}</h3><p>${d.desc}</p><button class="buy" data-action="style-buy" data-id="${d.id}" ${s2.washed < d.need ? "disabled" : ""}><span>${s2.style === d.id ? "\u6B63\u5728\u4F7F\u7528" : owned ? "\u6362\u4E0A\u8FD9\u5957" : "\u8D2D\u4E70\u5E76\u7A7F\u4E0A"}</span><strong>${s2.washed < d.need ? "\u7D2F\u8BA1 " + d.need + " \u8F86\u5F00\u653E" : owned ? "\u6C38\u4E45\u4FDD\u7559" : fmt(d.cost) + " \u25CF"}</strong></button></div><div class="outfits">${STYLE_DEFS.map((d2) => `<button class="outfit ${d2.id === this.previewStyle ? "active" : ""}" data-action="style-select" data-id="${d2.id}"><span style="color:${d2.color}">${iconHTML("shirt")}</span><b>${d2.name}</b><small>${s2.styles.includes(d2.id) ? "\u5DF2\u62E5\u6709" : fmt(d2.cost) + " \u91D1\u5E01"}</small></button>`).join("")}</div><p class="hint" style="margin-top:12px">\u5916\u89C2\u6C38\u4E45\u4FDD\u7559\uFF0C\u6240\u6709\u5206\u5E97\u901A\u7528\u3002\u6362\u88C5\u4E0D\u6539\u53D8\u8BBE\u5907\u548C\u6E05\u6D17\u80FD\u529B\u3002</p>`;
+    }
+    if (this.tab === "map") {
+      const total = s2.stations.reduce((a, b) => a + Math.floor(b.pending), 0);
+      html = `<div class="network-stat"><div><b>${s2.stations.length}</b><small>\u8FDE\u9501\u95E8\u5E97</small></div><div><b>${s2.washed}</b><small>\u7D2F\u8BA1\u6D17\u51C0</small></div><div><b>${s2.stations.filter((x) => x.manager).length}</b><small>\u9A7B\u5E97\u5E97\u957F</small></div></div><div class="map-card">${[...s2.stations, { id: s2.stations.length, new: true }].map((st2) => {
+        const d = branchDef(st2.id);
+        return `<button class="branch" data-action="branch" data-index="${st2.id}"><span class="branch-icon" style="background:${["#b4d8c4", "#edc99e", "#cabce0"][st2.id % 3]}">${iconHTML(st2.new ? "building-store" : "car")}</span><span><b>${d.name}</b><small>${st2.new ? `\u7D2F\u8BA1 ${d.need} \u8F86 \xB7 \u5F00\u5E97 ${fmt(d.price)} \u91D1\u5E01` : "\u2605".repeat(starCount(st2.washed)) + " \xB7 " + (st2.manager ? st2.id === s2.active ? "\u5E97\u957F\u5DF2\u5230\u5C97" : "\u5E97\u957F\u6258\u7BA1" : st2.id === s2.active ? "\u4EB2\u81EA\u7ECF\u8425" : "\u5F85\u5E97\u957F\u63A5\u7BA1")}</small></span><em>${s2.active === st2.id ? "\u672C\u5E97" : st2.new ? "\u9009\u5740" : "\u524D\u5F80 \u203A"}</em></button>`;
+      }).join("")}</div><button class="buy" data-action="collect"><span>\u9886\u53D6\u8FDE\u9501\u6258\u7BA1\u6536\u76CA</span><strong>${fmt(total)} \u25CF</strong></button><p class="hint" style="margin-top:12px">\u6BCF\u5BB6\u5E97\u4FDD\u7559\u72EC\u7ACB\u7684\u8BBE\u5907\u3001\u5458\u5DE5\u3001\u8F66\u8F86\u3001\u8BA2\u5355\u548C\u8425\u4E1A\u8FDB\u5EA6\u3002\u94B1\u5305\u4E0E\u670D\u88C5\u5171\u4EAB\u3002\u516C\u8DEF\u5E97\u57FA\u7840\u552E\u4EF7 +25%\uFF0C\u591C\u5149\u5E97 +50%\uFF1B\u6BCF\u4E2A\u65B0\u5546\u5708\u518D\u52A0 35%\u3002\u65B0\u5E97\u66F4\u65E9\u8FCE\u6765\u9AD8\u4EF7\u8F66\u578B\uFF0C\u5F00\u5E97\u8D39\u7528\u9010\u6B65\u589E\u52A0\u3002</p>`;
+    }
+    if (this.tab === "help") html = '<div class="help-copy"><p><b>\u2460 \u4EB2\u624B\u6D17\u4EAE\u4E00\u8F86\u8F66</b><br>\u6309\u4F4F\u4E0B\u65B9\u7CBE\u6D17\u6309\u94AE\u4F1A\u81EA\u52A8\u8986\u76D6\u6574\u8F86\u8F66\u3002\u4E5F\u53EF\u4EE5\u5728\u4E09\u7EF4\u8F66\u8EAB\u4E0A\u62D6\u52A8\u55B7\u5934\uFF0C\u96C6\u4E2D\u6E05\u6D17\u4F60\u6307\u5411\u7684\u4F4D\u7F6E\u3002\u6D41\u7A0B\u4F1A\u81EA\u52A8\u5207\u6362\uFF1A\u6CE1\u6CAB \u2192 \u51B2\u6D17 \u2192 \u4E0A\u8721\u3002</p><p><b>\u2461 \u6536\u6B3E\u3001\u96C7\u4EBA\u3001\u4E70\u8BBE\u5907</b><br>\u6D17\u597D\u5373\u6536\u6B3E\uFF0C\u4EB2\u624B\u53C2\u4E0E\u6709 18% \u5C0F\u8D39\u3002\u5458\u5DE5\u3001\u6EDA\u5237\u90FD\u80FD\u81EA\u52A8\u6D17\u8F66\uFF1B\u4F60\u7EE7\u7EED\u5E2E\u5FD9\u8FD8\u80FD\u66F4\u5FEB\u3002</p><p><b>\u2462 \u6269\u5EFA\u81EA\u5DF1\u7684\u6D17\u8F66\u5E1D\u56FD</b><br>\u76EE\u6807\u8BA2\u5355\u53EF\u9886\u989D\u5916\u91D1\u5E01\u3002\u65B0\u589E\u8F66\u9053\u3001\u5347\u7EA7\u5957\u9910\u3001\u8058\u5E97\u957F\uFF0C\u518D\u5230\u5546\u4E1A\u5730\u56FE\u5F00\u65B0\u5E97\u3002</p><p><b>\u64CD\u4F5C</b><br>\u62D6\u52A8\u8F66\u8EAB / \u6309\u4F4F\u7CBE\u6D17 \xB7 \u70B9\u51FB\u5DE5\u4F4D\u5207\u6362<br>\u7A7A\u683C\uFF1A\u6301\u7EED\u7CBE\u6D17 \xB7 Q\uFF1A\u5168\u666F \xB7 E\uFF1A\u8BBE\u5907<br>Esc\uFF1A\u5173\u95ED\u9762\u677F / \u6682\u505C<br>\u7BA1\u7406\u3001\u6682\u505C\u3001\u5207\u5230\u540E\u53F0\u65F6\u505C\u6B62\u8425\u4E1A\uFF1B\u5237\u65B0\u4FDD\u7559\u8FDB\u5EA6\u3002</p></div>';
+    if (this.tab === "help") html += '<div class="help-copy"><p><b>VIP \u8C6A\u8F66\u59D4\u6258</b><br>\u672C\u5E97\u6D17\u6EE1 5 \u8F86\u540E\uFF0C\u9646\u7EED\u4F1A\u6709\u8C6A\u8F66\u5230\u5E97\u3002\u8D85\u8DD1\u8981\u6C42\u56DB\u8F6E\u7CBE\u6D17\uFF0C\u884C\u653F\u5EA7\u9A7E\u8981\u6C42\u53CC\u5C42\u9540\u6676\uFF0C\u8C6A\u534E SUV \u8981\u6C42\u5185\u9970\u84B8\u6C7D\u62A4\u7406\u3002\u5B8C\u6210\u6CE1\u6CAB\u3001\u51B2\u6D17\u3001\u4E0A\u8721\u540E\uFF0C\u4F1A\u589E\u52A0\u7B2C 4 \u6BB5\u4E13\u5C5E\u62A4\u7406\uFF0C\u5B8C\u6210\u624D\u4F1A\u7ED3\u7B97\u62A4\u7406\u5956\u3002\u4ECD\u7136\u6309\u4F4F\u7CBE\u6D17\u5373\u53EF\uFF1B\u5458\u5DE5\u548C\u81EA\u52A8\u8BBE\u5907\u4E5F\u80FD\u5B8C\u6210\u3002\u70B9\u51FB\u8C6A\u8F66\u767B\u573A\u63D0\u793A\u53EF\u5207\u6362\u5230\u5BF9\u5E94\u8F66\u9053\u3002</p></div>';
+    if (this.tab === "income") html = `<div class="income">\u7D2F\u8BA1\u5B9E\u9645\u6D17\u8F66\u6536\u5165<strong>${fmt(s2.earned)} \u25CF</strong>\u672C\u5E97 ${fmt(st.revenue)} \u91D1\u5E01 \xB7 \u5DF2\u6D17 ${st.washed} \u8F86<br>\u8C6A\u8F66\u4E13\u5C5E\u62A4\u7406 ${st.vipServed || 0} \u8F86<br>\u53EF\u7528\u91D1\u5E01 ${fmt(s2.money)}<br>\u6BCF\u8F86\u8F66\u6D17\u5B8C\u7ACB\u5373\u7ED3\u7B97\uFF1B\u8BA2\u5355\u5956\u52B1\u53E6\u8BA1\u3002</div><p class="hint" style="margin-top:15px">\u4EB2\u624B\u53C2\u4E0E\u7CBE\u6D17\u53EF\u83B7\u5F97\u57FA\u7840\u552E\u4EF7 18% \u7684\u5C0F\u8D39\u3002\u5458\u5DE5\u81EA\u52A8\u670D\u52A1\u4E0D\u4EA7\u751F\u8FD9\u9879\u5C0F\u8D39\u3002\u8C6A\u8F66\u5B8C\u6210\u7B2C 4 \u6BB5\u4E13\u5C5E\u62A4\u7406\uFF0C\u53E6\u52A0\u57FA\u7840\u552E\u4EF7 55%\u201365% \u7684\u62A4\u7406\u5956\uFF1B\u62A4\u7406\u5361\u9884\u8BA1\u6536\u5165\u5DF2\u5305\u542B\u8BE5\u5956\u52B1\uFF0C\u4E0D\u5305\u542B\u624B\u52A8\u5C0F\u8D39\u3002</p>`;
+    $("sheet-content").innerHTML = html;
+    if (this.renderedTab !== this.tab) $("sheet-content").scrollTop = 0;
+    this.renderedTab = this.tab;
+    text("sheet-footer", `\u53EF\u7528\u91D1\u5E01 ${fmt(s2.money)} \xB7 \u8425\u4E1A\u5DF2\u6682\u505C`);
+    this.a.preview(this.tab === "style" ? $("outfit-canvas") : null, this.previewStyle);
+  }
+  update() {
+    const s2 = this.s, st = current(s2), b = st.bays[s2.selected], c = b.car?.state === "work" ? b.car : null, care = careFor(c), phase = c?.phase ?? 0, phaseDef = phaseFor(c);
+    text("money", fmt(s2.money));
+    text("stars", "\u2605".repeat(starCount(st.washed)) + "\u2606".repeat(5 - starCount(st.washed)));
+    document.body.classList.toggle("intro-mode", !s2.started);
+    $("intro").hidden = s2.started;
+    const con = contract(st.contract), ready = st.washed >= con.count;
+    text("goal-count", `${Math.min(st.washed, con.count)}/${con.count}`);
+    text("goal-kicker", `${branchDef(st.id).short} \xB7 ${st.cars.filter((c2) => !c2.paid).length} \u8F86\u8F66\u5728\u5E97`);
+    text("goal-title", ready ? "\u8BA2\u5355\u5B8C\u6210 \xB7 \u70B9\u51FB\u9886\u5956" : con.title);
+    text("goal-sub", ready ? `\u9886\u53D6 ${fmt(con.reward)} \u91D1\u5E01 \u2192` : `${Math.min(st.washed, con.count)} / ${con.count} \xB7 \u5956\u52B1 ${fmt(con.reward)} \u91D1\u5E01`);
+    $("goal-fill").style.width = Math.min(100, st.washed / con.count * 100) + "%";
+    $("goal").classList.toggle("claim", ready);
+    const departing = st.cars.find((o) => o.lane === s2.selected && o.state === "exit" && o.z > -7), waiting = departing && !departing.exitReleased;
+    text("bay-label", `${care ? "VIP \xB7 " : ""}0${s2.selected + 1} / ${b.level >= 2 ? "\u81EA\u52A8\u6D17\u8F66\u9053" : "\u624B\u6D17\u5DE5\u4F4D"}${b.worker ? " \xB7 \u62A4\u7406\u5E08\u5728\u5C97" : ""}`);
+    text("car-name", c ? TYPES[c.type].name : waiting ? "\u6D17\u51C0\u5B8C\u6BD5 \xB7 \u7B49\u5F85\u51FA\u53E3\u653E\u884C" : b.car ? "\u987E\u5BA2\u6B63\u5728\u8FDB\u573A" : departing ? "\u987E\u5BA2\u6B63\u5728\u9A76\u79BB" : "\u7B49\u5F85\u4E0B\u4E00\u8F86\u8F66");
+    $("bill").innerHTML = c ? `${priceFor(s2, c) + careBonus(s2, c)}${iconHTML("coins")}` : "\u2014";
+    const signature = care?.name || "normal";
+    if (this.stageSignature !== signature) {
+      this.stageSignature = signature;
+      const stages = care ? [...PHASES, care] : PHASES;
+      $("stages").innerHTML = stages.map((p, i) => `<span>${["\u2460", "\u2461", "\u2462", "\u2463"][i]} ${p.name}</span>`).join("");
+      $("stages").classList.toggle("four-stages", !!care);
+    }
+    document.querySelectorAll("#stages span").forEach((el, i) => {
+      el.classList.toggle("active", !!c && i === phase);
+      el.classList.toggle("done", !!c && i < phase);
+    });
+    $("wash-fill").style.width = (c ? c.progress * 100 : 0) + "%";
+    $("wash-fill").style.background = phaseDef.color;
+    $("vip-care").hidden = !care;
+    document.querySelector(".service-info").classList.toggle("vip-service", !!care);
+    if (care) {
+      text("vip-care-title", care.title);
+      text("vip-care-bonus", `\u62A4\u7406\u5956 +${fmt(careBonus(s2, c))}`);
+      text("vip-care-step", careStep(c));
+    }
+    text("work-percent", c ? `${Math.floor(c.progress * 100)}%` : "");
+    text("work-title", c ? phase === 2 ? c.progress < 0.42 ? "\u94FA\u5F00\u8721\u819C" : "\u629B\u5149\u5C01\u91C9" : phaseDef.verb : waiting ? "\u7B49\u5019\u653E\u884C" : "\u7B49\u5019\u8FDB\u573A");
+    text("work-sub", c ? phase === 3 ? "\u5B8C\u6210\u4E13\u5C5E\u59D4\u6258" : "\u6309\u4F4F\u7CBE\u6D17" : waiting ? "\u4F9D\u6B21\u9A76\u51FA" : "\u81EA\u52A8\u6392\u961F");
+    text("work-hint", c ? phase === 3 ? `${b.worker || b.level >= 2 ? "\u81EA\u52A8\u62A4\u7406\u4E2D" : "\u6309\u4F4F\u7CBE\u6D17"} \xB7 ${care.name}\u8FDB\u5EA6` : phase === 2 ? c.progress < 0.42 ? "\u91D1\u8272\u8721\u819C\u94FA\u5F00 \xB7 \u968F\u540E\u629B\u5149\u5C01\u91C9" : "\u629B\u5149\u5C01\u91C9\u4E2D \xB7 \u6F06\u9762\u9010\u6E10\u4EAE\u8D77" : b.worker || b.level >= 2 ? "\u81EA\u52A8\u4F5C\u4E1A\u4E2D \xB7 \u4EB2\u624B\u5E2E\u5FD9\u66F4\u5FEB" : "\u62D6\u52A8\u8F66\u8EAB / \u6309\u4F4F\u7CBE\u6D17" : waiting ? "\u524D\u8F66\u901A\u8FC7\u5408\u6D41\u533A\u540E\uFF0C\u672C\u8F66\u6309\u987A\u5E8F\u9A76\u79BB" : `\u6392\u961F ${b.queue.length} \u8F86 \xB7 \u6D17\u51C0\u540E\u81EA\u52A8\u6536\u6B3E`);
+    setIcon($("work-icon"), ["spray", "droplets", "sparkles", "sparkles"][phase]);
+    setIcon($("sound"), s2.settings.mute ? "volume-off" : "volume");
+    $("sound").setAttribute("aria-pressed", String(s2.settings.mute));
+    $("work").disabled = !c;
+    $("sound").style.opacity = s2.settings.mute ? 0.5 : 1;
+    $("upgrade-dot").style.display = s2.money >= 160 ? "block" : "none";
+  }
+  labels(world2, camera2, w, h, overview2) {
+    const wanted = world2.labels;
+    if (this.pins.length !== wanted.length) {
+      $("labels").innerHTML = "";
+      this.pins = wanted.map((p) => {
+        const b = document.createElement("button");
+        b.className = "bay-pin";
+        b.onclick = () => {
+          if (!current(this.s).bays[p.i].unlocked) {
+            this.lane = p.i;
+            this.show("equipment");
+            this.lane = p.i;
+            this.render();
+          } else {
+            this.sim.select(p.i);
+            this.a.focus();
+          }
+        };
+        $("labels").append(b);
+        return b;
+      });
+    }
+    for (let j = 0; j < wanted.length; j++) {
+      const p = wanted[j], pin = this.pins[j], v = this.a.project(p.x, p.y, p.z), b = current(this.s).bays[p.i];
+      pin.textContent = p.locked ? `\uFF0B \u65B0\u8F66\u9053 ${laneCost(p.i)} \u25CF` : `0${p.i + 1} ${b.car?.state === "work" ? "\u6E05\u6D17\u4E2D" : b.queue.length ? "\u8FDB\u573A\u4E2D" : "\u5F85\u5BA2"}`;
+      pin.className = "bay-pin" + (p.locked ? " locked" : "") + (p.i === this.s.selected ? " active" : "");
+      pin.style.left = v.x + "px";
+      pin.style.top = v.y + "px";
+      const safeTop = w < 800 ? 155 : 80, safeBottom = w < 800 ? h - (overview2 ? 90 : 250) : h - 50;
+      pin.style.display = this.s.started && !this.open && v.visible && v.x > 45 && v.x < w - 55 && v.y > safeTop && v.y < safeBottom ? "block" : "none";
+    }
+  }
+  float(e) {
+    this.coinTimer = 0.65;
+    $("wallet").classList.add("coin-pop");
+    const p = this.a.project(BAY_X[e.lane], 2.9, 0);
+    if (!p.visible) return;
+    const el = document.createElement("div");
+    el.className = "cash-float" + (e.vip ? " vip-cash" : "");
+    el.style.left = p.x - 20 + "px";
+    el.style.top = p.y + "px";
+    el.innerHTML = `+${e.amount} \u25CF${e.bonus ? "<small>VIP \u4E13\u5C5E\u62A4\u7406\u5956 +" + e.bonus + "</small>" : ""}${e.tip ? "<small>\u4EB2\u624B\u7CBE\u6D17\u5C0F\u8D39 +" + e.tip + "</small>" : ""}`;
+    $("floaters").append(el);
+    setTimeout(() => el.remove(), 2600);
+  }
+  frame(dt) {
+    if (this.toastTimer > 0) {
+      this.toastTimer -= dt;
+      if (this.toastTimer <= 0) $("toast").classList.remove("show");
+    }
+    if (this.vipTimer > 0 && !this.open) {
+      this.vipTimer -= dt;
+      if (this.vipTimer <= 0) $("vip-banner").hidden = true;
+    }
+    if (this.coinTimer > 0) {
+      this.coinTimer -= dt;
+      if (this.coinTimer <= 0) $("wallet").classList.remove("coin-pop");
+    }
+  }
+};
+
+// src/app.mjs
+var $2 = (id) => document.getElementById(id);
+var query = new URLSearchParams(location.search);
+var qa = query.get("qa");
+var slot = query.get("slot");
+var key = "foam-coast-v1" + (qa ? "-qa-" + qa : slot ? "-slot-" + slot.slice(0, 48) : "");
+window.addEventListener("error", (e) => {
+  console.error("Foam Coast:", e.error || e.message);
+  $2("fatal").hidden = false;
+});
+var raw;
+try {
+  raw = JSON.parse(localStorage.getItem(key));
+} catch {
+}
+var s = restoreState(raw);
+var audio = new Audio();
+audio.mute = s.settings.mute;
+var scene = new T7.Scene();
+var canvas = $2("game");
+var renderer = new T7.WebGLRenderer({ canvas, antialias: true, powerPreference: "high-performance" });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.8));
+renderer.outputColorSpace = T7.SRGBColorSpace;
+renderer.toneMapping = T7.NeutralToneMapping;
+renderer.toneMappingExposure = 0.92;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = T7.PCFShadowMap;
+scene.environment = environment(renderer);
+scene.environmentIntensity = 0.55;
+var camera = new T7.OrthographicCamera(-15, 15, 15, -15, 0.1, 170);
+var focus = new T7.Vector3(BAY_X[s.selected], 0.3, 0);
+var viewHeight = 20;
+var overview = false;
+var width = 1;
+var height = 1;
+var hemi = new T7.HemisphereLight("#eaf7f1", "#799e9b", 1.25);
+scene.add(hemi);
+var sun = new T7.DirectionalLight("#f4f8f4", 2.25);
+sun.position.set(-14, 30, 15);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+Object.assign(sun.shadow.camera, { left: -30, right: 30, top: 34, bottom: -32, near: 1, far: 95 });
+sun.shadow.normalBias = 0.025;
+sun.shadow.bias = -15e-5;
+sun.shadow.radius = 3;
+scene.add(sun, sun.target);
+var fill = new T7.DirectionalLight("#d1f5ff", 0.65);
+fill.position.set(15, 14, -12);
+scene.add(fill);
+var effects = new Effects(scene);
+var preview = new StylePreview(scene.environment);
+var cars = /* @__PURE__ */ new Map();
+var ui;
+var paused = false;
+var modal = false;
+var lastStation = -1;
+var save = () => {
+  try {
+    localStorage.setItem(key, serialize(s));
+  } catch {
+  }
+};
+var sim = new Simulation(s, (e) => {
+  if (["finish", "phase", "purchase", "vip"].includes(e.type)) audio.play(e.type === "finish" && e.vip ? "vip" : e.type);
+  if (e.type === "hint") ui?.toast(e.text);
+  if (e.type === "phase") {
+    const c = current(s).bays[e.lane].car;
+    effects.burst(new T7.Vector3(BAY_X[e.lane], 1.1, 0), "phase", phaseFor(c).color);
+  }
+  if (e.type === "vip") {
+    ui?.announceVIP(e);
+    effects.burst(new T7.Vector3(BAY_X[e.lane], 1.4, 0), "arrival");
+  }
+  if (e.type === "finish") {
+    ui?.float(e);
+    effects.burst(new T7.Vector3(BAY_X[e.lane], 1.3, 0), e.vip ? "vip" : "finish");
+    save();
+  }
+  if (e.type === "reward") {
+    ui?.toast(`${e.label || "\u8BA2\u5355\u5956\u52B1"} +${e.amount} \u91D1\u5E01`);
+    audio.play("finish");
+    save();
+  }
+  if (e.type === "purchase") {
+    ui?.toast("\u5DF2\u7ECF\u4E3A\u5C0F\u5E97\u5B89\u6392\u597D\u4E86");
+    save();
+  }
+  if (e.type === "star") {
+    ui?.toast(`\u5C0F\u5E97\u5347\u81F3 ${e.stars} \u661F\uFF01`);
+    audio.play("finish");
+    save();
+  }
+  if (e.type === "branch") {
+    for (const c of cars.values()) c.dispose();
+    cars.clear();
+    focus.set(BAY_X[0], 0.3, 0);
+    overview = false;
+    save();
+  }
+});
+var world = new World(scene, s);
+function project(x, y, z) {
+  const v = new T7.Vector3(x, y, z).project(camera);
+  return { x: (v.x + 1) * width / 2, y: (1 - v.y) * height / 2, visible: v.z > -1 && v.z < 1 && Math.abs(v.x) < 1.1 && Math.abs(v.y) < 1.1 };
+}
+function servicePoint(v, c, index) {
+  const t = TYPES[c.type];
+  let p = v.cells[index];
+  if (c.phase === 3) {
+    if (t.care === "rims") {
+      const wheel = Math.min(3, Math.floor(c.progress * 4));
+      p = { x: (wheel < 2 ? -1 : 1) * t.w * 0.54, y: 0.48, z: (wheel % 2 ? 1 : -1) * t.l * 0.31 };
+    } else if (t.care === "crystal") p = v.cells[Math.min(9, Math.floor(c.progress * 2 % 1 * 10)) * 6 + 3];
+    else p = { x: t.w * 0.33, y: 1.3, z: c.progress < 0.5 ? 0.6 : -0.65 };
+  }
+  return v.root.localToWorld(new T7.Vector3(p.x, p.y + 0.15, p.z));
+}
+var actions = { save, unlock: () => audio.unlock(), project, focus() {
+  overview = false;
+}, overview() {
+  overview = !overview;
+  $2("overview").classList.toggle("selected", overview);
+}, pause(value) {
+  if (ui.open) {
+    ui.close();
+    return;
+  }
+  if (!s.started) return;
+  paused = typeof value === "boolean" ? value : !paused;
+  clearInput();
+  $2("paused").hidden = !paused;
+  setIcon($2("pause"), paused ? "player-play" : "player-pause");
+  save();
+}, modal(value) {
+  modal = value;
+  clearInput();
+}, sound() {
+  audio.unlock();
+  audio.mute = s.settings.mute;
+  audio.spray(false);
+  save();
+}, preview: (canvas2, id) => preview.show(canvas2, id) };
+ui = new UI(sim, actions);
+function clearInput() {
+  sim.holding = false;
+  sim.brush = null;
+  dragging = false;
+  ui?.stop();
+  audio.spray(false);
+}
+var dragging = false;
+var pointerOrigin = null;
+var ray = new T7.Raycaster();
+var pointer = new T7.Vector2();
+function brushAt(x, y) {
+  pointer.set(x / width * 2 - 1, 1 - y / height * 2);
+  ray.setFromCamera(pointer, camera);
+  const st = current(s), b = st.bays[s.selected], c = b.car;
+  if (c?.state !== "work") return false;
+  const visual = cars.get(c.id);
+  if (!visual) return false;
+  const hits = ray.intersectObjects(visual.hitMeshes, false);
+  if (!hits.length) return false;
+  const local = visual.root.worldToLocal(hits[0].point.clone());
+  let index = 0, best = Infinity;
+  for (let i = 0; i < visual.cells.length; i++) {
+    const p = visual.cells[i], d = (local.x - p.x) ** 2 + (local.y - p.y) ** 2 + (local.z - p.z) ** 2;
+    if (d < best) {
+      best = d;
+      index = i;
+    }
+  }
+  sim.brush = { index, local: local.toArray() };
+  return true;
+}
+canvas.onpointerdown = (e) => {
+  if (!s.started || paused || modal || e.button !== 0) return;
+  audio.unlock();
+  dragging = true;
+  pointerOrigin = [e.clientX, e.clientY];
+  canvas.setPointerCapture(e.pointerId);
+  brushAt(e.clientX, e.clientY);
+};
+canvas.onpointermove = (e) => {
+  if (dragging) brushAt(e.clientX, e.clientY);
+};
+canvas.onpointerup = (e) => {
+  const brushed = !!sim.brush;
+  sim.brush = null;
+  dragging = false;
+  if (!brushed && pointerOrigin && Math.hypot(e.clientX - pointerOrigin[0], e.clientY - pointerOrigin[1]) < 10) {
+    pointer.set(e.clientX / width * 2 - 1, 1 - e.clientY / height * 2);
+    ray.setFromCamera(pointer, camera);
+    const p = new T7.Vector3();
+    if (ray.ray.intersectPlane(new T7.Plane(new T7.Vector3(0, 1, 0), -0.2), p) && p.z > -7 && p.z < 10) {
+      const i = BAY_X.reduce((a, _, i2) => Math.abs(BAY_X[i2] - p.x) < Math.abs(BAY_X[a] - p.x) ? i2 : a, 0);
+      if (current(s).bays[i].unlocked) {
+        sim.select(i);
+        overview = false;
+      } else {
+        ui.show("equipment");
+        ui.lane = i;
+        ui.render();
+      }
+    }
+  }
+  pointerOrigin = null;
+};
+canvas.onpointercancel = () => {
+  sim.brush = null;
+  dragging = false;
+};
+window.addEventListener("keydown", (e) => {
+  if (["Space", "KeyQ", "KeyE", "Escape", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();
+  if (e.repeat && e.code !== "Space") return;
+  if (e.code === "Escape") {
+    if (ui.open) ui.close();
+    else actions.pause();
+    return;
+  }
+  if (!s.started || modal || paused) return;
+  if (e.code === "Space") {
+    audio.unlock();
+    sim.holding = true;
+    $2("work").classList.add("working");
+  }
+  if (e.code === "KeyQ") actions.overview();
+  if (e.code === "KeyE") ui.show("equipment");
+  if (/^Digit[123]$/.test(e.code)) {
+    sim.select(Number(e.code.at(-1)) - 1);
+    overview = false;
+  }
+});
+window.addEventListener("keyup", (e) => {
+  if (e.code === "Space") ui.stop();
+});
+window.addEventListener("blur", clearInput);
+window.addEventListener("pagehide", () => {
+  clearInput();
+  save();
+});
+document.addEventListener("visibilitychange", () => {
+  clearInput();
+  save();
+});
+function resize() {
+  width = innerWidth;
+  height = innerHeight;
+  renderer.setSize(width, height);
+  if (ui.open && ui.tab === "style") ui.render();
+}
+window.addEventListener("resize", resize);
+resize();
+var last = performance.now();
+var hudTimer = 0;
+var saveTimer = 0;
+var metricTimer = 0;
+var frameTimes = [];
+if (query.get("metrics") === "1") {
+  const el = document.createElement("div");
+  el.id = "metrics";
+  $2("hud").append(el);
+}
+function frame(now) {
+  const dt = Math.min(0.1, (now - last) / 1e3);
+  last = now;
+  const frozen = paused || modal || document.hidden || !s.started, step = frozen ? 0 : dt;
+  sim.paused = frozen;
+  sim.update(dt);
+  const st = current(s), theme = branchDef(st.id).theme;
+  if (lastStation !== st.id) {
+    lastStation = st.id;
+    scene.background = new T7.Color(theme === "night" ? "#586b90" : theme === "desert" ? "#b7beb3" : "#91b9c5");
+    hemi.intensity = theme === "night" ? 1.05 : 1.25;
+    sun.color.set(theme === "night" ? "#bbd2ff" : "#f4f8f4");
+    sun.intensity = theme === "night" ? 1.5 : 2.25;
+  }
+  const ids = new Set(st.cars.map((c) => c.id));
+  for (const [id, v] of cars) if (!ids.has(id)) {
+    v.dispose();
+    cars.delete(id);
+  }
+  for (const c of st.cars) {
+    if (!cars.has(c.id)) cars.set(c.id, new CarVisual(scene, c));
+    const b = st.bays[c.lane], servicing = !frozen && c.state === "work" && (b.worker || b.level >= 2 || s.selected === c.lane && (sim.holding || sim.brush));
+    cars.get(c.id).update(c, s.time, step, servicing);
+  }
+  world.update(s, s.time, step);
+  const wide = width >= 800 && width > height;
+  const target = overview ? new T7.Vector3(0, 0.3, 2) : new T7.Vector3(BAY_X[s.selected] + (wide ? 2.4 : 0.7), 0.5, wide ? 1 : 1.1);
+  focus.lerp(target, 1 - Math.exp(-dt * 5));
+  const wanted = overview ? Math.max(48, 43 / (width / height)) : wide ? 17.5 : height < 650 ? 18.5 : 21;
+  viewHeight += (wanted - viewHeight) * (1 - Math.exp(-dt * 5));
+  const aspect = width / height, shift = !wide && !overview ? viewHeight * aspect * 0.07 : 0;
+  camera.left = -viewHeight * aspect / 2 - shift;
+  camera.right = viewHeight * aspect / 2 - shift;
+  camera.top = viewHeight / 2;
+  camera.bottom = -viewHeight / 2;
+  camera.updateProjectionMatrix();
+  camera.position.copy(focus).add(new T7.Vector3(18, 27, 24));
+  camera.lookAt(focus);
+  camera.updateMatrixWorld();
+  effects.beam.visible = false;
+  let spraying = false;
+  const car = st.bays[s.selected].car;
+  if (!frozen && car?.state === "work" && (sim.holding || sim.brush)) {
+    const v = cars.get(car.id), idx = sim.brush?.index ?? Math.floor(s.time * 17 % 60), to = servicePoint(v, car, idx), from = world.owner.root.localToWorld(new T7.Vector3(0.4, 1.1, 0.5));
+    effects.spray(from, to, car.phase, step, phaseFor(car).color);
+    spraying = true;
+  }
+  for (let i = 0; i < 3; i++) {
+    const c = st.bays[i].car;
+    if (!frozen && c?.state === "work" && (st.bays[i].worker || st.bays[i].level >= 2)) {
+      const v = cars.get(c.id), pos = servicePoint(v, c, Math.floor((s.time * 11 + i * 19) % 60));
+      if (Math.random() < step * 25) effects.emit(pos, phaseFor(c).color, 3, 0.7);
+    }
+  }
+  audio.spray(spraying);
+  effects.update(step);
+  preview.frame(s.time + now * 1e-4);
+  ui.frame(dt);
+  hudTimer -= dt;
+  saveTimer += step;
+  if (hudTimer <= 0) {
+    hudTimer = 0.12;
+    document.body.classList.toggle("overview-mode", overview && s.started && !modal);
+    ui.update();
+    ui.labels(world, camera, width, height, overview);
+  }
+  if (saveTimer > 3) {
+    saveTimer = 0;
+    save();
+  }
+  renderer.render(scene, camera);
+  if ($2("metrics")) {
+    frameTimes.push(dt);
+    metricTimer += dt;
+    if (metricTimer > 0.5) {
+      const avg = frameTimes.reduce((a, b) => a + b, 0) / frameTimes.length;
+      $2("metrics").textContent = `${Math.round(1 / avg)} fps \xB7 ${renderer.info.render.calls} draws \xB7 ${Math.round(renderer.info.render.triangles / 1e3)}k tris`;
+      metricTimer = 0;
+      frameTimes = [];
+    }
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+</script></body></html>

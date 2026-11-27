@@ -1,0 +1,7 @@
+import {isSwimming} from './shore.mjs';
+import * as T from '../vendor/three.module.js';
+export class OceanParticles{
+ constructor(scene){this.items=Array.from({length:180},()=>({life:0,x:0,y:0,z:0,v:0}));this.cursor=0;this.clock=0;const pos=new Float32Array(this.items.length*3),g=new T.BufferGeometry();g.setAttribute('position',new T.BufferAttribute(pos,3));this.pos=pos;const c=document.createElement('canvas');c.width=c.height=32;const ctx=c.getContext('2d');const grad=ctx.createRadialGradient(14,12,1,16,16,15);grad.addColorStop(0,'#ffffff');grad.addColorStop(.25,'#ecfffaaa');grad.addColorStop(.65,'#dcfff515');grad.addColorStop(.78,'#ffffffbb');grad.addColorStop(1,'#ffffff00');ctx.fillStyle=grad;ctx.fillRect(0,0,32,32);this.points=new T.Points(g,new T.PointsMaterial({color:'#e5fff6',size:.19,map:new T.CanvasTexture(c),transparent:true,opacity:.72,depthWrite:false}));scene.add(this.points);this.points.renderOrder=6;}
+ emit(x,y,z,n=1){for(let i=0;i<n;i++){const p=this.items[this.cursor++%this.items.length];Object.assign(p,{x:x+(Math.random()-.5)*.5,y,z:z+(Math.random()-.5)*.5,life:1.8+Math.random()*.8,v:.7+Math.random()*.5});}}
+ update(dt,t,actor){this.clock+=dt;if(isSwimming(actor.z)&&this.clock>.16){this.clock=0;this.emit(actor.x,-1,actor.z+.6,2);}for(let i=0;i<this.items.length;i++){const p=this.items[i];p.life-=dt;if(p.life>0){p.y+=p.v*dt;p.x+=Math.sin(t*2+i)*dt*.10;}this.pos[i*3]=p.life>0?p.x:1000;this.pos[i*3+1]=p.life>0?p.y:-20;this.pos[i*3+2]=p.z;}this.points.geometry.attributes.position.needsUpdate=true;}
+}

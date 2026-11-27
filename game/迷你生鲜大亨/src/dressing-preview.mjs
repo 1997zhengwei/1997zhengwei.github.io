@@ -1,0 +1,16 @@
+import * as T from '../vendor/three.module.js';
+import {makeActor} from './actors.mjs';
+import {box,mat,batchColors} from './art.mjs';
+import {COSMETICS} from './cosmetics.mjs';
+import {rankDecor} from './store-art.mjs';
+export class DressingPreview{
+ constructor(){this.scene=new T.Scene();this.scene.background=new T.Color('#e9eddc');this.camera=new T.OrthographicCamera(-3,3,2,-2,.1,50);this.renderer=new T.WebGLRenderer({antialias:true,alpha:false});this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.NeutralToneMapping;this.scene.add(new T.HemisphereLight('#ffffff','#9daea6',1.9));const sun=new T.DirectionalLight('#fff8ed',2.5);sun.position.set(-3,7,5);this.scene.add(sun);this.renderer.domElement.setAttribute('aria-label','三维装扮试穿预览');let drag=null;this.yaw=-.35;this.renderer.domElement.addEventListener('pointerdown',e=>{drag=e.clientX;this.renderer.domElement.setPointerCapture(e.pointerId);});this.renderer.domElement.addEventListener('pointermove',e=>{if(drag===null)return;this.yaw+=(e.clientX-drag)*.012;drag=e.clientX;});for(const type of ['pointerup','pointercancel'])this.renderer.domElement.addEventListener(type,()=>drag=null);}
+ clear(){this.actor?.dispose();this.actor=null;if(this.model){this.model.removeFromParent();this.model.traverse(o=>{if(o.geometry&&!o.geometry.userData.shared)o.geometry.dispose();if(o.isSprite){o.material.map?.dispose();o.material.dispose();}});this.model=null;}}
+ show(container,s,id){this.clear();container.append(this.renderer.domElement);const w=Math.max(240,container.clientWidth);this.renderer.setSize(w,220,false);this.lastWidth=0;const d=COSMETICS[id],copy={...s,cosmetics:{...s.cosmetics,equipped:{...s.cosmetics.equipped}},decorId:s.decorId};this.yaw=-.35;
+  if(d.kind==='decor'){copy.decorId=id;this.model=new T.Group();this.scene.add(this.model);box(this.model,0,-.13,0,5.5,.2,3.5,mat(d.floor),.15);for(let i=-2;i<=2;i++)box(this.model,i,.001,0,.025,.015,3.2,mat(d.trim),0);rankDecor(this.model,copy,{mini:true});batchColors(this.model);this.camera.position.set(4.8,4.5,6.2);this.camera.lookAt(0,.6,0);this.view=4.1;}
+  else{copy.cosmetics.equipped[d.kind]=id;this.actorState={id:'owner',x:0,z:0,angle:this.yaw,walk:0,walking:false,action:'',bag:d.kind==='tray'?{tomato:2}:{}};this.actor=makeActor(this.scene,this.actorState,copy);this.actor.update(this.actorState,0,.1);this.camera.position.set(3,2.6,5);this.camera.lookAt(0,1.35,0);this.view=d.kind==='tray'?4.3:3.7;}
+  this.camera.left=-this.view*w/220/2;this.camera.right=-this.camera.left;this.camera.top=this.view/2;this.camera.bottom=-this.view/2;this.camera.updateProjectionMatrix();this.render(.016);
+ }
+ render(dt){if(!this.renderer.domElement.isConnected)return;const w=this.renderer.domElement.parentElement.clientWidth;if(w&&w!==this.lastWidth){this.lastWidth=w;this.renderer.setSize(w,220,false);this.camera.left=-this.view*w/220/2;this.camera.right=-this.camera.left;this.camera.updateProjectionMatrix();}if(this.actor){this.actorState.angle=this.yaw;this.actor.update(this.actorState,0,dt);}this.renderer.render(this.scene,this.camera);}
+ detach(){this.renderer.domElement.remove();}
+}

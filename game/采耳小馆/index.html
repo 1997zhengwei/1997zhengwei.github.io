@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>采耳小馆 · 3D ASMR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app" class="picking">
+    <canvas id="stage"></canvas>
+    <div class="vignette"></div>
+    <div class="cup-shade" id="cup-shade"></div>
+    <div class="scope-view" id="scope-view"><span>可视耳勺</span><i class="rec"></i></div>
+    <div id="floaters"></div>
+
+    <header class="top">
+      <div class="left-col">
+        <div class="badge">
+          <span class="face" id="face"></span>
+          <div>
+            <div class="badge-title">采耳小馆 <small id="mood-label">刚躺下</small></div>
+            <div class="badge-sub" id="guest-label">左耳</div>
+            <div class="relax"><b id="relax-fill"></b></div>
+          </div>
+        </div>
+        <button class="wish" id="wish" type="button"></button>
+      </div>
+      <div class="top-btns">
+        <button class="round" id="sound-btn" type="button" aria-label="SPA 音源" title="音源">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+          <i class="dot" id="sound-dot"></i>
+        </button>
+        <button class="round" id="sleep-btn" type="button" aria-label="睡眠模式" title="睡眠">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="pill-btn" id="flip-btn" type="button">换只耳朵</button>
+      </div>
+    </header>
+
+    <div class="hint" id="hint"></div>
+    <div class="toast" id="toast"></div>
+
+    <nav class="tray" id="tray">
+      <button class="tool on" data-tool="pick" type="button"><i class="ti ti-pick"></i><span>耳勺</span></button>
+      <button class="tool" data-tool="scope" type="button"><i class="ti ti-scope"></i><span>可视耳勺</span></button>
+      <button class="tool" data-tool="swab" type="button"><i class="ti ti-swab"></i><span>棉签</span></button>
+      <button class="tool" data-tool="feather" type="button"><i class="ti ti-feather"></i><span>鹅毛</span></button>
+      <button class="tool" data-tool="oil" type="button"><i class="ti ti-oil"></i><span>精油</span></button>
+      <button class="tool" data-tool="rub" type="button"><i class="ti ti-rub"></i><span>揉揉</span></button>
+      <button class="tool" data-tool="towel" type="button"><i class="ti ti-towel"></i><span>热毛巾</span></button>
+      <button class="tool" data-tool="fork" type="button"><i class="ti ti-fork"></i><span>音叉</span></button>
+      <button class="tool" data-tool="cup" type="button"><i class="ti ti-cup"></i><span>捂耳朵</span></button>
+    </nav>
+
+    <div class="night" id="night"><div class="night-text" id="night-text"></div></div>
+    <div class="sleep-pill" id="sleep-pill"></div>
+
+    <div class="sheet" id="sheet-sound">
+      <div class="sheet-head"><b>SPA 音源</b><span>可以叠着开，拖滑块调音量</span><button class="x" data-close type="button">×</button></div>
+      <div class="scape-grid" id="scape-grid"></div>
+      <div class="sheet-foot">
+        <label class="switch"><input type="checkbox" id="tool-sound"><i></i>道具声音</label>
+        <button class="pill-btn" id="scape-off" type="button">全部关掉</button>
+      </div>
+    </div>
+
+    <div class="sheet" id="sheet-sleep">
+      <div class="sheet-head"><b>🌙 睡眠模式</b><span>屏幕会慢慢变暗，到点声音轻轻淡出</span><button class="x" data-close type="button">×</button></div>
+      <div class="sleep-row" id="sleep-timer">
+        <button type="button" data-min="15">15 分钟</button><button type="button" data-min="30">30 分钟</button><button type="button" data-min="60">1 小时</button><button type="button" data-min="0">不定时</button>
+      </div>
+      <div class="mix-title">选一个组合</div>
+      <div class="mix-grid" id="mix-grid"></div>
+      <label class="switch big"><input type="checkbox" id="auto-on" checked><i></i>穿插采耳声<small>背景音一直在，道具时不时轻轻来一段</small></label>
+      <button class="start-btn sleep-go" id="sleep-go" type="button">开始入睡</button>
+    </div>
+
+    <div class="start" id="start">
+      <div class="start-card">
+        <div class="start-title">采耳小馆</div>
+        <div class="start-sub" id="start-sub">戴上耳机 🎧 &nbsp;躺下来，慢慢听</div>
+        <div class="start-load" id="load-label">热毛巾敷一下…</div>
+        <button class="start-btn" id="start-btn" type="button" disabled>开始放松</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

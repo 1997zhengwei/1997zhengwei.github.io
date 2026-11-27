@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>推车小人近景检查</title>
+<style>body{margin:0;background:#bfe6f5}canvas{display:block;width:100vw;height:100vh}</style></head><body>
+<script type="module">
+// 推车小人近景：三种表情并排（笑 / 空中惊呼 / 翻车晕），?spin 转圈看侧面
+import * as T from './vendor/three.module.js';
+import {driver} from './stage.mjs';
+const r=new T.WebGLRenderer({antialias:true});r.setPixelRatio(devicePixelRatio);r.setSize(innerWidth,innerHeight);
+r.outputColorSpace=T.SRGBColorSpace;r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.12;document.body.append(r.domElement);
+const s=new T.Scene();s.background=new T.Color(0xbfe6f5);
+s.add(new T.HemisphereLight(0xe4f8ff,0x72928d,1.65));const k=new T.DirectionalLight(0xffe4b2,3.1);k.position.set(-4,9,6);s.add(k);
+const spin=new URLSearchParams(location.search).has('spin');
+const ps=['smile','wow','dizzy'].map((f,i)=>{const d=driver();d.setFace(f);d.g.position.set((i-1)*1.1,0,0);s.add(d.g);return d;});
+const cam=new T.PerspectiveCamera(30,innerWidth/innerHeight,.1,50);cam.position.set(0,1.6,5.2);cam.lookAt(0,1.05,0);
+(function loop(t){ps.forEach(d=>d.g.rotation.y=spin?t/1200:0);r.render(s,cam);requestAnimationFrame(loop);})(0);
+</script></body></html>

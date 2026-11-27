@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>车顶狂奔 · 结算界面测试样本</title><link rel="stylesheet" href="../../src/style.css"><style>body{background:linear-gradient(135deg,#b9d8d4,#e5d3a5)}.qa-bar{position:fixed;top:12px;left:12px;right:12px;z-index:90;font-size:11px;color:#324b4f;display:flex;align-items:center;gap:8px;flex-wrap:wrap}.qa-bar button{padding:7px 10px;border-radius:5px;background:#fff}.qa-bar strong{font-size:10px}.qa-bar strong span{display:block;font-weight:400;margin-top:3px}</style></head><body><div class="qa-bar"><strong>结算界面测试 · 示例数据<span>仅验证界面，不写入游戏成绩</span></strong><button id="partial">首段通过</button><button id="complete">三段全部通过</button><button id="out-of-order">只过第三段</button></div><div id="ui"></div><script type="module">
+import {UI} from '../../src/ui.mjs';
+import {makeCourse} from '../../src/courses.mjs';
+const save={runs:{},sound:false,quality:'high'},ui=new UI(document.querySelector('#ui'),{next:()=>ui.maps(),menu:()=>ui.maps(),world:world=>ui.menu(Number(world),0),stage:stage=>ui.menu(ui.world,Number(stage))},save);
+function show(kind){save.runs=kind==='complete'?{'0-0':{stars:1},'0-1':{stars:2},'0-2':{stars:3}}:kind==='partial'?{'0-0':{stars:3}}:{'0-2':{stars:3}};const stage=kind==='partial'?0:2;ui.hud(makeCourse(0,stage));ui.overlay('won',{course:makeCourse(0,stage),stars:()=>3,time:28.41,landings:9});}
+for(const kind of['partial','complete','out-of-order'])document.querySelector('#'+kind).addEventListener('click',()=>show(kind));
+show('partial');
+</script></body></html>

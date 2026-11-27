@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#172521">
+  <title>松谷木材工厂大亨</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <main id="game" aria-label="松谷木材工厂大亨">
+    <section id="world" aria-label="3D 工厂">
+      <canvas id="scene" aria-label="原木吊运、锯台、木板料垛与货车"></canvas>
+      <div id="floaters" aria-hidden="true"></div>
+      <div id="loading" role="status">正在启动锯坊…</div>
+    </section>
+    <header class="mast">
+      <div class="brand">
+        <span class="brand-icon" data-icon="tree" aria-hidden="true"></span>
+        <div><p id="factory-number">01 号厂 · 松谷林场</p><h1 id="factory-name">松谷锯木厂</h1></div>
+      </div>
+      <div class="wallet" aria-label="资金"><span class="coin">$</span><strong id="cash">85</strong></div>
+    </header>
+    <nav class="company-nav" aria-label="企业经营">
+      <button id="atlas" type="button" aria-label="工业园地图"><span data-icon="map" aria-hidden="true"></span><span id="atlas-label">园区</span><b id="factory-count">1</b></button>
+      <button id="manage" type="button" aria-label="工厂经营"><span data-icon="gear" aria-hidden="true"></span><span>经营</span></button>
+      <button id="honor" type="button" aria-label="荣誉馆"><span data-icon="trophy" aria-hidden="true"></span><span>荣誉</span><b id="badge-count">0/8</b></button>
+    </nav>
+
+    <section class="contract" aria-label="当前订单">
+      <button id="order-toggle" type="button" aria-controls="order-detail" aria-expanded="false">
+        <span class="order-icon" data-icon="order" aria-hidden="true"></span>
+        <span class="order-copy"><strong id="order">林站首单</strong><span class="order-progress" aria-hidden="true"><i id="order-bar"></i></span></span>
+        <b id="order-count">0 / 12</b><span class="order-caret" aria-hidden="true"></span>
+      </button>
+      <div id="order-detail" hidden>
+        <div><b id="rank">见习厂长</b><b id="order-bonus">达成 +$60</b></div>
+        <p id="order-instruction">叫一辆原木车，开始第一批生产</p>
+      </div>
+    </section>
+
+    <div class="world-tools">
+      <button id="overview" class="view-button" type="button" aria-label="返回全厂俯视"><span data-icon="view" aria-hidden="true"></span><span>全厂</span></button>
+      <button id="sound" class="view-button" type="button" aria-label="关闭音效" aria-pressed="true"><span data-icon="sound" aria-hidden="true"></span></button>
+    </div>
+
+    <nav id="markers" aria-label="厂区工位">
+      <div class="station" data-station-pin="inbound">
+        <button type="button" class="action" data-action="inbound">
+          <span class="action-fill"></span><span class="action-icon" data-icon="truck" aria-hidden="true"></span>
+          <span class="action-copy"><strong>叫原木车</strong><small>运入原木</small></span>
+        </button>
+        <div class="station-tools"><button type="button" class="plate" data-upgrade="inbound"></button><button type="button" class="inspect" data-pin="inbound" aria-label="查看原木吊运" title="查看原木吊运"><span data-icon="view" aria-hidden="true"></span></button></div>
+      </div>
+      <div class="station" data-station-pin="saw">
+        <button type="button" class="action" data-action="saw">
+          <span class="action-fill"></span><span class="action-icon" data-icon="saw" aria-hidden="true"></span>
+          <span class="action-copy"><strong>启动锯台</strong><small>加工</small></span>
+        </button>
+        <div class="station-tools"><button type="button" class="plate" data-upgrade="saw"></button><button type="button" class="inspect" data-pin="saw" aria-label="查看锯台近景" title="查看锯台近景"><span data-icon="view" aria-hidden="true"></span></button></div>
+      </div>
+      <div class="station" data-station-pin="finish" hidden>
+        <button type="button" class="action" data-action="finish">
+          <span class="action-fill"></span><span class="action-icon" data-icon="finish" aria-hidden="true"></span>
+          <span class="action-copy"><strong>后加工</strong><small>成品</small></span>
+        </button>
+        <div class="station-tools"><button type="button" class="plate" data-upgrade="finish"></button><button type="button" class="inspect" data-pin="finish" aria-label="查看后加工线" title="查看后加工线"><span data-icon="view" aria-hidden="true"></span></button></div>
+      </div>
+      <div class="station" data-station-pin="dispatch">
+        <button type="button" class="action" data-action="dispatch">
+          <span class="action-fill"></span><span class="action-icon" data-icon="fork" aria-hidden="true"></span>
+          <span class="action-copy"><strong>装车发货</strong><small>出售</small></span>
+        </button>
+        <div class="station-tools"><button type="button" class="plate" data-upgrade="dispatch"></button><button type="button" class="inspect" data-pin="dispatch" aria-label="查看装运区" title="查看装运区"><span data-icon="view" aria-hidden="true"></span></button></div>
+      </div>
+      <div class="station yard" data-station-pin="stack">
+        <button type="button" class="plate" data-upgrade="yard"></button>
+      </div>
+    </nav>
+
+    <div class="inventory" aria-label="工厂库存">
+      <button id="log-stock" class="stock" type="button" aria-label="查看原木库存"><span class="stock-icon" data-icon="log" aria-hidden="true"></span><span>原木<b id="logs">0<span> / 12</span></b></span></button>
+      <button id="rough-stock" class="stock" type="button" aria-label="查看毛板库存" hidden><span class="stock-icon" data-icon="stack" aria-hidden="true"></span><span>毛板<b id="rough">0<span> / 24</span></b></span></button>
+      <button id="board-stock" class="stock" type="button" aria-label="查看成品库存"><span class="stock-icon" data-icon="stack" aria-hidden="true"></span><span><span id="product-label">松木板</span><b id="boards">0<span> / 36</span></b></span></button>
+    </div>
+    <div id="tip" role="status" hidden></div>
+
+    <section id="park-ui" aria-label="工业园地图" hidden>
+      <nav id="park-nodes" aria-label="地图上的厂区与地块"></nav>
+      <div class="park-tools">
+        <button id="park-next" type="button">下一块地</button>
+        <button id="park-list" type="button">工厂列表</button>
+        <div class="park-zoom" aria-label="地图缩放"><button id="park-zoom-in" type="button" aria-label="放大地图">＋</button><button id="park-zoom-out" type="button" aria-label="缩小地图">−</button></div>
+      </div>
+      <article class="park-panel">
+        <div><p id="park-plot-type">已投产</p><h2 id="park-plot-name">松谷锯木厂</h2><p id="park-plot-details"></p></div>
+        <button type="button" id="park-plot-action">进入厂区</button>
+      </article>
+    </section>
+
+    <div class="overlay" id="management" hidden>
+      <section class="sheet" role="dialog" aria-modal="true" aria-labelledby="manage-title">
+        <header class="sheet-head">
+          <div><p>松谷木业</p><h2 id="manage-title">工厂经营</h2></div>
+          <button id="close-sheet" aria-label="关闭经营面板" type="button">×</button>
+        </header>
+        <div class="tabs" role="group" aria-label="经营分类">
+          <button data-tab="upgrade" type="button">设备升级</button>
+          <button data-tab="crew" type="button">雇用班组</button>
+        </div>
+        <div class="cards" id="manage-cards"></div>
+        <div class="lifetime"><span>累计卖出 <b id="shipped">0</b> 件</span><span>库存峰值 <b id="peak">0</b> 件</span></div>
+      </section>
+    </div>
+    <div class="overlay" id="portfolio" hidden>
+      <section class="sheet portfolio-sheet" role="dialog" aria-modal="true" aria-labelledby="portfolio-title">
+        <header class="sheet-head">
+          <div><p>松谷木业</p><h2 id="portfolio-title">商业地图</h2></div>
+          <button id="close-portfolio" aria-label="关闭企业面板" type="button">×</button>
+        </header>
+        <div id="portfolio-content" class="portfolio-content"></div>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>

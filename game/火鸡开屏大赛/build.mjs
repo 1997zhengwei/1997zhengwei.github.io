@@ -1,0 +1,4 @@
+import {readFile,readdir,mkdir,cp,stat} from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';import {execFileSync} from 'node:child_process';
+const root=path.dirname(fileURLToPath(import.meta.url));
+for(const file of await readdir(path.join(root,'src'))){if(!file.endsWith('.mjs'))continue;const absolute=path.join(root,'src',file);execFileSync(process.execPath,['--check',absolute],{stdio:'pipe'});const source=await readFile(absolute,'utf8');for(const m of source.matchAll(/from\s+['"]([^'"]+)['"]/g)){if(m[1].startsWith('.'))await stat(path.resolve(root,'src',m[1]));}}
+await mkdir(path.join(root,'dist'),{recursive:true});for(const part of ['index.html','src','assets','vendor'])await cp(path.join(root,part),path.join(root,'dist',part),{recursive:true});console.log('All runtime modules parse; imports resolve; self-contained dist built.');

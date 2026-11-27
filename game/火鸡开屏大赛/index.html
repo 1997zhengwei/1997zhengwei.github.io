@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#d6283a">
+<title>火鸡开屏大赛</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<main id="game">
+  <canvas id="scene" aria-label="火鸡在红地毯上奔跑收集羽毛"></canvas>
+  <div id="fx"></div>
+  <div id="flash"></div>
+  <header id="hud" hidden>
+    <div id="count"><span class="fe"></span><b id="n">0</b><small>根羽毛</small></div>
+    <div id="colors"></div>
+    <button id="btn-sound" class="icon-btn" aria-label="声音">🔊</button>
+    <div id="prog"><i id="prog-fill"></i></div>
+  </header>
+  <div id="status" hidden>
+    <div id="friends" hidden><b>🐣</b><span id="friends-n">0</span><small>伙伴</small></div>
+    <div id="chase" hidden><b>👨‍🍳</b><i><s id="chase-fill"></s></i><small id="chase-m">12m</small></div>
+  </div>
+  <div id="danger"></div>
+  <div id="drag-hint" hidden><div class="hand">👆</div><b>左右拖动</b><small>吃羽毛 · 选蓝门 · 躲开危险</small></div>
+  <div id="cards" hidden></div>
+  <div id="lv-banner"></div>
+  <div id="overlay">
+    <section id="home" class="panel">
+      <img id="hero" alt="">
+      <small class="eyebrow">THANKSGIVING TURKEY SHOW</small>
+      <h1>火鸡开屏大赛</h1>
+      <p class="story">感恩节前夜，火鸡们一路赶往<b>「火鸡赦免大会」</b>：开屏最美的那只<b>被赦免</b>，其余的……今晚上餐桌 🍗</p>
+      <div id="levels"></div>
+      <p class="lead" id="lv-sub"></p>
+      <button id="btn-start" class="primary">开跑！</button>
+      <p class="best" id="best"></p>
+    </section>
+    <section id="result" class="panel" hidden>
+      <small class="eyebrow" id="r-level"></small>
+      <div id="r-stars"></div>
+      <h2 id="r-title"></h2>
+      <div id="r-score"><small>评委总分</small><b id="r-total">0</b><span>/ 30</span></div>
+      <div id="cert" hidden>
+        <div class="cert-title">火鸡赦免证书</div>
+        <p id="cert-text"></p>
+        <div class="cert-foot"><span>感恩节火鸡赦免大会</span><span id="cert-date"></span></div>
+        <div class="stamp">已赦免</div>
+      </div>
+      <div id="doom" hidden><div class="plate">🍽️</div><p id="doom-text"></p></div>
+      <div id="r-stats"></div>
+      <div class="actions"><button id="btn-next" class="primary" hidden>下一关</button><button id="btn-again" class="primary">再跑一次</button><button id="btn-home" class="link">选择关卡</button></div>
+    </section>
+  </div>
+  <div id="loading"><span>🦃</span><b>火鸡热身中…</b></div>
+</main>
+<script type="module" src="./src/app.mjs"></script>
+</body>
+</html>

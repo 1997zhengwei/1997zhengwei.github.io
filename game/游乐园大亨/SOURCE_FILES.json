@@ -1,0 +1,403 @@
+{
+  "game": "游乐园大亨 · 欢乐岛",
+  "version": "0.3.2",
+  "directory": "games/游乐园大亨/",
+  "entry": "index.html",
+  "platformEntry": "LOOPIT_SINGLE.html",
+  "localTests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 40,
+      "sha256": "2ad0e2933036c7bde9ac16a5f5dde7169a6ea9686cb586c06a147c9732ca0302",
+      "gitBlob": "5014134803972e8a043bc5c7a67d8d9cd751aac4"
+    },
+    {
+      "path": "assets/ui/ASSETS.md",
+      "bytes": 1225,
+      "sha256": "fe6ec7762b86dba5af4a9dcb055c38fab0e6ea0a35b659916996a8995dd59add",
+      "gitBlob": "f7b4d9826f26ff3ca578d34b7cf621e129d84752"
+    },
+    {
+      "path": "assets/ui/building-store.svg",
+      "bytes": 596,
+      "sha256": "ab81de19a2c701040646afc15f33a64f75041ec82c586857c277cf7f19b8d054",
+      "gitBlob": "417ab9b8f004160aa521af19b139be2bd66c0db3"
+    },
+    {
+      "path": "assets/ui/chevron-right.svg",
+      "bytes": 379,
+      "sha256": "2ae987156c31aeede9ccaad2048ad96d3caa5e9b4b201c809ac6d974b47673b3",
+      "gitBlob": "ec10bd0fae3c198a3cc0cbc410b800edcae7517a"
+    },
+    {
+      "path": "assets/ui/circle-check.svg",
+      "bytes": 432,
+      "sha256": "75dfedf9fdf9f1f207bf76aa188e81da46a2c6c7f6afb7749edcd32f76674257",
+      "gitBlob": "ceeb0874d50171a806a5ca812355adca60ced0d6"
+    },
+    {
+      "path": "assets/ui/coins.svg",
+      "bytes": 751,
+      "sha256": "92c1e443e4fca8d755ddbb9d37ce8359a31706479041c0bca1a8c8bf1586f2e2",
+      "gitBlob": "bfd6a93522180b819924da42f04ffc99a8d6de6e"
+    },
+    {
+      "path": "assets/ui/help.svg",
+      "bytes": 488,
+      "sha256": "ec0000c11f9ae760941df8269c01c628521ce08fb806474201ab2fd6149b927c",
+      "gitBlob": "690702fabaaf006fac74dff84ac48ef16c4f9b3b"
+    },
+    {
+      "path": "assets/ui/map.svg",
+      "bytes": 446,
+      "sha256": "63b2d51baa9608cfc4efc9cd6cfb9c30c59162c49ced25aee06c9f50bdaaed80",
+      "gitBlob": "d2b672c7cffe88716086452e197d9db2378efbdd"
+    },
+    {
+      "path": "assets/ui/Nunito.ttf",
+      "bytes": 276932,
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+      "gitBlob": "2ec1f4b0676c83ef33049db87b311171699e9192"
+    },
+    {
+      "path": "assets/ui/NUNITO_OFL.txt",
+      "bytes": 4385,
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65",
+      "gitBlob": "c8210f08ca3cece05b4f7baa428afe8e1abe3293"
+    },
+    {
+      "path": "assets/ui/player-pause.svg",
+      "bytes": 539,
+      "sha256": "af274e926b2585a612a7519f6fa03abef33e6e3a9818656028a54059546b5c6a",
+      "gitBlob": "69cc7012bd2961e187fd9b7d336c181c41dbb326"
+    },
+    {
+      "path": "assets/ui/player-play.svg",
+      "bytes": 384,
+      "sha256": "b678a1a1d0a1c56f77e7640017a81516e87e98a1f2059e4225ce13735fe005d2",
+      "gitBlob": "b856aef8fc15a0b685bdac6fc5527e6d6fdfd5d8"
+    },
+    {
+      "path": "assets/ui/ride-camera.svg",
+      "bytes": 338,
+      "sha256": "d79331525419796bf961c98361d415a2a70cfe412d84f3069653da754428ca47",
+      "gitBlob": "a4cf21bea55414df1362e93c470901eebe93f3ce"
+    },
+    {
+      "path": "assets/ui/ride-comfort.svg",
+      "bytes": 270,
+      "sha256": "f904eed45be00e3933c51a896854c8d34f21c373652ae8dd5b27d1e880db72f1",
+      "gitBlob": "8fe99c7eaa5b483235304ffcf04093861eb2b866"
+    },
+    {
+      "path": "assets/ui/ride-exit.svg",
+      "bytes": 238,
+      "sha256": "8a39c535687f898d14a6b0b372ab47a34765c1567c44b53c589f0b64b0727fac",
+      "gitBlob": "d9c1fc97db1c6de6f5be91a0c99031f4fa176661"
+    },
+    {
+      "path": "assets/ui/ride-hands.svg",
+      "bytes": 480,
+      "sha256": "d1a2a0264172f84e0d52af9b0c4ad8c0e3376a11d0c4610e0fc4272e20888fa2",
+      "gitBlob": "016b4a04c36ed19b1557dd862e93645d3e26cdbf"
+    },
+    {
+      "path": "assets/ui/ride-height.svg",
+      "bytes": 267,
+      "sha256": "e740fe578d2529a3a6b36857a5bee56f455d6dcca392e5e16d895a09794a9de6",
+      "gitBlob": "e41cf7f7ecce19c92713d73a7d464a3f2d9cb5cb"
+    },
+    {
+      "path": "assets/ui/ride-look.svg",
+      "bytes": 263,
+      "sha256": "474e6b7e4285e03329fc6cd36102df13e932cab72331685e8103ed1a894f1a10",
+      "gitBlob": "8f664dffcaec178b6af27c2e3d978b70bf2a4307"
+    },
+    {
+      "path": "assets/ui/ride-motion.svg",
+      "bytes": 264,
+      "sha256": "594df6b3888f92fd89e8370f05cf362d02cfe8a04d72d9a593cf82a18d001518",
+      "gitBlob": "2c92f2b3e62fb224b655426ae6cadaf6d9408a28"
+    },
+    {
+      "path": "assets/ui/ride-repeat.svg",
+      "bytes": 228,
+      "sha256": "7c08396f64daba79d93aebbc00e0fb2940a8d537595b69c732b8fc512df5784c",
+      "gitBlob": "2c28ef8d3e9e8fb5a093831a7ede9f87a486f3f8"
+    },
+    {
+      "path": "assets/ui/ride-seat.svg",
+      "bytes": 316,
+      "sha256": "2c15c8f972f697ac3bb11562f99b95705ec1a5a8a600fbd602d33c2f2e39278c",
+      "gitBlob": "9a739423b394a066cd1a848af01ed6e4e23c1181"
+    },
+    {
+      "path": "assets/ui/ride-speed.svg",
+      "bytes": 292,
+      "sha256": "446aa45940ca4a96c5ed52668c0605d9e5c49b15329a50c2fb26c09f4a284159",
+      "gitBlob": "e6c9c2d51ae7776667e3824aa7bdfcb7da08a4a3"
+    },
+    {
+      "path": "assets/ui/ride-stabilize.svg",
+      "bytes": 385,
+      "sha256": "a42354f1895bda122324a1fa63ca37dcdeb7eca123100dabda13444b2ac83a64",
+      "gitBlob": "f487cf793433201408371ce252a8dcd77d052801"
+    },
+    {
+      "path": "assets/ui/settings.svg",
+      "bytes": 934,
+      "sha256": "48ef08a260d9064b6ba823fc0cd38449d6c79c96d1b1985b876bf091d02f8387",
+      "gitBlob": "e85d9ab9247ad43662b25caf98c5957a5f4d8df7"
+    },
+    {
+      "path": "assets/ui/sparkles.svg",
+      "bytes": 559,
+      "sha256": "8e9076e8666acdf064e0ebb78a912c18e25b4fe3f2c2cfdf4b6478837e6a8467",
+      "gitBlob": "311a2684411718770bf479b2dcb52c7ac7bb4cad"
+    },
+    {
+      "path": "assets/ui/TABLER_LICENSE.txt",
+      "bytes": 1073,
+      "sha256": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+      "gitBlob": "3e82379dab3fe93d9ee22251949604ed63ddea39"
+    },
+    {
+      "path": "assets/ui/users.svg",
+      "bytes": 536,
+      "sha256": "d1e0df7088c07a0ba9504b01040965b3d979ee451c2cabfe3ec34086173b6570",
+      "gitBlob": "318bd36789e197bb8a9cbfa849f0dd39aa152f1d"
+    },
+    {
+      "path": "assets/ui/volume-off.svg",
+      "bytes": 681,
+      "sha256": "6c8b2b24b0606cfd9833260b37d00cefe18ad746c5e00d7faa397b1318d0dce3",
+      "gitBlob": "22b7773b80fc1c0216bbe238837e01253c27cc71"
+    },
+    {
+      "path": "assets/ui/volume.svg",
+      "bytes": 539,
+      "sha256": "7c5cb3bace7c8f052859a1b7f61f3258a97fbc83af8da15bd091d0cf9168ccde",
+      "gitBlob": "45721adf668fc378e7ca77f7c30a3b5d97561426"
+    },
+    {
+      "path": "assets/ui/x.svg",
+      "bytes": 393,
+      "sha256": "c9f8ba20c8d25e500113316092689383dec16edf6ac185865ed55d6f341aea13",
+      "gitBlob": "4a430e9d7f33891fb7f3e54fe3e7ae471d5067c0"
+    },
+    {
+      "path": "BRIEF.md",
+      "bytes": 5995,
+      "sha256": "0cc856d68239f603a2e1d0f23cd4e79fd9e6bcef3ab58704af6d508650d01ccf",
+      "gitBlob": "c7f8e2cda5e868fed1d89c10c3b48bc40b50ec20"
+    },
+    {
+      "path": "build.mjs",
+      "bytes": 490,
+      "sha256": "5fce4b27633639021ca5932dc80f42a9918a9cb01e0b0e28758a8d8d3c519cbb",
+      "gitBlob": "e6548224c8fd10943fb5099f0a74543ba34d9256"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7166,
+      "sha256": "228a764857320f75904484e3e412978f9987835d0d95a2c83909d1e130c320c9",
+      "gitBlob": "fb618a35598d62e70bb8f246362cbb4632b4f115"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 5100,
+      "sha256": "644544e1eab2fecb11c8189316bda6cec97dee6f3803264d0d49af58487623ba",
+      "gitBlob": "41944848c5ae4e551f6f9f554eb2ca6dd701ff43"
+    },
+    {
+      "path": "LOOPIT_SINGLE.html",
+      "bytes": 200497,
+      "sha256": "353696c5e97ab7157e0782c9a0497184fbfaf78b0a2d43cb95f1c7a87c41c36c",
+      "gitBlob": "3d0a506666d9f549e96d0d70bb30020818fbd475"
+    },
+    {
+      "path": "package.json",
+      "bytes": 248,
+      "sha256": "5a9ba2d5e116773ceeebf2c501047c81dde1607498e5c2da018133b99ad3096b",
+      "gitBlob": "bab4c27cd02268579e1568d6ee6755abac311344"
+    },
+    {
+      "path": "PLATFORM_BUNDLE.md",
+      "bytes": 1090,
+      "sha256": "a53c66b39196b7602e157ada5cbf63fefcffb6e501c4ad99e2ee41e6f9e1ecd1",
+      "gitBlob": "5082bc20fe712e9c825dd1d68ae97ac677b3f1b7"
+    },
+    {
+      "path": "qa/cups-follow.jpg",
+      "bytes": 50158,
+      "sha256": "e73d1377a9730038fad1c19fdba6fdedf4a6f419ad956a6e6b7157d038c5ba93",
+      "gitBlob": "da4acca991015d4e2962639559175ff708bb000f"
+    },
+    {
+      "path": "qa/park-eight-day.jpg",
+      "bytes": 161904,
+      "sha256": "19c85e3832a79ce232d2d428e631ef49f440869a66c13e992dec1fc5b5da3e6e",
+      "gitBlob": "c31395abcfb5451d78ab969304eae44bb9fa83c6"
+    },
+    {
+      "path": "qa/park-eight-night.jpg",
+      "bytes": 136558,
+      "sha256": "51e3f0de3bc48c1c34940b969012a34e66b96ae1ad8e311a43eb5fd27451af75",
+      "gitBlob": "128a02bc79f5606618f318e8cac8dfcf0b442661"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 2026,
+      "sha256": "a940196b7c3f8949903f16541fe322cdc7a0cc20447b7bc65d6a6d7ae2a25341",
+      "gitBlob": "1b1d6efc1f8b8a7d3660f4e119681510b121d51b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7492,
+      "sha256": "a9f81da294cad2d6de2001eea87526a3b5f3b54560b502d48611b91558e0e9d4",
+      "gitBlob": "ed557eeff9d34a38d695811b6fcc7572a4cc42f5"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1146,
+      "sha256": "49b2c951c12a4f4bce15a2d2149b5b460a551e2902aa96d09ee2f5d0a66d0e7e",
+      "gitBlob": "7aac454f5ad4407fc86f806af0514a38917e9e7f"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 22899,
+      "sha256": "e6f9e22914c76b0d0a628dcf37498ee50c9115ac67a254bc3d104f42650b0e14",
+      "gitBlob": "02d75997dbbf58c749485d6ed91c74de4e34f710"
+    },
+    {
+      "path": "src/art.mjs",
+      "bytes": 26007,
+      "sha256": "28e4164264efe2089d19414638b34e6ce6a14b89c8fbf74da244b3c1fcbf0a78",
+      "gitBlob": "cbdee91afbd7952f32d5ffa2d08b416dbd37360b"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 2347,
+      "sha256": "90c2439c4be1927f40bcf55230f85cfba128621dcf8612811064403088db4087",
+      "gitBlob": "6906dbf18640bac8becefbd372b60a4f50872829"
+    },
+    {
+      "path": "src/crowd.mjs",
+      "bytes": 6245,
+      "sha256": "4cef2e713082f8b7eea82cbeeb34e1eba91d33c823c1f0fee034eba2f36167fc",
+      "gitBlob": "7171cdda78a72d6a01b95d3f3e9ea62d9937a115"
+    },
+    {
+      "path": "src/data.mjs",
+      "bytes": 4662,
+      "sha256": "f3cccac51bd279c52fd7c6ef8840f761d2d24c390a9f156606c9d9c5384e71e2",
+      "gitBlob": "83738903b86fb5f1713c5799493ea36666d889ca"
+    },
+    {
+      "path": "src/extra-rides.mjs",
+      "bytes": 10051,
+      "sha256": "fde316f6b22efd033948d12f4f51edcc959f726729d719460691ba19cab3d9ac",
+      "gitBlob": "d6fd7567dd7db0e274a8e9f1ec457c3492d3d10c"
+    },
+    {
+      "path": "src/fireworks.mjs",
+      "bytes": 1987,
+      "sha256": "d6b7b3cb5d8cd43bac9ce2d2287fa9c27ec49c1827cda0c2081726e8581f18f0",
+      "gitBlob": "8c506d179fc7675736eb48930735aec46b4c6fb9"
+    },
+    {
+      "path": "src/rendering.mjs",
+      "bytes": 6247,
+      "sha256": "13aa52e1eeba588e3157e42faa54e93bebe7d7d22631a7eafe3b175d7b68f7ab",
+      "gitBlob": "31cc79657290c12d162c1e4311bac1d14731d021"
+    },
+    {
+      "path": "src/ride-motion.mjs",
+      "bytes": 2889,
+      "sha256": "e2adf36b709cc3532d9fa673766d875f54a1a096cdbafb508889f33ac840d423",
+      "gitBlob": "2e10d08d837248c0aa6d4d690df60860de831458"
+    },
+    {
+      "path": "src/rider-arms.mjs",
+      "bytes": 1907,
+      "sha256": "8da9de21df54c726798bd4536383a281a3cf12f1c0f89e0453b3aac91310ebdb",
+      "gitBlob": "4c9e951877e1eb05ce9b1ecef6dad4556f74f25a"
+    },
+    {
+      "path": "src/scenery.mjs",
+      "bytes": 18831,
+      "sha256": "f9321ecf32e6d796a9c1fca1330b2b9047642faa01d83bd6e80e5924b5a339a9",
+      "gitBlob": "ffea0b51258a47449af9cde21911966d4c111238"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 11147,
+      "sha256": "4da0f46f30cbee02574390408c5e6359e69517d11f847ad89abe301e6df71a04",
+      "gitBlob": "6386d246942f552751a48e5f38d3795938de0431"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 22240,
+      "sha256": "a85427d0f6ae9bd5859f345302aabfcfd1ea0f278612094d69f6783d1bb5bd62",
+      "gitBlob": "bb2650e18e5574a2a7e2dc160ab013f2f5c41330"
+    },
+    {
+      "path": "src/surface.mjs",
+      "bytes": 2849,
+      "sha256": "878f74bbb3edc64ad3d62a9247899ace15a8095e3fded8bc6c1272b6bf3a901a",
+      "gitBlob": "9a60a239665c9ed78ebea15f147b3c528150b9e4"
+    },
+    {
+      "path": "src/track.mjs",
+      "bytes": 2066,
+      "sha256": "4cced417149a9b78b8aacd8aa9527f58504af90209176d4387620fd923d1a41a",
+      "gitBlob": "6d613ca0edadf11de225ffff8143a36f2278d81f"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 12745,
+      "sha256": "e68d5c6e92f4276cfd32a56beb93b494b366f3e73e33a2ccfa979ceea804cb2c",
+      "gitBlob": "1f8697f70931343a5bac28e92b1a4b67e6426d6f"
+    },
+    {
+      "path": "tests/park.test.mjs",
+      "bytes": 7617,
+      "sha256": "598387eeea7822fa09c039f23031eb4201c1566ca7135e1e478c3cf8c3c2f72f",
+      "gitBlob": "052fb11c3253b5375500598f8ec607dffe4c7936"
+    },
+    {
+      "path": "vendor/geometries/RoundedBoxGeometry.js",
+      "bytes": 6483,
+      "sha256": "b3e2d87473cd48f59720739a6ceedbd9f0dccf89224c84403730b2e808d5e4f2",
+      "gitBlob": "9ce603cfac7b59cb0388ab571f3d832cbacfba6b"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "gitBlob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "gitBlob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "gitBlob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37725,
+      "sha256": "ce6b8c82f29e4ad7e8e330ce2bccd921de6c36a5c05c8f50f9a8b039596b8551",
+      "gitBlob": "6bae3d83270ee4381110f8ec0d1a6caf02ecaa23"
+    }
+  ]
+}

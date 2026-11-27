@@ -1,4 +1,13 @@
-# vinext-starter
+# 个人主页与游戏作品
+
+## 游戏作品
+
+[进入游戏作品总目录](./game/README.md) · 按年份和日期查找源码及交接记录。
+
+## 网站开发
+
+<details>
+<summary>展开网站开发说明</summary>
 
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
@@ -97,7 +106,4 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
 
-
-## 游戏作品
-
-所有游戏源码与资料统一存放在根目录 [game/ 中文游戏总目录](./game/)，包含已完成作品和矿车归途；后续新游戏也从这里查找。
+</details>

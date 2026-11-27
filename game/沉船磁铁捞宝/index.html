@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#e5ebff">
+  <link rel="icon" href="data:,">
+  <title>沉船磁铁捞宝 · Wreck &amp; Reel</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="game">
+    <section class="field" id="field" aria-label="打捞海域">
+      <canvas id="sea" aria-hidden="true"></canvas>
+      <header class="header">
+        <div class="personal-depth">
+          <span>最深纪录</span><strong><b id="best-depth">0</b><small> 米</small></strong>
+        </div>
+        <div class="bank" aria-label="可用金币"><i class="money" aria-hidden="true"></i><strong id="wallet">0</strong></div>
+        <button type="button" class="report" id="report" aria-label="查看本航次战报" hidden>战报</button>
+        <button type="button" class="sound" id="sound" aria-label="声音" aria-pressed="false">♪</button>
+      </header>
+      <div class="dive-hud">
+        <div class="reading" id="reading" aria-label="当前深度" hidden>
+          <strong><span id="depth">0</span><small> 米</small></strong>
+        </div>
+        <div class="cargo" id="cargo" aria-label="磁铁载物" hidden>
+          <span>已吸附</span><strong id="cargo-count">0 / 4</strong>
+          <div id="cargo-icons" class="cargo-icons"></div>
+          <span id="guard-count" class="guard-count" hidden></span>
+        </div>
+      </div>
+      <div id="gate-warning" class="gate-warning" hidden>横梁在上方 · 走青灯宽口</div>
+      <div id="shield-event" class="shield-event" role="status" hidden><b>护套挡住撞击</b><span id="shield-left"></span></div>
+      <div id="vault-discovery" class="vault-discovery" role="status" hidden>
+        <strong>找到深渊王匣</strong><span>自由打捞已开启</span>
+      </div>
+      <div id="float-points" class="float-points" aria-hidden="true"></div>
+      <div id="feedback" class="feedback" role="status" hidden></div>
+      <div id="result" class="result" hidden>
+        <article class="card" role="dialog" aria-labelledby="result-title">
+          <div class="seal" aria-hidden="true">✦</div>
+          <h2 id="result-title">本航次战报</h2>
+          <p id="result-caption"></p>
+          <div class="summary">
+            <div><strong id="total">0</strong><span>本航次积分</span></div>
+            <div><strong id="best">—</strong><span>连续三钩纪录</span></div>
+          </div>
+          <div class="collection-line"><span>藏品图鉴</span><span id="catalog-count"></span></div>
+          <div id="catalog" class="catalog"></div>
+          <div id="depth-record" class="depth-record"></div>
+          <div id="wealth-record" class="depth-record"></div>
+          <div class="report-actions">
+            <button class="resume" id="resume">继续打捞</button>
+            <button class="again" id="again">开启新航次</button>
+          </div>
+        </article>
+      </div>
+      <div id="error" class="feedback error" role="alert" hidden>画面加载失败，请刷新页面重试。</div>
+    </section>
+    <footer class="dock-controls">
+      <div class="controls">
+      <div class="readout">
+        <div id="aim" class="aim">
+          <div class="meter" id="meter" aria-hidden="true"><div class="sweet"></div><i id="needle"></i></div>
+          <div class="hint" id="aim-hint">指针到青色区时下钩，直达 500 米</div>
+        </div>
+        <div id="steer-guide" class="steer-guide" hidden><b>← 左右拖动磁铁 →</b></div>
+      </div>
+      <button class="cast" id="cast"><i aria-hidden="true"></i><span id="cast-label">下钩</span></button>
+      <button type="button" class="reel-boost" id="reel-boost" aria-label="按住加速收线" title="按住加速 · Shift" hidden>
+        <span aria-hidden="true">»</span><b id="boost-label">按住加速</b>
+      </button>
+      </div>
+      <section class="workshop" id="workshop" aria-label="船坞工坊">
+        <div class="port-line">
+          <div class="gear-nav" aria-label="升级类别">
+            <button type="button" data-workshop="explore" aria-pressed="true">探宝</button>
+            <button type="button" data-workshop="outfit" aria-pressed="false">船坞</button>
+          </div>
+          <div class="commission" aria-live="polite"><span id="commission-text"></span><b id="commission-bonus"></b></div>
+        </div>
+        <div class="upgrade-grid" data-panel="explore">
+          <button type="button" class="upgrade" data-upgrade="capacity">
+            <img alt=""><span class="upgrade-copy"><strong>磁铁载量</strong><span data-effect></span></span><b class="price" data-price></b>
+          </button>
+          <button type="button" class="upgrade" data-upgrade="field">
+            <img alt=""><span class="upgrade-copy"><strong>磁场范围</strong><span data-effect></span></span><b class="price" data-price></b>
+          </button>
+        </div>
+        <div class="upgrade-grid" data-panel="outfit" hidden>
+          <button type="button" class="upgrade" data-upgrade="guard">
+            <img alt=""><span class="upgrade-copy"><strong>防撞护套</strong><span data-effect></span></span><b class="price" data-price></b>
+          </button>
+          <button type="button" class="upgrade" data-upgrade="beacon">
+            <img alt=""><span class="upgrade-copy"><strong>灯塔收益</strong><span data-effect></span></span><b class="price" data-price></b>
+          </button>
+        </div>
+      </section>
+    </footer>
+  </main>
+  <script type="module" src="./src/game.js"></script>
+</body>
+</html>

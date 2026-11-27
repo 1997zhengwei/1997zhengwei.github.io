@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>糖果小岛 · 纯解压</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./chain.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <canvas id="stage-canvas"></canvas>
+    <canvas id="trail-canvas" class="trail-canvas"></canvas>
+
+    <header class="hud-top">
+      <div class="hud-row">
+        <div class="pill level-badge">
+          <span class="level-dot" id="level-dot"></span>
+          <span id="level-label">糖果小岛</span>
+        </div>
+        <button class="icon-btn" id="mute-btn" type="button" aria-label="静音开关" aria-pressed="false" title="声音开关">
+          <svg id="mute-icon-on" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <svg id="mute-icon-off" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="hud-row jar-row">
+        <span></span>
+        <button class="jar-btn" id="jar-btn" type="button" aria-label="水晶罐">
+          <canvas id="jar-canvas" width="60" height="84"></canvas>
+          <span class="jar-count num" id="jar-count">0%</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="toast-layer" id="toast-layer"></div>
+    <div class="guide-pointer" id="guide-pointer">
+      <div class="guide-bubble" id="guide-bubble">快速划过！</div>
+      <div class="guide-ring"></div>
+    </div>
+    <div class="bite-hint" id="bite-hint">点一下 · 咬一口</div>
+
+    <footer class="hud-bottom">
+      <div class="hint-card" id="hint-card">
+        <span class="hint-main"><b>快划</b>碎成渣 · <b>慢拉</b>整片揭</span>
+        <span class="hint-sub">拖空白处转视角 · 滚轮/双指缩放 · 双击看全岛</span>
+      </div>
+    </footer>
+
+    <div class="overlay" id="intro-overlay">
+      <div class="modal-card">
+        <div class="modal-tag">不计时 · 不计分 · 想玩多久玩多久</div>
+        <h2 class="modal-title">糖果小岛</h2>
+        <p class="modal-sub">岛上种满了糖衣水果，可以转着从各个角度看。手指就是小刀：划到哪儿碎到哪儿，吃掉的过一会儿又会长出来。</p>
+        <div class="rule-cards">
+          <div class="rule-mini">
+            <div class="rule-chip" style="background:#ffe4ee;color:#e11d63">快划</div>
+            <div class="rule-txt">咔咔<br><strong>碎成渣</strong></div>
+          </div>
+          <div class="rule-mini">
+            <div class="rule-chip" style="background:#fef3c7;color:#d97706">慢拉</div>
+            <div class="rule-txt">一整片<br><strong>揭下来</strong></div>
+          </div>
+          <div class="rule-mini">
+            <div class="rule-chip" style="background:#ede4ff;color:#7c3aed">剥光</div>
+            <div class="rule-txt">咬一口<br><strong>再长出来</strong></div>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="intro-start-btn" type="button" style="width:100%">开始剥</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="shelf-overlay">
+      <div class="modal-card">
+        <div class="modal-tag" id="shelf-tag">水晶罐</div>
+        <canvas id="shelf-jar" class="shelf-jar" width="120" height="168"></canvas>
+        <div class="shelf-stats">
+          <div><strong class="num" id="shelf-fruits">0</strong><span>吃掉的果子</span></div>
+          <div><strong class="num" id="shelf-full">0</strong><span>装满的罐子</span></div>
+        </div>
+        <button class="btn btn-primary" id="shelf-close" type="button" style="width:100%">继续剥</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./game.js"></script>
+</body>
+</html>

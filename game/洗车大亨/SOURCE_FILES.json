@@ -1,0 +1,400 @@
+{
+  "game": "洗车大亨 · 泡沫海岸",
+  "version": "0.3.0",
+  "directory": "games/洗车大亨/",
+  "entry": "index.html",
+  "platformEntry": "LOOPIT_SINGLE.html",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 40,
+      "sha256": "5c368f6a9249d1c6229830e82d45b36da52c917a7ab4c65197850a907585e29a",
+      "gitBlob": "254b4f314773d2a9f1109d728375a74904ec7c94"
+    },
+    {
+      "path": "assets/ui/arrows-exchange.svg",
+      "bytes": 413,
+      "sha256": "e14bc640b1156f0de78d2e3bab71490089a2a49e717622c39e389b28fc77643b",
+      "gitBlob": "79f315018c77a39d9f3efb61ff5ca8095f61ae81"
+    },
+    {
+      "path": "assets/ui/ASSETS.md",
+      "bytes": 810,
+      "sha256": "ad4f098d2e906490dec6c451cc5aefea04a7e02464f100f2557829742bad31da",
+      "gitBlob": "2337045302a12217f5d819e481c84c183af52363"
+    },
+    {
+      "path": "assets/ui/bubble.svg",
+      "bytes": 559,
+      "sha256": "4e592e2f15f808a17c4e74edab952d1d7884733aa8c9db0e612f78eb2bda10b0",
+      "gitBlob": "8325b59eb49ff38c82335e5abc11a9d81fccb9fd"
+    },
+    {
+      "path": "assets/ui/building-store.svg",
+      "bytes": 596,
+      "sha256": "ab81de19a2c701040646afc15f33a64f75041ec82c586857c277cf7f19b8d054",
+      "gitBlob": "417ab9b8f004160aa521af19b139be2bd66c0db3"
+    },
+    {
+      "path": "assets/ui/car.svg",
+      "bytes": 527,
+      "sha256": "43bb1ac3ce53ed2c683f02a39af1277e13eb925cb4eb8f9d41c240b954e7faa9",
+      "gitBlob": "6e448317158acb4dd009e406bf2fb633da28d4a5"
+    },
+    {
+      "path": "assets/ui/chevron-right.svg",
+      "bytes": 379,
+      "sha256": "2ae987156c31aeede9ccaad2048ad96d3caa5e9b4b201c809ac6d974b47673b3",
+      "gitBlob": "ec10bd0fae3c198a3cc0cbc410b800edcae7517a"
+    },
+    {
+      "path": "assets/ui/circle-check.svg",
+      "bytes": 432,
+      "sha256": "75dfedf9fdf9f1f207bf76aa188e81da46a2c6c7f6afb7749edcd32f76674257",
+      "gitBlob": "ceeb0874d50171a806a5ca812355adca60ced0d6"
+    },
+    {
+      "path": "assets/ui/coins.svg",
+      "bytes": 751,
+      "sha256": "92c1e443e4fca8d755ddbb9d37ce8359a31706479041c0bca1a8c8bf1586f2e2",
+      "gitBlob": "bfd6a93522180b819924da42f04ffc99a8d6de6e"
+    },
+    {
+      "path": "assets/ui/droplet.svg",
+      "bytes": 571,
+      "sha256": "5e21eaafeb75b9067a2bef8d15700dd23940b69e68733c7ac145eccdf7c96d99",
+      "gitBlob": "863691f8d5f72959ad37688f723f7c72a1bb0071"
+    },
+    {
+      "path": "assets/ui/droplets.svg",
+      "bytes": 833,
+      "sha256": "3f913900df8a0b212a9979549836ea67b8d54b9bc2f099aa71c404f7e7b453bc",
+      "gitBlob": "5dfad60d475079ab70916655e5b1cf72d6ccd4cb"
+    },
+    {
+      "path": "assets/ui/help.svg",
+      "bytes": 488,
+      "sha256": "ec0000c11f9ae760941df8269c01c628521ce08fb806474201ab2fd6149b927c",
+      "gitBlob": "690702fabaaf006fac74dff84ac48ef16c4f9b3b"
+    },
+    {
+      "path": "assets/ui/layout-grid.svg",
+      "bytes": 723,
+      "sha256": "b85aa80002968ebfdec63e4c17bbb88ced111a1c59e2162c1b3b30f1f6982f2d",
+      "gitBlob": "07daee03899d30313e8361f9be7bb84092d12d0a"
+    },
+    {
+      "path": "assets/ui/map.svg",
+      "bytes": 446,
+      "sha256": "63b2d51baa9608cfc4efc9cd6cfb9c30c59162c49ced25aee06c9f50bdaaed80",
+      "gitBlob": "d2b672c7cffe88716086452e197d9db2378efbdd"
+    },
+    {
+      "path": "assets/ui/Nunito.ttf",
+      "bytes": 276932,
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207",
+      "gitBlob": "2ec1f4b0676c83ef33049db87b311171699e9192"
+    },
+    {
+      "path": "assets/ui/NUNITO_OFL.txt",
+      "bytes": 4385,
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65",
+      "gitBlob": "c8210f08ca3cece05b4f7baa428afe8e1abe3293"
+    },
+    {
+      "path": "assets/ui/player-pause.svg",
+      "bytes": 539,
+      "sha256": "af274e926b2585a612a7519f6fa03abef33e6e3a9818656028a54059546b5c6a",
+      "gitBlob": "69cc7012bd2961e187fd9b7d336c181c41dbb326"
+    },
+    {
+      "path": "assets/ui/player-play.svg",
+      "bytes": 384,
+      "sha256": "b678a1a1d0a1c56f77e7640017a81516e87e98a1f2059e4225ce13735fe005d2",
+      "gitBlob": "b856aef8fc15a0b685bdac6fc5527e6d6fdfd5d8"
+    },
+    {
+      "path": "assets/ui/settings.svg",
+      "bytes": 934,
+      "sha256": "48ef08a260d9064b6ba823fc0cd38449d6c79c96d1b1985b876bf091d02f8387",
+      "gitBlob": "e85d9ab9247ad43662b25caf98c5957a5f4d8df7"
+    },
+    {
+      "path": "assets/ui/shirt.svg",
+      "bytes": 437,
+      "sha256": "f2c6c61cbb07541b15f83e308764fae2e7609ef169014c180fac416b016b4ee6",
+      "gitBlob": "091a68c9f4c750da74a91753f8e49c6fbc16ecef"
+    },
+    {
+      "path": "assets/ui/sparkles.svg",
+      "bytes": 559,
+      "sha256": "8e9076e8666acdf064e0ebb78a912c18e25b4fe3f2c2cfdf4b6478837e6a8467",
+      "gitBlob": "311a2684411718770bf479b2dcb52c7ac7bb4cad"
+    },
+    {
+      "path": "assets/ui/spray.svg",
+      "bytes": 674,
+      "sha256": "192f6763c596a3136db053f93556e79826a0b1d49b84a671e95bb78b4acf540a",
+      "gitBlob": "ec11a1003db57c23b40dfbc2f03bb54816d636a1"
+    },
+    {
+      "path": "assets/ui/TABLER_LICENSE.txt",
+      "bytes": 1073,
+      "sha256": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+      "gitBlob": "3e82379dab3fe93d9ee22251949604ed63ddea39"
+    },
+    {
+      "path": "assets/ui/tool.svg",
+      "bytes": 440,
+      "sha256": "c782d1ecbaa8cdbb26a47523b994ef444da55d952f4a30de01022867d874f4c3",
+      "gitBlob": "fa86b70de95029ea5af12466448b016642b02cf9"
+    },
+    {
+      "path": "assets/ui/users.svg",
+      "bytes": 536,
+      "sha256": "d1e0df7088c07a0ba9504b01040965b3d979ee451c2cabfe3ec34086173b6570",
+      "gitBlob": "318bd36789e197bb8a9cbfa849f0dd39aa152f1d"
+    },
+    {
+      "path": "assets/ui/volume-off.svg",
+      "bytes": 681,
+      "sha256": "6c8b2b24b0606cfd9833260b37d00cefe18ad746c5e00d7faa397b1318d0dce3",
+      "gitBlob": "22b7773b80fc1c0216bbe238837e01253c27cc71"
+    },
+    {
+      "path": "assets/ui/volume.svg",
+      "bytes": 539,
+      "sha256": "7c5cb3bace7c8f052859a1b7f61f3258a97fbc83af8da15bd091d0cf9168ccde",
+      "gitBlob": "45721adf668fc378e7ca77f7c30a3b5d97561426"
+    },
+    {
+      "path": "assets/ui/wash-machine.svg",
+      "bytes": 647,
+      "sha256": "4db965e243cbc42e63d10dfdec0c3c1c154ad99282d91526a4fc541e33eb479f",
+      "gitBlob": "d0befbcd726952f76cd821d07aec779c0374704d"
+    },
+    {
+      "path": "assets/ui/wash.svg",
+      "bytes": 733,
+      "sha256": "cd6744bdf3de10d1765f2aaad6ed821dd772f0fb558ecedd9fcc0cf07be62029",
+      "gitBlob": "3eda5615b0d05c19770821f5d1c32268bab444c2"
+    },
+    {
+      "path": "assets/ui/x.svg",
+      "bytes": 393,
+      "sha256": "c9f8ba20c8d25e500113316092689383dec16edf6ac185865ed55d6f341aea13",
+      "gitBlob": "4a430e9d7f33891fb7f3e54fe3e7ae471d5067c0"
+    },
+    {
+      "path": "build.mjs",
+      "bytes": 490,
+      "sha256": "5fce4b27633639021ca5932dc80f42a9918a9cb01e0b0e28758a8d8d3c519cbb",
+      "gitBlob": "e6548224c8fd10943fb5099f0a74543ba34d9256"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5013,
+      "sha256": "dfa02825019e0b08f68e8219275443dca4abcdaf573c1fb7b57ecefba7fa837e",
+      "gitBlob": "c93ec8902f54b46f71285d2855686a72f570c97c"
+    },
+    {
+      "path": "LOOPIT_HANDOFF.md",
+      "bytes": 4413,
+      "sha256": "aab880dcb54801dc4f5e84e6fe0bb92aae41e150e3f5b8207ff82f527addb8dc",
+      "gitBlob": "2f216fd71ae7ac2077199dd95b67979414cbe3fb"
+    },
+    {
+      "path": "LOOPIT_SINGLE.html",
+      "bytes": 155215,
+      "sha256": "d3b801295d272553de6e1368eae827298db45536a75622a743d4fdc0487fb261",
+      "gitBlob": "8ebffa0c8e8bf91f8eb55b4352abdd0abeec3468"
+    },
+    {
+      "path": "package.json",
+      "bytes": 195,
+      "sha256": "e4e204ab2d5b8f6bddd130bfe2b876128de1c828e5d26b7e27307985ab55bf31",
+      "gitBlob": "4f4f6591f418ce1f080cf804b21722f632f780cd"
+    },
+    {
+      "path": "PLATFORM_BUNDLE.md",
+      "bytes": 985,
+      "sha256": "bff140f4356768499e2457fd706a4c1d4c95f976d00441ab8ca292ea96f4a3d3",
+      "gitBlob": "b7ce4dc992040fc9c2ee9ab791d637789edf72d0"
+    },
+    {
+      "path": "qa/v020-reference-size-final.jpg",
+      "bytes": 59412,
+      "sha256": "f23100921bca727dbbb6c232b9bbf5c58cc927ed5203442199bfc25f77ad8e88",
+      "gitBlob": "f192be2ef7042c8a0c7f4af50a4e6a1eea8bca69"
+    },
+    {
+      "path": "qa/v021-traffic-overview.jpg",
+      "bytes": 60491,
+      "sha256": "0860c6eaef306b332e8615c4ca446f3511c846a0def8bd4fa0e2bda9c6bd7375",
+      "gitBlob": "cf2ba86d2908b738c593410b5be28a21cd4d378d"
+    },
+    {
+      "path": "qa/v030-vip-care.jpg",
+      "bytes": 46837,
+      "sha256": "642e0e7bca55cdd90b2f8cd795ad270bfb16a502874bfaf96d2e809d8e4082a9",
+      "gitBlob": "93426275a4770cd215396359c34d8c7cc647f7cb"
+    },
+    {
+      "path": "qa/v030-vip-mobile.jpg",
+      "bytes": 46040,
+      "sha256": "f6accc6be732f4338e586698692c8eeb2a83a22d37a1bed05543598cb142e3fe",
+      "gitBlob": "646fa13d09197c7dceae414e2fccfe09c5beb60c"
+    },
+    {
+      "path": "QA.md",
+      "bytes": 3242,
+      "sha256": "5ad0d03ce3ebaf67c2e1d87c35a54b3311bfe2ab93f6175901ce65d568f48d8a",
+      "gitBlob": "87cbf3c4504522902bc5549473459865671863cf"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4401,
+      "sha256": "54473ef2bc8d30c1dd8182e8e649a5c6e60e253dc222f384f3b020b4a255c22c",
+      "gitBlob": "15bc177bf3aea25c5bcfe7f29074523431df66fa"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 1119,
+      "sha256": "42632591809480fe2f78ceb1b5d8f0b714005ccb352c125755510de354b9ea08",
+      "gitBlob": "db421726d0af807b4fe5999e8cc0d903223b054c"
+    },
+    {
+      "path": "src/app.mjs",
+      "bytes": 10210,
+      "sha256": "fc6a96bfeadcd648a5f30c3d83d9c902e3bb5514a2c766222aab0a613e17ae9b",
+      "gitBlob": "5b3d3f6dec3ac1b18d95297f8a44bba504b79677"
+    },
+    {
+      "path": "src/arcade.css",
+      "bytes": 21110,
+      "sha256": "1395a4c481dc9b48fa6ba163c944f8f47dc174cb4437522ddf58b2c1f2f9a8a5",
+      "gitBlob": "0f464c62028e150f8b6c7460c701a80b24c263ab"
+    },
+    {
+      "path": "src/art.mjs",
+      "bytes": 8405,
+      "sha256": "144aee0e5f7979f1af7c59d39f6c38c92e469894fedfdb5447d7e2f5531626c2",
+      "gitBlob": "3020d34bfeb0aa938bce6af2aa94021cabc95159"
+    },
+    {
+      "path": "src/audio.mjs",
+      "bytes": 1315,
+      "sha256": "6ded744d8c2c1b86d64733a376a0cdac47cfa5b2f2428d9535ecf4c20c71b8a4",
+      "gitBlob": "ec65930a7ed8ff2d4c0b6073f97c1c6a57e11ca0"
+    },
+    {
+      "path": "src/car.mjs",
+      "bytes": 11766,
+      "sha256": "6dc45b864967da0d88700e78a20bac43decf1b11d45c6183852a82722d9a90e0",
+      "gitBlob": "bd6aaeceed59c519aa7588fd7e2cd9961d681ad2"
+    },
+    {
+      "path": "src/config.mjs",
+      "bytes": 3958,
+      "sha256": "0a42605d1d4002f3745b494f0b4d0e20f1c8e20f5012b273f16d703e845d58e5",
+      "gitBlob": "887a869f5398b1944885b01bf6f64bb7255747e0"
+    },
+    {
+      "path": "src/effects.mjs",
+      "bytes": 4747,
+      "sha256": "34be04c83265509cd541760ef3ffb24903363ee22b9fc37dfb9e073d2501e008",
+      "gitBlob": "b4b074816d3a62be29131f2caf4cb64415ca00ac"
+    },
+    {
+      "path": "src/icons.mjs",
+      "bytes": 449,
+      "sha256": "eaa3893c7338937ac6ad7de4484c986a1de894a79c0eabfb14773e11a00749f4",
+      "gitBlob": "20b7b2ac6b3763baf46ce7ecaa679cd794812c33"
+    },
+    {
+      "path": "src/luxury.mjs",
+      "bytes": 5145,
+      "sha256": "ee114fc88d4d08b160843c748fabfb14d95a218d872b28a5da0d26be00c48938",
+      "gitBlob": "0f99d836593cc680089da916b45017c31dd93d55"
+    },
+    {
+      "path": "src/preview.mjs",
+      "bytes": 1768,
+      "sha256": "f2df97e3290b8b74661cbf3900389c7096fd0f55ebea3f887fc1d74260c0c6fc",
+      "gitBlob": "f87343aa668830cad3440cff71eee2c7fac7941d"
+    },
+    {
+      "path": "src/simulation.mjs",
+      "bytes": 11859,
+      "sha256": "69b0d447368c534b22a05d9b7f965f0f704f7f8d5d228d0bdde24a1dac809e9c",
+      "gitBlob": "74f2e46ce76a67d08220b1718df7ccb9092f8542"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 16101,
+      "sha256": "87e119ff69549a3a13b2a222269bd6df11fb8151754ff43852c09f16782ec180",
+      "gitBlob": "deebf37540538f45e94a20305cbf040bf06d57de"
+    },
+    {
+      "path": "src/ui.mjs",
+      "bytes": 17714,
+      "sha256": "91b86460998ac01a54e7577b446b4e7160c9aa5f5f9500d0b05d7e066814ca1d",
+      "gitBlob": "20030df8518412ac1a491d0976b6255b0b57921c"
+    },
+    {
+      "path": "src/world.mjs",
+      "bytes": 8235,
+      "sha256": "ef75eac4d8d30322b9358f36d8d3902f275f13c4f9252492e7b9f197cca2360b",
+      "gitBlob": "f46ff0e886e0a6c0b55ff9b5430c5522c377a260"
+    },
+    {
+      "path": "tests/art.test.mjs",
+      "bytes": 1184,
+      "sha256": "6c919a583b2babbf1c0eab22b1c20c38a2dec0176fa33662420c1d81e90053a8",
+      "gitBlob": "dbd86759f19a60e96d98b00538be0cc748746871"
+    },
+    {
+      "path": "tests/luxury.test.mjs",
+      "bytes": 4145,
+      "sha256": "54eae3d0d31bff72ceb97b5dcb1a781fd3e6d360fe176af1fef68a9c287cd8c2",
+      "gitBlob": "5feca35431bcd7e990960674ca31fbf619f66752"
+    },
+    {
+      "path": "tests/simulation.test.mjs",
+      "bytes": 11610,
+      "sha256": "115fa2360465b703563d643993650625120c95178e49e40f8273286204ede78a",
+      "gitBlob": "b186b2b0055a9be4908b7fb1db57c32767012368"
+    },
+    {
+      "path": "vendor/geometries/RoundedBoxGeometry.js",
+      "bytes": 6483,
+      "sha256": "b3e2d87473cd48f59720739a6ceedbd9f0dccf89224c84403730b2e808d5e4f2",
+      "gitBlob": "9ce603cfac7b59cb0388ab571f3d832cbacfba6b"
+    },
+    {
+      "path": "vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "gitBlob": "8ada2a5f982916b0ba4b7a0aa7de347587e745d7"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "gitBlob": "0a1d6cb9ef3cabc97a50bd02394c85e8d1c513c2"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "gitBlob": "c52087acfabae80efabb8cc05e3a1d96e35a1426"
+    },
+    {
+      "path": "vendor/utils/BufferGeometryUtils.js",
+      "bytes": 37725,
+      "sha256": "ce6b8c82f29e4ad7e8e330ce2bccd921de6c36a5c05c8f50f9a8b039596b8551",
+      "gitBlob": "6bae3d83270ee4381110f8ec0d1a6caf02ecaa23"
+    }
+  ],
+  "excluded": "research screenshots, user references, logs, caches, dist duplicates and local saves"
+}

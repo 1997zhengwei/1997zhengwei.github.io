@@ -1,0 +1,34 @@
+{
+  "license": "CC0-1.0",
+  "authors": [
+    "Quaternius",
+    "Gonzalo Furnier"
+  ],
+  "urls": [
+    "https://quaternius.itch.io/universal-animation-library",
+    "https://quaternius.itch.io/universal-animation-library-2"
+  ],
+  "variant": "Standard / non-root-motion glTF",
+  "files": [
+    {
+      "file": "License.txt",
+      "bytes": 332,
+      "sha256": "6d01f55c6e4c49a2c9963e147e561945ae2c83958c8ca667d90a6bffdbfac061"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 702,
+      "sha256": "ccd02718886b5a57f10f0a8911a38cfe10c36880e1d6dfa3445923fba32d2a72"
+    },
+    {
+      "file": "UAL1_Standard.glb",
+      "bytes": 7618436,
+      "sha256": "69591853d817488edaa8fd9bf8fc1d821eaeaf789f8627b3cd23b41c4ed67997"
+    },
+    {
+      "file": "UAL2_Standard.glb",
+      "bytes": 8091444,
+      "sha256": "8cee20ab1bc55130092447e810e26df22dd2803eccc54f52137a7d54d7ab88a8"
+    }
+  ]
+}

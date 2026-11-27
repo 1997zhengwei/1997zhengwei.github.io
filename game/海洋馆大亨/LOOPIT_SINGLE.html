@@ -1,0 +1,3159 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#50bfc9"><title>海洋馆大亨 · 蔚蓝海岸</title><style>
+@font-face{font-family:Nunito;src:url('./assets/ui/Nunito.ttf')}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;overscroll-behavior:none}body{font-family:Nunito,'Microsoft YaHei','PingFang SC',sans-serif;color:#285364;background:#65c8cf;font-weight:800}button{font:inherit;color:inherit;cursor:pointer;border:0}button:focus-visible{outline:3px solid #ff965f;outline-offset:3px}button:active{transform:translateY(3px);box-shadow:none}button:disabled{cursor:default;opacity:.52}button svg{pointer-events:none}small{font-weight:700;color:#7b9d99}h1,h2,p{margin:0}button,canvas{touch-action:none}[hidden]{display:none!important}#game{position:relative;width:100%;height:100%;isolation:isolate}#scene{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none}.card{background:#fff9e9ed;border:2px solid #42717b;box-shadow:0 4px 0 #326b7955,0 8px 22px #2e718522;border-radius:19px;backdrop-filter:blur(9px)}.round{display:grid;place-items:center;width:44px;height:44px;border:2px solid #3e737e;border-radius:15px;background:#fff8e8;box-shadow:0 4px #34717e66;padding:8px}.round svg{width:25px;height:25px}.primary{background:linear-gradient(#ffe88d,#ffc25d);border:2px solid #3c6f7c;border-radius:19px;box-shadow:0 5px #3a6e7d;min-height:54px;padding:12px 18px}.primary svg{width:30px;height:30px}#hud{position:absolute;top:max(14px,env(safe-area-inset-top));left:16px;right:16px;display:flex;justify-content:space-between;gap:10px;pointer-events:none}#hud .card{display:flex;align-items:center;gap:10px;padding:9px 14px}#hud h1{font-size:22px;line-height:1.1;letter-spacing:-.5px}#hud small{display:block;font-size:10px;line-height:1.5}.brand-icon{background:#ffe19a;border-radius:12px;display:grid;place-items:center;width:37px;height:39px}.brand-icon svg{width:32px;height:32px}.wallet strong{font-size:26px;line-height:1}.wallet svg{width:28px;height:28px;color:#edb14d}.wallet{min-width:100px}#quest{position:absolute;top:91px;left:16px;width:260px;padding:10px 13px;text-align:left;border-color:#fff9da;box-shadow:0 3px #33788424;display:grid;grid-template-columns:30px 1fr 38px;align-items:center;gap:7px;border-radius:16px}#quest .star{color:#f6ba54;font-size:25px}#quest strong{display:block;font-size:13px}#quest small{font-size:10px}#quest b{font-size:11px}#quest.ready{background:#ffec9c}#utility{position:absolute;right:16px;top:95px;display:grid;gap:10px}#utility .round{width:39px;height:39px;border-radius:13px;background:#ecf8e6e8;padding:7px}#utility svg{width:22px;height:22px}#minimap{position:absolute;left:16px;top:170px;width:80px;padding:6px 5px 3px;border-color:#fff3ce;background:#fbf8e8da;border-radius:17px}#map{width:64px;height:78px;display:block;margin:auto}#minimap span{font-size:9px;color:#5c8b89}#water-info{position:absolute;top:166px;left:16px;background:#1c7589db;padding:10px 13px;border-radius:15px;color:#efffe8;min-width:146px;border:1px solid #9ee0dc}#water-info~#minimap{}#water-info span{font-size:12px}#water-info small{color:#d1f4e9;font-size:10px}.oxygen{background:#185b71;height:5px;border-radius:4px;overflow:hidden;margin:6px 0 3px}.oxygen span{display:block;height:100%;background:#c1f0c9;transition:width .2s linear}body.swimming #minimap{top:250px;width:69px}body.swimming #map{width:56px;height:69px}#world-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}.tank-label{position:absolute;transform:translate(-50%,-50%);background:#fff9e8f5;border:1.5px solid #edbe82;box-shadow:0 3px #709f9d33;border-radius:12px;padding:5px 9px;white-space:nowrap;pointer-events:auto;font-size:11px;display:flex;align-items:center;gap:6px}.tank-label span{color:#4b9291}.tank-label .dot{width:8px;height:8px;border-radius:50%}.tank-label.blueprint{background:#fff0cbe6;color:#b08b57;border-style:dashed}.tank-label.full span{color:#d39444}#target-ring{position:absolute;transform:translate(-50%,-50%);width:60px;height:60px;pointer-events:none;text-align:center}#target-ring svg{width:60px;height:60px;filter:drop-shadow(0 2px 3px #24667c55)}#target-ring circle{fill:none;stroke:#fffbe4;stroke-width:4}#target-ring .track{stroke:#24637d88;stroke-width:5}#capture-progress{stroke:#ffe386!important;stroke-dasharray:157.1;transform:rotate(-90deg);transform-origin:center}#capture-name{font-size:10px;background:#296f7ce8;color:#fff9df;border-radius:8px;padding:3px 7px;white-space:nowrap}#guide{position:absolute;left:50%;bottom:206px;transform:translateX(-50%);padding:10px 14px;width:max-content;max-width:calc(100% - 32px);display:flex;gap:11px;align-items:center;border:1px solid #e4edcc;border-radius:16px;pointer-events:none;background:#fffbe5e6;transition:opacity .3s}#guide svg{width:26px;height:26px;color:#5ba9a4}#guide strong{font-size:12px;display:block}#guide small{font-size:10px;display:block;margin-top:2px}#cargo{position:absolute;bottom:100px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;max-width:calc(100% - 24px);padding:7px 12px;border-radius:14px;border:1px solid #e6ecce;box-shadow:0 3px #39818a22;white-space:nowrap;pointer-events:none}#cargo svg{width:20px;height:20px}#cargo strong{font-size:13px}#bag-types{font-size:10px;color:#75a09b;max-width:190px;overflow:hidden;text-overflow:ellipsis}#joystick{position:absolute;left:21px;bottom:111px;width:92px;height:92px;border:3px solid #fff9df88;border-radius:50%;background:#f5ffe92c;box-shadow:inset 0 0 0 9px #fffbe91b;touch-action:none}#stick{position:absolute;width:48px;height:48px;left:19px;top:19px;border-radius:50%;background:linear-gradient(#fffceb,#d9f1dc);border:3px solid #fffbea;box-shadow:0 4px 12px #225e7755;pointer-events:none}#actions{position:absolute;right:18px;bottom:144px;display:flex;align-items:flex-end;gap:9px}#cast{min-width:92px;display:flex;align-items:center;flex-direction:column;gap:2px;padding:10px 13px;border-radius:20px;min-height:78px}#cast strong{font-size:12px}#return{background:#a6e5c8;width:45px;height:45px}#bottom{position:absolute;bottom:max(16px,env(safe-area-inset-bottom));right:16px;left:16px;display:flex;gap:9px;justify-content:center}#bottom button{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;max-width:220px;height:65px;background:#fff6df;border:2px solid #457985;border-radius:18px;box-shadow:0 5px #3d748577;padding:6px 10px}#bottom button:first-child{background:linear-gradient(#c0e7c3,#8ed9b7)}#bottom button:nth-child(2){background:linear-gradient(#ffe9a2,#ffd178)}#bottom button svg{width:26px;height:26px}#bottom button strong{font-size:12px}.eyebrow{font-size:10px;font-weight:1000;letter-spacing:2px;color:#8aa09a}#welcome{position:absolute;left:6%;bottom:10%;width:390px;padding:28px;border-color:#ffefd2;background:#fff9e9f0;z-index:15;box-shadow:0 12px 50px #165f7c38}#welcome h2{font-size:31px;line-height:1.25;margin:12px 0 14px;color:#285a6a;letter-spacing:-1px}#welcome p{font-size:13px;line-height:1.9;color:#73968f}.features{display:flex;gap:6px;margin:18px 0}.features span{background:#e5eedb;color:#6b9791;padding:5px 7px;font-size:10px;border-radius:8px}#welcome .primary{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:left}#welcome>small{display:block;margin-top:14px;font-size:10px;text-align:center}#drawer{position:absolute;z-index:25;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;max-width:calc(100% - 24px);max-height:86%;display:flex;flex-direction:column;background:#fff9e9f7;border-color:#fff2ce;border-width:3px;box-shadow:0 16px 80px #1e657c55}#drawer>header{display:flex;align-items:center;justify-content:space-between;padding:20px 19px 14px;gap:10px;border-bottom:1px solid #e5e7cf}#drawer h2{font-size:24px;margin-top:2px}#drawer header small{font-size:9px;letter-spacing:1.5px}#drawer-content{overflow:auto;padding:15px 18px 20px;overscroll-behavior:contain}#drawer-content>p{font-size:12px;color:#81998f;line-height:1.8;margin-bottom:14px}.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.shop-card{padding:14px 12px;border-radius:16px;background:#f1f1dc;border:1px solid #dce6ce}.shop-card h3{font-size:15px;margin:7px 0 3px}.shop-card p{font-size:11px;color:#809a90;margin:4px 0 12px;line-height:1.6;min-height:34px}.shop-card small{font-size:10px}.shop-card svg{width:34px;height:34px;color:#5a9f9b}.shop-card button{width:100%;padding:8px 5px;min-height:39px;background:linear-gradient(#aee4bc,#86d6b1);border:1.5px solid #578786;border-radius:11px;box-shadow:0 3px #709b8f66;font-size:12px}.shop-card button.alt{background:linear-gradient(#fff4c5,#ffdc8d);margin-top:8px}.fish-chip{display:flex;align-items:center;justify-content:center;height:60px;border-radius:13px;background:#d8eee2}.fish-chip svg{width:66px;height:43px}.fish-chip.locked{filter:grayscale(1);opacity:.4}.shop-card.locked{opacity:.7}.wide-info{background:#e5efde;border-radius:14px;padding:14px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}.wide-info h3{margin:0 0 5px;font-size:15px}.wide-info small{font-size:11px}.wide-info button{padding:10px 14px;border:1px solid #80a5a0;background:#ffe39a;border-radius:12px;font-size:12px}.goal-card{padding:12px;margin-bottom:10px;background:#e9eedb;border-radius:13px;display:flex;justify-content:space-between;align-items:center;gap:10px}.goal-card strong{display:block;font-size:13px}.goal-card small{font-size:11px}.goal-card button{padding:10px;background:#ffdf8b;border-radius:12px;min-width:70px}.help-copy{line-height:1.9;font-size:13px}.help-copy p{margin:0 0 14px!important}.danger{padding:10px 15px;border:1px solid #d6b694;background:#ffe4cb;border-radius:10px;font-size:11px;margin-top:16px}#toast{position:absolute;z-index:40;top:42%;left:50%;transform:translate(-50%,-20px);opacity:0;pointer-events:none;color:#fff9e4;background:#275f73ee;border:1px solid #9bd9cc;border-radius:15px;padding:12px 18px;max-width:85%;width:max-content;font-size:12px;transition:.25s;text-align:center;box-shadow:0 8px 25px #285c7044}#toast.show{opacity:1;transform:translate(-50%,0)}#discovery{position:absolute;z-index:12;top:165px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:12px 20px;border-color:#fff3cc;pointer-events:none;animation:discover .5s ease-out}#discovery svg{width:50px;height:36px}#discovery small{font-size:9px;letter-spacing:1px}#discovery strong{display:block;font-size:17px}@keyframes discover{from{opacity:0;transform:translate(-50%,15px)}to{opacity:1;transform:translate(-50%,0)}}#floaters{position:absolute;inset:0;pointer-events:none;overflow:hidden}.floater{position:absolute;font-size:18px;font-weight:1000;color:#fff2a3;text-shadow:0 2px 0 #4c8193,1px 0 0 #4c8193,-1px 0 0 #4c8193;animation:float 1.3s ease-out forwards}@keyframes float{to{transform:translateY(-65px);opacity:0}}#loading{position:absolute;z-index:70;inset:0;background:#dbefdf;display:grid;place-content:center;text-align:center;gap:12px;color:#398b91}#loading strong{font-size:14px}.loader-fish{font-size:40px;animation:bob 1s ease-in-out infinite alternate}@keyframes bob{to{transform:translateY(-10px)}}#pause-screen{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:55;padding:28px;min-width:280px;text-align:center}#pause-screen p{margin:14px 0;font-size:12px;color:#75968d}#inspect{position:absolute;top:20px;left:20px;right:20px;padding:12px;display:flex;gap:15px;align-items:center;z-index:18;background:#fff9e9df}#inspect h2{font-size:20px}#inspect small{font-size:10px}#inspect>span{margin-left:auto;font-size:11px;color:#759b95}body.inspecting #hud,body.inspecting #quest,body.inspecting #utility,body.inspecting #joystick,body.inspecting #actions,body.inspecting #bottom,body.inspecting #cargo,body.inspecting #guide,body.inspecting #minimap{display:none}body:not(.started) #hud,body:not(.started) #quest,body:not(.started) #utility,body:not(.started) #joystick,body:not(.started) #actions,body:not(.started) #bottom,body:not(.started) #cargo,body:not(.started) #guide,body:not(.started) #minimap,body:not(.started) #world-labels{display:none}body.menu-open #joystick,body.menu-open #actions{opacity:.1;pointer-events:none}
+@media(min-width:800px){#hud{left:24px;right:24px}#quest{left:24px}#minimap{left:24px}#water-info{left:24px}#bottom{left:calc(50% - 260px);right:calc(50% - 260px)}#joystick{left:40px;bottom:40px;width:112px;height:112px}#stick{left:29px;top:29px}#cargo{bottom:103px}#actions{right:35px;bottom:34px}#cast{min-width:116px}#guide{bottom:167px}}
+@media(max-width:600px){#welcome{left:18px;bottom:24px;width:calc(100% - 36px);padding:24px}#welcome h2{font-size:29px}#hud{left:12px;right:12px;top:12px}#hud .card{padding:8px 10px;gap:7px}#hud h1{font-size:19px}#hud .brand-icon{width:33px;height:35px}#quest{top:87px;left:12px;width:238px;padding:8px 10px}#utility{right:12px;top:89px}#minimap{left:12px;top:156px}#water-info{left:12px;top:158px}#bottom{left:12px;right:12px;bottom:14px;gap:7px}#bottom button{height:64px;flex-direction:column;gap:2px;padding:5px}#bottom button strong{font-size:11px}#bottom button svg{width:25px;height:25px}#guide{bottom:228px;max-width:calc(100% - 26px);width:310px;padding:9px 12px}#cargo{bottom:95px;padding:7px 11px}#bag-types{max-width:140px}#joystick{left:17px;bottom:127px}#actions{bottom:137px;right:15px}#drawer>header{padding:15px}#drawer h2{font-size:22px}#drawer-content{padding:12px}#inspect{left:12px;right:12px;top:12px}#inspect>span{display:none}.tank-label{font-size:10px;padding:4px 7px}}
+@media(max-height:620px){#quest{top:77px}#minimap{top:141px;width:62px}#map{width:47px;height:59px}#utility{top:80px;gap:7px}#utility .round{width:34px;height:34px}#water-info{top:143px;padding:7px 10px}body.swimming #minimap{top:216px}#guide{bottom:203px;width:270px;opacity:.93}#guide small{font-size:9px}#guide strong{font-size:11px}#joystick{bottom:112px;width:78px;height:78px}#stick{width:42px;height:42px;left:15px;top:15px}#actions{bottom:121px}#cast{min-height:68px;min-width:80px;padding:7px}#cargo{bottom:88px}#bottom button{height:57px}#hud .card{padding:7px 10px}#hud h1{font-size:18px}#hud .wallet strong{font-size:23px}#welcome{padding:20px}#welcome h2{font-size:26px}#welcome .features{margin:13px 0}#discovery{top:146px}#drawer{max-height:90%}}
+
+#exit-inspect svg{transform:rotate(180deg)}
+#brand{text-align:left;min-width:0}#hud .brand small{white-space:nowrap;font-size:10px}#hud .brand h1{white-space:nowrap}.section-title{font-size:16px;margin:18px 0 12px;color:#367c89}.rare-card{border-color:#eac980;background:linear-gradient(145deg,#fff3cb,#e5f4e5)}.rare-card .fish-chip{background:radial-gradient(ellipse at center,#fff9d9,#d4ebed)}.rare-discovery{background:linear-gradient(120deg,#fff2bd,#edf8e7)!important;border:2px solid #f4cf75!important;box-shadow:0 0 30px #fff1b766}.expansion-card{padding:17px;border:1.5px solid #a1d9c8;border-radius:17px;background:linear-gradient(140deg,#e2f5dd,#c4ece5);margin-bottom:14px}.expansion-card small{font-size:10px;color:#5a938b}.expansion-card h3{font-size:18px;margin:8px 0}.expansion-card p{font-size:12px;line-height:1.7;margin:6px 0 13px;color:#688f88}.expansion-card .primary{width:100%;font-size:13px;min-height:47px;padding:10px}.gallery-pager{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:12px}.gallery-pager button{width:39px;height:35px;background:#e2eee0;border:1px solid #8bb8ac;border-radius:10px;font-size:23px}.honor-pass{text-align:center;padding:19px 10px 17px;border:2px solid var(--honor-color);border-radius:20px;background:radial-gradient(ellipse at 50% 0,#fff7cf,#e8f5e5 80%);box-shadow:inset 0 0 0 4px #fffdf05c;margin-bottom:16px;position:relative;overflow:hidden}.crown-mark{font-family:serif;font-size:58px;line-height:1.15;color:#e8b94c;text-shadow:0 2px #fffbe7,0 4px 0 #9c924c33}.honor-pass>small{display:block;font-size:10px;letter-spacing:2px;color:#729b94}.honor-pass h3{font-size:27px;color:#377d87;margin:8px 0 3px}.honor-pass>strong{font-size:17px;color:#a9964f}.pass-stats{display:flex;justify-content:space-around;gap:7px;margin-top:20px;font-size:10px;color:#7d9990}.pass-stats b{display:block;font-size:18px;color:#377d87;margin-bottom:4px}.title-road{display:grid;gap:7px;margin-top:17px}.title-road span{padding:10px 13px;border-radius:11px;background:#e7ecdf;color:#9eafa1;font-size:12px}.title-road .earned{color:#608c80;background:#e2f1da;border:1px solid #c6dfb7}#honor{position:absolute;z-index:24;top:24%;left:50%;transform:translateX(-50%);width:350px;max-width:calc(100% - 42px);padding:20px 16px 23px;text-align:center;border:2px solid var(--honor-color,#f5d17d);background:radial-gradient(ellipse at top,#fff8d2,#eaf8e6);box-shadow:0 12px 50px #246a7950,0 0 35px #fff0ab3c;pointer-events:none;isolation:isolate}#honor-close{pointer-events:auto;position:absolute;right:9px;top:7px;width:30px;height:30px;font-size:22px;background:transparent;color:#88aaa0}#honor .honor-crown{display:block;font-family:serif;font-size:58px;color:#e6b646;line-height:1.1;position:relative;text-shadow:0 2px #fff9d0}#honor small{display:block;font-size:10px;letter-spacing:2px;color:#819f91;margin:6px 0}#honor strong{display:block;font-size:25px;color:#347985;position:relative}#honor-detail{display:block;font-size:11px;color:#7e9f92;margin-top:9px}.honor-rays{position:absolute;z-index:-1;width:260px;height:260px;top:-65px;left:calc(50% - 130px);opacity:.5;background:repeating-conic-gradient(from 0deg,#fff6b400 0deg 15deg,#fff6b4aa 15deg 30deg);border-radius:50%;mask-image:radial-gradient(#000,transparent 70%)}.celebrating{animation:honor-arrive .65s cubic-bezier(.16,1.4,.3,1)}.celebrating .honor-rays{animation:honor-spin 18s linear infinite}.confetti{position:absolute;width:7px;height:12px;top:12%;left:10%;background:#f1c96e;border-radius:2px;animation:honor-confetti 2.8s ease-out infinite}.c2{left:25%;background:#8ddfc6;animation-delay:.4s}.c3{left:43%;background:#c5b5ed;animation-delay:.9s}.c4{left:63%;background:#eda9c5;animation-delay:.2s}.c5{left:77%;background:#8bd9e3;animation-delay:1.2s}.c6{left:90%;background:#edce70;animation-delay:.7s}@keyframes honor-arrive{from{opacity:0;transform:translate(-50%,20px) scale(.72)}to{opacity:1;transform:translate(-50%,0) scale(1)}}@keyframes honor-spin{to{transform:rotate(360deg)}}@keyframes honor-confetti{0%{opacity:0;transform:translateY(-20px) rotate(0)}20%{opacity:.9}100%{opacity:0;transform:translateY(185px) rotate(230deg)}}@media(max-width:360px){#hud .brand small{font-size:9px}#hud .brand h1{font-size:17px}#hud .brand-icon{width:26px}#hud .card{padding:7px 8px;gap:5px}#hud .wallet strong{font-size:21px}.honor-pass h3{font-size:23px}.pass-stats b{font-size:16px}#honor strong{font-size:22px}.expansion-card{padding:13px}}@media(prefers-reduced-motion:reduce){.celebrating,.celebrating .honor-rays,.confetti{animation:none}.confetti{display:none}}
+.shop-card button{min-height:43px}
+
+/* Clearer tropical accents; interaction placement stays familiar. */
+.card{background:#fffbedf0;border-color:#387b88;box-shadow:0 4px 0 #357f8b44,0 9px 24px #236c7c18}.brand-icon{background:linear-gradient(#a5f4da,#62d7cf);color:#187e9b}.wallet svg{color:#efa72e}.primary{background:linear-gradient(#ffe890,#ffbe63)}#bottom button:nth-child(3){background:linear-gradient(#e7d9ff,#c4bbef)}#bottom button:first-child{background:linear-gradient(#b4f1d4,#69d7bd)}.fish-chip{background:linear-gradient(150deg,#d9f5e6,#d2eef4);height:88px}.fish-chip img{width:100%;height:100%;object-fit:contain}.fish-chip.locked{filter:grayscale(.8);opacity:.56}#discovery img{width:64px;height:46px;object-fit:contain}.shop-card{background:#edf3e3;border-color:#d4e5d6}.shop-card h3{color:#28687b}#world-labels .tank-label{background:#fffceef5;border-color:#93d7cf}.wide-info{gap:10px}.wide-info button{white-space:nowrap}.wide-info h3{font-size:14px}#inspect{background:#f7ffedf0}.oxygen span{background:linear-gradient(90deg,#62dfd1,#dbffa0)}
+#hud button{pointer-events:auto}
+#brand{max-width:calc(100% - 110px)}#brand>div{min-width:0}#brand small{overflow:hidden;text-overflow:ellipsis}@media(max-width:360px){#brand .brand-icon svg{width:25px;height:25px}}
+.expansion-card .alt{display:block;width:100%;min-height:38px;padding:8px 12px;margin-top:10px;border:1px solid #87b9a6;border-radius:12px;background:#edf7df;font-size:12px}.rare-owned{padding:10px 12px;border:1px solid #e2c780;background:#fff2cb;border-radius:11px;color:#8c854c!important}
+
+.capacity-credit{padding:9px 12px;background:#e2f3dd;border-radius:10px;font-size:11px!important;color:#5a9987!important}
+
+.tank-expansion small{line-height:1.7}@media(max-width:600px){.tank-expansion{flex-direction:column;align-items:stretch;gap:12px}.tank-expansion>button{width:100%;min-height:42px}}
+
+</style></head><body>
+<main id="game" aria-label="海洋馆大亨三维游戏"><canvas id="scene" aria-label="可以行走、潜水与捕鱼的海洋馆"></canvas>
+<header id="hud"><button id="brand" class="brand card" aria-label="查看馆长荣誉"><span class="brand-icon" id="brand-icon"></span><div><h1>蔚蓝海岸</h1><small id="rank">海边小鱼馆</small></div></button><button id="wealth" class="wallet card" aria-label="查看财富金库"><span id="coin-icon"></span><div><strong id="cash">120</strong><small>贝壳金币</small></div></button></header>
+<button id="quest" class="card" aria-label="查看成长目标"></button>
+<div id="water-info" hidden><span id="zone-name">珊瑚浅湾</span><div class="oxygen"><span id="oxygen-fill"></span></div><small id="oxygen-text">氧气 60s</small></div>
+<aside id="utility"><button id="sound" class="round" aria-label="关闭声音"></button><button id="help" class="round" aria-label="玩法说明"></button><button id="pause" class="round" aria-label="暂停"></button></aside>
+<button id="minimap" class="card" aria-label="打开海域地图"><canvas id="map" width="144" height="176"></canvas><span>海域图</span></button>
+<div id="world-labels"></div><div id="target-ring" hidden><svg viewBox="0 0 60 60"><circle class="track" cx="30" cy="30" r="25"/><circle id="capture-progress" cx="30" cy="30" r="25"/></svg><span id="capture-name"></span></div>
+<div id="guide" class="card"><span id="guide-icon"></span><div><strong id="guide-title">到码头，开始第一次潜水</strong><small id="guide-text">拖动移动 · 靠近鱼群自动捕鱼</small></div></div>
+<div id="cargo" class="card"><span id="bag-icon"></span><strong id="bag-count">0 / 10</strong><span id="bag-types">网兜空空，去海里看看</span></div>
+<div id="joystick" aria-label="拖动摇杆移动"><div id="stick"></div></div>
+<div id="actions"><button id="return" class="round" aria-label="回馆补货" hidden></button><button id="cast" class="primary"><span id="cast-icon"></span><strong id="cast-text">下海捕鱼</strong></button></div>
+<nav id="bottom" aria-label="经营菜单"><button data-menu="upgrades"><span id="upgrade-icon"></span><strong>装备 · 员工</strong></button><button data-menu="tanks"><span id="tank-icon"></span><strong>扩建展馆</strong></button><button data-menu="album"><span id="album-icon"></span><strong>海洋图鉴</strong></button></nav>
+<aside id="honor" class="card" role="status" hidden><div class="honor-rays"></div><span class="honor-crown">♛</span><small id="honor-kicker"></small><strong id="honor-name"></strong><span id="honor-detail"></span><button id="honor-close" aria-label="关闭庆典">×</button><i class="confetti c1"></i><i class="confetti c2"></i><i class="confetti c3"></i><i class="confetti c4"></i><i class="confetti c5"></i><i class="confetti c6"></i></aside><div id="toast" role="status"></div><div id="floaters"></div><div id="discovery" class="card" hidden></div>
+<section id="welcome" class="card"><span class="eyebrow">YOUR LITTLE OCEAN EMPIRE</span><h2>把一片海，<br>装进你的海洋馆。</h2><p>潜入碧海，捕获第一网小鱼。<br>让空空的展缸，游满缤纷的生命。</p><div class="features"><span>潜水与珍藏</span><span>持续扩建</span><span>馆长荣誉</span></div><button id="start" class="primary">开门 · 去捕鱼 <b>↗</b></button><small>WASD / 方向键，或拖动摇杆移动</small></section>
+<section id="drawer" class="card" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden><header><div><small id="drawer-sub">AQUA COAST</small><h2 id="drawer-title"></h2></div><button id="close" class="round" aria-label="关闭面板"></button></header><div id="drawer-content"></div></section>
+<section id="inspect" class="card" hidden><button id="exit-inspect" class="round" aria-label="返回经营"></button><div><small>慢下来，看看它们</small><h2 id="inspect-title"></h2></div><span>拖动环顾 · 滚轮缩放</span></section>
+<div id="loading"><span class="loader-fish">◈</span><strong>正在唤醒这片海…</strong></div><div id="pause-screen" class="card" hidden><h2>休息一下</h2><p>海洋馆已暂停，进度会自动保存。</p><button id="resume" class="primary">继续经营</button></div>
+</main><script>addEventListener('error',e=>{console.error('Aqua Coast load error:',e.message,e.filename,e.lineno);const l=document.getElementById('loading');if(l&&!l.hidden)l.innerHTML='<strong>场景加载遇到问题</strong><span>请刷新页面后再试</span>';});addEventListener('unhandledrejection',e=>{console.error('Aqua Coast initialization:',e.reason);const l=document.getElementById('loading');if(l&&!l.hidden)l.innerHTML='<strong>场景加载遇到问题</strong><span>请刷新页面后再试</span>';});</script><script type="module">
+// src/art.mjs
+import * as T3 from "./vendor/three.module.js";
+import { RoundedBoxGeometry } from "./vendor/geometries/RoundedBoxGeometry.js";
+import { mergeGeometries as mergeGeometries3 } from "./vendor/utils/BufferGeometryUtils.js";
+
+// src/data.mjs
+var VERSION = "0.4.0";
+var SPECIES = [
+  { id: "clown", name: "\u5C0F\u4E11\u9C7C", tag: "\u73CA\u745A\u6D45\u6E7E", color: "#ff8e37", accent: "#fff3d9", price: 22, cost: 0, x: -8, z: 7, r: 3.1, sea: [-5, -8], size: 0.65, count: 20, catch: 1 },
+  { id: "tang", name: "\u84DD\u540A\u9C7C", tag: "\u84DD\u8272\u7901\u6E56", color: "#3594ed", accent: "#ffe760", price: 34, cost: 180, x: 8, z: 7, r: 3.1, sea: [7, -11], size: 0.7, count: 18, catch: 1.2 },
+  { id: "koi", name: "\u9526\u9CA4", tag: "\u6D41\u5149\u82B1\u56ED", color: "#fff2d6", accent: "#ff7158", price: 52, cost: 520, x: -8, z: 17, r: 3.2, sea: [-12, -17], size: 0.85, count: 16, catch: 1.45 },
+  { id: "butterfly", name: "\u8774\u8776\u9C7C", tag: "\u91D1\u8272\u73CA\u745A", color: "#ffe263", accent: "#303e57", price: 78, cost: 1100, x: 8, z: 17, r: 3.2, sea: [11, -22], size: 0.75, count: 16, catch: 1.6 },
+  { id: "ray", name: "\u6591\u70B9\u9CD0", tag: "\u7FE1\u7FE0\u6D77\u5E8A", color: "#637dba", accent: "#b9f4ee", price: 124, cost: 2200, x: -8, z: 28, r: 3.65, sea: [-11, -29], size: 1.25, count: 10, catch: 2.1 },
+  { id: "shark", name: "\u9ED1\u9CCD\u7901\u9CA8", tag: "\u6DF1\u84DD\u79D8\u5883", color: "#82aebc", accent: "#edfaff", price: 186, cost: 4200, x: 8, z: 28, r: 3.65, sea: [10, -34], size: 1.45, count: 9, catch: 2.7 }
+];
+var BY_ID = Object.fromEntries(SPECIES.map((s) => [s.id, s]));
+var UPGRADES = {
+  bag: { name: "\u6269\u5BB9\u7F51\u515C", desc: "\u6BCF\u7EA7\u591A\u88C5 5 \u6761\u9C7C", base: 110, max: 10 },
+  net: { name: "\u4E13\u4E1A\u6E14\u7F51", desc: "\u6355\u9C7C\u66F4\u5FEB\uFF0C\u8303\u56F4\u66F4\u5927", base: 150, max: 8 },
+  speed: { name: "\u8F7B\u76C8\u811A\u8E7C", desc: "\u6B65\u884C\u4E0E\u6E38\u6CF3\u901F\u5EA6\u63D0\u5347", base: 130, max: 8 },
+  oxygen: { name: "\u957F\u6548\u6C14\u74F6", desc: "\u6BCF\u7EA7\u591A\u6F5C\u6C34 15 \u79D2", base: 120, max: 8 },
+  staff: { name: "\u6F5C\u6C34\u52A9\u624B", desc: "\u4EB2\u81EA\u4E0B\u6D77\u6355\u9C7C\u3001\u8FD0\u56DE\u5C55\u7F38", base: 600, max: 3 },
+  visitors: { name: "\u6D77\u5CB8\u5BA3\u4F20", desc: "\u66F4\u591A\u987E\u5BA2\uFF0C\u66F4\u5FEB\u6765\u5230\u5C55\u9986", base: 220, max: 8 }
+};
+var MILESTONES = [
+  { id: "first", name: "\u7B2C\u4E00\u7F51\u6536\u83B7", text: "\u4EB2\u81EA\u6355\u83B7 5 \u6761\u9C7C", field: "caught", need: 5, reward: 70 },
+  { id: "sale", name: "\u5F00\u95E8\u7EA2", text: "\u552E\u51FA 12 \u6761\u9C7C", field: "sold", need: 12, reward: 120 },
+  { id: "two", name: "\u7F24\u7EB7\u6C34\u4E16\u754C", text: "\u5F00\u8BBE 2 \u4E2A\u5C55\u7F38", field: "built", need: 2, reward: 160 },
+  { id: "explore", name: "\u6D77\u6E7E\u63A2\u9669\u5BB6", text: "\u4EB2\u81EA\u6355\u83B7 50 \u6761\u9C7C", field: "caught", need: 50, reward: 280 },
+  { id: "three", name: "\u4EBA\u6C14\u6D77\u6D0B\u9986", text: "\u5F00\u8BBE 3 \u4E2A\u5C55\u7F38", field: "built", need: 3, reward: 350 },
+  { id: "hundred", name: "\u6E90\u6E90\u4E0D\u65AD", text: "\u552E\u51FA 100 \u6761\u9C7C", field: "sold", need: 100, reward: 550 },
+  { id: "five", name: "\u6D77\u6D0B\u6536\u85CF\u5BB6", text: "\u5F00\u8BBE 5 \u4E2A\u5C55\u7F38", field: "built", need: 5, reward: 850 },
+  { id: "six", name: "\u6D77\u5CB8\u4E4B\u661F", text: "\u5F00\u8BBE 6 \u4E2A\u8425\u4E1A\u5C55\u7F38", field: "built", need: 6, reward: 1400 },
+  { id: "empire", name: "\u851A\u84DD\u5927\u4EA8", text: "\u7D2F\u8BA1\u8425\u4E1A\u989D\u8FBE\u5230 30,000", field: "earned", need: 3e4, reward: 2500 }
+];
+var clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+var distance = (a, b) => Math.hypot(a.x - b.x, a.z - b.z);
+var total = (bag) => Object.values(bag).reduce((a, b) => a + b, 0);
+var approach = (d) => ({ x: d.x + (d.x < 0 ? 1 : -1) * (d.r + 1.2), z: d.z });
+
+// src/shore.mjs
+var SHORE = { swimEnd: -7, rampStart: -4.8, rampEnd: 0.8, seaFeet: -1.75, deck: 0.205, halfLane: 1.7, rampHalfWidth: 2.6 };
+var clamp2 = (n, a = 0, b = 1) => Math.max(a, Math.min(b, n));
+var mix = (a, b, t) => a + (b - a) * t;
+var smooth = (t) => {
+  t = clamp2(t);
+  return t * t * (3 - 2 * t);
+};
+var isSwimming = (z) => z < SHORE.rampStart;
+function rampHeight(z) {
+  return mix(SHORE.seaFeet, SHORE.deck, clamp2((z - SHORE.rampStart) / (SHORE.rampEnd - SHORE.rampStart)));
+}
+function shorePose(z) {
+  const swim = 1 - smooth((z - SHORE.swimEnd) / (SHORE.rampStart - SHORE.swimEnd));
+  return { swim, feet: rampHeight(z) + 0.01, tilt: -Math.PI / 2 * swim, lift: 0.95 * swim };
+}
+function cargoFrame(z, count) {
+  const pose = shorePose(z), visible = Math.min(12, count), height2 = 0.55 + visible * 0.16, angle = pose.swim * Math.PI / 2;
+  return { visible, height: height2, angle, y: mix(2.25 + height2 / 2, 1.1, pose.swim), z: mix(0.48, 1.2 + height2 / 2, pose.swim), feet: pose.feet };
+}
+function cargoItem(actor, index, count) {
+  const f = cargoFrame(actor.z, count), along = -f.height / 2 + 0.29 + index * 0.16, x = index % 2 ? 0.065 : -0.065, z = f.z + Math.sin(f.angle) * along, y = f.feet + f.y + Math.cos(f.angle) * along, heading = actor.heading;
+  return { x: actor.x + Math.cos(heading) * x + Math.sin(heading) * z, y, z: actor.z - Math.sin(heading) * x + Math.cos(heading) * z };
+}
+var LEG_HEIGHT = 0.61;
+var SHOES = { diver: { width: 0.31, height: 0.15, depth: 0.82, y: -0.54, z: -0.22 }, guest: { width: 0.26, height: 0.15, depth: 0.41, y: -0.54, z: -0.08 } };
+function shoeCorners(shoe) {
+  const points = [];
+  for (const x of [-shoe.width / 2, shoe.width / 2]) for (const y of [shoe.y - shoe.height / 2, shoe.y + shoe.height / 2]) for (const z of [shoe.z - shoe.depth / 2, shoe.z + shoe.depth / 2]) points.push([x, y, z]);
+  return points;
+}
+var corners = { diver: shoeCorners(SHOES.diver), guest: shoeCorners(SHOES.guest) };
+function footLift(actorZ, feetY, heading, legX, rx, rz, diver = true) {
+  const cx = Math.cos(rx), sx = Math.sin(rx), cz = Math.cos(rz), sz = Math.sin(rz), ch = Math.cos(heading), sh = Math.sin(heading);
+  let lift = 0;
+  for (const [x, y, z] of corners[diver ? "diver" : "guest"]) {
+    const xx = cz * x - sz * y, yy = sz * x + cz * y, rotY = cx * yy - sx * z, rotZ = sx * yy + cx * z, worldZ = actorZ - sh * (legX + xx) + ch * rotZ, ground = rampHeight(worldZ);
+    lift = Math.max(lift, ground + 8e-3 - (feetY + LEG_HEIGHT + rotY));
+  }
+  return lift;
+}
+
+// src/fish-art.mjs
+import * as T from "./vendor/three.module.js";
+import { mergeGeometries } from "./vendor/utils/BufferGeometryUtils.js";
+function fishGeometry(kind) {
+  const s = BY_ID[kind], parts = [], shape = { clown: [0.96, 0.48, 0.3], tang: [0.88, 0.65, 0.23], koi: [1.13, 0.43, 0.32], butterfly: [0.86, 0.76, 0.2], shark: [1.48, 0.35, 0.34], ray: [0.81, 0.18, 0.47] }[kind];
+  function add(g, color, p = [0, 0, 0], scale = [1, 1, 1], rotation = [0, 0, 0]) {
+    g = g.clone();
+    const c = new T.Color(color), a = new Float32Array(g.attributes.position.count * 3);
+    for (let i = 0; i < a.length; i += 3) {
+      a[i] = c.r;
+      a[i + 1] = c.g;
+      a[i + 2] = c.b;
+    }
+    g.setAttribute("color", new T.BufferAttribute(a, 3));
+    g.scale(...scale);
+    g.rotateX(rotation[0]);
+    g.rotateY(rotation[1]);
+    g.rotateZ(rotation[2]);
+    g.translate(...p);
+    parts.push(g.index ? g.toNonIndexed() : g);
+  }
+  function orb(color, p, scale) {
+    add(new T.SphereGeometry(1, 16, 10), color, p, scale);
+  }
+  function tube(points, r, color) {
+    add(new T.TubeGeometry(new T.CatmullRomCurve3(points.map((p) => new T.Vector3(...p))), Math.max(8, points.length * 4), r, 5, false), color);
+  }
+  function web(points, color, position = [0, 0, 0], rotation = [0, 0, 0]) {
+    const sh = new T.Shape();
+    sh.moveTo(...points[0]);
+    for (let i = 1; i < points.length; i++) sh.lineTo(...points[i]);
+    sh.closePath();
+    const g = new T.ExtrudeGeometry(sh, { depth: 0.022, steps: 1, bevelEnabled: true, bevelSize: 0.012, bevelThickness: 8e-3, bevelSegments: 1 });
+    add(g, color, position, [1, 1, 1], rotation);
+  }
+  const body = new T.SphereGeometry(1, 64, 32), pos = body.attributes.position, colors = [];
+  for (let i = 0; i < pos.count; i++) {
+    const x = pos.getX(i), y = pos.getY(i), z = pos.getZ(i), wave = x + Math.sin(y * 3 + z) * 0.025;
+    let color = s.color;
+    if (kind === "clown") {
+      const bands = [[-0.57, -0.34], [0.01, 0.24], [0.64, 0.79]];
+      for (const [a, b] of bands) {
+        if (wave > a - 0.035 && wave < b + 0.035) color = "#513f41";
+        if (wave > a && wave < b) color = "#fff9ed";
+      }
+    } else if (kind === "tang") {
+      color = y < -0.35 ? "#21aff4" : "#1e74e9";
+      if (x < 0.3 && x > -0.67 && y > 0.02 && y < 0.45 || x < -0.65) color = "#20386d";
+      if (x < -0.76) color = "#ffdf39";
+    } else if (kind === "koi") {
+      color = "#fff5e7";
+      const p = Math.sin(x * 7 + z * 4.3) * Math.cos(y * 4.1 - z * 2);
+      if (p > 0.13) color = "#ff5f38";
+      if (p > 0.66 && x < 0.3) color = "#43536c";
+    } else if (kind === "butterfly") {
+      color = "#ffd932";
+      if (wave > 0.42 && wave < 0.63) color = "#253c64";
+      if (wave > 0.35 && wave < 0.42 || wave > 0.63 && wave < 0.69) color = "#fff7d5";
+      if (x < -0.62) color = "#fff8d5";
+      if (x < -0.72) color = "#273c5c";
+    } else if (kind === "shark") {
+      color = y < -0.12 ? "#f1fbf7" : y > 0.4 ? "#468ca6" : "#74bed0";
+    } else if (kind === "ray") {
+      color = y < 0 ? "#c3f5eb" : "#4c76bd";
+    }
+    const c = new T.Color(color);
+    if (kind !== "clown" && kind !== "koi" && y > 0.7) c.multiplyScalar(0.88);
+    colors.push(c.r, c.g, c.b);
+  }
+  body.setAttribute("color", new T.Float32BufferAttribute(colors, 3));
+  body.scale(...shape);
+  parts.push(body.toNonIndexed());
+  if (kind === "ray") {
+    for (const side of [-1, 1]) {
+      const sh = new T.Shape();
+      sh.moveTo(0.72, 0);
+      sh.bezierCurveTo(0.25, side * 0.45, 0.65, side * 1.2, 0.12, side * 1.77);
+      sh.bezierCurveTo(-0.55, side * 1.2, -0.85, side * 0.65, -0.68, 0);
+      sh.closePath();
+      add(new T.ShapeGeometry(sh, 28), "#568dd0", [0, 0, 0], [1, 1, 1], [-Math.PI / 2, 0, 0]);
+      for (let i = 0; i < 15; i++) {
+        const zz = side * (0.22 + i % 4 * 0.28), xx = -0.42 + Math.floor(i / 4) * 0.2;
+        orb(i % 3 ? "#9cfff0" : "#eaffef", [xx, 0.06, zz], [0.035, 0.014, 0.037]);
+      }
+      orb("#d8fff4", [0.49, 0.16, side * 0.23], [0.13, 0.08, 0.1]);
+      orb("#183f66", [0.52, 0.215, side * 0.23], [0.067, 0.025, 0.058]);
+      orb("#ffffff", [0.54, 0.24, side * 0.21], [0.025, 0.013, 0.021]);
+    }
+    tube([[-0.5, 0, 0], [-1.2, -0.02, 0.03], [-2, 0.04, 0.1], [-2.7, 0.11, 0.05]], 0.038, "#355e99");
+  } else {
+    const tailColor = kind === "tang" || kind === "butterfly" ? "#ffdf44" : kind === "koi" ? "#ff9c60" : kind === "shark" ? "#518ea9" : "#ff9a33";
+    const tail = kind === "shark" ? [[-1.12, 0], [-2.06, 0.96], [-1.85, 0.18], [-2, -0.58], [-1.5, -0.3]] : [[-0.73, 0], [-1.58, 0.52], [-1.46, 0.2], [-1.53, 0], [-1.46, -0.2], [-1.58, -0.52]];
+    web(tail, tailColor, [0, 0, -0.012]);
+    for (const yy of [-0.35, -0.18, 0.18, 0.35]) tube([[-0.8, 0, 0.022], [-1.13, yy * 0.5, 0.025], [-1.48, yy, 0.025]], 9e-3, kind === "shark" ? "#d0f2e9" : "#fff0b8");
+    const dorsalTop = kind === "shark" ? 1.02 : kind === "butterfly" ? 1.03 : 0.76;
+    web([[-0.61, 0.2], [-0.43, 0.49], [-0.25, dorsalTop], [0.02, dorsalTop * 0.86], [0.38, 0.35]], kind === "shark" ? "#4f8ca6" : s.color, [0, 0, -0.013]);
+    if (kind === "shark") web([[-0.29, 0.87], [-0.25, 1.02], [-0.04, 0.9]], "#23475e", [0, 0, -0.025]);
+    else for (let j = 0; j < 5; j++) tube([[-0.48 + j * 0.15, 0.28, 0.028], [-0.39 + j * 0.12, 0.52 + Math.sin(j / 5 * Math.PI) * 0.12, 0.028]], 9e-3, kind === "clown" ? "#683f34" : "#f9edb4");
+    for (const side of [-1, 1]) {
+      const ex = shape[0] * 0.65, ey = shape[1] * 0.24, ez = shape[2] * 0.82;
+      orb("#17374e", [ex, ey, side * ez], [0.145, 0.15, 0.078]);
+      orb("#fffcef", [ex + 0.01, ey, side * (ez + 0.039)], [0.115, 0.124, 0.063]);
+      orb(kind === "clown" ? "#b38644" : "#49b7c5", [ex + 0.037, ey, side * (ez + 0.087)], [0.079, 0.086, 0.037]);
+      orb("#17374e", [ex + 0.048, ey, side * (ez + 0.111)], [0.049, 0.058, 0.02]);
+      orb("#ffffff", [ex + 0.067, ey + 0.035, side * (ez + 0.129)], [0.022, 0.026, 0.012]);
+      const finColor = kind === "shark" ? "#598fa3" : kind === "tang" ? "#ffd33d" : s.accent;
+      web([[0.24, -0.05], [-0.5, -0.44], [-0.22, -0.04]], finColor, [0, -0.08, side * 0.2], [side * 1.05, 0, 0]);
+      for (let j = 0; j < 3; j++) tube([[0.28 - j * 0.07, 0.16, side * (shape[2] * 0.92)], [0.19 - j * 0.06, -0.04, side * shape[2]], [0.27 - j * 0.06, -0.25, side * (shape[2] * 0.82)]], 0.011, kind === "clown" ? "#dd5d2a" : "#568b9d");
+      tube([[shape[0] * 0.82, -0.04, side * (shape[2] * 0.58)], [shape[0] * 0.98, -0.11, side * 0.08]], 0.014, "#73504c");
+      if (kind === "koi") tube([[1.03, -0.1, side * 0.11], [1.18, -0.18, side * 0.16], [1.23, -0.12, side * 0.24]], 0.012, "#ebc58d");
+    }
+    if (kind === "butterfly") tube([[-0.23, 0.82, 0], [-0.6, 1.2, 0], [-1.15, 1.12, 0.03], [-1.46, 0.88, 0.08]], 0.025, "#fff5c2");
+  }
+  const merged = mergeGeometries(parts);
+  merged.computeVertexNormals();
+  return merged;
+}
+
+// src/growth.mjs
+function tankShape(base, tank = {}) {
+  const steps = Math.max(0, (tank.level || 1) - 1) + (tank.bonusCapacity || 0) / 7;
+  const r = base.r + 1.3 * (1 - Math.exp(-steps * 0.28)), heightScale = 1 + 0.1 * Math.log2(1 + steps);
+  return { r, heightScale, x: Math.sign(base.x) * (Math.abs(base.x) - base.r + r), z: base.z };
+}
+function galleryDefinitions(tanks2 = {}) {
+  const defs = SPECIES.map((d, i) => ({ ...d, ...tankShape(d, tanks2[d.id]), baseRadius: d.r, kind: d.id, number: i + 1, extension: false }));
+  defs.byRow = /* @__PURE__ */ new Map();
+  for (const d of defs) for (let row = Math.floor((d.z - d.r - 0.7) / 12); row <= Math.floor((d.z + d.r + 0.7) / 12); row++) {
+    if (!defs.byRow.has(row)) defs.byRow.set(row, []);
+    defs.byRow.get(row).push(d);
+  }
+  return defs;
+}
+var galleryEnd = () => 34;
+function consolidateLegacyTanks(saved) {
+  if (saved.growthVersion !== 1) return saved;
+  const tanks2 = {}, oldLevels = Object.values(saved.tanks || {}).reduce((n, t) => n + (t.built ? Math.max(0, Math.min(1e4, t.level || 1) - 1) : 0), 0);
+  for (const base of SPECIES) {
+    const sources = [saved.tanks?.[base.id]];
+    for (const [id, t] of Object.entries(saved.tanks || {})) {
+      const m = /^gallery-(\d+)$/.exec(id);
+      if (m && SPECIES[Number(m[1]) % 6].id === base.id && t.built) sources.push(t);
+    }
+    const owned = sources.filter((t) => t?.built), level = Math.max(1, ...owned.map((t) => Math.min(1e4, Math.max(1, t.level || 1))));
+    let capacity = 0, stock = 0, rareStock = 0;
+    for (const t of owned) {
+      const c = 16 + (Math.min(1e4, Math.max(1, t.level || 1)) - 1) * 7;
+      capacity += c;
+      stock += Math.max(0, Math.min(t.stock || 0, c));
+      rareStock += Math.max(0, Math.min(t.rareStock || 0, t.stock || 0, c));
+    }
+    tanks2[base.id] = { built: base.id === "clown" || owned.length > 0, level, stock, rareStock, bonusCapacity: Math.max(0, capacity - (16 + (level - 1) * 7)) };
+  }
+  const mergedLevels = Object.values(tanks2).reduce((n, t) => n + (t.built ? t.level - 1 : 0), 0), rareExhibits = {};
+  for (const kind of Object.keys(saved.rareExhibits || {})) if (tanks2[kind]?.built) rareExhibits[kind] = kind;
+  return { ...saved, growthVersion: 2, tanks: tanks2, rareExhibits, legacyLevelCredit: Math.max(0, oldLevels - mergedLevels), migrationNotice: true, guests: [], staff: (saved.staff || []).map((a) => ({ ...a, tank: a.kind, path: [], mode: "choose" })) };
+}
+function growingPrice(base, level, factor = 1.7, knee = 8) {
+  return Math.round(base * Math.pow(factor, Math.min(level, knee)) * Math.pow(1 + Math.max(0, level - knee) / 5, 2.2));
+}
+function museumLevel(earned, expansions = 0, upgrades = 0) {
+  return 1 + Math.floor(Math.sqrt(Math.max(0, earned) / 180)) + Math.floor(expansions * 1.5) + Math.floor(upgrades / 8);
+}
+function equipmentLimit(id, level, expansions) {
+  const stage = Math.floor((level - 1) / 5);
+  return UPGRADES[id].max + (id === "staff" ? Math.floor(stage / 2) : stage * (id === "bag" ? 4 : 3) + expansions);
+}
+var TITLE_TIERS = [
+  { name: "\u6D77\u8FB9\u5C0F\u9986\u957F", level: 1, wealth: 0, color: "#71d9c4" },
+  { name: "\u73CA\u745A\u6536\u85CF\u5BB6", level: 3, wealth: 1200, color: "#79cdd8" },
+  { name: "\u73CD\u73E0\u9986\u957F", level: 6, wealth: 6e3, color: "#bcb1ed" },
+  { name: "\u661F\u5149\u7B56\u5C55\u4EBA", level: 10, wealth: 2e4, color: "#ffcf76" },
+  { name: "\u851A\u84DD\u9886\u822A\u8005", level: 16, wealth: 6e4, color: "#67d8e7" },
+  { name: "\u6D77\u6D0B\u4F20\u5947", level: 25, wealth: 18e4, color: "#efa1cb" },
+  { name: "\u7480\u74A8\u6D77\u6D0B\u4E4B\u51A0", level: 40, wealth: 6e5, color: "#ffd76c" }
+];
+function honorFor(level, earned) {
+  let rank = 0;
+  for (let i = 1; i < TITLE_TIERS.length; i++) if (level >= TITLE_TIERS[i].level || earned >= TITLE_TIERS[i].wealth) rank = i;
+  if (rank === 6) {
+    const extra = Math.max(0, Math.floor((level - 40) / 20), Math.floor(Math.log(Math.max(1, earned / 6e5)) / Math.log(4)));
+    return { ...TITLE_TIERS[6], rank: 6 + extra, name: TITLE_TIERS[6].name + (extra ? " \xB7 " + (extra + 1) + "\u661F" : "") };
+  }
+  return { ...TITLE_TIERS[rank], rank };
+}
+function nextHonor(honor) {
+  return honor.rank < 6 ? TITLE_TIERS[honor.rank + 1] : { name: "\u7480\u74A8\u6D77\u6D0B\u4E4B\u51A0 \xB7 " + (honor.rank - 4) + "\u661F", level: 40 + (honor.rank - 5) * 20, wealth: 6e5 * Math.pow(4, honor.rank - 5) };
+}
+var RARE_NAMES = { clown: "\u65E5\u8000\u5C0F\u4E11\u9C7C", tang: "\u6708\u8F89\u84DD\u540A\u9C7C", koi: "\u6D41\u91D1\u9526\u9CA4", butterfly: "\u7409\u7483\u8774\u8776\u9C7C", ray: "\u661F\u6CB3\u6591\u70B9\u9CD0", shark: "\u6781\u5149\u9ED1\u9CCD\u9CA8" };
+var RARE_COLORS = { clown: "#ffda7b", tang: "#bdacf7", koi: "#f9d273", butterfly: "#e998dc", ray: "#9cacf7", shark: "#83e9ce" };
+function wealthShape(cash) {
+  return { count: cash > 0 ? Math.min(360, Math.ceil(cash / 20)) : 0, height: 1 + Math.max(0, Math.log10(Math.max(1, cash / 7200))) * 0.22 };
+}
+
+// src/tropical.mjs
+import * as T2 from "./vendor/three.module.js";
+import { mergeGeometries as mergeGeometries2 } from "./vendor/utils/BufferGeometryUtils.js";
+var material = new T2.MeshStandardMaterial({ vertexColors: true, roughness: 0.55, side: T2.DoubleSide });
+function builder(parent, x, y, z, scale = 1) {
+  const group = new T2.Group();
+  group.position.set(x, y, z);
+  group.scale.setScalar(scale);
+  parent.add(group);
+  const parts = [];
+  const put = (g, color, p = [0, 0, 0], s = [1, 1, 1], r = [0, 0, 0]) => {
+    g = g.clone();
+    const c = new T2.Color(color), a = new Float32Array(g.attributes.position.count * 3);
+    for (let i = 0; i < a.length; i += 3) {
+      a[i] = c.r;
+      a[i + 1] = c.g;
+      a[i + 2] = c.b;
+    }
+    g.setAttribute("color", new T2.BufferAttribute(a, 3));
+    g.scale(...s);
+    g.rotateX(r[0]);
+    g.rotateY(r[1]);
+    g.rotateZ(r[2]);
+    g.translate(...p);
+    parts.push(g.index ? g.toNonIndexed() : g);
+  };
+  const orb = (p, s, c) => put(new T2.SphereGeometry(1, 12, 8), c, p, s);
+  const branch = (points, r, c) => put(new T2.TubeGeometry(new T2.CatmullRomCurve3(points.map((v) => new T2.Vector3(...v))), 16, r, 6, false), c);
+  const finish = () => {
+    for (const p of parts) if (!p.attributes.uv) p.setAttribute("uv", new T2.BufferAttribute(new Float32Array(p.attributes.position.count * 2), 2));
+    const mesh2 = new T2.Mesh(mergeGeometries2(parts), material);
+    mesh2.castShadow = true;
+    mesh2.receiveShadow = true;
+    group.add(mesh2);
+    return group;
+  };
+  return { group, parts, put, orb, branch, finish };
+}
+function tropicalPalm(parent, x, z, scale = 1) {
+  const b = builder(parent, x, 0, z, scale), { put, orb, branch } = b;
+  put(new T2.CylinderGeometry(0.63, 0.52, 0.7, 24), "#f5fff2", [0, 0.38, 0]);
+  put(new T2.CylinderGeometry(0.65, 0.65, 0.11, 24), "#54cdb8", [0, 0.66, 0]);
+  put(new T2.CylinderGeometry(0.56, 0.56, 0.05, 24), "#dab278", [0, 0.77, 0]);
+  branch([[0, 0.72, 0], [-0.08, 1.8, 0], [0.14, 3.1, 0.01], [0.22, 4.1, 0]], 0.15, "#c39866");
+  for (let i = 0; i < 7; i++) put(new T2.TorusGeometry(0.16, 0.017, 5, 14), "#f0d2a0", [i * 0.03 - 0.01, 1 + i * 0.42, 0], [1, 1, 1], [Math.PI / 2, 0, 0]);
+  for (let j = 0; j < 9; j++) {
+    const yaw = j * Math.PI * 2 / 9, len = 2.25 + j % 3 * 0.3, p = [], col = [], idx = [];
+    for (let i = 0; i <= 22; i++) {
+      const t = i / 22, w = Math.pow(Math.sin(Math.PI * t), 0.8) * (0.3 + j % 2 * 0.06) * (i % 2 ? 0.86 : 1), h = Math.sin(t * Math.PI) * 0.65 - t * 0.25;
+      for (const side of [-1, 1]) {
+        p.push(t * len, h, w * side);
+        const c = new T2.Color("#14ac89").lerp(new T2.Color("#b2eb6f"), t * 0.75 + (side === 1 ? 0.06 : 0));
+        col.push(c.r, c.g, c.b);
+      }
+      if (i < 22) {
+        const n = i * 2;
+        idx.push(n, n + 1, n + 2, n + 1, n + 3, n + 2);
+      }
+    }
+    const g = new T2.BufferGeometry();
+    g.setAttribute("position", new T2.Float32BufferAttribute(p, 3));
+    g.setAttribute("color", new T2.Float32BufferAttribute(col, 3));
+    g.setIndex(idx);
+    g.computeVertexNormals();
+    g.rotateY(yaw);
+    g.translate(0.22, 4.1, 0);
+    b.parts.push(g.toNonIndexed());
+    const pts = Array.from({ length: 8 }, (_, i) => {
+      const t = i / 7;
+      return [0.22 + Math.cos(yaw) * t * len, 4.11 + Math.sin(t * Math.PI) * 0.65 - t * 0.25, -Math.sin(yaw) * t * len];
+    });
+    branch(pts, 0.018, "#8add82");
+  }
+  for (let j = 0; j < 3; j++) orb([0.22 + Math.cos(j * 2.1) * 0.22, 3.92, Math.sin(j * 2.1) * 0.2], [0.22, 0.24, 0.22], "#a97843");
+  return b.finish();
+}
+function tropicalCoral(parent, x, y, z, seed = 0, scale = 1) {
+  const b = builder(parent, x, y, z, scale), { orb, branch, put } = b, kind = seed % 4;
+  if (kind === 0) {
+    for (let i = 0; i < 5; i++) {
+      const a = i * 2.39, dx = Math.cos(a), dz = Math.sin(a), h = 0.8 + i * 0.12;
+      branch([[0, 0, 0], [dx * 0.18, h * 0.45, dz * 0.16], [dx * 0.45, h, dz * 0.4]], 0.085, "#fa6e96");
+      branch([[dx * 0.18, h * 0.45, dz * 0.16], [dx * 0.62, h * 0.72, dz * 0.55], [dx * 0.7, h * 0.86, dz * 0.59]], 0.065, "#ff9cb1");
+      orb([dx * 0.45, h, dz * 0.4], [0.105, 0.105, 0.105], "#ffe0d3");
+    }
+  } else if (kind === 1) {
+    for (let i = 0; i < 7; i++) {
+      const a = (i / 6 - 0.5) * Math.PI * 0.82;
+      branch([[0, 0, 0], [Math.sin(a) * 0.55, 0.7, 0], [Math.sin(a) * 1.1, 1.4 - Math.abs(a) * 0.2, 0.05]], 0.035, "#8f73e3");
+      for (let j = 1; j < 4; j++) branch([[0, j * 0.31, 0], [Math.sin(a) * j * 0.22, j * 0.31 + 0.12, 0.02]], 0.022, "#c59bff");
+    }
+    orb([0, 0.05, 0], [0.25, 0.1, 0.18], "#75aab6");
+  } else if (kind === 2) {
+    for (let i = 0; i < 5; i++) {
+      const a = i * 2.4, xx = Math.cos(a) * 0.4, zz = Math.sin(a) * 0.35, h = 0.22 + i * 0.13;
+      put(new T2.CylinderGeometry(0.08, 0.11, h, 10), "#cc8fbf", [xx, h * 0.5, zz]);
+      orb([xx, h, zz], [0.37, 0.1, 0.34], i % 2 ? "#ffb92f" : "#ff865e");
+      orb([xx - 0.04, h + 0.08, zz], [0.1, 0.03, 0.09], "#ffe7ad");
+    }
+  } else {
+    for (let i = 0; i < 5; i++) {
+      const yaw = i * 1.9, len = 0.85 + i % 3 * 0.27, ps = [], ids = [], colors = [];
+      for (let k = 0; k <= 14; k++) {
+        const t = k / 14, w = Math.sin(t * Math.PI) * 0.15;
+        for (const side of [-1, 1]) {
+          ps.push(side * w + Math.sin(t * 3) * 0.18, t * len, Math.cos(t * 2) * 0.05);
+          const c = new T2.Color("#129e99").lerp(new T2.Color("#b2e979"), t);
+          colors.push(c.r, c.g, c.b);
+        }
+        if (k < 14) {
+          const n = k * 2;
+          ids.push(n, n + 1, n + 2, n + 1, n + 3, n + 2);
+        }
+      }
+      const g = new T2.BufferGeometry();
+      g.setAttribute("position", new T2.Float32BufferAttribute(ps, 3));
+      g.setAttribute("color", new T2.Float32BufferAttribute(colors, 3));
+      g.setIndex(ids);
+      g.computeVertexNormals();
+      g.rotateY(yaw);
+      g.translate(Math.cos(yaw) * 0.1, 0, Math.sin(yaw) * 0.1);
+      b.parts.push(g.toNonIndexed());
+    }
+  }
+  return b.finish();
+}
+function seaStar(parent, x, y, z, scale = 1, color = "#ff9970") {
+  const b = builder(parent, x, y, z, scale), sh = new T2.Shape();
+  for (let i = 0; i < 10; i++) {
+    const a = i * Math.PI / 5, r = i % 2 ? 0.2 : 0.48;
+    const x2 = Math.cos(a) * r, yy = Math.sin(a) * r;
+    i ? sh.lineTo(x2, yy) : sh.moveTo(x2, yy);
+  }
+  sh.closePath();
+  b.put(new T2.ExtrudeGeometry(sh, { depth: 0.07, bevelEnabled: true, bevelSize: 0.04, bevelThickness: 0.03, bevelSegments: 2 }), color, [0, 0, 0], [1, 1, 1], [-Math.PI / 2, 0, 0]);
+  for (let i = 0; i < 5; i++) {
+    const a = i * Math.PI * 0.4;
+    b.orb([Math.cos(a) * 0.22, 0.095, Math.sin(a) * 0.22], [0.025, 0.018, 0.025], "#fff0c5");
+  }
+  return b.finish();
+}
+
+// src/art.mjs
+var mats = /* @__PURE__ */ new Map();
+function mat(color, roughness = 0.65, metalness = 0) {
+  const k = color + roughness + metalness;
+  if (!mats.has(k)) mats.set(k, new T3.MeshStandardMaterial({ color, roughness, metalness }));
+  return mats.get(k);
+}
+var sphere = new T3.SphereGeometry(1, 16, 10);
+var cylinder = new T3.CylinderGeometry(1, 1, 1, 20);
+function mesh(g, m, parent, x = 0, y = 0, z = 0) {
+  const o = new T3.Mesh(g, m);
+  o.position.set(x, y, z);
+  o.castShadow = true;
+  o.receiveShadow = true;
+  parent?.add(o);
+  return o;
+}
+function ball(p, x, y, z, sx, sy, sz, color) {
+  const o = mesh(sphere, typeof color === "string" ? mat(color) : color, p, x, y, z);
+  o.scale.set(sx, sy, sz);
+  return o;
+}
+function box(p, x, y, z, w, h, d, color, r = 0.1) {
+  return mesh(new RoundedBoxGeometry(w, h, d, 2, Math.min(r, w / 3, h / 3, d / 3)), typeof color === "string" ? mat(color) : color, p, x, y, z);
+}
+function cyl(p, x, y, z, r, h, color, r2 = r) {
+  return mesh(new T3.CylinderGeometry(r2, r, h, 32), typeof color === "string" ? mat(color) : color, p, x, y, z);
+}
+function beam(p, a, b, r, color) {
+  const v1 = new T3.Vector3(...a), v2 = new T3.Vector3(...b), o = mesh(cylinder, typeof color === "string" ? mat(color) : color, p);
+  o.position.copy(v1).add(v2).multiplyScalar(0.5);
+  o.scale.set(r, v1.distanceTo(v2), r);
+  o.quaternion.setFromUnitVectors(new T3.Vector3(0, 1, 0), v2.sub(v1).normalize());
+  return o;
+}
+function ring(p, r, tube, color, x = 0, y = 0, z = 0) {
+  const o = mesh(new T3.TorusGeometry(r, tube, 8, 64), typeof color === "string" ? mat(color) : color, p, x, y, z);
+  o.rotation.x = -Math.PI / 2;
+  return o;
+}
+function label(text, w = 4, h = 1.2, bg = "#fff7dd", fg = "#245569", font = 54) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = Math.round(512 * h / w);
+  const c = canvas.getContext("2d");
+  c.fillStyle = bg;
+  c.beginPath();
+  c.roundRect(0, 0, 512, canvas.height, 22);
+  c.fill();
+  c.fillStyle = fg;
+  c.textAlign = "center";
+  c.textBaseline = "middle";
+  c.font = `900 ${font}px Nunito, Microsoft YaHei, sans-serif`;
+  c.fillText(text, 256, canvas.height / 2);
+  const tex = new T3.CanvasTexture(canvas);
+  tex.colorSpace = T3.SRGBColorSpace;
+  const m = new T3.MeshBasicMaterial({ map: tex, transparent: true, side: T3.DoubleSide, toneMapped: false });
+  return new T3.Mesh(new T3.PlaneGeometry(w, h), m);
+}
+function softShadow(p, r = 1, opacity = 0.15) {
+  const c = document.createElement("canvas");
+  c.width = c.height = 64;
+  const ctx = c.getContext("2d"), g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+  g.addColorStop(0, `rgba(23,75,87,${opacity})`);
+  g.addColorStop(1, "rgba(23,75,87,0)");
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, 64, 64);
+  const o = new T3.Mesh(new T3.PlaneGeometry(r * 2, r * 2), new T3.MeshBasicMaterial({ map: new T3.CanvasTexture(c), transparent: true, depthWrite: false }));
+  o.rotation.x = -Math.PI / 2;
+  o.position.y = 0.022;
+  p.add(o);
+  return o;
+}
+function studio(renderer2, scene2) {
+  const env = new T3.Scene();
+  env.background = new T3.Color("#bce4e5");
+  const room = new T3.Mesh(new T3.BoxGeometry(120, 100, 120), new T3.MeshBasicMaterial({ color: "#9ec6c8", side: T3.BackSide }));
+  env.add(room);
+  for (const [x, y, z, w, h] of [[-30, 30, 15, 20, 45], [30, 38, -15, 18, 38], [0, 48, 0, 26, 20]]) {
+    const m = new T3.Mesh(new T3.PlaneGeometry(w, h), new T3.MeshBasicMaterial({ color: new T3.Color(2.1, 2.1, 1.8) }));
+    m.position.set(x, y, z);
+    m.lookAt(0, 0, 0);
+    env.add(m);
+  }
+  const pmrem = new T3.PMREMGenerator(renderer2);
+  scene2.environment = pmrem.fromScene(env, 0.12).texture;
+  scene2.environmentIntensity = 0.32;
+  pmrem.dispose();
+}
+function waterMaterial(color = "#4fc3cc", opacity = 0.65, caustic = false) {
+  const m = new T3.ShaderMaterial({ transparent: opacity < 1, depthWrite: opacity >= 1, side: T3.DoubleSide, uniforms: { time: { value: 0 }, base: { value: new T3.Color(color) }, alpha: { value: opacity }, scale: { value: caustic ? 2.45 : 1.65 }, strength: { value: caustic ? 0.13 : 0.065 } }, vertexShader: "varying vec3 wp;void main(){wp=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(wp,1.);}", fragmentShader: `varying vec3 wp;uniform float time,alpha,scale,strength;uniform vec3 base;
+float cells(vec2 uv){vec2 i=floor(uv),f=fract(uv);float d=9.,d2=9.;for(int x=-1;x<=1;x++)for(int y=-1;y<=1;y++){vec2 a=vec2(float(x),float(y));vec2 h=vec2(dot(i+a,vec2(127.1,311.7)),dot(i+a,vec2(269.5,183.3)));vec2 off=.5+.26*sin(time*.4+6.2831*fract(sin(h)*43758.5453));float v=length(a+off-f);if(v<d){d2=d;d=v;}else if(v<d2){d2=v;}}return d2-d;}
+void main(){vec2 uv=wp.xz*scale*.37;uv+=.07*vec2(sin(wp.z*.5+time*.4),cos(wp.x*.4-time*.3));float c=cells(uv);float lace=1.-smoothstep(.006,.038,c);float s=sin(wp.x*.7+wp.z*.4-time*.65)*.012;vec3 col=mix(base,base*vec3(.58,.81,1.0),smoothstep(0.,40.,-wp.z)*.55)+lace*strength*.32+s;gl_FragColor=vec4(col,alpha+lace*.015);#include <tonemapping_fragment>
+#include <colorspace_fragment>}`.replace(");#include", ");\n#include") });
+  return m;
+}
+var palm = (p, x, z, scale = 1) => tropicalPalm(p, x, z, scale);
+var coral = (p, x, y, z, seed = 0, scale = 1) => tropicalCoral(p, x, y, z, seed, scale);
+function makeWorld(scene2) {
+  const root = new T3.Group();
+  scene2.add(root);
+  const animated = [];
+  const seaMat = waterMaterial("#65c6f3", 0.105), sea = mesh(new T3.PlaneGeometry(220, 220), seaMat, root, 0, -0.12, -20);
+  sea.rotation.x = -Math.PI / 2;
+  sea.castShadow = false;
+  sea.renderOrder = 2;
+  const bottomMat = waterMaterial("#379bda", 1, true), bottom = mesh(new T3.PlaneGeometry(210, 210), bottomMat, root, 0, -2.85, -20);
+  bottom.rotation.x = -Math.PI / 2;
+  bottom.castShadow = false;
+  box(root, 0, -0.35, 18, 35, 0.9, 34, "#e1cc9f", 0.35);
+  box(root, 0, 0.08, 18, 34, 0.18, 33, "#f4d48a", 0.2);
+  for (let x2 = -15; x2 <= 15; x2 += 3) for (let z = 3; z <= 33; z += 3) {
+    const tile = box(root, x2, 0.184, z, 2.97, 0.02, 2.97, Math.round((x2 + z) / 3) % 2 ? "#f4d48a" : "#f8dc9c", 0.02);
+    tile.castShadow = false;
+  }
+  for (const x2 of [-17, 17]) box(root, x2, 0.27, 18, 0.35, 0.32, 33, "#fffbe3", 0.08);
+  box(root, -10, 0.27, 1, 14, 0.32, 0.4, "#fffbe3");
+  box(root, 10, 0.27, 1, 14, 0.32, 0.4, "#fffbe3");
+  const x = SHORE.rampHalfWidth, z0 = SHORE.rampStart, z1 = SHORE.rampEnd, y0 = rampHeight(z0), y1 = rampHeight(z1), positions = [-x, y0, z0, x, y0, z0, -x, y1, z1, x, y1, z1, -x, y0 - 0.18, z0, x, y0 - 0.18, z0, -x, y1 - 0.18, z1, x, y1 - 0.18, z1];
+  const rampGeo = new T3.BufferGeometry();
+  rampGeo.setAttribute("position", new T3.Float32BufferAttribute(positions, 3));
+  rampGeo.setIndex([0, 2, 1, 1, 2, 3, 4, 5, 6, 5, 7, 6, 0, 1, 4, 1, 5, 4, 2, 6, 3, 3, 6, 7, 0, 4, 2, 2, 4, 6, 1, 3, 5, 3, 7, 5]);
+  rampGeo.computeVertexNormals();
+  mesh(rampGeo, mat("#bce9dc"), root);
+  box(root, 0, SHORE.deck - 0.09, 1.8, 5.2, 0.18, 2, "#f6f4cf", 0.07);
+  for (let i = 0; i <= 11; i++) {
+    const z = z0 + (z1 - z0) * i / 11;
+    beam(root, [-x + 0.12, rampHeight(z) + 0.018, z], [x - 0.12, rampHeight(z) + 0.018, z], 0.014, i % 3 === 0 ? "#35c9be" : "#e8fff2");
+  }
+  for (const side of [-1, 1]) {
+    const xx = side * 2.53;
+    for (const z of [-4.5, -2, 0.8, 2]) {
+      const h = rampHeight(z);
+      beam(root, [xx, h, z], [xx, h + 0.9, z], 0.045, "#eafff5");
+    }
+    beam(root, [xx, rampHeight(-4.5) + 0.86, -4.5], [xx, rampHeight(0.8) + 0.86, 0.8], 0.048, "#36bfb8");
+    beam(root, [xx, rampHeight(0.8) + 0.86, 0.8], [xx, rampHeight(2) + 0.86, 2], 0.048, "#36bfb8");
+  }
+  for (let j = 0; j < 7; j++) {
+    const rope = new T3.Mesh(new T3.TorusGeometry(1 + j * 0.7, 0.022, 4, 64), new T3.MeshBasicMaterial({ color: "#d7fff1", transparent: true, opacity: 0.15 }));
+    rope.rotation.x = -Math.PI / 2;
+    rope.position.set(0, -0.07, -2);
+    root.add(rope);
+    animated.push(rope);
+  }
+  const p = label("\u6F5C\u6C34\u7801\u5934  DIVE", 4.6, 0.8, "#f9f2cf", "#247889", 45);
+  p.rotation.x = -Math.PI / 2;
+  p.position.set(0, 0.205, 3);
+  root.add(p);
+  const path = label("A Q U A   C O A S T", 6.8, 0.55, "#f4d48a", "#d3b87e", 28);
+  path.rotation.x = -Math.PI / 2;
+  path.position.set(0, 0.21, 15);
+  root.add(path);
+  for (let i = 0; i < 12; i++) {
+    const x2 = i % 2 ? 15.2 : -15.2, z = 4 + Math.floor(i / 2) * 5.3;
+    palm(root, x2, z, 0.7 + i % 3 * 0.1);
+  }
+  for (const x2 of [-3, 3]) {
+    cyl(root, x2, 2.2, 34, 0.22, 4.3, "#fff8e1");
+    cyl(root, x2, 4.2, 34, 0.35, 0.25, "#fac284");
+  }
+  box(root, 0, 4.45, 34, 7.8, 1.25, 0.6, "#35a9b5", 0.25);
+  const title = label("AQUA COAST", 6.8, 0.75, "#35a9b5", "#fff9e3", 48);
+  title.position.set(0, 4.47, 34.34);
+  root.add(title);
+  for (const x2 of [-13, 13]) {
+    box(root, x2, 0.7, 34, 3.4, 1.3, 1.5, "#71cdb9", 0.18);
+    for (let i = 0; i < 4; i++) ball(root, x2 - 1.2 + i * 0.8, 1.45, 34, 0.58, 0.55, 0.55, i % 2 ? "#76cdaa" : "#9dddaf");
+  }
+  const kiosk = new T3.Group();
+  kiosk.position.set(-14, 0, 11.5);
+  root.add(kiosk);
+  box(kiosk, 0, 1, 0, 2.2, 1.8, 2, "#66b7bf");
+  box(kiosk, 0, 2.25, 0, 2.6, 0.25, 2.7, "#ffe6aa");
+  for (let i = 0; i < 6; i++) box(kiosk, -1.05 + i * 0.42, 2.4, 0, 0.42, 0.12, 2.6, i % 2 ? "#fff6da" : "#ff9d87", 0.02);
+  const ksign = label("PEARL CAF\xC9", 2.5, 0.5, "#fff7e1", "#2b7180", 36);
+  ksign.position.set(0, 1.8, 1.05);
+  kiosk.add(ksign);
+  for (const x2 of [-14, 14]) for (const z of [19, 25]) {
+    box(root, x2, 0.7, z, 1.3, 0.16, 2.4, "#d3b08c");
+    for (const zz of [-0.8, 0.8]) box(root, x2, 0.4, z + zz, 0.9, 0.5, 0.13, "#f0dfba");
+    box(root, x2 + (x2 < 0 ? -0.5 : 0.5), 1.1, z, 0.15, 0.7, 2.4, "#d3b08c");
+  }
+  const seaDecor = new T3.Group();
+  scene2.add(seaDecor);
+  for (let i = 0; i < 36; i++) {
+    const x2 = Math.sin(i * 12.29) * 22, z = -4 - i * 5.83 % 34;
+    const rock = ball(seaDecor, x2, -2.7, z, 0.6 + i % 3 * 0.22, 0.25 + i % 4 * 0.12, 0.55, "#8dc3bd");
+    rock.rotation.y = i;
+    coral(seaDecor, x2 + 0.5, -2.65, z + 0.3, i, 0.6 + i % 3 * 0.2);
+  }
+  for (let i = 0; i < 20; i++) {
+    const x2 = Math.sin(i * 5.13) * 23, z = -5 - i * 3.78 % 32;
+    for (let j = 0; j < 3; j++) {
+      const plant = box(seaDecor, x2 + j * 0.13, -2.2, z, 0.07, 1.1 + j % 2 * 0.4, 0.18, j % 2 ? "#46aa99" : "#69bba4", 0.03);
+      plant.rotation.z = (j - 1) * 0.19;
+    }
+  }
+  for (let i = 0; i < 16; i++) seaStar(seaDecor, Math.sin(i * 7.3) * 21, -2.72, -6 - i * 4.7 % 30, 0.6 + i % 3 * 0.2, i % 2 ? "#ffb56b" : "#ee97cb");
+  const buoyMat = mat("#ffbd83");
+  for (let i = 0; i < 11; i++) {
+    const x2 = -25 + i * 5;
+    ball(root, x2, 0.03, -39.5, 0.23, 0.18, 0.23, buoyMat);
+  }
+  beam(root, [-25, 0.02, -39.5], [25, 0.02, -39.5], 0.025, "#fce9be");
+  return { root, seaMat, bottomMat, update(t) {
+    seaMat.uniforms.time.value = t;
+    bottomMat.uniforms.time.value = t;
+    for (let i = 0; i < animated.length; i++) {
+      animated[i].scale.setScalar(1 + Math.sin(t * 0.6 + i) * 0.025);
+    }
+  } };
+}
+function makeTank(scene2, def) {
+  const root = new T3.Group();
+  root.position.set(def.x, 0, def.z);
+  scene2.add(root);
+  const built = new T3.Group(), blueprint = new T3.Group();
+  root.add(built, blueprint);
+  const r = def.r;
+  const shadow = softShadow(root, r * 1.5, 0.16);
+  cyl(built, 0, 0.36, 0, r + 0.27, 0.37, "#e7bb80");
+  cyl(built, 0, 0.6, 0, r + 0.1, 0.18, def.color);
+  ring(built, r + 0.12, 0.04, "#ffe7a0", 0, 0.52);
+  cyl(built, 0, 0.72, 0, r, 0.15, "#fff4d5");
+  const glassMat = new T3.MeshPhysicalMaterial({ color: "#e3ffff", transparent: true, opacity: 0.08, metalness: 0, roughness: 0.06, clearcoat: 1, clearcoatRoughness: 0.05, side: T3.DoubleSide, depthWrite: false, envMapIntensity: 1.8 });
+  const glass = mesh(new T3.CylinderGeometry(r, r, 3.2, 64, 1, true), glassMat, built, 0, 2.35, 0);
+  glass.castShadow = false;
+  glass.renderOrder = 5;
+  const inner = mesh(new T3.CylinderGeometry(r - 0.07, r - 0.07, 2.65, 48, 1, true), new T3.MeshPhysicalMaterial({ color: "#1cbcd3", transparent: true, opacity: 0.12, roughness: 0.12, depthWrite: false, side: T3.DoubleSide }), built, 0, 2.15, 0);
+  inner.castShadow = false;
+  inner.renderOrder = 3;
+  const wm = waterMaterial("#49dfe4", 0.15), surface = mesh(new T3.CircleGeometry(r - 0.055, 64), wm, built, 0, 3.5, 0);
+  surface.rotation.x = -Math.PI / 2;
+  surface.castShadow = false;
+  surface.renderOrder = 4;
+  const sand = mesh(new T3.CircleGeometry(r - 0.07, 48), mat("#f8dfa8"), built, 0, 0.82, 0);
+  sand.rotation.x = -Math.PI / 2;
+  ring(built, r, 0.065, "#46c6c5", 0, 3.95);
+  ring(built, r, 0.045, "#ffefd3", 0, 3.84);
+  ring(built, r, 0.08, "#fff4db", 0, 0.79);
+  ring(built, r - 0.07, 0.026, "#cefff3", 0, 3.52);
+  for (const angle of [0.4, 2.2, 2.65]) {
+    const p = [];
+    for (let j = 0; j <= 12; j++) {
+      const a = angle + (j / 12 - 0.5) * 0.17;
+      p.push(new T3.Vector3(Math.sin(a) * (r + 0.012), 0.95 + j / 12 * 2.5, Math.cos(a) * (r + 0.012)));
+    }
+    const streak = new T3.Mesh(new T3.TubeGeometry(new T3.CatmullRomCurve3(p), 16, 0.025, 3, false), new T3.MeshBasicMaterial({ color: "#f6fff6", transparent: true, opacity: 0.48, depthWrite: false }));
+    streak.renderOrder = 6;
+    built.add(streak);
+  }
+  for (let i = 0; i < 4; i++) {
+    const a = i * 2.31;
+    ball(built, Math.cos(a) * r * 0.55, 0.93, Math.sin(a) * r * 0.55, 0.4, 0.18, 0.32, "#b1c7b0");
+    coral(built, Math.cos(a) * r * 0.7, 0.87, Math.sin(a) * r * 0.7, i, 0.6);
+  }
+  seaStar(built, -r * 0.3, 0.91, r * 0.5, 0.48, def.color);
+  const plaque = label(def.name, 3.1, 0.66, "#fff9e5", "#2b6c7d", 54);
+  plaque.position.set(0, 0.72, r + 0.28);
+  plaque.rotation.x = -0.1;
+  built.add(plaque);
+  const number = label(String(def.number || SPECIES.indexOf(def) + 1).padStart(2, "0"), 0.72, 0.45, "#f9b57d", "#ffffff", 52);
+  number.position.set(-1.85, 0.78, r * 0.8);
+  built.add(number);
+  cyl(blueprint, 0, 0.3, 0, r + 0.15, 0.14, "#efdbb0");
+  const dashed = new T3.LineLoop(new T3.BufferGeometry().setFromPoints(Array.from({ length: 80 }, (_, i) => new T3.Vector3(Math.cos(i / 80 * Math.PI * 2) * r, 0.4, Math.sin(i / 80 * Math.PI * 2) * r))), new T3.LineDashedMaterial({ color: "#caa169", dashSize: 0.28, gapSize: 0.19 }));
+  dashed.computeLineDistances();
+  blueprint.add(dashed);
+  const cross = label("+", 1.7, 1.7, "#f7dfa8", "#ba996c", 120);
+  cross.rotation.x = -Math.PI / 2;
+  cross.position.y = 0.42;
+  blueprint.add(cross);
+  const bubbleGeo = new T3.BufferGeometry(), bpos = new Float32Array(18 * 3);
+  bubbleGeo.setAttribute("position", new T3.BufferAttribute(bpos, 3));
+  const bubbles = new T3.Points(bubbleGeo, new T3.PointsMaterial({ color: "#e3fff9", size: 0.06, transparent: true, opacity: 0.65, depthWrite: false }));
+  built.add(bubbles);
+  return { root, built, blueprint, water: wm, update(t, tank) {
+    built.visible = tank.built;
+    blueprint.visible = !tank.built;
+    wm.uniforms.time.value = t;
+    for (let i = 0; i < 18; i++) {
+      bpos[i * 3] = Math.sin(i * 2.13) * r * 0.75;
+      bpos[i * 3 + 1] = 0.9 + (t * 0.45 + i * 0.29) % 2.5;
+      bpos[i * 3 + 2] = Math.cos(i * 3.17) * r * 0.75;
+    }
+    bubbleGeo.attributes.position.needsUpdate = true;
+  } };
+}
+var colored = (geometry, color) => {
+  const g = geometry.clone();
+  const a = new Float32Array(g.attributes.position.count * 3), c = new T3.Color(color);
+  for (let i = 0; i < a.length; i += 3) {
+    a[i] = c.r;
+    a[i + 1] = c.g;
+    a[i + 2] = c.b;
+  }
+  g.setAttribute("color", new T3.BufferAttribute(a, 3));
+  return g;
+};
+function fishPreviewGeometry(kind, rare = false) {
+  const g = fishGeometry(kind);
+  if (rare) {
+    const colors = g.attributes.color, c = new T3.Color(), tint = new T3.Color(RARE_COLORS[kind]);
+    for (let i = 0; i < colors.count; i++) {
+      c.fromBufferAttribute(colors, i);
+      const hi = Math.max(c.r, c.g, c.b), lo = Math.min(c.r, c.g, c.b);
+      if (hi > 0.12 && hi - lo > 0.08) c.lerp(tint, 0.77);
+      colors.setXYZ(i, c.r, c.g, c.b);
+    }
+    colors.needsUpdate = true;
+  }
+  return g;
+}
+var FishRenderer = class {
+  constructor(scene2) {
+    this.time = { value: 0 };
+    this.batches = {};
+    this.counts = {};
+    this.radii = {};
+    this.dummy = new T3.Object3D();
+    for (const s of SPECIES.flatMap((d) => [{ ...d, key: d.id, rare: false }, { ...d, key: d.id + ":rare", rare: true }])) {
+      const m = new T3.MeshPhysicalMaterial({ vertexColors: true, roughness: s.rare ? 0.16 : 0.26, metalness: s.rare ? 0.14 : 0.03, emissive: s.rare ? RARE_COLORS[s.id] : "#000000", emissiveIntensity: s.rare ? 0.1 : 0, clearcoat: 1, clearcoatRoughness: 0.17, iridescence: s.rare ? 1 : ["tang", "butterfly"].includes(s.id) ? 0.24 : 0, iridescenceIOR: 1.25, side: T3.DoubleSide });
+      m.customProgramCacheKey = () => "aqua-v3-" + s.key;
+      m.onBeforeCompile = (shader) => {
+        shader.uniforms.swimTime = this.time;
+        shader.vertexShader = "uniform float swimTime;\n" + shader.vertexShader;
+        shader.vertexShader = shader.vertexShader.replace("#include <begin_vertex>", `#include <begin_vertex>
+float phase=instanceMatrix[3].x*.53+instanceMatrix[3].z*.37;float tail=max(0.,-position.x-.18);transformed.z+=sin(swimTime*7.0+position.x*3.2+phase)*tail*tail*.18;${s.id === "ray" ? "transformed.y+=sin(swimTime*3.2+abs(position.z)*2.8+phase)*pow(abs(position.z),1.6)*.18;" : ""}`);
+      };
+      const geometry = fishPreviewGeometry(s.id, s.rare);
+      geometry.computeBoundingBox();
+      const b = geometry.boundingBox;
+      this.radii[s.id] = Math.hypot(Math.max(Math.abs(b.min.x), Math.abs(b.max.x)), Math.max(Math.abs(b.min.z), Math.abs(b.max.z))) + 0.18;
+      const batch = new T3.InstancedMesh(geometry, m, 256);
+      batch.instanceMatrix.setUsage(T3.DynamicDrawUsage);
+      batch.frustumCulled = false;
+      batch.count = 0;
+      scene2.add(batch);
+      this.batches[s.key] = batch;
+    }
+    this.glints = new T3.InstancedMesh(new T3.OctahedronGeometry(1), new T3.MeshBasicMaterial({ color: "#fff0a2", toneMapped: false }), 160);
+    this.glints.count = 0;
+    this.glints.frustumCulled = false;
+    scene2.add(this.glints);
+    this.sparkCount = 0;
+  }
+  stockRadius(kind, radius, scale) {
+    return Math.max(0.3, radius - this.radii[kind] * BY_ID[kind].size * scale - 0.25);
+  }
+  begin(t) {
+    this.time.value = t;
+    for (const key2 of Object.keys(this.batches)) this.counts[key2] = 0;
+    this.sparkCount = 0;
+  }
+  add(kind, x, y, z, heading, size = 1, rare = false) {
+    const key2 = kind + (rare ? ":rare" : ""), i = this.counts[key2]++;
+    if (i >= 256) return;
+    this.dummy.position.set(x, y, z);
+    this.dummy.rotation.set(0, heading, Math.sin(this.time.value * 2 + i) * 0.05);
+    this.dummy.scale.setScalar(size * BY_ID[kind].size);
+    this.dummy.updateMatrix();
+    this.batches[key2].setMatrixAt(i, this.dummy.matrix);
+    if (rare) for (let n = 0; n < 2 && this.sparkCount < 160; n++) {
+      const a = this.time.value * 1.2 + n * Math.PI + i * 0.8, r = size * BY_ID[kind].size * 0.9;
+      this.dummy.position.set(x + Math.cos(a) * r, y + 0.32 * size + Math.sin(a * 1.7) * size * 0.2, z + Math.sin(a) * r * 0.45);
+      this.dummy.rotation.set(0, a, a);
+      this.dummy.scale.setScalar(size * 0.085 * (0.8 + 0.2 * Math.sin(a * 4)));
+      this.dummy.updateMatrix();
+      this.glints.setMatrixAt(this.sparkCount++, this.dummy.matrix);
+    }
+  }
+  end() {
+    for (const key2 of Object.keys(this.batches)) {
+      this.batches[key2].count = Math.min(this.counts[key2], 256);
+      this.batches[key2].instanceMatrix.needsUpdate = true;
+    }
+    this.glints.count = this.sparkCount;
+    this.glints.instanceMatrix.needsUpdate = true;
+  }
+};
+function makePerson(scene2, style = 0, owner2 = false, staff = false) {
+  const root = new T3.Group();
+  scene2.add(root);
+  const rig = new T3.Group();
+  root.add(rig);
+  const diver = owner2 || staff;
+  const palette = ["#ff8466", "#46c3bf", "#a48ae4", "#ffc65e", "#8acb73", "#ef93c0", "#67bce5", "#4b8dba"], skin = ["#f6d3a7", "#e8af88", "#bd805a", "#8d5a40", "#fbe0b6"][style % 5], shirt = owner2 ? "#ff7256" : staff ? "#31c8b6" : palette[style % 8];
+  const dark = "#225e78", mint = "#a4f5d7", gold = "#ffd36c";
+  ball(rig, 0, 1.23, 0, 0.4, 0.56, 0.28, shirt);
+  box(rig, 0, 0.71, 0, 0.59, 0.3, 0.42, diver ? dark : "#4b7693", 0.11);
+  ball(rig, 0, 2.03, 0, 0.38, 0.42, 0.34, skin);
+  const arms = [], legs = [];
+  for (const side of [-1, 1]) {
+    const arm = new T3.Group();
+    arm.position.set(side * 0.4, 1.57, 0);
+    rig.add(arm);
+    beam(arm, [0, 0, 0], [side * 0.1, -0.57, -0.03], 0.108, shirt);
+    ball(arm, 0, -0.03, 0, 0.17, 0.18, 0.18, diver ? mint : shirt);
+    ball(arm, side * 0.1, -0.65, -0.03, 0.135, 0.15, 0.125, diver ? dark : skin);
+    if (diver) {
+      cyl(arm, side * 0.1, -0.51, -0.03, 0.126, 0.09, mint);
+      box(arm, side * 0.1, -0.67, -0.135, 0.17, 0.13, 0.045, "#6de1d5", 0.03);
+      if (side === -1) {
+        box(arm, -0.11, -0.42, -0.13, 0.2, 0.2, 0.07, "#fff1bb", 0.04);
+        box(arm, -0.11, -0.42, -0.175, 0.13, 0.12, 0.02, "#3faabe", 0.02);
+      }
+    }
+    arms.push(arm);
+    const leg = new T3.Group();
+    leg.position.set(side * 0.18, LEG_HEIGHT, 0);
+    rig.add(leg);
+    beam(leg, [0, 0, 0], [0, -0.48, 0], 0.118, diver ? dark : "#5b7e9a");
+    const shoe = diver ? SHOES.diver : SHOES.guest;
+    box(leg, 0, shoe.y, shoe.z, shoe.width, shoe.height, shoe.depth, diver ? "#ffbd48" : "#fff6db", 0.07);
+    if (diver) {
+      box(leg, 0, -0.27, -0.11, 0.18, 0.22, 0.08, mint, 0.05);
+      for (const xx of [-0.075, 0, 0.075]) box(leg, xx, -0.455, -0.38, 0.023, 0.016, 0.42, "#fff2ae", 0.01);
+      cyl(leg, 0, -0.43, 0, 0.126, 0.06, "#6fe0d0");
+    }
+    legs.push(leg);
+  }
+  for (const side of [-1, 1]) {
+    const ex = side * (diver ? 0.17 : 0.13), ey = diver ? 2.1 : 2.07, ez = diver ? -0.36 : -0.31;
+    ball(rig, ex, ey, ez, 0.076, 0.085, 0.038, "#fffdf0");
+    ball(rig, ex + 0.01, ey, ez - 0.035, 0.039, 0.047, 0.02, "#244d64");
+    ball(rig, ex + 0.027, ey + 0.026, ez - 0.054, 0.014, 0.016, 8e-3, "#ffffff");
+  }
+  ball(rig, 0, 1.95, -0.35, 0.055, 0.065, 0.07, skin);
+  if (diver) {
+    const hood = mesh(new T3.SphereGeometry(0.414, 28, 18, 0, Math.PI), mat(dark, 0.42), rig, 0, 2.04, 0.02);
+    hood.scale.set(1, 1.05, 0.95);
+    const crown = mesh(new T3.SphereGeometry(0.414, 28, 16, 0, Math.PI * 2, 0, Math.PI * 0.4), mat(dark, 0.38), rig, 0, 2.04, 0.015);
+    crown.scale.set(1, 1.05, 0.96);
+    beam(rig, [0, 2.47, 0.06], [0, 2.42, -0.17], 0.044, mint);
+    beam(rig, [0, 2.42, -0.17], [0, 2.28, -0.34], 0.04, mint);
+    for (const x of [-0.15, 0.15]) {
+      beam(rig, [x, 2.37, 0.04], [x, 2.33, 0.21], 0.035, mint);
+      beam(rig, [x, 2.33, 0.21], [x, 2.19, 0.36], 0.035, mint);
+    }
+    box(rig, 0, 1.24, -0.246, 0.43, 0.65, 0.11, "#ecffef", 0.12);
+    box(rig, 0, 1.38, -0.31, 0.2, 0.11, 0.035, "#3ac7bc", 0.03);
+    box(rig, 0, 1.12, -0.31, 0.24, 0.045, 0.035, gold, 0.02);
+    box(rig, 0, 0.8, 0, 0.7, 0.15, 0.49, dark, 0.07);
+    box(rig, 0, 0.8, -0.28, 0.18, 0.12, 0.07, gold, 0.03);
+    for (const side of [-1, 1]) {
+      beam(rig, [side * 0.27, 1.66, -0.16], [side * 0.21, 0.9, -0.27], 0.041, dark);
+      beam(rig, [side * 0.27, 1.66, 0.12], [side * 0.22, 0.95, 0.23], 0.045, dark);
+      const frame = mesh(new T3.TorusGeometry(0.171, 0.037, 8, 28), mat("#e8fff1", 0.22, 0.15), rig, side * 0.17, 2.1, -0.395);
+      frame.scale.y = 0.84;
+      const lens = mesh(new T3.CircleGeometry(0.142, 32), new T3.MeshPhysicalMaterial({ color: "#86f8ef", transparent: true, opacity: 0.23, metalness: 0.05, roughness: 0.03, clearcoat: 1, depthWrite: false, side: T3.DoubleSide }), rig, side * 0.17, 2.1, -0.425);
+      lens.scale.y = 0.84;
+      lens.rotation.y = Math.PI;
+      const glint = box(rig, side * 0.17 - 0.035, 2.15, -0.433, 0.08, 0.018, 0.014, "#ffffff", 6e-3);
+      glint.rotation.z = 0.32;
+    }
+    box(rig, 0, 2.12, -0.38, 0.08, 0.065, 0.06, dark, 0.02);
+    beam(rig, [-0.36, 2.09, 0], [0.36, 2.09, 0], 0.035, dark);
+    const regulator = cyl(rig, 0, 1.87, -0.365, 0.1, 0.065, dark);
+    regulator.rotation.x = Math.PI / 2;
+    const cap = cyl(rig, 0, 1.87, -0.414, 0.073, 0.027, mint);
+    cap.rotation.x = Math.PI / 2;
+    const hose = new T3.CatmullRomCurve3([new T3.Vector3(0.04, 1.87, -0.39), new T3.Vector3(0.55, 1.6, -0.3), new T3.Vector3(0.58, 1.67, 0.32), new T3.Vector3(0.2, 1.91, 0.41)]);
+    mesh(new T3.TubeGeometry(hose, 24, 0.035, 7, false), mat(dark, 0.5), rig);
+    box(rig, 0, 1.35, 0.29, 0.56, 0.88, 0.16, dark, 0.11);
+    for (const x of [-0.18, 0.18]) {
+      cyl(rig, x, 1.41, 0.43, 0.153, 0.94, "#f1fff4");
+      ball(rig, x, 0.95, 0.43, 0.153, 0.13, 0.153, "#4ecdbf");
+      ball(rig, x, 1.87, 0.43, 0.153, 0.1, 0.153, "#4ecdbf");
+      for (const yy of [1.17, 1.63]) cyl(rig, x, yy, 0.43, 0.161, 0.075, gold);
+      cyl(rig, x, 1.98, 0.43, 0.047, 0.13, "#f7c356");
+      beam(rig, [x - 0.07, 2.04, 0.43], [x + 0.07, 2.04, 0.43], 0.025, dark);
+    }
+    beam(rig, [0.34, 2.04, -0.22], [0.44, 2.65, -0.22], 0.045, "#ffd574");
+    beam(rig, [0.44, 2.65, -0.22], [0.44, 2.65, -0.38], 0.05, shirt);
+  } else {
+    const hair = ["#593f35", "#b58340", "#65524a", "#d6a45b", "#303f4d"][style % 5];
+    ball(rig, 0, 2.25, 0.025, 0.4, 0.25, 0.34, hair);
+    if (style % 5 === 1) {
+      ball(rig, 0.17, 2.38, 0.26, 0.19, 0.18, 0.18, hair);
+      ball(rig, 0.2, 2.2, 0.36, 0.12, 0.23, 0.12, hair);
+    } else if (style % 5 === 2) {
+      for (let i = 0; i < 5; i++) ball(rig, Math.sin(i * 1.7) * 0.27, 2.27 + Math.cos(i) * 0.06, 0.07 + Math.cos(i * 1.7) * 0.2, 0.16, 0.15, 0.15, hair);
+    }
+    if (style % 4 === 0) {
+      cyl(rig, 0, 2.35, 0, 0.48, 0.075, "#ffefbe");
+      ball(rig, 0, 2.43, 0.02, 0.34, 0.18, 0.32, "#ffe0a0");
+      cyl(rig, 0, 2.39, 0, 0.345, 0.065, palette[(style + 3) % 8]);
+    }
+    if (style % 3 === 0) {
+      box(rig, 0, 1.28, 0.3, 0.47, 0.57, 0.26, palette[(style + 2) % 8], 0.13);
+      for (const side of [-1, 1]) beam(rig, [side * 0.26, 1.65, -0.1], [side * 0.2, 1, -0.23], 0.035, "#f8e4bf");
+    }
+    if (style % 3 === 1) {
+      for (const yy of [1.08, 1.27, 1.46]) box(rig, 0, yy, -0.265, 0.55, 0.045, 0.022, "#fff3d5", 0.01);
+    } else {
+      box(rig, 0.13, 1.42, -0.27, 0.12, 0.12, 0.035, "#fff0b9", 0.03);
+    }
+    const smile = mesh(new T3.TorusGeometry(0.09, 0.016, 5, 12, Math.PI * 0.75), mat("#8c5e4a"), rig, 0, 1.88, -0.32);
+    smile.rotation.z = Math.PI * 1.1;
+    if (style % 6 === 3) {
+      for (const side of [-1, 1]) box(rig, side * 0.135, 2.08, -0.36, 0.2, 0.13, 0.055, "#356476", 0.04);
+      box(rig, 0, 2.08, -0.36, 0.08, 0.025, 0.03, "#f9e6bb");
+    }
+  }
+  const net = new T3.Group();
+  rig.add(net);
+  beam(net, [0.5, 1.03, -0.1], [0.85, 1.75, -1.02], 0.035, "#fce4aa");
+  const hoop = mesh(new T3.TorusGeometry(0.43, 0.035, 8, 32), mat("#60dbcc", 0.25, 0.1), net, 0.85, 1.75, -1.02);
+  hoop.rotation.x = 0.55;
+  const netMesh = mesh(new T3.SphereGeometry(0.405, 14, 10, 0, Math.PI * 2, 0, Math.PI / 2), new T3.MeshBasicMaterial({ color: "#e8fff2", wireframe: true, transparent: true, opacity: 0.43, depthWrite: false }), net, 0.85, 1.75, -1.02);
+  netMesh.rotation.x = 2.1;
+  net.visible = diver;
+  const combine = (group) => {
+    const children = group.children.filter((o) => o.isMesh && o.material?.color && !o.material.transparent);
+    if (children.length < 2) return;
+    const geos = children.map((o) => {
+      o.updateMatrix();
+      let g = colored(o.geometry, o.material.color);
+      g.applyMatrix4(o.matrix);
+      return g.index ? g.toNonIndexed() : g;
+    });
+    const joined = mergeGeometries3(geos);
+    for (const o of children) group.remove(o);
+    const m = new T3.Mesh(joined, new T3.MeshStandardMaterial({ vertexColors: true, roughness: 0.55 }));
+    m.castShadow = true;
+    m.receiveShadow = true;
+    group.add(m);
+  };
+  if (!owner2) {
+    combine(rig);
+    arms.forEach(combine);
+    legs.forEach(combine);
+  }
+  const bag = new T3.Group();
+  root.add(bag);
+  mesh(new T3.CylinderGeometry(0.38, 0.38, 1, 14, 8, true), new T3.MeshBasicMaterial({ color: "#efffe4", wireframe: true, transparent: true, opacity: 0.25, depthWrite: false }), bag);
+  ring(bag, 0.38, 0.026, gold, 0, 0.5);
+  ring(bag, 0.38, 0.026, gold, 0, -0.5);
+  const halo = ring(root, 0.73, 0.04, "#fff8ac", 0, 0.05);
+  halo.material = new T3.MeshBasicMaterial({ color: "#fff8b4", transparent: true, opacity: 0.85, depthWrite: false });
+  halo.visible = owner2;
+  let marker = null;
+  if (owner2) {
+    const tag = label("\u4F60", 0.6, 0.34, "#fff1a5", "#217a88", 75);
+    marker = new T3.Sprite(new T3.SpriteMaterial({ map: tag.material.map, transparent: true, depthTest: false }));
+    marker.scale.set(0.6, 0.34, 1);
+    root.add(marker);
+  }
+  const shopping = new T3.Group();
+  root.add(shopping);
+  const pouch = ball(shopping, 0.55, 0.78, -0.1, 0.31, 0.36, 0.24, new T3.MeshPhysicalMaterial({ color: "#bcf5e7", transparent: true, opacity: 0.34, roughness: 0.08, clearcoat: 1, depthWrite: false }));
+  pouch.castShadow = false;
+  const handle = mesh(new T3.TorusGeometry(0.16, 0.022, 5, 18), mat("#f4ffe6"), shopping, 0.55, 1.15, -0.1);
+  const shadow = softShadow(root, 0.9, 0.19);
+  return { root, rig, bag, net, shadow, marker, halo, update(actor, t, dt, locomotion = true) {
+    const pose = diver ? shorePose(actor.z) : { swim: 0, feet: SHORE.deck + 0.01, tilt: 0, lift: 0 }, swim = pose.swim, water = swim > 0.5;
+    root.position.set(actor.x, pose.feet, actor.z);
+    let diff = actor.heading - root.rotation.y;
+    diff = Math.atan2(Math.sin(diff), Math.cos(diff));
+    root.rotation.y += diff * (1 - Math.exp(-dt * 12));
+    rig.rotation.x = pose.tilt;
+    rig.position.y = pose.lift + Math.sin(t * 2) * 0.025 * swim;
+    const speed = actor.moving && locomotion ? 1 : 0, slope = actor.z > SHORE.rampStart && actor.z < SHORE.rampEnd ? Math.atan((SHORE.deck - SHORE.seaFeet) / (SHORE.rampEnd - SHORE.rampStart)) : 0;
+    for (let i = 0; i < 2; i++) {
+      legs[i].rotation.x = Math.sin(t * (water ? 9 : 12) + i * Math.PI) * (0.43 * speed + 0.17 * swim) - slope * Math.cos(root.rotation.y);
+      legs[i].rotation.z = -slope * Math.sin(root.rotation.y);
+      legs[i].position.y = LEG_HEIGHT + (swim === 0 ? footLift(actor.z, pose.feet, root.rotation.y, legs[i].position.x, legs[i].rotation.x, legs[i].rotation.z, diver) : 0);
+      arms[i].rotation.x = Math.sin(t * (water ? 5 : 12) + i * Math.PI) * 0.3 * speed - 0.65 * swim;
+    }
+    const count = typeof actor.bag === "object" ? Object.values(actor.bag || {}).reduce((a, b) => a + b, 0) : 0, frame = cargoFrame(actor.z, count);
+    bag.visible = count > 0 && diver;
+    bag.scale.y = frame.height;
+    bag.rotation.x = frame.angle;
+    bag.position.set(0, frame.y, frame.z);
+    shopping.visible = typeof actor.bag === "string";
+    if (locomotion && actor.target !== null && actor.target !== void 0) {
+      arms[1].rotation.x = -0.7 + Math.sin(t * 8) * 0.22;
+      net.rotation.z = Math.sin(t * 9) * 0.15;
+      net.rotation.x = -0.25;
+    } else {
+      net.rotation.z = 0;
+      net.rotation.x = 0;
+    }
+    halo.position.y = swim > 0.5 ? -0.035 - pose.feet : 0.045;
+    shadow.visible = actor.z > SHORE.rampEnd;
+    marker?.position.set(0, 3.1 * (1 - swim) + 1.76 * swim, 0);
+  } };
+}
+
+// src/navigation.mjs
+function walkable(x, z, layout = SPECIES, end = 34) {
+  if (z < SHORE.rampStart) {
+    if (Math.abs(x) > 24 || z < -39) return false;
+  } else if (z < 2) {
+    if (Math.abs(x) > SHORE.halfLane) return false;
+  } else if (Math.abs(x) > 16 || z > end) return false;
+  if (z > 12 && z < 23) {
+    for (const px of [-3.2, 3.2]) for (const pz of [13.5, 17.5, 21.5]) if (Math.hypot(x - px, z - pz) < 0.4) return false;
+  }
+  if (z > 2) {
+    for (const s of layout.byRow ? layout.byRow.get(Math.floor(z / 12)) || [] : layout) if (Math.hypot(x - s.x, z - s.z) < s.r + 0.6) return false;
+  }
+  return true;
+}
+function moveSlide(actor, dx, dz, layout = SPECIES, end = 34) {
+  const n = Math.max(1, Math.ceil(Math.hypot(dx, dz) / 0.22));
+  for (let i = 0; i < n; i++) {
+    if (walkable(actor.x + dx / n, actor.z + dz / n, layout, end)) {
+      actor.x += dx / n;
+      actor.z += dz / n;
+    } else {
+      if (walkable(actor.x + dx / n, actor.z, layout, end)) actor.x += dx / n;
+      if (walkable(actor.x, actor.z + dz / n, layout, end)) actor.z += dz / n;
+    }
+  }
+}
+var key = (x, z) => x + "," + z;
+function findPath(start2, end, layout = SPECIES, bound = 34) {
+  if (Math.abs(start2.z - end.z) > 28) {
+    const step = end.z > start2.z ? 20 : -20, points = [{ x: 0, z: start2.z }];
+    for (let z = start2.z + step; step > 0 ? z < end.z : z > end.z; z += step) points.push({ x: 0, z });
+    points.push({ x: 0, z: end.z }, end);
+    let from = start2, path = [];
+    for (const point of points) {
+      if (Math.hypot(from.x - point.x, from.z - point.z) < 0.1) continue;
+      const section = localPath(from, point, layout, bound);
+      if (!section.length) return [];
+      path.push(...section);
+      from = point;
+    }
+    return path;
+  }
+  return localPath(start2, end, layout, bound);
+}
+function localPath(start2, end, layout, bound) {
+  const sx = Math.round(start2.x), sz = Math.round(start2.z), ex = Math.round(end.x), ez = Math.round(end.z);
+  if (!walkable(ex, ez, layout, bound)) return [];
+  const open = [{ x: sx, z: sz, g: 0, f: 0 }], best = /* @__PURE__ */ new Map([[key(sx, sz), 0]]), parents = /* @__PURE__ */ new Map();
+  let reached = null, steps = 0;
+  while (open.length && steps++ < 6e3) {
+    let bi = 0;
+    for (let i = 1; i < open.length; i++) if (open[i].f < open[bi].f) bi = i;
+    const cur = open.splice(bi, 1)[0];
+    if (cur.x === ex && cur.z === ez) {
+      reached = cur;
+      break;
+    }
+    for (const [dx, dz] of [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, 1], [1, -1], [-1, -1]]) {
+      const x = cur.x + dx, z = cur.z + dz;
+      if (!walkable(x, z, layout, bound) || !walkable(cur.x + dx, cur.z, layout, bound) || !walkable(cur.x, cur.z + dz, layout, bound) || !walkable(cur.x + dx * 0.5, cur.z + dz * 0.5, layout, bound)) continue;
+      const g = cur.g + (dx && dz ? 1.414 : 1), k2 = key(x, z);
+      if ((best.get(k2) ?? Infinity) <= g) continue;
+      best.set(k2, g);
+      parents.set(k2, key(cur.x, cur.z));
+      open.push({ x, z, g, f: g + Math.hypot(ex - x, ez - z) });
+    }
+  }
+  if (!reached) return [];
+  const path = [];
+  let k = key(ex, ez);
+  while (k !== key(sx, sz)) {
+    const [x, z] = k.split(",").map(Number);
+    path.push({ x, z });
+    k = parents.get(k);
+    if (!k) return [];
+  }
+  path.reverse();
+  path.push({ x: end.x, z: end.z });
+  return path;
+}
+function followPath(actor, dt, speed, layout = SPECIES, bound = 34) {
+  if (!actor.path?.length) {
+    actor.moving = false;
+    return true;
+  }
+  let remaining = dt * speed;
+  actor.moving = true;
+  while (actor.path.length && remaining > 0) {
+    const p = actor.path[0], dx = p.x - actor.x, dz = p.z - actor.z, d = Math.hypot(dx, dz);
+    if (d < 0.05) {
+      actor.path.shift();
+      continue;
+    }
+    actor.heading = Math.atan2(-dx, -dz);
+    const n = Math.min(d, remaining);
+    moveSlide(actor, dx / d * n, dz / d * n, layout, bound);
+    remaining -= n;
+    if (d <= n + 0.02 && Math.hypot(actor.x - p.x, actor.z - p.z) < 0.08) actor.path.shift();
+  }
+  return actor.path.length === 0;
+}
+
+// src/simulation.mjs
+var safe = (n, f = 0, max = 1e10) => Number.isFinite(n) ? clamp(n, 0, max) : f;
+var emptyBag = () => Object.fromEntries(SPECIES.map((s) => [s.id, 0]));
+var AquariumSimulation = class {
+  constructor(saved = null) {
+    this.expansions = 0;
+    this.legacyLevelCredit = 0;
+    this.migrationNotice = false;
+    this.definitions = galleryDefinitions();
+    this.rareFound = {};
+    this.rareExhibits = {};
+    this.rarePity = {};
+    this.honorSeen = 0;
+    this.levelSeen = 1;
+    this.time = 0;
+    this.cash = 120;
+    this.earned = 0;
+    this.sold = 0;
+    this.caught = 0;
+    this.delivered = 0;
+    this.seed = 42871;
+    this.events = [];
+    this.claimed = [];
+    this.discovered = {};
+    this.upgrades = Object.fromEntries(Object.keys(UPGRADES).map((k) => [k, 0]));
+    this.tanks = Object.fromEntries(SPECIES.map((s, i) => [s.id, { built: i === 0, level: 1, stock: i === 0 ? 3 : 0, rareStock: 0, bonusCapacity: 0 }]));
+    this.player = { x: 0, z: 7, heading: 0, moving: false, bag: emptyBag(), rareBag: emptyBag(), oxygen: 60, target: null, progress: 0, path: [], auto: null, pulse: 0, boost: 0, deliveryClock: 0 };
+    this.guests = [];
+    this.staff = [];
+    this.spawnClock = 0;
+    this.nextGuest = 0;
+    this.fish = [];
+    for (const s of SPECIES) for (let i = 0; i < s.count; i++) this.fish.push({ id: this.fish.length, kind: s.id, index: i, x: s.sea[0], z: s.sea[1], y: -1.2, heading: 0, cooldown: 0, rare: i === 0 });
+    if (saved?.version === 1) this.restore(saved);
+    this.refreshFish();
+  }
+  random() {
+    this.seed = 1664525 * this.seed + 1013904223 >>> 0;
+    return this.seed / 4294967296;
+  }
+  get built() {
+    return Object.values(this.tanks).filter((t) => t.built).length;
+  }
+  get capacity() {
+    return 10 + this.upgrades.bag * 5;
+  }
+  get maxOxygen() {
+    return 60 + this.upgrades.oxygen * 15;
+  }
+  get radius() {
+    return 2.65 + this.upgrades.net * 0.18;
+  }
+  get extraLevels() {
+    return this.legacyLevelCredit + Object.values(this.tanks).reduce((n, t) => n + (t.built ? t.level - 1 : 0), 0);
+  }
+  get level() {
+    return museumLevel(this.earned, this.expansions, this.extraLevels);
+  }
+  get honor() {
+    return honorFor(this.level, this.earned);
+  }
+  get title() {
+    return this.honor.name;
+  }
+  get tankLimit() {
+    return 12 + Math.floor((this.level - 1) / 5) * 6 + this.expansions * 2;
+  }
+  upgradeLimit(id) {
+    return equipmentLimit(id, this.level, this.expansions);
+  }
+  get end() {
+    return galleryEnd(this.expansions);
+  }
+  get guestLimit() {
+    const units = this.definitions.reduce((n, d) => n + (this.tanks[d.id].built ? this.tankCapacity(d.id) : 0), 0) / 16;
+    return Math.min(96, 7 + Math.ceil(units * 3) + this.upgrades.visitors * 2 + Math.floor((this.level - 1) / 3));
+  }
+  refreshLayout(relocate = false) {
+    this.definitions = galleryDefinitions(this.tanks);
+    if (relocate) {
+      for (const a of [this.player, ...this.guests, ...this.staff]) {
+        this.keepSafe(a);
+        a.path = [];
+        if (a === this.player) {
+          a.auto = null;
+          a.target = null;
+        } else if (this.guests.includes(a)) {
+          if (a.mode === "leave") a.path = this.path(a, { x: 0, z: 33.8 });
+          else this.chooseGuest(a);
+        } else {
+          a.mode = "choose";
+          a.target = null;
+        }
+      }
+    }
+  }
+  keepSafe(a) {
+    if (walkable(a.x, a.z, this.definitions, this.end)) return;
+    if (a.z > this.end || !Number.isFinite(a.z) || !Number.isFinite(a.x)) {
+      a.x = 0;
+      a.z = 7;
+      return;
+    }
+    for (let r = 0.25; r <= 6; r += 0.25) for (let i = 0; i < 16; i++) {
+      const x = a.x + Math.cos(i * Math.PI / 8) * r, z = a.z + Math.sin(i * Math.PI / 8) * r;
+      if (walkable(x, z, this.definitions, this.end)) {
+        a.x = x;
+        a.z = z;
+        return;
+      }
+    }
+    a.x = 0;
+    a.z = Math.max(3, Math.min(33, a.z));
+  }
+  definition(id) {
+    return this.definitions.find((d) => d.id === id);
+  }
+  path(actor, end) {
+    return findPath(actor, end, this.definitions, this.end);
+  }
+  follow(actor, dt, speed) {
+    return followPath(actor, dt, speed, this.definitions, this.end);
+  }
+  movement(actor, dx, dz) {
+    return moveSlide(actor, dx, dz, this.definitions, this.end);
+  }
+  unlocked(kind) {
+    return this.tanks[kind]?.built;
+  }
+  checkProgress() {
+    const h = this.honor;
+    if (h.rank > this.honorSeen) {
+      this.honorSeen = h.rank;
+      this.emit("honor", { ...h, level: this.level });
+    } else if (this.level > this.levelSeen) this.emit("level", { level: this.level, limit: this.tankLimit });
+    this.levelSeen = Math.max(this.levelSeen, this.level);
+  }
+  expand(id) {
+    return this.upgradeTank(id);
+  }
+  deliveryTank(actor, kind = null) {
+    return this.definitions.filter((d) => this.tanks[d.id].built && actor.bag[d.kind] > 0 && (!kind || d.kind === kind) && this.tanks[d.id].stock < this.tankCapacity(d.id)).sort((a, b) => distance(actor, a) - distance(actor, b))[0];
+  }
+  tankCapacity(id) {
+    return 16 + (this.tanks[id].level - 1) * 7 + (this.tanks[id].bonusCapacity || 0);
+  }
+  tankPrice(id) {
+    return Math.round(BY_ID[this.definition(id).kind].price * (1 + (this.tanks[id].level - 1) * 0.14));
+  }
+  tankUpgradePrice(id) {
+    return Math.round(growingPrice(BY_ID[this.definition(id).kind].cost * 0.22 + 130, this.tanks[id].level - 1, 1.65, 11));
+  }
+  emit(type, data = {}) {
+    this.events.push({ type, ...data });
+    if (this.events.length > 150) this.events.shift();
+  }
+  drainEvents() {
+    return this.events.splice(0);
+  }
+  build(id) {
+    const d = BY_ID[id], t = this.tanks[id];
+    if (!d || !t || t.built || this.cash < d.cost) return false;
+    const i = SPECIES.indexOf(d);
+    if (i > 0 && !this.tanks[SPECIES[i - 1].id].built) return false;
+    this.cash -= d.cost;
+    t.built = true;
+    this.emit("build", { kind: id });
+    this.checkProgress();
+    return true;
+  }
+  upgradeTank(id) {
+    const t = this.tanks[id];
+    if (!t?.built || t.level >= this.tankLimit) return false;
+    const cost = this.tankUpgradePrice(id);
+    if (this.cash < cost) return false;
+    this.cash -= cost;
+    t.level++;
+    this.refreshLayout(true);
+    this.emit("upgrade", { kind: id });
+    this.checkProgress();
+    return true;
+  }
+  upgrade(id) {
+    const d = UPGRADES[id];
+    if (!d || this.upgrades[id] >= this.upgradeLimit(id)) return false;
+    const cost = growingPrice(d.base, this.upgrades[id]);
+    if (this.cash < cost) return false;
+    this.cash -= cost;
+    this.upgrades[id]++;
+    if (id === "staff") this.staff.push(this.newStaff());
+    this.emit("upgrade", { kind: id });
+    this.checkProgress();
+    return true;
+  }
+  newStaff() {
+    return { x: 1, z: 5, heading: 0, bag: emptyBag(), rareBag: emptyBag(), target: null, progress: 0, path: [], auto: null, pulse: 0, boost: 0, deliveryClock: 0, mode: "choose", kind: null, moving: false };
+  }
+  claim(id) {
+    const g = MILESTONES.find((g2) => g2.id === id);
+    if (!g || this.claimed.includes(id) || this[g.field] < g.need) return false;
+    this.cash += g.reward;
+    this.claimed.push(id);
+    this.emit("reward", { amount: g.reward });
+    return true;
+  }
+  navigate(x, z) {
+    const path = this.path(this.player, { x, z });
+    if (!path.length) return false;
+    this.player.path = path;
+    this.player.auto = "move";
+    return true;
+  }
+  goFishing() {
+    const p = this.player, score = (kind) => {
+      const ds = this.definitions.filter((d) => d.kind === kind && this.tanks[d.id].built);
+      const stock = ds.reduce((n, d) => n + this.tanks[d.id].stock, 0) + p.bag[kind], cap = ds.reduce((n, d) => n + this.tankCapacity(d.id), 0);
+      return stock >= cap ? Infinity : (stock + 1) / (cap * BY_ID[kind].price);
+    };
+    const id = SPECIES.filter((d) => this.tanks[d.id].built).sort((a, b) => score(a.id) - score(b.id))[0].id, s = BY_ID[id];
+    p.path = this.path(p, { x: s.sea[0], z: s.sea[1] });
+    p.auto = "fish";
+    this.emit("navigate", { text: "\u6B63\u5728\u524D\u5F80" + s.tag });
+  }
+  returnHome() {
+    const p = this.player;
+    const s = this.deliveryTank(p) || this.definitions[0];
+    p.path = this.path(p, approach(s));
+    p.auto = "deliver";
+    this.emit("navigate", { text: "\u56DE\u9986\u8865\u8D27 \xB7 \u79FB\u52A8\u53EF\u968F\u65F6\u63A5\u7BA1" });
+  }
+  seekRare(kind) {
+    if (!this.unlocked(kind)) return false;
+    const f = this.fish.filter((f2) => f2.kind === kind && f2.rare && !f2.cooldown).sort((a, b) => distance(this.player, a) - distance(this.player, b))[0];
+    if (!f) {
+      this.goFishing();
+      return false;
+    }
+    const p = this.player;
+    p.path = this.path(p, { x: f.x, z: f.z });
+    p.auto = "rare";
+    p.seekKind = kind;
+    p.target = f.id;
+    p.progress = 0;
+    p.rareTrackClock = 0;
+    return true;
+  }
+  movePlayer(x, z, dt) {
+    const p = this.player;
+    p.path = [];
+    p.auto = null;
+    const speed = (isSwimming(p.z) ? 5.5 : 6.5) * (1 + this.upgrades.speed * 0.09);
+    const len = Math.hypot(x, z);
+    if (len > 0.02) {
+      p.heading = Math.atan2(-x, -z);
+      this.movement(p, x / Math.max(1, len) * speed * dt, z / Math.max(1, len) * speed * dt);
+      p.moving = true;
+    } else p.moving = false;
+  }
+  cast() {
+    const p = this.player;
+    if (!isSwimming(p.z)) {
+      this.goFishing();
+      return true;
+    }
+    if (p.pulse > 0) return false;
+    p.pulse = 3.4;
+    p.boost = 0.85;
+    this.emit("cast", { x: p.x, z: p.z });
+    return true;
+  }
+  refreshFish() {
+    for (const f of this.fish) {
+      const s = BY_ID[f.kind], t = this.time, phase = f.index * 2.39996, group = Math.floor(f.index / 6), rx = (f.kind === "shark" ? 2.4 : 1.1) + f.index * 1.731 % 1 * 2.4, rz = 0.6 + f.index * 0.713 % 1 * 1.6;
+      const a = t * (0.29 + f.index % 4 * 0.027) + phase, cx = Math.sin(t * 0.19 + group * 2.5) * 1.15, cz = Math.cos(t * 0.22 + group * 1.7) * 0.7;
+      const nx = s.sea[0] + cx + Math.cos(a) * rx + Math.sin(t * 0.37 + phase) * 0.4, nz = s.sea[1] + cz + Math.sin(a) * rz + Math.cos(t * 0.3 + phase) * 0.35;
+      f.heading = Math.atan2(-(nz - f.z), nx - f.x);
+      f.x = nx;
+      f.z = nz;
+      f.y = -1 - f.index % 4 * 0.3 + Math.sin(t * 1.2 + phase) * 0.12;
+    }
+  }
+  capture(actor, dt, assistant = false) {
+    if (!isSwimming(actor.z) || total(actor.bag) >= (assistant ? 6 : this.capacity)) {
+      actor.target = null;
+      actor.progress = 0;
+      return;
+    }
+    let target2 = this.fish.find((f) => f.id === actor.target && f.cooldown <= 0 && this.tanks[f.kind].built && distance(f, actor) < this.radius + 0.6);
+    if (!target2) {
+      target2 = this.fish.filter((f) => f.cooldown <= 0 && this.tanks[f.kind].built && (!assistant || f.kind === actor.kind && !f.rare) && (actor.auto !== "rare" || f.kind === actor.seekKind && f.rare) && distance(f, actor) < this.radius).sort((a, b) => distance(a, actor) - distance(b, actor))[0];
+      actor.target = target2?.id ?? null;
+      actor.progress = 0;
+    }
+    if (!target2) return;
+    const d = BY_ID[target2.kind];
+    actor.progress += dt * (1 + this.upgrades.net * 0.16) * (actor.boost > 0 ? 2.8 : 1) / (d.catch * (assistant ? 1.3 : 1));
+    if (actor.progress >= 1) {
+      target2.cooldown = 12;
+      actor.bag[d.id]++;
+      actor.progress = 0;
+      actor.target = null;
+      if (!assistant) {
+        this.caught++;
+        const first = !this.discovered[d.id];
+        this.discovered[d.id] = (this.discovered[d.id] || 0) + 1;
+        const rare = !!target2.rare;
+        if (rare) {
+          actor.rareBag[d.id]++;
+          this.rareFound[d.id] = (this.rareFound[d.id] || 0) + 1;
+          this.rarePity[d.id] = 0;
+          if (actor.auto === "rare") {
+            actor.auto = "fish";
+            actor.path = [];
+          }
+        } else this.rarePity[d.id] = (this.rarePity[d.id] || 0) + 1;
+        this.emit("catch", { kind: d.id, x: target2.x, z: target2.z, first, rare });
+      }
+    }
+  }
+  deposit(actor, dt, assistant = false) {
+    if (actor.z < 1) return;
+    actor.deliveryClock = (actor.deliveryClock || 0) - dt;
+    if (actor.deliveryClock > 0) return;
+    for (const d of this.definitions) {
+      const kind = d.kind;
+      if (!this.tanks[d.id].built || !actor.bag[kind] || distance(actor, d) > d.r + 1.65) continue;
+      const t = this.tanks[d.id];
+      if (t.stock >= this.tankCapacity(d.id)) continue;
+      const rare = (actor.rareBag?.[kind] || 0) > 0;
+      if (rare && !this.rareExhibits[kind]) {
+        this.rareExhibits[kind] = d.id;
+        this.emit("exhibit", { kind, tank: d.id });
+      } else {
+        t.stock++;
+        if (rare) t.rareStock = (t.rareStock || 0) + 1;
+      }
+      actor.bag[kind]--;
+      if (rare) actor.rareBag[kind]--;
+      actor.deliveryClock = 0.12;
+      if (!assistant) this.delivered++;
+      this.emit("deposit", { kind, tank: d.id, rare, assistant, x: actor.x, z: actor.z });
+      this.checkProgress();
+      break;
+    }
+  }
+  chooseGuest(g) {
+    const choices = this.definitions.filter((d2) => this.tanks[d2.id].built && this.guests.filter((o) => o !== g && o.kind === d2.id && ["walk", "queue"].includes(o.mode)).length < 5);
+    if (!choices.length) {
+      g.mode = "leave";
+      g.path = this.path(g, { x: 0, z: g.exitZ || 33.8 });
+      return;
+    }
+    const scores = choices.map((d2) => ({ s: d2, w: 1 + Math.min(40, this.tanks[d2.id].stock) * 0.2 + (Object.values(this.rareExhibits).includes(d2.id) ? 2 : 0) }));
+    let r = this.random() * scores.reduce((n, v) => n + v.w, 0), d = choices[0];
+    for (const v of scores) {
+      r -= v.w;
+      if (r <= 0) {
+        d = v.s;
+        break;
+      }
+    }
+    g.kind = d.id;
+    g.mode = "walk";
+    const waiting = this.guests.filter((o) => o !== g && o.kind === d.id && ["walk", "queue"].includes(o.mode)).length;
+    g.queue = Math.min(waiting, 4);
+    g.goal = { x: d.x + (d.x < 0 ? 1 : -1) * (d.r + 1.25), z: d.z + g.queue * 0.95 };
+    g.path = this.path(g, g.goal);
+    g.wait = 0;
+    g.shopping = 0;
+  }
+  updateGuests(dt) {
+    this.spawnClock -= dt;
+    if (this.spawnClock <= 0 && this.guests.length < this.guestLimit) {
+      const exitZ = 33.8, g = { id: this.nextGuest++, x: (this.random() - 0.5) * 1.5, z: exitZ, exitZ, heading: 0, style: Math.floor(this.random() * 30), bag: null, moving: true };
+      this.guests.push(g);
+      this.chooseGuest(g);
+      this.spawnClock = Math.max(0.5, 3.6 - this.upgrades.visitors * 0.25 - Math.min(1, this.expansions * 0.1));
+    }
+    for (const g of this.guests) {
+      if (["walk", "queue"].includes(g.mode)) {
+        const rank = this.guests.filter((o) => o.kind === g.kind && o.id < g.id && ["walk", "queue"].includes(o.mode)).length;
+        if (rank !== g.queue) {
+          const d = this.definition(g.kind);
+          g.queue = rank;
+          g.goal = { x: d.x + (d.x < 0 ? 1 : -1) * (d.r + 1.25), z: d.z + rank * 0.95 };
+          g.path = this.path(g, g.goal);
+          g.mode = "walk";
+          g.shopping = 0;
+        }
+      }
+      if (g.mode === "walk") {
+        if (this.follow(g, dt, 3 + g.style % 3 * 0.12)) g.mode = "queue";
+      } else if (g.mode === "queue") {
+        g.wait += dt;
+        g.heading = g.x < 0 ? Math.PI / 2 : -Math.PI / 2;
+        const t = this.tanks[g.kind], ahead = this.guests.some((o) => o !== g && o.kind === g.kind && o.id < g.id && ["queue", "buy"].includes(o.mode));
+        if (!ahead && t.stock > 0) {
+          g.shopping += dt;
+          if (g.shopping > 1.7) {
+            const amount = Math.min(t.stock, 1 + Math.floor(this.random() * 2) + Math.floor(this.upgrades.visitors / 12)), rare = Math.min(t.rareStock || 0, amount), cash = (amount + rare * 3) * this.tankPrice(g.kind);
+            t.stock -= amount;
+            t.rareStock = (t.rareStock || 0) - rare;
+            this.cash += cash;
+            this.earned += cash;
+            this.sold += amount;
+            g.bag = this.definition(g.kind).kind;
+            g.rarePurchase = rare > 0;
+            g.mode = "leave";
+            g.path = this.path(g, { x: (g.id % 3 - 1) * 0.8, z: g.exitZ || 33.8 });
+            this.emit("sale", { kind: g.kind, amount, cash, x: g.x, z: g.z });
+            this.checkProgress();
+          }
+        }
+        if (g.wait > 35 && g.mode === "queue") {
+          g.mode = "leave";
+          g.path = this.path(g, { x: 0, z: g.exitZ || 33.8 });
+        }
+      } else if (g.mode === "leave") {
+        if (this.follow(g, dt, 3.4)) g.mode = "gone";
+      }
+    }
+    const grid = /* @__PURE__ */ new Map();
+    for (const g of this.guests) {
+      if (g.mode === "gone") continue;
+      const gx = Math.floor(g.x), gz = Math.floor(g.z);
+      for (let x = gx - 1; x <= gx + 1; x++) for (let z = gz - 1; z <= gz + 1; z++) for (const o of grid.get(x + "," + z) || []) {
+        if (g.mode === "queue" && o.mode === "queue") continue;
+        let dx = g.x - o.x, dz = g.z - o.z, d = Math.hypot(dx, dz);
+        if (d < 0.6) {
+          if (d < 0.01) {
+            dx = 0.1;
+            dz = 0;
+            d = 0.1;
+          }
+          const force = (0.6 - d) * Math.min(1, dt * 6);
+          if (g.mode !== "queue") this.movement(g, dx / d * force, dz / d * force);
+          if (o.mode !== "queue") this.movement(o, -dx / d * force, -dz / d * force);
+        }
+      }
+      const k = gx + "," + gz;
+      if (!grid.has(k)) grid.set(k, []);
+      grid.get(k).push(g);
+    }
+    this.guests = this.guests.filter((g) => g.mode !== "gone");
+  }
+  updateStaff(dt) {
+    for (const a of this.staff) {
+      if (a.mode === "choose" && total(a.bag) > 0) {
+        const d = this.deliveryTank(a) || this.definitions[0];
+        a.tank = d.id;
+        a.path = this.path(a, approach(d));
+        a.mode = "home";
+      }
+      if (a.mode === "choose") {
+        const choices = this.definitions.filter((s2) => this.tanks[s2.id].built).sort((x, y) => this.tanks[x.id].stock / this.tankCapacity(x.id) - this.tanks[y.id].stock / this.tankCapacity(y.id));
+        const s = choices[0];
+        a.kind = s.kind;
+        a.tank = s.id;
+        a.path = this.path(a, { x: s.sea[0], z: s.sea[1] });
+        a.mode = "sea";
+      }
+      if (a.mode === "sea") {
+        if (this.follow(a, dt, 5.2 + Math.min(5, this.expansions * 0.2))) {
+          a.mode = "catch";
+          a.clock = 0;
+        }
+      } else if (a.mode === "catch") {
+        a.clock += dt;
+        this.capture(a, dt, true);
+        a.moving = false;
+        if (total(a.bag) >= 6 || a.clock > 24) {
+          const s = this.deliveryTank(a, a.kind) || this.definition(a.tank) || this.definitions[0];
+          a.path = this.path(a, approach(s));
+          a.tank = s.id;
+          a.mode = "home";
+        }
+      } else if (a.mode === "home") {
+        if (this.follow(a, dt, 5.2 + Math.min(5, this.expansions * 0.2))) a.mode = "unload";
+      } else if (a.mode === "unload") {
+        this.deposit(a, dt, true);
+        if (!total(a.bag)) a.mode = "choose";
+        else if (this.tanks[a.tank || a.kind].stock >= this.tankCapacity(a.tank || a.kind)) {
+          a.moving = false;
+        }
+      }
+    }
+  }
+  tick(dt) {
+    if (!Number.isFinite(dt) || dt <= 0) return;
+    let remain = Math.min(dt, 1);
+    while (remain > 1e-6) {
+      const step = Math.min(0.05, remain);
+      this.step(step);
+      remain -= step;
+    }
+  }
+  step(dt) {
+    this.time += dt;
+    for (const f of this.fish) {
+      const was = f.cooldown;
+      f.cooldown = Math.max(0, was - dt);
+      if (was > 0 && !f.cooldown) f.rare = (this.rarePity[f.kind] || 0) >= 18 && !this.fish.some((o) => o !== f && o.kind === f.kind && o.rare && o.cooldown <= 0) || this.random() < 0.035;
+    }
+    this.refreshFish();
+    const p = this.player;
+    p.pulse = Math.max(0, p.pulse - dt);
+    p.boost = Math.max(0, p.boost - dt);
+    if (p.auto === "rare" && total(p.bag) < this.capacity) {
+      p.rareTrackClock = (p.rareTrackClock || 0) - dt;
+      if (p.rareTrackClock <= 0) {
+        p.rareTrackClock = 0.8;
+        const f = this.fish.find((f2) => f2.id === p.target && f2.rare && !f2.cooldown) || this.fish.find((f2) => f2.kind === p.seekKind && f2.rare && !f2.cooldown);
+        if (f && distance(p, f) > this.radius * 0.8) {
+          p.path = this.path(p, { x: f.x, z: f.z });
+          p.target = f.id;
+        }
+      }
+    }
+    if (p.path.length) this.follow(p, dt, (isSwimming(p.z) ? 5.5 : 6.5) * (1 + this.upgrades.speed * 0.09));
+    if (isSwimming(p.z)) {
+      p.oxygen = Math.max(0, p.oxygen - dt);
+      if (!p.oxygen && p.auto !== "emergency") {
+        p.path = this.path(p, { x: 0, z: 4 });
+        p.auto = "emergency";
+        this.emit("oxygen");
+      }
+      if (p.auto !== "emergency") this.capture(p, dt);
+    } else {
+      p.oxygen = Math.min(this.maxOxygen, p.oxygen + dt * 16);
+      p.target = null;
+      p.progress = 0;
+    }
+    this.deposit(p, dt);
+    if (p.auto === "deliver" && !p.path.length) {
+      if (total(p.bag) === 0) {
+        p.auto = null;
+        this.emit("unloaded");
+      } else {
+        const next = this.deliveryTank(p);
+        if (next && distance(p, next) > next.r + 1.65) p.path = this.path(p, approach(next));
+      }
+    }
+    this.updateStaff(dt);
+    this.updateGuests(dt);
+    this.checkProgress();
+  }
+  save() {
+    return { version: 1, growthVersion: 2, expansions: this.expansions, legacyLevelCredit: this.legacyLevelCredit, rareFound: this.rareFound, rareExhibits: this.rareExhibits, rarePity: this.rarePity, honorSeen: this.honorSeen, levelSeen: this.levelSeen, time: this.time, cash: this.cash, earned: this.earned, sold: this.sold, caught: this.caught, delivered: this.delivered, seed: this.seed, claimed: this.claimed, discovered: this.discovered, upgrades: this.upgrades, tanks: this.tanks, player: { x: this.player.x, z: this.player.z, heading: this.player.heading, bag: this.player.bag, rareBag: this.player.rareBag, oxygen: this.player.oxygen }, fish: this.fish.map((f) => ({ id: f.id, cooldown: f.cooldown, rare: f.rare })), guests: this.guests, nextGuest: this.nextGuest, spawnClock: this.spawnClock, staff: this.staff };
+  }
+  restore(s) {
+    s = consolidateLegacyTanks(s);
+    this.migrationNotice = !!s.migrationNotice;
+    this.legacyLevelCredit = safe(s.legacyLevelCredit);
+    this.time = safe(s.time);
+    this.cash = safe(s.cash, 120, 1e15);
+    for (const k of ["earned", "sold", "caught", "delivered"]) this[k] = safe(s[k], 0, 1e15);
+    this.seed = safe(s.seed, 42871, 2 ** 32 - 1);
+    this.claimed = Array.isArray(s.claimed) ? s.claimed.filter((id) => MILESTONES.some((g) => g.id === id)) : [];
+    this.expansions = s.growthVersion >= 1 ? Math.floor(safe(s.expansions, 0, 5e3)) : 0;
+    this.definitions = galleryDefinitions();
+    for (const d of this.definitions) {
+      const t = s.tanks?.[d.id];
+      this.tanks[d.id] = { built: d.id === "clown" || !!t?.built, level: Math.max(1, Math.floor(safe(t?.level, 1, s.growthVersion >= 1 ? 1e4 : 12))), stock: Math.floor(safe(t?.stock, 0, 1e7)), rareStock: Math.floor(safe(t?.rareStock, 0, 1e7)), bonusCapacity: Math.floor(safe(t?.bonusCapacity, 0, 1e9)) };
+    }
+    this.refreshLayout();
+    for (const d of this.definitions) {
+      const t = this.tanks[d.id];
+      t.level = Math.min(t.level, this.tankLimit);
+      t.stock = Math.min(t.stock, this.tankCapacity(d.id));
+      t.rareStock = Math.min(t.rareStock, t.stock);
+    }
+    for (const id of Object.keys(UPGRADES)) this.upgrades[id] = Math.floor(safe(s.upgrades?.[id], 0, this.upgradeLimit(id)));
+    for (const d of SPECIES) {
+      this.discovered[d.id] = safe(s.discovered?.[d.id]);
+      this.player.bag[d.id] = Math.floor(safe(s.player?.bag?.[d.id], 0, 1e7));
+      this.player.rareBag[d.id] = Math.min(this.player.bag[d.id], Math.floor(safe(s.player?.rareBag?.[d.id], 0, 1e7)));
+      this.rareFound[d.id] = Math.floor(safe(s.rareFound?.[d.id]));
+      this.rarePity[d.id] = Math.floor(safe(s.rarePity?.[d.id], 0, 30));
+      const exhibit = s.rareExhibits?.[d.id];
+      if (this.definition(exhibit)?.kind === d.id && this.tanks[exhibit].built) this.rareExhibits[d.id] = exhibit;
+    }
+    const x = Number(s.player?.x), z = Number(s.player?.z);
+    if (walkable(x, z, this.definitions, this.end) && Number.isFinite(x) && Number.isFinite(z)) {
+      this.player.x = x;
+      this.player.z = z;
+    } else if (Number.isFinite(x) && Number.isFinite(z) && z < 2 && z >= SHORE.rampStart && Math.abs(x) > SHORE.halfLane) {
+      this.player.x = clamp(x, -23, 23);
+      this.player.z = SHORE.rampStart - 0.7;
+    }
+    this.player.heading = Number.isFinite(s.player?.heading) ? s.player.heading : 0;
+    this.player.oxygen = safe(s.player?.oxygen, this.maxOxygen, this.maxOxygen);
+    this.keepSafe(this.player);
+    for (const f of this.fish) {
+      const v = s.fish?.find((v2) => v2.id === f.id);
+      f.cooldown = safe(v?.cooldown, 0, 12);
+      if (s.growthVersion >= 1) f.rare = !!v?.rare;
+    }
+    this.guests = Array.isArray(s.guests) ? s.guests.filter((g) => this.tanks[g.kind]?.built && Number.isFinite(g.x) && Number.isFinite(g.z) && ["walk", "queue", "leave"].includes(g.mode)).slice(0, this.guestLimit).map((g) => ({ ...g, exitZ: clamp(g.exitZ || 33.8, 33.8, this.end - 0.1) })) : [];
+    this.nextGuest = Math.max(safe(s.nextGuest), ...this.guests.map((g) => g.id + 1));
+    this.spawnClock = safe(s.spawnClock, 0, 5);
+    this.staff = Array.from({ length: this.upgrades.staff }, (_, i) => s.staff?.[i] && BY_ID[s.staff[i].kind] ? { ...this.newStaff(), ...s.staff[i] } : this.newStaff());
+    this.refreshLayout(true);
+    this.honorSeen = Math.min(this.honor.rank, Math.floor(safe(s.honorSeen, this.honor.rank)));
+    this.levelSeen = Math.min(this.level, Math.floor(safe(s.levelSeen, this.level)));
+  }
+};
+
+// src/ui.mjs
+var paths = { fish: "M4 12c3-6 11-7 15 0-4 7-12 6-15 0Z M19 12l4-5v10Z M9 10h.01 M12 6l-1-3 M12 18l-1 3", coin: "M18 7a6 6 0 1 1-12 0 6 6 0 0 1 12 0ZM12 3v8 M9 5h4a1.5 1.5 0 0 1 0 3h-2a1.5 1.5 0 0 0 0 3h4 M4 14c0 5 16 5 16 0 M5 19c4 3 10 3 14 0", bag: "M6 6h12l2 15H4Z M9 6V4a3 3 0 0 1 6 0v2 M7 11c3 2 7 2 10 0", net: "M7 17 3 22 M8 16l8-8 M20 3c4 4 0 12-5 12S7 10 10 6s7-6 10-3Z M10 6l5 9 M15 3l5 7 M8 11l13-5", tank: "M3 7h18v13H3Z M2 4h20 M7 11c3 1 4 1 6 0l4 3-4 3c-2-1-3-1-6 0Z M4 7V4 M20 7V4", album: "M12 5C8 2 3 4 3 4v16s5-2 9 1c4-3 9-1 9-1V4s-5-2-9 1ZM12 5v16 M6 9h3 M15 9h3 M6 13h3 M15 13h3", upgrade: "M12 3l2 5 6 1-4 4 1 6-5-3-5 3 1-6-4-4 6-1Z", home: "M3 11l9-8 9 8 M5 10v11h14V10 M9 21v-8h6v8", close: "M6 6l12 12 M6 18 18 6", sound: "M4 9h4l5-5v16l-5-5H4Z M17 8a6 6 0 0 1 0 8 M20 5a10 10 0 0 1 0 14", mute: "M4 9h4l5-5v16l-5-5H4Z M17 9l5 6 M17 15l5-6", help: "M9 8a3 3 0 1 1 4 3c-1 .5-1 1-1 3 M12 18h.01 M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0", pause: "M8 5v14 M16 5v14", play: "M7 4l14 8-14 8Z", dive: "M3 6h18 M6 3v7 M18 3v7 M8 15l4 5 4-5 M12 9v11", air: "M8 5h8v16H8Z M10 2h4 M12 2v3 M8 9h8 M8 17h8", speed: "M4 13l3-8 4 6 4-6 5 8 M4 18h16", staff: "M8 7a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z M4 22v-3a8 8 0 0 1 16 0v3 M18 9h4 M20 7v4", visitors: "M4 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z M14 8a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z M1 21v-3a6 6 0 0 1 12 0v3 M13 13a6 6 0 0 1 10 5v3", arrow: "M4 12h16 M13 5l7 7-7 7", eye: "M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0" };
+function icon(name) {
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[name] || paths.fish}"/></svg>`;
+}
+function fishIcon(id) {
+  const s = BY_ID[id];
+  return `<svg viewBox="0 0 90 50" aria-hidden="true"><path d="M64 25 84 8v34Z" fill="${s.accent}"/><ellipse cx="38" cy="25" rx="29" ry="${id === "butterfly" ? 21 : 16}" fill="${s.color}"/><path d="M27 13 39 4l5 10 M27 37l9 9 10-9" fill="${s.accent}"/>${id === "clown" ? '<path d="M25 11v28 M45 10v30" stroke="#fff2dc" stroke-width="7"/>' : ""}<circle cx="19" cy="21" r="5" fill="#fff9e4"/><circle cx="18" cy="21" r="2.5" fill="#28576a"/><path d="M9 29q5 4 9 0" stroke="#3c6878" fill="none" stroke-width="1.5"/></svg>`;
+}
+var $ = (id) => document.getElementById(id);
+var fmt = (n) => n >= 1e5 ? new Intl.NumberFormat("zh-CN", { notation: "compact", maximumFractionDigits: 1 }).format(n) : Math.floor(n).toLocaleString("en-US");
+var htmlCache = /* @__PURE__ */ new WeakMap();
+function setHTML(node, value) {
+  if (htmlCache.get(node) === value) return;
+  node.innerHTML = value;
+  htmlCache.set(node, value);
+}
+var UI = class {
+  constructor(sim2, action) {
+    this.sim = sim2;
+    this.action = action;
+    this.menu = null;
+    this.selected = null;
+    this.toastTimer = 0;
+    this.labels = {};
+    this.thumbs = {};
+    for (const [id, name] of Object.entries({ "brand-icon": "fish", "coin-icon": "coin", "bag-icon": "bag", "cast-icon": "net", "upgrade-icon": "upgrade", "tank-icon": "tank", "album-icon": "album", "guide-icon": "dive", return: "home", close: "close", sound: "sound", help: "help", pause: "pause", "exit-inspect": "arrow" })) $(id).innerHTML = icon(name);
+    $("start").onclick = () => action("start");
+    $("cast").onclick = () => action("cast");
+    $("return").onclick = () => action("home");
+    $("quest").onclick = () => {
+      const g = this.goal();
+      if (g && this.sim[g.field] >= g.need) action("claim", g.id);
+      else action("menu", "goals");
+    };
+    for (const b of document.querySelectorAll("[data-menu]")) b.onclick = () => action("menu", b.dataset.menu);
+    $("close").onclick = () => action("close");
+    $("help").onclick = () => action("menu", "help");
+    $("minimap").onclick = () => action("menu", "map");
+    $("sound").onclick = () => action("sound");
+    $("pause").onclick = () => action("pause");
+    $("resume").onclick = () => action("pause");
+    $("exit-inspect").onclick = () => action("end-inspect");
+    $("wealth").onclick = () => action("inspect-wealth");
+    $("brand").onclick = () => action("menu", "honors");
+    $("honor-close").onclick = () => {
+      $("honor").hidden = true;
+    };
+    $("drawer-content").onclick = (e) => {
+      const b = e.target.closest("[data-action]");
+      if (b && !b.disabled) action(b.dataset.action, b.dataset.id);
+    };
+  }
+  fish(id, rare = false) {
+    const key2 = id + (rare ? ":rare" : "");
+    return this.thumbs[key2] ? `<img src="${this.thumbs[key2]}" alt="${rare ? RARE_NAMES[id] : BY_ID[id].name}\u4E09\u7EF4\u6A21\u578B">` : fishIcon(id);
+  }
+  syncLabels() {
+    const wanted = this.sim.definitions.filter((d) => Math.abs(d.z - this.sim.player.z) < 45), keep = new Set(wanted.map((d) => d.id));
+    for (const [id, node] of Object.entries(this.labels)) if (!keep.has(id)) {
+      node.remove();
+      delete this.labels[id];
+    }
+    for (const d of wanted) if (!this.labels[d.id]) {
+      const b = document.createElement("button");
+      b.className = "tank-label";
+      b.setAttribute("aria-label", `\u7BA1\u7406${d.name}\u5C55\u7F38`);
+      let down = null;
+      b.addEventListener("pointerdown", (e) => {
+        down = { x: e.clientX, y: e.clientY };
+        e.stopPropagation();
+        b.setPointerCapture(e.pointerId);
+      });
+      b.addEventListener("pointerup", (e) => {
+        e.stopPropagation();
+        if (down && Math.hypot(e.clientX - down.x, e.clientY - down.y) < 9) this.action("tank", d.id);
+        down = null;
+      });
+      b.addEventListener("click", (e) => {
+        if (e.detail === 0) this.action("tank", d.id);
+      });
+      $("world-labels").append(b);
+      this.labels[d.id] = b;
+    }
+  }
+  celebrate(e, replay = false) {
+    clearTimeout(this.honorTimer);
+    const card = $("honor");
+    $("honor-kicker").textContent = replay ? "\u9986\u957F\u8363\u8A89 \xB7 \u56DE\u987E" : e.type === "honor" ? "\u5168\u65B0\u79F0\u53F7\u89E3\u9501" : "\u5C55\u9986\u7B49\u7EA7\u63D0\u5347";
+    $("honor-name").textContent = e.type === "honor" ? e.name : "\u5C55\u9986 LV." + e.level;
+    $("honor-detail").textContent = e.type === "honor" ? "LV." + e.level + " \xB7 \u6BCF\u4E00\u7F51\uFF0C\u90FD\u6210\u5C31\u66F4\u95EA\u4EAE\u7684\u4F60" : "\u5C55\u7F38\u7B49\u7EA7\u4E0A\u9650 " + e.limit + " \xB7 \u6210\u957F\u7EE7\u7EED";
+    card.style.setProperty("--honor-color", e.color || "#79d8cb");
+    card.hidden = false;
+    card.classList.remove("celebrating");
+    void card.offsetWidth;
+    card.classList.add("celebrating");
+    this.honorTimer = setTimeout(() => card.hidden = true, 6e3);
+  }
+  goal() {
+    return MILESTONES.find((g) => !this.sim.claimed.includes(g.id));
+  }
+  toast(t) {
+    $("toast").textContent = t;
+    $("toast").classList.add("show");
+    clearTimeout(this.toastTimer);
+    this.toastTimer = setTimeout(() => $("toast").classList.remove("show"), 2800);
+  }
+  open(menu, id = null) {
+    this.menu = menu;
+    this.selected = id;
+    document.body.classList.add("menu-open");
+    $("drawer").hidden = false;
+    this.renderMenu();
+    $("drawer-content").scrollTop = 0;
+  }
+  close() {
+    this.menu = null;
+    $("drawer").hidden = true;
+    document.body.classList.remove("menu-open");
+  }
+  button(action, id, text, enabled = true, cls = "") {
+    return `<button class="${cls}" data-action="${action}" data-id="${id}" ${enabled ? "" : "disabled"}>${text}</button>`;
+  }
+  renderMenu() {
+    const s = this.sim, cash = s.cash;
+    let html = "", title = "", sub = "AQUA COAST";
+    if (this.menu === "upgrades") {
+      title = "\u6F5C\u5F97\u66F4\u8FDC\uFF0C\u5E26\u5F97\u66F4\u591A";
+      sub = "DIVE & GROW";
+      html = `<div class="wide-info"><div><h3>\u73CA\u745A\u63A2\u9669\u6F5C\u6C34\u670D</h3><small>\u62A4\u76EE\u955C \xB7 \u53CC\u6C14\u74F6 \xB7 \u4E13\u4E1A\u811A\u8E7C</small></div>${this.button("inspect-player", "", isSwimming(s.player.z) ? "\u4E0A\u5CB8\u540E\u67E5\u770B" : "\u67E5\u770B\u88C5\u626E", !isSwimming(s.player.z))}</div><p>\u5C55\u9986 LV.${s.level} \xB7 \u5347\u7EA7\u4E0A\u9650\u968F\u9986\u7EA7\u63D0\u9AD8\uFF0C\u9C7C\u7F38\u6269\u5EFA\u4E5F\u4F1A\u589E\u52A0\u5BA2\u6D41\u3002\u6F5C\u6C34\u52A9\u624B\u4F1A\u771F\u5B9E\u6355\u9C7C\u8865\u8D27\u3002</p><div class="shop-grid">`;
+      for (const [id, d] of Object.entries(UPGRADES)) {
+        const lv = s.upgrades[id], cost = growingPrice(d.base, lv), limit = s.upgradeLimit(id), max = lv >= limit;
+        html += `<article class="shop-card">${icon({ bag: "bag", net: "net", speed: "speed", oxygen: "air", staff: "staff", visitors: "visitors" }[id])}<small> LV.${lv} / ${limit}</small><h3>${d.name}</h3><p>${d.desc}</p>${this.button("upgrade", id, max ? "\u63D0\u5347\u9986\u7EA7\u53EF\u7EE7\u7EED" : `${lv ? "\u5347\u7EA7" : "\u89E3\u9501"} \xB7 ${fmt(cost)}`, !max && cash >= cost)}</article>`;
+      }
+      html += "</div>";
+    } else if (this.menu === "tanks") {
+      title = "\u4E00\u9C7C\u4E00\u7F38";
+      sub = "ONE SPECIES \xB7 ONE TANK";
+      html = `<div class="expansion-card"><small>\u5C55\u9986 LV.${s.level} \xB7 \u5DF2\u5F00\u653E ${s.built} / 6 \u4E2A\u9C7C\u7F38</small><h3>\u9C7C\u7F38\u4F1A\u771F\u6B63\u53D8\u5927</h3><p>\u6BCF\u79CD\u9C7C\u53EA\u6709\u4E00\u4E2A\u4E13\u5C5E\u5C55\u7F38\u3002\u6269\u5EFA\u4F1A\u8BA9\u7F38\u4F53\u53D8\u5BBD\u3001\u53D8\u9AD8\uFF0C\u589E\u52A0\u5BB9\u91CF\u3001\u552E\u4EF7\u4E0E\u5BA2\u6D41\uFF1B\u7A00\u6709\u9C7C\u4E5F\u7559\u5728\u540C\u79CD\u9C7C\u7F38\u4E2D\u3002</p><small>\u5F53\u524D\u53EF\u5347\u81F3 ${s.tankLimit} \u7EA7 \xB7 \u5BA2\u6D41\u5BB9\u91CF ${s.guestLimit} \u4EBA</small></div><div class="shop-grid">`;
+      for (const d of s.definitions) {
+        const t = s.tanks[d.id], i = d.number - 1, eligible = i === 0 || s.tanks[SPECIES[i - 1].id].built;
+        html += `<article class="shop-card ${eligible ? "" : "locked"}"><div class="fish-chip">${this.fish(d.id)}</div><h3>${d.name}</h3><p>${t.built ? `LV.${t.level} \xB7 \u76F4\u5F84 ${(d.r * 2).toFixed(1)}m<br>\u5B58\u91CF ${t.stock} / ${s.tankCapacity(d.id)}` : d.tag + " \xB7 \u4E13\u5C5E\u65B0\u9C7C\u79CD"}</p>${t.built ? this.button("tank", d.id, "\u6269\u5EFA\u8FD9\u4E2A\u9C7C\u7F38") : this.button("build", d.id, eligible ? "\u5EFA\u9020 \xB7 " + fmt(d.cost) : "\u5148\u5F00\u653E\u524D\u4E00\u9C7C\u79CD", eligible && cash >= d.cost)}${this.button("locate", d.id, "\u524D\u5F80\u4F4D\u7F6E", true, "alt")}</article>`;
+      }
+      html += "</div>";
+    } else if (this.menu === "tank") {
+      const d = s.definition(this.selected), t = s.tanks[d.id];
+      title = d.name + "\u5C55\u7F38";
+      sub = d.tag + " \xB7 " + d.number;
+      html = `<div class="fish-chip" style="height:110px">${this.fish(d.kind)}</div>${t.bonusCapacity ? `<p class="capacity-credit">\u5386\u53F2\u6269\u5EFA\u5DF2\u4FDD\u7559 \xB7 \u989D\u5916\u5BB9\u91CF ${t.bonusCapacity}</p>` : ""}${s.rareExhibits[d.kind] === d.id ? `<p class="rare-owned">\u2727 ${RARE_NAMES[d.kind]} \xB7 \u6C38\u4E45\u7559\u5C55\uFF0C\u4E0D\u53C2\u4E0E\u552E\u5356</p>` : ""}<p style="margin-top:15px">\u8D70\u5230\u5C55\u7F38\u65C1\uFF0C\u7F51\u515C\u4E2D\u7684\u540C\u79CD\u9C7C\u4F1A\u9010\u6761\u6E38\u5165\u6C34\u65CF\u7BB1\u3002\u987E\u5BA2\u8D2D\u4E70\u540E\u4F1A\u51CF\u5C11\u5B9E\u9645\u5B58\u91CF\u3002</p>`;
+      if (t.built) {
+        const next = tankShape(BY_ID[d.id], { ...t, level: t.level + 1 });
+        html += `<div class="wide-info"><div><h3>\u5B58\u91CF ${t.stock} / ${s.tankCapacity(d.id)}</h3><small>LV.${t.level} / ${s.tankLimit} \xB7 \u6BCF\u6761 ${fmt(s.tankPrice(d.id))} \u91D1\u5E01</small></div>${this.button("inspect", d.id, "\u8FD1\u770B\u9C7C\u7FA4")}</div><div class="wide-info tank-expansion"><div><h3>\u6269\u5EFA\u539F\u6765\u7684\u9C7C\u7F38</h3><small>\u76F4\u5F84 ${(d.r * 2).toFixed(2)} \u2192 ${(next.r * 2).toFixed(2)} m<br>\u7F38\u9AD8 ${(3.95 * d.heightScale).toFixed(2)} \u2192 ${(3.95 * next.heightScale).toFixed(2)} m<br>\u5BB9\u91CF ${s.tankCapacity(d.id)} \u2192 ${s.tankCapacity(d.id) + 7} \xB7 \u552E\u4EF7\u540C\u6B65\u63D0\u5347</small></div>${this.button("tank-upgrade", d.id, t.level >= s.tankLimit ? "\u63D0\u5347\u9986\u7EA7\u53EF\u7EE7\u7EED" : "\u6269\u5EFA \xB7 " + fmt(s.tankUpgradePrice(d.id)), t.level < s.tankLimit && cash >= s.tankUpgradePrice(d.id))}</div>${this.button("deliver", d.id, "\u8D70\u8FC7\u53BB \xB7 \u8865\u5145\u5E93\u5B58", true, "primary")}`;
+      } else {
+        const prev = SPECIES[SPECIES.findIndex((v) => v.id === d.id) - 1], eligible = !prev || s.tanks[prev.id].built;
+        html += this.button("build", d.id, eligible ? `\u5EFA\u9020\u5C55\u7F38 \xB7 ${fmt(d.cost)}` : "\u8BF7\u5148\u5F00\u653E" + prev.name + "\u5C55\u7F38", eligible && cash >= d.cost, "primary");
+      }
+    } else if (this.menu === "honors") {
+      const h = s.honor, next = nextHonor(h);
+      title = "\u6211\u7684\u9986\u957F\u8363\u8A89";
+      sub = "YOUR OCEAN \xB7 YOUR PRIDE";
+      html = `<div class="honor-pass" style="--honor-color:${h.color}"><div class="crown-mark">\u265B</div><small>\u851A\u84DD\u6D77\u5CB8 \xB7 \u9986\u957F\u540D\u7247</small><h3>${h.name}</h3><strong>LV.${s.level}</strong><div class="pass-stats"><span><b>${fmt(s.earned)}</b>\u7D2F\u8BA1\u8425\u4E1A\u989D</span><span><b>${s.built}</b>\u5B9E\u4F53\u5C55\u7F38</span><span><b>${Object.keys(s.rareExhibits).length} / 6</b>\u6C38\u4E45\u73CD\u85CF</span></div></div><div class="wide-info"><div><h3>\u4E0B\u4E00\u79F0\u53F7 \xB7 ${next.name}</h3><small>\u9986\u7EA7 ${next.level} \u6216\u7D2F\u8BA1\u8425\u4E1A\u989D ${fmt(next.wealth)}<br>\u6D88\u8D39\u548C\u6269\u5EFA\u4E0D\u4F1A\u964D\u4F4E\u79F0\u53F7</small></div></div><p>\u76EE\u524D\u5C55\u7F38\u53EF\u5347\u81F3 ${s.tankLimit} \u7EA7\u3002\u6BCF\u63D0\u5347 5 \u4E2A\u9986\u7EA7\uFF0C\u7EE7\u7EED\u63D0\u9AD8\u5C55\u7F38\u4E0E\u88C5\u5907\u4E0A\u9650\uFF1B\u6269\u5EFA\u539F\u9C7C\u7F38\u4F1A\u589E\u52A0\u5BA2\u6D41\uFF0C\u4E0D\u4F1A\u518D\u51FA\u73B0\u91CD\u590D\u9C7C\u7F38\u3002</p>${this.button("replay-honor", "", "\u91CD\u64AD\u8363\u8A89\u5E86\u5178", true, "primary")}<div class="title-road">${TITLE_TIERS.map((t, i) => `<span class="${h.rank >= i ? "earned" : ""}">${h.rank >= i ? "\u2726" : "\u25C7"} ${t.name}</span>`).join("")}</div>`;
+    } else if (this.menu === "album") {
+      title = "\u6BCF\u4E00\u7F51\uFF0C\u90FD\u6709\u65B0\u53D1\u73B0";
+      sub = "OCEAN COLLECTION";
+      html = `<p>\u5DF2\u53D1\u73B0 ${SPECIES.filter((d) => s.discovered[d.id]).length} / 6 \u79CD \xB7 \u4EB2\u81EA\u6355\u83B7 ${s.caught} \u6761\u3002<br>\u73CD\u7A00\u9C7C\u5728\u539F\u9C7C\u7FA4\u4E2D\u95EA\u8000\uFF1A\u9996\u6B21\u5165\u9986\u6C38\u4E45\u7559\u5C55\uFF0C\u91CD\u590D\u73CD\u7A00\u9C7C\u4EE5 4 \u500D\u4EF7\u552E\u51FA\u3002\u52A9\u624B\u4F1A\u7559\u7ED9\u4F60\u4EB2\u81EA\u53D1\u73B0\u3002</p><h3 class="section-title">\u73E0\u5149\u73CD\u85CF \xB7 ${Object.keys(s.rareExhibits).length} / 6</h3><div class="shop-grid">${SPECIES.map((d) => {
+        const owned = s.rareExhibits[d.id], found = s.rareFound[d.id] || 0;
+        return `<article class="shop-card rare-card"><div class="fish-chip ${found ? "" : "locked"}">${this.fish(d.id, true)}</div><h3>\u2727 ${RARE_NAMES[d.id]}</h3><p>${owned ? "\u5DF2\u6C38\u4E45\u7559\u5C55 \xB7 " + s.definition(owned).name : found ? "\u5DF2\u6355\u83B7\uFF0C\u56DE\u9986\u5373\u53EF\u7559\u5C55" : "\u672A\u53D1\u73B0 \xB7 " + d.tag}</p>${this.button(owned ? "inspect" : "rare-zone", owned || d.id, owned ? "\u67E5\u770B\u73CD\u85CF" : "\u5BFB\u627E\u661F\u8292", s.tanks[d.id].built)}</article>`;
+      }).join("")}</div><h3 class="section-title">\u6D77\u6D0B\u751F\u7269</h3><div class="shop-grid">`;
+      for (const d of SPECIES) {
+        const found = s.discovered[d.id] > 0;
+        html += `<article class="shop-card"><div class="fish-chip ${found ? "" : "locked"}">${this.fish(d.id)}</div><h3>${found ? d.name : "\u5C1A\u672A\u53D1\u73B0"}</h3><p>${d.tag}<br>${found ? "\u5DF2\u6355\u83B7 " + s.discovered[d.id] + " \u6761" : "\u5C55\u7F38\u5F00\u653E\u540E\uFF0C\u53BB\u6D77\u91CC\u627E\u627E"}</p>${this.button("fish-zone", d.id, s.tanks[d.id].built ? "\u524D\u5F80\u9C7C\u7FA4" : "\u5C1A\u672A\u5F00\u653E", s.tanks[d.id].built)}</article>`;
+      }
+      html += "</div>";
+    } else if (this.menu === "goals") {
+      title = "\u4ECE\u5C0F\u9C7C\u9986\u5230\u6D77\u6D0B\u738B\u56FD";
+      sub = "GROWTH JOURNAL";
+      html = `<p>\u8425\u4E1A\u989D ${fmt(s.earned)} \xB7 \u5DF2\u552E ${s.sold} \u6761 \xB7 \u4EB2\u81EA\u8865\u8D27 ${s.delivered} \u6761\u3002\u5956\u52B1\u4EC5\u80FD\u9886\u53D6\u4E00\u6B21\u3002</p>`;
+      for (const g of MILESTONES) {
+        const claimed = s.claimed.includes(g.id), ready = s[g.field] >= g.need;
+        html += `<div class="goal-card"><div><strong>${g.name}</strong><small>${g.text} \xB7 ${Math.min(g.need, s[g.field])}/${g.need}</small></div>${this.button("claim", g.id, claimed ? "\u5DF2\u9886\u53D6" : ready ? "\u9886\u53D6 " + g.reward : "\u5956\u52B1 " + g.reward, !claimed && ready)}</div>`;
+      }
+    } else if (this.menu === "map") {
+      title = "\u4E0B\u4E00\u7F51\uFF0C\u53BB\u54EA\u91CC\uFF1F";
+      sub = "EXPLORE THE COAST";
+      html = `<p>\u9009\u62E9\u76EE\u7684\u5730\u5373\u53EF\u81EA\u52A8\u524D\u5F80\uFF1B\u79FB\u52A8\u6447\u6746\u6216\u6309\u65B9\u5411\u952E\u968F\u65F6\u63A5\u7BA1\u3002\u4E0B\u6D77\u65F6\u7559\u610F\u6C27\u6C14\uFF0C\u56DE\u5230\u9646\u5730\u4F1A\u81EA\u52A8\u8865\u6EE1\u3002</p><div class="wide-info"><div><h3>\u73BB\u7483\u89C2\u8D4F\u5ECA</h3><small>\u7A7F\u884C\u539F\u5C55\u9986\uFF0C\u8FD1\u770B\u4E24\u4FA7\u9C7C\u7FA4</small></div>${this.button("walk-passage", "", "\u8D70\u8FDB\u957F\u5ECA")}</div>`;
+      for (const d of SPECIES) html += `<div class="wide-info"><div><h3>${d.name} \xB7 ${d.tag}</h3><small>${s.tanks[d.id].built ? "\u5C55\u7F38\u5DF2\u5F00\u653E" : "\u9700\u8981\u5EFA\u9020\u5BF9\u5E94\u5C55\u7F38"}</small></div>${this.button("fish-zone", d.id, "\u524D\u5F80", s.tanks[d.id].built)}</div>`;
+    } else {
+      title = "\u8FD9\u7247\u6D77\uFF0C\u4EA4\u7ED9\u4F60\u4E86";
+      sub = "HOW TO PLAY";
+      html = `<div class="help-copy"><p><b>\u2460 \u4E0B\u6D77\u6355\u9C7C</b><br>WASD / \u65B9\u5411\u952E\uFF0C\u6216\u62D6\u52A8\u5DE6\u4E0B\u89D2\u6447\u6746\u3002\u4E5F\u53EF\u4EE5\u70B9\u51FB\u5730\u9762\u524D\u5F80\u3002\u6CBF\u4E2D\u592E\u7801\u5934\u8FDB\u5165\u6D77\u91CC\uFF0C\u89D2\u8272\u4F1A\u81EA\u52A8\u4E0B\u6F5C\u3002</p><p><b>\u2461 \u9760\u8FD1\u9C7C\u7FA4</b><br>\u8303\u56F4\u5185\u4F1A\u81EA\u52A8\u9009\u4E2D\u5C0F\u9C7C\uFF0C\u7ED5\u9C7C\u7684\u5706\u73AF\u84C4\u6EE1\u5C31\u80FD\u6355\u83B7\u3002\u70B9\u51FB\u201C\u6492\u7F51\u201D\u6216\u6309\u7A7A\u683C\uFF0C\u77ED\u65F6\u95F4\u52A0\u5FEB\u6355\u9C7C\u3002</p><p><b>\u2462 \u56DE\u9986\u8865\u8D27</b><br>\u7F51\u515C\u88C5\u6EE1\u540E\u70B9\u51FB\u56DE\u9986\u56FE\u6807\u3002\u8D70\u5230\u76F8\u5E94\u5C55\u7F38\u65C1\uFF0C\u9C7C\u4F1A\u9010\u6761\u8FDB\u5165\u7F38\u91CC\uFF0C\u987E\u5BA2\u8D2D\u4E70\u540E\u81EA\u52A8\u5230\u8D26\u3002</p><p><b>\u2463 \u6269\u5EFA\u4E0E\u6210\u957F</b><br>\u6BCF\u79CD\u9C7C\u53EA\u6709\u4E00\u4E2A\u5C55\u7F38\u3002\u70B9\u51FB\u9C7C\u7F38\u7BA1\u7406\u6216\u6269\u5EFA\u83DC\u5355\uFF0C\u5347\u7EA7\u540E\u539F\u7F38\u4F1A\u5B9E\u9645\u53D8\u5BBD\u3001\u53D8\u9AD8\uFF0C\u5BB9\u91CF\u548C\u552E\u4EF7\u4E5F\u4F1A\u589E\u52A0\u3002\u9986\u7EA7\u548C\u5BA2\u6D41\u968F\u7ECF\u8425\u589E\u957F\uFF0C\u5347\u7EA7\u4E0A\u9650\u7EE7\u7EED\u63D0\u9AD8\u3002\u70B9\u51FB\u5DE6\u4E0A\u89D2\u9986\u957F\u5361\u67E5\u770B\u79F0\u53F7\u3002\u73CD\u7A00\u9C7C\u5E26\u661F\u8292\uFF0C\u9996\u6B21\u5165\u9986\u6C38\u4E45\u7559\u5C55\uFF0C\u91CD\u590D\u7684\u6309 4 \u500D\u4EF7\u552E\u5356\u3002</p><p>\u6C27\u6C14\u8017\u5C3D\u4F1A\u81EA\u52A8\u5E26\u7740\u9C7C\u56DE\u5230\u7801\u5934\uFF0C\u4E0D\u4F1A\u6263\u94B1\u6216\u4E22\u9C7C\u3002\u5C55\u7F38\u6EE1\u4E86\u53EF\u4EE5\u7B49\u5F85\u552E\u51FA\u6216\u5347\u7EA7\u6269\u5BB9\u3002\u6682\u505C\u3001\u540E\u53F0\u548C\u5173\u95ED\u9875\u9762\u90FD\u4E0D\u4EA7\u751F\u79BB\u7EBF\u6536\u76CA\u3002</p></div><button class="danger" data-action="reset-request">\u91CD\u65B0\u5F00\u59CB\u8FD9\u5EA7\u6D77\u6D0B\u9986</button>`;
+    }
+    $("drawer-title").textContent = title;
+    $("drawer-sub").textContent = sub;
+    $("drawer-content").innerHTML = html;
+  }
+  update() {
+    const s = this.sim, p = s.player, water = isSwimming(p.z), load = total(p.bag);
+    $("cash").textContent = fmt(s.cash);
+    $("rank").textContent = "LV." + s.level + " \xB7 " + s.title;
+    this.syncLabels();
+    document.body.classList.toggle("swimming", water);
+    $("water-info").hidden = !water;
+    $("oxygen-fill").style.width = p.oxygen / s.maxOxygen * 100 + "%";
+    $("oxygen-fill").style.background = p.oxygen < 15 ? "#ffbf85" : "#c1f0c9";
+    $("oxygen-text").textContent = `\u6C27\u6C14 ${Math.ceil(p.oxygen)}s`;
+    $("bag-count").textContent = `${load} / ${s.capacity}`;
+    $("bag-types").textContent = load ? SPECIES.filter((d) => p.bag[d.id]).map((d) => d.name + "\xD7" + p.bag[d.id] + (p.rareBag[d.id] ? " \u2726" + p.rareBag[d.id] : "")).join(" \xB7 ") : "\u7F51\u515C\u7A7A\u7A7A\uFF0C\u53BB\u6D77\u91CC\u770B\u770B";
+    $("return").hidden = !water && load === 0 || water && load >= s.capacity;
+    $("cast-text").textContent = water ? p.pulse > 0 ? "\u6E14\u7F51\u6062\u590D\u4E2D" : "\u6492\u7F51\u52A0\u901F" : "\u4E0B\u6D77\u6355\u9C7C";
+    $("cast").disabled = water && p.pulse > 0;
+    setHTML($("cast-icon"), icon(water && load >= s.capacity ? "home" : water ? "net" : "dive"));
+    const g = this.goal();
+    $("quest").classList.toggle("ready", !!g && s[g.field] >= g.need);
+    setHTML($("quest"), g ? `<span class="star">\u2726</span><div><small>${s[g.field] >= g.need ? "\u76EE\u6807\u5B8C\u6210\uFF0C\u9886\u53D6\u5956\u52B1" : g.text}</small><strong>${g.name}</strong></div><b>${s[g.field] >= g.need ? "+" + g.reward : Math.min(g.need, s[g.field]) + "/" + g.need}</b>` : `<span class="star">\u2726</span><div><small>\u6D77\u5CB8\u4E4B\u661F\uFF0C\u7EE7\u7EED\u7ECF\u8425\u5427</small><strong>\u4F60\u7684\u851A\u84DD\u6D77\u6D0B\u738B\u56FD</strong></div><b>\u2197</b>`);
+    for (const [id, node] of Object.entries(this.labels)) {
+      const d = s.definition(id), t = s.tanks[id], i = SPECIES.findIndex((v) => v.id === id);
+      node.classList.toggle("blueprint", !t.built);
+      node.classList.toggle("full", t.stock >= s.tankCapacity(d.id));
+      setHTML(node, t.built ? `<i class="dot" style="background:${d.color}"></i>${s.rareExhibits[d.kind] === d.id ? "\u2727 " : ""}${d.name}<span>${t.stock}/${s.tankCapacity(d.id)}</span>` : `\uFF0B ${d.name}<span>${i > 0 && !s.tanks[SPECIES[i - 1].id].built ? "\u5F85\u89E3\u9501" : fmt(d.cost)}</span>`);
+    }
+    let title, text;
+    if (water) {
+      if (load >= s.capacity) {
+        title = "\u7F51\u515C\u88C5\u6EE1\u5566\uFF0C\u56DE\u9986\u8865\u8D27";
+        text = "\u70B9\u51FB\u56DE\u9986\u56FE\u6807\uFF0C\u9C7C\u4F1A\u9001\u5F80\u5BF9\u5E94\u5C55\u7F38";
+      } else if (p.target !== null) {
+        title = "\u7A33\u4F4F\uFF0C\u9C7C\u9A6C\u4E0A\u5C31\u8FDB\u7F51\u4E86";
+        text = "\u70B9\u51FB\u6492\u7F51\u52A0\u901F\uFF0C\u6216\u8FFD\u4E0A\u4E0B\u4E00\u7FA4\u5C0F\u9C7C";
+      } else {
+        title = "\u6E38\u8FD1\u9C7C\u7FA4\uFF0C\u6E14\u7F51\u4F1A\u81EA\u52A8\u6355\u6349";
+        text = "\u6D45\u6E7E\u5C0F\u4E11\u9C7C \xB7 \u66F4\u6DF1\u5904\u85CF\u7740\u65B0\u53D1\u73B0";
+      }
+    } else if (load) {
+      title = "\u8D70\u8FD1\u5BF9\u5E94\u5C55\u7F38\uFF0C\u81EA\u52A8\u8865\u8D27";
+      text = "\u7F38\u6EE1\u4E86\uFF1F\u7B49\u5F85\u552E\u51FA\uFF0C\u6216\u5347\u7EA7\u5C55\u7F38\u5BB9\u91CF";
+    } else if (s.caught < 5) {
+      title = "\u6CBF\u4E2D\u592E\u7801\u5934\u4E0B\u6D77\uFF0C\u6355\u83B7\u7B2C\u4E00\u7F51";
+      text = "\u62D6\u52A8\u6447\u6746\u79FB\u52A8\uFF0C\u4E5F\u53EF\u70B9\u51FB\u201C\u4E0B\u6D77\u6355\u9C7C\u201D";
+    } else {
+      title = "\u518D\u4E0B\u4E00\u7F51\uFF0C\u8FD8\u662F\u5148\u6269\u5EFA\uFF1F";
+      text = "\u70B9\u51FB\u5C55\u9986\u5F00\u65B0\u7F38\uFF0C\u66F4\u591A\u9C7C\u7FA4\u7B49\u4F60\u53D1\u73B0";
+    }
+    $("guide-title").textContent = title;
+    $("guide-text").textContent = text;
+    setHTML($("guide-icon"), icon(water ? "net" : load ? "tank" : "dive"));
+    $("guide").hidden = s.caught > 0;
+    if (water && load >= s.capacity) {
+      $("cast-text").textContent = "\u56DE\u9986\u8865\u8D27";
+      $("cast").disabled = false;
+    }
+  }
+  projectLabels(project2) {
+    for (const [id, n] of Object.entries(this.labels)) {
+      const d = this.sim.definition(id), t = this.sim.tanks[id], p = project2(d.x, t.built ? 0.205 + (4.8 - 0.205) * d.heightScale : 0.8, d.z);
+      n.style.display = p && p.x > 10 && p.x < innerWidth - 10 && p.y > 150 && p.y < innerHeight - 105 ? "flex" : "none";
+      if (p) {
+        n.style.left = Math.max(66, Math.min(innerWidth - 66, p.x)) + "px";
+        n.style.top = p.y + "px";
+      }
+    }
+  }
+  floater(text, x, y, color = "#fff0a8") {
+    const el = document.createElement("span");
+    el.className = "floater";
+    el.textContent = text;
+    el.style.cssText = `left:${x}px;top:${y}px;color:${color}`;
+    $("floaters").append(el);
+    setTimeout(() => el.remove(), 1400);
+  }
+  discover(kind, rare = false) {
+    $("discovery").classList.toggle("rare-discovery", rare);
+    $("discovery").innerHTML = this.fish(kind, rare) + `<div><small>${rare ? "\u2727 RARE FIND \xB7 \u73CD\u7A00\u53D1\u73B0" : "NEW DISCOVERY \xB7 \u65B0\u53D1\u73B0"}</small><strong>${rare ? RARE_NAMES[kind] : BY_ID[kind].name}</strong></div>`;
+    $("discovery").hidden = false;
+    clearTimeout(this.discoverTimer);
+    this.discoverTimer = setTimeout(() => $("discovery").hidden = true, rare ? 6e3 : 3300);
+  }
+};
+
+// src/input.mjs
+var Controls = class {
+  constructor(canvas, onClick, onCast, onEscape, onInspect) {
+    this.keys = /* @__PURE__ */ new Set();
+    this.axis = { x: 0, z: 0 };
+    this.active = null;
+    this.canvasPointer = null;
+    this.onInspect = onInspect;
+    const stick = document.getElementById("stick"), pad = document.getElementById("joystick");
+    const update = (e) => {
+      const r = pad.getBoundingClientRect(), dx = e.clientX - (r.x + r.width / 2), dy = e.clientY - (r.y + r.height / 2), max = r.width * 0.35, n = Math.max(max, Math.hypot(dx, dy));
+      this.axis = { x: dx / n, z: dy / n };
+      stick.style.transform = `translate(${dx / n * max}px,${dy / n * max}px)`;
+    };
+    pad.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      this.active = e.pointerId;
+      pad.setPointerCapture(e.pointerId);
+      update(e);
+    });
+    pad.addEventListener("pointermove", (e) => {
+      if (this.active === e.pointerId) update(e);
+    });
+    const reset = () => {
+      this.active = null;
+      this.axis = { x: 0, z: 0 };
+      stick.style.transform = "";
+    };
+    for (const event of ["pointerup", "pointercancel", "lostpointercapture"]) pad.addEventListener(event, reset);
+    window.addEventListener("keydown", (e) => {
+      if (e.target.closest("input,textarea")) return;
+      if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Space"].includes(e.code)) e.preventDefault();
+      this.keys.add(e.code);
+      if (e.code === "Space" && !e.repeat) onCast();
+      if (e.code === "Escape") onEscape();
+    });
+    window.addEventListener("keyup", (e) => this.keys.delete(e.code));
+    window.addEventListener("blur", () => {
+      this.keys.clear();
+      reset();
+    });
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        this.keys.clear();
+        reset();
+      }
+    });
+    canvas.addEventListener("pointerdown", (e) => {
+      this.canvasPointer = { id: e.pointerId, x: e.clientX, y: e.clientY, lastX: e.clientX, lastY: e.clientY, moved: false };
+      canvas.setPointerCapture(e.pointerId);
+    });
+    canvas.addEventListener("pointermove", (e) => {
+      const p = this.canvasPointer;
+      if (!p || e.pointerId !== p.id) return;
+      if (Math.hypot(e.clientX - p.x, e.clientY - p.y) > 7) p.moved = true;
+      if (this.inspect) {
+        onInspect((e.clientX - p.lastX) * 8e-3, (e.clientY - p.lastY) * 5e-3);
+      } else if (p.moved) {
+        this.axis = { x: (e.clientX - p.x) / Math.max(50, Math.hypot(e.clientX - p.x, e.clientY - p.y)), z: (e.clientY - p.y) / Math.max(50, Math.hypot(e.clientX - p.x, e.clientY - p.y)) };
+      }
+      p.lastX = e.clientX;
+      p.lastY = e.clientY;
+    });
+    canvas.addEventListener("pointerup", (e) => {
+      const p = this.canvasPointer;
+      if (p && !p.moved && !this.inspect) onClick(e.clientX, e.clientY);
+      this.canvasPointer = null;
+      if (this.active === null) this.axis = { x: 0, z: 0 };
+    });
+    canvas.addEventListener("pointercancel", () => {
+      this.canvasPointer = null;
+      reset();
+    });
+  }
+  movement() {
+    let x = this.axis.x, z = this.axis.z;
+    x += (this.keys.has("KeyD") || this.keys.has("ArrowRight") ? 1 : 0) - (this.keys.has("KeyA") || this.keys.has("ArrowLeft") ? 1 : 0);
+    z += (this.keys.has("KeyS") || this.keys.has("ArrowDown") ? 1 : 0) - (this.keys.has("KeyW") || this.keys.has("ArrowUp") ? 1 : 0);
+    const n = Math.max(1, Math.hypot(x, z));
+    return { x: x / n, z: z / n };
+  }
+  reset() {
+    this.keys.clear();
+    this.axis = { x: 0, z: 0 };
+  }
+};
+
+// src/audio.mjs
+var OceanAudio = class {
+  constructor() {
+    this.ctx = null;
+    this.muted = false;
+    this.last = 0;
+  }
+  unlock() {
+    if (!this.ctx) {
+      this.ctx = new AudioContext();
+      this.master = this.ctx.createGain();
+      this.master.gain.value = this.muted ? 0 : 0.16;
+      this.master.connect(this.ctx.destination);
+      const buffer = this.ctx.createBuffer(1, this.ctx.sampleRate * 3, this.ctx.sampleRate), a = buffer.getChannelData(0);
+      let last2 = 0;
+      for (let i = 0; i < a.length; i++) {
+        last2 = (last2 + Math.random() * 0.1 - 0.05) / 1.025;
+        a[i] = last2;
+      }
+      this.noise = this.ctx.createBufferSource();
+      this.noise.buffer = buffer;
+      this.noise.loop = true;
+      this.filter = this.ctx.createBiquadFilter();
+      this.filter.type = "lowpass";
+      this.filter.frequency.value = 500;
+      const gain = this.ctx.createGain();
+      gain.gain.value = 0.17;
+      this.noise.connect(this.filter).connect(gain).connect(this.master);
+      this.noise.start();
+    }
+    if (this.ctx.state === "suspended") this.ctx.resume();
+  }
+  setMuted(m) {
+    this.muted = m;
+    if (this.master) this.master.gain.setTargetAtTime(m ? 0 : 0.16, this.ctx.currentTime, 0.04);
+  }
+  tone(freq, duration = 0.1, volume = 0.35, type = "sine", delay = 0) {
+    if (!this.ctx || this.muted) return;
+    const t = this.ctx.currentTime + delay, o = this.ctx.createOscillator(), g = this.ctx.createGain();
+    o.type = type;
+    o.frequency.setValueAtTime(freq, t);
+    o.frequency.exponentialRampToValueAtTime(freq * 0.7, t + duration);
+    g.gain.setValueAtTime(1e-3, t);
+    g.gain.linearRampToValueAtTime(volume, t + 0.01);
+    g.gain.exponentialRampToValueAtTime(1e-3, t + duration);
+    o.connect(g).connect(this.master);
+    o.start(t);
+    o.stop(t + duration + 0.02);
+  }
+  catch() {
+    this.tone(740, 0.12);
+    this.tone(1150, 0.18, 0.25, "sine", 0.07);
+  }
+  sale() {
+    if (!this.ctx || this.ctx.currentTime - this.last < 0.15) return;
+    this.last = this.ctx.currentTime;
+    this.tone(1300, 0.12, 0.18);
+    this.tone(1700, 0.18, 0.12, "sine", 0.06);
+  }
+  build() {
+    [523, 659, 784, 1047].forEach((f, i) => this.tone(f, 0.3, 0.35, "sine", i * 0.09));
+  }
+  splash() {
+    this.tone(130, 0.35, 0.55, "triangle");
+    this.tone(260, 0.18, 0.3, "sine", 0.05);
+  }
+  tick(water) {
+    if (this.filter) this.filter.frequency.setTargetAtTime(water ? 170 : 620, this.ctx.currentTime, 0.3);
+  }
+  suspend() {
+    this.ctx?.suspend();
+  }
+};
+
+// src/effects.mjs
+import * as T4 from "./vendor/three.module.js";
+var OceanParticles = class {
+  constructor(scene2) {
+    this.items = Array.from({ length: 180 }, () => ({ life: 0, x: 0, y: 0, z: 0, v: 0 }));
+    this.cursor = 0;
+    this.clock = 0;
+    const pos = new Float32Array(this.items.length * 3), g = new T4.BufferGeometry();
+    g.setAttribute("position", new T4.BufferAttribute(pos, 3));
+    this.pos = pos;
+    const c = document.createElement("canvas");
+    c.width = c.height = 32;
+    const ctx = c.getContext("2d");
+    const grad = ctx.createRadialGradient(14, 12, 1, 16, 16, 15);
+    grad.addColorStop(0, "#ffffff");
+    grad.addColorStop(0.25, "#ecfffaaa");
+    grad.addColorStop(0.65, "#dcfff515");
+    grad.addColorStop(0.78, "#ffffffbb");
+    grad.addColorStop(1, "#ffffff00");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 32, 32);
+    this.points = new T4.Points(g, new T4.PointsMaterial({ color: "#e5fff6", size: 0.19, map: new T4.CanvasTexture(c), transparent: true, opacity: 0.72, depthWrite: false }));
+    scene2.add(this.points);
+    this.points.renderOrder = 6;
+  }
+  emit(x, y, z, n = 1) {
+    for (let i = 0; i < n; i++) {
+      const p = this.items[this.cursor++ % this.items.length];
+      Object.assign(p, { x: x + (Math.random() - 0.5) * 0.5, y, z: z + (Math.random() - 0.5) * 0.5, life: 1.8 + Math.random() * 0.8, v: 0.7 + Math.random() * 0.5 });
+    }
+  }
+  update(dt, t, actor) {
+    this.clock += dt;
+    if (isSwimming(actor.z) && this.clock > 0.16) {
+      this.clock = 0;
+      this.emit(actor.x, -1, actor.z + 0.6, 2);
+    }
+    for (let i = 0; i < this.items.length; i++) {
+      const p = this.items[i];
+      p.life -= dt;
+      if (p.life > 0) {
+        p.y += p.v * dt;
+        p.x += Math.sin(t * 2 + i) * dt * 0.1;
+      }
+      this.pos[i * 3] = p.life > 0 ? p.x : 1e3;
+      this.pos[i * 3 + 1] = p.life > 0 ? p.y : -20;
+      this.pos[i * 3 + 2] = p.z;
+    }
+    this.points.geometry.attributes.position.needsUpdate = true;
+  }
+};
+
+// src/pavilion.mjs
+import { mergeGeometries as mergeGeometries4 } from "./vendor/utils/BufferGeometryUtils.js";
+function enrichPavilion(scene2) {
+  const g = new T3.Group();
+  scene2.add(g);
+  const flags = [];
+  for (const side of [-1, 1]) {
+    const x = side * 17.7;
+    for (let i = 0; i < 7; i++) {
+      const z = 4 + i * 4.3;
+      box(g, x, 0.55, z, 0.9, 0.6, 2.5, "#e8f9df", 0.16);
+      box(g, x, 0.86, z, 0.75, 0.05, 2.3, "#c6b789", 0.05);
+      for (let j = 0; j < 5; j++) {
+        const zz = z - 0.85 + j * 0.42;
+        ball(g, x, 1.04, zz, 0.35, 0.22, 0.34, j % 2 ? "#81d6a4" : "#b7e87a");
+        for (let k = 0; k < 5; k++) {
+          const a = k * Math.PI * 0.4;
+          ball(g, x + Math.cos(a) * 0.12, 1.24, zz + Math.sin(a) * 0.12, 0.085, 0.055, 0.085, i % 2 ? "#ff92bb" : "#b8a0f3");
+        }
+        ball(g, x, 1.27, zz, 0.05, 0.04, 0.05, "#ffda73");
+      }
+    }
+    for (let i = 0; i < 5; i++) {
+      const z = 3 + i * 7.2;
+      cyl(g, x, 1.8, z, 0.055, 3, "#fafee5");
+      ball(g, x, 3.35, z, 0.1, 0.1, 0.1, "#f7cc6c");
+      if (i < 4) {
+        beam(g, [x, 3.1, z], [x, 3.1, z + 7.2], 0.02, "#f4e5b8");
+        for (let j = 0; j < 7; j++) {
+          const sh = new T3.Shape();
+          sh.moveTo(0, 0);
+          sh.lineTo(0.54, 0);
+          sh.lineTo(0.27, -0.6);
+          sh.closePath();
+          const m = new T3.Mesh(new T3.ShapeGeometry(sh), new T3.MeshStandardMaterial({ color: ["#ff8fb4", "#64ddcf", "#c3a3f2", "#ffe37a"][j % 4], side: T3.DoubleSide, roughness: 0.7 }));
+          m.position.set(x, 3.1, z + 0.35 + j * 0.9);
+          m.rotation.y = side * Math.PI / 2;
+          g.add(m);
+          flags.push(m);
+        }
+      }
+    }
+  }
+  const curve = new T3.CatmullRomCurve3([new T3.Vector3(-3.4, 3.9, 34.2), new T3.Vector3(-2.6, 5.5, 34.2), new T3.Vector3(0, 6, 34.2), new T3.Vector3(2.6, 5.5, 34.2), new T3.Vector3(3.4, 3.9, 34.2)]);
+  const arch = new T3.Mesh(new T3.TubeGeometry(curve, 32, 0.12, 8, false), mat("#d5fff1", 0.25));
+  g.add(arch);
+  for (let i = 0; i < 13; i++) {
+    const p = curve.getPoint(i / 12);
+    ball(g, p.x, p.y + 0.04, p.z + 0.08, 0.1, 0.1, 0.1, i % 2 ? "#ffe59b" : "#d8fff4");
+  }
+  const logo = label("FIND YOUR LITTLE OCEAN", 7.2, 0.5, "#e9f5df", "#539f9c", 26);
+  logo.position.set(0, 5.2, 34.28);
+  g.add(logo);
+  for (const side of [-1, 1]) for (const z of [1.6, 12, 22, 33]) {
+    const x = side * 17.3;
+    cyl(g, x, 1.5, z, 0.045, 2.4, "#fff3c5");
+    ball(g, x, 2.85, z, 0.23, 0.3, 0.23, new T3.MeshStandardMaterial({ color: "#fff4c1", emissive: "#ffdf82", emissiveIntensity: 0.25 }));
+  }
+  const staticMeshes = g.children.filter((o) => o.isMesh && !flags.includes(o) && o.material?.color && !o.material.map && !o.material.transparent && !o.material.emissive?.getHex());
+  const parts = staticMeshes.map((o) => {
+    o.updateMatrix();
+    let geo = o.geometry.clone();
+    geo.applyMatrix4(o.matrix);
+    const c = o.material.color, colors = new Float32Array(geo.attributes.position.count * 3);
+    for (let i = 0; i < colors.length; i += 3) {
+      colors[i] = c.r;
+      colors[i + 1] = c.g;
+      colors[i + 2] = c.b;
+    }
+    geo.setAttribute("color", new T3.BufferAttribute(colors, 3));
+    return geo.index ? geo.toNonIndexed() : geo;
+  });
+  for (const o of staticMeshes) g.remove(o);
+  const joined = new T3.Mesh(mergeGeometries4(parts), new T3.MeshStandardMaterial({ vertexColors: true, roughness: 0.6 }));
+  joined.castShadow = true;
+  joined.receiveShadow = true;
+  g.add(joined);
+  return { update(t) {
+    flags.forEach((f, i) => {
+      f.rotation.z = Math.sin(t * 2 + i * 0.6) * 0.06;
+    });
+  } };
+}
+
+// src/gallery-art.mjs
+var TankGrowthView = class {
+  constructor(tanks2) {
+    this.tanks = tanks2;
+    this.scale = new T3.Vector3();
+  }
+  update(sim2, dt) {
+    for (const d of sim2.definitions) {
+      const m = this.tanks[d.id], h = d.heightScale, s = d.r / d.baseRadius, k = m.growthReady ? 1 - Math.exp(-dt * 6) : 1;
+      this.scale.set(s, h, s);
+      m.root.scale.lerp(this.scale, k);
+      m.root.position.x = T3.MathUtils.lerp(m.root.position.x, d.x, k);
+      m.root.position.z = d.z;
+      m.root.position.y = 0.205 * (1 - m.root.scale.y);
+      m.visual = { ...d, x: m.root.position.x, r: d.baseRadius * m.root.scale.x, heightScale: m.root.scale.y };
+      m.growthReady = true;
+    }
+  }
+};
+
+// src/wealth-art.mjs
+var WEALTH_POSITION = { x: 20.5, z: 1.8 };
+var WealthDisplay = class {
+  constructor(scene2) {
+    this.root = new T3.Group();
+    this.root.position.set(WEALTH_POSITION.x, 0, WEALTH_POSITION.z);
+    scene2.add(this.root);
+    const p = this.root;
+    box(p, -2.3, 0.12, 0, 3.8, 0.18, 1.5, "#d3edd4", 0.08);
+    for (let x = -3.9; x < -0.7; x += 0.4) box(p, x, 0.22, 0, 0.025, 0.014, 1.4, "#a4cbbd", 5e-3);
+    box(p, 0, 0.1, 0, 4.3, 0.38, 4.6, "#e8f6da", 0.22);
+    box(p, 0, 0.34, 0, 4, 0.12, 4.3, "#72d1b3", 0.1);
+    for (const x of [-2, 2]) for (const z of [-2.1, 2.1]) {
+      cyl(p, x, 0.68, z, 0.055, 0.8, "#f7e5a3");
+      cyl(p, x, 1.09, z, 0.11, 0.08, "#eab657");
+    }
+    const canvas = document.createElement("canvas");
+    canvas.width = 512;
+    canvas.height = 256;
+    const c = canvas.getContext("2d");
+    c.fillStyle = "#65c943";
+    c.fillRect(0, 0, 512, 256);
+    c.strokeStyle = "#ebff9b";
+    c.lineWidth = 10;
+    c.strokeRect(13, 13, 486, 230);
+    c.strokeStyle = "#368d32";
+    c.lineWidth = 6;
+    c.strokeRect(29, 29, 454, 198);
+    c.fillStyle = "#b0e773";
+    for (const x of [70, 442]) {
+      c.beginPath();
+      c.ellipse(x, 128, 34, 72, 0, 0, Math.PI * 2);
+      c.fill();
+    }
+    c.fillStyle = "#edffc2";
+    c.beginPath();
+    c.ellipse(256, 128, 85, 91, 0, 0, Math.PI * 2);
+    c.fill();
+    c.strokeStyle = "#4caa3b";
+    c.lineWidth = 5;
+    for (let i = 0; i < 5; i++) {
+      c.beginPath();
+      c.moveTo(256, 174);
+      c.quadraticCurveTo(180 + i * 38, 99, 210 + i * 23, 82);
+      c.stroke();
+    }
+    c.fillStyle = "#378a35";
+    c.font = "900 19px Nunito, sans-serif";
+    c.textAlign = "center";
+    c.fillText("PEARL RESERVE", 256, 224);
+    const top = new T3.MeshStandardMaterial({ map: new T3.CanvasTexture(canvas), roughness: 0.6 }), edgeCanvas = document.createElement("canvas");
+    edgeCanvas.width = 64;
+    edgeCanvas.height = 64;
+    const e = edgeCanvas.getContext("2d");
+    e.fillStyle = "#4bad36";
+    e.fillRect(0, 0, 64, 64);
+    for (let y = 2; y < 64; y += 6) {
+      e.fillStyle = y % 3 ? "#b9ee7c" : "#7dd549";
+      e.fillRect(0, y, 64, 2);
+    }
+    const edge = new T3.MeshStandardMaterial({ map: new T3.CanvasTexture(edgeCanvas), roughness: 0.75 });
+    top.map.colorSpace = edge.map.colorSpace = T3.SRGBColorSpace;
+    this.notes = new T3.InstancedMesh(new T3.BoxGeometry(0.9, 0.16, 0.58), [edge, edge, top, edge, edge, edge], 360);
+    this.bands = new T3.InstancedMesh(new T3.BoxGeometry(0.15, 0.169, 0.6), mat("#fff1b1", 0.65), 360);
+    this.notes.instanceMatrix.setUsage(T3.DynamicDrawUsage);
+    this.bands.instanceMatrix.setUsage(T3.DynamicDrawUsage);
+    this.notes.castShadow = this.notes.receiveShadow = true;
+    this.bands.castShadow = true;
+    this.notes.frustumCulled = this.bands.frustumCulled = false;
+    this.notes.count = this.bands.count = 0;
+    p.add(this.notes, this.bands);
+    this.dummy = new T3.Object3D();
+    this.cash = -1;
+    this.count = 0;
+    this.bump = 0;
+    const board = label("\u6211\u7684\u8D22\u5BCC", 3.8, 0.66, "#effbdc", "#33847c", 44);
+    board.position.set(0, 0.75, 2.33);
+    p.add(board);
+    this.balanceCanvas = document.createElement("canvas");
+    this.balanceCanvas.width = 512;
+    this.balanceCanvas.height = 128;
+    this.balanceTexture = new T3.CanvasTexture(this.balanceCanvas);
+    this.balanceTexture.colorSpace = T3.SRGBColorSpace;
+    const balance = new T3.Mesh(new T3.PlaneGeometry(3.8, 0.8), new T3.MeshBasicMaterial({ map: this.balanceTexture, transparent: true, toneMapped: false, side: T3.DoubleSide }));
+    balance.position.set(0, 1.35, 2.34);
+    p.add(balance);
+  }
+  update(cash, dt) {
+    if (cash !== this.cash) {
+      this.bump = cash > this.cash ? 0.6 : 0;
+      this.cash = cash;
+      const c = this.balanceCanvas.getContext("2d");
+      c.clearRect(0, 0, 512, 128);
+      c.fillStyle = "#e9f7d8";
+      c.fillRect(0, 0, 512, 128);
+      c.fillStyle = "#297a68";
+      c.font = "900 65px Nunito, sans-serif";
+      c.textAlign = "center";
+      c.textBaseline = "middle";
+      c.fillText(new Intl.NumberFormat("zh-CN", { notation: cash > 99999 ? "compact" : "standard", maximumFractionDigits: 1 }).format(cash), 256, 64);
+      this.balanceTexture.needsUpdate = true;
+    }
+    const shape = wealthShape(cash);
+    this.count += (shape.count - this.count) * Math.min(1, dt * 8);
+    const n = Math.round(this.count);
+    this.notes.count = this.bands.count = n;
+    this.bump = Math.max(0, this.bump - dt);
+    for (let i = 0; i < n; i++) {
+      const column = i % 12, layer = Math.floor(i / 12);
+      this.dummy.position.set((column % 4 - 1.5) * 0.98, 0.52 + (layer * 0.18 + 0.08) * shape.height, (Math.floor(column / 4) - 1) * 0.74);
+      this.dummy.rotation.set(0, ((layer + column) % 3 - 1) * 0.055, 0);
+      this.dummy.scale.set(1, shape.height * (1 + this.bump * 0.05), 1);
+      this.dummy.updateMatrix();
+      this.notes.setMatrixAt(i, this.dummy.matrix);
+      this.bands.setMatrixAt(i, this.dummy.matrix);
+    }
+    this.notes.instanceMatrix.needsUpdate = this.bands.instanceMatrix.needsUpdate = true;
+  }
+  get displayHeight() {
+    const s = wealthShape(this.cash);
+    return 0.7 + Math.ceil(s.count / 12) * 0.18 * s.height;
+  }
+};
+function makeViewingPassage(scene2) {
+  const g = new T3.Group();
+  scene2.add(g);
+  const radius = 3.2, z0 = 13.5, z1 = 21.5;
+  const floor = box(g, 0, 0.213, 17.5, 5.7, 0.025, 11.5, "#b4e6b8", 0.04);
+  floor.castShadow = false;
+  for (const x of [-2.9, 2.9]) box(g, x, 0.25, 17.5, 0.13, 0.07, 11.5, "#eff9d8", 0.025);
+  const vertices = [], indices = [];
+  for (let j = 0; j < 2; j++) for (let i = 0; i <= 40; i++) {
+    const a = i / 40 * Math.PI;
+    vertices.push(Math.cos(a) * radius, 1.7 + Math.sin(a) * 3.3, j ? z1 : z0);
+  }
+  for (let i = 0; i < 40; i++) indices.push(i, i + 1, i + 41, i + 1, i + 42, i + 41);
+  const geo = new T3.BufferGeometry();
+  geo.setAttribute("position", new T3.Float32BufferAttribute(vertices, 3));
+  geo.setIndex(indices);
+  geo.computeVertexNormals();
+  const glass = new T3.Mesh(geo, new T3.MeshPhysicalMaterial({ color: "#bdf6dc", transparent: true, opacity: 0.12, roughness: 0.045, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.05, envMapIntensity: 1.7, side: T3.DoubleSide, depthWrite: false }));
+  glass.castShadow = false;
+  glass.renderOrder = 5;
+  g.add(glass);
+  for (const z of [z0, (z0 + z1) / 2, z1]) {
+    const pts = Array.from({ length: 41 }, (_, i) => new T3.Vector3(Math.cos(i / 40 * Math.PI) * radius, 1.7 + Math.sin(i / 40 * Math.PI) * 3.3, z));
+    const rib = new T3.Mesh(new T3.TubeGeometry(new T3.CatmullRomCurve3(pts), 40, 0.105, 8, false), mat("#60d3bc", 0.25));
+    rib.castShadow = true;
+    g.add(rib);
+    for (const x of [-radius, radius]) {
+      cyl(g, x, 0.94, z, 0.095, 1.48, "#74d8bd");
+      cyl(g, x, 0.3, z, 0.21, 0.18, "#f3e7b7");
+    }
+  }
+  for (const x of [-1.65, 1.65]) {
+    const y = 1.7 + Math.sqrt(1 - x * x / (radius * radius)) * 3.3;
+    const p = new T3.Mesh(new T3.PlaneGeometry(0.055, 7.7), new T3.MeshBasicMaterial({ color: "#f3ffed", transparent: true, opacity: 0.48, depthWrite: false, side: T3.DoubleSide }));
+    p.rotation.x = -Math.PI / 2;
+    p.position.set(x, y + 0.02, 17.5);
+    p.renderOrder = 6;
+    g.add(p);
+  }
+  const sign = label("\u73E0\u5149\u89C2\u8D4F\u5ECA", 3.4, 0.56, "#e0f5d5", "#3f9b91", 42);
+  sign.position.set(0, 4.65, z1 + 0.03);
+  g.add(sign);
+  return g;
+}
+
+// src/app.mjs
+var $2 = (id) => document.getElementById(id);
+var KEY = "aqua-coast-save-v1";
+var SETTINGS = "aqua-coast-settings-v1";
+var stored = null;
+var settings = {};
+try {
+  stored = JSON.parse(localStorage.getItem(KEY) || "null");
+  settings = JSON.parse(localStorage.getItem(SETTINGS) || "{}") || {};
+} catch {
+}
+var sim = new AquariumSimulation(stored);
+var audio = new OceanAudio();
+audio.setMuted(!!settings.muted);
+var renderer;
+try {
+  renderer = new T3.WebGLRenderer({ canvas: $2("scene"), antialias: true, powerPreference: "high-performance" });
+} catch (e) {
+  $2("loading").innerHTML = "<strong>\u9700\u8981\u5F00\u542F\u6D4F\u89C8\u5668 3D \u652F\u6301</strong><p>\u8BF7\u5728\u652F\u6301 WebGL \u7684 Chrome / Edge \u4E2D\u6253\u5F00\u3002</p>";
+  throw e;
+}
+renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 1.5));
+renderer.outputColorSpace = T3.SRGBColorSpace;
+renderer.toneMapping = T3.NeutralToneMapping;
+renderer.toneMappingExposure = 0.94;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = T3.PCFShadowMap;
+var scene = new T3.Scene();
+scene.background = new T3.Color("#73d9df");
+scene.fog = new T3.Fog("#73d9df", 100, 180);
+scene.add(new T3.HemisphereLight("#efffff", "#a9b9b0", 1.45));
+var sun = new T3.DirectionalLight("#fff4db", 2);
+sun.position.set(-25, 45, 28);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+sun.shadow.camera.left = -34;
+sun.shadow.camera.right = 34;
+sun.shadow.camera.top = 50;
+sun.shadow.camera.bottom = -42;
+sun.shadow.camera.near = 1;
+sun.shadow.camera.far = 130;
+sun.shadow.bias = -2e-4;
+sun.shadow.normalBias = 0.045;
+sun.shadow.radius = 3;
+scene.add(sun);
+sun.target.position.set(0, 0, -2);
+scene.add(sun.target);
+studio(renderer, scene);
+var world = makeWorld(scene);
+var tanks = Object.fromEntries(SPECIES.map((s) => [s.id, makeTank(scene, s)]));
+var fishRenderer = new FishRenderer(scene);
+var particles = new OceanParticles(scene);
+var pavilion = enrichPavilion(scene);
+var wealth = new WealthDisplay(scene);
+var viewingPassage = makeViewingPassage(scene);
+var tankGrowthView = new TankGrowthView(tanks);
+var owner = makePerson(scene, 0, true);
+var people = /* @__PURE__ */ new Map();
+var personPool = [];
+var helpers = [];
+var selection = new T3.Mesh(new T3.RingGeometry(2.6, 2.65, 64), new T3.MeshBasicMaterial({ color: "#fff0ad", transparent: true, opacity: 0.55, depthWrite: false, side: T3.DoubleSide }));
+selection.rotation.x = -Math.PI / 2;
+selection.visible = false;
+scene.add(selection);
+var camera = new T3.OrthographicCamera(-20, 20, 20, -20, 0.1, 200);
+var width = 1;
+var height = 1;
+var aspect = 1;
+var time = sim.time;
+var last = performance.now();
+var tick = 0;
+var saveClock = 0;
+var started = !!stored;
+var paused = false;
+var inspection = null;
+var inspectYaw = 0.2;
+var inspectTilt = 0.7;
+var inspectSpan = 12;
+var focus = new T3.Vector3(0, 0, 4);
+var desired = new T3.Vector3();
+var projectVector = new T3.Vector3();
+var cameraPos = new T3.Vector3();
+var camSpan = { v: 37 };
+var ui = new UI(sim, act);
+var transfers = [];
+var ripples = [];
+var lastWater = isSwimming(sim.player.z);
+var resetRequest = false;
+var ray = new T3.Raycaster();
+var plane = new T3.Plane(new T3.Vector3(0, 1, 0), 0);
+var hit = new T3.Vector3();
+var mouse = new T3.Vector2();
+var controls = new Controls($2("scene"), clickWorld, () => {
+  if (started && !ui.menu && !inspection) act("cast");
+}, () => {
+  if (inspection) act("end-inspect");
+  else if (ui.menu) act("close");
+  else act("pause");
+}, (dx, dy) => {
+  inspectYaw -= dx;
+  inspectTilt = clamp(inspectTilt + dy, 0.25, 1.1);
+});
+function save() {
+  if (!started) return;
+  try {
+    localStorage.setItem(KEY, JSON.stringify(sim.save()));
+    localStorage.setItem(SETTINGS, JSON.stringify({ muted: audio.muted }));
+  } catch {
+    ui.toast("\u6D4F\u89C8\u5668\u6682\u4E0D\u5141\u8BB8\u4FDD\u5B58\uFF0C\u4ECD\u53EF\u7EE7\u7EED\u6E38\u73A9");
+  }
+}
+function start() {
+  started = true;
+  document.body.classList.add("started");
+  $2("welcome").hidden = true;
+  audio.unlock();
+  save();
+}
+function close() {
+  ui.close();
+  resetRequest = false;
+  controls.reset();
+  save();
+}
+function act(type, id) {
+  if (type === "start") {
+    start();
+    return;
+  }
+  if (!started || paused && !["pause", "sound"].includes(type)) return;
+  audio.unlock();
+  if (type === "cast") {
+    if (isSwimming(sim.player.z) && total(sim.player.bag) >= sim.capacity) sim.returnHome();
+    else sim.cast();
+    audio.tone(320, 0.14, 0.25);
+  } else if (type === "home") {
+    sim.returnHome();
+  } else if (type === "menu") {
+    controls.reset();
+    ui.open(id);
+  } else if (type === "close") close();
+  else if (type === "tank") {
+    controls.reset();
+    ui.open("tank", id);
+  } else if (type === "build") {
+    if (sim.build(id)) {
+      audio.build();
+      ui.toast(BY_ID[id].name + "\u5C55\u7F38\u5F00\u653E\uFF01\u53BB\u5BF9\u5E94\u9C7C\u7FA4\u6355\u9C7C\u5427");
+      ui.renderMenu();
+      save();
+    } else ui.toast("\u8D44\u91D1\u8FD8\u4E0D\u591F\uFF0C\u5148\u628A\u8FD9\u4E00\u7F51\u9C7C\u5356\u51FA\u53BB");
+  } else if (type === "replay-honor") {
+    close();
+    audio.build();
+    ui.celebrate({ type: "honor", ...sim.honor, level: sim.level }, true);
+  } else if (type === "upgrade") {
+    if (sim.upgrade(id)) {
+      audio.build();
+      ui.toast("\u5347\u7EA7\u5B8C\u6210\uFF0C\u5DF2\u7ECF\u751F\u6548");
+      ui.renderMenu();
+      save();
+    }
+  } else if (type === "tank-upgrade" || type === "expand") {
+    const before = sim.tankCapacity(id);
+    if (sim.upgradeTank(id)) {
+      audio.build();
+      ui.toast(BY_ID[id].name + "\u7F38\u5DF2\u6269\u5927\uFF01\u5BB9\u91CF " + before + " \u2192 " + sim.tankCapacity(id));
+      const d = sim.definition(id);
+      particles.emit(d.x, 3 * d.heightScale, d.z, 24);
+      ui.renderMenu();
+      save();
+    }
+  } else if (type === "claim") {
+    if (sim.claim(id)) {
+      audio.build();
+      ui.toast("\u76EE\u6807\u5956\u52B1\u5DF2\u5230\u8D26");
+      if (ui.menu) ui.renderMenu();
+      save();
+    }
+  } else if (type === "locate" || type === "deliver") {
+    const d = sim.definition(id);
+    close();
+    const a = approach(d);
+    sim.navigate(a.x, a.z);
+    sim.player.auto = type === "deliver" ? "deliver" : "move";
+  } else if (type === "walk-passage") {
+    close();
+    sim.navigate(0, 17.5);
+    ui.toast("\u524D\u5F80\u73BB\u7483\u89C2\u8D4F\u5ECA\uFF0C\u968F\u65F6\u79FB\u52A8\u63A5\u7BA1");
+  } else if (type === "rare-zone") {
+    close();
+    ui.toast(sim.seekRare(id) ? "\u9501\u5B9A\u661F\u8292\uFF01\u6B63\u5728\u8FFD\u8E2A\u73CD\u7A00\u9C7C\uFF0C\u968F\u65F6\u79FB\u52A8\u63A5\u7BA1" : "\u73CD\u7A00\u9C7C\u6682\u672A\u73B0\u8EAB\uFF0C\u7EE7\u7EED\u6355\u635E\u7B49\u5019\u4E0B\u4E00\u6B21\u661F\u8292");
+  } else if (type === "fish-zone") {
+    const d = BY_ID[id];
+    close();
+    sim.navigate(...d.sea);
+    sim.player.auto = "fish";
+    ui.toast("\u524D\u5F80" + d.tag + "\uFF0C\u968F\u65F6\u79FB\u52A8\u63A5\u7BA1");
+  } else if (type === "inspect") {
+    close();
+    inspection = id;
+    inspectYaw = 0.15;
+    inspectTilt = 0.7;
+    inspectSpan = Math.max(12, (sim.definition(id).r * 2 + 1.5) / aspect, sim.definition(id).heightScale * 5 + 2);
+    controls.inspect = true;
+    controls.reset();
+    document.body.classList.add("inspecting");
+    $2("inspect").hidden = false;
+    $2("inspect-title").textContent = sim.definition(id).name + "\u5C55\u7F38";
+    document.querySelector("#inspect small").textContent = "\u6162\u4E0B\u6765\uFF0C\u770B\u770B\u5B83\u4EEC";
+    $2("world-labels").hidden = true;
+  } else if (type === "inspect-wealth") {
+    close();
+    inspection = "wealth";
+    inspectYaw = 0.25;
+    inspectTilt = 0.5;
+    inspectSpan = Math.max(9, wealth.displayHeight * 1.3 + 5);
+    controls.inspect = true;
+    controls.reset();
+    document.body.classList.add("inspecting");
+    $2("inspect").hidden = false;
+    $2("inspect-title").textContent = "\u6211\u7684\u8D22\u5BCC \xB7 " + Math.floor(sim.cash).toLocaleString() + " \u8D1D\u58F3\u91D1\u5E01";
+    document.querySelector("#inspect small").textContent = "\u4F59\u989D\u8D8A\u591A\uFF0C\u949E\u7968\u5806\u5F97\u8D8A\u9AD8";
+    $2("world-labels").hidden = true;
+  } else if (type === "inspect-player") {
+    close();
+    inspection = "player";
+    inspectYaw = sim.player.heading + Math.PI;
+    inspectTilt = 0.4;
+    inspectSpan = 6.7;
+    controls.inspect = true;
+    controls.reset();
+    document.body.classList.add("inspecting");
+    $2("inspect").hidden = false;
+    $2("inspect-title").textContent = "\u73CA\u745A\u63A2\u9669\u6F5C\u6C34\u670D";
+    document.querySelector("#inspect small").textContent = "\u4E13\u4E1A\u6F5C\u6C34\u88C5\u5907";
+    $2("world-labels").hidden = true;
+  } else if (type === "end-inspect") {
+    inspection = null;
+    controls.inspect = false;
+    document.body.classList.remove("inspecting");
+    $2("inspect").hidden = true;
+    $2("world-labels").hidden = false;
+  } else if (type === "pause") {
+    paused = !paused;
+    $2("pause-screen").hidden = !paused;
+    $2("pause").innerHTML = icon(paused ? "play" : "pause");
+    controls.reset();
+    save();
+    if (paused) audio.suspend();
+  } else if (type === "sound") {
+    audio.setMuted(!audio.muted);
+    $2("sound").innerHTML = icon(audio.muted ? "mute" : "sound");
+    $2("sound").setAttribute("aria-label", audio.muted ? "\u5F00\u542F\u58F0\u97F3" : "\u5173\u95ED\u58F0\u97F3");
+    save();
+  } else if (type === "reset-request") {
+    resetRequest = true;
+    $2("drawer-content").innerHTML = '<div class="help-copy"><p>\u4F1A\u6E05\u7A7A\u672C\u6D4F\u89C8\u5668\u8FD9\u5EA7\u6D77\u6D0B\u9986\u7684\u91D1\u5E01\u3001\u9C7C\u548C\u5347\u7EA7\u3002\u5176\u4ED6\u6E38\u620F\u4E0D\u53D7\u5F71\u54CD\u3002</p><button class="danger" data-action="reset-confirm">\u786E\u8BA4\u91CD\u65B0\u5F00\u59CB</button></div>';
+  } else if (type === "reset-confirm" && resetRequest) {
+    sim = new AquariumSimulation();
+    ui.sim = sim;
+    for (const p of personPool) {
+      p.used = false;
+      p.root.visible = false;
+    }
+    people.clear();
+    for (const h of helpers) scene.remove(h.root);
+    helpers.length = 0;
+    close();
+    paused = false;
+    inspection = null;
+    time = 0;
+    focus.set(0, 0, 4);
+    ui.toast("\u65B0\u7684\u6D77\u6D0B\u9986\u5F00\u95E8\u5566");
+    save();
+  }
+  ui.update();
+}
+function resize() {
+  width = innerWidth;
+  height = innerHeight;
+  aspect = width / height;
+  renderer.setSize(width, height, false);
+  updateCamera(0.1);
+}
+function updateCamera(dt) {
+  const k = 1 - Math.exp(-dt * 5.2);
+  if (inspection) {
+    const d = inspection === "player" ? { x: sim.player.x, z: sim.player.z } : inspection === "wealth" ? WEALTH_POSITION : sim.definition(inspection);
+    desired.set(d.x, inspection === "player" ? shorePose(sim.player.z).feet + 1.4 : inspection === "wealth" ? Math.max(1.5, wealth.displayHeight * 0.5) : 2 * (d.heightScale || 1), d.z);
+    focus.lerp(desired, k);
+    camSpan.v = T3.MathUtils.damp(camSpan.v, inspection === "wealth" ? Math.max(inspectSpan, 6.8 / aspect) : inspectSpan, 4, dt);
+    cameraPos.set(focus.x + Math.sin(inspectYaw) * 28 * Math.cos(inspectTilt), focus.y + 28 * Math.sin(inspectTilt), focus.z + Math.cos(inspectYaw) * 28 * Math.cos(inspectTilt));
+  } else {
+    const p = sim.player;
+    desired.set(started ? p.x : -3, 0, started ? p.z - 3 : 0);
+    focus.lerp(desired, k);
+    const goal = started ? isSwimming(p.z) ? 24 : 31 : 43;
+    camSpan.v = T3.MathUtils.damp(camSpan.v, aspect < 0.7 ? goal : goal * 0.88, 3, dt);
+    cameraPos.set(focus.x, focus.y + 36, focus.z + 31);
+  }
+  camera.position.copy(cameraPos);
+  camera.lookAt(focus);
+  camera.left = -camSpan.v * aspect / 2;
+  camera.right = camSpan.v * aspect / 2;
+  camera.top = camSpan.v / 2;
+  camera.bottom = -camSpan.v / 2;
+  camera.updateProjectionMatrix();
+  camera.updateMatrixWorld();
+}
+function project(x, y, z) {
+  projectVector.set(x, y, z).project(camera);
+  if (projectVector.z > 1 || projectVector.z < -1) return null;
+  return { x: (projectVector.x * 0.5 + 0.5) * width, y: (-0.5 * projectVector.y + 0.5) * height };
+}
+function clickWorld(x, y) {
+  if (!started || paused || ui.menu || inspection) return;
+  mouse.set(x / width * 2 - 1, 1 - y / height * 2);
+  ray.setFromCamera(mouse, camera);
+  if (ray.ray.intersectPlane(plane, hit)) {
+    for (const d of sim.definitions) if (Math.hypot(hit.x - d.x, hit.z - d.z) < d.r) {
+      act("tank", d.id);
+      return;
+    }
+    if (sim.navigate(hit.x, hit.z)) {
+      selection.position.set(hit.x, 0.23, hit.z);
+      selection.scale.setScalar(0.22);
+      selection.visible = true;
+      setTimeout(() => selection.visible = false, 900);
+    }
+  }
+}
+$2("scene").addEventListener("wheel", (e) => {
+  if (inspection) {
+    e.preventDefault();
+    inspectSpan = clamp(inspectSpan * Math.exp(e.deltaY * 1e-3), 7.5, 20);
+  }
+}, { passive: false });
+function addRipple(x, z, color = "#ecfff2", scale = 1) {
+  const o = ring(scene, 0.3, 0.022, color, x, -0.07, z);
+  o.material = new T3.MeshBasicMaterial({ color, transparent: true, opacity: 0.7, depthWrite: false });
+  o.castShadow = false;
+  ripples.push({ o, t: 0, scale });
+  if (ripples.length > 25) {
+    const old = ripples.shift();
+    scene.remove(old.o);
+    old.o.geometry.dispose();
+    old.o.material.dispose();
+  }
+}
+function events() {
+  for (const e of sim.drainEvents()) {
+    if (e.type === "catch") {
+      audio.catch();
+      const a = project(e.x, 0.2, e.z);
+      if (a) ui.floater("+1 " + (e.rare ? "\u2727 " + RARE_NAMES[e.kind] : BY_ID[e.kind].name), a.x, a.y, "#fffbd0");
+      addRipple(e.x, e.z);
+      transfers.push({ kind: e.kind, x: e.x, y: -1, z: e.z, to: "bag", rare: e.rare, t: 0 });
+      if (e.first || e.rare) ui.discover(e.kind, e.rare);
+    } else if (e.type === "deposit") {
+      audio.tone(500 + Math.random() * 200, 0.08, 0.09);
+      const d = sim.definition(e.tank || e.kind);
+      transfers.push({ kind: e.kind, x: e.x, y: 1.5, z: e.z, to: "tank", rare: e.rare, tx: d.x, tz: d.z, ty: 0.205 + (2.3 - 0.205) * d.heightScale, t: 0 });
+    } else if (e.type === "sale") {
+      audio.sale();
+      const p = project(e.x, 2.5, e.z);
+      if (p) ui.floater("+" + e.cash, p.x - 15, p.y);
+    } else if (e.type === "honor" || e.type === "level") {
+      audio.build();
+      ui.celebrate(e);
+      particles.emit(sim.player.x, 2.8, sim.player.z, 35);
+    } else if (e.type === "exhibit") {
+      ui.toast("\u2727 " + RARE_NAMES[e.kind] + " \u5DF2\u6210\u4E3A\u6C38\u4E45\u73CD\u85CF\uFF01");
+    } else if (e.type === "oxygen") {
+      ui.toast("\u6C27\u6C14\u7528\u5B8C\u5566\uFF0C\u6B63\u5E26\u7740\u9C7C\u56DE\u5230\u7801\u5934");
+    } else if (e.type === "unloaded") ui.toast("\u8865\u8D27\u5B8C\u6210\uFF01\u987E\u5BA2\u5DF2\u7ECF\u7B49\u4E0D\u53CA\u5566");
+    else if (e.type === "navigate") ui.toast(e.text);
+  }
+}
+function renderFish(dt) {
+  fishRenderer.begin(time);
+  for (const f of sim.fish) {
+    if (f.cooldown > 0 || !sim.tanks[f.kind].built) continue;
+    const visible = f.kind === "shark" || f.kind === "ray" || Math.abs(f.x - focus.x) < 33;
+    if (visible) fishRenderer.add(f.kind, f.x, f.y, f.z, f.heading, ["ray", "shark"].includes(f.kind) ? 1 : 1.08, f.rare);
+  }
+  for (const definition of sim.definitions) {
+    const d = tanks[definition.id].visual || definition;
+    if (Math.abs(d.z - focus.z) > 40 || !sim.tanks[d.id].built) continue;
+    const kind = d.kind, tank = sim.tanks[d.id], large = ["ray", "shark"].includes(kind), scale = kind === "ray" ? 0.45 : kind === "shark" ? 0.5 : 0.74, count = Math.min(tank.stock, Math.min(64, Math.floor((large ? 6 : 17) * (d.r / d.baseRadius) ** 2 * d.heightScale))), rr = fishRenderer.stockRadius(kind, d.r, scale);
+    for (let i = 0; i < count; i++) {
+      const a = time * (0.28 + i % 3 * 0.04) + i * 2.39996, x = d.x + Math.cos(a) * (rr * (0.7 + i % 3 * 0.1)), z = d.z + Math.sin(a) * rr * 0.75;
+      fishRenderer.add(kind, x, 0.205 + (1.65 + i % 3 * 0.46 + Math.sin(time * 1.4 + i) * 0.1 - 0.205) * d.heightScale, z, -a - Math.PI / 2, scale, i < (tank.rareStock || 0));
+    }
+    if (sim.rareExhibits[kind] === d.id) {
+      const a = -time * 0.32;
+      fishRenderer.add(kind, d.x + Math.cos(a) * rr * 0.6, 0.205 + (2.95 - 0.205) * d.heightScale, d.z + Math.sin(a) * rr * 0.55, a + Math.PI / 2, scale * 1.1, true);
+    }
+  }
+  const actors = [sim.player, ...sim.staff];
+  for (const a of actors) {
+    const count = total(a.bag);
+    let i = 0;
+    for (const d of SPECIES) for (let n = 0; n < a.bag[d.id] && i < 12; n++) {
+      const p = cargoItem(a, i, count);
+      fishRenderer.add(d.id, p.x, p.y, p.z, -a.heading + Math.PI / 2, d.id === "ray" ? 0.13 : d.id === "shark" ? 0.14 : 0.25, n < (a.rareBag?.[d.id] || 0));
+      i++;
+    }
+  }
+  for (const g of sim.guests) if (g.bag && BY_ID[g.bag]) {
+    const a = people.get(g.id)?.root.rotation.y ?? g.heading;
+    fishRenderer.add(g.bag, g.x + Math.cos(a) * 0.5 - Math.sin(a) * 0.1, 0.95, g.z - Math.sin(a) * 0.5 - Math.cos(a) * 0.1, -a, 0.2, g.rarePurchase);
+  }
+  for (let i = transfers.length - 1; i >= 0; i--) {
+    const f = transfers[i];
+    f.t += dt;
+    const t = clamp(f.t / 0.6, 0, 1), e = 1 - (1 - t) ** 2, p = sim.player;
+    const tx = f.to === "bag" ? p.x : f.tx, tz = f.to === "bag" ? p.z : f.tz, ty = f.to === "bag" ? isSwimming(p.z) ? -0.6 : 2.8 : f.ty || 2.3;
+    fishRenderer.add(f.kind, T3.MathUtils.lerp(f.x, tx, e), T3.MathUtils.lerp(f.y, ty, e) + Math.sin(t * Math.PI) * 1.5, T3.MathUtils.lerp(f.z, tz, e), time * 2, 0.55, f.rare);
+    if (t >= 1) transfers.splice(i, 1);
+  }
+  fishRenderer.end();
+}
+function updatePeople(dt, motion) {
+  owner.update(sim.player, time, dt, motion);
+  if (owner.marker) owner.marker.visible = inspection !== "player";
+  owner.halo.visible = inspection !== "player";
+  const ids = new Set(sim.guests.map((g) => g.id));
+  for (const [id, m] of people) if (!ids.has(id)) {
+    m.used = false;
+    m.root.visible = false;
+    people.delete(id);
+  }
+  for (const g of sim.guests) {
+    if (!people.has(g.id)) {
+      let model2 = personPool.find((m) => !m.used && m.style === g.style) || personPool.find((m) => !m.used);
+      if (!model2) {
+        model2 = makePerson(scene, g.style);
+        model2.style = g.style;
+        personPool.push(model2);
+      }
+      model2.used = true;
+      model2.root.visible = true;
+      people.set(g.id, model2);
+    }
+    const model = people.get(g.id);
+    model.root.visible = Math.abs(g.z - focus.z) < 37;
+    model.update(g, time + g.id * 0.3, dt, motion);
+    model.net.visible = false;
+    model.root.scale.setScalar(0.85 + g.style % 4 * 0.035);
+  }
+  for (let i = 0; i < sim.staff.length; i++) {
+    if (!helpers[i]) helpers[i] = makePerson(scene, 9 + i, false, true);
+    helpers[i].update(sim.staff[i], time + i, dt, motion);
+  }
+}
+function map() {
+  const c = $2("map").getContext("2d"), py = (z) => 10 + (z + 40) / (sim.end + 40) * 156;
+  c.clearRect(0, 0, 144, 176);
+  c.fillStyle = "#8cdcd9";
+  c.beginPath();
+  c.roundRect(2, 2, 140, 172, 14);
+  c.fill();
+  c.fillStyle = "#fff0bd";
+  c.fillRect(26, py(1), 92, py(sim.end) - py(1));
+  c.fillStyle = "#e4c18f";
+  c.fillRect(66, py(-4), 12, py(2) - py(-4));
+  for (const d of sim.definitions) {
+    c.fillStyle = sim.tanks[d.id].built ? d.color : "#d2cdb1";
+    c.beginPath();
+    c.arc(72 + d.x * 2.4, py(d.z), d.r * 1.6, 0, Math.PI * 2);
+    c.fill();
+  }
+  for (const d of SPECIES) if (sim.tanks[d.id].built) {
+    c.fillStyle = d.color;
+    for (let i = 0; i < 3; i++) {
+      c.beginPath();
+      c.arc(72 + d.sea[0] * 2.4 + i * 3, py(d.sea[1]), 2, 0, Math.PI * 2);
+      c.fill();
+    }
+  }
+  const p = sim.player;
+  c.strokeStyle = "#fffbe2";
+  c.lineWidth = 2;
+  c.fillStyle = "#fa815c";
+  c.beginPath();
+  c.arc(72 + p.x * 2.4, py(p.z), 4, 0, Math.PI * 2);
+  c.fill();
+  c.stroke();
+}
+function target() {
+  const f = sim.fish.find((f2) => f2.id === sim.player.target), p = f ? project(f.x, f.y + 0.3, f.z) : null;
+  $2("target-ring").hidden = !p || !!inspection || !!ui.menu;
+  if (p) {
+    $2("target-ring").style.left = p.x + "px";
+    $2("target-ring").style.top = p.y + "px";
+    $2("capture-progress").style.strokeDashoffset = 157.1 * (1 - clamp(sim.player.progress, 0, 1)) + "";
+    $2("capture-name").textContent = f.rare ? "\u2727 " + RARE_NAMES[f.kind] : BY_ID[f.kind].name;
+  }
+  $2("zone-name").textContent = SPECIES.filter((d) => sim.tanks[d.id].built).sort((a, b) => Math.hypot(a.sea[0] - sim.player.x, a.sea[1] - sim.player.z) - Math.hypot(b.sea[0] - sim.player.x, b.sea[1] - sim.player.z))[0].tag;
+}
+function animate(now) {
+  requestAnimationFrame(animate);
+  const dt = clamp((now - last) / 1e3, 0, 0.1);
+  last = now;
+  if (document.hidden) return;
+  const active = started && !paused && !ui.menu && !inspection;
+  if (!paused) time += dt;
+  if (!started) {
+    sim.time += dt;
+    sim.refreshFish();
+  }
+  if (active) {
+    const v = controls.movement();
+    if (Math.hypot(v.x, v.z) > 0.02) sim.movePlayer(v.x, v.z, dt);
+    else if (!sim.player.path.length) sim.player.moving = false;
+    sim.tick(dt);
+    events();
+    saveClock += dt;
+    if (saveClock > 4) {
+      save();
+      saveClock = 0;
+    }
+  }
+  const water = isSwimming(sim.player.z);
+  if (water !== lastWater) {
+    audio.splash();
+    addRipple(sim.player.x, sim.player.z, "#fff9d8", 2);
+    particles.emit(sim.player.x, -0.4, sim.player.z, 18);
+    lastWater = water;
+  }
+  world.update(time);
+  pavilion.update(time);
+  wealth.update(sim.cash, paused ? 0 : dt);
+  tankGrowthView.update(sim, paused ? 0 : dt);
+  for (const [id, m] of Object.entries(tanks)) {
+    m.root.visible = Math.abs(sim.definition(id).z - focus.z) < 48;
+    m.update(time, sim.tanks[id]);
+  }
+  updatePeople(paused ? 0 : dt, active);
+  renderFish(paused ? 0 : dt);
+  particles.update(paused ? 0 : dt, time, sim.player);
+  updateCamera(dt);
+  sun.position.z = focus.z + 28;
+  sun.target.position.z = focus.z - 2;
+  audio.tick(water);
+  for (let i = ripples.length - 1; i >= 0; i--) {
+    const r = ripples[i];
+    r.t += dt;
+    r.o.scale.setScalar(1 + r.t * 4 * r.scale);
+    r.o.material.opacity = Math.max(0, 0.7 - r.t * 0.55);
+    if (r.t > 1.3) {
+      scene.remove(r.o);
+      r.o.geometry.dispose();
+      r.o.material.dispose();
+      ripples.splice(i, 1);
+    }
+  }
+  renderer.render(scene, camera);
+  tick += dt;
+  if (tick > 0.12) {
+    ui.update();
+    map();
+    tick = 0;
+  }
+  ui.projectLabels(project);
+  target();
+}
+window.addEventListener("resize", resize);
+window.addEventListener("pagehide", save);
+window.addEventListener("beforeunload", save);
+document.addEventListener("visibilitychange", () => {
+  last = performance.now();
+  if (document.hidden) {
+    save();
+    audio.suspend();
+  } else if (started && !paused && audio.ctx) audio.unlock();
+});
+function makeFishThumbnails() {
+  const preview = new T3.Scene();
+  preview.background = new T3.Color("#dcf5ed");
+  preview.environment = scene.environment;
+  preview.environmentIntensity = 0.35;
+  preview.add(new T3.HemisphereLight("#f0ffff", "#a4bbb3", 1.4));
+  const light = new T3.DirectionalLight("#fff6db", 2.2);
+  light.position.set(-3, 6, 8);
+  preview.add(light);
+  const cam = new T3.OrthographicCamera(-2, 2, 1.25, -1.25, 0.1, 60);
+  const ratio = renderer.getPixelRatio();
+  renderer.setPixelRatio(1);
+  renderer.setSize(360, 220, false);
+  for (const d of SPECIES.flatMap((d2) => [{ ...d2, rare: false }, { ...d2, rare: true }])) {
+    const g = fishPreviewGeometry(d.id, d.rare), m = new T3.MeshPhysicalMaterial({ vertexColors: true, roughness: 0.25, metalness: 0.02, clearcoat: 0.9, iridescence: d.rare ? 1 : 0, side: T3.DoubleSide }), o = new T3.Mesh(g, m);
+    preview.add(o);
+    g.computeBoundingBox();
+    const center = g.boundingBox.getCenter(new T3.Vector3());
+    cam.position.copy(center).add(new T3.Vector3(2.4, 2.3, 7));
+    cam.lookAt(center);
+    cam.updateMatrixWorld();
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const x of [g.boundingBox.min.x, g.boundingBox.max.x]) for (const y of [g.boundingBox.min.y, g.boundingBox.max.y]) for (const z of [g.boundingBox.min.z, g.boundingBox.max.z]) {
+      const p = new T3.Vector3(x, y, z).applyMatrix4(cam.matrixWorldInverse);
+      minX = Math.min(minX, p.x);
+      maxX = Math.max(maxX, p.x);
+      minY = Math.min(minY, p.y);
+      maxY = Math.max(maxY, p.y);
+    }
+    const h = Math.max(maxY - minY, (maxX - minX) / (360 / 220)) * 0.59;
+    cam.left = -h * 360 / 220;
+    cam.right = h * 360 / 220;
+    cam.top = h;
+    cam.bottom = -h;
+    cam.updateProjectionMatrix();
+    renderer.render(preview, cam);
+    ui.thumbs[d.id + (d.rare ? ":rare" : "")] = renderer.domElement.toDataURL("image/png");
+    preview.remove(o);
+    g.dispose();
+    m.dispose();
+  }
+  renderer.setPixelRatio(ratio);
+  resize();
+}
+await document.fonts.ready;
+makeFishThumbnails();
+resize();
+ui.update();
+map();
+if (started) {
+  document.body.classList.add("started");
+  $2("welcome").hidden = true;
+  focus.set(sim.player.x, 0, sim.player.z - 3);
+}
+$2("sound").innerHTML = icon(audio.muted ? "mute" : "sound");
+$2("loading").hidden = true;
+if (sim.migrationNotice) ui.toast("\u5DF2\u6574\u7406\u4E3A\u4E00\u9C7C\u4E00\u7F38\uFF1A\u539F\u6709\u5E93\u5B58\u4E0E\u6269\u5BB9\u6295\u5165\u5747\u5DF2\u5408\u5E76\u4FDD\u7559");
+requestAnimationFrame(animate);
+console.info("Aqua Coast " + VERSION + " \xB7 local 3D aquarium ready");
+
+</script></body></html>

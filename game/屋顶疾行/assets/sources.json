@@ -1,0 +1,194 @@
+[
+  {
+    "path": "assets/character-source/base_body_anim.glb",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/base_body_anim.glb",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 8212156,
+    "sha256": "0eb271d4adea12b7f6bb1d4d8f7398db702f9449479be559ab9f019b5ab30b0f"
+  },
+  {
+    "path": "assets/character-source/clothing_hoodie.glb",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/clothing_hoodie.glb",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 684848,
+    "sha256": "264ad136179ac35326a273116652cf44badc189f6c78f09d188ecda19b3fd969"
+  },
+  {
+    "path": "assets/character-source/clothing_jeans.glb",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/clothing_jeans.glb",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 428704,
+    "sha256": "dac0e90aba219415e895eed0e471c0a9aab6b53f8870be1f8dfd41cd89c25d11"
+  },
+  {
+    "path": "assets/character-source/clothing_shoes.glb",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/clothing_shoes.glb",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 847684,
+    "sha256": "ea483876a6de5d51bf9fef16e1fd1e8957573398eab3321870d93af8c7dbc9a2"
+  },
+  {
+    "path": "assets/character-source/clothing_jacket.glb",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/clothing_jacket.glb",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 857976,
+    "sha256": "22c489abb90fa3af3381948a91016ae2fa5dc5ab1c1152721527ac74c70e9dbd"
+  },
+  {
+    "path": "assets/character-source/clothing_tshirt.glb",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/clothing_tshirt.glb",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 388104,
+    "sha256": "f77eaea89354ad57bcce48a877bec314e82d71de84700810e7c8290b20886063"
+  },
+  {
+    "path": "assets/character-source/hair_short02.glb",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/hair_short02.glb",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 1103288,
+    "sha256": "eb341c197acf3948dac1f41f7722e9dad31018149541504a13ebcc8b6aa9d5aa"
+  },
+  {
+    "path": "assets/character-source/asset_licenses.json",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/asset_licenses.json",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 7730,
+    "sha256": "b18bbc7f45fe7c28bcf3b119f44f7b8425d3b4c871f99c694b181b5603f4758e"
+  },
+  {
+    "path": "assets/character-source/clothing.json",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/clothing.json",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 13514,
+    "sha256": "768877fa15b04fa8598c4617e7f12bd825d08895a86bbb8aeaeaa5372e74be34"
+  },
+  {
+    "path": "assets/character-source/hair.json",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/hair.json",
+    "license": "CC0-1.0",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 2008,
+    "sha256": "8f54ea98cd039ce61ed15658d8a6c738253a454e23d2f3f9b7706f63bfbdc372"
+  },
+  {
+    "path": "assets/character-source/LICENSE-NOTES.md",
+    "url": "https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/LICENSE-NOTES.md",
+    "license": "license record",
+    "sourceRevision": "852e48f316b90a0937234886630e4fb4cdfd1f78",
+    "bytes": 18771,
+    "sha256": "18af8d071bcb1cab2260263991ad49c314dc616facf7f33b0ab19bee78d4ec13"
+  },
+  {
+    "path": "assets/pbr/brick_wall_001/Diffuse.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_diffuse_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "955d2d4500eb549be0f2873305782798",
+    "bytes": 574381,
+    "sha256": "6a1233ec0186703de830354d89f122991e61e67fb67e0846c7eaf6c5aefea902"
+  },
+  {
+    "path": "assets/pbr/brick_wall_001/nor_gl.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_nor_gl_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "be151875ed0897fc716aeef6daac8bd5",
+    "bytes": 295279,
+    "sha256": "8afbe3919308b168a6b7235fe7b930f670cfffa1a34de39ee790d55c9d7bda09"
+  },
+  {
+    "path": "assets/pbr/brick_wall_001/Rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_rough_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "618ceca60a4321aecc6d61eebe53d551",
+    "bytes": 211093,
+    "sha256": "a23342b02e6c5af106aaece16130aa9153a801cb1a84d5f3e0d06ce248677f38"
+  },
+  {
+    "path": "assets/pbr/brick_wall_001/AO.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_001/brick_wall_001_ao_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "aa63a3345a5217f34aae37a05344ce00",
+    "bytes": 269071,
+    "sha256": "2f3135384946565118afd5b17a36c9535a4946445e6b005b406097c6c719828f"
+  },
+  {
+    "path": "assets/pbr/concrete_floor_worn_001/Diffuse.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_diff_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "e35597cca586150b1ab2aa9a331a39c5",
+    "bytes": 118806,
+    "sha256": "6e40c0fc908f4d66431836f5abe203f3a4eb064e88824378a91a46a26e2f464c"
+  },
+  {
+    "path": "assets/pbr/concrete_floor_worn_001/nor_gl.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_nor_gl_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "9de6626758f8793b71182b892c110827",
+    "bytes": 110906,
+    "sha256": "523bd94a1be5dd2f11c2ae2b7d7c77445cf5bd9e41604db515a7c8364dcba067"
+  },
+  {
+    "path": "assets/pbr/concrete_floor_worn_001/Rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_rough_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "b158eae73029ac6a849481274a0e1b35",
+    "bytes": 181942,
+    "sha256": "069efe4ca018e0ef61fd8cc9964395ba8272284ae239da68d7f87988e2e9f488"
+  },
+  {
+    "path": "assets/pbr/concrete_floor_worn_001/AO.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_ao_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "b03dc724a630cfa899542912a42c9a4c",
+    "bytes": 124987,
+    "sha256": "6e8d38ec3df66c496d08ec62fa721e70c1274528cddc3bfecdcf6f1266a2bde5"
+  },
+  {
+    "path": "assets/pbr/concrete_wall_001/Diffuse.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_001/concrete_wall_001_diff_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "7be71d950acf3cf0d7927e4255a63b38",
+    "bytes": 79320,
+    "sha256": "c3c936da86d57997d9fc4022371c3798c8d438aeecb8f41546104da6d3947c02"
+  },
+  {
+    "path": "assets/pbr/concrete_wall_001/nor_gl.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_001/concrete_wall_001_nor_gl_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "8e2d51bd8a45f18b0612a9686992958c",
+    "bytes": 179270,
+    "sha256": "6f10711d123c8dff26375555196eae9e16d874c137acdacd44d1ba90168b6d46"
+  },
+  {
+    "path": "assets/pbr/concrete_wall_001/Rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_001/concrete_wall_001_rough_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "63b1c522f6de54a9deb7dd28ce310118",
+    "bytes": 156479,
+    "sha256": "d0964c690a8de99fb4f6657e0d3474eea9f9f293d080f4e5c871a55857d9448b"
+  },
+  {
+    "path": "assets/pbr/concrete_wall_001/AO.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_001/concrete_wall_001_ao_1k.jpg",
+    "license": "CC0-1.0",
+    "sourceRevision": "949109d29a3967c93b17bfe60d86da0e",
+    "bytes": 111623,
+    "sha256": "cdf662b0050a21681bd44a10c093618ca87c4e8017bc7d62c74d32c2b2a052cb"
+  },
+  {
+    "path": "assets/venice_sunset_1k.hdr",
+    "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/venice_sunset_1k.hdr",
+    "license": "CC0-1.0",
+    "author": "Greg Zaal / Poly Haven",
+    "bytes": 1440400,
+    "sha256": "92fe2b29b1957828fb8925a57633540bbba5bf380d9285ed553443e834249352"
+  }
+]

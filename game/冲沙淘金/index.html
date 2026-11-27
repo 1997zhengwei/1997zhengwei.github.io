@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f2ecdc">
+<title>冲沙淘金 · Sluice Trail</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+<main class="game">
+  <section class="stage" id="stage" aria-label="淘金地形">
+    <div class="backdrop" aria-hidden="true">
+      <div class="sun"></div>
+      <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+      <svg class="mesa" viewBox="0 0 400 120" preserveAspectRatio="xMidYMax slice">
+        <path class="far" d="M0 120V70l30-4 8-22h46l10 20 40 2 14-30h58l12 26 34 4 10-16h52l8 18 36 4 12-12h40V120z"/>
+        <path class="near" d="M0 120V92l42-6 12-16h40l10 14 56 4 20-10 64 2 18 12 50-2 16-14h34l38 12V120z"/>
+      </svg>
+      <svg class="dunes" viewBox="0 0 400 60" preserveAspectRatio="none">
+        <path class="d1" d="M0 30C60 10 120 16 190 28S320 40 400 18V60H0z"/>
+        <path class="d2" d="M0 44C80 30 150 34 220 44S340 52 400 38V60H0z"/>
+      </svg>
+    </div>
+    <canvas id="canyon"></canvas>
+    <header class="hud" id="hud">
+      <div class="plate">
+        <div class="gauges">
+          <div class="gauge" id="g-water" title="用水量：不超过刻度线得一颗星">
+            <span class="ico" aria-hidden="true">💧</span><div class="bar"><b></b><em></em></div><output>0</output>
+          </div>
+          <div class="gauge" id="g-dig" title="挖沙量：不超过刻度线得一颗星">
+            <span class="ico" aria-hidden="true">⛏️</span><div class="bar"><b></b><em></em></div><output>0</output>
+          </div>
+        </div>
+        <span class="stars" id="hud-stars"><i></i><i></i><i></i></span>
+      </div>
+      <div class="meter" role="group" aria-label="淘获进度">
+        <span>已淘到</span><strong id="count">0 / 2</strong>
+        <div class="bag" id="bag" aria-label="藏品"></div>
+      </div>
+    </header>
+    <div class="floaters" id="floaters" aria-hidden="true"></div>
+    <div class="notice" id="notice" role="status" hidden></div>
+
+    <div class="overlay" id="result" hidden>
+      <article class="card result" role="dialog" aria-labelledby="result-title">
+        <h2 id="result-title">宝石都淘出来了</h2>
+        <div class="big-stars" id="result-stars"></div>
+        <p class="run-stats" id="result-text"></p>
+        <div class="ledger" id="ledger"></div>
+        <button type="button" class="action" id="next">去下个矿点</button>
+        <button type="button" class="secondary" id="again">再挖一次，冲三星</button>
+      </article>
+    </div>
+
+    <div class="overlay sheet-wrap" id="map" hidden>
+      <article class="sheet" role="dialog" aria-labelledby="map-title">
+        <header><h2 id="map-title">矿脉地图</h2><span class="pill" id="map-stars">★ 0/24</span><button class="close" type="button" data-close aria-label="关闭">✕</button></header>
+        <p class="sheet-note" id="daily-note"></p>
+        <ol class="trail" id="trail"></ol>
+      </article>
+    </div>
+
+    <div class="overlay sheet-wrap" id="shop" hidden>
+      <article class="sheet" role="dialog" aria-labelledby="shop-title">
+        <header><h2 id="shop-title">淘金铺</h2><span class="pill coin-pill" id="shop-coins">0</span><button class="close" type="button" data-close aria-label="关闭">✕</button></header>
+        <nav class="tabs" id="shop-tabs"></nav>
+        <div class="goods" id="goods"></div>
+      </article>
+    </div>
+    <div class="notice" id="error" role="alert" hidden>画面没有载入，请刷新重试。</div>
+  </section>
+  <footer>
+    <div class="menu">
+      <button type="button" class="menu-btn level-btn" id="open-map"><span class="mi" aria-hidden="true">🗺️</span>地图</button>
+      <button type="button" class="menu-btn" id="open-shop"><span class="mi">🛒</span>商店</button>
+      <span class="coins" id="coins" aria-label="金币">0</span>
+    </div>
+    <div class="controls" id="controls">
+      <p id="hint">从水口往下划，挖沟经过宝石</p>
+      <button class="tool" id="bomb" type="button" aria-pressed="false" title="炸药：点一块岩石炸开">🧨<sup>0</sup></button>
+      <button class="tool" id="magnet" type="button" aria-pressed="false" title="磁石：本局吸附范围变大">🧲<sup>0</sup></button>
+      <button class="icon" id="reset" type="button" aria-label="重新挖沟" title="重新挖沟">↻</button>
+      <button class="action" id="valve" type="button" aria-pressed="false">放水</button>
+    </div>
+  </footer>
+</main>
+<script type="module" src="./src/game.js"></script>
+</html>

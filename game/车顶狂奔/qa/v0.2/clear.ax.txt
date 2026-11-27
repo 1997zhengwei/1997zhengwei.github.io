@@ -1,0 +1,46 @@
+Browser tab: 28, Title: "车顶狂奔 · CONVOY LEAP", URL: "http://127.0.0.1:8798/?qa=v02-review".
+1 AXWebArea 车顶狂奔 · CONVOY LEAP, URL: 127.0.0.1:8798/?qa=v02-review
+	2 image Description: 车顶狂奔三维游戏场景, ID: world
+	3 container ui
+		4 container
+			5 button 返回地图选择
+				6 text ←
+				7 text 01 — 01
+				8 text 日光沙海
+			9 text 前往终点
+			52 text 100%
+			11 text 用时
+			53 text 0:26.82
+			13 button 暂停
+		14 container
+			15 button 第一人称 V, ID: view-button
+				16 text 第一人称 
+				17 text V
+			18 button 前进中 · 点击停下, ID: auto-button
+			19 button 镜头朝向前方
+			20 button 声音 开
+		34 text 漂亮换车 ×15
+		54 text 前方断路 · 助跑起跳，落上白色终点平台
+		23 container
+			24 text 慢动作
+			55 text 按住 SHIFT
+			26 text 漂亮换车可补充能量
+		27 container
+			28 text 成功换车
+			56 text 15
+			57 text 连跳 ×15
+		30 container
+			31 text WASD 移动 空格 跳跃 拖动画面 / Q E 看向 R 重来
+		58 text won | 26.8s | x -12.7 s 770.4 y 3.82 | roof null | u 5.5 | v 29.6 | first | 81fps · 46 calls · 96k tris | Space ↑ 188ms
+		42 container
+			43 text CLEAN LANDING. ★★★
+			44 heading 漂亮，到站！, Value: 2
+				45 text 漂亮，到站！
+			46 text 从车流中，跳出自己的一条路线。 通关用时 0:26.82 成功换车 15  次 ★ 抵达终点　★ 换车 3 次　★ 49 秒内完成
+			47 button 下一个路段 ↗
+				48 text 下一个路段
+				49 text ↗
+			50 button 再跑一次，刷新纪录
+			51 button ← 选择其他地图
+
+The focused UI element is 2 image Description: 车顶狂奔三维游戏场景, ID: world

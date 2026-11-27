@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#3b1f6e"><title>这台电视我先拿的！</title><link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css"></head>
+<body><svg xmlns="http://www.w3.org/2000/svg" class="symbols" aria-hidden="true"><defs>
+<symbol id="cart" viewBox="0 0 24 24"><path d="M2 4h3l2.6 11.2h11.5l2.7-8.5H6M9 11h10M11 7l1 8m4-8-.6 8"/><circle cx="9.5" cy="20" r="1.35"/><circle cx="18" cy="20" r="1.35"/></symbol>
+<symbol id="pauseI" viewBox="0 0 24 24"><path d="M8 5v14m8-14v14" stroke-width="4"/></symbol>
+<symbol id="soundI" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3zM16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+<symbol id="muteI" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3zM16 9l6 6m0-6-6 6"/></symbol>
+<symbol id="clockI" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 8v5l3 2M10 2h4m5 3 1 1"/></symbol>
+<symbol id="bagI" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4zM9 9V7a3 3 0 0 1 6 0v2"/></symbol>
+<symbol id="tvI" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M7 21l2-3m6 0 2 3M5 13l5-5"/></symbol>
+<symbol id="arrowI" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+</defs></svg>
+<main id="app">
+<canvas id="game" aria-label="黑五卖场。拖动推车，靠近商品装车，将它们带过结账线。电脑也可用方向键或 WASD，空格冲刺。" tabindex="0"></canvas>
+<div id="alarm" aria-live="polite"><b></b><small></small></div>
+<header class="hud">
+  <div id="clock"><b id="seconds">60</b><small>秒</small></div>
+  <div id="money"><span>已省</span><b id="amount">¥0</b></div>
+  <nav><button id="audio" class="tool" aria-label="关闭声音"><svg><use href="#soundI"/></svg></button><button id="pause" class="tool" aria-label="暂停"><svg><use href="#pauseI"/></svg></button></nav>
+</header>
+<div id="scoreboard" aria-label="本场排行"></div>
+<div id="combo" hidden><b id="comboN">×1</b><small id="comboCount">连抢</small><i><span id="comboBar"></span></i></div>
+<div class="mapControls"><button id="mapButton" aria-label="打开卖场导览" title="卖场导览"><canvas id="radar" width="240" height="148" role="img" aria-label="卖场地图"></canvas></button><button id="branchName" hidden>三分区大卖场 ▾</button><button id="garageButton" type="button" hidden><span>升级推车</span><b id="ticketCount">0 券</b></button></div>
+<div id="marker" class="marker"><span id="markerText">炸锅</span><i></i></div><div id="you" role="img" aria-label="你"><svg viewBox="0 0 14 12" aria-hidden="true"><path d="M1 2h12L7 11z" fill="#ffd23f" stroke="#3b1f6e"/><path d="M4 3h6L7 6z" fill="#fff6c2" stroke="none"/></svg></div>
+<div id="floats" aria-hidden="true"></div><div id="bubbles" aria-hidden="true"><b hidden></b><b hidden></b><b hidden></b><b hidden></b></div><div id="callout" role="status" hidden></div>
+<div id="stamp" aria-live="polite"><b></b><small></small></div>
+<div id="wobble" hidden>摇摇欲坠！</div>
+<div id="joy" hidden><i></i></div>
+<section id="startCard">
+  <div class="logo"><small>RUSH MART · 黑五 60 秒</small><h1>这台电视<br>我先拿的！</h1></div>
+  <p class="mapline"><b id="startMapName"></b><span id="startStars"></span></p>
+  <p id="startTip"></p><p id="startGoal"></p><p id="startList"></p>
+  <div class="startButtons"><button id="startMap" type="button">换卖场</button><button id="startGarage" type="button">升级推车 <b id="startTickets"></b></button><button id="startBook" type="button">图鉴</button></div>
+  <button id="startRush" class="go" type="button"><span aria-hidden="true">👆</span> 点击或拖动 · 开抢！</button>
+</section>
+<footer>
+  <div id="list"></div>
+  <div id="objective"><div class="ticket-icon"><svg><use id="objIcon" href="#bagI"/></svg></div><div><small id="eyebrow">开门抢购</small><strong id="mission">推到炸锅旁装车</strong></div></div>
+  <div class="how" id="how"><b>↔</b><span id="controlText">拖动推车</span></div>
+  <div class="cartStatus"><span id="shieldCount" hidden></span><button id="load" type="button"><svg><use href="#cart"/></svg><strong id="count">0/8 件</strong></button></div>
+  <button id="dash" type="button" aria-label="冲刺撞车"><b>冲!</b><small>撞掉对手的货</small></button>
+</footer><dialog id="panel"><section class="receipt"><div class="receipt-top"><svg><use href="#cart"/></svg><b>RUSH MART</b></div><div class="rule"></div><h2 id="resultTitle"></h2><p id="resultDesc"></p><div id="details"></div><div class="rule"></div><div id="buttons"></div><div class="barcode" aria-hidden="true"></div></section></dialog>
+<div id="error" hidden>无法打开 3D 卖场，请使用支持 WebGL 的浏览器。</div>
+</main><script type="module" src="./game.js"></script></body></html>
