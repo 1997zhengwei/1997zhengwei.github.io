@@ -1,4 +1,9 @@
-# 游戏作品中文目录
+# 游戏专区历史记录
+
+[进入游戏作品总目录](https://github.com/1997zhengwei/1997zhengwei.github.io/blob/main/game/README.md)
+
+<details>
+<summary>展开旧分支的交付记录</summary>
 
 每款游戏的源码、素材、运行说明、测试和 Loopit 交接资料放在同一个游戏目录中。本目录为游戏专区，不改动个人网站或学术项目。
 
@@ -70,3 +75,5 @@
 每款游戏独立包含入口、源码、必要素材、README、验证记录和交接说明。版本由 Git 提交追踪，不按 final-v2/latest-new 堆叠复制成品；原视频、临时缓存、本地历史 ZIP、账号资料和凭据不上传。
 
 查看 [制作与验收流程](./WORKFLOW.md)。本地通过、源码备份、Loopit 草稿与正式发布分别判断。
+
+</details>
