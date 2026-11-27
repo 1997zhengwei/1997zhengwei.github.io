@@ -2,7 +2,7 @@
 
 2026-11-10（Asia/Shanghai）。当前为 **Loopit V1 草稿，已实际试玩验收**，未发布展厅、未送审。
 
-- [GitHub 中文目录](https://github.com/1997zhengwei/1997zhengwei.github.io/tree/main/game/村庄保卫战)
+- [GitHub 中文目录](https://github.com/1997zhengwei/1997zhengwei.github.io/tree/main/game/2026-11-10%20%E6%9D%91%E5%BA%84%E4%BF%9D%E5%8D%AB%E6%88%98)
 - [Loopit 创作项目](https://lab.loopit.me/pgc/workbench/01a1c46e-f202-763f-ab2c-3a2276eb2f38?kind=draft)
 - [V1 手机竖屏试玩](https://cdn-cf.loopit.me/public/game/01a1c46e-f202-763f-ab2c-3a2276eb2f38/2120061259503116288/workspace/dist/index.html?loopit_preview=draft)
 - 已验收本地运行基线：v0.3.0 / commit `44046716be0017b507d1692b684843e1b5097444`，目录 `game/村庄保卫战/`。

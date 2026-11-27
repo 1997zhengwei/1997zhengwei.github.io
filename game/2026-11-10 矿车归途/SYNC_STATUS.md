@@ -4,7 +4,7 @@
 
 ## 长期入口与版本
 
-- [全部中文游戏](https://github.com/1997zhengwei/1997zhengwei.github.io/tree/main/game)：默认 main 分支根目录 game/；本款为 game/矿车归途/。
+- [全部中文游戏](https://github.com/1997zhengwei/1997zhengwei.github.io/tree/main/game)：默认 main 分支根目录 game/；本款为 `game/2026-11-10 矿车归途/`。
 - 已批准源码：v2.1.0，固定提交 `98ea4ceefc426515bbf073e625895341078618d6`。该提交中的 21 个清单文件逐一进行了远端字节长度与 SHA-256 核验。
 - 单文件 play.html：664,199 字节；SHA-256 `efe89e6639e338cd4d7ed091c13201a63c5713f4910b870a6c5542db9577abb4`。
 - [Loopit 创作项目](https://lab.loopit.me/pgc/workbench/01a1c112-5e84-77d9-aeab-9bbb8c587b60?kind=draft)，账号中已命名为 **Minecart Rescue**。
